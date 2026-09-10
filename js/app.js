@@ -63,13 +63,13 @@
       bindMidi(el);
       const read = () => { const o = {...c, parts:{}}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k; if ('ABC'.includes(k)) o.parts[k] = i.value.trim() ? i.value.trim().split(/\s+/) : []; else o[k] = i.type === 'number' ? +i.value : i.value; }); return o; };
       const beatsEl = el.querySelector('.beats'), playBtn = el.querySelector('.play');
-      const grid = seq => { beatsEl.innerHTML = seq.steps.map((s, i) => `<span class="${s.bar ? 'bar' : ''}${s.sec ? ' sec' : ''}"><i>${s.sec || ''}</i><em>${s.roman}</em>${s.n}</span>`).join(''); };
+      const grid = seq => { beatsEl.innerHTML = seq.steps.map((s, i) => `<span class="${s.bar ? 'b1' : ''}${s.sec ? ' sec' : ''}"><i>${s.sec || ''}</i><em>${s.roman}</em><b>${s.n}</b></span>`).join(''); };
       const start = () => {
         if (player) { player.stop(); if (playerUI && playerUI !== el) playerUI.querySelector('.play').textContent = '▶ Start'; }
         const o = read(), seq = AM.backing.build(o);
         player = new AM.audio.Player(); playerUI = el; player.load(seq, o.tempo);
         grid(seq);
-        player.onBeat = b => { const cells = beatsEl.querySelectorAll('span'); cells.forEach((s, i) => s.classList.toggle('on', i === b)); const c = cells[b]; if (c && (c.offsetLeft < beatsEl.scrollLeft || c.offsetLeft + c.offsetWidth > beatsEl.scrollLeft + beatsEl.clientWidth)) beatsEl.scrollTo({left:c.offsetLeft - 40, behavior:'smooth'}); };
+        player.onBeat = b => beatsEl.querySelectorAll('span').forEach((s, i) => s.classList.toggle('on', i === b));
         player.play(); playBtn.textContent = '■ Stop';
       };
       playBtn.onclick = () => { if (player && player.playing && playerUI === el) { player.stop(); playBtn.textContent = '▶ Start'; beatsEl.querySelectorAll('span').forEach(s => s.classList.remove('on')); } else start(); };
