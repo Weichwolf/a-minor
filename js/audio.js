@@ -97,13 +97,16 @@ AM.backing = (() => {
     const [beats, unit] = (c.time || '4/4').split('/').map(Number), q = 4 / unit, bar = beats * q;
     const root = c.root || 'E', scale = c.scale || 'aeolian', bars = c.bars ?? 4, ev = [];
     let bass = M.rootPc(root) + 36; if (bass < 40) bass += 12;
-    const prog = (c.type === 'loop' ? (c.progression || ['i']) : ['i']).map(r => typeof r === 'string' ? {deg:M.romanIndex(r), bars:1} : r);
+    const tok = r => { const [rom, q] = r.split(':'); return {deg:M.romanIndex(rom), bars:1, q}; };
+    const prog = (c.type === 'loop' ? (c.progression || ['i']) : ['i']).map(r => typeof r === 'string' ? tok(r) : r);
     const total = c.type === 'loop' ? prog.reduce((a, p) => a + p.bars, 0) : bars;
     let t = 0;
     for (let b = 0; b < total; b++) {
       if (c.type !== 'click') {
-        let deg = 0, acc = 0; for (const p of prog) { if (b < acc + p.bars) { deg = p.deg; break; } acc += p.bars; }
-        const ch = M.chord(root, scale, deg), off = ch.notes[0] - (M.rootPc(root) + 36), r = bass + off - (bass + off > 51 ? 12 : 0);
+        let deg = 0, q, acc = 0; for (const p of prog) { if (b < acc + p.bars) { deg = p.deg; q = p.q; break; } acc += p.bars; }
+        const ch = M.chord(root, scale, deg);
+        if (q) { const r0 = ch.notes[0]; ch.notes = [r0, r0 + (q === 'maj' ? 4 : 3), r0 + (q === 'dim' ? 6 : 7)]; }
+        const off = ch.notes[0] - (M.rootPc(root) + 36), r = bass + off - (bass + off > 51 ? 12 : 0);
         ev.push({t, type:'tone', midi:r, dur:bar, vel:.35, bright:3, sus:.7});
         if (c.type === 'drone') { ev.push({t, type:'tone', midi:r + 7, dur:bar, vel:.12, bright:2, sus:.8, attack:.5}); ev.push({t, type:'tone', midi:r + 12, dur:bar, vel:.1, bright:2, sus:.8, attack:.5}); }
         else ch.notes.forEach((n, i) => ev.push({t, type:'tone', midi:r + (n - ch.notes[0]) + 12 * (i === 0 ? 1 : 0), dur:bar, vel:.09, type:'tone', bright:2, sus:.8, attack:.3}));

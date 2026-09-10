@@ -71,6 +71,7 @@
       playBtn.onclick = () => { if (player && player.playing && playerUI === el) { player.stop(); playBtn.textContent = '▶ Start'; beatsEl.querySelectorAll('span').forEach(s => s.classList.remove('on')); } else start(); };
       el.querySelectorAll('[data-k]').forEach(i => i.onchange = () => { el.querySelector('.prog').style.display = read().type === 'loop' ? '' : 'none'; if (player && player.playing && playerUI === el) start(); });
       el.querySelector('.prog').style.display = c.type === 'loop' ? '' : 'none';
+      el._set = cfg => { el.querySelectorAll('[data-k]').forEach(i => { const v = cfg[i.dataset.k]; if (v == null) return; i.value = i.dataset.k === 'progression' ? v.map(t => typeof t === 'string' ? t : Array(t.bars).fill(['I','II','III','IV','V','VI','VII'][t.deg]).join(' ')).join(' ') : v; }); el.querySelector('.prog').style.display = cfg.type === 'loop' ? '' : 'none'; start(); };
       el.querySelector('.midi').onclick = () => { const o = read(); AM.midi.download(AM.midi.write(AM.backing.build(o), o.tempo, 4), `${label || 'backing'}-${o.root}-${o.scale}-${o.tempo}.mid`); };
     });
     return html;
@@ -163,9 +164,12 @@
     },
     griffbrett() { return `<h1>Griffbrett</h1><p class="lead">E A D G C F. Jede Form gilt überall.</p>${fretboardControls({frets:15})}`; },
     klaviatur() { return `<h1>Klaviatur</h1><p class="lead">49 Tasten, C2 bis C6. Jede Tonart hat ihre eigene Form.</p>${pianoControls({root:'A'})}`; },
-    player() { return `<h1>Backing</h1><p class="lead">Drone, Akkordfolge oder Klick. Tempo frei. MIDI-Export für Looper oder DAW, MIDI-Out für Drumcomputer und Synth.</p>${playerControls({type:'loop', drums:'half'}, 60, 'backing')}
-      <div class="text"><p>Stufen für die Akkordfolge: römisch, Qualität ergibt sich aus der Skala. <b>i VII VI V</b> in Äolisch ergibt Em D C Bm. Für ein Dur-V Harmonisch Moll wählen.</p>
-      <p>MIDI-Out: Drums gehen als GM-Drumset auf Kanal 10 (Kick 36, Snare 38, Hi-Hat 42, Klick 37 Side Stick). Bass auf Kanal 1, Pad auf Kanal 2. Sounds am Gerät wählen. Wenn die Drums zu spät kommen, Latenz negativ setzen. Web MIDI braucht Chrome oder Edge.</p></div>`; },
+    player() { return `<h1>Backing</h1><p class="lead">Templates mit Variationen. Was es ist, warum es funktioniert. Klick lädt in den Player, Tempo und Rest bleiben frei.</p>
+      <div class="sticky">${playerControls({type:'loop', drums:'half'}, 60, 'backing')}</div>
+      ${AM.backings.map(t => `<section class="tpl"><h2>${esc(t.title)}</h2><p class="what">${esc(t.what)}</p><p class="why">${esc(t.why)}</p>
+        <div class="vars">${t.variations.map((v, i) => `<button class="var" data-tpl="${t.id}" data-var="${i}"><b>${esc(v.title)}</b><span>${esc(v.note)}</span></button>`).join('')}</div></section>`).join('')}
+      <div class="text"><p>Stufen römisch, Groß = Dur, Klein = Moll, Qualität kommt aus der Skala. Erzwingen mit <b>V:maj</b>, <b>v:min</b>, <b>vii:dim</b>. In Phrygisch ist <b>II</b> der bII-Akkord, weil die Skala ihn so liefert.</p>
+      <p>MIDI-Out: Drums als GM-Drumset auf Kanal 10 (Kick 36, Snare 38, Hi-Hat 42, Klick 37). Bass Kanal 1, Pad Kanal 2. Sounds am Gerät wählen.</p></div>`; },
     log() {
       const l = S.get().log, name = id => allEx.find(e => e.id === id)?.title || id;
       return `<h1>Log</h1><p class="lead">Ein Eintrag pro Übung und Tag. Ein Fehler, nicht fünf.</p>
@@ -182,6 +186,7 @@
     main.querySelectorAll('[data-done]').forEach(i => i.onchange = () => { S.toggleDone(i.dataset.done); i.closest('.ex').classList.toggle('done', i.checked); });
     main.querySelectorAll('form[data-log]').forEach(f => f.onsubmit = ev => { ev.preventDefault(); S.addLog({ex:f.dataset.log, note:f.note.value.trim()}); route(); location.hash = location.hash.split('#')[0] + '#' + f.dataset.log; });
     main.querySelectorAll('[data-del]').forEach(b => b.onclick = () => { S.removeLog(+b.dataset.del); route(); });
+    main.querySelectorAll('[data-tpl]').forEach(b => b.onclick = () => { const t = AM.backings.find(t => t.id === b.dataset.tpl), v = t.variations[+b.dataset.var]; main.querySelectorAll('.var').forEach(x => x.classList.toggle('on', x === b)); $('.player')._set(v.cfg); });
     const exp = $('#exp'); if (exp) exp.onclick = () => { const a = document.createElement('a'); a.href = 'data:application/json,' + encodeURIComponent(S.export()); a.download = 'a-minor-log.json'; a.click(); };
     const imp = $('#imp'); if (imp) imp.onchange = () => imp.files[0].text().then(t => { S.import(t); route(); });
   }
