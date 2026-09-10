@@ -69,10 +69,11 @@ AM.audio = (() => {
         if (!this.playing) return;
         const horizon = c.currentTime + .25;
         while (true) {
+          if (!ev.length) break;
           if (idx >= ev.length) { iter++; idx = 0; }
           const e = ev[idx], t = start + (iter * this.seq.len + e.t) * spb;
           if (t > horizon) break;
-          (wants(e) ? send : FX[e.type])(e, t, spb); idx++;
+          try { (wants(e) ? send : FX[e.type])(e, t, spb); } catch (err) { console.error('Event', e, err); } idx++;
         }
         const n = this.seq.steps.length, step = Math.floor((c.currentTime - start) / (spb * this.seq.q));
         if (step !== this.lastBeat && this.onBeat) { this.lastBeat = step; this.onBeat(((step % n) + n) % n); }
@@ -105,9 +106,9 @@ AM.backing = (() => {
     const total = prog.reduce((a, p) => a + p.bars, 0), steps = [];
     let t = 0;
     for (let b = 0; b < total; b++) {
-      let deg = 0, q, sec = '', first = false, acc = 0; for (const p of prog) { if (b < acc + p.bars) { deg = p.deg; q = p.q; sec = p.sec; first = b === acc && p.secStart; break; } acc += p.bars; }
+      let deg = 0, qual, sec = '', first = false, acc = 0; for (const p of prog) { if (b < acc + p.bars) { deg = p.deg; qual = p.q; sec = p.sec; first = b === acc && p.secStart; break; } acc += p.bars; }
       const ch = M.chord(root, scale, deg);
-      if (q) { const r0 = ch.notes[0]; ch.notes = [r0, r0 + (q === 'maj' ? 4 : 3), r0 + (q === 'dim' ? 6 : 7)]; ch.roman = q === 'maj' ? ch.roman.toUpperCase().replace('°', '') : q === 'min' ? ch.roman.toLowerCase().replace('°', '') : ch.roman.toLowerCase().replace('°', '') + '°'; }
+      if (qual) { const r0 = ch.notes[0]; ch.notes = [r0, r0 + (qual === 'maj' ? 4 : 3), r0 + (qual === 'dim' ? 6 : 7)]; ch.roman = qual === 'maj' ? ch.roman.toUpperCase().replace('°', '') : qual === 'min' ? ch.roman.toLowerCase().replace('°', '') : ch.roman.toLowerCase().replace('°', '') + '°'; }
       const off = ch.notes[0] - (M.rootPc(root) + 36), r = bass + off - (bass + off > 51 ? 12 : 0);
       for (let i = 0; i < beats; i++) steps.push({n:c.type === 'click' ? '' : M.pcName(r, M.usesFlats(root) || /b/.test(root)), roman:i === 0 && c.type === 'loop' ? ch.roman : '', sec:i === 0 && first ? sec : '', bar:i === 0});
       if (c.type !== 'click') {

@@ -69,7 +69,7 @@
         const o = read(), seq = AM.backing.build(o);
         player = new AM.audio.Player(); playerUI = el; player.load(seq, o.tempo);
         grid(seq);
-        player.onBeat = b => beatsEl.querySelectorAll('span').forEach((s, i) => s.classList.toggle('on', i === b));
+        player.onBeat = b => { const cells = beatsEl.querySelectorAll('span'); cells.forEach((s, i) => s.classList.toggle('on', i === b)); const c = cells[b]; if (c && (c.offsetLeft < beatsEl.scrollLeft || c.offsetLeft + c.offsetWidth > beatsEl.scrollLeft + beatsEl.clientWidth)) beatsEl.scrollTo({left:c.offsetLeft - 40, behavior:'smooth'}); };
         player.play(); playBtn.textContent = '■ Stop';
       };
       playBtn.onclick = () => { if (player && player.playing && playerUI === el) { player.stop(); playBtn.textContent = '▶ Start'; beatsEl.querySelectorAll('span').forEach(s => s.classList.remove('on')); } else start(); };
