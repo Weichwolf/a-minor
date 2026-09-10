@@ -49,3 +49,4 @@ svg.fb{width:100%;height:auto;display:block}.fb .wood{fill:var(--wood)}.fb .fret
 .pksvg{overflow-x:auto}svg.pk{width:100%;min-width:700px;height:auto;display:block}.pk .w{fill:#fff;stroke:#bbb}.pk .w.dim{fill:#f1eee8}.pk .b{fill:#2b2a28;stroke:#111}.pk .b.dim{fill:#8a8580}.pk .oct{font-size:11px;fill:var(--mute);text-anchor:middle}
 .pk .dot circle{fill:var(--acc)}.pk .dot.root circle{fill:var(--root)}.pk .dot text{fill:#fff;font-size:10px;font-weight:600;text-anchor:middle}.pk .dot.dim circle{fill:#d5d0c6}
 .k-keys{background:#e6f4f1;color:#1f7a6f}.k-sound{background:#eef;color:#446}
+.mute{color:var(--mute)}.rescan{padding:2px 9px;background:#fff;color:var(--acc)}

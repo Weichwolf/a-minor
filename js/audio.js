@@ -39,9 +39,13 @@ AM.audio = (() => {
   const out = {access:null, port:null, drums:true, backing:false, latency:0};
   const NOTE = {kick:36, snare:38, hat:42, click:37};
   function midiInit() {
-    if (!navigator.requestMIDIAccess) return Promise.resolve([]);
-    return navigator.requestMIDIAccess().then(a => { out.access = a; return [...a.outputs.values()]; }).catch(() => []);
+    if (!navigator.requestMIDIAccess) { out.status = 'Browser ohne Web MIDI'; return Promise.resolve([]); }
+    return navigator.requestMIDIAccess({sysex:false}).then(a => {
+      out.access = a; a.onstatechange = () => out.onchange && out.onchange(ports());
+      return ports();
+    }).catch(e => { out.status = 'Zugriff verweigert: ' + e.name; return []; });
   }
+  const ports = () => { const p = out.access ? [...out.access.outputs.values()] : []; out.status = p.length ? p.length + ' Gerät' + (p.length > 1 ? 'e' : '') : 'Zugriff ok, kein MIDI-Ausgang gefunden'; return p; };
   const midiSelect = id => { out.port = id && out.access ? out.access.outputs.get(id) : null; };
   const wants = e => out.port && (e.type === 'tone' ? out.backing : out.drums);
   function send(e, t, spb) {

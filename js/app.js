@@ -17,15 +17,23 @@
   let player = null, playerUI = null, midiPorts = null;
 
   function midiControls() {
-    if (!navigator.requestMIDIAccess) return '';
+    if (!navigator.requestMIDIAccess) return '<div class="row small midi"><span>MIDI-Out</span><span class="mute">Browser ohne Web MIDI (Chrome oder Edge nötig)</span></div>';
     const o = AM.audio.out;
     return `<div class="row small midi"><span>MIDI-Out</span><select data-midi>${['<option value="">intern (Synth)</option>', ...(midiPorts || []).map(p => `<option value="${p.id}"${o.port && o.port.id === p.id ? ' selected' : ''}>${esc(p.name)}</option>`)].join('')}</select>
+      <button class="rescan" title="Geräte neu suchen">↻</button><span class="mute" data-midi-status>${esc(o.status || 'suche…')}</span>
       <label><input type="checkbox" data-midi-drums${o.drums ? ' checked' : ''}> Drums Kanal 10</label><label><input type="checkbox" data-midi-backing${o.backing ? ' checked' : ''}> Bass/Pad Kanal 1/2</label>
       <label>Latenz <input type="number" data-midi-lat value="${o.latency}" style="width:4em"> ms</label></div>`;
   }
+  function refreshMidi(ps) {
+    midiPorts = ps;
+    document.querySelectorAll('[data-midi]').forEach(x => { const v = x.value; x.innerHTML = '<option value="">intern (Synth)</option>' + ps.map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join(''); x.value = ps.some(p => p.id === v) ? v : ''; });
+    document.querySelectorAll('[data-midi-status]').forEach(x => x.textContent = AM.audio.out.status || '');
+  }
   function bindMidi(el) {
     const s = el.querySelector('[data-midi]'); if (!s) return;
-    if (!midiPorts) AM.audio.midiInit().then(ps => { midiPorts = ps; document.querySelectorAll('[data-midi]').forEach(x => { const v = x.value; x.innerHTML = '<option value="">intern (Synth)</option>' + ps.map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join(''); x.value = v; }); });
+    AM.audio.out.onchange = refreshMidi;
+    if (!midiPorts) AM.audio.midiInit().then(refreshMidi);
+    el.querySelector('.rescan').onclick = () => { midiPorts = null; AM.audio.midiInit().then(refreshMidi); };
     s.onchange = () => AM.audio.midiSelect(s.value);
     el.querySelector('[data-midi-drums]').onchange = e => AM.audio.out.drums = e.target.checked;
     el.querySelector('[data-midi-backing]').onchange = e => AM.audio.out.backing = e.target.checked;
