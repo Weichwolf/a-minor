@@ -39,7 +39,7 @@ Methode pro Übung: Form lernen, singen, spielen, über Drone mit Constraint imp
 
 Tempi sind Vorgaben pro Übung, im Player frei einstellbar. „⬇ MIDI" exportiert das Backing (Bass, Pad, Drums) für Looper oder DAW.
 
-**Backing-Templates** in `data/backings.js`: Template = Was + Warum + Variationen, jede Variation eine Player-Konfiguration. Stufen-Qualität aus der Skala, erzwingen mit `V:maj`, `v:min`, `vii:dim`. Akkorddauer über `{deg:0, bars:2}`. Form über `parts:{A,B,C}` und `form:'A B A C'`.
+**Backing-Templates** in `data/backings.js`: Template = Was + Warum + Variationen, jede Variation eine Player-Konfiguration. Stufen-Qualität aus der Skala, erzwingen mit `V:maj`, `v:min`, `vii:dim`. Akkorddauer über `{deg:0, bars:2}`. Form über `parts:{A,B,C}` und `form:'A B A C'`. Drums und Bass variieren pro Teil, Fill am Teilende, Crash am Teilanfang. `feel:'tight'|'laid'|'heavy'` verzögert Snare, Hats und Bass. `random:true` würfelt pro Durchlauf Ghost-Notes, Extra-Kicks, Fill-Varianten und Mikro-Timing.
 
 **MIDI-Out** (Chrome/Edge, Web MIDI): Im Player Gerät wählen. Drums gehen als GM-Drumset auf Kanal 10 (Kick 36, Snare 38, Hi-Hat 42, Klick 37), Bass auf Kanal 1, Pad auf Kanal 2. Was per MIDI rausgeht, spielt der interne Synth nicht mehr. Latenz in ms korrigierbar, negativ = früher senden. Getestet gegen Alesis SR-18 und Yamaha MX49 als Ziel, beide GM-kompatibel auf Kanal 10.
 

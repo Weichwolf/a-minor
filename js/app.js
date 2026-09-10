@@ -1,6 +1,6 @@
 (() => {
   const M = AM.music, S = AM.store, $ = s => document.querySelector(s);
-  const LBL = {type:'Typ', root:'Grundton', scale:'Skala', time:'Takt', drums:'Drums', show:'Anzeige', window:'Fenster', frets:'Bünde', range:'Bereich'};
+  const LBL = {feel:'Feel', type:'Typ', root:'Grundton', scale:'Skala', time:'Takt', drums:'Drums', show:'Anzeige', window:'Fenster', frets:'Bünde', range:'Bereich'};
   const KIND = {read:'Lesen', improv:'Improvisieren', shape:'Griffbrett', keys:'Klaviatur', technique:'Technik', transcribe:'Transkription', sound:'Sound'};
   const AID = {names:'Tonnamen', strings:'Saiten', fingers:'Finger'};
   const esc = s => s.replace(/[&<>]/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;'}[c]));
@@ -42,7 +42,7 @@
   }
 
   function playerControls(cfg, tempo, label) {
-    const c = {type:'drone', root:'E', scale:'aeolian', time:'4/4', bars:4, drums:'off', progression:['i','VII','VI','V'], ...cfg}, id = uid('pl');
+    const c = {type:'drone', root:'E', scale:'aeolian', time:'4/4', bars:4, drums:'off', feel:'tight', random:false, progression:['i','VII','VI','V'], ...cfg}, id = uid('pl');
     const html = `<div class="player" id="${id}">
       <div class="row">
         <button class="play">▶ Start</button>
@@ -52,6 +52,8 @@
         ${sel('scale', Object.entries(M.SCALES).filter(([k]) => k !== 'chromatic').map(([k, v]) => [k, v.name]), c.scale)}
         ${sel('time', [['4/4','4/4'],['3/4','3/4'],['6/8','6/8'],['7/8','7/8'],['5/4','5/4']], c.time)}
         ${sel('drums', [['off','keine'],['half','Half-time'],['straight','Straight'],['double','Double-time']], c.drums)}
+        ${sel('feel', [['tight','Tight'],['laid','Schleppend'],['heavy','Schwer']], c.feel)}
+        <label><input type="checkbox" data-k="random"${c.random ? ' checked' : ''}> Variation</label>
         <label>Takte <input type="number" data-k="bars" value="${c.bars}" min="1" max="32" style="width:3.5em"></label>
         <span class="prog"><label>A <input data-k="A" value="${fmt(c.parts?.A || c.progression)}" style="width:8em" title="Stufen, z.B. i VII VI V"></label>
         <label>B <input data-k="B" value="${fmt(c.parts?.B)}" style="width:8em"></label><label>C <input data-k="C" value="${fmt(c.parts?.C)}" style="width:8em"></label>
@@ -61,13 +63,13 @@
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       bindMidi(el);
-      const read = () => { const o = {...c, parts:{}}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k; if ('ABC'.includes(k)) o.parts[k] = i.value.trim() ? i.value.trim().split(/\s+/) : []; else o[k] = i.type === 'number' ? +i.value : i.value; }); return o; };
+      const read = () => { const o = {...c, parts:{}}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k; if ('ABC'.includes(k)) o.parts[k] = i.value.trim() ? i.value.trim().split(/\s+/) : []; else o[k] = i.type === 'checkbox' ? i.checked : i.type === 'number' ? +i.value : i.value; }); return o; };
       const beatsEl = el.querySelector('.beats'), playBtn = el.querySelector('.play');
       const grid = seq => { beatsEl.innerHTML = seq.steps.map((s, i) => `<span class="${s.bar ? 'b1' : ''}${s.sec ? ' sec' : ''}"><i>${s.sec || ''}</i><em>${s.roman}</em><b>${s.n}</b></span>`).join(''); };
       const start = () => {
         if (player) { player.stop(); if (playerUI && playerUI !== el) playerUI.querySelector('.play').textContent = '▶ Start'; }
         const o = read(), seq = AM.backing.build(o);
-        player = new AM.audio.Player(); playerUI = el; player.load(seq, o.tempo);
+        player = new AM.audio.Player(); playerUI = el; player.load(seq, o.tempo, o.random ? () => AM.backing.build(read()) : null);
         grid(seq);
         player.onBeat = b => beatsEl.querySelectorAll('span').forEach((s, i) => s.classList.toggle('on', i === b));
         player.play(); playBtn.textContent = '■ Stop';
@@ -76,7 +78,7 @@
       el.querySelectorAll('[data-k]').forEach(i => i.onchange = () => { el.querySelector('.prog').style.display = read().type === 'loop' ? '' : 'none'; if (player && player.playing && playerUI === el) start(); else grid(AM.backing.build(read())); });
       grid(AM.backing.build(read()));
       el.querySelector('.prog').style.display = c.type === 'loop' ? '' : 'none';
-      el._set = cfg => { const full = {A:cfg.parts?.A || cfg.progression || ['i'], B:cfg.parts?.B || [], C:cfg.parts?.C || [], form:cfg.form || 'A', ...cfg}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k, v = full[k]; if (v == null) return; i.value = 'ABC'.includes(k) ? fmt(v) : v; }); el.querySelector('.prog').style.display = cfg.type === 'loop' ? '' : 'none'; start(); };
+      el._set = cfg => { const full = {A:cfg.parts?.A || cfg.progression || ['i'], B:cfg.parts?.B || [], C:cfg.parts?.C || [], form:cfg.form || 'A', ...cfg}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k, v = full[k]; if (v == null) return; if (i.type === 'checkbox') i.checked = !!v; else i.value = 'ABC'.includes(k) ? fmt(v) : v; }); el.querySelector('.prog').style.display = cfg.type === 'loop' ? '' : 'none'; start(); };
       el.querySelector('.midi').onclick = () => { const o = read(); AM.midi.download(AM.midi.write(AM.backing.build(o), o.tempo, 4), `${label || 'backing'}-${o.root}-${o.scale}-${o.tempo}.mid`); };
     });
     return html;
@@ -170,7 +172,7 @@
     griffbrett() { return `<h1>Griffbrett</h1><p class="lead">E A D G C F. Jede Form gilt überall.</p>${fretboardControls({frets:15})}`; },
     klaviatur() { return `<h1>Klaviatur</h1><p class="lead">49 Tasten, C2 bis C6. Jede Tonart hat ihre eigene Form.</p>${pianoControls({root:'A'})}`; },
     player() { return `<h1>Backing</h1><p class="lead">Templates mit Variationen. Was es ist, warum es funktioniert. Jede Variation ist ein kleiner Song: Teile A, B, C, Form A B A C. Klick lädt in den Player, alles bleibt änderbar.</p>
-      <div class="sticky">${playerControls({type:'loop', drums:'half', parts:{A:['i','VII','VI','V:maj'], B:['VI','VII','i','i'], C:['iv','V:maj','i','i']}, form:'A B A C'}, 60, 'backing')}</div>
+      <div class="sticky">${playerControls({type:'loop', drums:'half', parts:{A:['i','VII','VI','V:maj'], B:['VI','VII','i','i'], C:['iv','V:maj','i','i']}, form:'A B A C', feel:'laid', random:true}, 60, 'backing')}</div>
       ${AM.backings.map(t => `<section class="tpl"><h2>${esc(t.title)}</h2><p class="what">${esc(t.what)}</p><p class="why">${esc(t.why)}</p>
         <div class="vars">${t.variations.map((v, i) => `<button class="var" data-tpl="${t.id}" data-var="${i}"><b>${esc(v.title)}</b><span>${esc(v.note)}</span></button>`).join('')}</div></section>`).join('')}
       <div class="text"><p>Stufen römisch, Groß = Dur, Klein = Moll, Qualität kommt aus der Skala. Erzwingen mit <b>V:maj</b>, <b>v:min</b>, <b>vii:dim</b>. In Phrygisch ist <b>II</b> der bII-Akkord, weil die Skala ihn so liefert.</p>
