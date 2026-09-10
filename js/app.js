@@ -17,12 +17,12 @@
   const ROOTS = 'C C# D Eb E F F# G Ab A Bb B'.split(' ').map(r => [r, r]);
   let player = null, playerUI = null, midiPorts = null;
 
-  function midiControls() {
+  function midiControls(full) {
     if (!navigator.requestMIDIAccess) return '<div class="row small midi"><span>MIDI-Out</span><span class="mute">Browser ohne Web MIDI (Chrome oder Edge nötig)</span></div>';
     const o = AM.audio.out;
     return `<div class="row small midi"><span>MIDI-Out</span><select data-midi>${['<option value="">intern (Synth)</option>', ...(midiPorts || []).map(p => `<option value="${p.id}"${o.port && o.port.id === p.id ? ' selected' : ''}>${esc(p.name)}</option>`)].join('')}</select>
       <button class="rescan" title="Geräte neu suchen">↻</button><span class="mute" data-midi-status>${esc(o.status || 'suche…')}</span>
-      <label><input type="checkbox" data-midi-drums${o.drums ? ' checked' : ''}> Drums Kanal 10</label><label><input type="checkbox" data-midi-backing${o.backing ? ' checked' : ''}> Bass/Pad Kanal 1/2</label>
+      ${full ? `<label><input type="checkbox" data-midi-drums${o.drums ? ' checked' : ''}> Drums Kanal 10</label><label><input type="checkbox" data-midi-backing${o.backing ? ' checked' : ''}> Bass/Pad Kanal 1/2</label>` : '<span class="mute">Kanal 10</span>'}
       <label>Latenz <input type="number" data-midi-lat value="${o.latency}" style="width:4em"> ms</label></div>`;
   }
   function refreshMidi(ps) {
@@ -36,29 +36,30 @@
     if (!midiPorts) AM.audio.midiInit().then(refreshMidi);
     el.querySelector('.rescan').onclick = () => { midiPorts = null; AM.audio.midiInit().then(refreshMidi); };
     s.onchange = () => AM.audio.midiSelect(s.value);
-    el.querySelector('[data-midi-drums]').onchange = e => AM.audio.out.drums = e.target.checked;
-    el.querySelector('[data-midi-backing]').onchange = e => AM.audio.out.backing = e.target.checked;
+    const dr = el.querySelector('[data-midi-drums]'), bk = el.querySelector('[data-midi-backing]');
+    if (dr) dr.onchange = e => AM.audio.out.drums = e.target.checked; else AM.audio.out.drums = true;
+    if (bk) bk.onchange = e => AM.audio.out.backing = e.target.checked;
     el.querySelector('[data-midi-lat]').onchange = e => AM.audio.out.latency = +e.target.value;
   }
 
   function playerControls(cfg, tempo, label, full = false) {
     const c = {type:'drone', root:'E', scale:'aeolian', time:'4/4', bars:4, drums:'off', feel:'tight', random:false, simple:!full, progression:['i','VII','VI','V'], ...cfg}, id = uid('pl');
+    if (!full) c.type = c.type === 'drums' || c.drums === 'rock' ? 'drums' : 'click';
     const html = `<div class="player" id="${id}">
       <div class="row">
         <button class="play">▶ Start</button>
         <label>Tempo <input type="number" data-k="tempo" value="${tempo || 60}" min="30" max="240" style="width:4.5em"> bpm</label>
-        ${sel('type', [['drone','Drone'],['loop','Akkordfolge'],['click','Klick']], c.type)}
-        ${sel('root', ROOTS, c.root)}
-        ${sel('scale', Object.entries(M.SCALES).filter(([k]) => k !== 'chromatic').map(([k, v]) => [k, v.name]), c.scale)}
+        ${full ? sel('type', [['drone','Drone'],['loop','Akkordfolge'],['click','Klick'],['drums','Drums']], c.type) : sel('type', [['click','Klick'],['drums','Drums BSBS']], c.type)}
+        ${full ? sel('root', ROOTS, c.root) + sel('scale', Object.entries(M.SCALES).filter(([k]) => k !== 'chromatic').map(([k, v]) => [k, v.name]), c.scale) : ''}
         ${sel('time', [['4/4','4/4'],['3/4','3/4'],['6/8','6/8'],['7/8','7/8'],['5/4','5/4']], c.time)}
-        ${full ? sel('drums', [['off','keine'],['half','Half-time'],['straight','Straight'],['double','Double-time'],['rock','Rock BSBS'],['click','Klick']], c.drums) : sel('drums', [['off','keine'],['click','Klick'],['rock','Rock BSBS']], c.drums)}
+        ${full ? sel('drums', [['off','keine'],['half','Half-time'],['straight','Straight'],['double','Double-time'],['rock','Rock BSBS'],['click','Klick']], c.drums) : ''}
         ${full ? sel('feel', [['tight','Tight'],['laid','Schleppend'],['heavy','Schwer']], c.feel) + `<label><input type="checkbox" data-k="random"${c.random ? ' checked' : ''}> Variation</label>` : ''}
         <label>Takte <input type="number" data-k="bars" value="${c.bars}" min="1" max="32" style="width:3.5em"></label>
-        <span class="prog"><label>A <input data-k="A" value="${fmt(c.parts?.A || c.progression)}" style="width:8em" title="Stufen, z.B. i VII VI V"></label>
+        ${full ? `<span class="prog"><label>A <input data-k="A" value="${fmt(c.parts?.A || c.progression)}" style="width:8em" title="Stufen, z.B. i VII VI V"></label>
         <label>B <input data-k="B" value="${fmt(c.parts?.B)}" style="width:8em"></label><label>C <input data-k="C" value="${fmt(c.parts?.C)}" style="width:8em"></label>
-        <label>Form <input data-k="form" value="${c.form || 'A'}" style="width:5em" title="z.B. A B A C"></label></span>
-        <button class="midi" title="Als MIDI-Datei speichern">⬇ MIDI</button>
-      </div>${midiControls()}<div class="beats"></div></div>`;
+        <label>Form <input data-k="form" value="${c.form || 'A'}" style="width:5em" title="z.B. A B A C"></label></span>` : ''}
+        ${full ? '<button class="midi" title="Als MIDI-Datei speichern">⬇ MIDI</button>' : ''}
+      </div>${midiControls(full)}<div class="beats"></div></div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       bindMidi(el);
@@ -74,11 +75,11 @@
         player.play(); playBtn.textContent = '■ Stop';
       };
       playBtn.onclick = () => { if (player && player.playing && playerUI === el) { player.stop(); playBtn.textContent = '▶ Start'; beatsEl.querySelectorAll('span').forEach(s => s.classList.remove('on')); } else start(); };
-      el.querySelectorAll('[data-k]').forEach(i => i.onchange = () => { el.querySelector('.prog').style.display = read().type === 'loop' ? '' : 'none'; if (player && player.playing && playerUI === el) start(); else grid(AM.backing.build(read())); });
+      el.querySelectorAll('[data-k]').forEach(i => i.onchange = () => { const pr = el.querySelector('.prog'); if (pr) pr.style.display = read().type === 'loop' ? '' : 'none'; if (player && player.playing && playerUI === el) start(); else grid(AM.backing.build(read())); });
       grid(AM.backing.build(read()));
-      el.querySelector('.prog').style.display = c.type === 'loop' ? '' : 'none';
-      el._set = cfg => { const full = {A:cfg.parts?.A || cfg.progression || ['i'], B:cfg.parts?.B || [], C:cfg.parts?.C || [], form:cfg.form || 'A', ...cfg}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k, v = full[k]; if (v == null) return; if (i.type === 'checkbox') i.checked = !!v; else i.value = 'ABC'.includes(k) ? fmt(v) : v; }); el.querySelector('.prog').style.display = cfg.type === 'loop' ? '' : 'none'; start(); };
-      el.querySelector('.midi').onclick = () => { const o = read(); AM.midi.download(AM.midi.write(AM.backing.build(o), o.tempo, 4), `${label || 'backing'}-${o.root}-${o.scale}-${o.tempo}.mid`); };
+      { const pr = el.querySelector('.prog'); if (pr) pr.style.display = c.type === 'loop' ? '' : 'none'; }
+      el._set = cfg => { const full = {A:cfg.parts?.A || cfg.progression || ['i'], B:cfg.parts?.B || [], C:cfg.parts?.C || [], form:cfg.form || 'A', ...cfg}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k, v = full[k]; if (v == null) return; if (i.type === 'checkbox') i.checked = !!v; else i.value = 'ABC'.includes(k) ? fmt(v) : v; }); { const pr = el.querySelector('.prog'); if (pr) pr.style.display = cfg.type === 'loop' ? '' : 'none'; } start(); };
+      if (el.querySelector('.midi')) el.querySelector('.midi').onclick = () => { const o = read(); AM.midi.download(AM.midi.write(AM.backing.build(o), o.tempo, 4), `${label || 'backing'}-${o.root}-${o.scale}-${o.tempo}.mid`); };
     });
     return html;
   }

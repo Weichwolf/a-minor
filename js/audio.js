@@ -150,8 +150,8 @@ AM.backing = (() => {
     let t = 0;
     for (let b = 0; b < total; b++) {
       const x = info[b], ch = chordAt(b), r = ch.bass, sec = x.sec, nxt = chordAt((b + 1) % total).bass;
-      for (let i = 0; i < beats; i++) steps.push({n:c.type === 'click' ? '' : M.pcName(r, M.usesFlats(root) || /b/.test(root)), roman:i === 0 && c.type === 'loop' ? ch.roman : '', sec:i === 0 && x.first ? sec : '', bar:i === 0});
-      if (c.type !== 'click') {
+      for (let i = 0; i < beats; i++) steps.push({n:c.type === 'click' || c.type === 'drums' ? '' : M.pcName(r, M.usesFlats(root) || /b/.test(root)), roman:i === 0 && c.type === 'loop' ? ch.roman : '', sec:i === 0 && x.first ? sec : '', bar:i === 0});
+      if (c.type !== 'click' && c.type !== 'drums') {
         const B = (tt, m, d, v = .3) => ev.push({t:t + tt, type:'tone', midi:m, dur:d, vel:v, bright:3}), simple = simpleAll;
         if (c.type === 'drone') {
           B(0, r, bar, .35); ev.push({t, type:'tone', midi:r + 7, dur:bar, vel:.12, bright:2, sus:.8, attack:.5}, {t, type:'tone', midi:r + 12, dur:bar, vel:.1, bright:2, sus:.8, attack:.5});
@@ -179,7 +179,7 @@ AM.backing = (() => {
           d.forEach(e => ev.push({...e, t:t + e.t}));
         }
         if (c.random && !simple && c.type === 'loop' && rnd() < .2 && beats >= 4) B((beats - 1) * q + q / 2, r + 12, q / 2, .2);
-      } else for (let i = 0; i < beats; i++) ev.push({t:t + i * q, type:'click', strong:i === 0});
+      } else DRUMS[c.type === 'drums' ? 'rock' : 'click'](beats, q, 'A', b).forEach(e => ev.push({...e, t:t + e.t}));
       t += bar;
     }
     const lag = simpleAll ? 0 : {tight:0, laid:.045, heavy:.08}[c.feel || 'tight'] ?? 0, jit = c.random && !simpleAll ? .012 : 0;
