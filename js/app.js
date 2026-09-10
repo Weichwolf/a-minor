@@ -169,8 +169,8 @@
     },
     griffbrett() { return `<h1>Griffbrett</h1><p class="lead">E A D G C F. Jede Form gilt überall.</p>${fretboardControls({frets:15})}`; },
     klaviatur() { return `<h1>Klaviatur</h1><p class="lead">49 Tasten, C2 bis C6. Jede Tonart hat ihre eigene Form.</p>${pianoControls({root:'A'})}`; },
-    player() { return `<h1>Backing</h1><p class="lead">Templates mit Variationen. Was es ist, warum es funktioniert. Klick lädt in den Player, Tempo und Rest bleiben frei.</p>
-      <div class="sticky">${playerControls({type:'loop', drums:'half'}, 60, 'backing')}</div>
+    player() { return `<h1>Backing</h1><p class="lead">Templates mit Variationen. Was es ist, warum es funktioniert. Jede Variation ist ein kleiner Song: Teile A, B, C, Form A B A C. Klick lädt in den Player, alles bleibt änderbar.</p>
+      <div class="sticky">${playerControls({type:'loop', drums:'half', parts:{A:['i','VII','VI','V:maj'], B:['VI','VII','i','i'], C:['iv','V:maj','i','i']}, form:'A B A C'}, 60, 'backing')}</div>
       ${AM.backings.map(t => `<section class="tpl"><h2>${esc(t.title)}</h2><p class="what">${esc(t.what)}</p><p class="why">${esc(t.why)}</p>
         <div class="vars">${t.variations.map((v, i) => `<button class="var" data-tpl="${t.id}" data-var="${i}"><b>${esc(v.title)}</b><span>${esc(v.note)}</span></button>`).join('')}</div></section>`).join('')}
       <div class="text"><p>Stufen römisch, Groß = Dur, Klein = Moll, Qualität kommt aus der Skala. Erzwingen mit <b>V:maj</b>, <b>v:min</b>, <b>vii:dim</b>. In Phrygisch ist <b>II</b> der bII-Akkord, weil die Skala ihn so liefert.</p>
