@@ -74,8 +74,8 @@ AM.audio = (() => {
           if (t > horizon) break;
           (wants(e) ? send : FX[e.type])(e, t, spb); idx++;
         }
-        const beat = Math.floor((c.currentTime - start) / spb);
-        if (beat !== this.lastBeat && this.onBeat) { this.lastBeat = beat; this.onBeat(((beat % this.seq.len) + this.seq.len) % this.seq.len); }
+        const n = this.seq.steps.length, step = Math.floor((c.currentTime - start) / (spb * this.seq.q));
+        if (step !== this.lastBeat && this.onBeat) { this.lastBeat = step; this.onBeat(((step % n) + n) % n); }
         this.timer = setTimeout(tick, 40);
       };
       tick();
@@ -98,15 +98,19 @@ AM.backing = (() => {
     const root = c.root || 'E', scale = c.scale || 'aeolian', bars = c.bars ?? 4, ev = [];
     let bass = M.rootPc(root) + 36; if (bass < 40) bass += 12;
     const tok = r => { const [rom, q] = r.split(':'); return {deg:M.romanIndex(rom), bars:1, q}; };
-    const prog = (c.type === 'loop' ? (c.progression || ['i']) : ['i']).map(r => typeof r === 'string' ? tok(r) : r);
-    const total = c.type === 'loop' ? prog.reduce((a, p) => a + p.bars, 0) : bars;
+    const parse = l => (l || []).map(r => typeof r === 'string' ? tok(r) : r);
+    const parts = {A:parse(c.parts?.A || c.progression || ['i']), B:parse(c.parts?.B), C:parse(c.parts?.C)};
+    const form = c.type === 'loop' ? [...(c.form || 'A').toUpperCase()].filter(l => parts[l] && parts[l].length) : ['A'];
+    const prog = c.type === 'loop' ? form.flatMap(l => parts[l].map((p, i) => ({...p, sec:l, secStart:i === 0}))) : [{deg:0, bars, sec:''}];
+    const total = prog.reduce((a, p) => a + p.bars, 0), steps = [];
     let t = 0;
     for (let b = 0; b < total; b++) {
+      let deg = 0, q, sec = '', first = false, acc = 0; for (const p of prog) { if (b < acc + p.bars) { deg = p.deg; q = p.q; sec = p.sec; first = b === acc && p.secStart; break; } acc += p.bars; }
+      const ch = M.chord(root, scale, deg);
+      if (q) { const r0 = ch.notes[0]; ch.notes = [r0, r0 + (q === 'maj' ? 4 : 3), r0 + (q === 'dim' ? 6 : 7)]; ch.roman = q === 'maj' ? ch.roman.toUpperCase().replace('°', '') : q === 'min' ? ch.roman.toLowerCase().replace('°', '') : ch.roman.toLowerCase().replace('°', '') + '°'; }
+      const off = ch.notes[0] - (M.rootPc(root) + 36), r = bass + off - (bass + off > 51 ? 12 : 0);
+      for (let i = 0; i < beats; i++) steps.push({n:c.type === 'click' ? '' : M.pcName(r, M.usesFlats(root) || /b/.test(root)), roman:i === 0 && c.type === 'loop' ? ch.roman : '', sec:i === 0 && first ? sec : '', bar:i === 0});
       if (c.type !== 'click') {
-        let deg = 0, q, acc = 0; for (const p of prog) { if (b < acc + p.bars) { deg = p.deg; q = p.q; break; } acc += p.bars; }
-        const ch = M.chord(root, scale, deg);
-        if (q) { const r0 = ch.notes[0]; ch.notes = [r0, r0 + (q === 'maj' ? 4 : 3), r0 + (q === 'dim' ? 6 : 7)]; }
-        const off = ch.notes[0] - (M.rootPc(root) + 36), r = bass + off - (bass + off > 51 ? 12 : 0);
         ev.push({t, type:'tone', midi:r, dur:bar, vel:.35, bright:3, sus:.7});
         if (c.type === 'drone') { ev.push({t, type:'tone', midi:r + 7, dur:bar, vel:.12, bright:2, sus:.8, attack:.5}); ev.push({t, type:'tone', midi:r + 12, dur:bar, vel:.1, bright:2, sus:.8, attack:.5}); }
         else ch.notes.forEach((n, i) => ev.push({t, type:'tone', midi:r + (n - ch.notes[0]) + 12 * (i === 0 ? 1 : 0), dur:bar, vel:.09, type:'tone', bright:2, sus:.8, attack:.3}));
@@ -115,7 +119,7 @@ AM.backing = (() => {
       } else for (let i = 0; i < beats; i++) ev.push({t:t + i * q, type:'click', strong:i === 0});
       t += bar;
     }
-    return {events:ev, len:t, bar, beats};
+    return {events:ev, len:t, bar, beats, q, steps};
   }
   return {build};
 })();

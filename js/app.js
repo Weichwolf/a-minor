@@ -13,6 +13,7 @@
   const progress = u => { const n = u.exercises.length; return n ? [u.exercises.filter(e => S.isDone(e.id)).length, n] : null; };
   const uid = p => p + Math.random().toString(36).slice(2, 7);
   const sel = (k, opts, v) => `<label>${LBL[k] || k}<select data-k="${k}">${opts.map(([a, b]) => `<option value="${a}"${a == v ? ' selected' : ''}>${b}</option>`).join('')}</select></label>`;
+  const fmt = l => (l || []).map(t => typeof t === 'string' ? t : Array(t.bars).fill(['I','II','III','IV','V','VI','VII'][t.deg] + (t.q ? ':' + t.q : '')).join(' ')).join(' ');
   const ROOTS = 'C C# D Eb E F F# G Ab A Bb B'.split(' ').map(r => [r, r]);
   let player = null, playerUI = null, midiPorts = null;
 
@@ -52,26 +53,30 @@
         ${sel('time', [['4/4','4/4'],['3/4','3/4'],['6/8','6/8'],['7/8','7/8'],['5/4','5/4']], c.time)}
         ${sel('drums', [['off','keine'],['half','Half-time'],['straight','Straight'],['double','Double-time']], c.drums)}
         <label>Takte <input type="number" data-k="bars" value="${c.bars}" min="1" max="32" style="width:3.5em"></label>
-        <label class="prog">Folge <input data-k="progression" value="${c.progression.join(' ')}" style="width:9em" title="Stufen, z.B. i VII VI V"></label>
+        <span class="prog"><label>A <input data-k="A" value="${fmt(c.parts?.A || c.progression)}" style="width:8em" title="Stufen, z.B. i VII VI V"></label>
+        <label>B <input data-k="B" value="${fmt(c.parts?.B)}" style="width:8em"></label><label>C <input data-k="C" value="${fmt(c.parts?.C)}" style="width:8em"></label>
+        <label>Form <input data-k="form" value="${c.form || 'A'}" style="width:5em" title="z.B. A B A C"></label></span>
         <button class="midi" title="Als MIDI-Datei speichern">⬇ MIDI</button>
       </div>${midiControls()}<div class="beats"></div></div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       bindMidi(el);
-      const read = () => { const o = {...c}; el.querySelectorAll('[data-k]').forEach(i => o[i.dataset.k] = i.dataset.k === 'progression' ? i.value.trim().split(/\s+/) : i.type === 'number' ? +i.value : i.value); return o; };
+      const read = () => { const o = {...c, parts:{}}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k; if ('ABC'.includes(k)) o.parts[k] = i.value.trim() ? i.value.trim().split(/\s+/) : []; else o[k] = i.type === 'number' ? +i.value : i.value; }); return o; };
       const beatsEl = el.querySelector('.beats'), playBtn = el.querySelector('.play');
+      const grid = seq => { beatsEl.innerHTML = seq.steps.map((s, i) => `<span class="${s.bar ? 'bar' : ''}${s.sec ? ' sec' : ''}"><i>${s.sec || ''}</i><em>${s.roman}</em>${s.n}</span>`).join(''); };
       const start = () => {
         if (player) { player.stop(); if (playerUI && playerUI !== el) playerUI.querySelector('.play').textContent = '▶ Start'; }
         const o = read(), seq = AM.backing.build(o);
         player = new AM.audio.Player(); playerUI = el; player.load(seq, o.tempo);
-        beatsEl.innerHTML = Array.from({length:seq.beats}, (_, i) => `<span>${i + 1}</span>`).join('');
-        player.onBeat = b => { const bi = Math.floor((b % seq.bar) / (seq.bar / seq.beats)); beatsEl.querySelectorAll('span').forEach((s, i) => s.classList.toggle('on', i === bi)); };
+        grid(seq);
+        player.onBeat = b => beatsEl.querySelectorAll('span').forEach((s, i) => s.classList.toggle('on', i === b));
         player.play(); playBtn.textContent = '■ Stop';
       };
       playBtn.onclick = () => { if (player && player.playing && playerUI === el) { player.stop(); playBtn.textContent = '▶ Start'; beatsEl.querySelectorAll('span').forEach(s => s.classList.remove('on')); } else start(); };
-      el.querySelectorAll('[data-k]').forEach(i => i.onchange = () => { el.querySelector('.prog').style.display = read().type === 'loop' ? '' : 'none'; if (player && player.playing && playerUI === el) start(); });
+      el.querySelectorAll('[data-k]').forEach(i => i.onchange = () => { el.querySelector('.prog').style.display = read().type === 'loop' ? '' : 'none'; if (player && player.playing && playerUI === el) start(); else grid(AM.backing.build(read())); });
+      grid(AM.backing.build(read()));
       el.querySelector('.prog').style.display = c.type === 'loop' ? '' : 'none';
-      el._set = cfg => { el.querySelectorAll('[data-k]').forEach(i => { const v = cfg[i.dataset.k]; if (v == null) return; i.value = i.dataset.k === 'progression' ? v.map(t => typeof t === 'string' ? t : Array(t.bars).fill(['I','II','III','IV','V','VI','VII'][t.deg]).join(' ')).join(' ') : v; }); el.querySelector('.prog').style.display = cfg.type === 'loop' ? '' : 'none'; start(); };
+      el._set = cfg => { const full = {A:cfg.parts?.A || cfg.progression || ['i'], B:cfg.parts?.B || [], C:cfg.parts?.C || [], form:cfg.form || 'A', ...cfg}; el.querySelectorAll('[data-k]').forEach(i => { const k = i.dataset.k, v = full[k]; if (v == null) return; i.value = 'ABC'.includes(k) ? fmt(v) : v; }); el.querySelector('.prog').style.display = cfg.type === 'loop' ? '' : 'none'; start(); };
       el.querySelector('.midi').onclick = () => { const o = read(); AM.midi.download(AM.midi.write(AM.backing.build(o), o.tempo, 4), `${label || 'backing'}-${o.root}-${o.scale}-${o.tempo}.mid`); };
     });
     return html;
