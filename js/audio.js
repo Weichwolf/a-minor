@@ -36,6 +36,22 @@ AM.audio = (() => {
   function snare(t, v = .5) { burst(t, .18, 'bandpass', 1800, v); const c = get(), o = c.createOscillator(), g = c.createGain(); o.frequency.value = 190; g.gain.setValueAtTime(v * .6, t); g.gain.exponentialRampToValueAtTime(.001, t + .12); o.connect(g).connect(master); o.start(t); o.stop(t + .15); }
   const hat = (t, v = .18) => burst(t, .05, 'highpass', 8000, v);
   const click = (t, strong) => { const c = get(), o = c.createOscillator(), g = c.createGain(); o.frequency.value = strong ? 1600 : 1000; g.gain.setValueAtTime(.4, t); g.gain.exponentialRampToValueAtTime(.001, t + .04); o.connect(g).connect(master); o.start(t); o.stop(t + .05); };
+  const out = {access:null, port:null, drums:true, backing:false, latency:0};
+  const NOTE = {kick:36, snare:38, hat:42, click:37};
+  function midiInit() {
+    if (!navigator.requestMIDIAccess) return Promise.resolve([]);
+    return navigator.requestMIDIAccess().then(a => { out.access = a; return [...a.outputs.values()]; }).catch(() => []);
+  }
+  const midiSelect = id => { out.port = id && out.access ? out.access.outputs.get(id) : null; };
+  const wants = e => out.port && (e.type === 'tone' ? out.backing : out.drums);
+  function send(e, t, spb) {
+    const ms = performance.now() + (t - get().currentTime) * 1000 + out.latency;
+    const ch = e.type === 'tone' ? (e.vel > .2 ? 0 : 1) : 9, n = e.type === 'tone' ? e.midi : NOTE[e.type];
+    const v = e.type === 'tone' ? Math.round(Math.min(1, e.vel * 3) * 100) : e.type === 'click' ? (e.strong ? 120 : 80) : Math.round((e.vel ?? .8) * 110);
+    const len = e.type === 'tone' ? e.dur * spb * 1000 - 20 : 60;
+    out.port.send([0x90 | ch, n, v], ms); out.port.send([0x80 | ch, n, 0], ms + len);
+  }
+  const allOff = () => { if (out.port) for (const ch of [0, 1, 9]) out.port.send([0xB0 | ch, 123, 0]); };
   const FX = {tone:(e, t, spb) => tone(e.midi, t, e.dur * spb, e), kick:(e, t) => kick(t, e.vel), snare:(e, t) => snare(t, e.vel), hat:(e, t) => hat(t, e.vel), click:(e, t) => click(t, e.strong)};
 
   class Player {
@@ -52,7 +68,7 @@ AM.audio = (() => {
           if (idx >= ev.length) { iter++; idx = 0; }
           const e = ev[idx], t = start + (iter * this.seq.len + e.t) * spb;
           if (t > horizon) break;
-          FX[e.type](e, t, spb); idx++;
+          (wants(e) ? send : FX[e.type])(e, t, spb); idx++;
         }
         const beat = Math.floor((c.currentTime - start) / spb);
         if (beat !== this.lastBeat && this.onBeat) { this.lastBeat = beat; this.onBeat(((beat % this.seq.len) + this.seq.len) % this.seq.len); }
@@ -60,9 +76,9 @@ AM.audio = (() => {
       };
       tick();
     }
-    stop() { this.playing = false; clearTimeout(this.timer); this.lastBeat = null; if (master) { const c = get(); master.gain.cancelScheduledValues(c.currentTime); master.gain.setTargetAtTime(0, c.currentTime, .05); setTimeout(() => master.gain.setValueAtTime(.5, get().currentTime), 300); } }
+    stop() { this.playing = false; clearTimeout(this.timer); this.lastBeat = null; allOff(); if (master) { const c = get(); master.gain.cancelScheduledValues(c.currentTime); master.gain.setTargetAtTime(0, c.currentTime, .05); setTimeout(() => master.gain.setValueAtTime(.5, get().currentTime), 300); } }
   }
-  return {Player, tone, get};
+  return {Player, tone, get, out, midiInit, midiSelect};
 })();
 
 AM.backing = (() => {

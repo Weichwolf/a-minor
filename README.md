@@ -8,7 +8,14 @@ Improvisieren im Klang von My Dying Bride, Type O Negative, Anathema, Vivaldi un
 
 Nebenziel: Notenlesen. Keine Tabs. Hilfen (Tonnamen, Saiten, Finger) am Anfang, abschaltbar, später weg.
 
-Der Kurs ist ein lebendes Projekt. Erster Wurf: Phase 0 und 1 vollständig, Phase 2–8 als Gerüst.
+Zwei parallele Tracks mit gleicher Phasenstruktur:
+
+| Track | Instrument | Eigenheit |
+|---|---|---|
+| Gitarre | 6 Saiten, P4-Stimmung | Jede Form gilt überall. Leere Saiten als Drone |
+| Keyboard | 49 Tasten C2–C6, multitimbral | Linke Hand Drone (Pad, Kanal 1), rechte Hand Melodie (Kanal 2). Beide Schlüssel, Generalbass ab Phase 3 |
+
+Der Kurs ist ein lebendes Projekt. Erster Wurf: Phase 0 und 1 beider Tracks vollständig, Phase 2–8 als Gerüst.
 
 ## Aufbau
 
@@ -32,26 +39,33 @@ Methode pro Übung: Form lernen, singen, spielen, über Drone mit Constraint imp
 
 Tempi sind Vorgaben pro Übung, im Player frei einstellbar. „⬇ MIDI" exportiert das Backing (Bass, Pad, Drums) für Looper oder DAW.
 
+**MIDI-Out** (Chrome/Edge, Web MIDI): Im Player Gerät wählen. Drums gehen als GM-Drumset auf Kanal 10 (Kick 36, Snare 38, Hi-Hat 42, Klick 37), Bass auf Kanal 1, Pad auf Kanal 2. Was per MIDI rausgeht, spielt der interne Synth nicht mehr. Latenz in ms korrigierbar, negativ = früher senden. Getestet gegen Alesis SR-18 und Yamaha MX49 als Ziel, beide GM-kompatibel auf Kanal 10.
+
 Tonnamen international: B = deutsches H, Bb = deutsches B.
 
 ## Übungen hinzufügen
 
-Alles in `data/course.js`. Eine Übung ist ein Objekt im `exercises`-Array einer Einheit:
+Gitarre in `data/gitarre.js`, Keyboard in `data/keys.js`. Eine Übung ist ein Objekt im `exercises`-Array einer Einheit:
 
 ```js
 { id:'e2-1-1', kind:'read', title:'…', tempo:60, instructions:'…',
-  score:{key:'Em', time:'4/4', maxFret:5, notes:[{p:'E2',d:'h'},{p:'F#2',d:'q',s:0,fi:1},{r:1,d:'q'},{p:'G2',d:'w',tie:1}]},
+  score:{key:'Em', time:'4/4', maxFret:5, clef:'treble', notes:[{p:'E2',d:'h'},{p:'F#2',d:'q',s:0,fi:1},{r:1,d:'q'},{p:'G2',d:'w',tie:1}],
+         bass:[{p:['E2','B2'],d:'w',fi:[5,1],tie:1},{p:['E2','B2'],d:'w'}]},
   generate:{root:'E', scale:'aeolian', key:'Em', range:['E2','G3'], bars:2, leap:3, durs:['q','h']},
   aids:['names','strings','fingers'],
   fretboard:{root:'E', scale:'aeolian', window:[0,2], frets:5, show:'degree', pcs:[4,7,11]},
+  piano:{root:'E', scale:'aeolian', show:'degree', window:['C4','C6'], pcs:[4,7,11]},
   backing:{type:'drone', root:'E', scale:'aeolian', time:'4/4', bars:4, drums:'half', progression:['i','VII','VI','V']},
   checklist:['…'] }
 ```
 
 | Feld | Bedeutung |
 |---|---|
-| `kind` | `read` `improv` `shape` `technique` `transcribe` |
-| `score.notes` | `p` Tonhöhe klingend (E2 = tiefe E-Saite), `d` Dauer `w h q e s` mit optionalem `.`, `r:1` Pause, `tie:1` Bogen zur nächsten Note, `s` Saite 0–5 (0 = tiefes E), `fi` Finger |
+| `kind` | `read` `improv` `shape` `keys` `technique` `transcribe` `sound` |
+| `score.notes` | `p` Tonhöhe klingend (E2 = tiefe E-Saite), Akkord als Array. `d` Dauer `w h q e s` mit optionalem `.`, `r:1` Pause, `tie:1` Bogen zur nächsten Note, `s` Saite 0–5 (0 = tiefes E), `fi` Finger (Zahl oder Array) |
+| `score.clef` | `treble` (Default) oder `bass`. Gitarre wird automatisch oktavtransponiert notiert |
+| `score.bass` | Zweites System im Bassschlüssel (linke Hand). Beide Systeme müssen gleich lang sein |
+| `piano` | Klaviatur-Widget, `window` als Tonbereich `['C4','C6']` |
 | `score.maxFret` | Obergrenze für die automatische Saitenwahl der Saiten-Hilfe |
 | `generate` | Ersetzt `notes` durch Zufallsfolge, Button „Neue Folge" |
 | `fretboard.window` | Saitenindizes `[von, bis]`, Rest ausgegraut. `pcs` zeigt nur diese Tonklassen (0 = C) |
@@ -66,11 +80,13 @@ index.html        Einstieg
 css/style.css
 js/music.js       Tonnamen, Skalen, Tonarten, Griffbrett-Positionen, Dreiklänge
 js/fretboard.js   Griffbrett als SVG
+js/piano.js       Klaviatur als SVG
 js/notation.js    Noten als SVG, Zufallsgenerator
-js/audio.js       Web-Audio-Synth, Sequencer, Backing-Builder
+js/audio.js       Web-Audio-Synth, Sequencer, Web-MIDI-Out, Backing-Builder
 js/midi.js        Standard-MIDI-Export
 js/store.js       localStorage
 js/app.js         Router, Ansichten
-data/course.js    Kursinhalt
+data/gitarre.js   Kursinhalt Gitarre
+data/keys.js      Kursinhalt Keyboard
 assets/           Ursprungsdiagramm P4_Scales
 ```

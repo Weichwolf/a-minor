@@ -1,7 +1,8 @@
-// Kursdaten. Neue Übung = neues Objekt im passenden exercises-Array. Felder siehe README.
+// Gitarren-Track. Neue Übung = neues Objekt im passenden exercises-Array. Felder siehe README.
+AM.tracks = AM.tracks || {};
 const FI = {0:0, 1:1, 2:1, 3:2, 4:3, 5:4};
 const AEOL_E = ['E2','F#2','G2','A2','B2','C3','D3','E3'];
-AM.course = [
+AM.tracks.gitarre = { title:'Gitarre', instrument:'guitar', lead:'Quartenstimmung E A D G C F. Vom Blatt, ohne Tabs.', phases:[
 { id:'p0', title:'Fundament', goal:'Haltung, Anschlag, Griffbrett-Geometrie, erste Noten. Hier sitzen die alten Fehler.', units:[
   { id:'u0-1', title:'Haltung und Anschlag', goal:'Jeder Ton klingt sauber aus, bis der nächste kommt. Nichts schnarrt, nichts wird abgewürgt.',
     text:`Alles Spätere steht auf diesem Fundament. Nimm dir dafür so lange Zeit wie nötig.
@@ -68,7 +69,7 @@ Hilfen: Tonname unter der Note, Saitennummer im Kreis (1 = höchste Saite). Scha
         score:{key:'C', time:'4/4', notes:[{p:'E2',d:'q'},{p:'E2',d:'q'},{p:'E2',d:'h'},{p:'E2',d:'h'},{p:'E2',d:'q'},{p:'E2',d:'q'},{p:'E2',d:'w'},{p:'E2',d:'q'},{r:1,d:'q'},{p:'E2',d:'h'}]},
         backing:{type:'click', time:'4/4', bars:4} },
       { id:'e0-4-2', kind:'read', title:'Achtel und Pausen', tempo:60, instructions:'Achtel gleichmäßig, Wechselschlag. Die Pause ist ein Ton, den du nicht spielst: abdämpfen, nicht ausklingen lassen.',
-        score:{key:'C', time:'4/4', notes:[{p:'A2',d:'e'},{p:'A2',d:'e'},{p:'A2',d:'q'},{p:'A2',d:'q'},{r:1,d:'q'},{p:'A2',d:'e'},{p:'A2',d:'e'},{p:'A2',d:'q'},{p:'A2',d:'e'},{p:'A2',d:'e'},{r:1,d:'e'},{p:'A2',d:'e'},{p:'A2',d:'e'},{p:'A2',d:'e'}]},
+        score:{key:'C', time:'4/4', notes:[{p:'A2',d:'e'},{p:'A2',d:'e'},{p:'A2',d:'q'},{p:'A2',d:'q'},{r:1,d:'q'},{p:'A2',d:'e'},{p:'A2',d:'e'},{p:'A2',d:'q'},{p:'A2',d:'e'},{p:'A2',d:'e'},{r:1,d:'e'},{p:'A2',d:'e'}]},
         backing:{type:'click', time:'4/4', bars:2}, checklist:['Ist die Pause wirklich still?','Sind die Achtel gleich lang, auch abwärts?'] },
       { id:'e0-4-3', kind:'read', title:'Dreiviertel', tempo:60, instructions:'Walzer. Betonung auf 1, leicht auf 2 und 3.',
         score:{key:'C', time:'3/4', notes:[{p:'D3',d:'q'},{p:'D3',d:'q'},{p:'D3',d:'q'},{p:'D3',d:'h'},{p:'D3',d:'q'},{p:'D3',d:'h.'},{p:'D3',d:'q'},{r:1,d:'q'},{p:'D3',d:'q'}]},
@@ -176,4 +177,4 @@ Ablauf: Anhören, Grundton auf der Gitarre finden, Motiv summen, Töne suchen, a
   { id:'u8-1', title:'Der Bogen', goal:'Anfang, Höhepunkt, Ende über 32 Takte.', text:'Geplant.', exercises:[] },
   { id:'u8-2', title:'Biber, Passacaglia', goal:'Ganz lesen, ganz spielen.', text:'Geplant.', exercises:[] },
 ]},
-];
+]};
