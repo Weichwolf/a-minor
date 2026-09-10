@@ -72,6 +72,7 @@ Gitarre in `data/gitarre.js`, Keyboard in `data/keys.js`. Eine Übung ist ein Ob
 | `generate` | Ersetzt `notes` durch Zufallsfolge, Button „Neue Folge" |
 | `fretboard.window` | Saitenindizes `[von, bis]`, Rest ausgegraut. `pcs` zeigt nur diese Tonklassen (0 = C) |
 | `backing.type` | `drone` `loop` `click`. `progression` nur bei `loop`, Stufen römisch, Qualität aus `scale` |
+| `backing.drums` | Im Kurs nur `off`, `click`, `rock` (BSBS BSBS BSBS BBS-). Übungs-Player ist bewusst schlicht: keine Fills, kein Feel, keine Variation. Das gibt es nur unter Backing |
 
 Skalen: `aeolian phrygian harmonicMinor dorian major lydian chromatic`. Neue Skala in `js/music.js` unter `SCALES`.
 

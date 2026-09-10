@@ -41,8 +41,8 @@
     el.querySelector('[data-midi-lat]').onchange = e => AM.audio.out.latency = +e.target.value;
   }
 
-  function playerControls(cfg, tempo, label) {
-    const c = {type:'drone', root:'E', scale:'aeolian', time:'4/4', bars:4, drums:'off', feel:'tight', random:false, progression:['i','VII','VI','V'], ...cfg}, id = uid('pl');
+  function playerControls(cfg, tempo, label, full = false) {
+    const c = {type:'drone', root:'E', scale:'aeolian', time:'4/4', bars:4, drums:'off', feel:'tight', random:false, simple:!full, progression:['i','VII','VI','V'], ...cfg}, id = uid('pl');
     const html = `<div class="player" id="${id}">
       <div class="row">
         <button class="play">▶ Start</button>
@@ -51,9 +51,8 @@
         ${sel('root', ROOTS, c.root)}
         ${sel('scale', Object.entries(M.SCALES).filter(([k]) => k !== 'chromatic').map(([k, v]) => [k, v.name]), c.scale)}
         ${sel('time', [['4/4','4/4'],['3/4','3/4'],['6/8','6/8'],['7/8','7/8'],['5/4','5/4']], c.time)}
-        ${sel('drums', [['off','keine'],['half','Half-time'],['straight','Straight'],['double','Double-time']], c.drums)}
-        ${sel('feel', [['tight','Tight'],['laid','Schleppend'],['heavy','Schwer']], c.feel)}
-        <label><input type="checkbox" data-k="random"${c.random ? ' checked' : ''}> Variation</label>
+        ${full ? sel('drums', [['off','keine'],['half','Half-time'],['straight','Straight'],['double','Double-time'],['rock','Rock BSBS'],['click','Klick']], c.drums) : sel('drums', [['off','keine'],['click','Klick'],['rock','Rock BSBS']], c.drums)}
+        ${full ? sel('feel', [['tight','Tight'],['laid','Schleppend'],['heavy','Schwer']], c.feel) + `<label><input type="checkbox" data-k="random"${c.random ? ' checked' : ''}> Variation</label>` : ''}
         <label>Takte <input type="number" data-k="bars" value="${c.bars}" min="1" max="32" style="width:3.5em"></label>
         <span class="prog"><label>A <input data-k="A" value="${fmt(c.parts?.A || c.progression)}" style="width:8em" title="Stufen, z.B. i VII VI V"></label>
         <label>B <input data-k="B" value="${fmt(c.parts?.B)}" style="width:8em"></label><label>C <input data-k="C" value="${fmt(c.parts?.C)}" style="width:8em"></label>
@@ -172,7 +171,7 @@
     griffbrett() { return `<h1>Griffbrett</h1><p class="lead">E A D G C F. Jede Form gilt überall.</p>${fretboardControls({frets:15})}`; },
     klaviatur() { return `<h1>Klaviatur</h1><p class="lead">49 Tasten, C2 bis C6. Jede Tonart hat ihre eigene Form.</p>${pianoControls({root:'A'})}`; },
     player() { return `<h1>Backing</h1><p class="lead">Templates mit Variationen. Was es ist, warum es funktioniert. Jede Variation ist ein kleiner Song: Teile A, B, C, Form A B A C. Klick lädt in den Player, alles bleibt änderbar.</p>
-      <div class="sticky">${playerControls({type:'loop', drums:'half', parts:{A:['i','VII','VI','V:maj'], B:['VI','VII','i','i'], C:['iv','V:maj','i','i']}, form:'A B A C', feel:'laid', random:true}, 60, 'backing')}</div>
+      <div class="sticky">${playerControls({type:'loop', drums:'half', parts:{A:['i','VII','VI','V:maj'], B:['VI','VII','i','i'], C:['iv','V:maj','i','i']}, form:'A B A C', feel:'laid', random:true}, 60, 'backing', true)}</div>
       ${AM.backings.map(t => `<section class="tpl"><h2>${esc(t.title)}</h2><p class="what">${esc(t.what)}</p><p class="why">${esc(t.why)}</p>
         <div class="vars">${t.variations.map((v, i) => `<button class="var" data-tpl="${t.id}" data-var="${i}"><b>${esc(v.title)}</b><span>${esc(v.note)}</span></button>`).join('')}</div></section>`).join('')}
       <div class="text"><p>Stufen römisch, Groß = Dur, Klein = Moll, Qualität kommt aus der Skala. Erzwingen mit <b>V:maj</b>, <b>v:min</b>, <b>vii:dim</b>. In Phrygisch ist <b>II</b> der bII-Akkord, weil die Skala ihn so liefert.</p>

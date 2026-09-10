@@ -96,6 +96,10 @@ AM.backing = (() => {
   const Q = (b, q, v) => Array.from({length:b}, (_, i) => ({t:i * q, type:'hat', vel:v}));
   const DRUMS = {
     off: () => [],
+    click: (b, q) => Array.from({length:b}, (_, i) => ({t:i * q, type:'click', strong:i === 0})),
+    rock: (b, q, sec, bar) => bar % 4 === 3 && b >= 4
+      ? [{t:0, type:'kick'}, {t:q, type:'kick'}, {t:2 * q, type:'snare'}]
+      : Array.from({length:b}, (_, i) => ({t:i * q, type:i % 2 ? 'snare' : 'kick'})),
     half: (b, q, sec) => {
       const mid = Math.floor(b / 2) * q, ev = [{t:0, type:'kick'}, {t:mid, type:'snare'}];
       if (sec === 'B') ev.push({t:mid - q / 2, type:'kick', vel:.6}, {t:(b - 1) * q, type:'ohat'}, ...H(b, q, .12));
@@ -133,6 +137,7 @@ AM.backing = (() => {
     const parts = {A:parse(c.parts?.A || c.progression || ['i']), B:parse(c.parts?.B), C:parse(c.parts?.C)};
     const form = c.type === 'loop' ? [...(c.form || 'A').toUpperCase()].filter(l => parts[l] && parts[l].length) : ['A'];
     const prog = c.type === 'loop' ? form.flatMap(l => parts[l].map((p, i) => ({...p, sec:l, secStart:i === 0}))) : [{deg:0, bars, sec:''}];
+    const simpleAll = c.simple || c.drums === 'rock' || c.drums === 'click';
     const total = prog.reduce((a, p) => a + p.bars, 0), steps = [], info = [];
     let acc = 0;
     prog.forEach((p, pi) => { for (let i = 0; i < p.bars; i++) info.push({deg:p.deg, qual:p.q, sec:p.sec, first:i === 0 && p.secStart, last:i === p.bars - 1 && (pi === prog.length - 1 || prog[pi + 1].secStart)}); });
@@ -147,24 +152,25 @@ AM.backing = (() => {
       const x = info[b], ch = chordAt(b), r = ch.bass, sec = x.sec, nxt = chordAt((b + 1) % total).bass;
       for (let i = 0; i < beats; i++) steps.push({n:c.type === 'click' ? '' : M.pcName(r, M.usesFlats(root) || /b/.test(root)), roman:i === 0 && c.type === 'loop' ? ch.roman : '', sec:i === 0 && x.first ? sec : '', bar:i === 0});
       if (c.type !== 'click') {
-        const B = (tt, m, d, v = .3) => ev.push({t:t + tt, type:'tone', midi:m, dur:d, vel:v, bright:3});
+        const B = (tt, m, d, v = .3) => ev.push({t:t + tt, type:'tone', midi:m, dur:d, vel:v, bright:3}), simple = simpleAll;
         if (c.type === 'drone') {
           B(0, r, bar, .35); ev.push({t, type:'tone', midi:r + 7, dur:bar, vel:.12, bright:2, sus:.8, attack:.5}, {t, type:'tone', midi:r + 12, dur:bar, vel:.1, bright:2, sus:.8, attack:.5});
         } else {
           ch.notes.forEach((n, i) => ev.push({t, type:'tone', midi:r + (n - ch.notes[0]) + 12 * (i === 0 ? 1 : 0), dur:bar, vel:.09, bright:2, sus:.8, attack:.3}));
           const mid = Math.floor(beats / 2) * q, lastB = (beats - 1) * q;
-          if (x.last && beats >= 3) { B(0, r, mid, .35); B(mid, r, q, .28); B(lastB, nxt - 1, q, .3); }
+          if (simple) { B(0, r, beats >= 4 ? mid : bar, .35); if (beats >= 4) B(mid, r, bar - mid, .3); }
+          else if (x.last && beats >= 3) { B(0, r, mid, .35); B(mid, r, q, .28); B(lastB, nxt - 1, q, .3); }
           else if (sec === 'B' && beats >= 4) { B(0, r, mid, .35); B(mid, r + 7, q, .26); B(mid + q, r, bar - mid - q, .26); }
           else if (sec === 'C' && beats >= 4) { B(0, r, mid, .35); B(mid, r, q, .28); B(lastB, r + 12, q, .22); }
           else { B(0, r, beats >= 4 ? mid : bar, .35); if (beats >= 4) B(mid, r, bar - mid, .3); }
         }
-        const style = c.drums || 'off', rnd = c.random ? Math.random : () => 1;
+        const style = c.drums || 'off', rnd = c.random && !simple ? Math.random : () => 1;
         if (style !== 'off') {
-          let d = DRUMS[style](beats, q, c.type === 'loop' ? sec : 'A');
-          const doFill = c.type === 'loop' && x.last && total > 1 && rnd() < .85;
+          let d = DRUMS[style](beats, q, c.type === 'loop' && !simple ? sec : 'A', b);
+          const doFill = !simple && c.type === 'loop' && x.last && total > 1 && rnd() < .85;
           if (doFill) { const cut = (beats - Math.min(2, beats - 1)) * q; d = d.filter(e => e.t < cut || e.type === 'hat'); d.push(...fill(beats, q, style, rnd)); }
-          if (c.type === 'loop' && x.first && total > 1) d.push({t:0, type:'crash', vel:.35});
-          if (c.random) {
+          if (!simple && c.type === 'loop' && x.first && total > 1) d.push({t:0, type:'crash', vel:.35});
+          if (c.random && !simple) {
             if (rnd() < .3 && beats >= 3) d.push({t:(beats - 1) * q + q / 2, type:'kick', vel:.5});
             if (rnd() < .25 && beats >= 4) d.push({t:Math.floor(beats / 2) * q - q / 2, type:'snare', vel:.18});
             if (rnd() < .2) d.push({t:(beats - 1) * q + q / 2, type:'ohat', vel:.18});
@@ -172,11 +178,11 @@ AM.backing = (() => {
           }
           d.forEach(e => ev.push({...e, t:t + e.t}));
         }
-        if (c.random && c.type === 'loop' && rnd() < .2 && beats >= 4) B((beats - 1) * q + q / 2, r + 12, q / 2, .2);
+        if (c.random && !simple && c.type === 'loop' && rnd() < .2 && beats >= 4) B((beats - 1) * q + q / 2, r + 12, q / 2, .2);
       } else for (let i = 0; i < beats; i++) ev.push({t:t + i * q, type:'click', strong:i === 0});
       t += bar;
     }
-    const lag = {tight:0, laid:.045, heavy:.08}[c.feel || 'tight'] ?? 0, jit = c.random ? .012 : 0;
+    const lag = simpleAll ? 0 : {tight:0, laid:.045, heavy:.08}[c.feel || 'tight'] ?? 0, jit = c.random && !simpleAll ? .012 : 0;
     if (lag || jit) ev.forEach(e => {
       const k = e.type === 'snare' || e.type === 'crash' || e.type === 'tomH' || e.type === 'tomL' ? 1 : e.type === 'hat' || e.type === 'ohat' ? .5 : e.type === 'tone' && e.vel > .2 && c.type === 'loop' ? .6 : 0;
       const off = (lag * k + (jit ? (Math.random() - .5) * 2 * jit : 0)) * q;
