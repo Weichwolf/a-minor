@@ -60,7 +60,11 @@ MX49: Drum-Kit auf Part 10. SR-18: MIDI-Interface mit DIN-Ausgang, MIDI CH 10, D
 
 Alle Drum-Muster enthalten geschlossene Hi-Hat (Note 42) mit hörbar gewichteten MIDI-Velocities. Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Shuffle verwendet lange/kurze Achtel im Übeverhältnis 2:1. In 12/8 sind es vier große Pulse mit je drei Hi-Hat-Achteln; 5/8 und 7/8 betonen die vorgegebenen Gruppen. Auch 3/4 bietet Klick und Drums.
 
-Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/8 und 12/8, ♪ bei 5/8 und 7/8. Vorschau und MIDI verwenden dieselbe Einheit. Bass und Pads werden selbst gespielt, nicht vom Player erzeugt. Die separate Notenvorschau verwendet Browserklang; sie berücksichtigt Stimmen, Haltebögen, Akzente, Staccato, Bend-Zielton, Swing und Formabläufe. Sie simuliert keine Gitarren-Anschlagtechnik.
+Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/8 und 12/8, ♪ bei 5/8 und 7/8. Vorschau und MIDI verwenden dieselbe Einheit. Bass und Pads werden selbst gespielt, nicht vom Player erzeugt. Die separate Notenvorschau verwendet lokal gehostete Salamander-Klaviersamples (Alexander Holm, CC BY 3.0); sie berücksichtigt Stimmen, Haltebögen, Akzente, Staccato, Bend-Zielton, Swing und Formabläufe. Sie simuliert keine Gitarren-Anschlagtechnik.
+
+„Anhören“ lädt nur die nötigen Anschlagsschichten und Tonhöhen. Der Satz umfasst 17 Grundtöne × 3 Schichten = 51 Stereo-MP3s, zusammen 6.092.470 Bytes. Anschlag und natürlicher Ausklang stammen aus der Aufnahme. Eine kurze Einschaltglättung und eine registerabhängige exponentielle Dämpfung mit abnehmenden Höhen formen die Notenenden. Stoppen blendet aus und verwirft geplante Einsätze; abgebrochenes Laden startet später nicht selbstständig. Kein zusätzlicher Klangregler.
+
+[Sample-Herkunft, Bearbeitung und Lizenz](assets/piano/credits.html) · [Reproduzierbarer Sample-Build und Hüllkurvenmodell](assets/piano/README.md).
 
 ## Backup / Restore
 
@@ -131,4 +135,4 @@ npm run test:browser
 
 Node.js und Python 3 erforderlich; Browsertest startet seinen lokalen Server selbst. Chromium liegt standardmäßig unter `/usr/bin/chromium`, alternativ `CHROMIUM_PATH` setzen. Playwright ist ausschließlich eine Entwicklungsabhängigkeit.
 
-Die Tests prüfen die Einheitenzahl, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
+Die Tests prüfen die Einheitenzahl, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Zusätzlich: Sample-Integrität, Anschlagsschichten, Retuning, Dämpfung, Ladewiederholung, Abbruch während des Ladens und Audio-Rendering im Browser (Dynamik, Tonenden, Polyphonie). Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.

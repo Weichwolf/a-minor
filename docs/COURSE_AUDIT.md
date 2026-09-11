@@ -57,6 +57,7 @@ Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beis
 - Haltebögen verlängern die Tonereignisse bei der Vorschau und bleiben über Zeilenumbrüche sichtbar. Bis zu drei Gitarrenschichten teilen ein System; Keyboard nutzt zwei Systeme mit unabhängiger oberer und mittlerer Stimme.
 - Triolen, punktierter Viertelpuls in 12/8 und Achtelpuls in 5/8 beziehungsweise 7/8 stimmen zwischen Noten, Vorschau und MIDI überein. Swing-Vorschau verwendet ausdrücklich ein 2:1-Übemodell.
 - Wiederholungen, einzelne erste/zweite Endings, D.S. al Coda und D.C. al Fine steuern die Vorschau aus denselben Notendaten.
+- Notenvorschau: Salamander-Stereoaufnahmen mit drei Anschlagsschichten, Quell-Retuning und unabhängigen Notenenden. Der aufgenommene Anschlag/Ausklang bleibt erhalten; exponentielle Dämpfung und Höhenabsenkung modellieren das Loslassen. Sample-Lizenzen und Bearbeitung sind ausgewiesen. Browser-Audio-Rendering prüft Dynamik, Staccato, Stoppen und Polyphonie.
 - Alle Drum-Muster enthalten hörbar gewichtete geschlossene Hi-Hat; die Auswahl heißt ausschließlich Klick/Drums.
 - Half-time hat tatsächlich Snare auf 3; gerade Achtelbegleitung Snare auf 2 und 4. Keine zufälligen Fills in Lernaufgaben.
 - MIDI-Stopp leert die Warteschlange und beendet Kanal-10-Noten. Verbindungsabbruch oder inaktiver Tab stoppt die Begleitung; kein heimlicher interner Schlagzeugersatz.

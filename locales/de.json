@@ -3483,7 +3483,7 @@
     "aids": "Tonnamen / Fingersatz einblenden",
     "generate": "↻ Neue Folge",
     "listen": "▶ Anhören",
-    "preview": "Notenvorschau · Browserklang",
+    "preview": "Klavier-Vorschau",
     "mastered": "sicher abrufbar",
     "logPlaceholder": "Gehört → nächster Versuch",
     "save": "Eintragen",
@@ -3531,6 +3531,9 @@
     "drums": "Drums",
     "compose": "Gestalten / Notieren",
     "playOrder": "Spielreihenfolge",
-    "swingFeel": "Swing-Leseweise: Vorschau im Verhältnis 2:1; Tempo zählt Viertel."
+    "swingFeel": "Swing-Leseweise: Vorschau im Verhältnis 2:1; Tempo zählt Viertel.",
+    "pianoLoading": "Klavier wird geladen …",
+    "pianoLoadError": "Klavier konnte nicht geladen werden. Verbindung prüfen und erneut auf Anhören klicken.",
+    "previewInterrupted": "Vorschau wegen einer Wiedergabeunterbrechung gestoppt. Erneut auf Anhören klicken."
   }
 }

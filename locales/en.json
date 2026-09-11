@@ -3483,7 +3483,7 @@
     "aids": "Show note names / fingering",
     "generate": "↻ New phrase",
     "listen": "▶ Listen",
-    "preview": "Score preview · browser sound",
+    "preview": "Piano preview",
     "mastered": "securely recalled",
     "logPlaceholder": "What I heard → next attempt",
     "save": "Save",
@@ -3531,6 +3531,9 @@
     "drums": "Drums",
     "compose": "Compose / notate",
     "playOrder": "Playing order",
-    "swingFeel": "Swing reading: preview uses a 2:1 study ratio; tempo counts quarters."
+    "swingFeel": "Swing reading: preview uses a 2:1 study ratio; tempo counts quarters.",
+    "pianoLoading": "Loading piano …",
+    "pianoLoadError": "Could not load the piano. Check your connection and press Listen to retry.",
+    "previewInterrupted": "Preview stopped after a playback interruption. Press Listen to restart."
   }
 }

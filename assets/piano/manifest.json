@@ -1,0 +1,519 @@
+{
+  "name": "Salamander Grand Piano v3",
+  "author": "Alexander Holm",
+  "license": "CC-BY-3.0",
+  "source": "https://github.com/sfzinstruments/SalamanderGrandPiano",
+  "revision": "3382bf9496bba2486f5ab0de55a264d1dfc38404",
+  "samples": [
+    {
+      "midi": 36,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -9,
+      "file": "36-v4.mp3",
+      "source": "Samples/C2v4.flac",
+      "sourceSha256": "25d2ac48536df4b2241c54d4c180432c8a838143e876182801f5a5f92b4f898f",
+      "sha256": "ea7885ecf00d52607eb57fb486d1447cd274e9f0e41779cd86b2da58ce4c5521"
+    },
+    {
+      "midi": 36,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -9,
+      "file": "36-v8.mp3",
+      "source": "Samples/C2v8.flac",
+      "sourceSha256": "2fae21e19a214aeecd527a2235b106f66030df6ff51cfa789a5b4c6feb3d7357",
+      "sha256": "348e749c10e941f333a6aa64b6e0a168996aba3f931c598244fa666b1c845a31"
+    },
+    {
+      "midi": 36,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -9,
+      "file": "36-v12.mp3",
+      "source": "Samples/C2v12.flac",
+      "sourceSha256": "dcbafcb704b7e1555b50b587269e7436769ac8c8fbb9234b1e2c3e84512c5ff8",
+      "sha256": "e21b2e25804dda3cd139c1a1e5daa7dfc3ba7dd3128de140b3c86e812325d007"
+    },
+    {
+      "midi": 39,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -11,
+      "file": "39-v4.mp3",
+      "source": "Samples/D#2v4.flac",
+      "sourceSha256": "1e05e5b875256fe71006b3c3e61440196f85a85c44aba9ecb7b1461ff3a10a02",
+      "sha256": "cd3ff0a309c9958d65b3c9c7b81e3f6fe438b1d9e35fa70502feb9f45929fec8"
+    },
+    {
+      "midi": 39,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -11,
+      "file": "39-v8.mp3",
+      "source": "Samples/D#2v8.flac",
+      "sourceSha256": "662b21ad6ee7634777fe8b5952c70db1795a23bfc8557ecb35844ce8d12eba70",
+      "sha256": "2f3930739742288590c6a2ff476324447e40c2d19c645164d36f2752df3d7ecf"
+    },
+    {
+      "midi": 39,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -11,
+      "file": "39-v12.mp3",
+      "source": "Samples/D#2v12.flac",
+      "sourceSha256": "5bef947e86d4577bf7d0c8ee88f8561d8da8450922daea9d1ccfc2e103a7c412",
+      "sha256": "1c423ae787d9c43dabe8bb8a1a72bc3b94ece6a14ea3057978edd6ab184a41d7"
+    },
+    {
+      "midi": 42,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -7,
+      "file": "42-v4.mp3",
+      "source": "Samples/F#2v4.flac",
+      "sourceSha256": "bc9d3a3e4ff5b2219d220e984eea3ab8e84d7222f89b5cfc4069cedb8af718e5",
+      "sha256": "d43df7805d29d323bdabf6590de3761d09a39fc7298cffaf416e14ea261d2e86"
+    },
+    {
+      "midi": 42,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -7,
+      "file": "42-v8.mp3",
+      "source": "Samples/F#2v8.flac",
+      "sourceSha256": "05c649a7114f0845ee09716831242af9726b2429dad92eb170fc84e92f92a8e1",
+      "sha256": "52619931a7433135954bbb5230aa5a7b7bda7c2b249ef2c1d6d50f4e7cc71c14"
+    },
+    {
+      "midi": 42,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -7,
+      "file": "42-v12.mp3",
+      "source": "Samples/F#2v12.flac",
+      "sourceSha256": "075f000a9bc1813c089fda2741a324ec63dafa56b02fa965f0c4aa92f480db9c",
+      "sha256": "132bce7cf76ccda195afc6a35a96a13ace86bad6fcb8e670e678bdd05b1d166b"
+    },
+    {
+      "midi": 45,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -4,
+      "file": "45-v4.mp3",
+      "source": "Samples/A2v4.flac",
+      "sourceSha256": "43563ad2ee61ba19560b969b79286b98edbd5ac6867b08bd956dac75bb376d27",
+      "sha256": "f2eaf2628f4c972a288698dd3b5c763e0eb1de51b803e9100ae93be09f817ce3"
+    },
+    {
+      "midi": 45,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -4,
+      "file": "45-v8.mp3",
+      "source": "Samples/A2v8.flac",
+      "sourceSha256": "31dcdb3c1dea91943c4cccbb9f804dde2953ae1f16cb3990fe7def7acf60f944",
+      "sha256": "fe41c146383977dd03b6319b141e438e03970875ef75e3692a3c1ca3a2e14239"
+    },
+    {
+      "midi": 45,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -4,
+      "file": "45-v12.mp3",
+      "source": "Samples/A2v12.flac",
+      "sourceSha256": "f51451e0661c762b600b0f8f535f74dd8d73c41de1a228abbd037e5cc1783c0e",
+      "sha256": "8b8aa7cbbd88135c8286c03478e14e8960b5283d953a4d13afe062833b821926"
+    },
+    {
+      "midi": 48,
+      "layer": 4,
+      "velocity": 40,
+      "tune": 0,
+      "file": "48-v4.mp3",
+      "source": "Samples/C3v4.flac",
+      "sourceSha256": "172b7e9fe81980ddb64334477459ea91e039b3c083f76a022682182be3482660",
+      "sha256": "c9b74d1b4735be191d5853d31f2a9de0a26732bf9bbf0c259dc2ca4d073a8971"
+    },
+    {
+      "midi": 48,
+      "layer": 8,
+      "velocity": 60,
+      "tune": 0,
+      "file": "48-v8.mp3",
+      "source": "Samples/C3v8.flac",
+      "sourceSha256": "b9200830cdef54fe0eb92db928dea161cd26d1faf31c7a08a4f51c97549e05bf",
+      "sha256": "ab079a8f8282e19706ff18e1119bb28808f7e82c1090ddf6c017b7c222c6b7da"
+    },
+    {
+      "midi": 48,
+      "layer": 12,
+      "velocity": 92,
+      "tune": 0,
+      "file": "48-v12.mp3",
+      "source": "Samples/C3v12.flac",
+      "sourceSha256": "1250eceb6bc80b2a4559f5d15834a19b357f6f8695412445f0c292abcf9e3d78",
+      "sha256": "eaecfc2533a058b13cc95ea398062da4aad2799ff2b77007c0c9ca8e83e6197c"
+    },
+    {
+      "midi": 51,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -6,
+      "file": "51-v4.mp3",
+      "source": "Samples/D#3v4.flac",
+      "sourceSha256": "cc750a11b5cd63da9367fbe152ae51f18a6cb248364a24e1e76ee6b17d3d4b96",
+      "sha256": "1a40a2369e5c2e3631be5470075a883cd7c20d0b54e9b3e8b6d62eb2ad12ffe1"
+    },
+    {
+      "midi": 51,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -6,
+      "file": "51-v8.mp3",
+      "source": "Samples/D#3v8.flac",
+      "sourceSha256": "900ad0d774e6cefd44c1081b66d50556b3121bf1d3f255c5329a9117447b9cff",
+      "sha256": "b33fa51677a6b18ea9e483c2c3700bf817723ab0e804cdac04e0221cf0fcad14"
+    },
+    {
+      "midi": 51,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -6,
+      "file": "51-v12.mp3",
+      "source": "Samples/D#3v12.flac",
+      "sourceSha256": "0681df11bb97982d3c29da9ad543f19ed412829677ea3e12a2152dcb4d921f9a",
+      "sha256": "e4c08a16d7be7c35d4472c3e3eb6539fcb69f2062efd04fc277753da23ec301e"
+    },
+    {
+      "midi": 54,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -3,
+      "file": "54-v4.mp3",
+      "source": "Samples/F#3v4.flac",
+      "sourceSha256": "1d338855b9447cb85efd063d331b97471836967fefbb8eef2b964718b38f26cd",
+      "sha256": "4b38a98ce09f5622f5f700035693fb8ac7c467b0a833d3359875e750ec757a59"
+    },
+    {
+      "midi": 54,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -3,
+      "file": "54-v8.mp3",
+      "source": "Samples/F#3v8.flac",
+      "sourceSha256": "116a760f8552491d361cae27ac06f4e46d226f9a50e5ea58f6c385fac7efca68",
+      "sha256": "8be20f0d3747321d0b4726b6565b8f6d957d34160569de754de40452d9f507f4"
+    },
+    {
+      "midi": 54,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -3,
+      "file": "54-v12.mp3",
+      "source": "Samples/F#3v12.flac",
+      "sourceSha256": "230d44d27106f66b09095d279ea7e2ad65be50c50bfed3a8449942306c1a8dc7",
+      "sha256": "9bd8766f9f4f42fd460bc9d5cea7d28bf8b29b96ee21671c4aacef2f1a228a42"
+    },
+    {
+      "midi": 57,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -3,
+      "file": "57-v4.mp3",
+      "source": "Samples/A3v4.flac",
+      "sourceSha256": "7cfc9b2a18f8728431dfc236ca5c97793d3bdb413fd713eb13198c673982618f",
+      "sha256": "cb812b62b28af834e5d47abdaa93398aa47f70eddebaa4b7bbc24a6f1113a59a"
+    },
+    {
+      "midi": 57,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -3,
+      "file": "57-v8.mp3",
+      "source": "Samples/A3v8.flac",
+      "sourceSha256": "b02ed7c37d6b902552274c92d66911751ee52aac20b28618387e1388b1653ed4",
+      "sha256": "a95bb493caa9a52fe4edd0504a5e759dc923e5b63974d44b807c848676512881"
+    },
+    {
+      "midi": 57,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -3,
+      "file": "57-v12.mp3",
+      "source": "Samples/A3v12.flac",
+      "sourceSha256": "d1fbc87c103c7c04ed6620156f6716c3b3862af36e6368e02bbf8886576b739e",
+      "sha256": "31c8a5f9da851aff536b748a751cf139235bb4c7dd9caaab1d8730f45283887d"
+    },
+    {
+      "midi": 60,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -6,
+      "file": "60-v4.mp3",
+      "source": "Samples/C4v4.flac",
+      "sourceSha256": "c68ab13a20f4e84361843417a17521d0cf7bd9587a43fbb36c04db56045990ed",
+      "sha256": "5da0413fdad5fc7466ceeb062f920f19f83c4f0d791fac00216c3aced4ffbb47"
+    },
+    {
+      "midi": 60,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -6,
+      "file": "60-v8.mp3",
+      "source": "Samples/C4v8.flac",
+      "sourceSha256": "36fb0535a1f21fe1dfc367c361dedda73710144e8c4940b40e97e6e5f8a3c694",
+      "sha256": "3fdb2cf7df2dafb3cab5a45136c383d6d3108411ef93e70055ef0f1adbd251a3"
+    },
+    {
+      "midi": 60,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -6,
+      "file": "60-v12.mp3",
+      "source": "Samples/C4v12.flac",
+      "sourceSha256": "21ebd25176ad28fabe364f22357cd8b7471b449c91b10ab4400c9c1408c74128",
+      "sha256": "9022f3d1ecb2185a20c66282767b4cd3a502f0aec02537a15952d4fe9191aaaa"
+    },
+    {
+      "midi": 63,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -3,
+      "file": "63-v4.mp3",
+      "source": "Samples/D#4v4.flac",
+      "sourceSha256": "dfd69f142177241a5219427e0c7012a19002b6bc98e11bafe287d7190f847b79",
+      "sha256": "7d488966682110ec7af864f6c6f2d06e18ba06c5f4a2f5741c355b88199d9cda"
+    },
+    {
+      "midi": 63,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -3,
+      "file": "63-v8.mp3",
+      "source": "Samples/D#4v8.flac",
+      "sourceSha256": "295179461449c598c44ad712977d47b41c0c25d9c782d349094e748dc06c0dfa",
+      "sha256": "477a09e1623c06010f397f6ae0648848324b66f4ee976efd88532ed6adfb4b29"
+    },
+    {
+      "midi": 63,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -3,
+      "file": "63-v12.mp3",
+      "source": "Samples/D#4v12.flac",
+      "sourceSha256": "78bc671f77911b0750e5cf2b5377bea3f1615b64f97d209c5694433c673b0b31",
+      "sha256": "beb5003053bfeca959a0ed8c9845c1f926d2110775aaa24ca19eac03e4572b21"
+    },
+    {
+      "midi": 66,
+      "layer": 4,
+      "velocity": 40,
+      "tune": 0,
+      "file": "66-v4.mp3",
+      "source": "Samples/F#4v4.flac",
+      "sourceSha256": "e024309f6f410365a9dea891a96d6df920e93d0c401a161f642c6e5e33de6ae3",
+      "sha256": "165905217c08b46da275c6dd7ad1c751d5790068ab19e3e92e6913a87b2da246"
+    },
+    {
+      "midi": 66,
+      "layer": 8,
+      "velocity": 60,
+      "tune": 0,
+      "file": "66-v8.mp3",
+      "source": "Samples/F#4v8.flac",
+      "sourceSha256": "be2dc339e8cec5f2f1da4ff583672dbc518bf5319547a08901b094617ac6998e",
+      "sha256": "12bc34a969abca1ebfae8bb337d67dee636fdca23f7b229408762a40c88d6c3d"
+    },
+    {
+      "midi": 66,
+      "layer": 12,
+      "velocity": 92,
+      "tune": 0,
+      "file": "66-v12.mp3",
+      "source": "Samples/F#4v12.flac",
+      "sourceSha256": "dd0d513f3187457ef1f7c5c2dcb274d6132df10ade225dba06a0f212bd499572",
+      "sha256": "843bdc12a3b585f5c9acde26d14d1f069b4a905d354fe9736f31680742d117d4"
+    },
+    {
+      "midi": 69,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -4,
+      "file": "69-v4.mp3",
+      "source": "Samples/A4v4.flac",
+      "sourceSha256": "4c6cc00539fef67b2f9540d789f099fb3dd04d779f4d4d385224a4d815918583",
+      "sha256": "8029d663342cee595a151e45e9700b5d6e1f4b9b6bc57ff45891d8f8c4ab6efb"
+    },
+    {
+      "midi": 69,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -4,
+      "file": "69-v8.mp3",
+      "source": "Samples/A4v8.flac",
+      "sourceSha256": "59529694455698d7fd212cde8eec4029eaae8e5e6d454bb48bf36428eaa8009b",
+      "sha256": "5f9b4e20826ab8f52ff9ac30e7bbe3682e7a748c9102be7fa16043ee917d5e81"
+    },
+    {
+      "midi": 69,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -4,
+      "file": "69-v12.mp3",
+      "source": "Samples/A4v12.flac",
+      "sourceSha256": "16f43b59ecb870359978c4523c97745a13c439d56e574ed5a96aec633aae5f4f",
+      "sha256": "6ab92472fa5d8ac4ead8e7de15d74114728ab6873c1e64efe17bbea1dcead36c"
+    },
+    {
+      "midi": 72,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -8,
+      "file": "72-v4.mp3",
+      "source": "Samples/C5v4.flac",
+      "sourceSha256": "0d7c117cdb01b261cb3a303c4a7c9f56ef42015078e3c69ab3aa19dd39287a6c",
+      "sha256": "b9db4fac6e4cf6824b757dce16cbd41541abe170896b5efd37fec801cacb016c"
+    },
+    {
+      "midi": 72,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -8,
+      "file": "72-v8.mp3",
+      "source": "Samples/C5v8.flac",
+      "sourceSha256": "f663242a552aad54113f186a6dd90c907c81d1f6374887a23179814544f78d79",
+      "sha256": "a8c45de08a54f0432ae8513af0832dca2f18a64321c79226a685e18b00861d5b"
+    },
+    {
+      "midi": 72,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -8,
+      "file": "72-v12.mp3",
+      "source": "Samples/C5v12.flac",
+      "sourceSha256": "bef7fa0e75075f0566400a5f5d7c313d6e295d287413c88e742e2dc2205d8915",
+      "sha256": "f2715ff67f1ab718acc5b3fbb68d653eedbe0931be8129a397bf50a32be27eaf"
+    },
+    {
+      "midi": 75,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -8,
+      "file": "75-v4.mp3",
+      "source": "Samples/D#5v4.flac",
+      "sourceSha256": "c7f25db21896025a0b71832e3e6b859a5e88f270b8230555b9ac4772913bf821",
+      "sha256": "eecc4bf6e0de62cc71b9d034c88a1eddb608ef902c2ebde42c276d4b19ba9114"
+    },
+    {
+      "midi": 75,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -8,
+      "file": "75-v8.mp3",
+      "source": "Samples/D#5v8.flac",
+      "sourceSha256": "f841ad0506994313f4202fbe3f07d917e60eeb10fb3461df3eae4fb9cd58432a",
+      "sha256": "e70859e7572b876452706906c208cb516cd7e0567efc67e649c246dd953190f9"
+    },
+    {
+      "midi": 75,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -8,
+      "file": "75-v12.mp3",
+      "source": "Samples/D#5v12.flac",
+      "sourceSha256": "84561eff0510969f90068b03de4b70c2965082609f4daf73dc80a213c67b4721",
+      "sha256": "f93c382399a1355ad3700859be20effb0d0f38d494e2c189e5adf52fc156cb00"
+    },
+    {
+      "midi": 78,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -5,
+      "file": "78-v4.mp3",
+      "source": "Samples/F#5v4.flac",
+      "sourceSha256": "2a7a898c7e1b1287cc6b79844b24bd7cd39f232573e380f2264e1694a38845c1",
+      "sha256": "7f3d30e3b1ad89f595fd6be89b80ae5d997f61144ac9d194852d9d39e53bf3d6"
+    },
+    {
+      "midi": 78,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -5,
+      "file": "78-v8.mp3",
+      "source": "Samples/F#5v8.flac",
+      "sourceSha256": "7757ef988e874313432a3b4ed586f0407fd4a9933b7ccc613b8ff96a2f83bc87",
+      "sha256": "a703f386a412b6ced1954efc43cd42ebf82eab9bc836e30e80cba8a2a842c44c"
+    },
+    {
+      "midi": 78,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -5,
+      "file": "78-v12.mp3",
+      "source": "Samples/F#5v12.flac",
+      "sourceSha256": "8c93b4180c17e7c6c998b66d505cdcaea2bc9037790ab5e51847bbc28a4cf27e",
+      "sha256": "71768dc5305b7a992cb703837c9cafdc688d2d25219d97bb7736a4dfb6f05493"
+    },
+    {
+      "midi": 81,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -7,
+      "file": "81-v4.mp3",
+      "source": "Samples/A5v4.flac",
+      "sourceSha256": "36bfb6bd47e8412e842334856c0c7f19005462f69f7cc9e1829bd7bfe0e3fe72",
+      "sha256": "a1e37f353b39299841982606126ff523ae077c907dee283e5e7979e042cfaeef"
+    },
+    {
+      "midi": 81,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -7,
+      "file": "81-v8.mp3",
+      "source": "Samples/A5v8.flac",
+      "sourceSha256": "c71f80ecee2dfc37519769ab97e2e92732bfce9314f6562ba884a737cfa018a9",
+      "sha256": "c023e19c2e9048823d198db7df588315068a54ff00d82dc73760786f788f9dfc"
+    },
+    {
+      "midi": 81,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -7,
+      "file": "81-v12.mp3",
+      "source": "Samples/A5v12.flac",
+      "sourceSha256": "5cbe3f13c10a181fb6ab5637f083988eeaac4dfa900cef847693c2748c0b7bab",
+      "sha256": "e3d2bce2b43ddd0685f32c6d97e6403020eb8a53b68403cf015fb04d5e26169c"
+    },
+    {
+      "midi": 84,
+      "layer": 4,
+      "velocity": 40,
+      "tune": -8,
+      "file": "84-v4.mp3",
+      "source": "Samples/C6v4.flac",
+      "sourceSha256": "1f3f32e401bbd2a87a9c5b094aa6f748213fe762f3026554eb60305c02399ef7",
+      "sha256": "961986c20f9254d2a935a2195084e975f93e90ae34927f7356febab648716262"
+    },
+    {
+      "midi": 84,
+      "layer": 8,
+      "velocity": 60,
+      "tune": -8,
+      "file": "84-v8.mp3",
+      "source": "Samples/C6v8.flac",
+      "sourceSha256": "e5d5db275007d4b0e35ce94b00e0b53f6c659707517ee1326bd77eeba119693b",
+      "sha256": "9e2808990691baa178f71e3586bfc7166a7a6059e7ae883e380b7bf9296d7f8c"
+    },
+    {
+      "midi": 84,
+      "layer": 12,
+      "velocity": 92,
+      "tune": -8,
+      "file": "84-v12.mp3",
+      "source": "Samples/C6v12.flac",
+      "sourceSha256": "a3bd4d493607a6683ecd0c9d638febf643f94130042828e77253dda60d5d3761",
+      "sha256": "295f9323572d98e1fb296999afb350511d7c4fc8538186b1934e14ddbb1cc4a1"
+    }
+  ]
+}

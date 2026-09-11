@@ -10,6 +10,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
   try {
     for (let i=0;i<100;i++) { try { if ((await fetch(base)).ok) break; } catch {} await new Promise(r => setTimeout(r,30)); }
     browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:['--no-sandbox']});
+    await require('./piano-browser.cjs')(browser,base);
     const context = await browser.newContext(), page = await context.newPage(), errors=[];
     page.on('pageerror',e => errors.push(e.message)); page.on('dialog',() => { throw Error('Unexpected dialog'); });
     await page.addInitScript(() => {

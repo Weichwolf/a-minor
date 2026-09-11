@@ -57,7 +57,7 @@
   function scoreBlock(ex,instrument) {
     const id = 'sc' + ex.id, aids = ex.aids || [];
     const html = `<div class="scorewrap" id="${id}"><div class="row small">${aids.length ? `<label><input type="checkbox" data-aid> ${t('aids')}</label>` : ''}
-      ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')}</span></div><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
+      ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')} · <a href="assets/piano/credits.html" target="_blank" rel="noopener">Salamander · CC BY 3.0</a></span></div><p class="preview-status small" role="status"></p><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       const generate = () => AM.notation.generate({...ex.generate,time:ex.score.time});
@@ -66,23 +66,34 @@
       const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries(aids.map(k => [k,!!el.querySelector('[data-aid]')?.checked])));
       el.querySelector('[data-aid]')?.addEventListener('change',draw);
       el.querySelector('.gen')?.addEventListener('click',() => { stop(); generated.set(ex.id,generate()); draw(); });
-      el.querySelector('.listen').onclick = () => {
-        const button = el.querySelector('.listen');
+      el.querySelector('.listen').onclick = async () => {
+        const button = el.querySelector('.listen'), status = el.querySelector('.preview-status');
         if (button.dataset.playing) { stop(); return; }
-        stop(); const bpm = el.closest('.ex')?.querySelector('.player input[type=number]')?.valueAsNumber || ex.tempo || 60, c = AM.audio.get(), spb = 60 / Math.min(160,Math.max(30,bpm)) / AM.music.meter(ex.score.time).q, events = AM.notation.events(sc()), t0 = c.currentTime + .1;
-        button.dataset.playing = 'true'; button.textContent = t('stop');
-        events.forEach(e => AM.audio.tone(e.midi,t0 + e.t * spb,e.dur * spb * .98,{vel:(e.voice === 1 ? .13 : e.voice === 2 ? .17 : .24) * (e.accent ? 1.35 : 1),bend:e.bend}));
-        const duration = AM.notation.barOrder(sc()).length * AM.music.meter(ex.score.time).len;
-        previewTimer = setTimeout(resetPreview,(duration * spb + .2) * 1000);
+        stop(); const run = previewRun, bpm = el.closest('.ex')?.querySelector('.player input[type=number]')?.valueAsNumber || ex.tempo || 60;
+        const spb = 60 / Math.min(160,Math.max(30,bpm)) / AM.music.meter(ex.score.time).q;
+        const events = AM.notation.events(sc()).map(e => ({...e,t:e.t * spb,dur:e.dur * spb,velocity:(e.voice === 1 ? 46 : e.voice === 2 ? 62 : 78) + (e.accent ? 18 : 0)}));
+        button.dataset.playing = 'loading'; button.textContent = t('stop'); status.textContent = t('pianoLoading');
+        try {
+          const play = await AM.audio.prepare(events);
+          if (run !== previewRun || !button.isConnected) return;
+          button.dataset.playing = 'playing'; status.textContent = '';
+          play(AM.notation.barOrder(sc()).length * AM.music.meter(ex.score.time).len * spb,error => {
+            if (run !== previewRun) return;
+            resetPreview(); if (error) status.textContent = t('previewInterrupted');
+          });
+        } catch {
+          if (run !== previewRun || !button.isConnected) return;
+          resetPreview(); status.textContent = t('pianoLoadError');
+        }
       };
       scoreDraws.add(draw); draw();
     });
     return html;
   }
-  let previewTimer;
+  let previewRun = 0;
   function resetPreview() {
-    clearTimeout(previewTimer);
-    document.querySelectorAll('.listen[data-playing]').forEach(b => { delete b.dataset.playing; b.textContent = t('listen'); });
+    previewRun++;
+    document.querySelectorAll('.listen[data-playing]').forEach(b => { delete b.dataset.playing; b.textContent = t('listen'); b.closest('.scorewrap').querySelector('.preview-status').textContent = ''; });
   }
   function exerciseCard(ex,unit) {
     const done = S.isDone(ex.id), logs = S.get().log.filter(l => l.ex === ex.id);

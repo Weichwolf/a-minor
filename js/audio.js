@@ -1,24 +1,16 @@
 AM.audio = (() => {
-  let ctx;
-  const voices = new Set(), players = new Set();
+  let ctx, piano;
+  const players = new Set();
   const get = () => {
     ctx ||= new (window.AudioContext || window.webkitAudioContext)();
-    if (ctx.state === 'suspended') ctx.resume();
     return ctx;
   };
-  function tone(m, t, d, o = {}) {
-    const c = get(), osc = c.createOscillator(), gain = c.createGain();
-    osc.type = 'triangle'; osc.frequency.value = 440 * 2 ** ((m - 69) / 12);
-    if (o.bend) { osc.frequency.setValueAtTime(osc.frequency.value,t); osc.frequency.exponentialRampToValueAtTime(440 * 2 ** ((m + o.bend - 69) / 12),t + d * .55); }
-    gain.gain.setValueAtTime(0, t);
-    gain.gain.linearRampToValueAtTime(o.vel ?? .25, t + .01);
-    gain.gain.setValueAtTime(o.vel ?? .25, t + d);
-    gain.gain.linearRampToValueAtTime(0, t + d + .03);
-    osc.connect(gain).connect(c.destination); voices.add(osc);
-    osc.onended = () => { voices.delete(osc); osc.disconnect(); gain.disconnect(); };
-    osc.start(t); osc.stop(t + d + .04);
-  }
-  const silence = () => { voices.forEach(v => v.stop()); voices.clear(); };
+  const prepare = async notes => {
+    const c = get(); await c.resume();
+    piano ||= new AM.SamplePiano(c);
+    return piano.prepare(notes);
+  };
+  const silence = () => piano?.stop();
   const out = {access:null, port:null, status:''};
   const NOTE = {kick:36, snare:38, hat:42, click:37};
   const allOff = () => {
@@ -82,7 +74,7 @@ AM.audio = (() => {
       try { allOff(); } catch (e) { out.status = 'stopError'; }
     }
   }
-  return {Player, tone, get, silence, out, midiInit, midiSelect};
+  return {Player, prepare, get, silence, out, midiInit, midiSelect};
 })();
 
 AM.backing = (() => {
