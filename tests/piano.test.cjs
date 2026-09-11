@@ -78,3 +78,22 @@ test('lookahead schedules only imminent notes and delayed clocks stop without an
   assert.equal(error.message,'previewInterrupted'); assert.equal(sources.length,1);
   assert.equal(timers.size,0);
 });
+
+test('preview loops on form length including rests without adding release tails or clock drift', async () => {
+  const {piano,context,sources,timers}=setup(async()=>({ok:true,json:async()=>manifest,arrayBuffer:async()=>new ArrayBuffer(4)}));
+  const start=await piano.prepare([note(60,78,.2,.2),note(64,78,.8,.2)]);
+  let ended=false;start(1.2,()=>{ended=true;});
+  const advance=t=>{context.currentTime=t;const [id,task]=[...timers].find(([,v])=>v.delay===25);timers.delete(id);task.fn();};
+  for(let i=1;i<=150;i++)advance(i*.025);
+  assert.equal(sources.length,7);
+  [.26,.86,1.46,2.06,2.66,3.26,3.86].forEach((t,i)=>assert(Math.abs(sources[i].started-t)<1e-12));
+  assert.equal(ended,false);
+  piano.stop();assert.equal(timers.size,0);
+});
+
+test('silent previews remain stoppable and invalid loop durations are rejected', async () => {
+  const {piano,timers}=setup(async()=>({ok:true,json:async()=>manifest}));
+  const start=await piano.prepare([]);let ended=false;start(2,()=>{ended=true;});
+  assert.equal(ended,false);assert.equal(timers.size,1);piano.stop();assert.equal(timers.size,0);
+  for(const duration of [0,-1,Infinity,NaN])assert.throws(()=>start(duration,()=>{}));
+});

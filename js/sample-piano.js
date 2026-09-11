@@ -71,17 +71,22 @@ AM.SamplePiano = class {
     source.start(start); source.stop(end + .01);
   }
   play(notes, buffers, duration, onEnd) {
-    this.stop(); const c = this.context, start = c.currentTime + .06;
-    const end = start + Math.max(duration,...notes.map(n => n.t + n.dur + this.release(n) + .01));
-    let index = 0;
+    this.stop();
+    if (!Number.isFinite(duration) || duration <= 0 || notes.some(n => n.t >= duration || n.t + n.dur > duration + 1e-7)) throw Error('Invalid preview duration');
+    const c = this.context, start = c.currentTime + .06;
+    let index = 0, cycle = 0;
     const tick = () => {
       try {
         const now = c.currentTime;
-        if (index < notes.length && start + notes[index].t < now - .25) throw Error('previewInterrupted');
-        while (index < notes.length && start + notes[index].t <= now + .15) {
-          const n = notes[index++]; this.note(n,buffers.get(n.sample.file),start + n.t);
+        if (notes.length) {
+          const time = () => start + cycle * duration + notes[index].t;
+          if (time() < now - .25) throw Error('previewInterrupted');
+          for (let guard = 0; time() <= now + .15; guard++) {
+            if (guard >= 4096) throw Error('previewInterrupted');
+            const n = notes[index]; this.note(n,buffers.get(n.sample.file),time());
+            if (++index === notes.length) { index = 0; cycle++; }
+          }
         }
-        if (now >= end) { this.timer = null; onEnd(); return; }
         this.timer = setTimeout(tick,25);
       } catch (error) { this.stop(); onEnd(error); }
     };

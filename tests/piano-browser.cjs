@@ -30,6 +30,14 @@ module.exports = async (browser,base) => {
     await page.locator('.listen').first().click();
     const stopped=await page.evaluate(()=>pianoStarts);await page.waitForTimeout(250);
     assert.equal(await page.evaluate(()=>pianoStarts),stopped,'stop cancels future attacks');
+    const loopStart=await page.evaluate(async()=>{
+      const play=await AM.audio.prepare([{midi:60,velocity:78,t:0,dur:.1}]);
+      const before=pianoStarts;play(.3,()=>{throw Error('Loop ended unexpectedly');});return before;
+    });
+    await page.waitForFunction(before=>pianoStarts>=before+3,loopStart);
+    await page.evaluate(()=>AM.audio.silence());
+    const loopStopped=await page.evaluate(()=>pianoStarts);await page.waitForTimeout(400);
+    assert.equal(await page.evaluate(()=>pianoStarts),loopStopped,'loop stop cancels subsequent cycles');
     const failContext=await browser.newContext(), fail=await failContext.newPage();
     try {
       await fail.route('**/*.mp3',r=>r.fulfill({status:503,body:'unavailable'}));
