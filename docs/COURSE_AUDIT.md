@@ -18,24 +18,24 @@ Keine Originalpartituren, MIDI-Dateien oder extrahierten Notenfolgen werden in a
 | Lokaler Beleg | Erkennbare Fähigkeit | a-minor-Zuordnung | Stand |
 |---|---|---|---|
 | Debut: `Fire It Up`, `Tunnel Vision`, beide Instrumente, S. 1 | Ganze/Halbe/Viertel, Tonwechsel, Grundpuls, Vorzeichen | Phase 0: Lesen, Rhythmus | Übungen vorhanden |
-| Grade One: `Wearing the Wire`, `Ain’t No Party`, S. 1 | Gerade Achtel, wechselnde Tonhöhen, Bass/Melodie bzw. Akkordbegleitung | Phase 0–1; vollständige Akkordbegleitung Phase 2 | Grundlagen vorhanden, Akkordtransfer geplant |
-| Grade Two: `Fire It Up`, `Tunnel Vision`, Gitarre S. 1 | „Muted Guitar“, Akzente, Achtelfolgen; Akkordsymbole über Rhythmusnotation | Erste Handkantendämpfung Phase 0; Powerchords und Akzente Phase 2 | Einstieg vorhanden, Ausbau geplant |
-| Grade Two/Three: `Lonely Streets`, `Fire It Up`, Piano S. 1 | Bewegte Melodie über Bass/Akkorden; Rollenwechsel der Hände | Zweistimmigkeit Phase 0–1; Umkehrungen und Stimmführung Phase 2–3 | Basis vorhanden, Transfer geplant |
-| Grade Three: `Tunnel Vision`, Gitarre S. 1 | Dur/Moll-Akkordwechsel und Rhythmen mit Achteln | Phase 2: Triaden und Rhythmus; Phase 3: wechselnder Bass | Geplant |
-| Grade Four: `Berlin Wall`, Gitarre/Piano S. 1 | Lange Pausen, synkopierte Einsätze, chromatische Bewegung, gebundene Noten | Phase 3: Rhythmuslesen/Formzeichen; Phase 4: Harmonik | Geplant; Haltebogenbasis vorhanden |
-| Grade Four: `Torture`, beide Instrumente, S. 1 | Sechzehntelfiguren, Achtelpausen, Melodie über gehaltenem Bass | Phase 3: Unterteilungen; Phase 5: Figuration | Geplant; Bass/Melodie-Grundlage vorhanden |
-| Grade Four: `Islands of Dreams`, Gitarre/Piano S. 1 | Mollseptakkorde, bewegte Sechzehntel, gebrochene Klavierfiguren | Phase 4: Septakkorde; Phase 5: Arpeggien | Geplant |
-| Grade Four: `The Way It Is`, Gitarre S. 1 | Mollsept-/Dominantseptakkorde, punktierte Rhythmen und Pausen | Phase 3–4 | Geplant |
-| Grade Four: `The Buzz`, Gitarre S. 1 | Auftakt/Einzähler, Segno/Coda-Zeichen, Clean-/Distortion-Wechsel | Phase 3: Formzeichen; Phase 7–8: Übergänge/Klangwechsel | Geplant |
-| Grade Five: `Brown Shoes`, Gitarre S. 1–2 | Shuffle, Quint-/Sextwechsel, Wiederholungskürzel, pentatonischer Soloabschnitt, lange Form | Phase 4: Akkorde; Phase 5: ternär; Phase 7–8: Solo/Form | Geplant |
-| Grade Five: `Take a Walk With Me`, Gitarre/Piano S. 1 | 12/8, punktierter Viertelpuls, gebrochene Begleitung, Mollpentatonik im Solo | Phase 5: 12/8; Phase 7: Solo; Phase 8: Arrangement | Geplant |
-| Grade Five: `Who Says It’s Raining?`, beide Instrumente, S. 1 | Swing, Septakkorde, Offbeat-Begleitung, Melodie über Akkorden | Phase 4–5 und 7 | Geplant |
-| Grade Five: `Coming Up Shortly`, Piano S. 1 | Triolischer Auftakt, Melodie und Akkorde | Phase 5: Triolen; Phase 7: Formeintritt | Geplant |
-| Grade Five: `Soul Town`, beide Instrumente, S. 1 | Synkopierte Riffs, Quint-/Sextwechsel, chromatische Stimmen | Phase 3–5 | Geplant |
+| Grade One: `Wearing the Wire`, `Ain’t No Party`, S. 1 | Gerade Achtel, wechselnde Tonhöhen, Bass/Melodie bzw. Akkordbegleitung | Phase 0–1; vollständige Akkordbegleitung Phase 2 | Übungen `u2-1`, `ku2-rhythm` |
+| Grade Two: `Fire It Up`, `Tunnel Vision`, Gitarre S. 1 | „Muted Guitar“, Akzente, Achtelfolgen; Akkordsymbole über Rhythmusnotation | Erste Handkantendämpfung Phase 0; Powerchords und Akzente Phase 2 | Übungen `u0-4-4`, `u2-6`, `u2-rhythm` |
+| Grade Two/Three: `Lonely Streets`, `Fire It Up`, Piano S. 1 | Bewegte Melodie über Bass/Akkorden; Rollenwechsel der Hände | Zweistimmigkeit Phase 0–1; Umkehrungen und Stimmführung Phase 2–3 | Übungen `ku5-3`, `ku7-4` (linke Melodie) |
+| Grade Three: `Tunnel Vision`, Gitarre S. 1 | Dur/Moll-Akkordwechsel und Rhythmen mit Achteln | Phase 2: Triaden und Rhythmus; Phase 3: wechselnder Bass | Übungen `u2-1`, `u3-1`, `ku2-1`, `ku3-1` |
+| Grade Four: `Berlin Wall`, Gitarre/Piano S. 1 | Lange Pausen, synkopierte Einsätze, chromatische Bewegung, gebundene Noten | Phase 3: Rhythmuslesen/Formzeichen; Phase 4: Harmonik | Übungen `u3-reading`, `ku3-reading`, `u8-4`, `ku8-4` |
+| Grade Four: `Torture`, beide Instrumente, S. 1 | Sechzehntelfiguren, Achtelpausen, Melodie über gehaltenem Bass | Phase 3: Unterteilungen; Phase 5: Figuration | Übungen `u3-4`, `ku3-4`, `u5-2`, `ku5-2` |
+| Grade Four: `Islands of Dreams`, Gitarre/Piano S. 1 | Mollseptakkorde, bewegte Sechzehntel, gebrochene Klavierfiguren | Phase 4: Septakkorde; Phase 5: Arpeggien | Übungen `u4-chords`, `ku4-chords`, `u5-2`, `ku5-3` |
+| Grade Four: `The Way It Is`, Gitarre S. 1 | Mollsept-/Dominantseptakkorde, punktierte Rhythmen und Pausen | Phase 3–4 | Übungen `u3-reading`, `u4-chords`, `ku4-chords` |
+| Grade Four: `The Buzz`, Gitarre S. 1 | Auftakt/Einzähler, Segno/Coda-Zeichen, Clean-/Distortion-Wechsel | Phase 3: Formzeichen; Phase 7–8: Übergänge/Klangwechsel | Übungen `u7-solo`, `ku7-solo`, `u6-4`, `ku6-4` |
+| Grade Five: `Brown Shoes`, Gitarre S. 1–2 | Shuffle, Quint-/Sextwechsel, Wiederholungskürzel, pentatonischer Soloabschnitt, lange Form | Phase 4: Akkorde; Phase 5: ternär; Phase 7–8: Solo/Form | Übungen `u4-6`, `u5-5`, `ku5-5`, `u7-4`, `u7-5` |
+| Grade Five: `Take a Walk With Me`, Gitarre/Piano S. 1 | 12/8, punktierter Viertelpuls, gebrochene Begleitung, Mollpentatonik im Solo | Phase 5: 12/8; Phase 7: Solo; Phase 8: Arrangement | Übungen `u5-4`, `ku5-4`, `u7-4`, `ku7-4` |
+| Grade Five: `Who Says It’s Raining?`, beide Instrumente, S. 1 | Swing, Septakkorde, Offbeat-Begleitung, Melodie über Akkorden | Phase 4–5 und 7 | Übungen `u4-chords`, `ku4-chords`, `u5-5`, `ku5-5` |
+| Grade Five: `Coming Up Shortly`, Piano S. 1 | Triolischer Auftakt, Melodie und Akkorde | Phase 5: Triolen; Phase 7: Formeintritt | Übungen `ku5-groove`, `ku7-1`, `ku7-solo` |
+| Grade Five: `Soul Town`, beide Instrumente, S. 1 | Synkopierte Riffs, Quint-/Sextwechsel, chromatische Stimmen | Phase 3–5 | Übungen `u3-reading`, `u4-6`, `ku4-chords`, `u6-5`, `ku6-5` |
 
-„Geplant“ bedeutet ausdrücklich: im sichtbaren Curriculum verankert, noch nicht als fertige Übung vermittelt. Phase 0–1 allein deckt Debut bis Grade Five nicht vollständig ab.
+Alle genannten Einheiten sind ausgearbeitet. Die verknüpften Aufgaben vermitteln die erkannten Teilfähigkeiten mit eigenem Material. Das Bestehen dieser Aufgaben belegt weder das Beherrschen sämtlicher Gigajam-Stücke noch eine formale Prüfungsgleichwertigkeit. Phase 0–1 allein deckt Debut bis Grade Five nicht vollständig ab.
 
-Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beispiele: `Lonely Streets` Viertel = 85, `Fire It Up` = 128, `Berlin Wall` = 140, `Who Says It’s Raining?` = 146. Spätere Transferprüfungen brauchen sowohl kontrolliertes langsames Spiel als auch längere Durchläufe im jeweiligen Zieltempo. Die aktuellen Einstiegsübungen bleiben langsamer.
+Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beispiele: `Lonely Streets` Viertel = 85, `Fire It Up` = 128, `Berlin Wall` = 140, `Who Says It’s Raining?` = 146. Die Tempoeinheiten `u7-5` und `ku7-5` prüfen denselben Satz bei 60, 90 und 120 Vierteln pro Minute; anschließend kürzere Achtelfiguren bis 140–146. Ein langer Durchlauf prüft Form und Klang bei Tempo. Die Einstiegsübungen bleiben langsamer.
 
 ## Eigenständiges Zielprofil
 
@@ -54,7 +54,10 @@ Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beis
 - F–E ist eine phrygische Übevorgabe, keine zwingende Auflösung. F–G dient als Gegenbeispiel.
 - Klavier und Synth unterscheiden sich im Ausklang. Wiederholter Bass macht Übungen ohne Latch, Split oder Pad möglich.
 - Keyboard-Gegenbewegung beginnt rechts auf C4, links auf C3: keine zwei Daumen gleichzeitig auf derselben Taste.
-- Haltebögen verlängern die Tonereignisse bei der Vorschau. Zwei Gitarrenstimmen teilen ein System; Keyboard nutzt zwei Systeme.
+- Haltebögen verlängern die Tonereignisse bei der Vorschau und bleiben über Zeilenumbrüche sichtbar. Bis zu drei Gitarrenschichten teilen ein System; Keyboard nutzt zwei Systeme mit unabhängiger oberer und mittlerer Stimme.
+- Triolen, punktierter Viertelpuls in 12/8 und Achtelpuls in 5/8 beziehungsweise 7/8 stimmen zwischen Noten, Vorschau und MIDI überein. Swing-Vorschau verwendet ausdrücklich ein 2:1-Übemodell.
+- Wiederholungen, einzelne erste/zweite Endings, D.S. al Coda und D.C. al Fine steuern die Vorschau aus denselben Notendaten.
+- Alle Drum-Muster enthalten hörbar gewichtete geschlossene Hi-Hat; die Auswahl heißt ausschließlich Klick/Drums.
 - Half-time hat tatsächlich Snare auf 3; gerade Achtelbegleitung Snare auf 2 und 4. Keine zufälligen Fills in Lernaufgaben.
 - MIDI-Stopp leert die Warteschlange und beendet Kanal-10-Noten. Verbindungsabbruch oder inaktiver Tab stoppt die Begleitung; kein heimlicher interner Schlagzeugersatz.
 - Import validiert vor Zustandsänderung und vereinigt Journalereignisse. UI maskiert importierte Texte. Fortschritts-IDs sind sprachunabhängig.

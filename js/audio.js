@@ -9,6 +9,7 @@ AM.audio = (() => {
   function tone(m, t, d, o = {}) {
     const c = get(), osc = c.createOscillator(), gain = c.createGain();
     osc.type = 'triangle'; osc.frequency.value = 440 * 2 ** ((m - 69) / 12);
+    if (o.bend) { osc.frequency.setValueAtTime(osc.frequency.value,t); osc.frequency.exponentialRampToValueAtTime(440 * 2 ** ((m + o.bend - 69) / 12),t + d * .55); }
     gain.gain.setValueAtTime(0, t);
     gain.gain.linearRampToValueAtTime(o.vel ?? .25, t + .01);
     gain.gain.setValueAtTime(o.vel ?? .25, t + d);
@@ -53,7 +54,7 @@ AM.audio = (() => {
       if (this.playing) return;
       if (!out.port || out.port.state !== 'connected') throw Error('MIDI-Ausgang fehlt');
       this.playing = true; players.add(this);
-      const beatMs = 60000 / this.bpm, ev = [...this.seq.events].sort((a, b) => a.t - b.t), start = performance.now() + 100;
+      const beatMs = 60000 / this.bpm / this.seq.q, ev = [...this.seq.events].sort((a, b) => a.t - b.t), start = performance.now() + 100;
       let cycle = 0, index = 0, lastBeat = -1;
       const tick = () => {
         if (!this.playing) return;
@@ -86,23 +87,33 @@ AM.audio = (() => {
 
 AM.backing = (() => {
   function build(c) {
-    const [beats, unit] = (c.time || '4/4').split('/').map(Number), q = 4 / unit, bars = c.bars ?? 4;
-    if (![3, 4].includes(beats) || unit !== 4 || !Number.isInteger(bars) || bars < 1 || bars > 32 || !['click', 'drums'].includes(c.type)) throw Error('Ungültige Kursbegleitung');
-    if (c.type === 'drums' && (beats !== 4 || !['half', 'straight'].includes(c.drums || 'half'))) throw Error('Unbekanntes Schlagzeugmuster');
-    const events = [], steps = [], bar = beats * q;
+    const m = AM.music.meter(c.time,c.groups), bars = c.bars ?? 4;
+    if (!Number.isInteger(bars) || bars < 1 || bars > 64 || !['click','drums'].includes(c.type)) throw Error('Invalid accompaniment');
+    const pattern = c.drums || 'half';
+    if (!['half','straight','shuffle','compound','grouped'].includes(pattern)) throw Error('Invalid drum pattern');
+    const events = [], steps = [], beats = m.len / m.q;
+    const accents = new Set(); let at = 0;
+    for (const g of m.groups) { accents.add(at); at += g; }
     for (let b = 0; b < bars; b++) {
       for (let i = 0; i < beats; i++) {
-        const t = b * bar + i * q; steps.push({bar:i === 0});
-        if (c.type === 'click') events.push({t, type:'click', strong:i === 0});
-        else {
-          events.push({t, type:'hat', vel:i % 2 ? .16 : .22});
-          if (c.drums === 'straight') {
-            events.push({t, type:i % 2 ? 'snare' : 'kick', vel:i % 2 ? .65 : .85}, {t:t + q / 2, type:'hat', vel:.12});
-          } else if (i === 0 || i === 2) events.push({t, type:i === 0 ? 'kick' : 'snare', vel:i === 0 ? .85 : .65});
+        const t = b * m.len + i * m.q, strong = m.d === 8 && !m.compound ? accents.has(i) : i === 0;
+        steps.push({t,bar:i === 0,strong,label:i + 1});
+        if (c.type === 'click') { events.push({t,type:'click',strong}); continue; }
+        events.push({t,type:'hat',vel:strong ? .52 : .42});
+        if (m.compound) {
+          events.push({t:t + .5,type:'hat',vel:.32},{t:t + 1,type:'hat',vel:.36});
+          events.push({t,type:i % 2 ? 'snare' : 'kick',vel:i % 2 ? .65 : .85});
+        } else if (m.d === 8) {
+          if (strong) events.push({t,type:i === 0 ? 'kick' : 'snare',vel:.7});
+        } else if (pattern === 'half') {
+          if (i === 0 || i === 2) events.push({t,type:i === 0 ? 'kick' : 'snare',vel:i === 0 ? .85 : .65});
+        } else {
+          events.push({t,type:i % 2 ? 'snare' : 'kick',vel:i % 2 ? .65 : .85});
+          events.push({t:t + (pattern === 'shuffle' ? 2 / 3 : .5),type:'hat',vel:.32});
         }
       }
     }
-    return {events, len:bars * bar, bar, beats, q, steps};
+    return {events,len:bars * m.len,bar:m.len,beats,q:m.q,steps};
   }
   return {build};
 })();

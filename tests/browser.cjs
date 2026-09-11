@@ -72,6 +72,21 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
       assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),id + ': expanded mobile aids');
     }
     await page.screenshot({path:'test-results/keyboard-mobile.png',fullPage:true});
+    await page.selectOption('#language','de');
+    for (const id of ['u5-2','ku5-3','u7-1','u7-3','u7-solo','u6-7','u7-6','ku8-6']) {
+      await page.goto(base+'/#/unit/'+id);await page.waitForSelector('svg.score');
+      assert.deepEqual(await page.locator('.player select').first().locator('option').allTextContents(),['Klick','Drums']);
+      assert.match(await page.locator('.player label').nth(1).innerText(),/^Begleitung/);
+      assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),id);
+      await page.locator('.listen').first().click();
+      assert.equal(await page.locator('.listen[data-playing]').count(),1,id);
+      await page.locator('.player input').first().fill('72');await page.locator('.player input').first().dispatchEvent('change');
+      assert.equal(await page.locator('.listen[data-playing]').count(),0,id);
+      await page.locator('svg.score').first().screenshot({path:'test-results/'+id+'-mobile.png'});
+    }
+    await page.setViewportSize({width:1280,height:900});await page.waitForTimeout(100);
+    await page.locator('svg.score').first().screenshot({path:'test-results/final-keyboard-desktop.png'});
+    console.log('PASS advanced scores, accompaniment labels, mobile wrapping and preview cancellation');
     await page.goto(base+'/#/unit/nonexistent');await page.waitForSelector('.tracks');
     assert.deepEqual(errors,[]);console.log('PASS every unit in both languages, mobile layout and unknown route');
   } finally { await browser?.close(); server.kill(); }

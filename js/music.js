@@ -12,6 +12,7 @@ AM.music = (() => {
     major:         {name:'Dur (Ionisch)',           iv:[0,2,4,5,7,9,11]},
     lydian:        {name:'Lydisch',                 iv:[0,2,4,6,7,9,11]},
     chromatic:     {name:'Chromatisch',             iv:[0,1,2,3,4,5,6,7,8,9,10,11]},
+    minorPentatonic:{iv:[0,3,5,7,10]},
   };
   const DEG = ['1','b2','2','b3','3','4','b5','5','b6','6','b7','7'];
   const KEYS = {
@@ -51,5 +52,12 @@ AM.music = (() => {
     return {notes:[a, b, c], quality:q, roman};
   }
   const romanIndex = r => ROM.indexOf(r.replace(/[°+]/g, '').toUpperCase());
-  return {LETTERS, TUNING, SCALES, DEG, KEYS, parse, midi, pc, pcName, name, rootPc, usesFlats, keyAcc, scalePcs, degreeOf, fretMidi, position, chord, romanIndex};
+  function meter(time = '4/4', grouping) {
+    const [n,d] = time.split('/').map(Number), compound = d === 8 && [6,9,12].includes(n);
+    if (!(d === 4 && [2,3,4].includes(n) || d === 8 && [5,6,7,9,12].includes(n))) throw Error('Unsupported meter');
+    const groups = grouping || (compound ? Array(n / 3).fill(3) : n === 5 ? [2,3] : n === 7 ? [2,2,3] : Array(n).fill(1));
+    if (!groups.every(g => Number.isInteger(g) && g > 0) || groups.reduce((a,b) => a + b,0) !== n) throw Error('Invalid grouping');
+    return {n,d,groups,compound,q:compound ? 1.5 : 4 / d,len:n * 4 / d,symbol:compound ? '♩.' : d === 8 ? '♪' : '♩'};
+  }
+  return {LETTERS, TUNING, SCALES, DEG, KEYS, parse, midi, pc, pcName, name, rootPc, usesFlats, keyAcc, scalePcs, degreeOf, fretMidi, position, chord, romanIndex, meter};
 })();

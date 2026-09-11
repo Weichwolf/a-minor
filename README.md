@@ -8,9 +8,9 @@ Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard. Notenlesen, Geh�
 
 ## Stand
 
-Phase 0–1 beider Instrumente ist ausgearbeitet. Phase 2–8 ist als Lernweg mit konkreten Anforderungen strukturiert, noch ohne fertige Übungen. Jam-/Backing-Editor und freie Konfigurationsseiten sind entfernt.
+Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Jam-/Backing-Editor und freie Konfigurationsseiten bleiben entfernt.
 
-Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die volle Gigajam-Anforderungsbreite ist im Curriculum eingeplant, noch nicht vollständig unterrichtet.
+Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die im Abgleich erkannten Fähigkeiten sind jetzt mit konkreten Übungen verknüpft. Das ist keine Zusicherung einer Prüfungsgleichwertigkeit; formale Abschlusskriterien liegen nicht vor. Der [vollständige Lernweg](docs/CURRICULUM.md) verlinkt jede neue Einheit.
 
 | Phase | Schwerpunkt |
 |---|---|
@@ -43,7 +43,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 `http://localhost:8000` öffnen. Kein Build. Keine Laufzeitabhängigkeiten. JSON-Dateien werden geladen; direktes Öffnen per `file://` wird nicht unterstützt. Web MIDI benötigt eine passende Browserimplementierung und einen sicheren Kontext wie HTTPS oder localhost.
 
-Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo, Klick/zugeordnetes Schlagzeugmuster. Notenhilfen sind standardmäßig aus; Diagramme eingeklappt.
+Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo und **Begleitung** mit genau den Optionen **Klick** und **Drums**. Das passende Muster gehört zur Aufgabe. Noten brechen an Taktgrenzen in neue Systeme um; dichte Einzeltakte bleiben bei Bedarf horizontal scrollbar. Notenhilfen sind standardmäßig aus; Diagramme eingeklappt.
 
 ## MIDI
 
@@ -58,7 +58,9 @@ Unter **MIDI** Ausgänge suchen und Gerät wählen. Klick/Drums ausschließlich 
 
 MX49: Drum-Kit auf Part 10. SR-18: MIDI-Interface mit DIN-Ausgang, MIDI CH 10, DRUM IN ON: V1, NOTE MAP NORMAL und passende Pad-Zuordnung unter NOTE. Die Handbücher sind in der MIDI-Ansicht verlinkt. Gerätetests stehen noch aus.
 
-Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Bei 3/4 nur Klick. Bass und Pads sind derzeit nicht Teil des Players. Die separate Notenvorschau verwendet Browserklang und berücksichtigt Haltebögen und Stimmen.
+Alle Drum-Muster enthalten geschlossene Hi-Hat (Note 42) mit hörbar gewichteten MIDI-Velocities. Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Shuffle verwendet lange/kurze Achtel im Übeverhältnis 2:1. In 12/8 sind es vier große Pulse mit je drei Hi-Hat-Achteln; 5/8 und 7/8 betonen die vorgegebenen Gruppen. Auch 3/4 bietet Klick und Drums.
+
+Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/8 und 12/8, ♪ bei 5/8 und 7/8. Vorschau und MIDI verwenden dieselbe Einheit. Bass und Pads werden selbst gespielt, nicht vom Player erzeugt. Die separate Notenvorschau verwendet Browserklang; sie berücksichtigt Stimmen, Haltebögen, Akzente, Staccato, Bend-Zielton, Swing und Formabläufe. Sie simuliert keine Gitarren-Anschlagtechnik.
 
 ## Backup / Restore
 
@@ -101,9 +103,23 @@ Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beid
 ```
 
 Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`.
-Dauern: `w h q e s`, optional punktiert. `tie:1` bindet zur nächsten gleichen Tonhöhe. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. Beide Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
+Dauern: `w h q e s`, optional punktiert (`h.`) oder als Triole (`et`, `qt`). Zeitberechnung mit 24 Ticks pro Viertel hält binäre und ternäre Unterteilungen exakt. `tie:1` bindet zur nächsten gleichen Tonhöhe. `p` darf für Akkorde ein Array enthalten; `s` und `fi` können dazu positionsgleiche Arrays sein. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. `score.inner` ergänzt eine unabhängig gehaltene beziehungsweise bewegte Mittelstimme im oberen System. Alle Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
 
-Der Renderer unterstützt die derzeitigen Phase-0–1-Aufgaben. Triolen, Formzeichen und komplexe spätere Mehrstimmigkeit brauchen vor ihrer Einführung eine entsprechende Erweiterung; das Curriculum behauptet keine vorhandene technische Unterstützung dafür.
+Zusätzliche Notenfelder: `accent`, `staccato`, `harmonic`, `bend` (Halbtöne), `slur`/`slurEnd`. `tuplet:3` startet eine Triolenklammer, `tupletEnd:true` beendet sie. `score.chords` und `score.sections` beschriften Takte; `score.swing:true` interpretiert gerade Achtel in der Vorschau als 2:1-Übemodell.
+
+Formnotation und Vorschau verwenden dieselben Daten:
+
+```json
+{"repeat":{"from":1,"to":2,"endings":[3,4]}}
+```
+
+Spielt 1–2–3–1–2–4. Alternativ `times:2` ohne Endings für eine einfache Wiederholung. Endings sind einzelne, unmittelbar anschließende Takte.
+
+```json
+{"jump":{"from":4,"to":2,"codaAt":3,"coda":5}}
+```
+
+D.S. al Coda; bei sechs geschriebenen Takten: 1–2–3–4–2–3–5–6. `to:1` bezeichnet D.C.; `fine` ersetzt `codaAt`/`coda` bei einem Schluss nach dem Rücksprung. Ein Score verwendet einen Wiederholungsbereich oder einen Rücksprung. Verschachtelte Kombinationen sind nicht implementiert und werden abgewiesen. Begleitungs-`bars` zählt gespielte Takte einschließlich Wiederholungen. Über Taktstriche laufende Noten werden mit Haltebögen ausgeschrieben.
 
 ## Prüfungen
 
@@ -115,4 +131,4 @@ npm run test:browser
 
 Node.js und Python 3 erforderlich; Browsertest startet seinen lokalen Server selbst. Chromium liegt standardmäßig unter `/usr/bin/chromium`, alternativ `CHROMIUM_PATH` setzen. Playwright ist ausschließlich eine Entwicklungsabhängigkeit.
 
-Die Tests prüfen Taktlängen, Stimmendauern, Haltebögen, spielbare P4-Positionen, Generatorgrenzen, MIDI-Nachrichten und Stopp, validierten Import, Sprachvollständigkeit sowie alle Einheiten in beiden Sprachen im Browser. Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
+Die Tests prüfen die Einheitenzahl, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.

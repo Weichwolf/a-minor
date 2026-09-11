@@ -8,7 +8,7 @@
   const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
   const md = text => text.trim().split(/\n\s*\n/).map(b => /^- /m.test(b) ? '<ul>' + b.split('\n').map(l => '<li>' + inline(l.replace(/^- /, '')) + '</li>').join('') + '</ul>' : '<p>' + inline(b) + '</p>').join('');
   let tracks, phases, units, allEx, player, playerUI, serial = 0;
-  const generated = new Map();
+  const generated = new Map(), scoreDraws = new Set();
   const progress = u => [u.exercises.filter(e => S.isDone(e.id)).length, u.exercises.length];
   function stop() {
     resetPreview(); AM.audio.silence(); player?.stop();
@@ -23,16 +23,16 @@
     allEx = units.flatMap(unit => unit.exercises.map(e => ({...e,unit})));
   }
   function playerControls(cfg, tempo) {
-    const c = {time:'4/4',bars:4,drums:'half',...cfg}, id = 'pl' + serial++;
+    const c = {time:'4/4',bars:4,drums:'half',...cfg}, meter = AM.music.meter(c.time,c.groups), id = 'pl' + serial++;
     const html = `<div class="player" id="${id}"><div class="row"><button class="play">${t('start')}</button>
-      <label>${t('tempo')} <input type="number" value="${tempo || 60}" min="30" max="160" step="1"> ♩/min</label>
-      <label>${t('accompaniment')} <select><option value="click">${t('click')}</option>${c.time === '4/4' ? `<option value="drums"${c.type === 'drums' ? ' selected' : ''}>${t(c.drums === 'straight' ? 'straight' : 'half')}</option>` : ''}</select></label>
+      <label>${t('tempo')} <input type="number" value="${tempo || 60}" min="30" max="160" step="1"> ${meter.symbol}/min</label>
+      <label>${t('accompaniment')} <select><option value="click">${t('click')}</option><option value="drums"${c.type === 'drums' ? ' selected' : ''}>${t('drums')}</option></select></label>
       <span>${c.time} · ${c.bars} ${t('bars')}</span></div><p class="status small" role="status"></p><div class="beats"></div></div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       const button = el.querySelector('.play'), input = el.querySelector('input'), select = el.querySelector('select'), status = el.querySelector('.status');
       const seq = () => AM.backing.build({...c,type:select.value});
-      const grid = () => { const current = seq(); el.querySelector('.beats').innerHTML = current.steps.map((s,i) => `<span class="${s.bar ? 'b1' : ''}"><em>${Math.floor(i / current.beats) + 1}</em><b>${i % current.beats + 1}</b></span>`).join(''); };
+      const grid = () => { const current = seq(); el.querySelector('.beats').innerHTML = current.steps.map((s,i) => `<span class="${s.strong ? 'b1' : ''}"><em>${Math.floor(i / current.beats) + 1}</em><b>${i % current.beats + 1}</b></span>`).join(''); };
       const start = () => {
         stop(); if (!input.reportValidity() || !Number.isFinite(input.valueAsNumber)) return;
         if (AM.audio.out.port?.state !== 'connected') { status.innerHTML = `<a href="#/midi">${t('connectFirst')}</a>`; return; }
@@ -43,7 +43,7 @@
         button.textContent = t('stop'); player.play();
       };
       button.onclick = () => playerUI === el ? stop() : start();
-      input.onchange = select.onchange = () => { const active = playerUI === el; grid(); if (active) start(); };
+      input.onchange = select.onchange = () => { const active = playerUI === el; if (el.closest('.ex')?.querySelector('.listen[data-playing]')) stop(); grid(); if (active) start(); };
       status.innerHTML = AM.audio.out.port ? esc(AM.audio.out.port.name) : `<a href="#/midi">${t('midiSetup')}</a>`;
       grid();
     });
@@ -57,7 +57,7 @@
   function scoreBlock(ex,instrument) {
     const id = 'sc' + ex.id, aids = ex.aids || [];
     const html = `<div class="scorewrap" id="${id}"><div class="row small">${aids.length ? `<label><input type="checkbox" data-aid> ${t('aids')}</label>` : ''}
-      ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')}</span></div><div class="svg"></div></div>`;
+      ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')}</span></div><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       const generate = () => AM.notation.generate({...ex.generate,time:ex.score.time});
@@ -69,13 +69,13 @@
       el.querySelector('.listen').onclick = () => {
         const button = el.querySelector('.listen');
         if (button.dataset.playing) { stop(); return; }
-        stop(); const c = AM.audio.get(), spb = 60 / (ex.tempo || 60), events = AM.notation.events(sc()), t0 = c.currentTime + .1;
+        stop(); const bpm = el.closest('.ex')?.querySelector('.player input[type=number]')?.valueAsNumber || ex.tempo || 60, c = AM.audio.get(), spb = 60 / Math.min(160,Math.max(30,bpm)) / AM.music.meter(ex.score.time).q, events = AM.notation.events(sc()), t0 = c.currentTime + .1;
         button.dataset.playing = 'true'; button.textContent = t('stop');
-        events.forEach(e => AM.audio.tone(e.midi,t0 + e.t * spb,e.dur * spb * .98,{vel:e.voice ? .13 : .24}));
-        const duration = Math.max(0,...events.map(e => e.t + e.dur));
+        events.forEach(e => AM.audio.tone(e.midi,t0 + e.t * spb,e.dur * spb * .98,{vel:(e.voice === 1 ? .13 : e.voice === 2 ? .17 : .24) * (e.accent ? 1.35 : 1),bend:e.bend}));
+        const duration = AM.notation.barOrder(sc()).length * AM.music.meter(ex.score.time).len;
         previewTimer = setTimeout(resetPreview,(duration * spb + .2) * 1000);
       };
-      draw();
+      scoreDraws.add(draw); draw();
     });
     return html;
   }
@@ -104,8 +104,7 @@
       <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t('scope')}</div></a>`).join('')}</div>`,
     track(id) {
       const track = tracks.find(x => x.id === id); if (!track) return views.home();
-      return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.filter(p => !p.planned).map(phaseCard).join('')}</div>
-        <details><summary>${t('outlook')}</summary><div class="phases">${track.phases.filter(p => p.planned).map((p,i) => phaseCard(p,i + 2)).join('')}</div></details>`;
+      return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.map(phaseCard).join('')}</div>`;
     },
     phase(id) {
       const p = phases.find(x => x.id === id); if (!p) return views.home(); const i = p.track.phases.findIndex(x => x.id === id);
@@ -129,7 +128,7 @@
     }
   };
   function route() {
-    stop(); resetPreview();
+    stop(); resetPreview(); scoreDraws.clear();
     const [,v = 'home',id] = location.hash.replace(/^#\/?/,'').match(/^([^/]*)\/?([^#]*)/) || [];
     const main = $('main'); main.innerHTML = (Object.hasOwn(views,v) ? views[v] : views.home)(id); window.scrollTo(0,0);
     document.querySelectorAll('[data-text]').forEach(e => e.textContent = t(e.dataset.text));
@@ -161,6 +160,8 @@
   $('#language').value = I.language;
   $('#language').onchange = e => { stop(); resetPreview(); I.set(e.target.value); index(); route(); };
   document.addEventListener('visibilitychange',() => { if (document.hidden) { stop(); resetPreview(); } });
+  let resizeFrame;
+  window.addEventListener('resize',() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => scoreDraws.forEach(draw => draw())); });
   window.addEventListener('pagehide',stop); window.addEventListener('hashchange',route);
   S.subscribe(source => {
     if (source !== 'remote') return;

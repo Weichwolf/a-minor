@@ -615,302 +615,57 @@
       "title": "Two-note shapes and arpeggios",
       "goal": "Combine pedal bass, thirds and broken triads; read voices independently."
     },
-    "u2-1": {
-      "title": "Triads within a window",
-      "goal": "Minor and major triads, open bass retained.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u2-2": {
-      "title": "Inversions",
-      "goal": "Keep melody on top through compact voicings.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u2-3": {
-      "title": "Thirds as a second voice",
-      "goal": "Parallel thirds with controlled note endings.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "p3": {
       "title": "Moving bass and lament",
       "goal": "Move from a fixed pedal to a descending bass; keep the melody independent."
-    },
-    "u3-1": {
-      "title": "Descending bass",
-      "goal": "Read bass and melody separately, then combine.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u3-2": {
-      "title": "Cycle of fifths",
-      "goal": "Guide a melody through changing harmonies.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u3-3": {
-      "title": "Ear and arrangement",
-      "goal": "Reduce a short reference passage to bass and melody.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
     },
     "p4": {
       "title": "Harmonic minor",
       "goal": "Leading tone and dominant harmony; distinguish modal colour from tonal cadence."
     },
-    "u4-1": {
-      "title": "The leading tone",
-      "goal": "D# resolves to E in a cadential context.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u4-2": {
-      "title": "Diminished seventh",
-      "goal": "Voice individual notes into a following chord.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u4-3": {
-      "title": "A short cadence",
-      "goal": "Read, hear and vary a cadence.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "p5": {
       "title": "Sequence and figuration",
       "goal": "Develop motifs through sequential repetition and broken chords."
-    },
-    "u5-1": {
-      "title": "Small sequences",
-      "goal": "Move a short motif through the scale.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u5-2": {
-      "title": "Arpeggios and melody",
-      "goal": "Keep a melody audible inside broken chords.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u5-3": {
-      "title": "Sequence over changing bass",
-      "goal": "Coordinate figuration and harmonic rhythm.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
     },
     "p6": {
       "title": "Contrasting colours",
       "goal": "Use fourths and Lydian colour as deliberate contrasts."
     },
-    "u6-1": {
-      "title": "Fourth-based voicings",
-      "goal": "Read and balance open sonorities.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u6-2": {
-      "title": "Lydian contrast",
-      "goal": "Hear raised fourth against a clear tonic.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "p7": {
       "title": "Rhythm II",
       "goal": "Keep independent voices steady through subdivisions and changing groups."
-    },
-    "u7-1": {
-      "title": "Triplets",
-      "goal": "Read and hear three equal subdivisions.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u7-2": {
-      "title": "Grouping",
-      "goal": "Move accents across a stable pulse.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u7-3": {
-      "title": "Asymmetric metre",
-      "goal": "Read 7/8 in explicit groups, then make a phrase.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
     },
     "p8": {
       "title": "An arrangement of your own",
       "goal": "Combine pedal notes, moving bass, melody, arpeggios and chords into a complete solo piece."
     },
-    "u8-1": {
-      "title": "A complete arc",
-      "goal": "Opening, development, contrast and return.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u8-2": {
-      "title": "Solo arrangement",
-      "goal": "Notate, perform and revise a self-contained arrangement.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "k2": {
       "title": "Two-note shapes and arpeggios",
       "goal": "Combine pedal bass, thirds and broken triads; read voices independently."
-    },
-    "ku2-1": {
-      "title": "Triads within a window",
-      "goal": "Minor and major triads, open bass retained.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku2-2": {
-      "title": "Inversions",
-      "goal": "Keep melody on top through compact voicings.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku2-3": {
-      "title": "Thirds as a second voice",
-      "goal": "Parallel thirds with controlled note endings.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
     },
     "k3": {
       "title": "Moving bass and lament",
       "goal": "Move from a fixed pedal to a descending bass; keep the melody independent."
     },
-    "ku3-1": {
-      "title": "Descending bass",
-      "goal": "Read bass and melody separately, then combine.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku3-2": {
-      "title": "Cycle of fifths",
-      "goal": "Guide a melody through changing harmonies.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku3-3": {
-      "title": "Ear and arrangement",
-      "goal": "Reduce a short reference passage to bass and melody.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "k4": {
       "title": "Harmonic minor",
       "goal": "Leading tone and dominant harmony; distinguish modal colour from tonal cadence."
-    },
-    "ku4-1": {
-      "title": "The leading tone",
-      "goal": "D# resolves to E in a cadential context.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku4-2": {
-      "title": "Diminished seventh",
-      "goal": "Voice individual notes into a following chord.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku4-3": {
-      "title": "A short cadence",
-      "goal": "Read, hear and vary a cadence.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
     },
     "k5": {
       "title": "Sequence and figuration",
       "goal": "Develop motifs through sequential repetition and broken chords."
     },
-    "ku5-1": {
-      "title": "Small sequences",
-      "goal": "Move a short motif through the scale.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku5-2": {
-      "title": "Arpeggios and melody",
-      "goal": "Keep a melody audible inside broken chords.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku5-3": {
-      "title": "Sequence over changing bass",
-      "goal": "Coordinate figuration and harmonic rhythm.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "k6": {
       "title": "Contrasting colours",
       "goal": "Use fourths and Lydian colour as deliberate contrasts."
-    },
-    "ku6-1": {
-      "title": "Fourth-based voicings",
-      "goal": "Read and balance open sonorities.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku6-2": {
-      "title": "Lydian contrast",
-      "goal": "Hear raised fourth against a clear tonic.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku6-3": {
-      "title": "Register and timbre",
-      "goal": "Move an idea between registers without losing its shape.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
     },
     "k7": {
       "title": "Rhythm II",
       "goal": "Keep independent voices steady through subdivisions and changing groups."
     },
-    "ku7-1": {
-      "title": "Triplets",
-      "goal": "Read and hear three equal subdivisions.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku7-2": {
-      "title": "Grouping",
-      "goal": "Move accents across a stable pulse.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku7-3": {
-      "title": "Asymmetric metre",
-      "goal": "Read 7/8 in explicit groups, then make a phrase.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
     "k8": {
       "title": "An arrangement of your own",
       "goal": "Combine pedal notes, moving bass, melody, arpeggios and chords into a complete solo piece."
-    },
-    "ku8-1": {
-      "title": "A complete arc",
-      "goal": "Opening, development, contrast and return.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "ku8-2": {
-      "title": "Solo arrangement",
-      "goal": "Notate, perform and revise a self-contained arrangement.",
-      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
-    },
-    "u2-rhythm": {
-      "title": "Accents and articulation",
-      "goal": "Combine straight eighths, offbeats and deliberately short chords.",
-      "text": "Planned. Guitar: P4 power chords, alternate picking, palm muting and deliberately open accents. Keyboard: short chords with melody over held or repeated bass. Clap new rhythms, read them and incorporate them into an uninterrupted phrase."
-    },
-    "u3-reading": {
-      "title": "Rhythm reading and form signs",
-      "goal": "Read syncopation, sixteenths and repeats in longer sections.",
-      "text": "Planned. Dotted rhythms, ties across beats and barlines, eighth and sixteenth rests. Count multibar rests; follow repeats, endings, segno and coda. Checkpoint: perform an extended section without losing the form."
-    },
-    "u4-chords": {
-      "title": "Chord symbols and harmonic changes",
-      "goal": "Read and play major, minor, power, sixth and seventh chords.",
-      "text": "Planned. Distinguish dominant, minor and major sevenths; separate chord symbols from written voicings. Fifth/sixth alternation, chromatic chord motion and major contrasts to minor material. Guitar: P4 voicings with a top melody; keyboard: inversions and a quiet left accompaniment."
-    },
-    "u5-groove": {
-      "title": "Ternary feel",
-      "goal": "Distinguish triplets, 12/8, shuffle and swing.",
-      "text": "Planned. Compare straight and ternary eighths; read 12/8 as four dotted-quarter pulses; shuffle without changing the basic pulse. Swing is not a rigid 2:1 ratio at every tempo. Sustain a rhythmically varied motif over your own bass."
-    },
-    "u7-solo": {
-      "title": "Solo within a complete form",
-      "goal": "Phrase with minor pentatonic and chord tones, then return securely to accompaniment.",
-      "text": "Planned. Count solo sections in advance, sing target notes, develop motifs and hit the return. Start with drums plus external bass, then supply your own pedal/bass reference. Check transitions, sound changes and extended takes at source tempo; tempo transfer complements slow expressive practice."
-    },
-    "ku2-rhythm": {
-      "title": "Accents and articulation",
-      "goal": "Combine straight eighths, offbeats and deliberately short chords.",
-      "text": "Planned. Guitar: P4 power chords, alternate picking, palm muting and deliberately open accents. Keyboard: short chords with melody over held or repeated bass. Clap new rhythms, read them and incorporate them into an uninterrupted phrase."
-    },
-    "ku3-reading": {
-      "title": "Rhythm reading and form signs",
-      "goal": "Read syncopation, sixteenths and repeats in longer sections.",
-      "text": "Planned. Dotted rhythms, ties across beats and barlines, eighth and sixteenth rests. Count multibar rests; follow repeats, endings, segno and coda. Checkpoint: perform an extended section without losing the form."
-    },
-    "ku4-chords": {
-      "title": "Chord symbols and harmonic changes",
-      "goal": "Read and play major, minor, power, sixth and seventh chords.",
-      "text": "Planned. Distinguish dominant, minor and major sevenths; separate chord symbols from written voicings. Fifth/sixth alternation, chromatic chord motion and major contrasts to minor material. Guitar: P4 voicings with a top melody; keyboard: inversions and a quiet left accompaniment."
-    },
-    "ku5-groove": {
-      "title": "Ternary feel",
-      "goal": "Distinguish triplets, 12/8, shuffle and swing.",
-      "text": "Planned. Compare straight and ternary eighths; read 12/8 as four dotted-quarter pulses; shuffle without changing the basic pulse. Swing is not a rigid 2:1 ratio at every tempo. Sustain a rhythmically varied motif over your own bass."
-    },
-    "ku7-solo": {
-      "title": "Solo within a complete form",
-      "goal": "Phrase with minor pentatonic and chord tones, then return securely to accompaniment.",
-      "text": "Planned. Count solo sections in advance, sing target notes, develop motifs and hit the return. Start with drums plus external bass, then supply your own pedal/bass reference. Check transitions, sound changes and extended takes at source tempo; tempo transfer complements slow expressive practice."
     },
     "e0-4-4": {
       "title": "Muted eighths, open accents",
@@ -921,6 +676,2792 @@
         "Open accent only at the first beat?",
         "Same pulse in both versions?"
       ]
+    },
+    "e2-1-1": {
+      "title": "Written study · Triads: minor and major",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb on E bass, free fingers on the three upper notes. G3 and G#3 are D-string frets 5 and 6; retain B3 and E4.",
+      "checklist": [
+        "Third change audible, other notes unchanged?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e2-1-2": {
+      "title": "Deliberate variation · Triads: minor and major",
+      "instructions": "Alternate minor and major without looking. Sing the new third before playing; keep bass and top-voice levels unchanged.",
+      "checklist": [
+        "New third sung before playing?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e2-1-3": {
+      "title": "Original application · Triads: minor and major",
+      "instructions": "Write eight bars with one triad per bar. Keep E bass and use one major bar as contrast. Place it deliberately within the phrase and play the same form twice.",
+      "checklist": [
+        "Major contrast reproduced in the same place?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "ke2-1-1": {
+      "title": "Written study · Triads: minor and major",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left E3; right G4–B4–E5 or G#4–B4–E5. Use right 1–2–5; only the thumb moves a semitone.",
+      "checklist": [
+        "Third change audible, other notes unchanged?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke2-1-2": {
+      "title": "Deliberate variation · Triads: minor and major",
+      "instructions": "Alternate minor and major without looking. Sing the new third before playing; keep bass and top-voice levels unchanged.",
+      "checklist": [
+        "New third sung before playing?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke2-1-3": {
+      "title": "Original application · Triads: minor and major",
+      "instructions": "Write eight bars with one triad per bar. Keep E bass and use one major bar as contrast. Place it deliberately within the phrase and play the same form twice.",
+      "checklist": [
+        "Major contrast reproduced in the same place?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e2-2-1": {
+      "title": "Written study · Inversion and bass note",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Keep G3–B3–E4 above. Bass: open E2, G2 at E-string fret 3, B2 at A-string fret 2. Mute each previous bass at the change.",
+      "checklist": [
+        "All three bass positions identified?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-2-2": {
+      "title": "Deliberate variation · Inversion and bass note",
+      "instructions": "Hold the top E across two bars while the other voices re-enter. Check that the bass still makes each inversion clear.",
+      "checklist": [
+        "Long top voice independent of bass?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-2-3": {
+      "title": "Original application · Inversion and bass note",
+      "instructions": "Write eight bars using E–G–B–E bass twice. On the second pass change only the duration of the upper E. Play without drums and listen for a coherent form.",
+      "checklist": [
+        "Bass path free of overlapping old notes?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke2-2-1": {
+      "title": "Written study · Inversion and bass note",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Retain the same right-hand chord; rehearse the written bass separately. Name the bass note and then the inversion at each change.",
+      "checklist": [
+        "All three bass positions identified?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke2-2-2": {
+      "title": "Deliberate variation · Inversion and bass note",
+      "instructions": "Hold the top E across two bars while the other voices re-enter. Check that the bass still makes each inversion clear.",
+      "checklist": [
+        "Long top voice independent of bass?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke2-2-3": {
+      "title": "Original application · Inversion and bass note",
+      "instructions": "Write eight bars using E–G–B–E bass twice. On the second pass change only the duration of the upper E. Play without drums and listen for a coherent form.",
+      "checklist": [
+        "Bass path free of overlapping old notes?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e2-3-1": {
+      "title": "Written study · Thirds with a melodic line",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. For E3–G3 use A fret 7 and D fret 5. Then G3–B3 on D/G, A3–C4 on G/C. Move the hand with each change.",
+      "checklist": [
+        "Major/minor thirds distinguished by ear?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–7; open strings as written. Show string cues when needed."
+    },
+    "e2-3-2": {
+      "title": "Deliberate variation · Thirds with a melodic line",
+      "instructions": "First balance both voices equally, then bring out the upper line with the same notes. Compare recordings at the same tempo.",
+      "checklist": [
+        "Top line traceable in the recording?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–7; open strings as written. Show string cues when needed."
+    },
+    "e2-3-3": {
+      "title": "Original application · Thirds with a melodic line",
+      "instructions": "Invent a four-bar melody from G, B and C. Add a third below every second note only. Notate rests in the accompanying voice too.",
+      "checklist": [
+        "Single notes and dyads alternate without hesitation?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–7; open strings as written. Show string cues when needed."
+    },
+    "ke2-3-1": {
+      "title": "Written study · Thirds with a melodic line",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Right-hand thirds with 1–3 or 2–4; move the whole hand between positions. Quiet left E3 each bar. Also play the top line alone.",
+      "checklist": [
+        "Major/minor thirds distinguished by ear?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke2-3-2": {
+      "title": "Deliberate variation · Thirds with a melodic line",
+      "instructions": "First balance both voices equally, then bring out the upper line with the same notes. Compare recordings at the same tempo.",
+      "checklist": [
+        "Top line traceable in the recording?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke2-3-3": {
+      "title": "Original application · Thirds with a melodic line",
+      "instructions": "Invent a four-bar melody from G, B and C. Add a third below every second note only. Notate rests in the accompanying voice too.",
+      "checklist": [
+        "Single notes and dyads alternate without hesitation?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e2-4-1": {
+      "title": "Written study · Arpeggio above a bass",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb maintains the bass rhythm. Use i–m–a or another repeatable fingering above. Bring out the highest note without reattacking the bass.",
+      "checklist": [
+        "Eighths even through chord changes?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-4-2": {
+      "title": "Deliberate variation · Arpeggio above a bass",
+      "instructions": "Play the same pattern accenting first its opening note, then its highest note. Keep bass quiet and eighths even.",
+      "checklist": [
+        "Accent change without an extra bass attack?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-4-3": {
+      "title": "Original application · Arpeggio above a bass",
+      "instructions": "Write Em–C–G–Em twice as an eight-bar form. Use quarters first, then eighths, with the same chords. Finish together with the bass.",
+      "checklist": [
+        "Denser second half at the same basic pulse?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke2-4-1": {
+      "title": "Written study · Arpeggio above a bass",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Prepare the right-hand triad, starting with 1–3–5–3. Left hand only at bar starts. Loop one bar before adding chord changes.",
+      "checklist": [
+        "Eighths even through chord changes?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke2-4-2": {
+      "title": "Deliberate variation · Arpeggio above a bass",
+      "instructions": "Play the same pattern accenting first its opening note, then its highest note. Keep bass quiet and eighths even.",
+      "checklist": [
+        "Accent change without an extra bass attack?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke2-4-3": {
+      "title": "Original application · Arpeggio above a bass",
+      "instructions": "Write Em–C–G–Em twice as an eight-bar form. Use quarters first, then eighths, with the same chords. Finish together with the bass.",
+      "checklist": [
+        "Denser second half at the same basic pulse?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e2-6-1": {
+      "title": "Written study · Power chords and muting",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. E5: open E/A fret 2; A5: open A/D fret 2; B5: A fret 2/D fret 4. Strike only those strings. Use both hands to stop rests.",
+      "checklist": [
+        "Only the intended two strings audible?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–4; open strings as written. Show string cues when needed."
+    },
+    "e2-6-2": {
+      "title": "Deliberate variation · Power chords and muting",
+      "instructions": "Repeat with palm muting, opening only beat 1 of each bar. Use low gain first, then your normal tone. Match comparison levels.",
+      "checklist": [
+        "Open/muted changes tone rather than pulse?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–4; open strings as written. Show string cues when needed."
+    },
+    "e2-6-3": {
+      "title": "Original application · Power chords and muting",
+      "instructions": "Build eight bars from E5 and A5. Place one quarter rest in each bar, varying its position. Notate attacks and rests, then repeat from memory.",
+      "checklist": [
+        "All written rests genuinely silent?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–4; open strings as written. Show string cues when needed."
+    },
+    "e2-rhythm-1": {
+      "title": "Written study · Short chords and offbeats",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Pluck the upper strings selectively; release fretting pressure at note ends without exciting open bass strings. Thumb plays the bass separately each bar.",
+      "checklist": [
+        "Chords precisely between clicks?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-rhythm-2": {
+      "title": "Deliberate variation · Short chords and offbeats",
+      "instructions": "Accent only the offbeat after beat 2. Clap first, then play the same chords. Keep bass and the other offbeats at their original levels.",
+      "checklist": [
+        "Only the selected offbeat accented?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-rhythm-3": {
+      "title": "Original application · Short chords and offbeats",
+      "instructions": "Invent four bars with two offbeat chords and two omitted offbeats in each. Notate the rests and repeat the pattern over Em and C.",
+      "checklist": [
+        "Omissions repeatable and bass stable?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke2-rhythm-1": {
+      "title": "Written study · Short chords and offbeats",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Right-hand chords are short while the left holds. No sustain pedal. Release with small movements rather than lifting the whole hand high.",
+      "checklist": [
+        "Chords precisely between clicks?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke2-rhythm-2": {
+      "title": "Deliberate variation · Short chords and offbeats",
+      "instructions": "Accent only the offbeat after beat 2. Clap first, then play the same chords. Keep bass and the other offbeats at their original levels.",
+      "checklist": [
+        "Only the selected offbeat accented?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke2-rhythm-3": {
+      "title": "Original application · Short chords and offbeats",
+      "instructions": "Invent four bars with two offbeat chords and two omitted offbeats in each. Notate the rests and repeat the pattern over Em and C.",
+      "checklist": [
+        "Omissions repeatable and bass stable?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e2-5-1": {
+      "title": "Written study · Hear a triad, build a phrase",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Play the upper line first on D/G/C strings. Add bass only at written bar starts. E can remain an audible reference through Em–C.",
+      "checklist": [
+        "Chord changes audible in the melody?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-5-2": {
+      "title": "Deliberate variation · Hear a triad, build a phrase",
+      "instructions": "Listen to the preview once. Hide the score and write the four closing notes from memory. Compare with the example afterwards.",
+      "checklist": [
+        "Closing notes written before checking?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e2-5-3": {
+      "title": "Original application · Hear a triad, build a phrase",
+      "instructions": "Compose eight bars: two motif, two answer, two arpeggio, two ending. Use Em and C, at least one melodic rest and one held bass note. Notate both voices.",
+      "checklist": [
+        "Original form played twice without searching?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke2-5-1": {
+      "title": "Written study · Hear a triad, build a phrase",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Sing and play the right-hand melody alone first. Name left-hand bass notes before combining. Write down your fingering and keep it consistent.",
+      "checklist": [
+        "Chord changes audible in the melody?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke2-5-2": {
+      "title": "Deliberate variation · Hear a triad, build a phrase",
+      "instructions": "Listen to the preview once. Hide the score and write the four closing notes from memory. Compare with the example afterwards.",
+      "checklist": [
+        "Closing notes written before checking?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke2-5-3": {
+      "title": "Original application · Hear a triad, build a phrase",
+      "instructions": "Compose eight bars: two motif, two answer, two arpeggio, two ending. Use Em and C, at least one melodic rest and one held bass note. Notate both voices.",
+      "checklist": [
+        "Original form played twice without searching?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e3-1-1": {
+      "title": "Written study · Lamento: a descending bass",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Play E3–D3–C3–B2 bass entirely on A at frets 7–5–3–2. Melody mainly on D. Move the hand down with the bass without shortening the upper line.",
+      "checklist": [
+        "Bass line without clipped endings?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 1–7; open strings as written. Show string cues when needed."
+    },
+    "e3-1-2": {
+      "title": "Deliberate variation · Lamento: a descending bass",
+      "instructions": "Keep the bass. In each bar play only the first melody note as a dotted half followed by a quarter rest. Compare this quieter version with the example.",
+      "checklist": [
+        "Quieter variant retains the bass path?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 1–7; open strings as written. Show string cues when needed."
+    },
+    "e3-1-3": {
+      "title": "Original application · Lamento: a descending bass",
+      "instructions": "Write eight bars with E–D–C–B bass twice. Introduce a motif in the first half; give the same motif longer notes in the second. Add a closing E in the following bar.",
+      "checklist": [
+        "Melody develops rather than merely doubling bass?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 1–7; open strings as written. Show string cues when needed."
+    },
+    "ke3-1-1": {
+      "title": "Written study · Lamento: a descending bass",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Try left 1–2–3–4 for the slow descending bass. Sing the right-hand line separately. Combine only when the left-hand motion no longer requires searching.",
+      "checklist": [
+        "Bass line without clipped endings?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke3-1-2": {
+      "title": "Deliberate variation · Lamento: a descending bass",
+      "instructions": "Keep the bass. In each bar play only the first melody note as a dotted half followed by a quarter rest. Compare this quieter version with the example.",
+      "checklist": [
+        "Quieter variant retains the bass path?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke3-1-3": {
+      "title": "Original application · Lamento: a descending bass",
+      "instructions": "Write eight bars with E–D–C–B bass twice. Introduce a motif in the first half; give the same motif longer notes in the second. Add a closing E in the following bar.",
+      "checklist": [
+        "Melody develops rather than merely doubling bass?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e3-2-1": {
+      "title": "Written study · A circle-of-fifths path",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Connect upper triads without bass first. Retain common tones only when their fingering allows the next shape. Mute the old string at each bass change.",
+      "checklist": [
+        "Chord changes in time, D# correct in B?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-2-2": {
+      "title": "Deliberate variation · A circle-of-fifths path",
+      "instructions": "Play only the top chord tones while singing bass, then reverse the roles. Reassemble all voices afterwards.",
+      "checklist": [
+        "Bass and top line individually singable?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-2-3": {
+      "title": "Original application · A circle-of-fifths path",
+      "instructions": "Shape the same eight-bar path with arpeggios in the first four bars and long chords in the last four. Notate the top line and a clear ending.",
+      "checklist": [
+        "Texture changes without changing the harmonic path?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke3-2-1": {
+      "title": "Written study · A circle-of-fifths path",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Use compact right-hand voicings and left-hand roots. Look at a target before moving. The right hand should not copy every bass leap.",
+      "checklist": [
+        "Chord changes in time, D# correct in B?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke3-2-2": {
+      "title": "Deliberate variation · A circle-of-fifths path",
+      "instructions": "Play only the top chord tones while singing bass, then reverse the roles. Reassemble all voices afterwards.",
+      "checklist": [
+        "Bass and top line individually singable?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke3-2-3": {
+      "title": "Original application · A circle-of-fifths path",
+      "instructions": "Shape the same eight-bar path with arpeggios in the first four bars and long chords in the last four. Notate the top line and a clear ending.",
+      "checklist": [
+        "Texture changes without changing the harmonic path?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e3-reading-1": {
+      "title": "Written study · Syncopation and tied entries",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Melody on D/G strings, E bass with the thumb. First play the melody rhythm on a muted string while the foot keeps quarters.",
+      "checklist": [
+        "No extra attacks under ties?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-reading-2": {
+      "title": "Deliberate variation · Syncopation and tied entries",
+      "instructions": "Deliberately reattack the tied notes once, then play them correctly without reattack. Describe the audible difference without changing the pulse.",
+      "checklist": [
+        "Difference between tied and reattacked heard?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-reading-3": {
+      "title": "Original application · Syncopation and tied entries",
+      "instructions": "Write four bars with two syncopations: one within a bar and one across a barline. Add quiet E bass and at least one eighth rest.",
+      "checklist": [
+        "Both syncopations repeated from your own score?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke3-reading-1": {
+      "title": "Written study · Syncopation and tied entries",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Hold long E3 notes on the left; rehearse the right-hand rhythm on one key. Check whether a new left-hand attack accidentally retriggers the right.",
+      "checklist": [
+        "No extra attacks under ties?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke3-reading-2": {
+      "title": "Deliberate variation · Syncopation and tied entries",
+      "instructions": "Deliberately reattack the tied notes once, then play them correctly without reattack. Describe the audible difference without changing the pulse.",
+      "checklist": [
+        "Difference between tied and reattacked heard?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke3-reading-3": {
+      "title": "Original application · Syncopation and tied entries",
+      "instructions": "Write four bars with two syncopations: one within a bar and one across a barline. Add quiet E bass and at least one eighth rest.",
+      "checklist": [
+        "Both syncopations repeated from your own score?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e3-4-1": {
+      "title": "Written study · Sixteenths and precise rests",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Keep picking movements small and loose. Continue the motion internally through rests while muting the string. Start on one pitch, then add the written notes.",
+      "checklist": [
+        "All four subdivisions even?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-4-2": {
+      "title": "Deliberate variation · Sixteenths and precise rests",
+      "instructions": "Replace the first quarter-note span of each bar with four equal sixteenths. Leave the rest unchanged. Return to the original after one pass.",
+      "checklist": [
+        "Return to the original without a tempo change?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-4-3": {
+      "title": "Original application · Sixteenths and precise rests",
+      "instructions": "Write four bars with at most one sixteenth group per bar. Play at 50, then 60, then 72 quarters per minute; advance only while rests and releases remain clean.",
+      "checklist": [
+        "Same rests maintained at all three tempos?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke3-4-1": {
+      "title": "Written study · Sixteenths and precise rests",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Begin on one right-hand key with alternating fingers, then use the written pitches. Release the key for rests. Keep the left hand independent of the fast subdivisions.",
+      "checklist": [
+        "All four subdivisions even?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke3-4-2": {
+      "title": "Deliberate variation · Sixteenths and precise rests",
+      "instructions": "Replace the first quarter-note span of each bar with four equal sixteenths. Leave the rest unchanged. Return to the original after one pass.",
+      "checklist": [
+        "Return to the original without a tempo change?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke3-4-3": {
+      "title": "Original application · Sixteenths and precise rests",
+      "instructions": "Write four bars with at most one sixteenth group per bar. Play at 50, then 60, then 72 quarters per minute; advance only while rests and releases remain clean.",
+      "checklist": [
+        "Same rests maintained at all three tempos?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e3-3-1": {
+      "title": "Written study · Separate bass and melody by ear",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Bass on E/A, melody on D/G. Listen away from the instrument, write the bass path and verify it alone before adding melody.",
+      "checklist": [
+        "Both lines identified separately?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-3-2": {
+      "title": "Deliberate variation · Separate bass and melody by ear",
+      "instructions": "Listen once, hide the score and write only each voice’s opening and closing notes. On a second pass add the inner notes. Mark errors and relisten specifically to those places.",
+      "checklist": [
+        "Errors corrected by listening again rather than guessing?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-3-3": {
+      "title": "Original application · Separate bass and melody by ear",
+      "instructions": "Record four original bars of bass and melody. On the next practice day notate them without relying on shape memory. Compare the recording, notation and replay.",
+      "checklist": [
+        "Your notation matches the recording?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke3-3-1": {
+      "title": "Written study · Separate bass and melody by ear",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Reconstruct the heard bass with the left hand alone. Sing and find the right-hand melody. Combine only once both lines match.",
+      "checklist": [
+        "Both lines identified separately?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke3-3-2": {
+      "title": "Deliberate variation · Separate bass and melody by ear",
+      "instructions": "Listen once, hide the score and write only each voice’s opening and closing notes. On a second pass add the inner notes. Mark errors and relisten specifically to those places.",
+      "checklist": [
+        "Errors corrected by listening again rather than guessing?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke3-3-3": {
+      "title": "Original application · Separate bass and melody by ear",
+      "instructions": "Record four original bars of bass and melody. On the next practice day notate them without relying on shape memory. Compare the recording, notation and replay.",
+      "checklist": [
+        "Your notation matches the recording?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e3-6-1": {
+      "title": "Written study · Chromatic bass, calm melody",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Bass entirely on A: frets 7–6–5–4–3–2. Melody on D. End each old bass while retaining the upper note for its written duration.",
+      "checklist": [
+        "All six bass notes clearly distinguished?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 1–7; open strings as written. Show string cues when needed."
+    },
+    "e3-6-2": {
+      "title": "Deliberate variation · Chromatic bass, calm melody",
+      "instructions": "First reattack the melody each bar, then tie G across the first two bars. Listen to the bass moving beneath an unchanged note.",
+      "checklist": [
+        "Bass changes beneath held G without reattacking it?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 1–7; open strings as written. Show string cues when needed."
+    },
+    "e3-6-3": {
+      "title": "Original application · Chromatic bass, calm melody",
+      "instructions": "Use the descent as a six-bar introduction; add two bars of Em as an answer. Notate a melodic rest in the ending and play all eight bars unaccompanied.",
+      "checklist": [
+        "Introduction and answer repeated as a form?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 1–7; open strings as written. Show string cues when needed."
+    },
+    "e3-5-1": {
+      "title": "Written study · Repeats and two endings",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Keep the repeated E bass steady. The first ending stays open on B, the second lands on E. Do not insert a fretting pause at the repeat.",
+      "checklist": [
+        "Order 1–2–3–1–2–4 maintained?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-5-2": {
+      "title": "Deliberate variation · Repeats and two endings",
+      "instructions": "Cover the expanded order. Say “one” or “two” before each ending without stopping the pulse. Check against the preview.",
+      "checklist": [
+        "Repeat without an added beat?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e3-5-3": {
+      "title": "Original application · Repeats and two endings",
+      "instructions": "Notate a two-bar motif with two one-bar endings and repeat signs. Perform the complete form twice, changing only dynamics on the second performance.",
+      "checklist": [
+        "Own endings distinguished reliably while reading?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke3-5-1": {
+      "title": "Written study · Repeats and two endings",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Move both hands together at the repeat. Read the two endings separately first, then play the complete order.",
+      "checklist": [
+        "Order 1–2–3–1–2–4 maintained?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke3-5-2": {
+      "title": "Deliberate variation · Repeats and two endings",
+      "instructions": "Cover the expanded order. Say “one” or “two” before each ending without stopping the pulse. Check against the preview.",
+      "checklist": [
+        "Repeat without an added beat?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke3-5-3": {
+      "title": "Original application · Repeats and two endings",
+      "instructions": "Notate a two-bar motif with two one-bar endings and repeat signs. Perform the complete form twice, changing only dynamics on the second performance.",
+      "checklist": [
+        "Own endings distinguished reliably while reading?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e4-1-1": {
+      "title": "Written study · Leading tone and harmonic minor",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Play the upper line on D/G/C. D#4 is C-string fret 3, E4 fret 4. Hear the semitone before moving the finger.",
+      "checklist": [
+        "C–D# and D#–E read correctly?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-1-2": {
+      "title": "Deliberate variation · Leading tone and harmonic minor",
+      "instructions": "Replace D# with D on one pass, then restore D#. Retain rhythm and bass. Sing both endings and describe their different direction.",
+      "checklist": [
+        "D/D# compared with the same rhythm?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-1-3": {
+      "title": "Original application · Leading tone and harmonic minor",
+      "instructions": "Write four bars over Em–Am–B–Em. Introduce D# only in bar three and resolve it to E in bar four. Sing the ending before playing.",
+      "checklist": [
+        "Leading tone deliberately placed in your ending?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke4-1-1": {
+      "title": "Written study · Leading tone and harmonic minor",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Try right 1–2–3–1–2–3–4–5 for E4–E5. Sing C5–D#5 separately before inserting it in the line. Rehearse bass alone first.",
+      "checklist": [
+        "C–D# and D#–E read correctly?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke4-1-2": {
+      "title": "Deliberate variation · Leading tone and harmonic minor",
+      "instructions": "Replace D# with D on one pass, then restore D#. Retain rhythm and bass. Sing both endings and describe their different direction.",
+      "checklist": [
+        "D/D# compared with the same rhythm?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke4-1-3": {
+      "title": "Original application · Leading tone and harmonic minor",
+      "instructions": "Write four bars over Em–Am–B–Em. Introduce D# only in bar three and resolve it to E in bar four. Sing the ending before playing.",
+      "checklist": [
+        "Leading tone deliberately placed in your ending?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e4-3-1": {
+      "title": "Written study · Cadence: tension and arrival",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. For B7 use F#3–A3–D#4 over B2. Slowly connect the semitone/whole-tone motions to Em. Avoid lifting every finger hurriedly at once.",
+      "checklist": [
+        "D#–E and A–G heard separately?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-3-2": {
+      "title": "Deliberate variation · Cadence: tension and arrival",
+      "instructions": "Play the cadence at an even level, then with a quieter ending. Listen for Em as an arrival without a loudness accent.",
+      "checklist": [
+        "Cadence clear with a quiet ending too?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-3-3": {
+      "title": "Original application · Cadence: tension and arrival",
+      "instructions": "Compose eight bars: four of an open phrase, four of an answer using Am–B7–Em. End the first phrase on B and the second on E. Write out the upper two voices.",
+      "checklist": [
+        "Open first phrase distinguishable from closing answer?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke4-3-1": {
+      "title": "Written study · Cadence: tension and arrival",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Play the two resolutions as a right-hand dyad over left B–E first. Add the third right-hand chord tone and coordinate the timing.",
+      "checklist": [
+        "D#–E and A–G heard separately?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke4-3-2": {
+      "title": "Deliberate variation · Cadence: tension and arrival",
+      "instructions": "Play the cadence at an even level, then with a quieter ending. Listen for Em as an arrival without a loudness accent.",
+      "checklist": [
+        "Cadence clear with a quiet ending too?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke4-3-3": {
+      "title": "Original application · Cadence: tension and arrival",
+      "instructions": "Compose eight bars: four of an open phrase, four of an answer using Am–B7–Em. End the first phrase on B and the second on E. Write out the upper two voices.",
+      "checklist": [
+        "Open first phrase distinguishable from closing answer?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e4-chords-1": {
+      "title": "Written study · Sixths, sevenths and chord symbols",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Check the P4 voicings one note at a time. In Em7 use D4 at G fret 7 and E4 at C fret 4. Keep bass and top voice audible through the change.",
+      "checklist": [
+        "Added tone and chord type named correctly?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–7; open strings as written. Show string cues when needed."
+    },
+    "e4-chords-2": {
+      "title": "Deliberate variation · Sixths, sevenths and chord symbols",
+      "instructions": "Cover the symbols and name chords from their notes. Then cover the notes and reconstruct the same voicings from symbols. Check each pitch.",
+      "checklist": [
+        "Symbols realised without a supplied shape?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–7; open strings as written. Show string cues when needed."
+    },
+    "e4-chords-3": {
+      "title": "Original application · Sixths, sevenths and chord symbols",
+      "instructions": "Choose four of these chords for eight bars. Retain a recurring top note where it is a chord tone; otherwise write its smallest useful step.",
+      "checklist": [
+        "Top line traceable through chord changes?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–7; open strings as written. Show string cues when needed."
+    },
+    "ke4-chords-1": {
+      "title": "Written study · Sixths, sevenths and chord symbols",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left plays the root, right the other three tones. Name each right-hand pitch before playing. Fingering may change between chords; keep the top line connected.",
+      "checklist": [
+        "Added tone and chord type named correctly?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke4-chords-2": {
+      "title": "Deliberate variation · Sixths, sevenths and chord symbols",
+      "instructions": "Now play the written accompanying voicings on the left with only a long top note on the right. Some fifths are deliberately omitted: root, third and sixth/seventh define the colour here. Name chords from notes, then reconstruct the voicings from symbols.",
+      "checklist": [
+        "Symbols realised without a supplied shape?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke4-chords-3": {
+      "title": "Original application · Sixths, sevenths and chord symbols",
+      "instructions": "Choose four of these chords for eight bars. Retain a recurring top note where it is a chord tone; otherwise write its smallest useful step.",
+      "checklist": [
+        "Top line traceable through chord changes?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e4-2-1": {
+      "title": "Written study · A diminished seventh in motion",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Bass D#3 at A fret 6; above use F#3 at D4, C4 at G5 and A4 at F4. Keep the C string silent. Fingerpick rather than strumming across every string.",
+      "checklist": [
+        "All four chord tones without an extra string/key?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e4-2-2": {
+      "title": "Deliberate variation · A diminished seventh in motion",
+      "instructions": "Arpeggiate the diminished chord from low to high, then play Em together. Write an achievable destination for every starting tone and listen to each motion.",
+      "checklist": [
+        "Destinations checked before combining voices?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e4-2-3": {
+      "title": "Original application · A diminished seventh in motion",
+      "instructions": "Write six bars Em–Am–D#dim7–Em–B7–Em. Give the diminished chord less duration than the arrival. Notate precisely where each voice moves.",
+      "checklist": [
+        "Diminished chord used within a phrase?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "ke4-2-1": {
+      "title": "Written study · A diminished seventh in motion",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left D#3, right F#4–A4–C5; then left E3 with right G4–B4–E5. Play individual resolutions before the complete four-voice sonorities.",
+      "checklist": [
+        "All four chord tones without an extra string/key?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke4-2-2": {
+      "title": "Deliberate variation · A diminished seventh in motion",
+      "instructions": "Arpeggiate the diminished chord from low to high, then play Em together. Write an achievable destination for every starting tone and listen to each motion.",
+      "checklist": [
+        "Destinations checked before combining voices?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke4-2-3": {
+      "title": "Original application · A diminished seventh in motion",
+      "instructions": "Write six bars Em–Am–D#dim7–Em–B7–Em. Give the diminished chord less duration than the arrival. Notate precisely where each voice moves.",
+      "checklist": [
+        "Diminished chord used within a phrase?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e4-4-1": {
+      "title": "Written study · Lead the inner voices",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Hold D4 at C fret 2 as a common top note. For D7–G move F#3/G3 on D and C4/B3 on G. Mute the D3 bass when moving to G2.",
+      "checklist": [
+        "Common top note actually sustained?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-4-2": {
+      "title": "Deliberate variation · Lead the inner voices",
+      "instructions": "Play only the inner C–B motion with bass. Add F#–G, then the common D. After each addition check that C–B remains audible.",
+      "checklist": [
+        "Inner semitone motion audible in the full chord?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-4-3": {
+      "title": "Original application · Lead the inner voices",
+      "instructions": "Precede D7–G with two bars Am–D7 and follow it with C–B7–Em. Write a continuous inner line, retaining at least one note across a chord change.",
+      "checklist": [
+        "Own inner line free of unintended breaks?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke4-4-1": {
+      "title": "Written study · Lead the inner voices",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Retain the upper right-hand finger on D5 while the lower fingers move. Prepare left D–G separately; do not hide unclear transitions with sustain pedal.",
+      "checklist": [
+        "Common top note actually sustained?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke4-4-2": {
+      "title": "Deliberate variation · Lead the inner voices",
+      "instructions": "Play only the inner C–B motion with bass. Add F#–G, then the common D. After each addition check that C–B remains audible.",
+      "checklist": [
+        "Inner semitone motion audible in the full chord?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke4-4-3": {
+      "title": "Original application · Lead the inner voices",
+      "instructions": "Precede D7–G with two bars Am–D7 and follow it with C–B7–Em. Write a continuous inner line, retaining at least one note across a chord change.",
+      "checklist": [
+        "Own inner line free of unintended breaks?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e4-6-1": {
+      "title": "Written study · Fifth/sixth changes in a riff",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Open E plus A frets 2/4; then open A plus D frets 2/4. Change the upper finger while retaining the root reference. Mute unused strings consistently.",
+      "checklist": [
+        "Fifth and sixth changed without string noise?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–4; open strings as written. Show string cues when needed."
+    },
+    "e4-6-2": {
+      "title": "Deliberate variation · Fifth/sixth changes in a riff",
+      "instructions": "Play roots normally and upper tones quieter, then reverse the balance. Record both; the fifth/sixth change must remain recognisable in each.",
+      "checklist": [
+        "Both balances controlled?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–4; open strings as written. Show string cues when needed."
+    },
+    "e4-6-3": {
+      "title": "Original application · Fifth/sixth changes in a riff",
+      "instructions": "Build eight bars: four E, two A, two E. Notate a rest before the last E. Play the riff three times without losing a section.",
+      "checklist": [
+        "4+2+2 form maintained across three passes?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–4; open strings as written. Show string cues when needed."
+    },
+    "e4-5-1": {
+      "title": "Written study · Make a cadence your own",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. First half: open E and single melody. Then use the familiar compact chords. Do not add a fretting pause at the transition.",
+      "checklist": [
+        "Melody-to-chord transition in time?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-5-2": {
+      "title": "Deliberate variation · Make a cadence your own",
+      "instructions": "Change only the bar before the cadence: use a melodic rest once and a held note once. Compare which prepares the ending more clearly.",
+      "checklist": [
+        "Chosen preparation for the ending explained?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e4-5-3": {
+      "title": "Original application · Make a cadence your own",
+      "instructions": "Write twelve bars: four motif, four development, four cadence. Fully notate melody and bass. Play on two days, once without drums, and revise one transition.",
+      "checklist": [
+        "Twelve-bar form reproduced without aids?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke4-5-1": {
+      "title": "Written study · Make a cadence your own",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left starts with E3, then the cadence roots. Right changes from a single melody to triads without a sudden jump in level.",
+      "checklist": [
+        "Melody-to-chord transition in time?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke4-5-2": {
+      "title": "Deliberate variation · Make a cadence your own",
+      "instructions": "Change only the bar before the cadence: use a melodic rest once and a held note once. Compare which prepares the ending more clearly.",
+      "checklist": [
+        "Chosen preparation for the ending explained?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke4-5-3": {
+      "title": "Original application · Make a cadence your own",
+      "instructions": "Write twelve bars: four motif, four development, four cadence. Fully notate melody and bass. Play on two days, once without drums, and revise one transition.",
+      "checklist": [
+        "Twelve-bar form reproduced without aids?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e5-1-1": {
+      "title": "Written study · Sequence: move a motif",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Read in the D/G window first. Use the C string for C4; open E bass remains. Do not mask the position change with a louder bass attack.",
+      "checklist": [
+        "Contour preserved in every move?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-1-2": {
+      "title": "Deliberate variation · Sequence: move a motif",
+      "instructions": "Continue the sequence for two more scale steps, then move it back down. Check each new pitch against E Aeolian; retain rhythm and contour.",
+      "checklist": [
+        "All new pitches within the intended scale?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-1-3": {
+      "title": "Original application · Sequence: move a motif",
+      "instructions": "Invent a three-note motif with a rest. Write four one-bar diatonic stages and a two-bar ending on E. Write out each stage rather than only a repeat instruction.",
+      "checklist": [
+        "Own sequence has an audible ending rather than an endless loop?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke5-1-1": {
+      "title": "Written study · Sequence: move a motif",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Check the new right-hand five-note space before each move. Adapt fingering to the motif instead of forcing the same fingers regardless of black keys.",
+      "checklist": [
+        "Contour preserved in every move?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke5-1-2": {
+      "title": "Deliberate variation · Sequence: move a motif",
+      "instructions": "Continue the sequence for two more scale steps, then move it back down. Check each new pitch against E Aeolian; retain rhythm and contour.",
+      "checklist": [
+        "All new pitches within the intended scale?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke5-1-3": {
+      "title": "Original application · Sequence: move a motif",
+      "instructions": "Invent a three-note motif with a rest. Write four one-bar diatonic stages and a two-bar ending on E. Write out each stage rather than only a repeat instruction.",
+      "checklist": [
+        "Own sequence has an audible ending rather than an endless loop?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e5-2-1": {
+      "title": "Written study · Three layers: bass, figure, melody",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb plays bass, i/m the D and G strings, a the upper C string. Retain the fretting finger above while the inner voice moves. Sound only the written strings.",
+      "checklist": [
+        "Top line sustained without unintended reattacks?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-2-2": {
+      "title": "Deliberate variation · Three layers: bass, figure, melody",
+      "instructions": "Omit the inner voice in bar three. Keep bass and melody unchanged. Reintroduce all layers without filling the gap with extra notes.",
+      "checklist": [
+        "Omitting the inner voice leaves the others intact?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-2-3": {
+      "title": "Original application · Three layers: bass, figure, melody",
+      "instructions": "Write eight bars with two long melody notes above changing figures. Rest the inner voice in at least one bar. Check each layer individually in your recording.",
+      "checklist": [
+        "All three layers traceable in the recording?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke5-2-1": {
+      "title": "Written study · Three layers: bass, figure, melody",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left plays bass. Right holds the top with 5 while 1/2/3 move inside. Practise upper and inner voices with the right hand alone before adding left.",
+      "checklist": [
+        "Top line sustained without unintended reattacks?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke5-2-2": {
+      "title": "Deliberate variation · Three layers: bass, figure, melody",
+      "instructions": "Omit the inner voice in bar three. Keep bass and melody unchanged. Reintroduce all layers without filling the gap with extra notes.",
+      "checklist": [
+        "Omitting the inner voice leaves the others intact?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke5-2-3": {
+      "title": "Original application · Three layers: bass, figure, melody",
+      "instructions": "Write eight bars with two long melody notes above changing figures. Rest the inner voice in at least one bar. Check each layer individually in your recording.",
+      "checklist": [
+        "All three layers traceable in the recording?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e5-groove-1": {
+      "title": "Written study · Triplets against straight eighths",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Start triplets on E3 with small alternate-picking movements. Continuous alternate picking reverses the starting stroke on the next quarter; that is intentional.",
+      "checklist": [
+        "Three even notes per quarter?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-groove-2": {
+      "title": "Deliberate variation · Triplets against straight eighths",
+      "instructions": "Alternate one straight bar with one triplet bar, then alternate every quarter. Record and check only the spacing of quarter-note starts.",
+      "checklist": [
+        "Quarter starts unchanged during the switch?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-groove-3": {
+      "title": "Original application · Triplets against straight eighths",
+      "instructions": "Write four bars with two straight and two triplet groups per bar. Use E, F# and G; vary rhythm first, then pitch order.",
+      "checklist": [
+        "Own mixed subdivisions played without hesitation?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke5-groove-1": {
+      "title": "Written study · Triplets against straight eighths",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Start with right 1–2–3 for each quarter while left plays steady bar starts. Relax after groups without inserting a pause.",
+      "checklist": [
+        "Three even notes per quarter?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke5-groove-2": {
+      "title": "Deliberate variation · Triplets against straight eighths",
+      "instructions": "Alternate one straight bar with one triplet bar, then alternate every quarter. Record and check only the spacing of quarter-note starts.",
+      "checklist": [
+        "Quarter starts unchanged during the switch?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke5-groove-3": {
+      "title": "Original application · Triplets against straight eighths",
+      "instructions": "Write four bars with two straight and two triplet groups per bar. Use E, F# and G; vary rhythm first, then pitch order.",
+      "checklist": [
+        "Own mixed subdivisions played without hesitation?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e5-4-1": {
+      "title": "Written study · 12/8: four large pulses",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. In the example the thumb attacks on pulses 1 and 3 beneath the eighth-note figure. Lightly shape group starts rather than striking every third note hard.",
+      "checklist": [
+        "Four large pulses rather than twelve equal accents?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-4-2": {
+      "title": "Deliberate variation · 12/8: four large pulses",
+      "instructions": "Replace the second group in every bar with a dotted-quarter rest. Keep bass unchanged. Count the large pulse and re-enter at group three.",
+      "checklist": [
+        "Rest occupies exactly one group of three?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-4-3": {
+      "title": "Original application · 12/8: four large pulses",
+      "instructions": "Write eight bars in 12/8 over Em–C–B7–Em twice. Use arpeggios first and longer melody notes in the second half. Mark tempo with a dotted quarter.",
+      "checklist": [
+        "12/8 form repeated at the same large pulse?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke5-4-1": {
+      "title": "Written study · 12/8: four large pulses",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Hold each left dotted half for two large pulses. Read right-hand groups of three. Play only each group’s first note before filling in the others.",
+      "checklist": [
+        "Four large pulses rather than twelve equal accents?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke5-4-2": {
+      "title": "Deliberate variation · 12/8: four large pulses",
+      "instructions": "Replace the second group in every bar with a dotted-quarter rest. Keep bass unchanged. Count the large pulse and re-enter at group three.",
+      "checklist": [
+        "Rest occupies exactly one group of three?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke5-4-3": {
+      "title": "Original application · 12/8: four large pulses",
+      "instructions": "Write eight bars in 12/8 over Em–C–B7–Em twice. Use arpeggios first and longer melody notes in the second half. Mark tempo with a dotted quarter.",
+      "checklist": [
+        "12/8 form repeated at the same large pulse?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e5-6-1": {
+      "title": "Written study · Legato: hammer-on and pull-off",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. D string: E3 fret 2 with 1, F#3 fret 4 with 3, G3 fret 5 with 4. Prepare the target finger before a pull-off and release the string with control rather than pulling far away.",
+      "checklist": [
+        "Target finger prepared for pull-offs?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-6-2": {
+      "title": "Deliberate variation · Legato: hammer-on and pull-off",
+      "instructions": "Pick every note once, then use the slurs. Compare durations and levels. Legato notes must not arrive late or much quieter.",
+      "checklist": [
+        "Legato notes equal in rhythmic precision and level?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-6-3": {
+      "title": "Original application · Legato: hammer-on and pull-off",
+      "instructions": "Invent four bars from E3, F#3 and G3 with two hammer-ons and two pull-offs. Notate slurs and a rest. Add open E bass and controlled gain.",
+      "checklist": [
+        "Own slurs and rests repeatable?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-3-1": {
+      "title": "Written study · Sequence over changing bass",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Read ahead before each bass change. Thumb changes bass strings while upper fingers retain the pattern. Do not stop bass while decoding notes.",
+      "checklist": [
+        "Strong beats fit the current chord?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-3-2": {
+      "title": "Deliberate variation · Sequence over changing bass",
+      "instructions": "Rest the melody in the second half of each bar while bass sustains. Return to the full figure afterwards. Keep the harmonic rhythm unchanged.",
+      "checklist": [
+        "Bass changes unchanged with the shortened figure?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-3-3": {
+      "title": "Original application · Sequence over changing bass",
+      "instructions": "Write an eight-bar sequential passage. Repeat a two-bar motif over four different chord pairs, changing only the necessary chord tones. End on Em.",
+      "checklist": [
+        "Motif recognisable despite harmonic changes?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke5-3-1": {
+      "title": "Written study · Sequence over changing bass",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left plays root, fifth, octave, fifth in quarters; the diminished chord uses a diminished fifth. Start with 5–2–1–2, allowing the hand to move. Read the right-hand figure separately before combining both moving lines.",
+      "checklist": [
+        "Strong beats fit the current chord?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke5-3-2": {
+      "title": "Deliberate variation · Sequence over changing bass",
+      "instructions": "Rest the melody in the second half of each bar while bass sustains. Return to the full figure afterwards. Keep the harmonic rhythm unchanged.",
+      "checklist": [
+        "Bass changes unchanged with the shortened figure?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke5-3-3": {
+      "title": "Original application · Sequence over changing bass",
+      "instructions": "Write an eight-bar sequential passage. Repeat a two-bar motif over four different chord pairs, changing only the necessary chord tones. End on Em.",
+      "checklist": [
+        "Motif recognisable despite harmonic changes?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e5-5-1": {
+      "title": "Written study · Compare shuffle and swing deliberately",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Play long–short on the right while retaining bass once per bar. Use smaller movements at faster tempos; do not swallow short notes. Check the rhythm without gain too.",
+      "checklist": [
+        "Short eighths remain audible and in time?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-5-2": {
+      "title": "Deliberate variation · Compare shuffle and swing deliberately",
+      "instructions": "Play straight and then long–short to the same quarter click. Then notate one bar as a quarter-triplet plus eighth-triplet per beat: two plus one triplet portions.",
+      "checklist": [
+        "Straight and ternary versions clearly distinguished?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e5-5-3": {
+      "title": "Original application · Compare shuffle and swing deliberately",
+      "instructions": "Shape twelve bars: four Em, two Am, two Em, B7, Am, Em, B7. Let a short motif recur. Play at 60 and 90 quarters per minute; compare articulation and form.",
+      "checklist": [
+        "Twelve-bar form secure at both tempos?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke5-5-1": {
+      "title": "Written study · Compare shuffle and swing deliberately",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Right plays long–short while left stays unchanged. Start with alternating E4–G4 before the full phrase. Avoid locking the hand and arm on every long note.",
+      "checklist": [
+        "Short eighths remain audible and in time?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke5-5-2": {
+      "title": "Deliberate variation · Compare shuffle and swing deliberately",
+      "instructions": "Play straight and then long–short to the same quarter click. Then notate one bar as a quarter-triplet plus eighth-triplet per beat: two plus one triplet portions.",
+      "checklist": [
+        "Straight and ternary versions clearly distinguished?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke5-5-3": {
+      "title": "Original application · Compare shuffle and swing deliberately",
+      "instructions": "Shape twelve bars: four Em, two Am, two Em, B7, Am, Em, B7. Let a short motif recur. Play at 60 and 90 quarters per minute; compare articulation and form.",
+      "checklist": [
+        "Twelve-bar form secure at both tempos?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e6-1-1": {
+      "title": "Written study · Fourth-based sonorities",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. E3–A3–D4 lie on D/G/C at fret 2. A small barre is possible; test each string separately. Thumb plays bass; keep A silent when it is not the bass.",
+      "checklist": [
+        "All fourths checked individually?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-1-2": {
+      "title": "Deliberate variation · Fourth-based sonorities",
+      "instructions": "Play the highest tones as a line, then add quieter fourths underneath. The top note must remain traceable in the recording without looking at the score.",
+      "checklist": [
+        "Top line distinct from inner voices?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-1-3": {
+      "title": "Original application · Fourth-based sonorities",
+      "instructions": "Build eight bars from two fourth-based shapes and E/A bass. Use an Em triad only at the end. Listen to its third establish an explicit minor colour.",
+      "checklist": [
+        "Minor ending audible as deliberate contrast?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke6-1-1": {
+      "title": "Written study · Fourth-based sonorities",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Try right 1–2–5 for E4–A4–D5. With a smaller hand prepare notes consecutively, then sound together only in a comfortably reachable voicing.",
+      "checklist": [
+        "All fourths checked individually?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke6-1-2": {
+      "title": "Deliberate variation · Fourth-based sonorities",
+      "instructions": "Play the highest tones as a line, then add quieter fourths underneath. The top note must remain traceable in the recording without looking at the score.",
+      "checklist": [
+        "Top line distinct from inner voices?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke6-1-3": {
+      "title": "Original application · Fourth-based sonorities",
+      "instructions": "Build eight bars from two fourth-based shapes and E/A bass. Use an Em triad only at the end. Listen to its third establish an explicit minor colour.",
+      "checklist": [
+        "Minor ending audible as deliberate contrast?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e6-2-1": {
+      "title": "Written study · C Lydian: the raised fourth",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. C3 bass at A fret 3. Melody on D/G/C; F#3 at D fret 4. Keep C bass deliberately quieter than the upper phrase.",
+      "checklist": [
+        "C audible as reference despite sharing E Aeolian’s notes?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-2-2": {
+      "title": "Deliberate variation · C Lydian: the raised fourth",
+      "instructions": "Play the same bars with F#, then F. Keep bass, rhythm and touch the same. Write a concrete listening observation, not only “brighter”.",
+      "checklist": [
+        "F/F# compared with other conditions unchanged?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-2-3": {
+      "title": "Original application · C Lydian: the raised fourth",
+      "instructions": "Compose eight bars over C. Introduce F# briefly, then as a longer tone. Compare F#–G and F#–E endings and choose the one that fits your phrase.",
+      "checklist": [
+        "F# controlled as both brief and sustained colour?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke6-2-1": {
+      "title": "Written study · C Lydian: the raised fourth",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left C3; right reads within C4–B4. Prepare a finger for F# and avoid lifting the hand high when returning to white keys.",
+      "checklist": [
+        "C audible as reference despite sharing E Aeolian’s notes?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke6-2-2": {
+      "title": "Deliberate variation · C Lydian: the raised fourth",
+      "instructions": "Play the same bars with F#, then F. Keep bass, rhythm and touch the same. Write a concrete listening observation, not only “brighter”.",
+      "checklist": [
+        "F/F# compared with other conditions unchanged?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke6-2-3": {
+      "title": "Original application · C Lydian: the raised fourth",
+      "instructions": "Compose eight bars over C. Introduce F# briefly, then as a longer tone. Compare F#–G and F#–E endings and choose the one that fits your phrase.",
+      "checklist": [
+        "F# controlled as both brief and sustained colour?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e6-3-1": {
+      "title": "Written study · Register changes without a new idea",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. First phrase on D/G, second on C/F. Look at the target before attacking; bass remains open E. Decide the return fingering too.",
+      "checklist": [
+        "Rhythm and contour identical in both octaves?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–6; open strings as written. Show string cues when needed."
+    },
+    "e6-3-2": {
+      "title": "Deliberate variation · Register changes without a new idea",
+      "instructions": "Match perceived level across registers, then make only the upper version quieter. Compare presence without adding notes.",
+      "checklist": [
+        "Register not automatically confused with loudness?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–6; open strings as written. Show string cues when needed."
+    },
+    "e6-3-3": {
+      "title": "Original application · Register changes without a new idea",
+      "instructions": "Write eight bars with a register change at a phrase boundary and a return. Include a deliberately notated rest at each transition.",
+      "checklist": [
+        "Outward and return jumps without searching?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–6; open strings as written. Show string cues when needed."
+    },
+    "ke6-3-1": {
+      "title": "Written study · Register changes without a new idea",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Move the right hand an octave while retaining left bass. Release the old shape and prepare at the target. The higher version stays below C6.",
+      "checklist": [
+        "Rhythm and contour identical in both octaves?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke6-3-2": {
+      "title": "Deliberate variation · Register changes without a new idea",
+      "instructions": "Match perceived level across registers, then make only the upper version quieter. Compare presence without adding notes.",
+      "checklist": [
+        "Register not automatically confused with loudness?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke6-3-3": {
+      "title": "Original application · Register changes without a new idea",
+      "instructions": "Write eight bars with a register change at a phrase boundary and a return. Include a deliberately notated rest at each transition.",
+      "checklist": [
+        "Outward and return jumps without searching?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e6-4-1": {
+      "title": "Written study · Density and release as musical controls",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Use low gain and fingerpicking. End each inner quarter without stopping the upper string. Repeat with your normal amp tone.",
+      "checklist": [
+        "Inner-voice rests audible beneath held melody?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-4-2": {
+      "title": "Deliberate variation · Density and release as musical controls",
+      "instructions": "Play the entire inner voice once, then only on beats 2 and 4. Keep bass and melody identical. Listen for completeness in the thinner version.",
+      "checklist": [
+        "Fewer attacks without losing bass reference?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-4-3": {
+      "title": "Original application · Density and release as musical controls",
+      "instructions": "Arrange twelve bars with three density levels: two voices, three, then two again. Notate releases as well as attacks for every voice.",
+      "checklist": [
+        "Three density stages distinguishable in the recording?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke6-4-1": {
+      "title": "Written study · Density and release as musical controls",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Begin without sustain. On synth choose release short enough to reveal rests; on piano control the same endings with fingers.",
+      "checklist": [
+        "Inner-voice rests audible beneath held melody?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke6-4-2": {
+      "title": "Deliberate variation · Density and release as musical controls",
+      "instructions": "Play the entire inner voice once, then only on beats 2 and 4. Keep bass and melody identical. Listen for completeness in the thinner version.",
+      "checklist": [
+        "Fewer attacks without losing bass reference?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke6-4-3": {
+      "title": "Original application · Density and release as musical controls",
+      "instructions": "Arrange twelve bars with three density levels: two voices, three, then two again. Notate releases as well as attacks for every voice.",
+      "checklist": [
+        "Three density stages distinguishable in the recording?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e6-5-1": {
+      "title": "Written study · Chromatic approaches",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. A#3–B3 on G frets 3–4; G#3–A3 on G 1–2. Prepare the target finger close to the fret. Avoid large searching motions.",
+      "checklist": [
+        "Each neighbour reaches its intended target?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–6; open strings as written. Show string cues when needed."
+    },
+    "e6-5-2": {
+      "title": "Deliberate variation · Chromatic approaches",
+      "instructions": "Lengthen one neighbour to a quarter and shorten its following target accordingly. Compare the stronger friction with the brief approach.",
+      "checklist": [
+        "Duration change audibly alters friction?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–6; open strings as written. Show string cues when needed."
+    },
+    "e6-5-3": {
+      "title": "Original application · Chromatic approaches",
+      "instructions": "Invent four bars over Em–Am–B7–Em. Use at most one chromatic neighbour per bar. Write its target first, then add the approach.",
+      "checklist": [
+        "Own chromatic notes have written destinations?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–6; open strings as written. Show string cues when needed."
+    },
+    "ke6-5-1": {
+      "title": "Written study · Chromatic approaches",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Prepare black neighbour and white target as a small movement. Hear the right-hand destination while holding the chord root on the left.",
+      "checklist": [
+        "Each neighbour reaches its intended target?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke6-5-2": {
+      "title": "Deliberate variation · Chromatic approaches",
+      "instructions": "Lengthen one neighbour to a quarter and shorten its following target accordingly. Compare the stronger friction with the brief approach.",
+      "checklist": [
+        "Duration change audibly alters friction?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke6-5-3": {
+      "title": "Original application · Chromatic approaches",
+      "instructions": "Invent four bars over Em–Am–B7–Em. Use at most one chromatic neighbour per bar. Write its target first, then add the approach.",
+      "checklist": [
+        "Own chromatic notes have written destinations?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e6-7-1": {
+      "title": "Written study · Natural harmonics",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Touch directly above fret twelve rather than pressing between frets. Pick, release the touching finger and mute other strings. E/A/D/G/C/F produce E3/A3/D4/G4/C5/F5.",
+      "checklist": [
+        "Touch above the fret wire, tone free after release?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 12–12; open strings as written. Show string cues when needed."
+    },
+    "e6-7-2": {
+      "title": "Deliberate variation · Natural harmonics",
+      "instructions": "On each string play the normally fretted note at fret twelve, then the harmonic. Same pitch, different timbre; adjust attack rather than pitch.",
+      "checklist": [
+        "Fretted and harmonic versions match in pitch?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 12–12; open strings as written. Show string cues when needed."
+    },
+    "e6-7-3": {
+      "title": "Original application · Natural harmonics",
+      "instructions": "Write a four-bar introduction from E3, A3 and D4 harmonics only. Follow with four bars of normal E-pedal melody. Notate technique changes and the final release.",
+      "checklist": [
+        "Texture change played without a searching pause?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 12–12; open strings as written. Show string cues when needed."
+    },
+    "e6-6-1": {
+      "title": "Written study · Dark reference, bright contrast",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Use open E bass and C at A fret 3. In the contrast hold F#3 deliberately over C. Prepare returning bass and first melody note separately.",
+      "checklist": [
+        "C and E sections distinct without a patch change?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-6-2": {
+      "title": "Deliberate variation · Dark reference, bright contrast",
+      "instructions": "Play the contrast once without changing bass and once with C bass. Listen for whether the melody alone suggests another centre.",
+      "checklist": [
+        "Bass influence compared using the same motif?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e6-6-3": {
+      "title": "Original application · Dark reference, bright contrast",
+      "instructions": "Write twelve bars A–B–A, four bars per section. Centre A on E and B on C. Return with the original motif, changing only its last duration.",
+      "checklist": [
+        "Returning motif clearly recognisable?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke6-6-1": {
+      "title": "Written study · Dark reference, bright contrast",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left E3 and C3; right retains the same pitch collection. Rest on C or E in the C section, then confirm E as centre for longer on the return.",
+      "checklist": [
+        "C and E sections distinct without a patch change?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke6-6-2": {
+      "title": "Deliberate variation · Dark reference, bright contrast",
+      "instructions": "Play the contrast once without changing bass and once with C bass. Listen for whether the melody alone suggests another centre.",
+      "checklist": [
+        "Bass influence compared using the same motif?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke6-6-3": {
+      "title": "Original application · Dark reference, bright contrast",
+      "instructions": "Write twelve bars A–B–A, four bars per section. Centre A on E and B on C. Return with the original motif, changing only its last duration.",
+      "checklist": [
+        "Returning motif clearly recognisable?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e7-1-1": {
+      "title": "Written study · Three against two",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb plays quarters on open E; upper fingers play three notes per two thumb attacks. Tap muted strings first, then add pitches.",
+      "checklist": [
+        "Shared start after every two-quarter group?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-1-2": {
+      "title": "Deliberate variation · Three against two",
+      "instructions": "Alternate one bar of three-against-two with one bar of ordinary quarters in both voices. Return without correcting the tempo.",
+      "checklist": [
+        "Return to quarters without acceleration?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-1-3": {
+      "title": "Original application · Three against two",
+      "instructions": "Write four bars with one two-quarter span of three-against-two per bar. Keep the other half calm. Use the pattern as a climax rather than throughout every section.",
+      "checklist": [
+        "Own mixed form without lost bass pulses?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke7-1-1": {
+      "title": "Written study · Three against two",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left plays quarters, right quarter-note triplets. Tap on your thighs first, then use one key each. Hands share the start, not every attack.",
+      "checklist": [
+        "Shared start after every two-quarter group?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke7-1-2": {
+      "title": "Deliberate variation · Three against two",
+      "instructions": "Alternate one bar of three-against-two with one bar of ordinary quarters in both voices. Return without correcting the tempo.",
+      "checklist": [
+        "Return to quarters without acceleration?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke7-1-3": {
+      "title": "Original application · Three against two",
+      "instructions": "Write four bars with one two-quarter span of three-against-two per bar. Keep the other half calm. Use the pattern as a climax rather than throughout every section.",
+      "checklist": [
+        "Own mixed form without lost bass pulses?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e7-2-1": {
+      "title": "Written study · 3+3+2 within 4/4",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Create accents with attack, not extra duration. E bass on beats 1 and 3. Do not rush the last group of two.",
+      "checklist": [
+        "Eighths remain equal despite accents?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-2-2": {
+      "title": "Deliberate variation · 3+3+2 within 4/4",
+      "instructions": "Play the same eighths accented 2+2+2+2, then return to 3+3+2. The recording must show equal bar lengths; only accents change.",
+      "checklist": [
+        "Both groupings have equal bar lengths?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-2-3": {
+      "title": "Original application · 3+3+2 within 4/4",
+      "instructions": "Write eight bars: four regular, four 3+3+2. Retain the same pitches and bass. Mark accents and a clear shared ending.",
+      "checklist": [
+        "Grouping change without losing form?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke7-2-1": {
+      "title": "Written study · 3+3+2 within 4/4",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left plays halves, right even eighths with three accents. If the patch ignores velocity, clarify accents by slightly shortening unaccented notes.",
+      "checklist": [
+        "Eighths remain equal despite accents?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke7-2-2": {
+      "title": "Deliberate variation · 3+3+2 within 4/4",
+      "instructions": "Play the same eighths accented 2+2+2+2, then return to 3+3+2. The recording must show equal bar lengths; only accents change.",
+      "checklist": [
+        "Both groupings have equal bar lengths?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke7-2-3": {
+      "title": "Original application · 3+3+2 within 4/4",
+      "instructions": "Write eight bars: four regular, four 3+3+2. Retain the same pitches and bass. Mark accents and a clear shared ending.",
+      "checklist": [
+        "Grouping change without losing form?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e7-3-1": {
+      "title": "Written study · Grouped 7/8 and 5/8",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb attacks each group start; upper fingers play the written eighths. Begin with rhythm on E alone before adding melody pitches.",
+      "checklist": [
+        "Final group of three complete?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 1–5; open strings as written. Show string cues when needed."
+    },
+    "e7-3-2": {
+      "title": "Deliberate variation · Grouped 7/8 and 5/8",
+      "instructions": "Read the 5/8 example as 2+3. Do not casually drop two notes from 7/8: speak the new grouping, clap, then play.",
+      "checklist": [
+        "5/8 played as its own pulse pattern?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 1–5; open strings as written. Show string cues when needed."
+    },
+    "e7-3-3": {
+      "title": "Original application · Grouped 7/8 and 5/8",
+      "instructions": "Write two four-bar miniatures, one in 7/8 and one in 5/8. Use the same three-note motif, lengthening only the ending in the longer version. Play both without click.",
+      "checklist": [
+        "Both miniatures repeated without added eighths?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 1–5; open strings as written. Show string cues when needed."
+    },
+    "ke7-3-1": {
+      "title": "Written study · Grouped 7/8 and 5/8",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Left holds quarter, quarter, dotted quarter group durations. Right plays eighths. Count the complete final group of three before the next beat 1.",
+      "checklist": [
+        "Final group of three complete?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke7-3-2": {
+      "title": "Deliberate variation · Grouped 7/8 and 5/8",
+      "instructions": "Read the 5/8 example as 2+3. Do not casually drop two notes from 7/8: speak the new grouping, clap, then play.",
+      "checklist": [
+        "5/8 played as its own pulse pattern?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke7-3-3": {
+      "title": "Original application · Grouped 7/8 and 5/8",
+      "instructions": "Write two four-bar miniatures, one in 7/8 and one in 5/8. Use the same three-note motif, lengthening only the ending in the longer version. Play both without click.",
+      "checklist": [
+        "Both miniatures repeated without added eighths?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e7-4-1": {
+      "title": "Written study · Minor pentatonic with target notes",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. D string E3/G3, G string A3/B3, C string D4/E4. Do not import a standard-tuning box. Sing the target before crossing to the higher string.",
+      "checklist": [
+        "Pitch collection maintained without extra scale tones?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-4-2": {
+      "title": "Deliberate variation · Minor pentatonic with target notes",
+      "instructions": "Play two versions: end each phrase on B first, then E. Retain rhythms and openings. Sing your chosen ending before playing.",
+      "checklist": [
+        "Both target notes reached deliberately?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-4-3": {
+      "title": "Original application · Minor pentatonic with target notes",
+      "instructions": "Write eight solo bars from these five pitch classes. At least two bars contain bass only. Repeat a motif three times, changing exactly one feature at each return.",
+      "checklist": [
+        "Solo contains recognisable returns and real rests?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke7-4-1": {
+      "title": "Written study · Minor pentatonic with target notes",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Organise E4–E5 in two small groups. Try 1–2–3–1–2–3 for E–G–A–B–D–E ascending. Left plays E3, then the written changes.",
+      "checklist": [
+        "Pitch collection maintained without extra scale tones?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke7-4-2": {
+      "title": "Deliberate variation · Minor pentatonic with target notes",
+      "instructions": "In this new example the left hand plays the pentatonic E3–E4 melody while the right holds a quiet Em triad. Practise separately first. Then change each left-hand ending to B and then E, retaining the right chord.",
+      "checklist": [
+        "Both target notes reached deliberately?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke7-4-3": {
+      "title": "Original application · Minor pentatonic with target notes",
+      "instructions": "Write eight solo bars from these five pitch classes. At least two bars contain bass only. Repeat a motif three times, changing exactly one feature at each return.",
+      "checklist": [
+        "Solo contains recognisable returns and real rests?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e7-solo-1": {
+      "title": "Written study · Solo, segno and coda",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Read the melody on the first visit; replace it with an equally long original motif on the second. Retain the bass rhythm and ending.",
+      "checklist": [
+        "First coda cue ignored, second followed?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-solo-2": {
+      "title": "Deliberate variation · Solo, segno and coda",
+      "instructions": "Use your own E/G/A/B melody on the second visit to bars 2–3. Bar five must begin unchanged without an added beat.",
+      "checklist": [
+        "Original solo idea ends on time?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-solo-3": {
+      "title": "Original application · Solo, segno and coda",
+      "instructions": "Write a form with an intro, four solo bars and a coda. Place segno, jump instruction and coda deliberately. Write the full measure order below once as a check.",
+      "checklist": [
+        "Coda reached without searching on the first attempt?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke7-solo-1": {
+      "title": "Written study · Solo, segno and coda",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Vary the right-hand solo while retaining the left. Prepare the right-hand coda position without stopping the left.",
+      "checklist": [
+        "First coda cue ignored, second followed?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke7-solo-2": {
+      "title": "Deliberate variation · Solo, segno and coda",
+      "instructions": "Use your own E/G/A/B melody on the second visit to bars 2–3. Bar five must begin unchanged without an added beat.",
+      "checklist": [
+        "Original solo idea ends on time?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke7-solo-3": {
+      "title": "Original application · Solo, segno and coda",
+      "instructions": "Write a form with an intro, four solo bars and a coda. Place segno, jump instruction and coda deliberately. Write the full measure order below once as a check.",
+      "checklist": [
+        "Coda reached without searching on the first attempt?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e7-6-1": {
+      "title": "Written study · Bending towards a heard target",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. High F string: B4 at fret 6, A4 at fret 4. Bend A with the ring finger supported by other fingers. Mute before releasing to avoid an unintended descending note.",
+      "checklist": [
+        "Bent note matches the previously heard B?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e7-6-2": {
+      "title": "Deliberate variation · Bending towards a heard target",
+      "instructions": "Record target and bend consecutively. Listen only to the held destination phase. Use a tuner to check if your ear cannot make a clear comparison.",
+      "checklist": [
+        "Destination stable rather than continuously rising?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e7-6-3": {
+      "title": "Original application · Bending towards a heard target",
+      "instructions": "Write four bars from E4, G4, A4 and B4. Bend one A to B and leave another straight. Distinguish both functions in notation and recording.",
+      "checklist": [
+        "Straight and bent A deliberately distinguished?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 4–6; open strings as written. Show string cues when needed."
+    },
+    "e7-5-1": {
+      "title": "Written study · Tempo and longer performances",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Use small attacks, fixed string choices and prepared changes. Reduce movement at higher tempos rather than increasing fretting pressure.",
+      "checklist": [
+        "All eighths even through chord changes?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-5-2": {
+      "title": "Deliberate variation · Tempo and longer performances",
+      "instructions": "Play at 60, 90 and 120 quarters per minute. Advance only after two stable passes. Record your highest stable tempo and one limiting spot.",
+      "checklist": [
+        "Tempo limit documented with a specific cause?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e7-5-3": {
+      "title": "Original application · Tempo and longer performances",
+      "instructions": "Build a 32-bar form from the example with four clear sections. Aim for a complete pass at 120; then test shorter eighth-note figures up to 140–146. Tone and rests remain part of the standard.",
+      "checklist": [
+        "Long pass without losing form or releases?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke7-5-1": {
+      "title": "Written study · Tempo and longer performances",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Set fingering before the tempo series. Begin arm movements for jumps while the last note still sounds. Playing louder is not a tempo aid.",
+      "checklist": [
+        "All eighths even through chord changes?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke7-5-2": {
+      "title": "Deliberate variation · Tempo and longer performances",
+      "instructions": "Play at 60, 90 and 120 quarters per minute. Advance only after two stable passes. Record your highest stable tempo and one limiting spot.",
+      "checklist": [
+        "Tempo limit documented with a specific cause?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke7-5-3": {
+      "title": "Original application · Tempo and longer performances",
+      "instructions": "Build a 32-bar form from the example with four clear sections. Aim for a complete pass at 120; then test shorter eighth-note figures up to 140–146. Tone and rests remain part of the standard.",
+      "checklist": [
+        "Long pass without losing form or releases?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e8-1-1": {
+      "title": "Written study · Form: return and contrast",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Mark string changes at section boundaries. Play bass and melody separately through all sixteen bars before combining.",
+      "checklist": [
+        "Four sections without counting errors?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-1-2": {
+      "title": "Deliberate variation · Form: return and contrast",
+      "instructions": "Change only durations in the second A. Change contour in the third section, then restore the original motif on the return. Record the whole form.",
+      "checklist": [
+        "A′ changes only the intended feature?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-1-3": {
+      "title": "Original application · Form: return and contrast",
+      "instructions": "Write sixteen original bars A–A′–B–A. Assign one role to each section and choose the final note beforehand. Play once with drums and once without.",
+      "checklist": [
+        "Return and ending recognisable to a listener?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke8-1-1": {
+      "title": "Written study · Form: return and contrast",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Learn the left-hand bass as its own form. Know each section’s right-hand opening from memory; this supports recovery without replacing reading.",
+      "checklist": [
+        "Four sections without counting errors?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke8-1-2": {
+      "title": "Deliberate variation · Form: return and contrast",
+      "instructions": "Change only durations in the second A. Change contour in the third section, then restore the original motif on the return. Record the whole form.",
+      "checklist": [
+        "A′ changes only the intended feature?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke8-1-3": {
+      "title": "Original application · Form: return and contrast",
+      "instructions": "Write sixteen original bars A–A′–B–A. Assign one role to each section and choose the final note beforehand. Play once with drums and once without.",
+      "checklist": [
+        "Return and ending recognisable to a listener?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e8-2-1": {
+      "title": "Written study · Solo arrangement in three layers",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. For each held note check which string remains free for the next. If two voices need the same string, change position or notate a deliberate release.",
+      "checklist": [
+        "Each layer individually playable and singable?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-2-2": {
+      "title": "Deliberate variation · Solo arrangement in three layers",
+      "instructions": "Remove the entire inner voice for one pass. Then restore only its most important entries. Choose by ear which version carries melody more clearly.",
+      "checklist": [
+        "Reduction supports melody rather than concealing gaps?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-2-3": {
+      "title": "Original application · Solo arrangement in three layers",
+      "instructions": "Write 24 bars in three sections: two voices, three voices, then a free mixture. Notate all durations and check every simultaneous combination for physical playability.",
+      "checklist": [
+        "All simultaneous string/key positions physically checked?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke8-2-1": {
+      "title": "Written study · Solo arrangement in three layers",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Where practical, right 4/5 retain the top while 1/2/3 handle the middle. Do not force an octave stretch: revoice or omit an inner note and notate that decision.",
+      "checklist": [
+        "Each layer individually playable and singable?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke8-2-2": {
+      "title": "Deliberate variation · Solo arrangement in three layers",
+      "instructions": "Remove the entire inner voice for one pass. Then restore only its most important entries. Choose by ear which version carries melody more clearly.",
+      "checklist": [
+        "Reduction supports melody rather than concealing gaps?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke8-2-3": {
+      "title": "Original application · Solo arrangement in three layers",
+      "instructions": "Write 24 bars in three sections: two voices, three voices, then a free mixture. Notate all durations and check every simultaneous combination for physical playability.",
+      "checklist": [
+        "All simultaneous string/key positions physically checked?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e8-3-1": {
+      "title": "Written study · Carry a motif into another key",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Open E bass becomes open A. Redistribute melody over G/C; do not treat an open note as a movable fret.",
+      "checklist": [
+        "Every pitch transposed by the same interval?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-3-2": {
+      "title": "Deliberate variation · Carry a motif into another key",
+      "instructions": "Transpose your phase-one miniature’s rhythm and pitches to A. Play E and A versions consecutively; do not substitute a pitch merely for easier fingering.",
+      "checklist": [
+        "Rhythm and contour identical between versions?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-3-3": {
+      "title": "Original application · Carry a motif into another key",
+      "instructions": "Write sixteen bars: eight in E, eight in A. The second half retains the motif but changes accompanying texture. Make both keys audible as centres.",
+      "checklist": [
+        "New bass reference and suitable playing positions found?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke8-3-1": {
+      "title": "Written study · Carry a motif into another key",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Right E4–G4–B4 becomes A4–C5–E5. Transpose left bass accordingly. Name pitches before placing the hands.",
+      "checklist": [
+        "Every pitch transposed by the same interval?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke8-3-2": {
+      "title": "Deliberate variation · Carry a motif into another key",
+      "instructions": "Transpose your phase-one miniature’s rhythm and pitches to A. Play E and A versions consecutively; do not substitute a pitch merely for easier fingering.",
+      "checklist": [
+        "Rhythm and contour identical between versions?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke8-3-3": {
+      "title": "Original application · Carry a motif into another key",
+      "instructions": "Write sixteen bars: eight in E, eight in A. The second half retains the motif but changes accompanying texture. Make both keys audible as centres.",
+      "checklist": [
+        "New bass reference and suitable playing positions found?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e8-4-1": {
+      "title": "Written study · Score, silence and D.C. al Fine",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Mute all strings through the silent bars while counting internally. Prepare the restart in time. Avoid creating an accidental count-in with string noise.",
+      "checklist": [
+        "Fine ignored on the first visit?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-4-2": {
+      "title": "Deliberate variation · Score, silence and D.C. al Fine",
+      "instructions": "Cover the expanded order and follow signs only. Check the recording for both complete silent bars.",
+      "checklist": [
+        "Two full silent bars without losing pulse?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-4-3": {
+      "title": "Original application · Score, silence and D.C. al Fine",
+      "instructions": "Make a clean score of a sixteen-bar original form: clef, key signature, meter, tempo unit, durations, rests and voices. Read only this score the next day and mark every ambiguity.",
+      "checklist": [
+        "Own score readable without memory prompts?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke8-4-1": {
+      "title": "Written study · Score, silence and D.C. al Fine",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Release keys and pedal completely during silent bars. Prepare the next position quietly; long synth release must not obscure the written silence.",
+      "checklist": [
+        "Fine ignored on the first visit?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke8-4-2": {
+      "title": "Deliberate variation · Score, silence and D.C. al Fine",
+      "instructions": "Cover the expanded order and follow signs only. Check the recording for both complete silent bars.",
+      "checklist": [
+        "Two full silent bars without losing pulse?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke8-4-3": {
+      "title": "Original application · Score, silence and D.C. al Fine",
+      "instructions": "Make a clean score of a sixteen-bar original form: clef, key signature, meter, tempo unit, durations, rests and voices. Read only this score the next day and mark every ambiguity.",
+      "checklist": [
+        "Own score readable without memory prompts?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e8-5-1": {
+      "title": "Written study · A performance starts before the first note",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Check tuning, set the intended level and prepare the opening shape. Play clean first, then with your tone at a comparable level.",
+      "checklist": [
+        "Tempo and starting pitch clear before the first attack?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-5-2": {
+      "title": "Deliberate variation · A performance starts before the first note",
+      "instructions": "Start at bars one and five in turn. Omit a predetermined melody note, retain pulse and reach the next barline, then play the complete version again.",
+      "checklist": [
+        "Pulse retained after the planned omission?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-5-3": {
+      "title": "Original application · A performance starts before the first note",
+      "instructions": "Play sixteen bars without a score: eight prepared, four freely over E pedal, four of a prepared ending. One recording, no restarts. Listen back only after the complete take.",
+      "checklist": [
+        "Free section reaches the prepared ending on time?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke8-5-1": {
+      "title": "Written study · A performance starts before the first note",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. At an unfamiliar piano briefly check register and pedal response. Choose a secure key and start with a simple bass-and-melody form without hunting for sounds.",
+      "checklist": [
+        "Tempo and starting pitch clear before the first attack?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke8-5-2": {
+      "title": "Deliberate variation · A performance starts before the first note",
+      "instructions": "Start at bars one and five in turn. Omit a predetermined melody note, retain pulse and reach the next barline, then play the complete version again.",
+      "checklist": [
+        "Pulse retained after the planned omission?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke8-5-3": {
+      "title": "Original application · A performance starts before the first note",
+      "instructions": "Play sixteen bars without a score: eight prepared, four freely over E pedal, four of a prepared ending. One recording, no restarts. Listen back only after the complete take.",
+      "checklist": [
+        "Free section reaches the prepared ending on time?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "e8-7-1": {
+      "title": "Written study · Self-sufficient guitar transitions",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Play the E-string harmonic above fret twelve, then move to the low position. Use the written rest for travel. In the three-layer section hold the top string and mute inner voices selectively.",
+      "checklist": [
+        "Position changes fit the planned rest?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–12; open strings as written. Show string cues when needed."
+    },
+    "e8-7-2": {
+      "title": "Deliberate variation · Self-sufficient guitar transitions",
+      "instructions": "Practise one bar before and after each texture change, then the full form. Check whether clean isolated transitions survive the complete performance.",
+      "checklist": [
+        "Transitions equally secure alone and in context?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–12; open strings as written. Show string cues when needed."
+    },
+    "e8-7-3": {
+      "title": "Original application · Self-sufficient guitar transitions",
+      "instructions": "Write sixteen bars for guitar alone with three textures. No looper or external bass. Notate position transitions and a carrying top line.",
+      "checklist": [
+        "Arrangement works without drums or added bass?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–12; open strings as written. Show string cues when needed."
+    },
+    "e8-6-1": {
+      "title": "Written study · Final project: an original solo piece",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Check bass muting, held melody, free strings for inner voices and position changes. Note essential finger/position cues; do not replace rhythm reading with tablature.",
+      "checklist": [
+        "All 32 model bars read with correct rhythms and voices?",
+        "Two complete passes with clear releases?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-6-2": {
+      "title": "Deliberate variation · Final project: an original solo piece",
+      "instructions": "Choose one section and change only texture, retaining harmony and motif. Replay the whole form and decide whether the change serves the overall arc.",
+      "checklist": [
+        "Texture change preserves motif and overall form?",
+        "Unchanged elements retained during comparison?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "e8-6-3": {
+      "title": "Original application · Final project: an original solo piece",
+      "instructions": "Compose and notate at least 32 bars with a returning motif, contrast, your own bass, one three-layer passage and a clear coda. Record on three separate practice days: with drums, unaccompanied, and with an improvised four-bar variation. Compare and revise deliberately.",
+      "checklist": [
+        "Original piece notated, self-sufficient and reproduced on three days?",
+        "Notated, recorded and read again on another practice day?"
+      ],
+      "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
+    },
+    "ke8-6-1": {
+      "title": "Written study · Final project: an original solo piece",
+      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Check balance, readable hand positions and deliberate releases. Left plays a broken bass figure in the triplet section; prepare hands separately. Make at least one recording with piano-like decay; another may use your synth tone.",
+      "checklist": [
+        "All 32 model bars read with correct rhythms and voices?",
+        "Two complete passes with clear releases?"
+      ]
+    },
+    "ke8-6-2": {
+      "title": "Deliberate variation · Final project: an original solo piece",
+      "instructions": "Choose one section and change only texture, retaining harmony and motif. Replay the whole form and decide whether the change serves the overall arc.",
+      "checklist": [
+        "Texture change preserves motif and overall form?",
+        "Unchanged elements retained during comparison?"
+      ]
+    },
+    "ke8-6-3": {
+      "title": "Original application · Final project: an original solo piece",
+      "instructions": "Compose and notate at least 32 bars with a returning motif, contrast, your own bass, one three-layer passage and a clear coda. Record on three separate practice days: with drums, unaccompanied, and with an improvised four-bar variation. Compare and revise deliberately.",
+      "checklist": [
+        "Original piece notated, self-sufficient and reproduced on three days?",
+        "Notated, recorded and read again on another practice day?"
+      ]
+    },
+    "u2-1": {
+      "title": "Triads: minor and major",
+      "goal": "Hear root, third and fifth as one harmony.",
+      "text": "Em contains E–G–B; E major contains E–G#–B: only the third changes. Moving a chord tone to another octave preserves the chord. Play each tone separately and sing the third above the bass.\n\nThumb on E bass, free fingers on the three upper notes. G3 and G#3 are D-string frets 5 and 6; retain B3 and E4."
+    },
+    "ku2-1": {
+      "title": "Triads: minor and major",
+      "goal": "Hear root, third and fifth as one harmony.",
+      "text": "Em contains E–G–B; E major contains E–G#–B: only the third changes. Moving a chord tone to another octave preserves the chord. Play each tone separately and sing the third above the bass.\n\nLeft E3; right G4–B4–E5 or G#4–B4–E5. Use right 1–2–5; only the thumb moves a semitone."
+    },
+    "u2-2": {
+      "title": "Inversion and bass note",
+      "goal": "Distinguish the lowest note from the upper voicing.",
+      "text": "Em over E is root position, over G first inversion, over B second inversion. The lowest sounding note determines the inversion, not the shape above it. The melody can retain E as a common tone.\n\nKeep G3–B3–E4 above. Bass: open E2, G2 at E-string fret 3, B2 at A-string fret 2. Mute each previous bass at the change."
+    },
+    "ku2-2": {
+      "title": "Inversion and bass note",
+      "goal": "Distinguish the lowest note from the upper voicing.",
+      "text": "Em over E is root position, over G first inversion, over B second inversion. The lowest sounding note determines the inversion, not the shape above it. The melody can retain E as a common tone.\n\nRetain the same right-hand chord; rehearse the written bass separately. Name the bass note and then the inversion at each change."
+    },
+    "u2-3": {
+      "title": "Thirds with a melodic line",
+      "goal": "Deliberately bring out the upper voice of a dyad.",
+      "text": "E–G and A–C are minor thirds; G–B is major. Diatonic parallel thirds therefore change size. Read the upper line as the melody first, then add the lower line. Coordinate their releases.\n\nFor E3–G3 use A fret 7 and D fret 5. Then G3–B3 on D/G, A3–C4 on G/C. Move the hand with each change."
+    },
+    "ku2-3": {
+      "title": "Thirds with a melodic line",
+      "goal": "Deliberately bring out the upper voice of a dyad.",
+      "text": "E–G and A–C are minor thirds; G–B is major. Diatonic parallel thirds therefore change size. Read the upper line as the melody first, then add the lower line. Coordinate their releases.\n\nRight-hand thirds with 1–3 or 2–4; move the whole hand between positions. Quiet left E3 each bar. Also play the top line alone."
+    },
+    "u2-4": {
+      "title": "Arpeggio above a bass",
+      "goal": "Play broken triads with a clear upper voice.",
+      "text": "An arpeggio distributes chord tones in time. Here each written eighth ends at the next melodic note; only the bass sustains. Longer overlap is a later artistic choice, not a substitute for controlled releases.\n\nThumb maintains the bass rhythm. Use i–m–a or another repeatable fingering above. Bring out the highest note without reattacking the bass."
+    },
+    "ku2-4": {
+      "title": "Arpeggio above a bass",
+      "goal": "Play broken triads with a clear upper voice.",
+      "text": "An arpeggio distributes chord tones in time. Here each written eighth ends at the next melodic note; only the bass sustains. Longer overlap is a later artistic choice, not a substitute for controlled releases.\n\nPrepare the right-hand triad, starting with 1–3–5–3. Left hand only at bar starts. Loop one bar before adding chord changes."
+    },
+    "u2-6": {
+      "title": "Power chords and muting",
+      "goal": "Play fifths without thirds cleanly and in time.",
+      "text": "E5 means E and B, not a five-note chord. Without a third it is not explicitly major or minor. In P4 the fifth is one string higher and two frets up. Muting determines clarity under gain.\n\nE5: open E/A fret 2; A5: open A/D fret 2; B5: A fret 2/D fret 4. Strike only those strings. Use both hands to stop rests."
+    },
+    "u2-rhythm": {
+      "title": "Short chords and offbeats",
+      "goal": "Enter between clicks and release on time.",
+      "text": "Here the eighth rest falls on the beat and the chord on the offbeat. Keep counting while you play nothing on the click. A short chord needs a defined release; the next rest is not an extra attack.\n\nPluck the upper strings selectively; release fretting pressure at note ends without exciting open bass strings. Thumb plays the bass separately each bar."
+    },
+    "ku2-rhythm": {
+      "title": "Short chords and offbeats",
+      "goal": "Enter between clicks and release on time.",
+      "text": "Here the eighth rest falls on the beat and the chord on the offbeat. Keep counting while you play nothing on the click. A short chord needs a defined release; the next rest is not an extra attack.\n\nRight-hand chords are short while the left holds. No sustain pedal. Release with small movements rather than lifting the whole hand high."
+    },
+    "u2-5": {
+      "title": "Hear a triad, build a phrase",
+      "goal": "Find chord tones in an original melody.",
+      "text": "A melody can imply a chord without playing all its notes together. Listen first to the upper closing notes. Sing them away from the instrument, then add bass. More notes do not automatically create more coherence.\n\nPlay the upper line first on D/G/C strings. Add bass only at written bar starts. E can remain an audible reference through Em–C."
+    },
+    "ku2-5": {
+      "title": "Hear a triad, build a phrase",
+      "goal": "Find chord tones in an original melody.",
+      "text": "A melody can imply a chord without playing all its notes together. Listen first to the upper closing notes. Sing them away from the instrument, then add bass. More notes do not automatically create more coherence.\n\nSing and play the right-hand melody alone first. Name left-hand bass notes before combining. Write down your fingering and keep it consistent."
+    },
+    "u3-1": {
+      "title": "Lamento: a descending bass",
+      "goal": "Combine a slow descending bass with a singing upper voice.",
+      "text": "E–D–C–B is a descending bass model. Its effect also depends on tempo, duration and upper voice; the notes alone do not guarantee sadness. Read bass and melody separately and compare their intervals at each bar start.\n\nPlay E3–D3–C3–B2 bass entirely on A at frets 7–5–3–2. Melody mainly on D. Move the hand down with the bass without shortening the upper line."
+    },
+    "ku3-1": {
+      "title": "Lamento: a descending bass",
+      "goal": "Combine a slow descending bass with a singing upper voice.",
+      "text": "E–D–C–B is a descending bass model. Its effect also depends on tempo, duration and upper voice; the notes alone do not guarantee sadness. Read bass and melody separately and compare their intervals at each bar start.\n\nTry left 1–2–3–4 for the slow descending bass. Sing the right-hand line separately. Combine only when the left-hand motion no longer requires searching."
+    },
+    "u3-2": {
+      "title": "A circle-of-fifths path",
+      "goal": "Follow common tones through several chords.",
+      "text": "Em–Am–D–G–C–F#dim–B–Em links roots by descending fifths or ascending fourths, with a diminished fifth from C down to F# (an augmented fourth upward). B major contains D# and leads back to Em here. Hear chord tones rather than recalling shapes alone.\n\nConnect upper triads without bass first. Retain common tones only when their fingering allows the next shape. Mute the old string at each bass change."
+    },
+    "ku3-2": {
+      "title": "A circle-of-fifths path",
+      "goal": "Follow common tones through several chords.",
+      "text": "Em–Am–D–G–C–F#dim–B–Em links roots by descending fifths or ascending fourths, with a diminished fifth from C down to F# (an augmented fourth upward). B major contains D# and leads back to Em here. Hear chord tones rather than recalling shapes alone.\n\nUse compact right-hand voicings and left-hand roots. Look at a target before moving. The right hand should not copy every bass leap."
+    },
+    "u3-reading": {
+      "title": "Syncopation and tied entries",
+      "goal": "Sustain an accented subdivision across the next beat.",
+      "text": "A syncopation begins between beats and continues across a stronger beat. The tie does not create a second attack. Count eighths, mark quarters with your foot and count through rests.\n\nMelody on D/G strings, E bass with the thumb. First play the melody rhythm on a muted string while the foot keeps quarters."
+    },
+    "ku3-reading": {
+      "title": "Syncopation and tied entries",
+      "goal": "Sustain an accented subdivision across the next beat.",
+      "text": "A syncopation begins between beats and continues across a stronger beat. The tie does not create a second attack. Count eighths, mark quarters with your foot and count through rests.\n\nHold long E3 notes on the left; rehearse the right-hand rhythm on one key. Check whether a new left-hand attack accidentally retriggers the right."
+    },
+    "u3-4": {
+      "title": "Sixteenths and precise rests",
+      "goal": "Read four subdivisions per quarter without accelerating.",
+      "text": "Sixteenths have two flags or beams. Four fill a quarter. Count “1 e and a” or four even syllables. A sixteenth rest occupies one of those slots; it does not shorten the bar.\n\nKeep picking movements small and loose. Continue the motion internally through rests while muting the string. Start on one pitch, then add the written notes."
+    },
+    "ku3-4": {
+      "title": "Sixteenths and precise rests",
+      "goal": "Read four subdivisions per quarter without accelerating.",
+      "text": "Sixteenths have two flags or beams. Four fill a quarter. Count “1 e and a” or four even syllables. A sixteenth rest occupies one of those slots; it does not shorten the bar.\n\nBegin on one right-hand key with alternating fingers, then use the written pitches. Release the key for rests. Keep the left hand independent of the fast subdivisions."
+    },
+    "u3-3": {
+      "title": "Separate bass and melody by ear",
+      "goal": "Reduce a two-voice idea to its essential lines.",
+      "text": "Transcribe the lowest entries first, then the highest. Write rhythm before pitch. The preview provides a fixed reference: do not silently alter what you heard to fit easier shapes.\n\nBass on E/A, melody on D/G. Listen away from the instrument, write the bass path and verify it alone before adding melody."
+    },
+    "ku3-3": {
+      "title": "Separate bass and melody by ear",
+      "goal": "Reduce a two-voice idea to its essential lines.",
+      "text": "Transcribe the lowest entries first, then the highest. Write rhythm before pitch. The preview provides a fixed reference: do not silently alter what you heard to fit easier shapes.\n\nReconstruct the heard bass with the left hand alone. Sing and find the right-hand melody. Combine only once both lines match."
+    },
+    "u3-6": {
+      "title": "Chromatic bass, calm melody",
+      "goal": "Lead semitone bass steps without clipping the upper voice.",
+      "text": "E–Eb–D–Db–C–B adds chromatic steps to the diatonic descent. Read repeated letter names with changing accidentals carefully. Let audible voice motion create tension rather than adding gain.\n\nBass entirely on A: frets 7–6–5–4–3–2. Melody on D. End each old bass while retaining the upper note for its written duration."
+    },
+    "u3-5": {
+      "title": "Repeats and two endings",
+      "goal": "Play repeats and alternate endings without losing the form.",
+      "text": "Play the section between repeat signs twice. Use ending 1 on the first pass and ending 2 on the second. The expanded order below the score is a checking aid; afterwards follow the signs alone.\n\nKeep the repeated E bass steady. The first ending stays open on B, the second lands on E. Do not insert a fretting pause at the repeat."
+    },
+    "ku3-5": {
+      "title": "Repeats and two endings",
+      "goal": "Play repeats and alternate endings without losing the form.",
+      "text": "Play the section between repeat signs twice. Use ending 1 on the first pass and ending 2 on the second. The expanded order below the score is a checking aid; afterwards follow the signs alone.\n\nMove both hands together at the repeat. Read the two endings separately first, then play the complete order."
+    },
+    "u4-1": {
+      "title": "Leading tone and harmonic minor",
+      "goal": "Hear and read D# as a directed approach to E.",
+      "text": "E harmonic minor is E F# G A B C D#. D#–E is a semitone; C–D# is an augmented second spanning three semitones. The leading tone has direction within a cadence, though other continuations are possible outside it.\n\nPlay the upper line on D/G/C. D#4 is C-string fret 3, E4 fret 4. Hear the semitone before moving the finger."
+    },
+    "ku4-1": {
+      "title": "Leading tone and harmonic minor",
+      "goal": "Hear and read D# as a directed approach to E.",
+      "text": "E harmonic minor is E F# G A B C D#. D#–E is a semitone; C–D# is an augmented second spanning three semitones. The leading tone has direction within a cadence, though other continuations are possible outside it.\n\nTry right 1–2–3–1–2–3–4–5 for E4–E5. Sing C5–D#5 separately before inserting it in the line. Rehearse bass alone first."
+    },
+    "u4-3": {
+      "title": "Cadence: tension and arrival",
+      "goal": "Shape Am–B7–Em as preparation, dominant and arrival.",
+      "text": "In E minor, Am is iv, B7 is V7 and Em is i. B7 contains B–D#–F#–A. Here D# moves to E and A to G. Hear these motions individually; louder playing does not replace voice leading.\n\nFor B7 use F#3–A3–D#4 over B2. Slowly connect the semitone/whole-tone motions to Em. Avoid lifting every finger hurriedly at once."
+    },
+    "ku4-3": {
+      "title": "Cadence: tension and arrival",
+      "goal": "Shape Am–B7–Em as preparation, dominant and arrival.",
+      "text": "In E minor, Am is iv, B7 is V7 and Em is i. B7 contains B–D#–F#–A. Here D# moves to E and A to G. Hear these motions individually; louder playing does not replace voice leading.\n\nPlay the two resolutions as a right-hand dyad over left B–E first. Add the third right-hand chord tone and coordinate the timing."
+    },
+    "u4-chords": {
+      "title": "Sixths, sevenths and chord symbols",
+      "goal": "Distinguish Em, Em7, Em6, Cmaj7 and B7 by ear.",
+      "text": "Em7 adds D, Em6 adds C#. Cmaj7 contains C–E–G–B; B7 contains B–D#–F#–A. “maj7” means a major seventh; “7” uses a minor seventh. A symbol specifies tones, not register or duration.\n\nCheck the P4 voicings one note at a time. In Em7 use D4 at G fret 7 and E4 at C fret 4. Keep bass and top voice audible through the change."
+    },
+    "ku4-chords": {
+      "title": "Sixths, sevenths and chord symbols",
+      "goal": "Distinguish Em, Em7, Em6, Cmaj7 and B7 by ear.",
+      "text": "Em7 adds D, Em6 adds C#. Cmaj7 contains C–E–G–B; B7 contains B–D#–F#–A. “maj7” means a major seventh; “7” uses a minor seventh. A symbol specifies tones, not register or duration.\n\nLeft plays the root, right the other three tones. Name each right-hand pitch before playing. Fingering may change between chords; keep the top line connected."
+    },
+    "u4-2": {
+      "title": "A diminished seventh in motion",
+      "goal": "Lead D#–F#–A–C as four voices into Em.",
+      "text": "D#dim7 stacks minor thirds: D#–F#–A–C. Steps of three semitones give 3+3+3 to the diminished seventh C. The symmetry allows different interpretations; here resolution to Em establishes the role. Play each voice’s destination separately.\n\nBass D#3 at A fret 6; above use F#3 at D4, C4 at G5 and A4 at F4. Keep the C string silent. Fingerpick rather than strumming across every string."
+    },
+    "ku4-2": {
+      "title": "A diminished seventh in motion",
+      "goal": "Lead D#–F#–A–C as four voices into Em.",
+      "text": "D#dim7 stacks minor thirds: D#–F#–A–C. Steps of three semitones give 3+3+3 to the diminished seventh C. The symmetry allows different interpretations; here resolution to Em establishes the role. Play each voice’s destination separately.\n\nLeft D#3, right F#4–A4–C5; then left E3 with right G4–B4–E5. Play individual resolutions before the complete four-voice sonorities."
+    },
+    "u4-4": {
+      "title": "Lead the inner voices",
+      "goal": "Combine a retained top note with moving inner voices.",
+      "text": "Across D7–G, D can remain on top while F# moves to G and C to B. Not every voice must move at each chord change. Hear the inner line alone, then within the full sonority.\n\nHold D4 at C fret 2 as a common top note. For D7–G move F#3/G3 on D and C4/B3 on G. Mute the D3 bass when moving to G2."
+    },
+    "ku4-4": {
+      "title": "Lead the inner voices",
+      "goal": "Combine a retained top note with moving inner voices.",
+      "text": "Across D7–G, D can remain on top while F# moves to G and C to B. Not every voice must move at each chord change. Hear the inner line alone, then within the full sonority.\n\nRetain the upper right-hand finger on D5 while the lower fingers move. Prepare left D–G separately; do not hide unclear transitions with sustain pedal."
+    },
+    "u4-6": {
+      "title": "Fifth/sixth changes in a riff",
+      "goal": "Play a bass riff with precise upper-interval changes.",
+      "text": "E–B is a fifth and E–C# a major sixth: seven and nine semitones. These dyads are not complete E6 chords because the third is absent. Use straight eighths first; shuffle follows in phase 5.\n\nOpen E plus A frets 2/4; then open A plus D frets 2/4. Change the upper finger while retaining the root reference. Mute unused strings consistently."
+    },
+    "u4-5": {
+      "title": "Make a cadence your own",
+      "goal": "Combine modal colour and a functional ending in one form.",
+      "text": "A long E-pedal passage can remain open; Am–B7–Em then focuses the direction. Decide where the ending starts. Reserving D# for that point makes its contrast with D easier to hear.\n\nFirst half: open E and single melody. Then use the familiar compact chords. Do not add a fretting pause at the transition."
+    },
+    "ku4-5": {
+      "title": "Make a cadence your own",
+      "goal": "Combine modal colour and a functional ending in one form.",
+      "text": "A long E-pedal passage can remain open; Am–B7–Em then focuses the direction. Decide where the ending starts. Reserving D# for that point makes its contrast with D easier to hear.\n\nLeft starts with E3, then the cadence roots. Right changes from a single melody to triads without a sudden jump in level."
+    },
+    "u5-1": {
+      "title": "Sequence: move a motif",
+      "goal": "Move a motif by scale steps while preserving its identity.",
+      "text": "A diatonic sequence preserves directions and scale-step distances, not necessarily semitone sizes. This example moves the same four-note motif within E Aeolian. Sing each new starting note first.\n\nRead in the D/G window first. Use the C string for C4; open E bass remains. Do not mask the position change with a louder bass attack."
+    },
+    "ku5-1": {
+      "title": "Sequence: move a motif",
+      "goal": "Move a motif by scale steps while preserving its identity.",
+      "text": "A diatonic sequence preserves directions and scale-step distances, not necessarily semitone sizes. This example moves the same four-note motif within E Aeolian. Sing each new starting note first.\n\nCheck the new right-hand five-note space before each move. Adapt fingering to the motif instead of forcing the same fingers regardless of black keys."
+    },
+    "u5-2": {
+      "title": "Three layers: bass, figure, melody",
+      "goal": "Hold a melody while the inner voice continues.",
+      "text": "Three layers have separate roles: bass anchors harmony, inner quarters provide motion, long top notes form the melody. Practise each pair before combining all three. Do not reattack melody with every inner note.\n\nThumb plays bass, i/m the D and G strings, a the upper C string. Retain the fretting finger above while the inner voice moves. Sound only the written strings."
+    },
+    "ku5-2": {
+      "title": "Three layers: bass, figure, melody",
+      "goal": "Hold a melody while the inner voice continues.",
+      "text": "Three layers have separate roles: bass anchors harmony, inner quarters provide motion, long top notes form the melody. Practise each pair before combining all three. Do not reattack melody with every inner note.\n\nLeft plays bass. Right holds the top with 5 while 1/2/3 move inside. Practise upper and inner voices with the right hand alone before adding left."
+    },
+    "u5-groove": {
+      "title": "Triplets against straight eighths",
+      "goal": "Alternate two and three subdivisions at a fixed quarter pulse.",
+      "text": "A bracketed 3 means three written eighths in the time of two ordinary eighths. Both groups fill one quarter. Count two, then three even syllables per quarter without changing the quarter-note tempo.\n\nStart triplets on E3 with small alternate-picking movements. Continuous alternate picking reverses the starting stroke on the next quarter; that is intentional."
+    },
+    "ku5-groove": {
+      "title": "Triplets against straight eighths",
+      "goal": "Alternate two and three subdivisions at a fixed quarter pulse.",
+      "text": "A bracketed 3 means three written eighths in the time of two ordinary eighths. Both groups fill one quarter. Count two, then three even syllables per quarter without changing the quarter-note tempo.\n\nStart with right 1–2–3 for each quarter while left plays steady bar starts. Relax after groups without inserting a pause."
+    },
+    "u5-4": {
+      "title": "12/8: four large pulses",
+      "goal": "Read and accompany twelve eighths as four groups of three.",
+      "text": "12/8 contains twelve eighths, grouped here as 3+3+3+3. Tempo refers to the dotted quarter: four pulses per bar. These eighths are ordinary notes in the meter, not separately marked triplets.\n\nIn the example the thumb attacks on pulses 1 and 3 beneath the eighth-note figure. Lightly shape group starts rather than striking every third note hard."
+    },
+    "ku5-4": {
+      "title": "12/8: four large pulses",
+      "goal": "Read and accompany twelve eighths as four groups of three.",
+      "text": "12/8 contains twelve eighths, grouped here as 3+3+3+3. Tempo refers to the dotted quarter: four pulses per bar. These eighths are ordinary notes in the meter, not separately marked triplets.\n\nHold each left dotted half for two large pulses. Read right-hand groups of three. Play only each group’s first note before filling in the others."
+    },
+    "u5-6": {
+      "title": "Legato: hammer-on and pull-off",
+      "goal": "Reduce picked attacks without losing rhythm or level.",
+      "text": "A slur connects different pitches; unlike a tie, it does not merge repeated pitches. Pick the first note, then create the next with a hammer-on or pull-off. Preview demonstrates pitches and rhythm, not the physical technique’s timbre.\n\nD string: E3 fret 2 with 1, F#3 fret 4 with 3, G3 fret 5 with 4. Prepare the target finger before a pull-off and release the string with control rather than pulling far away."
+    },
+    "u5-3": {
+      "title": "Sequence over changing bass",
+      "goal": "Control motif contour and harmonic rhythm together.",
+      "text": "The figure repeats its rhythm while bass changes every bar: one chord per bar is the harmonic rhythm. Check strong-beat notes first; they should clarify each harmony.\n\nRead ahead before each bass change. Thumb changes bass strings while upper fingers retain the pattern. Do not stop bass while decoding notes."
+    },
+    "ku5-3": {
+      "title": "Sequence over changing bass",
+      "goal": "Control motif contour and harmonic rhythm together.",
+      "text": "The figure repeats its rhythm while bass changes every bar: one chord per bar is the harmonic rhythm. Check strong-beat notes first; they should clarify each harmony.\n\nLeft plays root, fifth, octave, fifth in quarters; the diminished chord uses a diminished fifth. Start with 5–2–1–2, allowing the hand to move. Read the right-hand figure separately before combining both moving lines."
+    },
+    "u5-5": {
+      "title": "Compare shuffle and swing deliberately",
+      "goal": "Hear ternary phrasing and read it in ordinary eighth notation.",
+      "text": "Shuffle can be practised as long and short triplet portions. Swing often uses ordinary eighths plus a performance indication. Preview uses 2:1 as a study model; real swing ratios vary with tempo and style. There is no universal swing percentage.\n\nPlay long–short on the right while retaining bass once per bar. Use smaller movements at faster tempos; do not swallow short notes. Check the rhythm without gain too."
+    },
+    "ku5-5": {
+      "title": "Compare shuffle and swing deliberately",
+      "goal": "Hear ternary phrasing and read it in ordinary eighth notation.",
+      "text": "Shuffle can be practised as long and short triplet portions. Swing often uses ordinary eighths plus a performance indication. Preview uses 2:1 as a study model; real swing ratios vary with tempo and style. There is no universal swing percentage.\n\nRight plays long–short while left stays unchanged. Start with alternating E4–G4 before the full phrase. Avoid locking the hand and arm on every long note."
+    },
+    "u6-1": {
+      "title": "Fourth-based sonorities",
+      "goal": "Balance fourth-based sonorities above a clear bass reference.",
+      "text": "E–A–D stacks two perfect fourths, five semitones each. Without a third, major/minor identity is ambiguous. Bass changes the interpretation. Compare the same upper sonority over E and A before assigning a fixed chord label.\n\nE3–A3–D4 lie on D/G/C at fret 2. A small barre is possible; test each string separately. Thumb plays bass; keep A silent when it is not the bass."
+    },
+    "ku6-1": {
+      "title": "Fourth-based sonorities",
+      "goal": "Balance fourth-based sonorities above a clear bass reference.",
+      "text": "E–A–D stacks two perfect fourths, five semitones each. Without a third, major/minor identity is ambiguous. Bass changes the interpretation. Compare the same upper sonority over E and A before assigning a fixed chord label.\n\nTry right 1–2–5 for E4–A4–D5. With a smaller hand prepare notes consecutively, then sound together only in a comfortably reachable voicing."
+    },
+    "u6-2": {
+      "title": "C Lydian: the raised fourth",
+      "goal": "Deliberately compare F# and F above C.",
+      "text": "C Lydian is C D E F# G A B. Only F changes to F# compared with C major. Make C audible as reference; the same notes over E produce another modal effect. The raised fourth is a colour, not a compulsory resolution rule.\n\nC3 bass at A fret 3. Melody on D/G/C; F#3 at D fret 4. Keep C bass deliberately quieter than the upper phrase."
+    },
+    "ku6-2": {
+      "title": "C Lydian: the raised fourth",
+      "goal": "Deliberately compare F# and F above C.",
+      "text": "C Lydian is C D E F# G A B. Only F changes to F# compared with C major. Make C audible as reference; the same notes over E produce another modal effect. The raised fourth is a colour, not a compulsory resolution rule.\n\nLeft C3; right reads within C4–B4. Prepare a finger for F# and avoid lifting the hand high when returning to white keys."
+    },
+    "u6-3": {
+      "title": "Register changes without a new idea",
+      "goal": "Play a recognisable motif in two octaves.",
+      "text": "Octave transposition changes register, not note names or rhythm. It still changes presence and density. First check that the higher motif retains its durations and accents.\n\nFirst phrase on D/G, second on C/F. Look at the target before attacking; bass remains open E. Decide the return fingering too."
+    },
+    "ku6-3": {
+      "title": "Register changes without a new idea",
+      "goal": "Play a recognisable motif in two octaves.",
+      "text": "Octave transposition changes register, not note names or rhythm. It still changes presence and density. First check that the higher motif retains its durations and accents.\n\nMove the right hand an octave while retaining left bass. Release the old shape and prepare at the target. The higher version stays below C6."
+    },
+    "u6-4": {
+      "title": "Density and release as musical controls",
+      "goal": "Shape two distinct textures from the same pitches.",
+      "text": "Density comes from simultaneous voices and their decay. More reverb or gain can conceal lines. Shape it first through playing: long bass, short middle, clear melody. Only then compare sounds at similar levels.\n\nUse low gain and fingerpicking. End each inner quarter without stopping the upper string. Repeat with your normal amp tone."
+    },
+    "ku6-4": {
+      "title": "Density and release as musical controls",
+      "goal": "Shape two distinct textures from the same pitches.",
+      "text": "Density comes from simultaneous voices and their decay. More reverb or gain can conceal lines. Shape it first through playing: long bass, short middle, clear melody. Only then compare sounds at similar levels.\n\nBegin without sustain. On synth choose release short enough to reveal rests; on piano control the same endings with fingers."
+    },
+    "u6-5": {
+      "title": "Chromatic approaches",
+      "goal": "Reach a chord tone deliberately from a neighbouring pitch.",
+      "text": "A chromatic neighbour lies a semitone from its target and need not belong to the home scale. Its role depends on destination and accent. Play the target alone first, then approach it briefly from below.\n\nA#3–B3 on G frets 3–4; G#3–A3 on G 1–2. Prepare the target finger close to the fret. Avoid large searching motions."
+    },
+    "ku6-5": {
+      "title": "Chromatic approaches",
+      "goal": "Reach a chord tone deliberately from a neighbouring pitch.",
+      "text": "A chromatic neighbour lies a semitone from its target and need not belong to the home scale. Its role depends on destination and accent. Play the target alone first, then approach it briefly from below.\n\nPrepare black neighbour and white target as a small movement. Hear the right-hand destination while holding the chord root on the left."
+    },
+    "u6-7": {
+      "title": "Natural harmonics",
+      "goal": "Produce clear octave harmonics and use them as a texture change.",
+      "text": "A light touch above fret twelve suppresses parts of the string’s vibration; the harmonic sounds one octave above the open string. Diamond heads here show sounding harmonic pitches. Preview plays their pitches without imitating the timbre.\n\nTouch directly above fret twelve rather than pressing between frets. Pick, release the touching finger and mute other strings. E/A/D/G/C/F produce E3/A3/D4/G4/C5/F5."
+    },
+    "u6-6": {
+      "title": "Dark reference, bright contrast",
+      "goal": "Distinguish E Aeolian and C Lydian through bass and phrasing.",
+      "text": "The modes share pitch classes but have different centres, E or C. Changing bass alone may not suffice; give the new centre time and a suitable phrase ending. Make the return audible as a return.\n\nUse open E bass and C at A fret 3. In the contrast hold F#3 deliberately over C. Prepare returning bass and first melody note separately."
+    },
+    "ku6-6": {
+      "title": "Dark reference, bright contrast",
+      "goal": "Distinguish E Aeolian and C Lydian through bass and phrasing.",
+      "text": "The modes share pitch classes but have different centres, E or C. Changing bass alone may not suffice; give the new centre time and a suitable phrase ending. Make the return audible as a return.\n\nLeft E3 and C3; right retains the same pitch collection. Rest on C or E in the C section, then confirm E as centre for longer on the return."
+    },
+    "u7-1": {
+      "title": "Three against two",
+      "goal": "Distribute three upper entries evenly against two bass pulses.",
+      "text": "Three quarter-note triplets occupy two ordinary quarters. Subdivide their shared span into six: upper entries on 1,3,5 and lower on 1,4. Eventually remove the counting aid while preserving the shared start.\n\nThumb plays quarters on open E; upper fingers play three notes per two thumb attacks. Tap muted strings first, then add pitches."
+    },
+    "ku7-1": {
+      "title": "Three against two",
+      "goal": "Distribute three upper entries evenly against two bass pulses.",
+      "text": "Three quarter-note triplets occupy two ordinary quarters. Subdivide their shared span into six: upper entries on 1,3,5 and lower on 1,4. Eventually remove the counting aid while preserving the shared start.\n\nLeft plays quarters, right quarter-note triplets. Tap on your thighs first, then use one key each. Hands share the start, not every attack."
+    },
+    "u7-2": {
+      "title": "3+3+2 within 4/4",
+      "goal": "Displace accents without restarting the measure.",
+      "text": "Eight eighths can be accented 3+3+2 while remaining one 4/4 bar. Accents fall on beat 1, the offbeat after 2, and beat 4. Bass and drums retain the regular meter against the melodic grouping.\n\nCreate accents with attack, not extra duration. E bass on beats 1 and 3. Do not rush the last group of two."
+    },
+    "ku7-2": {
+      "title": "3+3+2 within 4/4",
+      "goal": "Displace accents without restarting the measure.",
+      "text": "Eight eighths can be accented 3+3+2 while remaining one 4/4 bar. Accents fall on beat 1, the offbeat after 2, and beat 4. Bass and drums retain the regular meter against the melodic grouping.\n\nLeft plays halves, right even eighths with three accents. If the patch ignores velocity, clarify accents by slightly shortening unaccented notes."
+    },
+    "u7-3": {
+      "title": "Grouped 7/8 and 5/8",
+      "goal": "Hear odd meters as recurring groups.",
+      "text": "Here 7/8 is grouped 2+2+3: count “1-2, 1-2, 1-2-3”. Follow with 5/8 grouped 2+3. Tempo counts eighths, not quarters: at 120 eighths per minute each eighth lasts half a second.\n\nThumb attacks each group start; upper fingers play the written eighths. Begin with rhythm on E alone before adding melody pitches."
+    },
+    "ku7-3": {
+      "title": "Grouped 7/8 and 5/8",
+      "goal": "Hear odd meters as recurring groups.",
+      "text": "Here 7/8 is grouped 2+2+3: count “1-2, 1-2, 1-2-3”. Follow with 5/8 grouped 2+3. Tempo counts eighths, not quarters: at 120 eighths per minute each eighth lasts half a second.\n\nLeft holds quarter, quarter, dotted quarter group durations. Right plays eighths. Count the complete final group of three before the next beat 1."
+    },
+    "u7-4": {
+      "title": "Minor pentatonic with target notes",
+      "goal": "Shape a phrase with a clear destination from five pitches.",
+      "text": "E minor pentatonic: E G A B D, degrees 1 b3 4 5 b7. F# and C are omitted from E Aeolian. Fewer notes do not replace phrasing: repetition, silence and a target make the statement.\n\nD string E3/G3, G string A3/B3, C string D4/E4. Do not import a standard-tuning box. Sing the target before crossing to the higher string."
+    },
+    "ku7-4": {
+      "title": "Minor pentatonic with target notes",
+      "goal": "Shape a phrase with a clear destination from five pitches.",
+      "text": "E minor pentatonic: E G A B D, degrees 1 b3 4 5 b7. F# and C are omitted from E Aeolian. Fewer notes do not replace phrasing: repetition, silence and a target make the statement.\n\nOrganise E4–E5 in two small groups. Try 1–2–3–1–2–3 for E–G–A–B–D–E ascending. Left plays E3, then the written changes."
+    },
+    "u7-solo": {
+      "title": "Solo, segno and coda",
+      "goal": "Leave a solo section and land its return reliably.",
+      "text": "D.S. means return to the segno. Ignore “to coda” on the first pass; after returning, jump from that point to the coda sign. This example follows 1–2–3–4–2–3–5–6. Count the form before playing. The first bar is written as a count-in: melody enters on beat 4 as a pickup to bar 2. Abbreviated pickup notation omits the preceding rests; the following full measure still begins on beat 1.\n\nRead the melody on the first visit; replace it with an equally long original motif on the second. Retain the bass rhythm and ending."
+    },
+    "ku7-solo": {
+      "title": "Solo, segno and coda",
+      "goal": "Leave a solo section and land its return reliably.",
+      "text": "D.S. means return to the segno. Ignore “to coda” on the first pass; after returning, jump from that point to the coda sign. This example follows 1–2–3–4–2–3–5–6. Count the form before playing. The first bar is written as a count-in: melody enters on beat 4 as a pickup to bar 2. Abbreviated pickup notation omits the preceding rests; the following full measure still begins on beat 1.\n\nVary the right-hand solo while retaining the left. Prepare the right-hand coda position without stopping the left."
+    },
+    "u7-6": {
+      "title": "Bending towards a heard target",
+      "goal": "Bend a whole tone, hold the target and stop cleanly.",
+      "text": "A whole tone is two semitones. Hear normally fretted B4 first, then bend A4 to exactly that pitch. The arrow shows the destination. Check intonation before adding vibrato at the target.\n\nHigh F string: B4 at fret 6, A4 at fret 4. Bend A with the ring finger supported by other fingers. Mute before releasing to avoid an unintended descending note."
+    },
+    "u7-5": {
+      "title": "Tempo and longer performances",
+      "goal": "Play the same musical passage reliably at slow and faster tempos.",
+      "text": "Tempo is a separate skill. A clean slow pass does not guarantee a fast one. Start at a secure tempo, increase in small steps and note the first specific unstable spot. Practise it briefly, then restore the context.\n\nUse small attacks, fixed string choices and prepared changes. Reduce movement at higher tempos rather than increasing fretting pressure."
+    },
+    "ku7-5": {
+      "title": "Tempo and longer performances",
+      "goal": "Play the same musical passage reliably at slow and faster tempos.",
+      "text": "Tempo is a separate skill. A clean slow pass does not guarantee a fast one. Start at a secure tempo, increase in small steps and note the first specific unstable spot. Practise it briefly, then restore the context.\n\nSet fingering before the tempo series. Begin arm movements for jumps while the last note still sounds. Playing louder is not a tempo aid."
+    },
+    "u8-1": {
+      "title": "Form: return and contrast",
+      "goal": "Organise a longer statement from familiar motifs.",
+      "text": "The model has four four-bar sections: A, varied A, contrasting B, returning A. Retained rhythm and motif opening make the return recognisable. Plan section boundaries before adding more notes.\n\nMark string changes at section boundaries. Play bass and melody separately through all sixteen bars before combining."
+    },
+    "ku8-1": {
+      "title": "Form: return and contrast",
+      "goal": "Organise a longer statement from familiar motifs.",
+      "text": "The model has four four-bar sections: A, varied A, contrasting B, returning A. Retained rhythm and motif opening make the return recognisable. Plan section boundaries before adding more notes.\n\nLearn the left-hand bass as its own form. Know each section’s right-hand opening from memory; this supports recovery without replacing reading."
+    },
+    "u8-2": {
+      "title": "Solo arrangement in three layers",
+      "goal": "Combine melody, figuration and bass into a playable arrangement.",
+      "text": "Begin with a singable melody. Add bass, then inner voices only where hands and ears have room. A written rest is a musical choice. The example moves from two to three layers.\n\nFor each held note check which string remains free for the next. If two voices need the same string, change position or notate a deliberate release."
+    },
+    "ku8-2": {
+      "title": "Solo arrangement in three layers",
+      "goal": "Combine melody, figuration and bass into a playable arrangement.",
+      "text": "Begin with a singable melody. Add bass, then inner voices only where hands and ears have room. A written rest is a musical choice. The example moves from two to three layers.\n\nWhere practical, right 4/5 retain the top while 1/2/3 handle the middle. Do not force an octave stretch: revoice or omit an inner note and notate that decision."
+    },
+    "u8-3": {
+      "title": "Carry a motif into another key",
+      "goal": "Transpose an idea by pitch relationships rather than shape memory.",
+      "text": "E to A is a perfect fourth, five semitones upward. E–G–B becomes A–C–E while intervals and durations stay the same. Open strings and fingering still require a fresh check.\n\nOpen E bass becomes open A. Redistribute melody over G/C; do not treat an open note as a movable fret."
+    },
+    "ku8-3": {
+      "title": "Carry a motif into another key",
+      "goal": "Transpose an idea by pitch relationships rather than shape memory.",
+      "text": "E to A is a perfect fourth, five semitones upward. E–G–B becomes A–C–E while intervals and durations stay the same. Open strings and fingering still require a fresh check.\n\nRight E4–G4–B4 becomes A4–C5–E5. Transpose left bass accordingly. Name pitches before placing the hands."
+    },
+    "u8-4": {
+      "title": "Score, silence and D.C. al Fine",
+      "goal": "Create a readable score including a return and silence.",
+      "text": "D.C. al Fine means return to the beginning and stop on reaching Fine again. Ignore Fine on the first visit. Here four sounding bars lead to two silent bars and the return: 1–2–3–4–5–6–1–2–3–4. In a multi-measure rest, the number above the rest bar gives the number of silent measures. Both bars remain written out here to check the counting.\n\nMute all strings through the silent bars while counting internally. Prepare the restart in time. Avoid creating an accidental count-in with string noise."
+    },
+    "ku8-4": {
+      "title": "Score, silence and D.C. al Fine",
+      "goal": "Create a readable score including a return and silence.",
+      "text": "D.C. al Fine means return to the beginning and stop on reaching Fine again. Ignore Fine on the first visit. Here four sounding bars lead to two silent bars and the return: 1–2–3–4–5–6–1–2–3–4. In a multi-measure rest, the number above the rest bar gives the number of silent measures. Both bars remain written out here to check the counting.\n\nRelease keys and pedal completely during silent bars. Prepare the next position quietly; long synth release must not obscure the written silence."
+    },
+    "u8-5": {
+      "title": "A performance starts before the first note",
+      "goal": "Present a short form without trial starts.",
+      "text": "Before starting, hear the tonic internally, choose tempo and know the first entry and ending. After an error keep pulse and aim for the next secure landmark. Practise starting mid-piece so every error does not force a restart.\n\nCheck tuning, set the intended level and prepare the opening shape. Play clean first, then with your tone at a comparable level."
+    },
+    "ku8-5": {
+      "title": "A performance starts before the first note",
+      "goal": "Present a short form without trial starts.",
+      "text": "Before starting, hear the tonic internally, choose tempo and know the first entry and ending. After an error keep pulse and aim for the next secure landmark. Practise starting mid-piece so every error does not force a restart.\n\nAt an unfamiliar piano briefly check register and pedal response. Choose a secure key and start with a simple bass-and-melody form without hunting for sounds."
+    },
+    "u8-7": {
+      "title": "Self-sufficient guitar transitions",
+      "goal": "Connect harmonic, pedal, figure and chord without breaking flow.",
+      "text": "A solo arrangement does not need every voice continuously. Transitions matter: a decaying note can prepare movement, a rest can articulate a texture change. Put every deliberate interruption in the score.\n\nPlay the E-string harmonic above fret twelve, then move to the low position. Use the written rest for travel. In the three-layer section hold the top string and mute inner voices selectively."
+    },
+    "u8-6": {
+      "title": "Final project: an original solo piece",
+      "goal": "Read, shape and develop a complete notated form.",
+      "text": "The 32-bar model combines motif, contrast, three layers, triplets and cadence. It is a working example, not a substitute for your own piece. Check four bars, then eight, then the whole form. Completion requires audible shaping and repeatable decisions.\n\nCheck bass muting, held melody, free strings for inner voices and position changes. Note essential finger/position cues; do not replace rhythm reading with tablature."
+    },
+    "ku8-6": {
+      "title": "Final project: an original solo piece",
+      "goal": "Read, shape and develop a complete notated form.",
+      "text": "The 32-bar model combines motif, contrast, three layers, triplets and cadence. It is a working example, not a substitute for your own piece. Check four bars, then eight, then the whole form. Completion requires audible shaping and repeatable decisions.\n\nCheck balance, readable hand positions and deliberate releases. Left plays a broken bass figure in the triplet section; prepare hands separately. Make at least one recording with piano-like decay; another may use your synth tone."
     }
   },
   "ui": {
@@ -950,7 +3491,7 @@
     "exercises": "exercises",
     "planned": "planned",
     "phase": "Phase",
-    "scope": "Phases 0–1 · then an outlook",
+    "scope": "Phases 0–8 · complete learning path",
     "outlook": "Outlook: phases 2–8",
     "plannedDetail": "This phase is mapped out; its exercises have not been developed yet.",
     "lead": "From imagined sound to instrument. P4 guitar with bass and melody; keyboard for synth and piano. Doom, Gothic and Baroque as musical directions.",
@@ -986,6 +3527,10 @@
     "sound": "Sound",
     "schedule": "A, B, C: 45 minutes guitar + 15 minutes keyboard each. D: 15 minutes guitar + 45 minutes keyboard. This gives 3 × 45 + 15 = 150 guitar minutes and 3 × 15 + 45 = 90 keyboard minutes.\n\n**45 minutes:** 5 recall · 10 one difficulty · 20 listening, playing and varying · 5 recording · 5 break/log. **15 minutes:** 3 recall · 8 application · 4 recording/log.\n\nWork on one unit per instrument. First task already secure → move to application. Resolve unfamiliar movements without time pressure, then stabilise with a click. Increase tempo only while pulse and tone remain controlled.\n\n**Move on:** meet the criteria on two practice days, including one attempt without aids. Isolate a difficult passage, then return to a whole phrase. Notation is the main view, position is above it, and aids can be enabled.",
     "hardware": "**MX49:** Drum kit on Part 10. Choose the appropriate USB MIDI output or MIDI interface.\n\n**SR-18:** MIDI CH = 10, DRUM IN = ON: V1, NOTE MAP = NORMAL. Under NOTE, assign pads accordingly: kick 36, snare 38, closed hi-hat 42, click/rim 37. Stop its own pattern. The SR-18 needs a MIDI interface with a DIN output.\n\nThe website sends individual notes, not MIDI clock or transport commands to the internal sequencer. Set sounds and volume on the device. Click/drums have no internal fallback. Score preview separately uses browser sound.",
-    "remoteUpdate": "Journal updated from another browser tab."
+    "remoteUpdate": "Journal updated from another browser tab.",
+    "drums": "Drums",
+    "compose": "Compose / notate",
+    "playOrder": "Playing order",
+    "swingFeel": "Swing reading: preview uses a 2:1 study ratio; tempo counts quarters."
   }
 }

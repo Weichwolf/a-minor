@@ -66,3 +66,6 @@ svg.fb{width:100%;height:auto;display:block}.fb .wood{fill:var(--wood)}.fb .fret
 .logt th:last-child{width:48px}
 @media(max-width:600px){.beats{grid-template-columns:repeat(8,minmax(0,1fr))}.pn{gap:20px}.pn a{max-width:48%}.ex{padding:12px}.language{margin-left:0}details.log form{flex-wrap:wrap}details.log input{min-width:0;width:100%}}
 button:disabled{opacity:.5;cursor:wait}
+
+.score .tuplet,.score .slur,.score .volta{fill:none;stroke:#333;stroke-width:1.2}.score .tuplet-number{font-size:12px;text-anchor:middle;fill:#222}.score .accent{font-size:25px;text-anchor:middle}.score .measure,.score .section{font-size:12px;fill:#666}.score .chord{font-size:13px;font-weight:600}.score .navigation{font-size:14px}.score .repeat{font-size:30px}
+.score .beam{stroke:#222;stroke-width:4}.score .harmonic{fill:#fff;stroke:#222;stroke-width:1.4}.score .bend{fill:none;stroke:#222;stroke-width:1.4}.k-compose{background:#fff3d6;color:#9a6b00}
