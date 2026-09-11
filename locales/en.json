@@ -1,0 +1,991 @@
+{
+  "course": {
+    "gitarre": {
+      "title": "Guitar",
+      "lead": "P4: E2 A2 D3 G3 C4 F4. Tone, pulse and repeatable phrases of your own."
+    },
+    "keys": {
+      "title": "Keyboard",
+      "lead": "Melody with a steady accompaniment. Playable on synthesizer and piano."
+    },
+    "p0": {
+      "title": "Foundation",
+      "goal": "Check clean note changes, P4 orientation, notation and pulse. Recall familiar skills briefly; practise specific difficulties."
+    },
+    "p1": {
+      "title": "Tonic and phrase",
+      "goal": "Hear E as a reference. Shape small motifs through repetition, rests and variation."
+    },
+    "k0": {
+      "title": "Foundation",
+      "goal": "Check touch, reading and basic coordination. One sound is enough."
+    },
+    "k1": {
+      "title": "Tonic and phrase",
+      "goal": "A steady reference in the left hand, repeatable melody in the right. Deliberately distinguish Aeolian and Phrygian."
+    },
+    "u0-1": {
+      "title": "Entry check: tone and pulse",
+      "goal": "Play four steady bars with clear note endings. Control fretting pressure and unwanted sounds.",
+      "text": "Tune E2 A2 D3 G3 C4 F4. Listen with low gain first, then repeat with your usual sound. Distortion changes sustain and makes undamped strings more audible.\n\nPosition the guitar so your wrists can move freely. Fret close behind the fret with just enough pressure. Thumb position and picking movement may change with the task. Use both hands to mute unused strings.\n\nEntry check: play four bars with a note on each of the first three beats and silence on beat 4. If stable, use these exercises as checks. Explore unfamiliar movements without a click first; then test them in time."
+    },
+    "e0-1-1": {
+      "title": "Open strings, whole notes",
+      "instructions": "Play the written open strings. Let each ring until the next bar; mute the previous string when changing. Read the names ahead, then repeat without names. Finish with four bars on E: three quarter notes and a quarter rest.",
+      "checklist": [
+        "String changes without unwanted overlap?",
+        "Quarter rest silent; next entry on beat 1?",
+        "Two repetitions with a steady pulse?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e0-1-2": {
+      "title": "Chromatic fingers 1–2–3–4",
+      "instructions": "Use only the two written strings at frets 5–8. Place four fingers in sequence with minimal pressure. Mute the old string when crossing. Relax after two repetitions. Add the click once the movement is calm.",
+      "checklist": [
+        "Notes equal in length and free of buzz?",
+        "Release fretting pressure between repetitions?",
+        "Unused strings silent?"
+      ],
+      "position": "Position V, low E and A strings."
+    },
+    "u0-2": {
+      "title": "P4: reference notes and intervals",
+      "goal": "Find E and C; hear and play minor thirds, fifths and octaves.",
+      "text": "E A D G C F: adjacent strings are five semitones apart. A fifth needs seven: next higher string plus two frets gives 5 + 2 = 7. Minor third: 5 − 2 = 3. Major third: 5 − 1 = 4. Octave: two strings higher plus two frets gives 5 + 5 + 2 = 12.\n\nThese shifts work for fretted shapes wherever strings and frets are available. Open strings cannot move as open strings. Not every interval can be reached on the next string from every starting point.\n\nBefore each interval, imagine or hum the destination in a comfortable octave. Play it and compare."
+    },
+    "e0-2-1": {
+      "title": "Find E",
+      "instructions": "Find E on the three lowest strings up to fret 12. Play and name the positions. Close the diagram and repeat in a different order. Then add the three highest strings.",
+      "checklist": [
+        "E on the E, A and D strings recalled without searching?",
+        "Octaves recognised as the same note name at a different height?"
+      ]
+    },
+    "e0-2-2": {
+      "title": "Find C",
+      "instructions": "Find C on the A, D and G strings up to fret 12. Play each C and the next E above it. Compare this major third with E–G in the following exercise.",
+      "checklist": [
+        "Three C positions found without the diagram?",
+        "C–E and E–G sound different?"
+      ]
+    },
+    "e0-2-3": {
+      "title": "Minor third and fifth",
+      "instructions": "Start with E on the A string, fret 7. Play G on the D string, fret 5, then B on the D string, fret 9. Play the minor third and fifth successively, then as two-note chords. Move both shapes down two frets: D–F and D–A. Sing each destination first.",
+      "checklist": [
+        "E–G and E–B found without the diagram?",
+        "Shapes moved to D?",
+        "Target notes approximately sung before fretting?"
+      ]
+    },
+    "u0-3": {
+      "title": "Reading I",
+      "goal": "Read short first-position phrases without stopping the pulse to search.",
+      "text": "Guitar sounds an octave below its notation. The low open string sounds E2 but is written E3: in the space below the third ledger line below the treble staff.\n\nLines from bottom: E G B D F. Spaces: F A C E. B means German H; Bb means German B. Circled string numbers run from high to low: 1 = F, 6 = E. Finger 0 means an open string.\n\nRead rhythm and starting pitch first, then the direction of neighbouring notes. Use aids for a first attempt, then hide them. Singing in a comfortable octave is enough.\n\nWhole note: open head without a stem, four quarter-note beats. Half note: open head with a stem, two beats. Quarter note: filled head with a stem. Eighth note: one flag or beam, two per quarter. A dot adds half the original value. Rest symbols represent the same durations without sound. In 4/4, four quarter-note beats fit between barlines.\n\n♯ raises a note by a semitone, ♭ lowers it; ♮ cancels the accidental. A key signature applies to the named notes in every octave. An individual accidental applies in its octave until the barline. Fretting fingers: 1 index, 2 middle, 3 ring, 4 little finger."
+    },
+    "e0-3-1": {
+      "title": "Read the open strings",
+      "instructions": "Read the next note while the current one rings. Play once with aids and once without. If the open strings are already secure, proceed to the next exercise.",
+      "checklist": [
+        "Read without note names or string numbers?",
+        "Changes on the first beat of the bar?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e0-3-2": {
+      "title": "C major, first position",
+      "instructions": "Ascend and descend in half notes. Here the finger number equals the fret; 0 means open. Read and play two bars first, then the full line. After a reading error, recover at the next bar rather than losing the pulse.",
+      "checklist": [
+        "No searching pauses in either direction?",
+        "Continued in time after an error?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e0-3-3": {
+      "title": "New C-major reading phrase",
+      "instructions": "Find the starting pitch and clap the rhythm. Read without stopping. Correct the same phrase once, then generate another to check reading rather than memorisation.",
+      "checklist": [
+        "Three new phrases read without searching pauses?",
+        "Repeated without aids on another practice day?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "u0-4": {
+      "title": "Rhythm I",
+      "goal": "Hold note lengths and rests; re-enter accurately after silence.",
+      "text": "Count quarters 1 2 3 4, eighths 1 and 2 and 3 and 4 and. Clap the written pattern before playing it on one note.\n\nCount aloud on the first attempt, then count quietly and record the second. Rests remain part of the bar. In 3/4 the group starts again after three quarters; this does not automatically imply a waltz style."
+    },
+    "e0-4-1": {
+      "title": "Quarters and halves",
+      "instructions": "Clap, then play the durations. Halves last two quarters; whole notes last four. Fully mute the quarter rest in the final bar.",
+      "checklist": [
+        "Note endings as accurate as attacks?",
+        "Two repetitions without losing a beat?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e0-4-2": {
+      "title": "Eighths and rests",
+      "instructions": "Clap and count eighths, then play A. Mute rests deliberately. Repeat the unchanged phrase twice; do not add notes to catch up.",
+      "checklist": [
+        "Even eighth notes?",
+        "Re-entry after the eighth rest on the correct subdivision?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e0-4-3": {
+      "title": "Three-four time",
+      "instructions": "Count 1 2 3. Play the phrase with a light emphasis on the first beat. A dotted half lasts two plus one quarters: a full 3/4 bar.",
+      "checklist": [
+        "Secure return to beat 1 after the rest?",
+        "No extra fourth beat?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "u0-5": {
+      "title": "Shape a sustained note",
+      "goal": "Distinguish straight tone from deliberately controlled vibrato.",
+      "text": "Bending the string sideways raises its pitch; releasing the bend returns it to the original fretted pitch. This is not symmetrical movement below and above that pitch. Other vibrato techniques use different movements.\n\nStart straight here and introduce small, slow vibrato later. This is an exercise constraint, not a universal rule: immediate vibrato can also work musically. Change width and speed separately, keeping hand and forearm mobile."
+    },
+    "e0-5-1": {
+      "title": "Four bars, three tone variants",
+      "instructions": "G on the D string, fret 5, ring finger. Attack once per bar: bar 1 straight; bar 2 narrow vibrato from beat 3; bar 3 wider at the same speed; bar 4 straight again. Record and compare.",
+      "checklist": [
+        "Vibrato returns to the original pitch each time?",
+        "Narrow and wide versions audibly different?",
+        "Other strings remain silent?"
+      ],
+      "position": "Position III: G3 on D string, fret 5 with finger 3."
+    },
+    "u0-6": {
+      "title": "Two voices: sustain and mute",
+      "goal": "Let an open bass string ring while the melody rests.",
+      "text": "Two voices have independent durations. On the shared treble staff, melody stems point up and bass stems down. Whole notes have no stems. Read each voice separately, then combine them. Guitar still sounds an octave below the notation.\n\nUse the thumb for low E and an index or middle finger for melody. Pick plus a free finger is a later alternative. Mute unused strings without cutting off the intended bass. Low gain helps distinguish the voices."
+    },
+    "e0-6-1": {
+      "title": "Bass sustains, melody rests",
+      "instructions": "Play bass alone, then melody alone. Together: attack E2 and E3, mute E3 after two quarters and let E2 continue. Reattack both in the next bar. Stop the bass at the end too.",
+      "checklist": [
+        "Melody rest silent while the bass rings?",
+        "Both voices deliberately stopped at the end?",
+        "Two repetitions without unwanted string noise?"
+      ],
+      "position": "Position II: melody on D string, bass on open E."
+    },
+    "e0-6-2": {
+      "title": "Independent entries",
+      "instructions": "Start the melody on beat 2. Bass enters on beat 1 of each bar: E2, then A2. Mute E when changing to A. Release E3 exactly at the start of beat 4. No extra open string should ring.",
+      "checklist": [
+        "Bass and melody enter separately?",
+        "Previous bass muted at the change?",
+        "Melody ends on the correct beat?"
+      ],
+      "position": "Position II: E3 on D string; open E2 and A2."
+    },
+    "u1-1": {
+      "title": "E as a reference, three notes as language",
+      "goal": "Hear a short idea, play it and repeat it exactly.",
+      "text": "Begin each phrase on E and return to E. No looper is needed: the recurring tonic provides the reference. A drone of your own can be added later without changing the task.\n\nStart with E, G and B. Hum, find them on the low E string and repeat. Then add the remaining E-Aeolian notes: E F# G A B C D. Steps to the octave: 2–1–2–2–1–2–2 semitones.\n\nA scale run is orientation. Recognisable motifs, durations and rests turn this material into music."
+    },
+    "e1-1-2": {
+      "title": "Three notes: idea and answer",
+      "instructions": "Use only E, G and B on the low E string. Sing an idea of at most three notes, play it in two bars, then rest for two bars. Repeat unchanged. On the next attempt, change only the last note. Record four cycles.",
+      "checklist": [
+        "Sung contour matched on the guitar?",
+        "Motif recognisably identical twice?",
+        "Only the ending changed; rests retained?"
+      ]
+    },
+    "e1-1-1": {
+      "title": "Ascending scale, half notes",
+      "instructions": "Low E string only, half notes, initially without vibrato. Hear F#–G and B–C as semitone steps. Return to your three-note motif and add exactly one new scale note.",
+      "checklist": [
+        "Semitone steps found without the diagram?",
+        "New note added without losing the motif?"
+      ],
+      "position": "Low E string, frets 0–12; move the hand with the pitch."
+    },
+    "u1-2": {
+      "title": "Three strings, one phrase",
+      "goal": "Play E Aeolian on E, A and D; move the same idea into a compact position.",
+      "text": "This window uses open strings through fret 5 on E, A and D. Fretted notes: fret 2 with finger 1, fret 3 with 2, fret 4 with 3, fret 5 with 4. Open strings need no finger.\n\nThe score specifies the string. In particular, G3 stays on the D string at fret 5. Automatically choosing open G would leave this window."
+    },
+    "e1-2-1": {
+      "title": "Ascend and descend within the window",
+      "instructions": "Play two bars first, then the whole phrase. Follow the string indications; keep G3 on the D string. Transfer your earlier three-note motif into this window.",
+      "checklist": [
+        "All notes on E, A and D strings?",
+        "Own motif recognisable in the new position?"
+      ],
+      "position": "Open strings + position II through fret 5, E, A and D strings."
+    },
+    "e1-2-2": {
+      "title": "Phrase, repeat, vary",
+      "instructions": "Two bars of melody, two bars of rest. Choose and sing the ending E, G or B first. Play the phrase, repeat it, then change only its rhythm. Four cycles with half-time drums.",
+      "checklist": [
+        "Planned target reached?",
+        "Rhythm changed while pitches stayed the same?",
+        "Secure entry after two bars of rest?"
+      ]
+    },
+    "e1-2-3": {
+      "title": "New E-Aeolian reading phrase",
+      "instructions": "Read in the three-string window. Establish contour and rhythm, then play without stopping. F# is in the key signature. Correct once before generating another phrase.",
+      "checklist": [
+        "New phrase without searching pauses?",
+        "G3 remains on the D string?"
+      ],
+      "position": "Open strings + position II through fret 5, E, A and D strings."
+    },
+    "u1-pedal": {
+      "title": "Pedal note and melody",
+      "goal": "Provide a bass reference and independent melody on one guitar.",
+      "text": "A pedal note is sustained or reiterated while other notes move above it. Here E is the fixed bass. This is a small form of polyphony: bass and melody keep their own durations.\n\nPlay each voice alone first. Then repeat the bass once per bar with melody above. Do not reattack a tied note. Open E limits transposition here: moving the melody leaves the bass on E.\n\nLow distortion and a quieter bass make the melody easier to distinguish. Then test the same passage with your usual sound. Chords, arpeggios and moving bass lines build on this later."
+    },
+    "e1-pedal-1": {
+      "title": "Open E beneath a singing voice",
+      "instructions": "Melody on the D string, thumb on open low E. Attack E2 once per bar. The melody holds E3 across the second bar: reattack only the bass. In the last bar, end the melody two quarters before the bass.",
+      "checklist": [
+        "Bass quieter than melody?",
+        "Held E3 continues through the new bass attack?",
+        "Final melody rest silent while the bass rings?"
+      ],
+      "position": "Position II, D string: E3 with 1, F#3 with 3, G3 with 4. Open E bass."
+    },
+    "e1-pedal-2": {
+      "title": "Your own answer over E",
+      "instructions": "Use the written example as a question and play it unchanged once. Keep the bass and melody rhythms, but change melody pitches using E3, F#3 and G3. End the answer on E3. Notate your version and read it on another practice day.",
+      "checklist": [
+        "Bass unchanged; melody deliberately varied?",
+        "Answer repeated without searching?",
+        "Own notation matches what you played?"
+      ],
+      "position": "Position II on D string, open E bass."
+    },
+    "u1-3": {
+      "title": "Long notes and rests",
+      "goal": "Shape a phrase through duration, a focal point and silence.",
+      "text": "A tie joins notes of the same pitch: attack only the first and sustain their combined duration. A rest ends the note. Ties and phrasing slurs are different signs; this renderer shows ties only.\n\nEmphasise a target through duration or attack. The highest pitch need not be the loudest. Compare two interpretations of the same motif."
+    },
+    "e1-3-1": {
+      "title": "Ties",
+      "instructions": "Listen, count the durations and play. Do not reattack tied notes. Choose B or C as the focal point and make only that note more prominent.",
+      "checklist": [
+        "No new attack under a tie?",
+        "Chosen focal point audible in the recording?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e1-3-2": {
+      "title": "Four bars of phrase, four of rest",
+      "instructions": "Use your familiar motif and lengthen one note as a focal point. Repeat the same phrase. Third attempt: a different focal point with the same pitches.",
+      "checklist": [
+        "Motif recognisable despite longer notes?",
+        "Changed focal point changes the effect?",
+        "Secure entry after four bars of rest?"
+      ]
+    },
+    "u1-4": {
+      "title": "Phrygian: F instead of F#",
+      "goal": "Hear and deliberately use the second scale degree as a colour.",
+      "text": "E Aeolian uses F#, E Phrygian uses F; the other pitches are identical. This example retains a one-sharp key signature, so F receives a natural. An accidental applies to that pitch and octave until the barline.\n\nF–E is our initial ending, not a universal requirement: F–G is a counterexample. The tension of F depends on bass, register, duration and accent among other things. No scale alone creates a band’s sound."
+    },
+    "e1-4-1": {
+      "title": "F versus F#",
+      "instructions": "Compare the first two bars. Sing E–F#–G, then E–F–G. Play the full phrase. Repeat the pair without the diagram and describe the difference you hear in the log.",
+      "checklist": [
+        "F and F# used in the correct version?",
+        "Difference audible without the diagram?"
+      ],
+      "position": "Position I through fret 4, with open strings."
+    },
+    "e1-4-2": {
+      "title": "Two paths through F",
+      "instructions": "Two bars of phrase, two of rest, using E, F, G and B. First end each phrase F–E. Then try F–G once and return to E later. Repeat the version that better matches your imagined sound.",
+      "checklist": [
+        "Both endings deliberately tried?",
+        "Chosen version reproducible?",
+        "Pulse stays calm despite tension?"
+      ]
+    },
+    "u1-5": {
+      "title": "Ear: from imagination to instrument",
+      "goal": "Find and notate a motif you have sung.",
+      "text": "Record a short sung idea on your phone: three to five notes starting on E in a comfortable octave. Reproduce it without changing the recording in your mind while searching.\n\nClap its rhythm, find contour and pitches, then write them in staff notation. The recording remains the reference. Optionally use the same process on a short passage from your reference albums; a full transcription is unnecessary."
+    },
+    "e1-5-1": {
+      "title": "Transcribe your own motif",
+      "instructions": "Sing a motif using E, G, A and B, record it and find it in the three-string window. Write rhythm and pitches on paper. On another practice day, read it and compare with the original recording.",
+      "checklist": [
+        "Pitches match the sung recording?",
+        "Rhythm matches the recording?",
+        "Reproduced from your own score?"
+      ]
+    },
+    "u1-6": {
+      "title": "Checkpoint: a small form",
+      "goal": "Develop and repeat a prepared musical idea.",
+      "text": "Eight bars for one guitar alone: two motif, two answer, two variation, two ending. Open E bass on each bar’s first beat, melody on D and G strings. Second position up to fret 5: E3 F#3 G3 on D, A3 B3 on G. End the melody on E3.\n\nWrite two bars with both voices first. Read slowly, develop the form and record it. On another practice day, listen for independent note endings, steady bass and a recognisable melody. Then record without drums. If combining voices still stalls, return to the pedal-note unit."
+    },
+    "e1-6-1": {
+      "title": "Eight bars of your own music",
+      "instructions": "Play the eight-bar miniature with your own bass voice. Bass once per bar; melody with long notes and a rest. Record with click or drums first, then alone. On another practice day, repeat from your notation.",
+      "checklist": [
+        "Bass and melody remain independent?",
+        "Motif, answer and variation recognisable?",
+        "Rests and note endings controlled?",
+        "Repeated unaccompanied on another practice day?"
+      ],
+      "position": "Position II on D and G strings through fret 5; open E bass."
+    },
+    "ku0-1": {
+      "title": "Entry check: touch and pulse",
+      "goal": "Play short phrases calmly and with control in each hand.",
+      "text": "Choose a sound with a clear attack. Sit with mobile forearms and wrists. Keep fingers loosely curved; arm and hand may support movement. Release keys at the end of their written duration, not automatically immediately.\n\nFinger numbers apply to both hands: 1 = thumb, 5 = little finger. Play the two phrases separately. If secure without aids, move straight to coordination. Equal loudness is a control exercise, not an ideal for all music."
+    },
+    "ke0-1-1": {
+      "title": "A-minor five-finger position, right hand",
+      "instructions": "Right thumb on A4, little finger on E5. Start without a click, then add it. Read two bars ahead and play. Repeat without aids.",
+      "checklist": [
+        "Pulse maintained without searching?",
+        "Notes roughly equal in loudness?",
+        "Hand stays mobile?"
+      ]
+    },
+    "ke0-1-2": {
+      "title": "A-minor five-finger position, left hand",
+      "instructions": "Left little finger on A2, thumb on E3. Read and play alone. Adjust the synthesizer octave if needed: C4 means MIDI note 60 here, regardless of the instrument display.",
+      "checklist": [
+        "Bass clef read without names?",
+        "Written durations maintained?"
+      ]
+    },
+    "ku0-2": {
+      "title": "One sound, one accompaniment",
+      "goal": "Begin without having to program a sound.",
+      "text": "One sound across the keyboard is enough. Use a piano or electric piano on the MX49, or a clearly articulated polyphonic sound on the Nord Lead A1 or Blofeld. Split, layer, arpeggiator and long reverb tails are unnecessary for these exercises.\n\nCheck whether a stronger attack changes volume or timbre. If not, use rhythm, register and duration first. A sustained synthesizer tone behaves differently from a decaying piano tone.\n\nClick and drums use the centrally selected MIDI output. When using the MX49 as both keyboard and drum sound source, put the drum kit on Part 10. The left hand supplies its own reference note."
+    },
+    "ke0-2-1": {
+      "title": "Check sound and MIDI",
+      "instructions": "Play a short note and a long note, then the same note gently and more firmly. Describe how the sound responds. Start the MIDI click and play four steady bars. Save the sound on the instrument if needed.",
+      "checklist": [
+        "Short notes and rests clearly separated?",
+        "Response to attack checked?",
+        "Click audible from the intended device?"
+      ]
+    },
+    "ku0-3": {
+      "title": "Keys and intervals",
+      "goal": "Hear and play five adjacent scale notes as a shape.",
+      "text": "A semitone is one adjacent key, including black keys. A whole tone is two semitones. E–F and B–C are adjacent white keys only one semitone apart.\n\nStart with five-note spaces: A B C D E, then E F# G A B and D E F G A. Right-hand fingers stay 1–2–3–4–5. Full minor scales extend further; each exercise covers only the first five degrees."
+    },
+    "ke0-3-1": {
+      "title": "A minor: five notes",
+      "instructions": "Right hand: A4 B4 C5 D5 E5, fingers 1–2–3–4–5. Ascend and descend. Sing a three-note idea from these notes and reproduce it. Repeat the idea, then change only the final note.",
+      "checklist": [
+        "Ascended and descended without searching?",
+        "Three-note idea repeated twice?"
+      ]
+    },
+    "ke0-3-2": {
+      "title": "E minor: five notes",
+      "instructions": "Right hand: E4 F#4 G4 A4 B4, fingers 1–2–3–4–5. Ascend and descend. Sing a three-note idea from these notes and reproduce it. Repeat the idea, then change only the final note.",
+      "checklist": [
+        "Ascended and descended without searching?",
+        "Three-note idea repeated twice?"
+      ]
+    },
+    "ke0-3-3": {
+      "title": "D minor: five notes",
+      "instructions": "Right hand: D4 E4 F4 G4 A4, fingers 1–2–3–4–5. Ascend and descend. Sing a three-note idea from these notes and reproduce it. Repeat the idea, then change only the final note.",
+      "checklist": [
+        "Ascended and descended without searching?",
+        "Three-note idea repeated twice?"
+      ]
+    },
+    "ke0-3-4": {
+      "title": "Fifths and thirds",
+      "instructions": "Left A2–E3 with 5–1, first successive then together. Right A4–C5 with 1–3, then replace C5 with C#5. Compare minor and major thirds directly.",
+      "checklist": [
+        "Fifth reached comfortably?",
+        "A–C and A–C# deliberately distinguished?"
+      ]
+    },
+    "ku0-4": {
+      "title": "Reading I",
+      "goal": "Read both clefs within a small pitch range.",
+      "text": "C4 lies on the ledger line below the treble staff or above the bass staff. Pitches here follow MIDI: C4 = 60. Instrument displays may use different octave numbers.\n\nTreble lines: E G B D F; spaces: F A C E. Bass lines: G B D F A; spaces: A C E G. B = German H, Bb = German B.\n\nHands separately first, then together. Clap new rhythms before playing. Read direction and intervals rather than decoding every pitch in isolation.\n\nWhole note: open head without a stem, four quarter-note beats. Half note: open head with a stem, two beats. Quarter note: filled head with a stem. Eighth note: one flag or beam, two per quarter. A dot adds half the value. Rests last as long as the corresponding notes. In 4/4, four quarter-note beats fit between barlines.\n\n♯ raises by a semitone, ♭ lowers; ♮ cancels the accidental. A key signature applies in every octave; an individual accidental applies in its octave until the barline."
+    },
+    "ke0-4-1": {
+      "title": "Contrary motion from C",
+      "instructions": "Right hand ascends from middle C4; left hand descends from C3 one octave below. Play hands separately first, then together. The thumbs start on different keys. Combine the first two bars before extending the phrase.",
+      "checklist": [
+        "Each hand secure without aids?",
+        "Note changes simultaneous?"
+      ]
+    },
+    "ke0-4-2": {
+      "title": "New treble-clef phrase",
+      "instructions": "Only C4–G4 with fingers 1–5. Clap the rhythm, find the starting pitch and read without stopping. Correct once before generating another phrase.",
+      "checklist": [
+        "Three new phrases read in time?",
+        "Repeated without names on another day?"
+      ]
+    },
+    "ke0-4-3": {
+      "title": "New bass-clef phrase",
+      "instructions": "Only C3–G3, left fingers 5–1. Clap, read, correct and test a new phrase as with the right hand. Practise the hands separately initially.",
+      "checklist": [
+        "Bass clef read without names?",
+        "Three new phrases without searching pauses?"
+      ]
+    },
+    "ku0-5": {
+      "title": "Two hands, one pulse",
+      "goal": "Sustain with the left hand; distinguish notes and rests with the right.",
+      "text": "Clap the right-hand rhythm first, then play the long left-hand notes alone. Combine one bar and extend only when each hand maintains its durations.\n\nOn piano the held bass decays; keep the key down for its written duration anyway. On synthesizer it may sustain. Both are appropriate for this task."
+    },
+    "ke0-5-1": {
+      "title": "Whole notes against quarters",
+      "instructions": "Left A2 with finger 5: reattack each bar and hold. Right A4 and E5 with 1 and 5. Keep the left key down through the right-hand rest. No pedal.",
+      "checklist": [
+        "Left hand sustains through the right-hand rest?",
+        "Both hands begin together on beat 1?"
+      ]
+    },
+    "ke0-5-2": {
+      "title": "Eighths and rests",
+      "instructions": "Right hand alone without pedal. Clap the eighths first. Release the key when the rest begins. If the synth has a long release, choose a shorter sound.",
+      "checklist": [
+        "Rest audible?",
+        "Entry after the eighth rest in time?"
+      ]
+    },
+    "ke0-5-3": {
+      "title": "Three-four, both hands",
+      "instructions": "Hold each left-hand dotted half for three quarters. Read the right hand alone, then combine. Lightly emphasise the first beat.",
+      "checklist": [
+        "Three quarters per bar maintained?",
+        "Bass changes align with the first beat?"
+      ]
+    },
+    "ku0-6": {
+      "title": "Dynamics and note endings",
+      "goal": "Shape a phrase through touch and articulation.",
+      "text": "On piano, attack affects the beginning of a note. Pressing harder after the attack cannot make that note louder. A crescendo requires successive attacks. Synth response depends on the program.\n\nSustain extends notes after keys are released. Start without pedal. The optional pedal task applies to piano or a sound that responds appropriately. Connected finger playing is the regular alternative without a pedal."
+    },
+    "ke0-6-1": {
+      "title": "An audible dynamic arc",
+      "instructions": "E4: eight quarters gradually louder, then eight gradually softer. Shape an arc rather than forcing eight precisely different levels. If your synth does not respond to velocity, play the phrase detached, then connected instead.",
+      "checklist": [
+        "Dynamic arc or articulation contrast audible?",
+        "Stronger attacks do not change the pulse?"
+      ]
+    },
+    "ke0-6-2": {
+      "title": "Connect notes, optionally with pedal",
+      "instructions": "Without pedal, connect A4–C5–E5–A4 using fingers 1–3–5–1. Optional sustain: attack the first note, then depress the pedal. At the next attack, briefly release and redepress it. This connects the new note while damping old ones.",
+      "checklist": [
+        "Note changes controlled without pedal?",
+        "With pedal if available: old notes do not accumulate?"
+      ]
+    },
+    "ku1-1": {
+      "title": "Tonic left, motif right",
+      "goal": "Connect three notes into a repeatable melody.",
+      "text": "Start right hand E4, G4 and B4 with fingers 1, 3 and 5. Sing, play back and repeat a motif. Left hand initially E3 on each bar’s first beat; later E3–B3 together with 5–1. Hold without gripping.\n\nReattack every bar on piano and practise the same on synth. A separate pad is unnecessary. Add the full scale after the motif: right E4–E5 with 1–2–3–1–2–3–4–5. After G move the hand sideways and place the thumb on A rather than twisting it beneath a rigid hand."
+    },
+    "ke1-1-2": {
+      "title": "Three notes over E",
+      "instructions": "Sing and reproduce a three-note idea using E4, G4 and B4. Two bars melody, two bars left-hand reference only. Left E3 on every beat 1. Repeat the motif, then change only the ending. Four cycles.",
+      "checklist": [
+        "Motif played identically twice?",
+        "Left hand steady during right-hand rests?",
+        "Change limited to the ending?"
+      ]
+    },
+    "ke1-1-1": {
+      "title": "E Aeolian over a fifth",
+      "instructions": "Right hand alone first, thumb change after G. Add left E3–B3 reattacked each bar. If coordination stalls, use only E3 left. Add exactly one scale note to your own motif afterwards.",
+      "checklist": [
+        "Calm right-hand thumb change?",
+        "Left hand reattacks only on beat 1?",
+        "Motif extended by one note?"
+      ]
+    },
+    "ku1-2": {
+      "title": "A melody breathes",
+      "goal": "Long notes, clear rests and a shaped focal point.",
+      "text": "Ties join the same pitch: attack only at the start. The left-hand fifth is renewed each bar here, working equally on decaying piano and sustaining synth.\n\nShape a focal point through attack or duration; it need not be the highest pitch. Begin without pedal. Long reverb or release must not obscure the melody’s rests."
+    },
+    "ke1-2-1": {
+      "title": "Ties over a steady bass",
+      "instructions": "Hold right-hand ties without reattacking. Reattack left E3–B3 each bar. Read the right hand alone first. Choose B4 or C5 as the focal point and compare both versions.",
+      "checklist": [
+        "Right-hand ties correct?",
+        "Left hand steady and quieter than the right?",
+        "Chosen focal point audible?"
+      ]
+    },
+    "ke1-2-2": {
+      "title": "Four bars of melody, four of bass",
+      "instructions": "Develop the three-note motif with a longer target note. Repeat the phrase; on the third attempt change only its focal point. During the four-bar melody rest, keep the left reference going.",
+      "checklist": [
+        "Motif recognisable?",
+        "Right hand silent in its rest while left remains steady?",
+        "Next entry on beat 1?"
+      ]
+    },
+    "ku1-3": {
+      "title": "Motif and answer",
+      "goal": "Make a connection audible with a small amount of material.",
+      "text": "Repetition gives the ear a reference. Then change exactly one property: ending, rhythm or register. A contrast becomes meaningful when something recognisable precedes it.\n\nDouble-note thirds come later. Keep one melody voice in the right hand here. On synth or piano, a clear melody over a steady bass can already be a complete musical thought."
+    },
+    "ke1-3-1": {
+      "title": "One motif, two endings",
+      "instructions": "Play the written right-hand motif twice, with left tonic each bar. Replace the final B4 with E4. Sing and compare the more open and more closed endings.",
+      "checklist": [
+        "Repetitions rhythmically identical?",
+        "Only the last pitch changed?",
+        "Both versions recalled without the diagram?"
+      ]
+    },
+    "ke1-3-2": {
+      "title": "Answer rather than run scales",
+      "instructions": "Two bars of your motif using E4, G4, A4 and B4, then two bars of answer. One right-hand voice, left E3 every beat 1. Answer with the same pitches but a longer ending. Two identical cycles, then one variation.",
+      "checklist": [
+        "Answer relates to the motif?",
+        "Bass steady and melody clear?",
+        "Repeated without searching?"
+      ]
+    },
+    "ku1-4": {
+      "title": "Phrygian: F instead of F#",
+      "goal": "Compare two colours over the same tonic.",
+      "text": "E Aeolian contains F#, E Phrygian F. In this example a natural cancels the key-signature F# in that octave until the barline.\n\nF–E is one possible ending. F–G is a counterexample to the claim that F must always descend. Test both with the same rhythm and bass."
+    },
+    "ke1-4-1": {
+      "title": "F versus F#",
+      "instructions": "Compare the first two bars right hand: E–F#–G versus E–F–G. Add left E3–B3 each bar. Play the full phrase without changing tempo at the white F key.",
+      "checklist": [
+        "F and F# deliberately distinguished?",
+        "Left hand unchanged while right changes colour?"
+      ]
+    },
+    "ke1-4-2": {
+      "title": "Phrygian with drums",
+      "instructions": "Right E4, F4, G4 and B4; left E3 each bar. Two bars melody, two bass only. End F–E first, then try F–G and return to E later. Repeat your chosen version.",
+      "checklist": [
+        "Both paths through F tried?",
+        "Chosen phrase reproducible?",
+        "Left hand in time?"
+      ]
+    },
+    "ku1-5": {
+      "title": "From singing to playing",
+      "goal": "Bring an imagined idea to the keys by ear.",
+      "text": "Sing a short idea from E, G, A and B in a comfortable octave and record it. Find the pitches on the keyboard afterwards. Keep the recording as the reference; do not unconsciously replace it with easier notes.\n\nWrite only the melody and rhythm in treble clef. Add left accompaniment after the melody matches. Optionally apply the same process to a short passage from your references later."
+    },
+    "ke1-5-1": {
+      "title": "Transcribe your own motif",
+      "instructions": "Record three to five sung notes. Clap the rhythm, find the melody with the right hand and notate it. Read it on another practice day and compare with the recording; then add left E3 each bar.",
+      "checklist": [
+        "Pitches and rhythm match what you sang?",
+        "Recovered from your own score?",
+        "Melody unchanged when bass is added?"
+      ]
+    },
+    "ku1-6": {
+      "title": "Checkpoint: a small form",
+      "goal": "Play a repeatable miniature with melody and bass.",
+      "text": "Eight bars in E Aeolian: two motif, two answer, two variation, two ending. Left E3 or E3–B3 each bar. One right-hand melody with a deliberate rest; end on E.\n\nRecord with click or drums first. On another practice day, play unaccompanied and check a steady pulse: a bridge to any available piano. Use the same form on synth with suitable note endings. Check Phrygian separately with the same criteria later."
+    },
+    "ke1-6-1": {
+      "title": "Eight bars for synth and piano",
+      "instructions": "Play the eight-bar form twice. Right E Aeolian within E4–E5; left a steady reference. Listen on another practice day and change exactly one passage. Make the second recording without click or drums.",
+      "checklist": [
+        "Motif and variation recognisable?",
+        "Melody clear above bass?",
+        "Rests audible?",
+        "Repeated without aids on two days, including once without accompaniment?"
+      ]
+    },
+    "p2": {
+      "title": "Two-note shapes and arpeggios",
+      "goal": "Combine pedal bass, thirds and broken triads; read voices independently."
+    },
+    "u2-1": {
+      "title": "Triads within a window",
+      "goal": "Minor and major triads, open bass retained.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u2-2": {
+      "title": "Inversions",
+      "goal": "Keep melody on top through compact voicings.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u2-3": {
+      "title": "Thirds as a second voice",
+      "goal": "Parallel thirds with controlled note endings.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "p3": {
+      "title": "Moving bass and lament",
+      "goal": "Move from a fixed pedal to a descending bass; keep the melody independent."
+    },
+    "u3-1": {
+      "title": "Descending bass",
+      "goal": "Read bass and melody separately, then combine.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u3-2": {
+      "title": "Cycle of fifths",
+      "goal": "Guide a melody through changing harmonies.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u3-3": {
+      "title": "Ear and arrangement",
+      "goal": "Reduce a short reference passage to bass and melody.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "p4": {
+      "title": "Harmonic minor",
+      "goal": "Leading tone and dominant harmony; distinguish modal colour from tonal cadence."
+    },
+    "u4-1": {
+      "title": "The leading tone",
+      "goal": "D# resolves to E in a cadential context.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u4-2": {
+      "title": "Diminished seventh",
+      "goal": "Voice individual notes into a following chord.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u4-3": {
+      "title": "A short cadence",
+      "goal": "Read, hear and vary a cadence.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "p5": {
+      "title": "Sequence and figuration",
+      "goal": "Develop motifs through sequential repetition and broken chords."
+    },
+    "u5-1": {
+      "title": "Small sequences",
+      "goal": "Move a short motif through the scale.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u5-2": {
+      "title": "Arpeggios and melody",
+      "goal": "Keep a melody audible inside broken chords.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u5-3": {
+      "title": "Sequence over changing bass",
+      "goal": "Coordinate figuration and harmonic rhythm.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "p6": {
+      "title": "Contrasting colours",
+      "goal": "Use fourths and Lydian colour as deliberate contrasts."
+    },
+    "u6-1": {
+      "title": "Fourth-based voicings",
+      "goal": "Read and balance open sonorities.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u6-2": {
+      "title": "Lydian contrast",
+      "goal": "Hear raised fourth against a clear tonic.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "p7": {
+      "title": "Rhythm II",
+      "goal": "Keep independent voices steady through subdivisions and changing groups."
+    },
+    "u7-1": {
+      "title": "Triplets",
+      "goal": "Read and hear three equal subdivisions.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u7-2": {
+      "title": "Grouping",
+      "goal": "Move accents across a stable pulse.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u7-3": {
+      "title": "Asymmetric metre",
+      "goal": "Read 7/8 in explicit groups, then make a phrase.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "p8": {
+      "title": "An arrangement of your own",
+      "goal": "Combine pedal notes, moving bass, melody, arpeggios and chords into a complete solo piece."
+    },
+    "u8-1": {
+      "title": "A complete arc",
+      "goal": "Opening, development, contrast and return.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u8-2": {
+      "title": "Solo arrangement",
+      "goal": "Notate, perform and revise a self-contained arrangement.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k2": {
+      "title": "Two-note shapes and arpeggios",
+      "goal": "Combine pedal bass, thirds and broken triads; read voices independently."
+    },
+    "ku2-1": {
+      "title": "Triads within a window",
+      "goal": "Minor and major triads, open bass retained.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku2-2": {
+      "title": "Inversions",
+      "goal": "Keep melody on top through compact voicings.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku2-3": {
+      "title": "Thirds as a second voice",
+      "goal": "Parallel thirds with controlled note endings.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k3": {
+      "title": "Moving bass and lament",
+      "goal": "Move from a fixed pedal to a descending bass; keep the melody independent."
+    },
+    "ku3-1": {
+      "title": "Descending bass",
+      "goal": "Read bass and melody separately, then combine.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku3-2": {
+      "title": "Cycle of fifths",
+      "goal": "Guide a melody through changing harmonies.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku3-3": {
+      "title": "Ear and arrangement",
+      "goal": "Reduce a short reference passage to bass and melody.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k4": {
+      "title": "Harmonic minor",
+      "goal": "Leading tone and dominant harmony; distinguish modal colour from tonal cadence."
+    },
+    "ku4-1": {
+      "title": "The leading tone",
+      "goal": "D# resolves to E in a cadential context.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku4-2": {
+      "title": "Diminished seventh",
+      "goal": "Voice individual notes into a following chord.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku4-3": {
+      "title": "A short cadence",
+      "goal": "Read, hear and vary a cadence.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k5": {
+      "title": "Sequence and figuration",
+      "goal": "Develop motifs through sequential repetition and broken chords."
+    },
+    "ku5-1": {
+      "title": "Small sequences",
+      "goal": "Move a short motif through the scale.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku5-2": {
+      "title": "Arpeggios and melody",
+      "goal": "Keep a melody audible inside broken chords.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku5-3": {
+      "title": "Sequence over changing bass",
+      "goal": "Coordinate figuration and harmonic rhythm.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k6": {
+      "title": "Contrasting colours",
+      "goal": "Use fourths and Lydian colour as deliberate contrasts."
+    },
+    "ku6-1": {
+      "title": "Fourth-based voicings",
+      "goal": "Read and balance open sonorities.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku6-2": {
+      "title": "Lydian contrast",
+      "goal": "Hear raised fourth against a clear tonic.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku6-3": {
+      "title": "Register and timbre",
+      "goal": "Move an idea between registers without losing its shape.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k7": {
+      "title": "Rhythm II",
+      "goal": "Keep independent voices steady through subdivisions and changing groups."
+    },
+    "ku7-1": {
+      "title": "Triplets",
+      "goal": "Read and hear three equal subdivisions.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku7-2": {
+      "title": "Grouping",
+      "goal": "Move accents across a stable pulse.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku7-3": {
+      "title": "Asymmetric metre",
+      "goal": "Read 7/8 in explicit groups, then make a phrase.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "k8": {
+      "title": "An arrangement of your own",
+      "goal": "Combine pedal notes, moving bass, melody, arpeggios and chords into a complete solo piece."
+    },
+    "ku8-1": {
+      "title": "A complete arc",
+      "goal": "Opening, development, contrast and return.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "ku8-2": {
+      "title": "Solo arrangement",
+      "goal": "Notate, perform and revise a self-contained arrangement.",
+      "text": "Planned. Build on the preceding phase; notation and independent voices remain part of every stage."
+    },
+    "u2-rhythm": {
+      "title": "Accents and articulation",
+      "goal": "Combine straight eighths, offbeats and deliberately short chords.",
+      "text": "Planned. Guitar: P4 power chords, alternate picking, palm muting and deliberately open accents. Keyboard: short chords with melody over held or repeated bass. Clap new rhythms, read them and incorporate them into an uninterrupted phrase."
+    },
+    "u3-reading": {
+      "title": "Rhythm reading and form signs",
+      "goal": "Read syncopation, sixteenths and repeats in longer sections.",
+      "text": "Planned. Dotted rhythms, ties across beats and barlines, eighth and sixteenth rests. Count multibar rests; follow repeats, endings, segno and coda. Checkpoint: perform an extended section without losing the form."
+    },
+    "u4-chords": {
+      "title": "Chord symbols and harmonic changes",
+      "goal": "Read and play major, minor, power, sixth and seventh chords.",
+      "text": "Planned. Distinguish dominant, minor and major sevenths; separate chord symbols from written voicings. Fifth/sixth alternation, chromatic chord motion and major contrasts to minor material. Guitar: P4 voicings with a top melody; keyboard: inversions and a quiet left accompaniment."
+    },
+    "u5-groove": {
+      "title": "Ternary feel",
+      "goal": "Distinguish triplets, 12/8, shuffle and swing.",
+      "text": "Planned. Compare straight and ternary eighths; read 12/8 as four dotted-quarter pulses; shuffle without changing the basic pulse. Swing is not a rigid 2:1 ratio at every tempo. Sustain a rhythmically varied motif over your own bass."
+    },
+    "u7-solo": {
+      "title": "Solo within a complete form",
+      "goal": "Phrase with minor pentatonic and chord tones, then return securely to accompaniment.",
+      "text": "Planned. Count solo sections in advance, sing target notes, develop motifs and hit the return. Start with drums plus external bass, then supply your own pedal/bass reference. Check transitions, sound changes and extended takes at source tempo; tempo transfer complements slow expressive practice."
+    },
+    "ku2-rhythm": {
+      "title": "Accents and articulation",
+      "goal": "Combine straight eighths, offbeats and deliberately short chords.",
+      "text": "Planned. Guitar: P4 power chords, alternate picking, palm muting and deliberately open accents. Keyboard: short chords with melody over held or repeated bass. Clap new rhythms, read them and incorporate them into an uninterrupted phrase."
+    },
+    "ku3-reading": {
+      "title": "Rhythm reading and form signs",
+      "goal": "Read syncopation, sixteenths and repeats in longer sections.",
+      "text": "Planned. Dotted rhythms, ties across beats and barlines, eighth and sixteenth rests. Count multibar rests; follow repeats, endings, segno and coda. Checkpoint: perform an extended section without losing the form."
+    },
+    "ku4-chords": {
+      "title": "Chord symbols and harmonic changes",
+      "goal": "Read and play major, minor, power, sixth and seventh chords.",
+      "text": "Planned. Distinguish dominant, minor and major sevenths; separate chord symbols from written voicings. Fifth/sixth alternation, chromatic chord motion and major contrasts to minor material. Guitar: P4 voicings with a top melody; keyboard: inversions and a quiet left accompaniment."
+    },
+    "ku5-groove": {
+      "title": "Ternary feel",
+      "goal": "Distinguish triplets, 12/8, shuffle and swing.",
+      "text": "Planned. Compare straight and ternary eighths; read 12/8 as four dotted-quarter pulses; shuffle without changing the basic pulse. Swing is not a rigid 2:1 ratio at every tempo. Sustain a rhythmically varied motif over your own bass."
+    },
+    "ku7-solo": {
+      "title": "Solo within a complete form",
+      "goal": "Phrase with minor pentatonic and chord tones, then return securely to accompaniment.",
+      "text": "Planned. Count solo sections in advance, sing target notes, develop motifs and hit the return. Start with drums plus external bass, then supply your own pedal/bass reference. Check transitions, sound changes and extended takes at source tempo; tempo transfer complements slow expressive practice."
+    },
+    "e0-4-4": {
+      "title": "Muted eighths, open accents",
+      "position": "Open low E; fretting hand helps mute other strings.",
+      "instructions": "Alternate-pick the eighths. Rest the edge of the picking hand lightly near the bridge on low E: pitch audible, decay short. Second pass: play only the first eighth of each bar without palm muting, then return to short notes. Record both versions.",
+      "checklist": [
+        "Pitch remains audible while muted?",
+        "Open accent only at the first beat?",
+        "Same pulse in both versions?"
+      ]
+    }
+  },
+  "ui": {
+    "course": "Course",
+    "log": "Log",
+    "start": "▶ Start",
+    "stop": "■ Stop",
+    "tempo": "Tempo",
+    "accompaniment": "Accompaniment",
+    "click": "Click",
+    "straight": "Drums · eighths",
+    "half": "Drums · half-time",
+    "bars": "bars",
+    "connectFirst": "No MIDI device connected. Set up MIDI.",
+    "midiSetup": "Set up MIDI",
+    "playError": "Playback failed. Check the MIDI connection.",
+    "fretboard": "Fretboard aid",
+    "piano": "Keyboard aid",
+    "aids": "Show note names / fingering",
+    "generate": "↻ New phrase",
+    "listen": "▶ Listen",
+    "preview": "Score preview · browser sound",
+    "mastered": "securely recalled",
+    "logPlaceholder": "What I heard → next attempt",
+    "save": "Save",
+    "units": "units",
+    "exercises": "exercises",
+    "planned": "planned",
+    "phase": "Phase",
+    "scope": "Phases 0–1 · then an outlook",
+    "outlook": "Outlook: phases 2–8",
+    "plannedDetail": "This phase is mapped out; its exercises have not been developed yet.",
+    "lead": "From imagined sound to instrument. P4 guitar with bass and melody; keyboard for synth and piano. Doom, Gothic and Baroque as musical directions.",
+    "week": "Four sessions per week",
+    "midiLead": "Click and drums go to your device on channel 10.",
+    "findOutputs": "Find outputs",
+    "output": "Output",
+    "chooseDevice": "Choose a device",
+    "findHint": "Find outputs, then choose a device.",
+    "midiTest": "Test: kick on 1, snare on 3, hi-hat on each quarter. Then select Click and check the rim sound.",
+    "logLead": "Local practice journal. Mark an exercise as reliable after two practice days without aids. A backup includes completion marks, notes and deletion records. Restoring merges entries, so contributions from several devices can be combined manually. No automatic network sync. Recheck older completion marks for revised exercises.",
+    "export": "Download backup",
+    "import": "Restore backup",
+    "date": "Date",
+    "exercise": "Exercise",
+    "note": "Note",
+    "delete": "Delete",
+    "saveError": "Saving failed. Check browser storage and export your log.",
+    "importError": "Import failed. Choose a valid log JSON file. Existing data was not replaced.",
+    "connected": "Connected",
+    "noOutputs": "No MIDI output found",
+    "midiUnavailable": "Web MIDI is unavailable. Use a MIDI-capable browser on localhost or HTTPS.",
+    "midiDenied": "MIDI access failed. Check browser permission.",
+    "disconnected": "MIDI device disconnected",
+    "timingInterrupted": "Playback was interrupted. Restart it.",
+    "stopError": "MIDI stop failed. Check the device.",
+    "read": "Read",
+    "improv": "Improvise",
+    "shape": "Fretboard",
+    "keys": "Keyboard",
+    "technique": "Technique",
+    "transcribe": "Ear / notation",
+    "sound": "Sound",
+    "schedule": "A, B, C: 45 minutes guitar + 15 minutes keyboard each. D: 15 minutes guitar + 45 minutes keyboard. This gives 3 × 45 + 15 = 150 guitar minutes and 3 × 15 + 45 = 90 keyboard minutes.\n\n**45 minutes:** 5 recall · 10 one difficulty · 20 listening, playing and varying · 5 recording · 5 break/log. **15 minutes:** 3 recall · 8 application · 4 recording/log.\n\nWork on one unit per instrument. First task already secure → move to application. Resolve unfamiliar movements without time pressure, then stabilise with a click. Increase tempo only while pulse and tone remain controlled.\n\n**Move on:** meet the criteria on two practice days, including one attempt without aids. Isolate a difficult passage, then return to a whole phrase. Notation is the main view, position is above it, and aids can be enabled.",
+    "hardware": "**MX49:** Drum kit on Part 10. Choose the appropriate USB MIDI output or MIDI interface.\n\n**SR-18:** MIDI CH = 10, DRUM IN = ON: V1, NOTE MAP = NORMAL. Under NOTE, assign pads accordingly: kick 36, snare 38, closed hi-hat 42, click/rim 37. Stop its own pattern. The SR-18 needs a MIDI interface with a DIN output.\n\nThe website sends individual notes, not MIDI clock or transport commands to the internal sequencer. Set sounds and volume on the device. Click/drums have no internal fallback. Score preview separately uses browser sound.",
+    "remoteUpdate": "Journal updated from another browser tab."
+  }
+}

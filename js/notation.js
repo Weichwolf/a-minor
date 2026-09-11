@@ -35,11 +35,12 @@ AM.notation = (() => {
     const [beats, unit] = (sc.time || '4/4').split('/').map(Number);
     o += `<text x="${kx + 10}" y="${mid - 2}" class="tsig">${beats}</text><text x="${kx + 10}" y="${bottom - 2}" class="tsig">${unit}</text>`;
     L.bars.forEach(b => o += `<line x1="${x0 + b}" y1="${top}" x2="${x0 + b}" y2="${bottom}" class="bar"/>`);
+    if (st.overlay) o = '';
     let acc = {}, pos = 0, tie = null, lastBar = 0;
     st.notes.forEach(n => {
       const d = dur(n.d || 'q'), x = x0 + L.x.get(pos), barNo = Math.floor(pos / (beats * 4 / unit) + 1e-9);
       if (barNo !== lastBar) { acc = {}; lastBar = barNo; }
-      if (n.r) { o += rest(x, d, mid, gap); pos += d; return; }
+      if (n.r) { tie = null; o += rest(x, d, mid, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${mid - 4}" r="1.8" class="dotd"/>`; pos += d; return; }
       const ps = pitches(n).map(p => { const q = M.parse(p); return {...q, st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1];
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
@@ -53,15 +54,15 @@ AM.notation = (() => {
         if (n.d?.endsWith('.')) o += `<circle cx="${x + 10 + shift}" cy="${p.y - (p.st % 2 === REF % 2 ? 3 : 0)}" r="1.8" class="dotd"/>`;
       });
       if (d < 4) {
-        const up = (lo.y + hi.y) / 2 > mid, sx = up ? x + 5 : x - 5, sy = up ? hi.y - 30 : lo.y + 30, from = up ? lo.y : hi.y;
+        const up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid, sx = up ? x + 5 : x - 5, sy = up ? hi.y - 30 : lo.y + 30, from = up ? lo.y : hi.y;
         o += `<line x1="${sx}" y1="${from}" x2="${sx}" y2="${sy}" class="stem"/>`;
         const flags = d < 1 ? (d < .5 ? 2 : 1) : 0;
         for (let f = 0; f < flags; f++) { const fy = sy + (up ? f * 7 : -f * 7); o += `<path d="M${sx} ${fy} c 0 ${up ? 8 : -8} 12 ${up ? 10 : -10} 8 ${up ? 20 : -20} c 2 ${up ? -7 : 7} -2 ${up ? -12 : 12} -8 ${up ? -14 : 14}" class="flag"/>`; }
       }
-      if (tie) { o += `<path d="M${tie.x + 6} ${tie.y + 7} q ${(x - tie.x) / 2 - 6} 9 ${x - tie.x - 12} 0" class="tie"/>`; tie = null; }
+      if (tie) { const side = st.direction === 'up' ? -1 : 1; o += `<path d="M${tie.x + 6} ${tie.y + side * 7} q ${(x - tie.x) / 2 - 6} ${side * 9} ${x - tie.x - 12} ${lo.y - tie.y}" class="tie"/>`; tie = null; }
       if (n.tie) tie = {x, y:lo.y};
-      if (aids.names) o += `<text x="${x}" y="${bottom + 66}" class="aid">${ps.map(p => M.name(p.midi, M.usesFlats(key)).replace(/\d/, '')).join(' ')}</text>`;
-      if (aids.strings && sc.instrument === 'guitar') { const q = M.position(lo.midi, {s:n.s, maxFret:sc.maxFret ?? 5}); if (q) o += `<circle cx="${x}" cy="${top - 26}" r="7" class="strc"/><text x="${x}" y="${top - 22.5}" class="strn">${6 - q.s}</text>`; }
+      if (aids.names) o += `<text x="${x}" y="${bottom + 66}" class="aid">${ps.map(p => p.letter + (p.acc > 0 ? '#'.repeat(p.acc) : 'b'.repeat(-p.acc))).join(' ')}</text>`;
+      if (aids.strings && sc.instrument === 'guitar') { const q = M.position(lo.midi, {s:n.s, maxFret:sc.maxFret ?? 5, window:sc.stringWindow}); if (q) o += `<circle cx="${x}" cy="${top - 26}" r="7" class="strc"/><text x="${x}" y="${top - 22.5}" class="strn">${6 - q.s}</text>`; }
       if (aids.fingers && n.fi != null) o += `<text x="${x}" y="${top - 40}" class="aid">${[].concat(n.fi).join('')}</text>`;
       pos += d;
     });
@@ -70,17 +71,20 @@ AM.notation = (() => {
 
   function render(el, sc, aids = {}) {
     const [beats, unit] = (sc.time || '4/4').split('/').map(Number), barLen = beats * 4 / unit;
-    const staves = [{clef:sc.clef || 'treble', notes:sc.notes || []}]; if (sc.bass) staves.push({clef:'bass', notes:sc.bass});
+    const poly = sc.instrument === 'guitar' && sc.bass;
+    const staves = [{clef:sc.clef || 'treble', notes:sc.notes || [], direction:poly ? 'up' : null}];
+    if (sc.bass) staves.push({clef:poly ? 'treble' : 'bass', notes:sc.bass, overlay:!!poly, direction:poly ? 'down' : null});
     const tr = sc.instrument === 'guitar' ? 7 : 0, x0 = 90, L = layout(staves, barLen);
     let top = 56, out = '', lines = '', lastBottom = 0;
     staves.forEach((st, i) => {
-      const r = staff(sc, st, L, top, i === 0 ? aids : {...aids, strings:false}, tr, sc.key || 'C', x0);
-      for (let k = 0; k < 5; k++) lines += `<line x1="8" y1="${top + k * 10}" x2="${x0 + L.end + 8}" y2="${top + k * 10}" class="staff"/>`;
+      if (st.overlay) top = 56;
+      const r = staff(sc, st, L, top, i === 0 ? aids : poly ? {} : {...aids, strings:false}, tr, sc.key || 'C', x0);
+      if (!st.overlay) for (let k = 0; k < 5; k++) lines += `<line x1="8" y1="${top + k * 10}" x2="${x0 + L.end + 8}" y2="${top + k * 10}" class="staff"/>`;
       out += r.svg; lastBottom = r.bottom; top = r.bottom + (aids.names ? 90 : 70);
     });
     const xe = x0 + L.end, dbl = Math.abs(L.total % barLen) < 1e-9, y0 = 56;
     out += `<line x1="${xe}" y1="${y0}" x2="${xe}" y2="${lastBottom}" class="bar"/>` + (dbl ? `<line x1="${xe + 4}" y1="${y0}" x2="${xe + 4}" y2="${lastBottom}" class="bar thick"/>` : '');
-    if (staves.length > 1) out += `<line x1="8" y1="${y0}" x2="8" y2="${lastBottom}" class="bar"/>`;
+    if (staves.length > 1 && !poly) out += `<line x1="8" y1="${y0}" x2="8" y2="${lastBottom}" class="bar"/>`;
     el.innerHTML = `<svg viewBox="0 0 ${xe + 16} ${lastBottom + 76}" width="${xe + 16}" class="score">${lines}${out}</svg>`;
     return {beats:L.total};
   }
@@ -93,17 +97,36 @@ AM.notation = (() => {
   function generate(g) {
     const pcs = M.scalePcs(g.root || 'C', g.scale || 'major'), lo = M.midi(g.range[0]), hi = M.midi(g.range[1]);
     const pool = []; for (let m = lo; m <= hi; m++) if (pcs.includes(M.pc(m))) pool.push(m);
+    if (!pool.length) throw Error('Leerer Tonbereich');
     const flats = M.usesFlats(g.key || 'C'), durs = g.durs || ['q'], notes = [];
     const [b, u] = (g.time || '4/4').split('/').map(Number), barLen = b * 4 / u, total = (g.bars || 2) * barLen;
     let m = pool[Math.floor(Math.random() * pool.length)], pos = 0;
     while (pos < total) {
       const step = Math.round((Math.random() - .5) * (g.leap || 4));
       m = pool[Math.max(0, Math.min(pool.length - 1, pool.indexOf(m) + step))];
-      const fit = durs.filter(d => dur(d) <= barLen - pos % barLen), d = fit[Math.floor(Math.random() * fit.length)] || 'q';
+      const fit = durs.filter(d => Number.isFinite(dur(d)) && dur(d) <= Math.min(barLen - pos % barLen, total - pos));
+      if (!fit.length) throw Error('Notenwerte füllen den Takt nicht');
+      const d = fit[Math.floor(Math.random() * fit.length)];
       notes.push({p:M.name(m, flats), d}); pos += dur(d);
     }
     return notes;
   }
-  const events = sc => { const ev = []; [sc.notes || [], sc.bass || []].forEach(ns => { let t = 0; ns.forEach(n => { const d = dur(n.d || 'q'); if (!n.r) pitches(n).forEach(p => ev.push({t, midi:M.midi(p), dur:d})); t += d; }); }); return ev; };
+  const events = sc => {
+    const ev = [];
+    [sc.notes || [], sc.bass || []].forEach((ns, voice) => {
+      let t = 0, held = new Map();
+      ns.forEach(n => {
+        const d = dur(n.d || 'q'), next = new Map();
+        if (!n.r) pitches(n).forEach(p => {
+          const midi = M.midi(p), previous = held.get(midi);
+          const e = previous || {t, midi, dur:0, voice};
+          e.dur += d; if (!previous) ev.push(e);
+          if (n.tie) next.set(midi, e);
+        });
+        held = next; t += d;
+      });
+    });
+    return ev;
+  };
   return {render, generate, dur, events};
 })();

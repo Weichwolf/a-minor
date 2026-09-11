@@ -1,95 +1,118 @@
 # a-minor
 
-Improvisationskurs für Gitarre in Quartenstimmung (E A D G C F).
+Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard. Notenlesen, Gehör und selbstständiges Solospiel wachsen gemeinsam.
 
-## Ziel
+- **Gitarre:** E2 A2 D3 G3 C4 F4. Offene Pedaltöne und Melodie, später Arpeggien, Akkorde und bewegter Bass. Noten mit Lageangabe; keine Tabs.
+- **Keyboard:** 49 Tasten, Synthesizer und Klavier. Bass links, Melodie rechts; zunächst ein Klang ohne verpflichtenden Split.
+- **Referenzen:** My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*). Eigene musikalische Gedanken statt festgelegter Coverstücke.
 
-Improvisieren im Klang von My Dying Bride, Type O Negative, Anathema, Vivaldi und Biber. Nicht nachspielen, sondern das gemeinsame Material verinnerlichen: Moll-Modi, Pedalton, Lamento-Bass, Dreiklangsformen, Sequenzen. Rhythmische Ideen von Animals as Leaders, ohne deren Technik.
+## Stand
 
-Nebenziel: Notenlesen. Keine Tabs. Hilfen (Tonnamen, Saiten, Finger) am Anfang, abschaltbar, später weg.
+Phase 0–1 beider Instrumente ist ausgearbeitet. Phase 2–8 ist als Lernweg mit konkreten Anforderungen strukturiert, noch ohne fertige Übungen. Jam-/Backing-Editor und freie Konfigurationsseiten sind entfernt.
 
-Zwei parallele Tracks mit gleicher Phasenstruktur:
+Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die volle Gigajam-Anforderungsbreite ist im Curriculum eingeplant, noch nicht vollständig unterrichtet.
 
-| Track | Instrument | Eigenheit |
-|---|---|---|
-| Gitarre | 6 Saiten, P4-Stimmung | Jede Form gilt überall. Leere Saiten als Drone |
-| Keyboard | 49 Tasten C2–C6, multitimbral | Linke Hand Drone (Pad, Kanal 1), rechte Hand Melodie (Kanal 2). Beide Schlüssel, Generalbass ab Phase 3 |
-
-Der Kurs ist ein lebendes Projekt. Erster Wurf: Phase 0 und 1 beider Tracks vollständig, Phase 2–8 als Gerüst.
-
-## Aufbau
-
-| Phase | Thema |
+| Phase | Schwerpunkt |
 |---|---|
-| 0 | Fundament: Haltung, Griffbrett-Geometrie, Notenschrift, Rhythmus, Vibrato |
-| 1 | Drone: Äolisch, Phrygisch, lange Töne, erste Transkription |
-| 2 | Triaden und Terz-Parallelen |
-| 3 | Lamento-Bass, Quintfall |
-| 4 | Harmonisch Moll, verminderter Septakkord |
-| 5 | Sequenz, Bariolage |
-| 6 | Quarten, Lydisch |
-| 7 | Rhythmus II: Triolen, Gruppierung, 7/8 |
-| 8 | Form |
+| 0 | Ton, P4-Orientierung, Noten, Puls, Dämpfung, unabhängige Stimmen |
+| 1 | Motiv, Variation, Pedalton/Melodie, Äolisch/Phrygisch, eigene Miniatur |
+| 2 | Zweiklänge, Dreiklänge, Arpeggien, Akzente und Rhythmusgitarre |
+| 3 | Bewegter Bass, Lamento, Synkopen, Sechzehntel, Formzeichen |
+| 4 | Harmonisch Moll, Sext-/Septakkorde, Akkordsymbole und Stimmführung |
+| 5 | Sequenzen, Figuration, Triolen, 12/8, Shuffle und Swing |
+| 6 | Quarten, Lydisch, Register und Klangkontraste |
+| 7 | Gruppierung, ungerade Takte, Solo und Rückkehr in die Form |
+| 8 | Eigenständiges Arrangement mit Bass, Melodie, Arpeggien und Akkorden |
 
-Methode pro Übung: Form lernen, singen, spielen, über Drone mit Constraint improvisieren, Referenz transkribieren, aufnehmen, einen Fehler ins Log.
+## Übezeit
 
-## Benutzung
+Vier Sitzungen zu je einer Stunde. Drei mit 45 Minuten Gitarre und 15 Minuten Keyboard, eine mit umgekehrter Gewichtung:
+Gitarre 3 × 45 + 15 = 150 Minuten; Keyboard 3 × 15 + 45 = 90 Minuten pro Woche.
 
-`index.html` im Browser öffnen. Kein Server, kein Build, keine Abhängigkeiten. Fortschritt und Log liegen in `localStorage`, Export/Import als JSON unter „Log".
+Eine Einheit pro Instrument bearbeiten. Bereits sichere Aufgaben dienen als Einstiegskontrolle. Hören/singen → spielen → wiederholen → genau eine Eigenschaft verändern → aufnehmen und vergleichen. „Sicher abrufbar“ erst nach Wiederholung an zwei Übetagen ohne Hilfen. Bestehende Markierungen bleiben erhalten; überarbeitete Übungen erneut prüfen.
 
-Tempi sind Vorgaben pro Übung, im Player frei einstellbar. „⬇ MIDI" exportiert das Backing (Bass, Pad, Drums) für Looper oder DAW.
+## Start
 
-**Backing-Templates** in `data/backings.js`: Template = Was + Warum + Variationen, jede Variation eine Player-Konfiguration. Stufen-Qualität aus der Skala, erzwingen mit `V:maj`, `v:min`, `vii:dim`. Akkorddauer über `{deg:0, bars:2}`. Form über `parts:{A,B,C}` und `form:'A B A C'`. Drums und Bass variieren pro Teil, Fill am Teilende, Crash am Teilanfang. `feel:'tight'|'laid'|'heavy'` verzögert Snare, Hats und Bass. `random:true` würfelt pro Durchlauf Ghost-Notes, Extra-Kicks, Fill-Varianten und Mikro-Timing.
+Online: [a-minor.ch](https://a-minor.ch).
 
-**MIDI-Out** (Chrome/Edge, Web MIDI): Im Player Gerät wählen. Drums gehen als GM-Drumset auf Kanal 10 (Kick 36, Snare 38, Hi-Hat 42, Klick 37), Bass auf Kanal 1, Pad auf Kanal 2. Was per MIDI rausgeht, spielt der interne Synth nicht mehr. Latenz in ms korrigierbar, negativ = früher senden. Getestet gegen Alesis SR-18 und Yamaha MX49 als Ziel, beide GM-kompatibel auf Kanal 10.
+Lokal im Projektverzeichnis:
 
-Tonnamen international: B = deutsches H, Bb = deutsches B.
-
-## Übungen hinzufügen
-
-Gitarre in `data/gitarre.js`, Keyboard in `data/keys.js`. Eine Übung ist ein Objekt im `exercises`-Array einer Einheit:
-
-```js
-{ id:'e2-1-1', kind:'read', title:'…', tempo:60, instructions:'…',
-  score:{key:'Em', time:'4/4', maxFret:5, clef:'treble', notes:[{p:'E2',d:'h'},{p:'F#2',d:'q',s:0,fi:1},{r:1,d:'q'},{p:'G2',d:'w',tie:1}],
-         bass:[{p:['E2','B2'],d:'w',fi:[5,1],tie:1},{p:['E2','B2'],d:'w'}]},
-  generate:{root:'E', scale:'aeolian', key:'Em', range:['E2','G3'], bars:2, leap:3, durs:['q','h']},
-  aids:['names','strings','fingers'],
-  fretboard:{root:'E', scale:'aeolian', window:[0,2], frets:5, show:'degree', pcs:[4,7,11]},
-  piano:{root:'E', scale:'aeolian', show:'degree', window:['C4','C6'], pcs:[4,7,11]},
-  backing:{type:'drums', time:'4/4', bars:4},
-  checklist:['…'] }
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-| Feld | Bedeutung |
-|---|---|
-| `kind` | `read` `improv` `shape` `keys` `technique` `transcribe` `sound` |
-| `score.notes` | `p` Tonhöhe klingend (E2 = tiefe E-Saite), Akkord als Array. `d` Dauer `w h q e s` mit optionalem `.`, `r:1` Pause, `tie:1` Bogen zur nächsten Note, `s` Saite 0–5 (0 = tiefes E), `fi` Finger (Zahl oder Array) |
-| `score.clef` | `treble` (Default) oder `bass`. Gitarre wird automatisch oktavtransponiert notiert |
-| `score.bass` | Zweites System im Bassschlüssel (linke Hand). Beide Systeme müssen gleich lang sein |
-| `piano` | Klaviatur-Widget, `window` als Tonbereich `['C4','C6']` |
-| `score.maxFret` | Obergrenze für die automatische Saitenwahl der Saiten-Hilfe |
-| `generate` | Ersetzt `notes` durch Zufallsfolge, Button „Neue Folge" |
-| `fretboard.window` | Saitenindizes `[von, bis]`, Rest ausgegraut. `pcs` zeigt nur diese Tonklassen (0 = C) |
-| `backing.type` | Im Kurs nur `click` oder `drums` (BSBS BSBS BSBS BBS-). Drone kommt vom Looper. Der Übungs-Player ist bewusst schlicht, alles andere gibt es nur unter Backing |
+`http://localhost:8000` öffnen. Kein Build. Keine Laufzeitabhängigkeiten. JSON-Dateien werden geladen; direktes Öffnen per `file://` wird nicht unterstützt. Web MIDI benötigt eine passende Browserimplementierung und einen sicheren Kontext wie HTTPS oder localhost.
 
-Skalen: `aeolian phrygian harmonicMinor dorian major lydian chromatic`. Neue Skala in `js/music.js` unter `SCALES`.
+Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo, Klick/zugeordnetes Schlagzeugmuster. Notenhilfen sind standardmäßig aus; Diagramme eingeklappt.
+
+## MIDI
+
+Unter **MIDI** Ausgänge suchen und Gerät wählen. Klick/Drums ausschließlich als Noten auf Kanal 10. Ohne verbundenes Gerät startet die Begleitung nicht. Keine MIDI-Clock, kein Fernstart eines Gerätepatterns, keine Program Changes.
+
+| Klang | MIDI-Note |
+|---|---|
+| Kick | 36 |
+| Snare | 38 |
+| Geschlossene Hi-Hat | 42 |
+| Klick/Rim | 37 |
+
+MX49: Drum-Kit auf Part 10. SR-18: MIDI-Interface mit DIN-Ausgang, MIDI CH 10, DRUM IN ON: V1, NOTE MAP NORMAL und passende Pad-Zuordnung unter NOTE. Die Handbücher sind in der MIDI-Ansicht verlinkt. Gerätetests stehen noch aus.
+
+Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Bei 3/4 nur Klick. Bass und Pads sind derzeit nicht Teil des Players. Die separate Notenvorschau verwendet Browserklang und berücksichtigt Haltebögen und Stimmen.
+
+## Backup / Restore
+
+**Log → Backup herunterladen** sichert das gemeinsame Journal einschließlich Abschlussmarkierungen, Notizen und Löschvermerken als JSON. **Backup wiederherstellen** validiert die Datei und führt sie mit dem lokalen Journal zusammen. Doppelte Ereignisse werden nicht dupliziert; neuere Änderungen werden nicht durch alte Backups überschrieben. Auch frühere JSON-Backups mit `done` und `log` werden eingelesen. Ungültige Dateien ändern keine Daten.
+
+Speicherung gilt pro Browserprofil und Origin; localhost und a-minor.ch haben getrennte Daten. Beim Browserwechsel oder vor dem Löschen der Websitedaten exportieren. Kein Konto. Backups verschiedener Geräte lassen sich manuell zusammenführen. Automatische Netzsynchronisation ist zurückgestellt. Die Spracheinstellung ist eine separate Browserpräferenz und kein Lernfortschritt.
 
 ## Dateien
 
+| Datei | Aufgabe |
+|---|---|
+| `data/course.json` | Sprachunabhängige IDs, Phasenstruktur, Noten, Hilfen und Begleitvorgaben |
+| `locales/de.json`, `locales/en.json` | Kurstexte und Oberflächentexte |
+| `js/i18n.js` | Laden und Zusammenführen der Sprachdaten |
+| `js/app.js` | Ansichten, Sprachwechsel, Übungen und MIDI-Bedienung |
+| `js/music.js` | Tonhöhen, Intervalle, Skalen und P4-Positionen |
+| `js/notation.js` | Noten-SVG, Stimmen, Haltebögen und Lesegenerator |
+| `js/audio.js` | MIDI-Kursbegleitung und separate Notenvorschau |
+| `js/store.js` | Gemeinsames Ereignisjournal, Zusammenführung und Backup/Restore |
+| `tests/` | Kurs-, Speicher-, MIDI- und Browsertests |
+
+## Übungen ergänzen
+
+Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beiden Sprachdateien. IDs dauerhaft beibehalten. Tonnamen international: B = deutsches H; Bb = deutsches B. C4 = MIDI 60. Alle gespeicherten Tonhöhen sind klingend, Gitarre wird oktavtransponiert angezeigt.
+
+```json
+{
+  "id": "e-example",
+  "textId": "e-example",
+  "kind": "read",
+  "tempo": 55,
+  "score": {
+    "key": "Em", "time": "4/4", "maxFret": 5,
+    "notes": [{"p": "E3", "d": "h", "s": 2, "fi": 1}, {"r": 1, "d": "h"}],
+    "bass": [{"p": "E2", "d": "w", "s": 0}]
+  },
+  "aids": ["strings", "fingers"],
+  "backing": {"type": "click", "time": "4/4", "bars": 1, "drums": "half"}
+}
 ```
-index.html        Einstieg
-css/style.css
-js/music.js       Tonnamen, Skalen, Tonarten, Griffbrett-Positionen, Dreiklänge
-js/fretboard.js   Griffbrett als SVG
-js/piano.js       Klaviatur als SVG
-js/notation.js    Noten als SVG, Zufallsgenerator
-js/audio.js       Web-Audio-Synth, Sequencer, Web-MIDI-Out, Backing-Builder
-js/midi.js        Standard-MIDI-Export
-js/store.js       localStorage
-js/app.js         Router, Ansichten
-data/gitarre.js   Kursinhalt Gitarre
-data/keys.js      Kursinhalt Keyboard
-data/backings.js  Backing-Templates
-assets/           Ursprungsdiagramm P4_Scales
+
+Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`.
+Dauern: `w h q e s`, optional punktiert. `tie:1` bindet zur nächsten gleichen Tonhöhe. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. Beide Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
+
+Der Renderer unterstützt die derzeitigen Phase-0–1-Aufgaben. Triolen, Formzeichen und komplexe spätere Mehrstimmigkeit brauchen vor ihrer Einführung eine entsprechende Erweiterung; das Curriculum behauptet keine vorhandene technische Unterstützung dafür.
+
+## Prüfungen
+
+```sh
+npm ci
+npm test
+npm run test:browser
 ```
+
+Node.js und Python 3 erforderlich; Browsertest startet seinen lokalen Server selbst. Chromium liegt standardmäßig unter `/usr/bin/chromium`, alternativ `CHROMIUM_PATH` setzen. Playwright ist ausschließlich eine Entwicklungsabhängigkeit.
+
+Die Tests prüfen Taktlängen, Stimmendauern, Haltebögen, spielbare P4-Positionen, Generatorgrenzen, MIDI-Nachrichten und Stopp, validierten Import, Sprachvollständigkeit sowie alle Einheiten in beiden Sprachen im Browser. Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.

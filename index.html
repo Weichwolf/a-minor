@@ -7,18 +7,15 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav class="top"><a class="brand" href="#/">a-minor</a><a href="#/">Kurs</a><a href="#/griffbrett">Griffbrett</a><a href="#/klaviatur">Klaviatur</a><a href="#/player">Backing</a><a href="#/log">Log</a></nav>
-<main></main>
+<nav class="top"><a class="brand" href="#/">a-minor</a><a href="#/" data-text="course">Kurs</a><a href="#/midi">MIDI</a><a href="#/log" data-text="log">Log</a><label class="language">DE / EN <select id="language" aria-label="Language / Sprache"><option value="de">Deutsch</option><option value="en">English</option></select></label></nav>
+<p id="app-status" role="status"></p><main>Loading / Wird geladen…</main>
 <script src="js/music.js"></script>
 <script src="js/fretboard.js"></script>
 <script src="js/piano.js"></script>
 <script src="js/notation.js"></script>
 <script src="js/audio.js"></script>
-<script src="js/midi.js"></script>
 <script src="js/store.js"></script>
-<script src="data/gitarre.js"></script>
-<script src="data/keys.js"></script>
-<script src="data/backings.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

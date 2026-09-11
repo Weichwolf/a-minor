@@ -1,0 +1,991 @@
+{
+  "course": {
+    "gitarre": {
+      "title": "Gitarre",
+      "lead": "P4: E2 A2 D3 G3 C4 F4. Klang, Puls und wiederholbare eigene Phrasen."
+    },
+    "p0": {
+      "title": "Fundament",
+      "goal": "Einstieg prüfen: saubere Tonwechsel, P4-Orientierung, Noten und Puls. Bekanntes kurz abrufen, Schwierigkeiten gezielt üben."
+    },
+    "u0-1": {
+      "title": "Einstieg: Ton und Puls",
+      "goal": "Vier ruhige Takte mit klaren Tonenden. Greifdruck und Nebengeräusche kontrollieren.",
+      "text": "Stimme E2 A2 D3 G3 C4 F4. Erst mit wenig Gain hören, danach denselben Versuch mit deinem üblichen Klang wiederholen. Verzerrung verändert Sustain und macht ungedämpfte Saiten hörbarer.\n\nGitarre so positionieren, dass die Handgelenke beweglich bleiben. Greife nahe hinter dem Bund mit gerade ausreichendem Druck. Daumenposition und Anschlagbewegung dürfen sich mit der Aufgabe ändern. Unbenutzte Saiten mit beiden Händen dämpfen.\n\nEinstieg: Spiele vier Takte mit einem Ton pro Zählzeit und einer bewusst stillen vierten Zählzeit. Bleibt das stabil, nutze die Übungen nur zur Kontrolle. Neue Bewegungen zuerst ohne Klick klären, dann im Puls prüfen."
+    },
+    "e0-1-1": {
+      "title": "Leere Saiten, ganze Noten",
+      "instructions": "Spiele die notierten leeren Saiten. Jede klingt bis zum nächsten Takt; beim Wechsel die vorige dämpfen. Erst Namen vorauslesen, dann ohne Namen wiederholen. Zum Schluss vier Takte E: drei Viertel spielen, eine Viertelpause.",
+      "checklist": [
+        "Saitenwechsel ohne unbeabsichtigtes Überklingen?",
+        "Viertelpause still, nächster Einsatz auf 1?",
+        "Zwei Durchgänge mit gleichmäßigem Puls?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e0-1-2": {
+      "title": "Chromatik 1-2-3-4",
+      "instructions": "Nur die notierten zwei Saiten in Bund 5–8. Langsam vier Finger nacheinander setzen; möglichst wenig Druck. Beim Saitenwechsel die alte Saite dämpfen. Nach zwei Durchgängen entspannen. Erst bei ruhiger Bewegung zum Klick.",
+      "checklist": [
+        "Töne gleich lang und ohne Schnarren?",
+        "Greifdruck nach jedem Durchgang wieder gelöst?",
+        "Unbenutzte Saiten still?"
+      ],
+      "position": "V. Lage, tiefe E- und A-Saite."
+    },
+    "u0-2": {
+      "title": "P4: Bezugstöne und Intervalle",
+      "goal": "E und C finden; kleine Terz, Quinte und Oktave hören und greifen.",
+      "text": "E A D G C F: benachbarte Saiten liegen jeweils fünf Halbtöne auseinander. Eine Quinte braucht sieben: nächste höhere Saite und zwei Bünde höher ergibt 5 + 2 = 7. Kleine Terz: 5 − 2 = 3. Große Terz: 5 − 1 = 4. Oktave: zwei Saiten höher und zwei Bünde höher ergibt 5 + 5 + 2 = 12.\n\nDiese Verschiebungen gelten für gegriffene Formen, soweit Saiten und Bünde vorhanden sind. Leere Saiten lassen sich nicht als leere Saiten mitverschieben. Nicht jedes Intervall liegt von jedem Startpunkt aus auf der nächsten Saite.\n\nVor jedem Intervall den Zielton innerlich hören oder in bequemer Oktave summen. Dann greifen und vergleichen."
+    },
+    "e0-2-1": {
+      "title": "Alle E finden",
+      "instructions": "Finde E zunächst auf den drei tiefen Saiten bis Bund 12. Spiele und benenne die Positionen. Klappe die Hilfe zu und wiederhole in anderer Reihenfolge. Danach die drei hohen Saiten ergänzen.",
+      "checklist": [
+        "Auf E-, A- und D-Saite ohne Suchen abrufbar?",
+        "Oktaven als gleicher Tonname in anderer Höhe erkannt?"
+      ]
+    },
+    "e0-2-2": {
+      "title": "Alle C finden",
+      "instructions": "Finde C auf A-, D- und G-Saite bis Bund 12. Spiele jeweils C und das nächste E darüber. Vergleiche den Klang der großen Terz mit E–G aus der nächsten Übung.",
+      "checklist": [
+        "Drei C-Positionen ohne Anzeige gefunden?",
+        "C–E und E–G klingen hörbar verschieden?"
+      ]
+    },
+    "e0-2-3": {
+      "title": "Kleine Terz und Quinte",
+      "instructions": "Beginne mit E auf der A-Saite, Bund 7. Spiele G auf der D-Saite, Bund 5, dann B auf der D-Saite, Bund 9. Kleine Terz und Quinte erst nacheinander, dann als Zweiklang. Verschiebe beide Formen zwei Bünde nach unten: D–F und D–A. Singe jeweils vor.",
+      "checklist": [
+        "E–G und E–B ohne Anzeige gefunden?",
+        "Formen nach D übertragen?",
+        "Zieltöne vor dem Greifen ungefähr gesungen?"
+      ]
+    },
+    "u0-3": {
+      "title": "Notenschrift I",
+      "goal": "Kurze Folgen in erster Lage lesen, ohne den Puls fürs Suchen anzuhalten.",
+      "text": "Gitarre klingt eine Oktave tiefer als geschrieben. Das klingende E2 der tiefen Saite wird als E3 notiert: im Raum unter der dritten Hilfslinie unter dem Violinsystem.\n\nLinien von unten: E G B D F. Zwischenräume: F A C E. B ist das deutsche H, Bb das deutsche B. Die eingekreiste Saitennummer zählt von hoch nach tief: 1 = F, 6 = E. Fingersatz 0 bedeutet leere Saite.\n\nLies erst Rhythmus und Startton, dann die Richtung der Nachbartöne. Hilfen beim ersten Versuch nutzen, anschließend ausblenden. Singen in einer bequemen Oktave genügt.\n\nGanze Note: offener Kopf ohne Hals, vier Viertel. Halbe: offener Kopf mit Hals, zwei Viertel. Viertel: gefüllter Kopf mit Hals. Achtel: zusätzlich ein Fähnchen oder ein Balken, zwei Achtel pro Viertel. Ein Punkt verlängert um die Hälfte des Notenwerts. Pausenzeichen geben dieselben Zeitwerte ohne Ton an. Im 4/4-Takt stehen vier Viertel zwischen zwei Taktstrichen.\n\n♯ erhöht einen Ton um einen Halbton, ♭ erniedrigt ihn; ♮ hebt das Vorzeichen auf. Zeichen am Systemanfang gelten für den jeweiligen Tonnamen in allen Oktaven. Ein einzelnes Versetzungszeichen gilt in seiner Oktavlage bis zum Taktstrich. Greiffinger: 1 Zeige-, 2 Mittel-, 3 Ring-, 4 kleiner Finger."
+    },
+    "e0-3-1": {
+      "title": "Leere Saiten lesen",
+      "instructions": "Lies die nächste Note während die aktuelle klingt. Spiele die Folge einmal mit, einmal ohne Lernhilfen. Wenn die leeren Saiten bereits sicher sind, direkt zur nächsten Übung.",
+      "checklist": [
+        "Ohne Tonnamen und Saitennummern gelesen?",
+        "Tonwechsel auf dem Taktanfang?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e0-3-2": {
+      "title": "C-Dur, erste Lage",
+      "instructions": "Halbe Noten aufwärts und abwärts. In erster Lage gilt hier: Finger entspricht Bund, 0 = leer. Erst zwei Takte lesen und spielen, dann die ganze Folge. Nach einem Lesefehler den nächsten Taktanfang wieder treffen.",
+      "checklist": [
+        "Auf- und Abstieg ohne Suchpause?",
+        "Nach einem Fehler im Puls weitergespielt?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e0-3-3": {
+      "title": "Zufallsfolge C-Dur",
+      "instructions": "Startton finden, Rhythmus klatschen, dann die Folge ohne Anhalten lesen. Dieselbe Folge einmal korrigieren; danach eine neue erzeugen. So prüfst du Lesen statt Auswendiglernen.",
+      "checklist": [
+        "Drei neue Folgen ohne Suchpause gelesen?",
+        "Am nächsten Übetag erneut ohne Lernhilfen geschafft?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "u0-4": {
+      "title": "Rhythmus I",
+      "goal": "Notenlängen und Pausen halten; nach einer Pause sicher einsetzen.",
+      "text": "Zähle Viertel als 1 2 3 4, Achtel als 1 und 2 und 3 und 4 und. Klatsche die notierte Folge zuerst. Spiele sie dann auf einem Ton.\n\nBeim ersten Durchgang zählen, beim zweiten leise weiterzählen und aufnehmen. Die Pausen bleiben Teil des Taktes. Im 3/4-Takt beginnt jede Gruppe nach drei Vierteln neu; daraus folgt nicht automatisch ein Walzerstil."
+    },
+    "e0-4-1": {
+      "title": "Viertel und Halbe",
+      "instructions": "Klatsche, dann spiele die Notenlängen. Halbe halten zwei, Ganze vier Viertel. Beim letzten Takt die Viertelpause vollständig dämpfen.",
+      "checklist": [
+        "Notenenden genauso genau wie Anschläge?",
+        "Zwei Durchgänge ohne verlorene Zählzeit?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e0-4-2": {
+      "title": "Achtel und Pausen",
+      "instructions": "Erst klatschen und Achtel zählen, dann A spielen. Pause aktiv dämpfen. Spiele die unveränderte Folge zweimal; keine zusätzlichen Anschläge zum Auffangen.",
+      "checklist": [
+        "Achtel gleichmäßig?",
+        "Wiedereinsatz nach der Achtelpause auf der richtigen Unterteilung?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e0-4-3": {
+      "title": "Dreiviertel",
+      "instructions": "Zähle 1 2 3. Spiele die Folge und markiere den Taktanfang leicht. Punktierte Halbe = zwei plus eine Viertel, also ein ganzer 3/4-Takt.",
+      "checklist": [
+        "Nach der Pause sicher auf 1?",
+        "Keine zusätzliche vierte Zählzeit?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "u0-5": {
+      "title": "Ton gestalten",
+      "goal": "Geraden Ton und bewusst dosiertes Vibrato unterscheiden.",
+      "text": "Beim seitlichen Saitenziehen steigt die Tonhöhe; beim Zurückführen kehrt sie zum Ausgangston zurück. Das ist kein symmetrisches Schwanken unter und über dem Bundton. Andere Vibratotechniken haben andere Bewegungen.\n\nBeginne hier mit einem geraden Ton und setze ein kleines, langsames Vibrato später ein. Das ist eine Übevorgabe. Sofortiges Vibrato kann musikalisch ebenso passen. Breite und Geschwindigkeit getrennt verändern; Hand und Unterarm sollen dabei beweglich bleiben."
+    },
+    "e0-5-1": {
+      "title": "Vier Takte, drei Klangvarianten",
+      "instructions": "G auf der D-Saite, Bund 5, Ringfinger. Pro Takt einmal anschlagen: Takt 1 gerade; Takt 2 ab Zählzeit 3 schmales Vibrato; Takt 3 etwas breiter bei gleicher Geschwindigkeit; Takt 4 wieder gerade. Aufnahme vergleichen.",
+      "checklist": [
+        "Kehrt das Vibrato jedes Mal zum Ausgangston zurück?",
+        "Unterschied zwischen schmal und breit hörbar?",
+        "Keine anderen Saiten mit angeregt?"
+      ],
+      "position": "III. Lage: G3 auf D-Saite, Bund 5 mit Finger 3."
+    },
+    "u0-6": {
+      "title": "Zwei Stimmen: halten und dämpfen",
+      "goal": "Eine offene Basssaite weiterklingen lassen, während die Melodie pausiert.",
+      "text": "Zwei Stimmen haben eigene Notenlängen. Im gemeinsamen Violinsystem zeigen die Hälse der Melodie nach oben, die des Basses nach unten. Ganze Noten haben keine Hälse. Lies zunächst jede Stimme einzeln, dann beide zusammen. Gitarre klingt weiterhin eine Oktave tiefer als notiert.\n\nHier spielt der Daumen die tiefe E-Saite, Zeige- oder Mittelfinger die Melodie. Plektrum plus freier Finger ist später eine Alternative. Dämpfe unbenutzte Saiten, ohne die beabsichtigte Basssaite abzuwürgen. Wenig Gain hilft, die Stimmen zu unterscheiden."
+    },
+    "e0-6-1": {
+      "title": "Bass hält, Melodie pausiert",
+      "position": "II. Lage: Melodie auf der D-Saite, Bass E leer.",
+      "instructions": "Erst nur den Bass, dann nur die Melodie spielen. Gemeinsam: E2 und E3 anschlagen, E3 nach zwei Vierteln dämpfen, E2 weiterhalten. Im nächsten Takt beide erneut anschlagen. Die Bassstimme am Ende ebenfalls stoppen.",
+      "checklist": [
+        "Melodiepause still, Bass klingt weiter?",
+        "Am Ende beide Stimmen gezielt gedämpft?",
+        "Zwei Durchgänge ohne Saitengeräusche?"
+      ]
+    },
+    "e0-6-2": {
+      "title": "Bass und Melodie unabhängig beginnen",
+      "position": "II. Lage: E3 auf D-Saite; E2 und A2 leer.",
+      "instructions": "Spiele die Melodie erst ab Zählzeit 2. Bass pro Takt auf 1, zunächst E2, dann A2. Beim Basswechsel E abdämpfen und A anschlagen. E3 endet genau zu Beginn von Zählzeit 4. Keine zusätzliche offene Saite soll mitklingen.",
+      "checklist": [
+        "Bass und Melodie setzen getrennt ein?",
+        "Alter Bass beim Wechsel gedämpft?",
+        "Melodie endet auf der richtigen Zählzeit?"
+      ]
+    },
+    "p1": {
+      "title": "Grundton und Phrase",
+      "goal": "E als Bezug hören. Aus kleinen Motiven mit Wiederholung, Pause und Variation eigene Musik formen."
+    },
+    "u1-1": {
+      "title": "E als Bezug, drei Töne als Sprache",
+      "goal": "Eine kurze Idee hören, spielen und identisch wiederholen.",
+      "text": "Beginne jede Phrase mit E und kehre zu E zurück. Dafür ist kein Looper nötig: der wiederkehrende Grundton schafft den Bezug. Wenn du später eine eigene Drone nutzt, bleibt die Aufgabe gleich.\n\nZuerst E, G und B. Summen, auf der tiefen E-Saite finden, wiederholen. Erst danach die übrigen Töne von E-Äolisch ergänzen: E F# G A B C D. Die Schritte zur Oktave sind 2–1–2–2–1–2–2 Halbtöne.\n\nEin Skalenlauf ist Orientierung. Musik entsteht hier durch wiedererkennbare Motive, Tonlängen und Pausen."
+    },
+    "e1-1-2": {
+      "title": "Drei Töne: Idee und Antwort",
+      "instructions": "Nur E, G und B auf der tiefen E-Saite. Singe eine Idee mit höchstens drei Tönen; spiele sie in zwei Takten, dann zwei Takte Pause. Wiederhole sie unverändert. Im nächsten Durchgang nur den letzten Ton ändern. Vier Durchgänge aufnehmen.",
+      "checklist": [
+        "Gesungene Richtung auf der Gitarre getroffen?",
+        "Motiv zweimal erkennbar gleich?",
+        "Nur den Schluss verändert und Pausen gehalten?"
+      ]
+    },
+    "e1-1-1": {
+      "title": "Skala aufwärts, halbe Noten",
+      "instructions": "Nur tiefe E-Saite, halbe Noten. Erst ohne Vibrato. Höre besonders F#–G und B–C als Halbtonschritte. Spiele danach dein Dreitonmotiv erneut und füge genau einen neuen Skalenton hinzu.",
+      "checklist": [
+        "Halbtonschritte ohne Anzeige gefunden?",
+        "Neuer Ton ergänzt das Motiv, ohne es zu verlieren?"
+      ],
+      "position": "Tiefe E-Saite, Bund 0–12; Hand dem Ton nachführen."
+    },
+    "u1-2": {
+      "title": "Drei Saiten, eine Phrase",
+      "goal": "E-Äolisch auf E-, A- und D-Saite; denselben Gedanken in kompakter Lage spielen.",
+      "text": "Das Fenster reicht von leeren Saiten bis Bund 5, auf E, A und D. Gegriffene Töne: Bund 2 mit Finger 1, Bund 3 mit Finger 2, Bund 4 mit Finger 3, Bund 5 mit Finger 4. Leere Saiten brauchen keinen Finger.\n\nDie Noten geben die Saite vor. Besonders G3 bleibt auf der D-Saite in Bund 5. Eine automatisch gewählte leere G-Saite würde dieses Fenster verlassen."
+    },
+    "e1-2-1": {
+      "title": "Fenster aufwärts und abwärts",
+      "instructions": "Spiele zuerst zwei Takte, dann die ganze Folge. Beachte die Saitennummern. G3 bleibt auf der D-Saite. Danach übertrage dein Dreitonmotiv aus der vorigen Einheit in dieses Fenster.",
+      "checklist": [
+        "Alle Töne auf E-, A- und D-Saite?",
+        "Eigenes Motiv im neuen Fenster wiedererkennbar?"
+      ],
+      "position": "Leere Saiten + II. Lage bis Bund 5, E-, A- und D-Saite."
+    },
+    "e1-2-2": {
+      "title": "Fenster, Viertel und Halbe",
+      "instructions": "Zwei Takte Phrase, zwei Takte Pause. Endton E, G oder B vorab wählen und singen. Phrase spielen, wiederholen, dann nur ihren Rhythmus ändern. Vier Durchgänge mit Half-time-Drums.",
+      "checklist": [
+        "Zielton wie geplant erreicht?",
+        "Rhythmus geändert, Tonfolge behalten?",
+        "Nach zwei Takten Pause sicher eingesetzt?"
+      ]
+    },
+    "e1-2-3": {
+      "title": "Zufallsfolge E-Äolisch",
+      "instructions": "Lies die Folge im Drei-Saiten-Fenster. Erst Richtung und Rhythmus erfassen, dann ohne Anhalten spielen. F# steht in der Vorzeichnung. Eine neue Folge erst nach einem Korrekturversuch.",
+      "checklist": [
+        "Neue Folge ohne Suchpause?",
+        "G3 auf D-Saite geblieben?"
+      ],
+      "position": "Leere Saiten + II. Lage bis Bund 5, E-, A- und D-Saite."
+    },
+    "u1-pedal": {
+      "title": "Pedalton und Melodie",
+      "goal": "Auf einer Gitarre einen Bassbezug und eine selbstständige Melodie spielen.",
+      "text": "Ein Pedalton bleibt liegen oder kehrt wieder, während sich andere Töne darüber bewegen. In diesen Übungen ist E der feste Bass. Das ist eine kleine Form von Mehrstimmigkeit: Bass und Melodie behalten ihre eigenen Dauern.\n\nSpiele zuerst jede Stimme allein. Danach den Bass gleichmäßig pro Takt und die Melodie darüber. Ein Ton mit Haltebogen darf nicht neu angeschlagen werden. Die offene E-Saite begrenzt hier die Transposition: verschiebst du die Melodie, bleibt der Bass E.\n\nWenig Verzerrung und eine leise Bassstimme machen die Melodie besser unterscheidbar. Prüfe denselben Satz danach mit deinem gewohnten Klang. Akkorde, Arpeggien und wechselnde Bässe bauen später darauf auf."
+    },
+    "e1-pedal-1": {
+      "title": "Offenes E unter einer singenden Stimme",
+      "position": "II. Lage, D-Saite: E3 mit 1, F#3 mit 3, G3 mit 4. Bass E leer.",
+      "instructions": "Melodie auf der D-Saite, Bass mit Daumen auf E leer. E2 pro Takt anschlagen. Die Melodie hält E3 über den zweiten Takt hinweg; nur den Bass neu anschlagen. Im letzten Takt die Melodie zwei Viertel früher als den Bass beenden.",
+      "checklist": [
+        "Bass leiser als Melodie?",
+        "Gehaltenes E3 bleibt beim neuen Bassanschlag liegen?",
+        "Letzte Melodiepause still, Bass klingt weiter?"
+      ]
+    },
+    "e1-pedal-2": {
+      "title": "Eigene Antwort über E",
+      "position": "II. Lage auf D-Saite, Bass E leer.",
+      "instructions": "Nimm das Notenbeispiel als Frage. Spiele es einmal unverändert. Behalte danach Bassrhythmus und Melodierhythmus, ändere nur die Melodietöne aus E3, F#3 und G3. Die Antwort endet auf E3. Notiere deine Variante und spiele sie am nächsten Übetag vom Blatt.",
+      "checklist": [
+        "Bass unverändert, Melodie gezielt variiert?",
+        "Antwort ohne Suche wiederholt?",
+        "Eigene Notation entspricht dem Gespielten?"
+      ]
+    },
+    "u1-3": {
+      "title": "Lange Töne und Pausen",
+      "goal": "Eine Phrase durch Tonlänge, Höhepunkt und Stille gliedern.",
+      "text": "Ein Haltebogen verbindet gleiche Tonhöhen: nur die erste Note anschlagen, beide Werte zusammen halten. Eine Pause beendet den Ton. Haltebogen und Phrasierungsbogen sind verschiedene Zeichen; der Player zeigt hier nur Haltebögen.\n\nGestalte einen Zielton durch längere Dauer oder stärkeren Anschlag. Der höchste Ton muss nicht automatisch der lauteste sein. Vergleiche zwei Gestaltungen desselben Motivs."
+    },
+    "e1-3-1": {
+      "title": "Haltebögen",
+      "instructions": "Höre die Folge, zähle dann ihre Dauern und spiele. Noten unter Haltebögen nicht erneut anschlagen. Wähle B oder C als Höhepunkt und gestalte nur diesen deutlicher.",
+      "checklist": [
+        "Kein neuer Anschlag unter einem Haltebogen?",
+        "Höhepunkt auf der Aufnahme erkennbar?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e1-3-2": {
+      "title": "Vier auf, vier ab",
+      "instructions": "Vier Takte Phrase, vier Takte Pause. Nimm dein bekanntes Motiv; verlängere einen Ton zum Höhepunkt. Wiederhole dieselbe Phrase. Dritter Versuch: anderer Höhepunkt, gleiche Töne.",
+      "checklist": [
+        "Motiv trotz längerer Töne erkennbar?",
+        "Zweiter Höhepunkt verändert die Wirkung?",
+        "Wiedereinsatz nach vier Takten sicher?"
+      ]
+    },
+    "u1-4": {
+      "title": "Phrygisch: F statt F#",
+      "goal": "Die zweite Stufe als gezielte Farbe hören und einsetzen.",
+      "text": "E-Äolisch enthält F#, E-Phrygisch F. Sonst ist das Tonmaterial gleich. Im folgenden Notenbeispiel steht ein Kreuz in der Vorzeichnung; F erhält deshalb ein Auflösungszeichen. Ein Versetzungszeichen gilt für dieselbe Tonhöhe bis zum Taktstrich.\n\nF–E ist hier unsere Schlusswendung. Sie ist keine allgemeine Pflicht: F–G ist ein mögliches Gegenbeispiel. Wie gespannt F klingt, hängt unter anderem von Bass, Lage, Dauer und Betonung ab. Keine Skala allein erzeugt den Klang einer Band."
+    },
+    "e1-4-1": {
+      "title": "F gegen F#",
+      "instructions": "Vergleiche die ersten beiden Takte. Singe erst E–F#–G, dann E–F–G. Spiele anschließend die ganze Folge. Wiederhole das Paar ohne Anzeige; beschreibe im Log, welchen Unterschied du hörst.",
+      "checklist": [
+        "F und F# in der richtigen Variante gespielt?",
+        "Unterschied auch ohne Diagramm hörbar?"
+      ],
+      "position": "I. Lage bis Bund 4 mit leeren Saiten."
+    },
+    "e1-4-2": {
+      "title": "Zwei Wege mit F",
+      "instructions": "Zwei Takte Phrase, zwei Takte Pause. Verwende E, F, G und B. Beende zuerst jede Phrase mit F–E. Danach einmal F–G spielen und erst später nach E zurückkehren. Wiederhole die Variante, die deine Klangvorstellung besser trifft.",
+      "checklist": [
+        "Beide Schlusswege bewusst ausprobiert?",
+        "Gewählte Variante reproduzierbar?",
+        "Puls bleibt trotz Spannung ruhig?"
+      ]
+    },
+    "u1-5": {
+      "title": "Gehör: vom inneren Klang zum Instrument",
+      "goal": "Ein selbst gesungenes Motiv finden und aufschreiben.",
+      "text": "Nimm auf dem Handy eine kurze gesungene Idee auf: drei bis fünf Töne, ausgehend von E in einer bequemen Oktave. Spiele sie nach, ohne während des Suchens die Aufnahme umzudeuten.\n\nErst Rhythmus klatschen, dann Richtung und Tonhöhen finden. Schreibe die gefundenen Töne in Notenschrift. Die Aufnahme bleibt die Referenz. Optional dieselbe Methode auf einen kurzen Ausschnitt deiner Referenzalben anwenden; keine vollständige Transkription nötig."
+    },
+    "e1-5-1": {
+      "title": "Eigenes Motiv heraushören",
+      "instructions": "Singe ein Motiv aus E, G, A und B, nimm es auf und finde es im Drei-Saiten-Fenster. Notiere Rhythmus und Tonhöhen auf Papier. Am nächsten Übetag vom Blatt spielen und mit der ursprünglichen Aufnahme vergleichen.",
+      "checklist": [
+        "Tonfolge entspricht der Gesangsaufnahme?",
+        "Rhythmus entspricht der Aufnahme?",
+        "Vom eigenen Notenblatt reproduziert?"
+      ]
+    },
+    "u1-6": {
+      "title": "Bilanz: eine kleine Form",
+      "goal": "Eine vorbereitete Idee musikalisch entwickeln und wiederholen.",
+      "text": "Acht Takte für eine Gitarre allein: zwei Takte Motiv, zwei Antwort, zwei Variation, zwei Schluss. Offenes E als Bass am Taktanfang, darüber eine Melodie auf D- und G-Saite. II. Lage bis Bund 5: D-Saite E3 F#3 G3, G-Saite A3 B3. Melodie endet auf E3.\n\nNotiere zuerst zwei Takte mit beiden Stimmen. Spiele langsam vom Blatt, entwickle daraus die Form und nimm sie auf. Höre am nächsten Übetag auf unabhängige Tonenden, ruhigen Bass und erkennbare Melodie. Danach eine Aufnahme ohne Drums. Wenn beide Stimmen noch stocken, die Pedalton-Einheit wiederholen."
+    },
+    "e1-6-1": {
+      "title": "Acht Takte eigene Musik",
+      "instructions": "Spiele die achttaktige Miniatur mit eigener Bassstimme. Bass pro Takt, Melodie mit langen Tönen und einer Pause. Erst mit Klick oder Drums, dann allein aufnehmen. Am nächsten Übetag aus der eigenen Notation wiederholen.",
+      "checklist": [
+        "Bass und Melodie bleiben unabhängig?",
+        "Motiv, Antwort und Variation erkennbar?",
+        "Pausen und Tonenden kontrolliert?",
+        "Ohne Begleitung an einem weiteren Übetag wiederholt?"
+      ],
+      "position": "II. Lage auf D- und G-Saite bis Bund 5; Bass E leer."
+    },
+    "p2": {
+      "title": "Zweiklänge und Arpeggien",
+      "goal": "Pedalbass, Terzen und gebrochene Dreiklänge verbinden; Stimmen getrennt lesen."
+    },
+    "u2-1": {
+      "title": "Dreiklänge im Fenster",
+      "goal": "Moll und Dur greifen, offenen Bass beibehalten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u2-2": {
+      "title": "Umkehrungen",
+      "goal": "Melodie bei kompakten Griffwechseln oben halten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u2-3": {
+      "title": "Terzen als zweite Stimme",
+      "goal": "Terzparallelen mit kontrollierten Tonenden.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "p3": {
+      "title": "Bewegter Bass und Lamento",
+      "goal": "Vom Pedalton zum absteigenden Bass; Melodie unabhängig führen."
+    },
+    "u3-1": {
+      "title": "Absteigender Bass",
+      "goal": "Bass und Melodie getrennt lesen, dann verbinden.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u3-2": {
+      "title": "Quintfall",
+      "goal": "Eine Melodie durch wechselnde Harmonien führen.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u3-3": {
+      "title": "Gehör und Arrangement",
+      "goal": "Eine kurze Referenz auf Bass und Melodie reduzieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "p4": {
+      "title": "Harmonisch Moll",
+      "goal": "Leitton und Dominante; modale Farbe von tonaler Kadenz unterscheiden."
+    },
+    "u4-1": {
+      "title": "Der Leitton",
+      "goal": "D# nach E im Zusammenhang einer Kadenz.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u4-2": {
+      "title": "Verminderter Septakkord",
+      "goal": "Einzelne Stimmen in den Folgeakkord führen.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u4-3": {
+      "title": "Eine kurze Kadenz",
+      "goal": "Kadenz lesen, hören und variieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "p5": {
+      "title": "Sequenz und Figuration",
+      "goal": "Motive durch Sequenzen und gebrochene Akkorde entwickeln."
+    },
+    "u5-1": {
+      "title": "Kleine Sequenzen",
+      "goal": "Ein kurzes Motiv durch die Skala bewegen.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u5-2": {
+      "title": "Arpeggien und Melodie",
+      "goal": "Melodie in gebrochenen Akkorden hörbar halten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u5-3": {
+      "title": "Sequenz über bewegtem Bass",
+      "goal": "Figuration und harmonischen Rhythmus koordinieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "p6": {
+      "title": "Kontrastfarben",
+      "goal": "Quarten und lydische Farbe gezielt als Kontrast einsetzen."
+    },
+    "u6-1": {
+      "title": "Quartenklänge",
+      "goal": "Offene Klänge lesen und ausbalancieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u6-2": {
+      "title": "Lydischer Kontrast",
+      "goal": "Erhöhte Quarte über klarem Grundton hören.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "p7": {
+      "title": "Rhythmus II",
+      "goal": "Unabhängige Stimmen bei Unterteilungen und wechselnden Gruppen stabil halten."
+    },
+    "u7-1": {
+      "title": "Triolen",
+      "goal": "Drei gleichmäßige Unterteilungen lesen und hören.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u7-2": {
+      "title": "Gruppierung",
+      "goal": "Akzente über einem stabilen Puls verschieben.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u7-3": {
+      "title": "Ungerade Takte",
+      "goal": "7/8 in klaren Gruppen lesen und daraus phrasieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "p8": {
+      "title": "Eigenes Arrangement",
+      "goal": "Pedaltöne, bewegten Bass, Melodie, Arpeggien und Akkorde zu einem Solostück verbinden."
+    },
+    "u8-1": {
+      "title": "Ein vollständiger Bogen",
+      "goal": "Anfang, Entwicklung, Kontrast und Rückkehr.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u8-2": {
+      "title": "Soloarrangement",
+      "goal": "Eigenständiges Arrangement notieren, spielen und überarbeiten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "keys": {
+      "title": "Keyboard",
+      "lead": "Melodie und ruhige Begleitung. Auf Synthesizer und Klavier spielbar."
+    },
+    "k0": {
+      "title": "Fundament",
+      "goal": "Anschlag, Notenlesen und einfache Handkoordination prüfen. Ein Sound genügt."
+    },
+    "ku0-1": {
+      "title": "Einstieg: Anschlag und Puls",
+      "goal": "Kurze Folgen mit jeder Hand ruhig und kontrolliert spielen.",
+      "text": "Wähle einen klar ansprechenden Klang. Sitze so, dass Unterarme und Handgelenke beweglich bleiben. Die Finger sind locker gewölbt; Arm und Hand dürfen die Bewegung unterstützen. Taste nach ihrer notierten Dauer freigeben, nicht grundsätzlich sofort.\n\nFingerzahlen gelten an beiden Händen: 1 = Daumen, 5 = kleiner Finger. Spiele die beiden Folgen zunächst einzeln. Wenn sie ohne Hilfen sicher sind, direkt zur Handkoordination weitergehen. Gleichmäßige Lautstärke ist hier eine Kontrollaufgabe, kein Ideal für jede Musik."
+    },
+    "ke0-1-1": {
+      "title": "Fünffingerlage A-Moll, rechte Hand",
+      "instructions": "Rechte Hand: Daumen A4, kleiner Finger E5. Erst ohne Klick, dann mit. Lies zwei Takte voraus und spiele die Folge. Zweiter Versuch ohne Lernhilfen.",
+      "checklist": [
+        "Puls ohne Suchpause?",
+        "Töne ungefähr gleich laut?",
+        "Hand bleibt beweglich?"
+      ]
+    },
+    "ke0-1-2": {
+      "title": "Fünffingerlage A-Moll, linke Hand",
+      "instructions": "Linke Hand: kleiner Finger A2, Daumen E3. Die Folge allein lesen und spielen. Auf dem Synth bei Bedarf die Oktavlage einstellen; C4 bezeichnet hier MIDI-Note 60, unabhängig von der Anzeige am Gerät.",
+      "checklist": [
+        "Bassschlüssel ohne Tonname gelesen?",
+        "Notenlängen eingehalten?"
+      ]
+    },
+    "ku0-2": {
+      "title": "Ein Klang, eine Begleitung",
+      "goal": "Ohne Soundprogrammierung anfangen können.",
+      "text": "Ein einzelner Klang über die ganze Tastatur genügt. Am MX49 eignet sich ein Piano oder E-Piano, am Nord Lead A1 oder Blofeld ein klar ansprechender polyphoner Klang. Split, Layer, Arpeggiator und lange Hallfahnen sind für diese Übungen nicht nötig.\n\nPrüfe, ob stärkerer Anschlag bei deinem Klang Lautstärke oder Klangfarbe verändert. Wenn nicht, gestalte zunächst mit Rhythmus, Register und Tonlänge. Ein ausgehaltener Synth-Ton und ein verklingender Klavierton verhalten sich verschieden.\n\nKlick und Drums kommen über den zentral gewählten MIDI-Ausgang. Bei Nutzung des MX49 als Klaviatur und Drumklangerzeuger liegt das Drum-Kit auf Part 10. Die linke Hand erzeugt ihren Bezugston selbst."
+    },
+    "ke0-2-1": {
+      "title": "Klang und MIDI prüfen",
+      "instructions": "Spiele einen kurzen und einen langen Ton, danach denselben Ton leise und kräftiger. Beschreibe, worauf der Klang reagiert. Starte den MIDI-Klick und spiele vier ruhige Takte. Speichere den Klang am Instrument, falls nötig.",
+      "checklist": [
+        "Kurze Töne und Pausen hörbar getrennt?",
+        "Reaktion auf Anschlag geprüft?",
+        "Klick vom vorgesehenen Gerät hörbar?"
+      ]
+    },
+    "ku0-3": {
+      "title": "Tasten und Intervalle",
+      "goal": "Fünf benachbarte Töne als Form hören und greifen.",
+      "text": "Halbton = unmittelbar benachbarte Taste, einschließlich schwarzer Tasten. Ganzton = zwei Halbtonschritte. E–F und B–C sind benachbarte weiße Tasten und liegen nur einen Halbton auseinander.\n\nZuerst Fünftonräume: A B C D E, dann E F# G A B und D E F G A. Jede rechte Hand bleibt bei 1–2–3–4–5. Die vollständigen Mollskalen sind größer; diese Übungen decken jeweils nur deren erste fünf Stufen ab."
+    },
+    "ke0-3-1": {
+      "title": "A-Moll: fünf Töne",
+      "instructions": "Rechts A4 B4 C5 D5 E5, Finger 1–2–3–4–5. Spiele aufwärts und abwärts. Singe dann eine Dreitonidee aus diesem Raum und spiele sie nach. Dieselbe Idee wiederholen, nur den letzten Ton ändern.",
+      "checklist": [
+        "Auf- und Abstieg ohne Suchpause?",
+        "Dreitonidee zweimal wiederholt?"
+      ]
+    },
+    "ke0-3-2": {
+      "title": "E-Moll: fünf Töne",
+      "instructions": "Rechts E4 F#4 G4 A4 B4, Finger 1–2–3–4–5. Spiele aufwärts und abwärts. Singe dann eine Dreitonidee aus diesem Raum und spiele sie nach. Dieselbe Idee wiederholen, nur den letzten Ton ändern.",
+      "checklist": [
+        "Auf- und Abstieg ohne Suchpause?",
+        "Dreitonidee zweimal wiederholt?"
+      ]
+    },
+    "ke0-3-3": {
+      "title": "D-Moll: fünf Töne",
+      "instructions": "Rechts D4 E4 F4 G4 A4, Finger 1–2–3–4–5. Spiele aufwärts und abwärts. Singe dann eine Dreitonidee aus diesem Raum und spiele sie nach. Dieselbe Idee wiederholen, nur den letzten Ton ändern.",
+      "checklist": [
+        "Auf- und Abstieg ohne Suchpause?",
+        "Dreitonidee zweimal wiederholt?"
+      ]
+    },
+    "ke0-3-4": {
+      "title": "Quinten und Terzen",
+      "instructions": "Links A2–E3 mit 5–1, zunächst nacheinander, dann gemeinsam. Rechts A4–C5 mit 1–3; danach C5 durch C#5 ersetzen. Höre kleine und große Terz im direkten Vergleich.",
+      "checklist": [
+        "Quinte locker erreichbar?",
+        "A–C und A–C# gezielt unterschieden?"
+      ]
+    },
+    "ku0-4": {
+      "title": "Notenschrift I",
+      "goal": "Beide Schlüssel in kleinem Tonraum lesen.",
+      "text": "C4 liegt auf der Hilfslinie unter dem Violinsystem beziehungsweise über dem Basssystem. Die Notenbeispiele bezeichnen Tonhöhen nach MIDI: C4 = 60. Instrumentanzeigen können andere Oktavnummern verwenden.\n\nViolinschlüssel: Linien E G B D F, Zwischenräume F A C E. Bassschlüssel: Linien G B D F A, Zwischenräume A C E G. B = deutsches H, Bb = deutsches B.\n\nZuerst Hände einzeln, dann gemeinsam. Neue Folgen vorab rhythmisch klatschen. Nicht jeden Ton isoliert entziffern: Richtung und Abstände mitlesen.\n\nGanze: offener Notenkopf ohne Hals, vier Viertel. Halbe: offener Kopf mit Hals, zwei Viertel. Viertel: gefüllter Kopf mit Hals. Achtel: zusätzlich ein Fähnchen oder Balken, zwei pro Viertel. Der Punkt verlängert um die Hälfte des Werts. Pausen zählen ebenso lang wie ihre entsprechenden Noten. Im 4/4-Takt stehen vier Viertel zwischen zwei Taktstrichen.\n\n♯ erhöht um einen Halbton, ♭ erniedrigt; ♮ hebt das Vorzeichen auf. Vorzeichnung am Systemanfang: alle Oktaven des Tonnamens. Einzelnes Versetzungszeichen: dieselbe Oktavlage bis zum Taktstrich."
+    },
+    "ke0-4-1": {
+      "title": "Gegenbewegung von C aus",
+      "instructions": "Rechts vom mittleren C4 aufwärts, links von C3 eine Oktave darunter abwärts. Hände zunächst einzeln, dann gleichzeitig spielen. Die Daumen beginnen auf verschiedenen Tasten. Erst die ersten zwei Takte verbinden; danach verlängern.",
+      "checklist": [
+        "Beide Hände einzeln ohne Hilfen?",
+        "Gemeinsame Tonwechsel gleichzeitig?"
+      ]
+    },
+    "ke0-4-2": {
+      "title": "Zufallsfolge Violinschlüssel",
+      "instructions": "Nur C4–G4, Finger 1–5. Rhythmus klatschen, Startton finden, einmal ohne Anhalten lesen. Nach einem Korrekturversuch eine neue Folge erzeugen.",
+      "checklist": [
+        "Drei neue Folgen im Puls gelesen?",
+        "Ohne Tonnamen an einem weiteren Übetag wiederholt?"
+      ]
+    },
+    "ke0-4-3": {
+      "title": "Zufallsfolge Bassschlüssel",
+      "instructions": "Nur C3–G3: links Finger 5–1. Wie rechts klatschen, lesen, korrigieren und eine neue Folge prüfen. Hände zunächst getrennt üben.",
+      "checklist": [
+        "Bassschlüssel ohne Tonnamen gelesen?",
+        "Drei neue Folgen ohne Suchpause?"
+      ]
+    },
+    "ku0-5": {
+      "title": "Zwei Hände, ein Puls",
+      "goal": "Links ruhig halten, rechts Noten und Pausen unterscheiden.",
+      "text": "Klatsche erst den Rhythmus der rechten Hand. Spiele dann links allein die langen Töne. Kombiniere zunächst einen Takt; erweitere erst, wenn beide Hände ihre Notenlängen behalten.\n\nAm Klavier verklingt der gehaltene Basston. Lass die Taste trotzdem bis zum notierten Ende unten. Am Synth kann der Ton weitertragen. Beides ist für diese Aufgabe richtig."
+    },
+    "ke0-5-1": {
+      "title": "Ganze gegen Viertel",
+      "instructions": "Links A2 mit Finger 5 jeden Takt neu anschlagen und halten. Rechts A4 und E5 mit 1 und 5. In der rechten Pause bleibt links die Taste gedrückt. Ohne Pedal.",
+      "checklist": [
+        "Linke Hand hält durch die rechte Pause?",
+        "Beide Hände beginnen gemeinsam auf 1?"
+      ]
+    },
+    "ke0-5-2": {
+      "title": "Achtel und Pausen",
+      "instructions": "Rechts allein, ohne Pedal. Achtel zunächst klatschen. Taste am Pausenbeginn freigeben. Bei einem Synth mit langem Ausklang einen kürzeren Klang wählen.",
+      "checklist": [
+        "Pause hörbar?",
+        "Nach der Achtelpause im Puls eingesetzt?"
+      ]
+    },
+    "ke0-5-3": {
+      "title": "Dreiviertel, beide Hände",
+      "instructions": "Links jede punktierte Halbe drei Viertel halten. Rechts die Folge erst allein, dann zusammen spielen. Leichte Betonung am Taktanfang.",
+      "checklist": [
+        "Drei Viertel pro Takt beibehalten?",
+        "Basswechsel gleichzeitig mit Taktanfang?"
+      ]
+    },
+    "ku0-6": {
+      "title": "Dynamik und Tonende",
+      "goal": "Eine Phrase mit Anschlag und Artikulation gestalten.",
+      "text": "Am Klavier beeinflusst der Anschlag den Beginn des Tons. Ein bereits angeschlagener Ton lässt sich durch weiteren Tastendruck nicht lauter machen. Für ein Crescendo brauchst du mehrere Anschläge. Am Synth hängt die Reaktion vom Klangprogramm ab.\n\nSustain verlängert Töne nach dem Loslassen der Tasten. Übe zunächst ohne Pedal. Die optionale Pedalaufgabe gilt für Klavier oder einen passend reagierenden Klang. Ohne Pedal ist gebundenes Fingerspiel die reguläre Alternative."
+    },
+    "ke0-6-1": {
+      "title": "Ein hörbarer Bogen",
+      "instructions": "E4: acht Viertel allmählich lauter, dann acht allmählich leiser. Anschläge sollen einen Bogen bilden; nicht acht exakt verschiedene Stufen erzwingen. Reagiert dein Synth nicht auf Velocity, dieselbe Folge erst kurz, dann gebunden gestalten.",
+      "checklist": [
+        "Lautstärkebogen oder Artikulationsunterschied hörbar?",
+        "Puls bleibt bei stärkerem Anschlag gleich?"
+      ]
+    },
+    "ke0-6-2": {
+      "title": "Verbinden, optional mit Pedal",
+      "instructions": "Ohne Pedal A4–C5–E5–A4 mit Fingern 1–3–5–1 verbinden. Optional mit Sustain: ersten Ton anschlagen, Pedal danach senken. Beim nächsten Anschlag Pedal kurz lösen und erneut senken. So bleibt die Verbindung, während alte Töne ausgedämpft werden.",
+      "checklist": [
+        "Ohne Pedal Tonwechsel kontrolliert?",
+        "Mit Pedal, falls vorhanden: keine angesammelten alten Töne?"
+      ]
+    },
+    "k1": {
+      "title": "Grundton und Phrase",
+      "goal": "Links ein ruhiger Bezug, rechts wiederholbare Melodien. Äolisch und Phrygisch bewusst unterscheiden."
+    },
+    "ku1-1": {
+      "title": "Grundton links, Motiv rechts",
+      "goal": "Drei Töne zu einer wiederholbaren Melodie verbinden.",
+      "text": "Beginne rechts mit E4, G4 und B4: Finger 1, 3 und 5. Singe ein Motiv, spiele es nach, wiederhole es. Links zunächst nur E3 am Beginn jedes Taktes; später E3 und B3 mit 5–1 gemeinsam. Halten, aber nicht verkrampfen.\n\nAm Klavier jeden neuen Takt wieder anschlagen, am Synth ebenso üben. Ein separater Pad-Sound ist nicht erforderlich. Die volle Skala folgt erst nach dem Motiv: rechts E4–E5 mit 1–2–3–1–2–3–4–5. Nach G die Hand seitlich weiterführen und den Daumen auf A setzen; nicht unter einer starren Hand verdrehen."
+    },
+    "ke1-1-2": {
+      "title": "Drei Töne über E",
+      "instructions": "Rechts aus E4, G4 und B4 eine Dreitonidee singen und nachspielen. Zwei Takte Melodie, zwei Takte nur linker Bezugston. Links E3 jede 1. Wiederhole das Motiv, ändere danach nur den Schluss. Vier Durchgänge.",
+      "checklist": [
+        "Motiv zweimal gleich gespielt?",
+        "Links ruhig trotz rechter Pause?",
+        "Veränderung auf den Schluss begrenzt?"
+      ]
+    },
+    "ke1-1-1": {
+      "title": "E-Äolisch über Quinte",
+      "instructions": "Zuerst rechte Hand allein, Daumenwechsel nach G. Dann links E3–B3 am Anfang jedes Taktes neu anschlagen. Falls beides noch stockt, links nur E3. Danach das eigene Motiv um genau einen Skalenton erweitern.",
+      "checklist": [
+        "Rechts mit ruhigem Daumenwechsel?",
+        "Links nur am Taktanfang neu angeschlagen?",
+        "Motiv um einen Ton erweitert?"
+      ]
+    },
+    "ku1-2": {
+      "title": "Eine Melodie atmet",
+      "goal": "Lange Töne, klare Pausen und ein gestalteter Höhepunkt.",
+      "text": "Haltebögen verbinden gleiche Tonhöhen: nur am Anfang anschlagen. Links wird die Quinte hier in jedem Takt erneuert. Das funktioniert mit ausklingendem Klavier und gehaltenem Synth gleichermaßen.\n\nGestalte den Höhepunkt durch Anschlag oder längere Dauer. Er muss nicht der höchste Ton sein. Ohne Pedal beginnen; lange Hall- oder Release-Zeiten dürfen die Melodiepausen nicht verdecken."
+    },
+    "ke1-2-1": {
+      "title": "Haltebögen über Drone",
+      "instructions": "Rechts die gebundenen Töne ohne Neuanschlag halten. Links E3–B3 pro Takt erneuern. Rechts zunächst allein lesen. Wähle B4 oder C5 als Höhepunkt und vergleiche beide Fassungen.",
+      "checklist": [
+        "Haltebögen rechts korrekt?",
+        "Links bleibt gleichmäßig und leiser als rechts?",
+        "Gewählter Höhepunkt hörbar?"
+      ]
+    },
+    "ke1-2-2": {
+      "title": "Vier auf, vier ab",
+      "instructions": "Vier Takte Melodie, vier Takte nur linker Bezugston. Entwickle dein Dreitonmotiv mit einem längeren Zielton. Wiederhole die Phrase; ändere beim dritten Mal nur den Höhepunkt.",
+      "checklist": [
+        "Motiv erkennbar?",
+        "Rechts in der Pause still, links weiter ruhig?",
+        "Nächster Einsatz auf 1?"
+      ]
+    },
+    "ku1-3": {
+      "title": "Motiv und Antwort",
+      "goal": "Mit wenig Material einen Zusammenhang hörbar machen.",
+      "text": "Wiederholung gibt dem Ohr einen Bezug. Ändere danach genau eine Eigenschaft: Schlussnote, Rhythmus oder Register. Ein Kontrast wird erst verständlich, wenn zuvor etwas erkennbar war.\n\nDoppelgriff-Terzen kommen später. Hier bleibt die rechte Hand bei einer Melodiestimme. Am Synth wie am Klavier kann eine klare Melodie mit ruhigem Bass bereits ein vollständiger musikalischer Gedanke sein."
+    },
+    "ke1-3-1": {
+      "title": "Ein Motiv, zwei Schlüsse",
+      "instructions": "Rechts das notierte Motiv zweimal spielen, links den Grundton pro Takt. Danach die letzte rechte Note B4 durch E4 ersetzen. Singe beide Schlüsse und vergleiche offenere und geschlossenere Wirkung.",
+      "checklist": [
+        "Wiederholungen rhythmisch gleich?",
+        "Nur den letzten Ton geändert?",
+        "Beide Fassungen ohne Anzeige abrufbar?"
+      ]
+    },
+    "ke1-3-2": {
+      "title": "Antworten statt Skalenlaufen",
+      "instructions": "Zwei Takte eigenes Motiv aus E4, G4, A4 und B4, zwei Takte Antwort. Rechts nur eine Stimme. Links E3 auf jeder 1. Antwort mit denselben Tönen, aber einer längeren Schlussnote gestalten. Zwei gleiche Durchgänge, dann eine Variation.",
+      "checklist": [
+        "Antwort greift das Motiv auf?",
+        "Bass ruhig und Melodie deutlich?",
+        "Wiederholung ohne Suchpause?"
+      ]
+    },
+    "ku1-4": {
+      "title": "Phrygisch: F statt F#",
+      "goal": "Zwei Farben mit demselben Grundton vergleichen.",
+      "text": "E-Äolisch enthält F#, E-Phrygisch F. In unserem Notenbeispiel hebt ein Auflösungszeichen das vorgezeichnete F# für die jeweilige Oktavlage bis zum Taktende auf.\n\nF–E ist eine mögliche Schlusswendung. F–G ist ein Gegenbeispiel zur Behauptung, F müsse immer nach unten gehen. Prüfe beide bei gleichem Rhythmus und gleichem Bass."
+    },
+    "ke1-4-1": {
+      "title": "F gegen F#",
+      "instructions": "Rechts erst die ersten beiden Takte vergleichen: E–F#–G gegen E–F–G. Dann links E3–B3 pro Takt ergänzen. Spiele die ganze Folge, ohne das Tempo beim weißen F zu verändern.",
+      "checklist": [
+        "F und F# bewusst unterschieden?",
+        "Links gleich, während rechts die Farbe wechselt?"
+      ]
+    },
+    "ke1-4-2": {
+      "title": "Phrygisch mit Drums",
+      "instructions": "Rechts E4, F4, G4 und B4, links E3 pro Takt. Zwei Takte Phrase, zwei Takte nur Bass. Erst mit F–E enden; danach F–G ausprobieren und später nach E zurückkehren. Gewählte Variante wiederholen.",
+      "checklist": [
+        "Beide Wege mit F ausprobiert?",
+        "Gewählte Phrase reproduzierbar?",
+        "Linke Hand im Puls?"
+      ]
+    },
+    "ku1-5": {
+      "title": "Vom Singen zum Spielen",
+      "goal": "Eine eigene Idee nach Gehör auf die Tasten bringen.",
+      "text": "Singe eine kurze Idee aus E, G, A und B in bequemer Oktave und nimm sie auf. Suche danach die Töne auf der Tastatur. Die Aufnahme ist der Vergleich; passe sie beim Suchen nicht unbemerkt an bequemere Töne an.\n\nNotiere nur die Melodie mit Rhythmus im Violinschlüssel. Eine linke Begleitung kommt erst hinzu, wenn die Melodie der Aufnahme entspricht. Optional später einen kurzen Ausschnitt deiner Referenzen nach demselben Verfahren bearbeiten."
+    },
+    "ke1-5-1": {
+      "title": "Eigenes Motiv heraushören",
+      "instructions": "Nimm drei bis fünf gesungene Töne auf. Klatsche den Rhythmus, finde die Melodie rechts und notiere sie. Am nächsten Übetag vom Blatt spielen und mit der Aufnahme vergleichen; dann links E3 pro Takt ergänzen.",
+      "checklist": [
+        "Tonfolge und Rhythmus wie gesungen?",
+        "Vom eigenen Notenblatt wiedergefunden?",
+        "Mit Bass bleibt die Melodie gleich?"
+      ]
+    },
+    "ku1-6": {
+      "title": "Bilanz: eine kleine Form",
+      "goal": "Eine wiederholbare Miniatur mit Melodie und Bass spielen.",
+      "text": "Acht Takte in E-Äolisch: zwei Motiv, zwei Antwort, zwei Variation, zwei Schluss. Links E3 oder E3–B3 pro Takt. Rechts eine Melodiestimme mit einer bewussten Pause; Schluss auf E.\n\nErst mit Klick oder Drums aufnehmen. An einem weiteren Übetag ohne Begleitung spielen und auf einen ruhigen Puls achten. Das ist die Brücke zum frei verfügbaren Klavier. Auf dem Synth dieselbe Form mit passendem Tonende gestalten. Phrygisch später separat mit denselben Kriterien prüfen."
+    },
+    "ke1-6-1": {
+      "title": "Acht Takte für Synth und Klavier",
+      "instructions": "Spiele die achttaktige Form zweimal. E-Äolisch rechts in E4–E5, links ruhiger Bezugston. Höre die Aufnahme am nächsten Übetag und ändere genau eine Stelle. Zweite Aufnahme ohne Klick oder Drums.",
+      "checklist": [
+        "Motiv und Variation erkennbar?",
+        "Melodie deutlich über dem Bass?",
+        "Pausen bleiben hörbar?",
+        "An zwei Übetagen ohne Lernhilfen wiederholt, davon einmal ohne Begleitung?"
+      ]
+    },
+    "k2": {
+      "title": "Zweiklänge und Arpeggien",
+      "goal": "Pedalbass, Terzen und gebrochene Dreiklänge verbinden; Stimmen getrennt lesen."
+    },
+    "ku2-1": {
+      "title": "Dreiklänge im Fenster",
+      "goal": "Moll und Dur greifen, offenen Bass beibehalten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku2-2": {
+      "title": "Umkehrungen",
+      "goal": "Melodie bei kompakten Griffwechseln oben halten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku2-3": {
+      "title": "Terzen als zweite Stimme",
+      "goal": "Terzparallelen mit kontrollierten Tonenden.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "k3": {
+      "title": "Bewegter Bass und Lamento",
+      "goal": "Vom Pedalton zum absteigenden Bass; Melodie unabhängig führen."
+    },
+    "ku3-1": {
+      "title": "Absteigender Bass",
+      "goal": "Bass und Melodie getrennt lesen, dann verbinden.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku3-2": {
+      "title": "Quintfall",
+      "goal": "Eine Melodie durch wechselnde Harmonien führen.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku3-3": {
+      "title": "Gehör und Arrangement",
+      "goal": "Eine kurze Referenz auf Bass und Melodie reduzieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "k4": {
+      "title": "Harmonisch Moll",
+      "goal": "Leitton und Dominante; modale Farbe von tonaler Kadenz unterscheiden."
+    },
+    "ku4-1": {
+      "title": "Der Leitton",
+      "goal": "D# nach E im Zusammenhang einer Kadenz.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku4-2": {
+      "title": "Verminderter Septakkord",
+      "goal": "Einzelne Stimmen in den Folgeakkord führen.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku4-3": {
+      "title": "Eine kurze Kadenz",
+      "goal": "Kadenz lesen, hören und variieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "k5": {
+      "title": "Sequenz und Figuration",
+      "goal": "Motive durch Sequenzen und gebrochene Akkorde entwickeln."
+    },
+    "ku5-1": {
+      "title": "Kleine Sequenzen",
+      "goal": "Ein kurzes Motiv durch die Skala bewegen.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku5-2": {
+      "title": "Arpeggien und Melodie",
+      "goal": "Melodie in gebrochenen Akkorden hörbar halten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku5-3": {
+      "title": "Sequenz über bewegtem Bass",
+      "goal": "Figuration und harmonischen Rhythmus koordinieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "k6": {
+      "title": "Kontrastfarben",
+      "goal": "Quarten und lydische Farbe gezielt als Kontrast einsetzen."
+    },
+    "ku6-1": {
+      "title": "Quartenklänge",
+      "goal": "Offene Klänge lesen und ausbalancieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku6-2": {
+      "title": "Lydischer Kontrast",
+      "goal": "Erhöhte Quarte über klarem Grundton hören.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku6-3": {
+      "title": "Register und Klang",
+      "goal": "Idee in andere Register übertragen und erkennbar halten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "k7": {
+      "title": "Rhythmus II",
+      "goal": "Unabhängige Stimmen bei Unterteilungen und wechselnden Gruppen stabil halten."
+    },
+    "ku7-1": {
+      "title": "Triolen",
+      "goal": "Drei gleichmäßige Unterteilungen lesen und hören.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku7-2": {
+      "title": "Gruppierung",
+      "goal": "Akzente über einem stabilen Puls verschieben.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku7-3": {
+      "title": "Ungerade Takte",
+      "goal": "7/8 in klaren Gruppen lesen und daraus phrasieren.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "k8": {
+      "title": "Eigenes Arrangement",
+      "goal": "Pedaltöne, bewegten Bass, Melodie, Arpeggien und Akkorde zu einem Solostück verbinden."
+    },
+    "ku8-1": {
+      "title": "Ein vollständiger Bogen",
+      "goal": "Anfang, Entwicklung, Kontrast und Rückkehr.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "ku8-2": {
+      "title": "Soloarrangement",
+      "goal": "Eigenständiges Arrangement notieren, spielen und überarbeiten.",
+      "text": "Geplant. Baut auf der vorigen Phase auf; Notenlesen und unabhängige Stimmen bleiben Teil jeder Stufe."
+    },
+    "u2-rhythm": {
+      "title": "Akzente und Anschlag",
+      "goal": "Gerade Achtel, Offbeats und bewusst kurze Akkorde verbinden.",
+      "text": "Geplant. Gitarre: Powerchords in P4, Wechselschlag, Palm-Muting und gezielt offene Akzente. Keyboard: kurze Akkorde, Melodie über gehaltenem oder wiederholtem Bass. Neue Rhythmusmuster zuerst klatschen, dann lesen und ohne Unterbrechung in eine Phrase einbauen."
+    },
+    "u3-reading": {
+      "title": "Rhythmuslesen und Formzeichen",
+      "goal": "Synkopen, Sechzehntel und Wiederholungen in längeren Abschnitten lesen.",
+      "text": "Geplant. Punktierte Rhythmen, Haltebögen über Zählzeit und Taktstrich, Achtel-/Sechzehntelpausen. Mehrtaktpausen mitzählen; Wiederholungen, Volten, Segno und Coda verfolgen. Abschluss: einen längeren Abschnitt ohne Verlust der Form spielen."
+    },
+    "u4-chords": {
+      "title": "Akkordsymbole und Klangwechsel",
+      "goal": "Dur, Moll, Powerchords, Sext- und Septakkorde lesen und gezielt greifen.",
+      "text": "Geplant. Dominantseptakkorde, Mollseptakkorde und Durseptakkorde unterscheiden; Akkordsymbol vom ausgeschriebenen Voicing trennen. Quint-/Sextwechsel, chromatische Akkordbewegung und Durkontraste zum Mollmaterial. Gitarre: P4-Voicings mit oberer Melodiestimme; Keyboard: Umkehrungen und leise linke Begleitung."
+    },
+    "u5-groove": {
+      "title": "Triolisch spielen",
+      "goal": "Triolen, 12/8, Shuffle und Swing unterscheiden.",
+      "text": "Geplant. Gerade gegen ternäre Achtel vergleichen, 12/8 als vier punktierte Viertelpulse lesen, Shuffle bei unverändertem Grundpuls spielen. Swing ist nicht bei jedem Tempo ein starres 2:1-Verhältnis. Ein rhythmisch variiertes Motiv über eigenem Bass halten."
+    },
+    "u7-solo": {
+      "title": "Solo über eine vollständige Form",
+      "goal": "Mollpentatonik und Akkordtöne phrasieren, dann sicher zurück in die Begleitung.",
+      "text": "Geplant. Soloabschnitte vorab zählen, Zielnoten singen, Motive entwickeln und den Wiedereinstieg treffen. Zunächst Drums plus externer Bass, anschließend eigener Pedal-/Bassbezug. Übergänge, Klangwechsel und längere Durchläufe im Ausgangstempo prüfen; Tempo ist eine eigene Transferaufgabe neben langsamem Gestalten."
+    },
+    "ku2-rhythm": {
+      "title": "Akzente und Anschlag",
+      "goal": "Gerade Achtel, Offbeats und bewusst kurze Akkorde verbinden.",
+      "text": "Geplant. Gitarre: Powerchords in P4, Wechselschlag, Palm-Muting und gezielt offene Akzente. Keyboard: kurze Akkorde, Melodie über gehaltenem oder wiederholtem Bass. Neue Rhythmusmuster zuerst klatschen, dann lesen und ohne Unterbrechung in eine Phrase einbauen."
+    },
+    "ku3-reading": {
+      "title": "Rhythmuslesen und Formzeichen",
+      "goal": "Synkopen, Sechzehntel und Wiederholungen in längeren Abschnitten lesen.",
+      "text": "Geplant. Punktierte Rhythmen, Haltebögen über Zählzeit und Taktstrich, Achtel-/Sechzehntelpausen. Mehrtaktpausen mitzählen; Wiederholungen, Volten, Segno und Coda verfolgen. Abschluss: einen längeren Abschnitt ohne Verlust der Form spielen."
+    },
+    "ku4-chords": {
+      "title": "Akkordsymbole und Klangwechsel",
+      "goal": "Dur, Moll, Powerchords, Sext- und Septakkorde lesen und gezielt greifen.",
+      "text": "Geplant. Dominantseptakkorde, Mollseptakkorde und Durseptakkorde unterscheiden; Akkordsymbol vom ausgeschriebenen Voicing trennen. Quint-/Sextwechsel, chromatische Akkordbewegung und Durkontraste zum Mollmaterial. Gitarre: P4-Voicings mit oberer Melodiestimme; Keyboard: Umkehrungen und leise linke Begleitung."
+    },
+    "ku5-groove": {
+      "title": "Triolisch spielen",
+      "goal": "Triolen, 12/8, Shuffle und Swing unterscheiden.",
+      "text": "Geplant. Gerade gegen ternäre Achtel vergleichen, 12/8 als vier punktierte Viertelpulse lesen, Shuffle bei unverändertem Grundpuls spielen. Swing ist nicht bei jedem Tempo ein starres 2:1-Verhältnis. Ein rhythmisch variiertes Motiv über eigenem Bass halten."
+    },
+    "ku7-solo": {
+      "title": "Solo über eine vollständige Form",
+      "goal": "Mollpentatonik und Akkordtöne phrasieren, dann sicher zurück in die Begleitung.",
+      "text": "Geplant. Soloabschnitte vorab zählen, Zielnoten singen, Motive entwickeln und den Wiedereinstieg treffen. Zunächst Drums plus externer Bass, anschließend eigener Pedal-/Bassbezug. Übergänge, Klangwechsel und längere Durchläufe im Ausgangstempo prüfen; Tempo ist eine eigene Transferaufgabe neben langsamem Gestalten."
+    },
+    "e0-4-4": {
+      "title": "Gedämpfte Achtel, offene Akzente",
+      "position": "E-Saite leer; Greifhand dämpft die übrigen Saiten mit.",
+      "instructions": "Spiele die Achtel mit Wechselschlag. Handkante nahe an der Brücke leicht auf die tiefe E-Saite legen: Tonhöhe hörbar, Ausklang kurz. Zweiter Durchgang: nur die erste Achtel jedes Taktes ohne Handkantendämpfung, dann wieder kurz. Nimm beide Fassungen auf.",
+      "checklist": [
+        "Tonhöhe trotz Dämpfung erkennbar?",
+        "Offener Akzent nur am Taktanfang?",
+        "Gleicher Puls in beiden Fassungen?"
+      ]
+    }
+  },
+  "ui": {
+    "course": "Kurs",
+    "log": "Log",
+    "start": "▶ Start",
+    "stop": "■ Stop",
+    "tempo": "Tempo",
+    "accompaniment": "Begleitung",
+    "click": "Klick",
+    "straight": "Drums · Achtel",
+    "half": "Drums · Half-time",
+    "bars": "Takte",
+    "connectFirst": "Kein MIDI-Gerät verbunden. MIDI einrichten.",
+    "midiSetup": "MIDI einrichten",
+    "playError": "Wiedergabe fehlgeschlagen. MIDI-Verbindung prüfen.",
+    "fretboard": "Griffbrett als Lernhilfe",
+    "piano": "Klaviatur als Lernhilfe",
+    "aids": "Tonnamen / Fingersatz einblenden",
+    "generate": "↻ Neue Folge",
+    "listen": "▶ Anhören",
+    "preview": "Notenvorschau · Browserklang",
+    "mastered": "sicher abrufbar",
+    "logPlaceholder": "Gehört → nächster Versuch",
+    "save": "Eintragen",
+    "units": "Einheiten",
+    "exercises": "Übungen",
+    "planned": "geplant",
+    "phase": "Phase",
+    "scope": "Phase 0–1 · danach Ausblick",
+    "outlook": "Ausblick: Phase 2–8",
+    "plannedDetail": "Diese Phase ist strukturiert; die Übungen sind noch nicht ausgearbeitet.",
+    "lead": "Vom inneren Klang zum Instrument. P4-Gitarre mit Bass und Melodie; Keyboard für Synthesizer und Klavier. Doom, Gothic und Barock als Klangziele.",
+    "week": "Vier Sitzungen pro Woche",
+    "midiLead": "Klick und Drums gehen auf Kanal 10 an dein Gerät.",
+    "findOutputs": "Ausgänge suchen",
+    "output": "Ausgang",
+    "chooseDevice": "Gerät wählen",
+    "findHint": "Ausgänge suchen, dann Gerät wählen.",
+    "midiTest": "Test: Kick auf 1, Snare auf 3, Hi-Hat auf jedem Viertel. Danach Klick wählen und den Rim-Klang prüfen.",
+    "logLead": "Lokales Übungsjournal. „Sicher abrufbar“ nach zwei Übetagen ohne Hilfen markieren. Backup enthält Markierungen, Notizen und Löschvermerke. Wiederherstellen führt Einträge zusammen; so lassen sich Beiträge mehrerer Geräte manuell sammeln. Keine automatische Netzsynchronisation. Ältere Kursmarkierungen bei überarbeiteten Aufgaben erneut prüfen.",
+    "export": "Backup herunterladen",
+    "import": "Backup wiederherstellen",
+    "date": "Datum",
+    "exercise": "Übung",
+    "note": "Notiz",
+    "delete": "Löschen",
+    "saveError": "Speichern fehlgeschlagen. Browser-Speicher prüfen und Log exportieren.",
+    "importError": "Import fehlgeschlagen. Eine gültige Log-JSON-Datei wählen. Bestehende Daten wurden nicht ersetzt.",
+    "connected": "Verbunden",
+    "noOutputs": "Kein MIDI-Ausgang gefunden",
+    "midiUnavailable": "Web MIDI fehlt. MIDI-fähigen Browser mit localhost oder HTTPS verwenden.",
+    "midiDenied": "MIDI-Zugriff fehlgeschlagen. Browserberechtigung prüfen.",
+    "disconnected": "MIDI-Verbindung getrennt",
+    "timingInterrupted": "Wiedergabe unterbrochen. Neu starten.",
+    "stopError": "MIDI-Stopp fehlgeschlagen. Gerät prüfen.",
+    "read": "Lesen",
+    "improv": "Improvisieren",
+    "shape": "Griffbrett",
+    "keys": "Klaviatur",
+    "technique": "Technik",
+    "transcribe": "Gehör / Notation",
+    "sound": "Klang",
+    "schedule": "A, B, C: je 45 Minuten Gitarre + 15 Minuten Keyboard. D: 15 Minuten Gitarre + 45 Minuten Keyboard. Das ergibt 3 × 45 + 15 = 150 Minuten Gitarre und 3 × 15 + 45 = 90 Minuten Keyboard.\n\n**45 Minuten:** 5 Min. abrufen · 10 Min. eine Schwierigkeit · 20 Min. hören, spielen und variieren · 5 Min. aufnehmen · 5 Min. Pause/Log. **15 Minuten:** 3 Min. abrufen · 8 Min. anwenden · 4 Min. Aufnahme/Log.\n\nPro Instrument eine Einheit bearbeiten. Erste Aufgabe bereits sicher → direkt zur Anwendung. Erst ohne Zeitdruck klären, dann zum Klick stabilisieren. Tempo nur erhöhen, wenn Puls und Klang bleiben.\n\n**Weitergehen:** Kriterien an zwei Übetagen erfüllen, darunter ein Versuch ohne Hilfen. Eine schwierige Stelle isolieren, danach wieder eine ganze Phrase spielen. Noten sind die Hauptansicht; Lage steht darüber, Lernhilfen lassen sich zuschalten.",
+    "hardware": "**MX49:** Drum-Kit auf Part 10. Passenden USB-MIDI-Ausgang oder MIDI-Interface wählen.\n\n**SR-18:** MIDI CH = 10, DRUM IN = ON: V1, NOTE MAP = NORMAL. Unter NOTE die Pads passend zuordnen: Kick 36, Snare 38, geschlossene Hi-Hat 42, Klick/Rim 37. Eigenes Pattern stoppen. Der SR-18 braucht ein MIDI-Interface mit DIN-Ausgang.\n\nDie Website sendet einzelne Noten, keine MIDI-Clock und keine Start-/Stop-Befehle an den internen Sequencer. Sounds und Lautstärke am Gerät einstellen. Kein interner Ersatz für Klick/Drums. Die Notenvorschau nutzt separat Browserklang.",
+    "remoteUpdate": "Journal aus einem anderen Browser-Tab ergänzt."
+  }
+}

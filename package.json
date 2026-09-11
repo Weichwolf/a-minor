@@ -1,0 +1,11 @@
+{
+  "name": "a-minor",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/course.test.cjs",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

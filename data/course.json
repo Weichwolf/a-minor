@@ -1,0 +1,3163 @@
+{
+  "gitarre": {
+    "instrument": "guitar",
+    "phases": [
+      {
+        "id": "p0",
+        "units": [
+          {
+            "id": "u0-1",
+            "exercises": [
+              {
+                "id": "e0-1-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "w"
+                    },
+                    {
+                      "p": "G3",
+                      "d": "w"
+                    },
+                    {
+                      "p": "C4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "F4",
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 6,
+                  "drums": "half"
+                },
+                "textId": "e0-1-1"
+              },
+              {
+                "id": "e0-1-2",
+                "kind": "technique",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "maxFret": 8,
+                  "notes": [
+                    {
+                      "p": "A2",
+                      "d": "q",
+                      "s": 0,
+                      "fi": 1
+                    },
+                    {
+                      "p": "Bb2",
+                      "d": "q",
+                      "s": 0,
+                      "fi": 2
+                    },
+                    {
+                      "p": "B2",
+                      "d": "q",
+                      "s": 0,
+                      "fi": 3
+                    },
+                    {
+                      "p": "C3",
+                      "d": "q",
+                      "s": 0,
+                      "fi": 4
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q",
+                      "s": 1,
+                      "fi": 1
+                    },
+                    {
+                      "p": "Eb3",
+                      "d": "q",
+                      "s": 1,
+                      "fi": 2
+                    },
+                    {
+                      "p": "E3",
+                      "d": "q",
+                      "s": 1,
+                      "fi": 3
+                    },
+                    {
+                      "p": "F3",
+                      "d": "q",
+                      "s": 1,
+                      "fi": 4
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "e0-1-2"
+              }
+            ],
+            "textId": "u0-1"
+          },
+          {
+            "id": "u0-2",
+            "exercises": [
+              {
+                "id": "e0-2-1",
+                "kind": "shape",
+                "fretboard": {
+                  "root": "E",
+                  "pcs": [
+                    4
+                  ],
+                  "show": "name",
+                  "frets": 12
+                },
+                "textId": "e0-2-1"
+              },
+              {
+                "id": "e0-2-2",
+                "kind": "shape",
+                "fretboard": {
+                  "root": "C",
+                  "pcs": [
+                    0
+                  ],
+                  "show": "name",
+                  "frets": 12
+                },
+                "textId": "e0-2-2"
+              },
+              {
+                "id": "e0-2-3",
+                "kind": "shape",
+                "fretboard": {
+                  "root": "E",
+                  "pcs": [
+                    4,
+                    7,
+                    11
+                  ],
+                  "show": "degree",
+                  "frets": 12
+                },
+                "textId": "e0-2-3"
+              }
+            ],
+            "textId": "u0-2"
+          },
+          {
+            "id": "u0-3",
+            "exercises": [
+              {
+                "id": "e0-3-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "w"
+                    },
+                    {
+                      "p": "G3",
+                      "d": "w"
+                    },
+                    {
+                      "p": "C4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "F4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "C4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 8,
+                  "drums": "half"
+                },
+                "textId": "e0-3-1"
+              },
+              {
+                "id": "e0-3-2",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "C3",
+                      "d": "h",
+                      "fi": 3,
+                      "s": 1
+                    },
+                    {
+                      "p": "D3",
+                      "d": "h",
+                      "fi": 0,
+                      "s": 2
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "fi": 2,
+                      "s": 2
+                    },
+                    {
+                      "p": "F3",
+                      "d": "h",
+                      "fi": 3,
+                      "s": 2
+                    },
+                    {
+                      "p": "G3",
+                      "d": "h",
+                      "fi": 0,
+                      "s": 3
+                    },
+                    {
+                      "p": "A3",
+                      "d": "h",
+                      "fi": 2,
+                      "s": 3
+                    },
+                    {
+                      "p": "B3",
+                      "d": "h",
+                      "fi": 4,
+                      "s": 3
+                    },
+                    {
+                      "p": "C4",
+                      "d": "h",
+                      "fi": 0,
+                      "s": 4
+                    },
+                    {
+                      "p": "B3",
+                      "d": "h",
+                      "s": 3
+                    },
+                    {
+                      "p": "A3",
+                      "d": "h",
+                      "s": 3
+                    },
+                    {
+                      "p": "G3",
+                      "d": "h",
+                      "s": 3
+                    },
+                    {
+                      "p": "F3",
+                      "d": "h",
+                      "s": 2
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2
+                    },
+                    {
+                      "p": "D3",
+                      "d": "h",
+                      "s": 2
+                    },
+                    {
+                      "p": "C3",
+                      "d": "w",
+                      "s": 1
+                    }
+                  ],
+                  "maxFret": 4
+                },
+                "aids": [
+                  "names",
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 8,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "C",
+                  "scale": "major",
+                  "frets": 5,
+                  "show": "name"
+                },
+                "textId": "e0-3-2"
+              },
+              {
+                "id": "e0-3-3",
+                "kind": "read",
+                "tempo": 50,
+                "generate": {
+                  "root": "C",
+                  "scale": "major",
+                  "key": "C",
+                  "range": [
+                    "C3",
+                    "G3"
+                  ],
+                  "bars": 2,
+                  "leap": 3,
+                  "durs": [
+                    "q",
+                    "h"
+                  ]
+                },
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "maxFret": 4
+                },
+                "aids": [
+                  "names",
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "e0-3-3"
+              }
+            ],
+            "textId": "u0-3"
+          },
+          {
+            "id": "u0-4",
+            "exercises": [
+              {
+                "id": "e0-4-1",
+                "kind": "read",
+                "tempo": 70,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "h"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "e0-4-1"
+              },
+              {
+                "id": "e0-4-2",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "q"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    },
+                    {
+                      "r": 1,
+                      "d": "e"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "e"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "straight"
+                },
+                "textId": "e0-4-2"
+              },
+              {
+                "id": "e0-4-3",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "3/4",
+                  "notes": [
+                    {
+                      "p": "D3",
+                      "d": "q"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "h"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "h."
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "3/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "e0-4-3"
+              },
+              {
+                "id": "e0-4-4",
+                "textId": "e0-4-4",
+                "kind": "technique",
+                "tempo": 60,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "e",
+                      "s": 0
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "straight"
+                }
+              }
+            ],
+            "textId": "u0-4"
+          },
+          {
+            "id": "u0-5",
+            "exercises": [
+              {
+                "id": "e0-5-1",
+                "kind": "technique",
+                "tempo": 50,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "notes": [
+                    {
+                      "p": "G3",
+                      "d": "w",
+                      "s": 2,
+                      "fi": 3
+                    },
+                    {
+                      "p": "G3",
+                      "d": "w",
+                      "s": 2
+                    },
+                    {
+                      "p": "G3",
+                      "d": "w",
+                      "s": 2
+                    },
+                    {
+                      "p": "G3",
+                      "d": "w",
+                      "s": 2
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "e0-5-1"
+              }
+            ],
+            "textId": "u0-5"
+          },
+          {
+            "id": "u0-6",
+            "exercises": [
+              {
+                "id": "e0-6-1",
+                "kind": "read",
+                "tempo": 50,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "notes": [
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 1
+                    },
+                    {
+                      "r": 1,
+                      "d": "h"
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 1
+                    },
+                    {
+                      "r": 1,
+                      "d": "h"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "e0-6-1"
+              },
+              {
+                "id": "e0-6-2",
+                "kind": "read",
+                "tempo": 50,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "notes": [
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 1
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 1
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w",
+                      "s": 1
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "e0-6-2"
+              }
+            ],
+            "textId": "u0-6"
+          }
+        ],
+        "textId": "p0"
+      },
+      {
+        "id": "p1",
+        "units": [
+          {
+            "id": "u1-1",
+            "exercises": [
+              {
+                "id": "e1-1-2",
+                "kind": "improv",
+                "tempo": 60,
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "pcs": [
+                    4,
+                    7,
+                    11
+                  ],
+                  "window": [
+                    0,
+                    0
+                  ],
+                  "frets": 12,
+                  "show": "degree"
+                },
+                "textId": "e1-1-2"
+              },
+              {
+                "id": "e1-1-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 12,
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "F#2",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "G2",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "A2",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "B2",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "C3",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "D3",
+                      "d": "h",
+                      "s": 0
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 0
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "window": [
+                    0,
+                    0
+                  ],
+                  "frets": 12
+                },
+                "textId": "e1-1-1"
+              }
+            ],
+            "textId": "u1-1"
+          },
+          {
+            "id": "u1-2",
+            "exercises": [
+              {
+                "id": "e1-2-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "q",
+                      "fi": 0,
+                      "s": 0
+                    },
+                    {
+                      "p": "F#2",
+                      "d": "q",
+                      "fi": 1,
+                      "s": 0
+                    },
+                    {
+                      "p": "G2",
+                      "d": "q",
+                      "fi": 2,
+                      "s": 0
+                    },
+                    {
+                      "p": "A2",
+                      "d": "q",
+                      "fi": 0,
+                      "s": 1
+                    },
+                    {
+                      "p": "B2",
+                      "d": "q",
+                      "fi": 1,
+                      "s": 1
+                    },
+                    {
+                      "p": "C3",
+                      "d": "q",
+                      "fi": 2,
+                      "s": 1
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q",
+                      "fi": 0,
+                      "s": 2
+                    },
+                    {
+                      "p": "E3",
+                      "d": "q",
+                      "fi": 1,
+                      "s": 2
+                    },
+                    {
+                      "p": "F#3",
+                      "d": "q",
+                      "fi": 3,
+                      "s": 2
+                    },
+                    {
+                      "p": "G3",
+                      "d": "q",
+                      "fi": 4,
+                      "s": 2
+                    },
+                    {
+                      "p": "F#3",
+                      "d": "q",
+                      "fi": 3,
+                      "s": 2
+                    },
+                    {
+                      "p": "E3",
+                      "d": "q",
+                      "fi": 1,
+                      "s": 2
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q",
+                      "fi": 0,
+                      "s": 2
+                    },
+                    {
+                      "p": "C3",
+                      "d": "q",
+                      "fi": 2,
+                      "s": 1
+                    },
+                    {
+                      "p": "B2",
+                      "d": "q",
+                      "fi": 1,
+                      "s": 1
+                    },
+                    {
+                      "p": "A2",
+                      "d": "q",
+                      "fi": 0,
+                      "s": 1
+                    },
+                    {
+                      "p": "G2",
+                      "d": "q",
+                      "fi": 2,
+                      "s": 0
+                    },
+                    {
+                      "p": "F#2",
+                      "d": "q",
+                      "fi": 1,
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "h",
+                      "s": 0,
+                      "fi": 0
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 5,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "window": [
+                    0,
+                    2
+                  ],
+                  "frets": 5
+                },
+                "textId": "e1-2-1"
+              },
+              {
+                "id": "e1-2-2",
+                "kind": "improv",
+                "tempo": 60,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "window": [
+                    0,
+                    2
+                  ],
+                  "frets": 5
+                },
+                "textId": "e1-2-2"
+              },
+              {
+                "id": "e1-2-3",
+                "kind": "read",
+                "tempo": 50,
+                "generate": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "key": "Em",
+                  "range": [
+                    "E2",
+                    "G3"
+                  ],
+                  "bars": 2,
+                  "leap": 3,
+                  "durs": [
+                    "q",
+                    "h"
+                  ]
+                },
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "stringWindow": [
+                    0,
+                    2
+                  ]
+                },
+                "aids": [
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "e1-2-3"
+              }
+            ],
+            "textId": "u1-2"
+          },
+          {
+            "id": "u1-pedal",
+            "exercises": [
+              {
+                "id": "e1-pedal-1",
+                "kind": "read",
+                "tempo": 55,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "notes": [
+                    {
+                      "p": "G3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 4
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 1,
+                      "tie": 1
+                    },
+                    {
+                      "p": "E3",
+                      "d": "w",
+                      "s": 2,
+                      "fi": 1
+                    },
+                    {
+                      "p": "F#3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 3
+                    },
+                    {
+                      "p": "G3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 4
+                    },
+                    {
+                      "p": "E3",
+                      "d": "h",
+                      "s": 2,
+                      "fi": 1
+                    },
+                    {
+                      "r": 1,
+                      "d": "h"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "s": 0
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "e1-pedal-1"
+              },
+              {
+                "id": "e1-pedal-2",
+                "kind": "improv",
+                "tempo": 55,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "e1-pedal-2"
+              }
+            ],
+            "textId": "u1-pedal"
+          },
+          {
+            "id": "u1-3",
+            "exercises": [
+              {
+                "id": "e1-3-1",
+                "kind": "read",
+                "tempo": 55,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "G2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "h",
+                      "tie": 1
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "B2",
+                      "d": "h."
+                    },
+                    {
+                      "p": "C3",
+                      "d": "q",
+                      "tie": 1
+                    },
+                    {
+                      "p": "C3",
+                      "d": "h"
+                    },
+                    {
+                      "p": "B2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w",
+                      "tie": 1
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "strings"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 6,
+                  "drums": "half"
+                },
+                "textId": "e1-3-1"
+              },
+              {
+                "id": "e1-3-2",
+                "kind": "improv",
+                "tempo": 55,
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 8,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "window": [
+                    0,
+                    2
+                  ],
+                  "frets": 5
+                },
+                "textId": "e1-3-2"
+              }
+            ],
+            "textId": "u1-3"
+          },
+          {
+            "id": "u1-4",
+            "exercises": [
+              {
+                "id": "e1-4-1",
+                "kind": "read",
+                "tempo": 55,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "maxFret": 5,
+                  "notes": [
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "F#2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "G2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "F2",
+                      "d": "q"
+                    },
+                    {
+                      "p": "G2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "F2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "h"
+                    },
+                    {
+                      "p": "F2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "E2",
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "names"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 5,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "scale": "phrygian",
+                  "window": [
+                    0,
+                    2
+                  ],
+                  "frets": 5
+                },
+                "textId": "e1-4-1"
+              },
+              {
+                "id": "e1-4-2",
+                "kind": "improv",
+                "tempo": 55,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "fretboard": {
+                  "root": "E",
+                  "scale": "phrygian",
+                  "window": [
+                    0,
+                    2
+                  ],
+                  "frets": 5
+                },
+                "textId": "e1-4-2"
+              }
+            ],
+            "textId": "u1-4"
+          },
+          {
+            "id": "u1-5",
+            "exercises": [
+              {
+                "id": "e1-5-1",
+                "kind": "transcribe",
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "e1-5-1"
+              }
+            ],
+            "textId": "u1-5"
+          },
+          {
+            "id": "u1-6",
+            "exercises": [
+              {
+                "id": "e1-6-1",
+                "kind": "improv",
+                "tempo": 58,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 8,
+                  "drums": "half"
+                },
+                "textId": "e1-6-1"
+              }
+            ],
+            "textId": "u1-6"
+          }
+        ],
+        "textId": "p1"
+      },
+      {
+        "id": "p2",
+        "planned": true,
+        "units": [
+          {
+            "id": "u2-1",
+            "exercises": [],
+            "textId": "u2-1"
+          },
+          {
+            "id": "u2-2",
+            "exercises": [],
+            "textId": "u2-2"
+          },
+          {
+            "id": "u2-3",
+            "exercises": [],
+            "textId": "u2-3"
+          },
+          {
+            "id": "u2-rhythm",
+            "textId": "u2-rhythm",
+            "exercises": []
+          }
+        ],
+        "textId": "p2"
+      },
+      {
+        "id": "p3",
+        "planned": true,
+        "units": [
+          {
+            "id": "u3-1",
+            "exercises": [],
+            "textId": "u3-1"
+          },
+          {
+            "id": "u3-2",
+            "exercises": [],
+            "textId": "u3-2"
+          },
+          {
+            "id": "u3-3",
+            "exercises": [],
+            "textId": "u3-3"
+          },
+          {
+            "id": "u3-reading",
+            "textId": "u3-reading",
+            "exercises": []
+          }
+        ],
+        "textId": "p3"
+      },
+      {
+        "id": "p4",
+        "planned": true,
+        "units": [
+          {
+            "id": "u4-1",
+            "exercises": [],
+            "textId": "u4-1"
+          },
+          {
+            "id": "u4-2",
+            "exercises": [],
+            "textId": "u4-2"
+          },
+          {
+            "id": "u4-3",
+            "exercises": [],
+            "textId": "u4-3"
+          },
+          {
+            "id": "u4-chords",
+            "textId": "u4-chords",
+            "exercises": []
+          }
+        ],
+        "textId": "p4"
+      },
+      {
+        "id": "p5",
+        "planned": true,
+        "units": [
+          {
+            "id": "u5-1",
+            "exercises": [],
+            "textId": "u5-1"
+          },
+          {
+            "id": "u5-2",
+            "exercises": [],
+            "textId": "u5-2"
+          },
+          {
+            "id": "u5-3",
+            "exercises": [],
+            "textId": "u5-3"
+          },
+          {
+            "id": "u5-groove",
+            "textId": "u5-groove",
+            "exercises": []
+          }
+        ],
+        "textId": "p5"
+      },
+      {
+        "id": "p6",
+        "planned": true,
+        "units": [
+          {
+            "id": "u6-1",
+            "exercises": [],
+            "textId": "u6-1"
+          },
+          {
+            "id": "u6-2",
+            "exercises": [],
+            "textId": "u6-2"
+          }
+        ],
+        "textId": "p6"
+      },
+      {
+        "id": "p7",
+        "planned": true,
+        "units": [
+          {
+            "id": "u7-1",
+            "exercises": [],
+            "textId": "u7-1"
+          },
+          {
+            "id": "u7-2",
+            "exercises": [],
+            "textId": "u7-2"
+          },
+          {
+            "id": "u7-3",
+            "exercises": [],
+            "textId": "u7-3"
+          },
+          {
+            "id": "u7-solo",
+            "textId": "u7-solo",
+            "exercises": []
+          }
+        ],
+        "textId": "p7"
+      },
+      {
+        "id": "p8",
+        "planned": true,
+        "units": [
+          {
+            "id": "u8-1",
+            "exercises": [],
+            "textId": "u8-1"
+          },
+          {
+            "id": "u8-2",
+            "exercises": [],
+            "textId": "u8-2"
+          }
+        ],
+        "textId": "p8"
+      }
+    ],
+    "textId": "gitarre"
+  },
+  "keys": {
+    "instrument": "keys",
+    "phases": [
+      {
+        "id": "k0",
+        "units": [
+          {
+            "id": "ku0-1",
+            "exercises": [
+              {
+                "id": "ke0-1-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Am",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "A4",
+                      "d": "q",
+                      "fi": 1
+                    },
+                    {
+                      "p": "B4",
+                      "d": "q",
+                      "fi": 2
+                    },
+                    {
+                      "p": "C5",
+                      "d": "q",
+                      "fi": 3
+                    },
+                    {
+                      "p": "D5",
+                      "d": "q",
+                      "fi": 4
+                    },
+                    {
+                      "p": "E5",
+                      "d": "q",
+                      "fi": 5
+                    },
+                    {
+                      "p": "D5",
+                      "d": "q",
+                      "fi": 4
+                    },
+                    {
+                      "p": "C5",
+                      "d": "q",
+                      "fi": 3
+                    },
+                    {
+                      "p": "B4",
+                      "d": "q",
+                      "fi": 2
+                    },
+                    {
+                      "p": "A4",
+                      "d": "w",
+                      "fi": 1
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 3,
+                  "drums": "half"
+                },
+                "textId": "ke0-1-1"
+              },
+              {
+                "id": "ke0-1-2",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Am",
+                  "time": "4/4",
+                  "clef": "bass",
+                  "notes": [
+                    {
+                      "p": "A2",
+                      "d": "q",
+                      "fi": 5
+                    },
+                    {
+                      "p": "B2",
+                      "d": "q",
+                      "fi": 4
+                    },
+                    {
+                      "p": "C3",
+                      "d": "q",
+                      "fi": 3
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q",
+                      "fi": 2
+                    },
+                    {
+                      "p": "E3",
+                      "d": "q",
+                      "fi": 1
+                    },
+                    {
+                      "p": "D3",
+                      "d": "q",
+                      "fi": 2
+                    },
+                    {
+                      "p": "C3",
+                      "d": "q",
+                      "fi": 3
+                    },
+                    {
+                      "p": "B2",
+                      "d": "q",
+                      "fi": 4
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w",
+                      "fi": 5
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 3,
+                  "drums": "half"
+                },
+                "textId": "ke0-1-2"
+              }
+            ],
+            "textId": "ku0-1"
+          },
+          {
+            "id": "ku0-2",
+            "exercises": [
+              {
+                "id": "ke0-2-1",
+                "kind": "sound",
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "ke0-2-1"
+              }
+            ],
+            "textId": "ku0-2"
+          },
+          {
+            "id": "ku0-3",
+            "exercises": [
+              {
+                "id": "ke0-3-1",
+                "kind": "keys",
+                "piano": {
+                  "root": "A",
+                  "pcs": [
+                    9,
+                    11,
+                    0,
+                    2,
+                    4
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "A4",
+                    "E5"
+                  ]
+                },
+                "textId": "ke0-3-1"
+              },
+              {
+                "id": "ke0-3-2",
+                "kind": "keys",
+                "piano": {
+                  "root": "E",
+                  "pcs": [
+                    4,
+                    6,
+                    7,
+                    9,
+                    11
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "B4"
+                  ]
+                },
+                "textId": "ke0-3-2"
+              },
+              {
+                "id": "ke0-3-3",
+                "kind": "keys",
+                "piano": {
+                  "root": "D",
+                  "pcs": [
+                    2,
+                    4,
+                    5,
+                    7,
+                    9
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "D4",
+                    "A4"
+                  ]
+                },
+                "textId": "ke0-3-3"
+              },
+              {
+                "id": "ke0-3-4",
+                "kind": "keys",
+                "piano": {
+                  "root": "A",
+                  "pcs": [
+                    9,
+                    0,
+                    1,
+                    4
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "A2",
+                    "E5"
+                  ]
+                },
+                "textId": "ke0-3-4"
+              }
+            ],
+            "textId": "ku0-3"
+          },
+          {
+            "id": "ku0-4",
+            "exercises": [
+              {
+                "id": "ke0-4-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "C4",
+                      "d": "h",
+                      "fi": 1
+                    },
+                    {
+                      "p": "D4",
+                      "d": "h",
+                      "fi": 2
+                    },
+                    {
+                      "p": "E4",
+                      "d": "h",
+                      "fi": 3
+                    },
+                    {
+                      "p": "F4",
+                      "d": "h",
+                      "fi": 4
+                    },
+                    {
+                      "p": "G4",
+                      "d": "h",
+                      "fi": 5
+                    },
+                    {
+                      "p": "F4",
+                      "d": "h",
+                      "fi": 4
+                    },
+                    {
+                      "p": "E4",
+                      "d": "h",
+                      "fi": 3
+                    },
+                    {
+                      "p": "D4",
+                      "d": "h",
+                      "fi": 2
+                    },
+                    {
+                      "p": "C4",
+                      "d": "w",
+                      "fi": 1
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "C3",
+                      "d": "h",
+                      "fi": 1
+                    },
+                    {
+                      "p": "B2",
+                      "d": "h",
+                      "fi": 2
+                    },
+                    {
+                      "p": "A2",
+                      "d": "h",
+                      "fi": 3
+                    },
+                    {
+                      "p": "G2",
+                      "d": "h",
+                      "fi": 4
+                    },
+                    {
+                      "p": "F2",
+                      "d": "h",
+                      "fi": 5
+                    },
+                    {
+                      "p": "G2",
+                      "d": "h",
+                      "fi": 4
+                    },
+                    {
+                      "p": "A2",
+                      "d": "h",
+                      "fi": 3
+                    },
+                    {
+                      "p": "B2",
+                      "d": "h",
+                      "fi": 2
+                    },
+                    {
+                      "p": "C3",
+                      "d": "w",
+                      "fi": 1
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 5,
+                  "drums": "half"
+                },
+                "textId": "ke0-4-1"
+              },
+              {
+                "id": "ke0-4-2",
+                "kind": "read",
+                "tempo": 50,
+                "generate": {
+                  "root": "C",
+                  "scale": "major",
+                  "key": "C",
+                  "range": [
+                    "C4",
+                    "G4"
+                  ],
+                  "bars": 2,
+                  "leap": 3,
+                  "durs": [
+                    "q",
+                    "h"
+                  ]
+                },
+                "score": {
+                  "key": "C",
+                  "time": "4/4"
+                },
+                "aids": [
+                  "names"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "ke0-4-2"
+              },
+              {
+                "id": "ke0-4-3",
+                "kind": "read",
+                "tempo": 50,
+                "generate": {
+                  "root": "C",
+                  "scale": "major",
+                  "key": "C",
+                  "range": [
+                    "C3",
+                    "G3"
+                  ],
+                  "bars": 2,
+                  "leap": 3,
+                  "durs": [
+                    "q",
+                    "h"
+                  ]
+                },
+                "score": {
+                  "key": "C",
+                  "time": "4/4",
+                  "clef": "bass"
+                },
+                "aids": [
+                  "names"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "ke0-4-3"
+              }
+            ],
+            "textId": "ku0-4"
+          },
+          {
+            "id": "ku0-5",
+            "exercises": [
+              {
+                "id": "ke0-5-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Am",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E5",
+                      "d": "q"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E5",
+                      "d": "q"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "E5",
+                      "d": "h"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "A2",
+                      "d": "w"
+                    },
+                    {
+                      "p": "A2",
+                      "d": "w"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "textId": "ke0-5-1"
+              },
+              {
+                "id": "ke0-5-2",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Am",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    },
+                    {
+                      "r": 1,
+                      "d": "e"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "e"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "straight"
+                },
+                "textId": "ke0-5-2"
+              },
+              {
+                "id": "ke0-5-3",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Am",
+                  "time": "3/4",
+                  "notes": [
+                    {
+                      "p": "A4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "C5",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E5",
+                      "d": "q"
+                    },
+                    {
+                      "p": "C5",
+                      "d": "h"
+                    },
+                    {
+                      "r": 1,
+                      "d": "q"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "h."
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "A2",
+                      "d": "h."
+                    },
+                    {
+                      "p": "E2",
+                      "d": "h."
+                    },
+                    {
+                      "p": "A2",
+                      "d": "h."
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "3/4",
+                  "bars": 3,
+                  "drums": "half"
+                },
+                "textId": "ke0-5-3"
+              }
+            ],
+            "textId": "ku0-5"
+          },
+          {
+            "id": "ku0-6",
+            "exercises": [
+              {
+                "id": "ke0-6-1",
+                "kind": "technique",
+                "tempo": 50,
+                "score": {
+                  "key": "Am",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "ke0-6-1"
+              },
+              {
+                "id": "ke0-6-2",
+                "kind": "technique",
+                "tempo": 50,
+                "score": {
+                  "key": "Am",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "A4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "C5",
+                      "d": "w"
+                    },
+                    {
+                      "p": "E5",
+                      "d": "w"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "w"
+                    }
+                  ]
+                },
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "ke0-6-2"
+              }
+            ],
+            "textId": "ku0-6"
+          }
+        ],
+        "textId": "k0"
+      },
+      {
+        "id": "k1",
+        "units": [
+          {
+            "id": "ku1-1",
+            "exercises": [
+              {
+                "id": "ke1-1-2",
+                "kind": "improv",
+                "tempo": 60,
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "pcs": [
+                    4,
+                    7,
+                    11
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "B4"
+                  ]
+                },
+                "textId": "ke1-1-2"
+              },
+              {
+                "id": "ke1-1-1",
+                "kind": "read",
+                "tempo": 60,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E4",
+                      "d": "h",
+                      "fi": 1
+                    },
+                    {
+                      "p": "F#4",
+                      "d": "h",
+                      "fi": 2
+                    },
+                    {
+                      "p": "G4",
+                      "d": "h",
+                      "fi": 3
+                    },
+                    {
+                      "p": "A4",
+                      "d": "h",
+                      "fi": 1
+                    },
+                    {
+                      "p": "B4",
+                      "d": "h",
+                      "fi": 2
+                    },
+                    {
+                      "p": "C5",
+                      "d": "h",
+                      "fi": 3
+                    },
+                    {
+                      "p": "D5",
+                      "d": "h",
+                      "fi": 4
+                    },
+                    {
+                      "p": "E5",
+                      "d": "h",
+                      "fi": 5,
+                      "tie": 1
+                    },
+                    {
+                      "p": "E5",
+                      "d": "w"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w",
+                      "fi": [
+                        5,
+                        1
+                      ]
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 5,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                },
+                "textId": "ke1-1-1"
+              }
+            ],
+            "textId": "ku1-1"
+          },
+          {
+            "id": "ku1-2",
+            "exercises": [
+              {
+                "id": "ke1-2-1",
+                "kind": "read",
+                "tempo": 55,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "G4",
+                      "d": "h"
+                    },
+                    {
+                      "p": "A4",
+                      "d": "h",
+                      "tie": 1
+                    },
+                    {
+                      "p": "A4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "B4",
+                      "d": "h."
+                    },
+                    {
+                      "p": "C5",
+                      "d": "q",
+                      "tie": 1
+                    },
+                    {
+                      "p": "C5",
+                      "d": "h"
+                    },
+                    {
+                      "p": "B4",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "w",
+                      "tie": 1
+                    },
+                    {
+                      "p": "E4",
+                      "d": "w"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "names"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 6,
+                  "drums": "half"
+                },
+                "textId": "ke1-2-1"
+              },
+              {
+                "id": "ke1-2-2",
+                "kind": "improv",
+                "tempo": 55,
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 8,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                },
+                "textId": "ke1-2-2"
+              }
+            ],
+            "textId": "ku1-2"
+          },
+          {
+            "id": "ku1-3",
+            "exercises": [
+              {
+                "id": "ke1-3-1",
+                "kind": "read",
+                "tempo": 55,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E4",
+                      "d": "q",
+                      "fi": 1
+                    },
+                    {
+                      "p": "G4",
+                      "d": "q",
+                      "fi": 3
+                    },
+                    {
+                      "p": "B4",
+                      "d": "h",
+                      "fi": 5
+                    },
+                    {
+                      "p": "G4",
+                      "d": "q",
+                      "fi": 3
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q",
+                      "fi": 1
+                    },
+                    {
+                      "p": "B4",
+                      "d": "h",
+                      "fi": 5
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": "E3",
+                      "d": "w",
+                      "fi": 5
+                    },
+                    {
+                      "p": "E3",
+                      "d": "w",
+                      "fi": 5
+                    }
+                  ]
+                },
+                "aids": [
+                  "names",
+                  "fingers"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 2,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "pcs": [
+                    4,
+                    7,
+                    11
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "B4"
+                  ]
+                },
+                "textId": "ke1-3-1"
+              },
+              {
+                "id": "ke1-3-2",
+                "kind": "improv",
+                "tempo": 55,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "pcs": [
+                    4,
+                    7,
+                    9,
+                    11
+                  ],
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "B4"
+                  ]
+                },
+                "textId": "ke1-3-2"
+              }
+            ],
+            "textId": "ku1-3"
+          },
+          {
+            "id": "ku1-4",
+            "exercises": [
+              {
+                "id": "ke1-4-1",
+                "kind": "read",
+                "tempo": 55,
+                "score": {
+                  "key": "Em",
+                  "time": "4/4",
+                  "notes": [
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "F#4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "G4",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "F4",
+                      "d": "q"
+                    },
+                    {
+                      "p": "G4",
+                      "d": "h"
+                    },
+                    {
+                      "p": "F4",
+                      "d": "h"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "h"
+                    },
+                    {
+                      "p": "F4",
+                      "d": "w"
+                    },
+                    {
+                      "p": "E4",
+                      "d": "w"
+                    }
+                  ],
+                  "bass": [
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    },
+                    {
+                      "p": [
+                        "E3",
+                        "B3"
+                      ],
+                      "d": "w"
+                    }
+                  ]
+                },
+                "aids": [
+                  "names"
+                ],
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 5,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "scale": "phrygian",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                },
+                "textId": "ke1-4-1"
+              },
+              {
+                "id": "ke1-4-2",
+                "kind": "improv",
+                "tempo": 55,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "scale": "phrygian",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                },
+                "textId": "ke1-4-2"
+              }
+            ],
+            "textId": "ku1-4"
+          },
+          {
+            "id": "ku1-5",
+            "exercises": [
+              {
+                "id": "ke1-5-1",
+                "kind": "transcribe",
+                "backing": {
+                  "type": "click",
+                  "time": "4/4",
+                  "bars": 4,
+                  "drums": "half"
+                },
+                "textId": "ke1-5-1"
+              }
+            ],
+            "textId": "ku1-5"
+          },
+          {
+            "id": "ku1-6",
+            "exercises": [
+              {
+                "id": "ke1-6-1",
+                "kind": "improv",
+                "tempo": 58,
+                "backing": {
+                  "type": "drums",
+                  "time": "4/4",
+                  "bars": 8,
+                  "drums": "half"
+                },
+                "piano": {
+                  "root": "E",
+                  "scale": "aeolian",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                },
+                "textId": "ke1-6-1"
+              }
+            ],
+            "textId": "ku1-6"
+          }
+        ],
+        "textId": "k1"
+      },
+      {
+        "id": "k2",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku2-1",
+            "exercises": [],
+            "textId": "ku2-1"
+          },
+          {
+            "id": "ku2-2",
+            "exercises": [],
+            "textId": "ku2-2"
+          },
+          {
+            "id": "ku2-3",
+            "exercises": [],
+            "textId": "ku2-3"
+          },
+          {
+            "id": "ku2-rhythm",
+            "textId": "ku2-rhythm",
+            "exercises": []
+          }
+        ],
+        "textId": "k2"
+      },
+      {
+        "id": "k3",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku3-1",
+            "exercises": [],
+            "textId": "ku3-1"
+          },
+          {
+            "id": "ku3-2",
+            "exercises": [],
+            "textId": "ku3-2"
+          },
+          {
+            "id": "ku3-3",
+            "exercises": [],
+            "textId": "ku3-3"
+          },
+          {
+            "id": "ku3-reading",
+            "textId": "ku3-reading",
+            "exercises": []
+          }
+        ],
+        "textId": "k3"
+      },
+      {
+        "id": "k4",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku4-1",
+            "exercises": [],
+            "textId": "ku4-1"
+          },
+          {
+            "id": "ku4-2",
+            "exercises": [],
+            "textId": "ku4-2"
+          },
+          {
+            "id": "ku4-3",
+            "exercises": [],
+            "textId": "ku4-3"
+          },
+          {
+            "id": "ku4-chords",
+            "textId": "ku4-chords",
+            "exercises": []
+          }
+        ],
+        "textId": "k4"
+      },
+      {
+        "id": "k5",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku5-1",
+            "exercises": [],
+            "textId": "ku5-1"
+          },
+          {
+            "id": "ku5-2",
+            "exercises": [],
+            "textId": "ku5-2"
+          },
+          {
+            "id": "ku5-3",
+            "exercises": [],
+            "textId": "ku5-3"
+          },
+          {
+            "id": "ku5-groove",
+            "textId": "ku5-groove",
+            "exercises": []
+          }
+        ],
+        "textId": "k5"
+      },
+      {
+        "id": "k6",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku6-1",
+            "exercises": [],
+            "textId": "ku6-1"
+          },
+          {
+            "id": "ku6-2",
+            "exercises": [],
+            "textId": "ku6-2"
+          },
+          {
+            "id": "ku6-3",
+            "exercises": [],
+            "textId": "ku6-3"
+          }
+        ],
+        "textId": "k6"
+      },
+      {
+        "id": "k7",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku7-1",
+            "exercises": [],
+            "textId": "ku7-1"
+          },
+          {
+            "id": "ku7-2",
+            "exercises": [],
+            "textId": "ku7-2"
+          },
+          {
+            "id": "ku7-3",
+            "exercises": [],
+            "textId": "ku7-3"
+          },
+          {
+            "id": "ku7-solo",
+            "textId": "ku7-solo",
+            "exercises": []
+          }
+        ],
+        "textId": "k7"
+      },
+      {
+        "id": "k8",
+        "planned": true,
+        "units": [
+          {
+            "id": "ku8-1",
+            "exercises": [],
+            "textId": "ku8-1"
+          },
+          {
+            "id": "ku8-2",
+            "exercises": [],
+            "textId": "ku8-2"
+          }
+        ],
+        "textId": "k8"
+      }
+    ],
+    "textId": "keys"
+  }
+}

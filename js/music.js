@@ -39,7 +39,7 @@ AM.music = (() => {
   function position(m, o = {}) {
     if (o.s != null) return {s:o.s, f:m - midi(TUNING[o.s])};
     let best = null;
-    TUNING.forEach((t, s) => { const f = m - midi(t); if (f >= 0 && f <= (o.maxFret ?? 24) && (!best || f < best.f)) best = {s, f}; });
+    TUNING.forEach((t, s) => { const f = m - midi(t); if ((!o.window || s >= o.window[0] && s <= o.window[1]) && f >= 0 && f <= (o.maxFret ?? 24) && (!best || f < best.f)) best = {s, f}; });
     return best;
   }
   function chord(root, scale, deg) {

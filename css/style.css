@@ -55,3 +55,14 @@ svg.fb{width:100%;height:auto;display:block}.fb .wood{fill:var(--wood)}.fb .fret
 .tpl{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0}.tpl h2{margin-bottom:4px}.what{margin:0 0 6px;font-weight:600}.why{color:var(--mute);margin:0 0 12px}
 .vars{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .var{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:2px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px}.var span{font-size:.85rem;color:var(--mute)}.var:hover{border-color:var(--acc)}.var.on{border-color:var(--root);background:#fff4f0}
+.language{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:.85rem}
+.position{font-weight:600;color:var(--ink);border-left:3px solid var(--acc);padding-left:10px}
+.diagram{margin:12px 0}.diagram summary{cursor:pointer;color:var(--acc)}
+.diagram>div{overflow-x:auto}
+#app-status:not(:empty){max-width:940px;margin:16px auto;padding:12px;background:#fff3d6}
+#app-status:empty{display:none}
+:focus-visible{outline:3px solid var(--root);outline-offset:3px}
+.logt td{overflow-wrap:anywhere}.logt{table-layout:fixed}
+.logt th:last-child{width:48px}
+@media(max-width:600px){.beats{grid-template-columns:repeat(8,minmax(0,1fr))}.pn{gap:20px}.pn a{max-width:48%}.ex{padding:12px}.language{margin-left:0}details.log form{flex-wrap:wrap}details.log input{min-width:0;width:100%}}
+button:disabled{opacity:.5;cursor:wait}

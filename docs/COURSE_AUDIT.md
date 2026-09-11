@@ -1,0 +1,68 @@
+# Fachlicher Abgleich · 2026-09-11
+
+## Grundlage und Grenze
+
+Lokale Gigajam-Sammlung: `~/Git/Gigajam/`, Debut bis Grade Five.
+Pro Stufe fünf Stücke mit je einer Gitarren- und Klavierpartitur:
+6 Stufen × 5 Stücke × 2 Instrumente = 60 relevante PDFs.
+Bass- und Drum-Partituren sind nicht Ziel dieses Abgleichs.
+
+Alle relevanten Dateien inventarisiert und textuell extrahiert. Erste Seiten aller 60 Partituren visuell gesichtet; ausgewählte Folgeseiten auf Form und Soloanweisungen geprüft. Notenglyphen sind in der Textextraktion teilweise unlesbar. Deshalb ist bloße Textsuche kein Nachweis musikalischer Vollständigkeit. Keine vollständige Takt-für-Takt-Analyse aller Folgeseiten durchgeführt.
+
+Die Sammlung enthält Repertoirepartituren, MIDI- und GKM-Dateien. Ein vollständiger Prüfungslehrplan mit Bewertungskriterien, technischen Pflichtaufgaben, Blattspiel- und Gehörprüfungen ist nicht enthalten. Die folgende Zuordnung deckt erkennbare Spielanforderungen ab; sie ist keine Bestätigung einer Prüfungsgleichwertigkeit. Konfidenz: hoch für die genannten sichtbaren Anforderungen, begrenzt für nicht dokumentierte Abschlusskriterien.
+
+Keine Originalpartituren, MIDI-Dateien oder extrahierten Notenfolgen werden in a-minor veröffentlicht. Die Übungen sind eigenständig. P4 ersetzt Standardstimmungsgriffe; Tonhöhen-, Rhythmus- und Formkompetenz bleiben übertragbar. Ein Standardstimmungs-Fingersatz wird dadurch nicht automatisch gelernt.
+
+## Anforderungsmatrix
+
+| Lokaler Beleg | Erkennbare Fähigkeit | a-minor-Zuordnung | Stand |
+|---|---|---|---|
+| Debut: `Fire It Up`, `Tunnel Vision`, beide Instrumente, S. 1 | Ganze/Halbe/Viertel, Tonwechsel, Grundpuls, Vorzeichen | Phase 0: Lesen, Rhythmus | Übungen vorhanden |
+| Grade One: `Wearing the Wire`, `Ain’t No Party`, S. 1 | Gerade Achtel, wechselnde Tonhöhen, Bass/Melodie bzw. Akkordbegleitung | Phase 0–1; vollständige Akkordbegleitung Phase 2 | Grundlagen vorhanden, Akkordtransfer geplant |
+| Grade Two: `Fire It Up`, `Tunnel Vision`, Gitarre S. 1 | „Muted Guitar“, Akzente, Achtelfolgen; Akkordsymbole über Rhythmusnotation | Erste Handkantendämpfung Phase 0; Powerchords und Akzente Phase 2 | Einstieg vorhanden, Ausbau geplant |
+| Grade Two/Three: `Lonely Streets`, `Fire It Up`, Piano S. 1 | Bewegte Melodie über Bass/Akkorden; Rollenwechsel der Hände | Zweistimmigkeit Phase 0–1; Umkehrungen und Stimmführung Phase 2–3 | Basis vorhanden, Transfer geplant |
+| Grade Three: `Tunnel Vision`, Gitarre S. 1 | Dur/Moll-Akkordwechsel und Rhythmen mit Achteln | Phase 2: Triaden und Rhythmus; Phase 3: wechselnder Bass | Geplant |
+| Grade Four: `Berlin Wall`, Gitarre/Piano S. 1 | Lange Pausen, synkopierte Einsätze, chromatische Bewegung, gebundene Noten | Phase 3: Rhythmuslesen/Formzeichen; Phase 4: Harmonik | Geplant; Haltebogenbasis vorhanden |
+| Grade Four: `Torture`, beide Instrumente, S. 1 | Sechzehntelfiguren, Achtelpausen, Melodie über gehaltenem Bass | Phase 3: Unterteilungen; Phase 5: Figuration | Geplant; Bass/Melodie-Grundlage vorhanden |
+| Grade Four: `Islands of Dreams`, Gitarre/Piano S. 1 | Mollseptakkorde, bewegte Sechzehntel, gebrochene Klavierfiguren | Phase 4: Septakkorde; Phase 5: Arpeggien | Geplant |
+| Grade Four: `The Way It Is`, Gitarre S. 1 | Mollsept-/Dominantseptakkorde, punktierte Rhythmen und Pausen | Phase 3–4 | Geplant |
+| Grade Four: `The Buzz`, Gitarre S. 1 | Auftakt/Einzähler, Segno/Coda-Zeichen, Clean-/Distortion-Wechsel | Phase 3: Formzeichen; Phase 7–8: Übergänge/Klangwechsel | Geplant |
+| Grade Five: `Brown Shoes`, Gitarre S. 1–2 | Shuffle, Quint-/Sextwechsel, Wiederholungskürzel, pentatonischer Soloabschnitt, lange Form | Phase 4: Akkorde; Phase 5: ternär; Phase 7–8: Solo/Form | Geplant |
+| Grade Five: `Take a Walk With Me`, Gitarre/Piano S. 1 | 12/8, punktierter Viertelpuls, gebrochene Begleitung, Mollpentatonik im Solo | Phase 5: 12/8; Phase 7: Solo; Phase 8: Arrangement | Geplant |
+| Grade Five: `Who Says It’s Raining?`, beide Instrumente, S. 1 | Swing, Septakkorde, Offbeat-Begleitung, Melodie über Akkorden | Phase 4–5 und 7 | Geplant |
+| Grade Five: `Coming Up Shortly`, Piano S. 1 | Triolischer Auftakt, Melodie und Akkorde | Phase 5: Triolen; Phase 7: Formeintritt | Geplant |
+| Grade Five: `Soul Town`, beide Instrumente, S. 1 | Synkopierte Riffs, Quint-/Sextwechsel, chromatische Stimmen | Phase 3–5 | Geplant |
+
+„Geplant“ bedeutet ausdrücklich: im sichtbaren Curriculum verankert, noch nicht als fertige Übung vermittelt. Phase 0–1 allein deckt Debut bis Grade Five nicht vollständig ab.
+
+Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beispiele: `Lonely Streets` Viertel = 85, `Fire It Up` = 128, `Berlin Wall` = 140, `Who Says It’s Raining?` = 146. Spätere Transferprüfungen brauchen sowohl kontrolliertes langsames Spiel als auch längere Durchläufe im jeweiligen Zieltempo. Die aktuellen Einstiegsübungen bleiben langsamer.
+
+## Eigenständiges Zielprofil
+
+- Gitarre: E2 A2 D3 G3 C4 F4; Noten mit Lageangabe, keine Tabs. Offene Pedaltöne, unabhängige Melodie, danach Arpeggien und Akkorde mit Melodiestimme.
+- Keyboard: eigenständige Bass-/Melodieführung und lesbare Voicings, auf MX49, Nord Lead A1, Blofeld und Klavier anwendbar. Ein Klang genügt zunächst.
+- Klangreferenzen: *Turn Loose the Swans*, *October Rust*, *Eternity*, *Le quattro stagioni*, *Harmonia artificioso-ariosa*. Keine Gleichsetzung dieser Musik mit einer einzelnen Skala. Hörziele: Phrasierung, Wiederholung, Register, Dichte, Reibung und Auflösung.
+- Solospiel zuerst; Drums oder externer Bass können unterstützen. Die Abschlussminiaturen von Phase 1 werden auch ohne Begleitung geprüft.
+- Notenlesen, Gehör und eigene Notation laufen durch alle Phasen. Akkordsymbole ergänzen später ausgeschriebene Stimmen; sie ersetzen das Lesen nicht.
+
+## Korrigierte fachliche und technische Fehler
+
+- Tiefes Gitarren-E: geschriebenes E3 liegt im Raum unter der dritten unteren Hilfslinie, nicht auf dieser Linie.
+- P4-Formen sind innerhalb verfügbarer Bünde/Saiten verschiebbar; offene Saiten lassen sich nicht als offene Saiten mitverschieben.
+- G3 im Drei-Saiten-Fenster bleibt auf D, statt automatisch auf die offene G-Saite zu wandern.
+- Seitliches Vibrato erhöht die Tonhöhe; es schwingt nicht automatisch symmetrisch um den Bundton. Sofortiges Vibrato ist keine allgemeine Regelverletzung.
+- F–E ist eine phrygische Übevorgabe, keine zwingende Auflösung. F–G dient als Gegenbeispiel.
+- Klavier und Synth unterscheiden sich im Ausklang. Wiederholter Bass macht Übungen ohne Latch, Split oder Pad möglich.
+- Keyboard-Gegenbewegung beginnt rechts auf C4, links auf C3: keine zwei Daumen gleichzeitig auf derselben Taste.
+- Haltebögen verlängern die Tonereignisse bei der Vorschau. Zwei Gitarrenstimmen teilen ein System; Keyboard nutzt zwei Systeme.
+- Half-time hat tatsächlich Snare auf 3; gerade Achtelbegleitung Snare auf 2 und 4. Keine zufälligen Fills in Lernaufgaben.
+- MIDI-Stopp leert die Warteschlange und beendet Kanal-10-Noten. Verbindungsabbruch oder inaktiver Tab stoppt die Begleitung; kein heimlicher interner Schlagzeugersatz.
+- Import validiert vor Zustandsänderung und vereinigt Journalereignisse. UI maskiert importierte Texte. Fortschritts-IDs sind sprachunabhängig.
+
+## Quellen für technische und notatorische Korrekturen
+
+- [Alesis SR-18 Reference Manual](https://www.alesis.com/rscdn/919/documents/sr18_reference_manual_reve.pdf), System Setup: MIDI-Kanal, DRUM IN, NOTE, NOTE MAP. SR-18-Zuordnung ist konfigurierbar; pauschale GM-Kompatibilität reicht nicht als Einrichtung.
+- [Yamaha MX49/MX61/MX88 Reference Manual](https://mx.yamaha.com/files/download/other_assets/0/892960/mx49mx61mx88_en_rm_b0.pdf): Parts und MIDI-Kanäle, Drum-Part 10.
+- [musictheory.net: Staff, Clefs and Ledger Lines](https://www.musictheory.net/lessons/10), [Dots and Ties](https://www.musictheory.net/lessons/14).
+
+Hardwareklang und tatsächliches Timing an SR-18/MX49 sind im Entwicklungscontainer nicht überprüfbar. Browser- und MIDI-Mocktests ersetzen diesen Hörtest nicht.
