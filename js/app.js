@@ -127,6 +127,7 @@
       const siblings = units.filter(x => x.track === u.track && !x.phase.planned), k = siblings.indexOf(u), pi = u.track.phases.findIndex(p => p.id === u.phase.id);
       return `<nav class="crumbs">${courseLink()} › <a href="#/track/${u.track.id}">${esc(u.track.title)}</a> › <a href="#/phase/${u.phase.id}">${t('phase')} ${pi}</a></nav>
         <h1>${esc(u.title)}</h1><p class="lead">${esc(u.goal)}</p><div class="text">${md(u.text || '')}</div>
+        ${u.track.instrument === 'guitar' ? `<p class="small">${t('guitarAttack')}</p>` : ''}
         ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : `<p>${t('plannedDetail')}</p>`}
         <nav class="pn">${k > 0 ? `<a href="#/unit/${siblings[k - 1].id}">‹ ${esc(siblings[k - 1].title)}</a>` : '<span></span>'}${k >= 0 && k < siblings.length - 1 ? `<a href="#/unit/${siblings[k + 1].id}">${esc(siblings[k + 1].title)} ›</a>` : ''}</nav>`;
     },

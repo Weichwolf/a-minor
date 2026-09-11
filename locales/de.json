@@ -2,7 +2,7 @@
   "course": {
     "gitarre": {
       "title": "Gitarre",
-      "lead": "P4: E2 A2 D3 G3 C4 F4. Klang, Puls und wiederholbare eigene Phrasen."
+      "lead": "P4: E2 A2 D3 G3 C4 F4. Klang, Puls und wiederholbare eigene Phrasen. Rechte Hand ausschließlich Plektrum; Hammer-ons, Pull-offs und Tapping mit der linken Hand."
     },
     "p0": {
       "title": "Fundament",
@@ -145,12 +145,12 @@
     "u0-6": {
       "title": "Zwei Stimmen: halten und dämpfen",
       "goal": "Eine offene Basssaite weiterklingen lassen, während die Melodie pausiert.",
-      "text": "Zwei Stimmen haben eigene Notenlängen. Im gemeinsamen Violinsystem zeigen die Hälse der Melodie nach oben, die des Basses nach unten. Ganze Noten haben keine Hälse. Lies zunächst jede Stimme einzeln, dann beide zusammen. Gitarre klingt weiterhin eine Oktave tiefer als notiert.\n\nHier spielt der Daumen die tiefe E-Saite, Zeige- oder Mittelfinger die Melodie. Plektrum plus freier Finger ist später eine Alternative. Dämpfe unbenutzte Saiten, ohne die beabsichtigte Basssaite abzuwürgen. Wenig Gain hilft, die Stimmen zu unterscheiden."
+      "text": "Zwei Stimmen haben eigene Notenlängen. Im gemeinsamen Violinsystem zeigen die Hälse der Melodie nach oben, die des Basses nach unten. Ganze Noten haben keine Hälse. Lies zunächst jede Stimme einzeln, dann beide zusammen. Gitarre klingt weiterhin eine Oktave tiefer als notiert.\n\nRechte Hand nur mit Plektrum. Bei gemeinsamen Einsätzen den Bass auf den Puls setzen und die Melodie unmittelbar danach anschlagen: ein bewusst kurzer, aufgefächerter Einsatz. Nicht klingende Saiten beim Überspringen oder Durchstreichen dämpfen. Ein Haltebogen bleibt ohne neuen Anschlag. Danach getrennte Einsätze üben; dafür ist kein Tapping nötig."
     },
     "e0-6-1": {
       "title": "Bass hält, Melodie pausiert",
       "position": "II. Lage: Melodie auf der D-Saite, Bass E leer.",
-      "instructions": "Erst nur den Bass, dann nur die Melodie spielen. Gemeinsam: E2 und E3 anschlagen, E3 nach zwei Vierteln dämpfen, E2 weiterhalten. Im nächsten Takt beide erneut anschlagen. Die Bassstimme am Ende ebenfalls stoppen.",
+      "instructions": "Erst Bass und Melodie getrennt mit Plektrum spielen. Gemeinsam: E2 auf die 1, E3 unmittelbar dahinter. E3 nach zwei Vierteln dämpfen, E2 weiterklingen lassen. Im nächsten Takt den kurzen aufgefächerten Einsatz wiederholen. Am Ende beide Stimmen stoppen.",
       "checklist": [
         "Melodiepause still, Bass klingt weiter?",
         "Am Ende beide Stimmen gezielt gedämpft?",
@@ -234,7 +234,7 @@
     "e1-pedal-1": {
       "title": "Offenes E unter einer singenden Stimme",
       "position": "II. Lage, D-Saite: E3 mit 1, F#3 mit 3, G3 mit 4. Bass E leer.",
-      "instructions": "Melodie auf der D-Saite, Bass mit Daumen auf E leer. E2 pro Takt anschlagen. Die Melodie hält E3 über den zweiten Takt hinweg; nur den Bass neu anschlagen. Im letzten Takt die Melodie zwei Viertel früher als den Bass beenden.",
+      "instructions": "Melodie auf der D-Saite, offener E-Bass mit Plektrum. Auf gemeinsamen Taktanfängen E2 zuerst und den Melodieton unmittelbar danach anschlagen. Die Melodie hält E3 über den zweiten Takt: nur den Bass neu anschlagen. Im letzten Takt endet die Melodie zwei Viertel vor dem Bass.",
       "checklist": [
         "Bass leiser als Melodie?",
         "Gehaltenes E3 bleibt beim neuen Bassanschlag liegen?",
@@ -679,7 +679,7 @@
     },
     "e2-1-1": {
       "title": "Notenbeispiel · Dreiklänge: Moll und Dur",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. E-Bass mit Daumen, obere drei Töne mit freien Fingern. G3 und G#3 liegen auf D in Bund 5 und 6; B3 und E4 bleiben liegen.",
+      "instructions": "E-Bass zuerst, dann die oberen drei Saiten mit einem kurzen kontrollierten Plektrumstrich. Unbenutzte Saiten stumm halten. G3 und G#3 liegen auf D in Bund 5 und 6; B3 und E4 bleiben liegen. Die Töne dürfen nach dem Auffächern gemeinsam klingen.",
       "checklist": [
         "Terzwechsel hörbar, übrige Töne unverändert?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -832,7 +832,7 @@
     },
     "e2-4-1": {
       "title": "Notenbeispiel · Arpeggio über offenem Bass",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Daumen hält den Bassrhythmus. Obere Saiten mit i–m–a oder frei gewähltem, wiederholbarem Fingersatz. Den höchsten Ton leicht hervorheben, ohne die Basssaite erneut zu treffen.",
+      "instructions": "Das Plektrum spielt Bass und obere Figur. Bei einem gemeinsamen Einsatz den Bass auf den Puls und den oberen Ton unmittelbar dahinter setzen. Anschließend die notierten Achtel mit kleinen Saitenwechseln spielen; der Bass darf dabei weiterklingen. Den höchsten Ton hervorheben, ohne den Bass erneut zu treffen.",
       "checklist": [
         "Achtel auch beim Akkordwechsel gleichmäßig?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -910,7 +910,7 @@
     },
     "e2-rhythm-1": {
       "title": "Notenbeispiel · Kurze Akkorde und Offbeats",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Obere drei Saiten gezielt zupfen; Greifdruck zum Tonende lösen, ohne die offenen Basssaiten mitklingen zu lassen. Bass pro Takt separat mit Daumen.",
+      "instructions": "Die oberen drei Saiten mit einem kurzen Plektrumstrich auf „und“ anschlagen. Greifdruck zum Tonende lösen; offene Basssaiten kontrolliert dämpfen. Der Bass beginnt separat auf der notierten Zählzeit. Die Achtelpause vor dem Akkord nicht mit einem Anschlag füllen.",
       "checklist": [
         "Akkorde genau zwischen den Klicks?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -1114,7 +1114,7 @@
     },
     "e3-reading-1": {
       "title": "Notenbeispiel · Synkopen und gebundene Einsätze",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Melodie auf D/G, E-Bass mit dem Daumen. Zuerst nur den Melodierhythmus auf gedämpfter Saite spielen; der Fuß hält Viertel.",
+      "instructions": "Melodie auf D/G, E-Bass mit Plektrum. Beide Rhythmen zunächst einzeln anschlagen; der Fuß hält Viertel. Bei gemeinsamen Einsätzen kurz Bass–Melodie auffächern. Synkopierte Melodietöne mit Haltebogen beim folgenden Bassanschlag weiterhalten.",
       "checklist": [
         "Keine zusätzlichen Anschläge unter Haltebögen?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -1498,7 +1498,7 @@
     },
     "e4-2-1": {
       "title": "Notenbeispiel · Verminderter Septakkord in Bewegung",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Bass D#3 auf A Bund 6, oben F#3 auf D4, C4 auf G5, A4 auf F4. Die C-Saite bleibt still. Fingerzupfen statt ungezieltem Anschlag über alle Saiten.",
+      "instructions": "Bass D#3 auf A Bund 6, oben F#3 auf D4, C4 auf G5, A4 auf F4. Mit dem Plektrum von tief nach hoch auffächern. Die C-Saite gezielt dämpfen und überspringen oder stumm durchstreichen; sie gehört nicht zum Akkord. Erst langsam jede klingende Saite kontrollieren.",
       "checklist": [
         "Alle vier Akkordtöne ohne zusätzliche Saite/Taste?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -1729,7 +1729,7 @@
     },
     "e5-2-1": {
       "title": "Notenbeispiel · Drei Schichten: Bass, Figur, Melodie",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Daumen Bass, i/m die D- und G-Saite, a die obere C-Saite. Oberen Finger liegen lassen, während die Mittelstimme weiterwechselt. Nur die notierten Saiten dürfen klingen.",
+      "instructions": "Gemeinsamen Beginn mit dem Plektrum kurz Bass–Mitte–Melodie auffächern. Die obere Saite halten, während das Plektrum die mittleren Viertel spielt. Nur fällige Stimmen neu anschlagen. Später kann ein vorbereiteter Hammer-on aus der Stille eine Mittelstimme gleichzeitig mit einem Plektrumanschlag auslösen; dafür zuerst die Technik aus Legato-Einheit beherrschen.",
       "checklist": [
         "Oberstimme ohne ungewollte Neuanschläge gehalten?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -1831,7 +1831,7 @@
     },
     "e5-4-1": {
       "title": "Notenbeispiel · 12/8: vier große Pulse",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Daumen im Beispiel auf Puls 1 und 3, darüber die Achtelfigur. Die Gruppenanfänge nur leicht betonen; nicht jede dritte Note hart anschlagen.",
+      "instructions": "Das Plektrum setzt den Bass im Beispiel auf Puls 1 und 3 und spielt dazwischen die obere Achtelfigur. Gemeinsame Einsätze kurz von tief nach hoch auffächern. Den Abstand der regulären Achtel danach beibehalten; die Gruppenanfänge nur leicht betonen.",
       "checklist": [
         "Vier große Pulse statt zwölf gleich starker Schläge?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -1891,10 +1891,10 @@
     },
     "e5-6-2": {
       "title": "Gezielt verändern · Legato: Hammer-on und Pull-off",
-      "instructions": "Spiele einmal alle Töne angeschlagen, einmal mit den Bögen. Vergleiche Tonlängen und Lautstärke. Der gebundene Ton darf nicht verspätet oder deutlich leiser einsetzen.",
+      "instructions": "Spiele einmal alle Töne angeschlagen, einmal mit den Bögen. Vergleiche Tonlängen und Lautstärke. Der gebundene Ton darf nicht verspätet oder deutlich leiser einsetzen. Danach bei gleichem Viertelpuls vier einzelne E3 aus der Stille mit der linken Hand anschlagen, jede nach einer Achtel dämpfen. Erst ohne Bass, dann jedes E3 gleichzeitig mit E2 per Plektrum. Misslingt die Dämpfung, zurück zur einzelnen Stimme.",
       "checklist": [
         "Gebundene Töne rhythmisch und dynamisch gleichwertig?",
-        "Unveränderte Bestandteile beim Vergleich beibehalten?"
+        "Unveränderte Bestandteile beim Vergleich beibehalten? Linker Anschlag aus der Stille klar, mit Plektrum-Bass gleichzeitig und ohne offene Nachbarsaiten?"
       ],
       "position": "P4 · Griffbereich Bund 2–5; leere Saiten gemäß Noten. Saitenhinweise bei Bedarf einblenden."
     },
@@ -1909,7 +1909,7 @@
     },
     "e5-3-1": {
       "title": "Notenbeispiel · Sequenz über wechselndem Bass",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Die Melodie vor jedem Basswechsel vorauslesen. Basssaite mit Daumen wechseln, obere Finger bleiben im Muster. Nicht beim Lesen mit dem Bass stehen bleiben.",
+      "instructions": "Die Melodie vor jedem Basswechsel vorauslesen. Mit dem Plektrum erst den neuen Bass, unmittelbar danach den gleichzeitig notierten oberen Ton spielen. Anschließend die Figur fortsetzen, ohne den Bass versehentlich abzudämpfen. Beim nächsten Basswechsel den alten Bass beenden.",
       "checklist": [
         "Starke Zählzeiten passen zum jeweiligen Akkord?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -2011,7 +2011,7 @@
     },
     "e6-1-1": {
       "title": "Notenbeispiel · Quarten statt Terzschichtung",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. E3–A3–D4 liegen auf D/G/C jeweils Bund 2. Ein kleiner Barré ist möglich; prüfe jede Saite einzeln. Bass mit Daumen, A-Saite bei E-Bass sonst still.",
+      "instructions": "E3–A3–D4 liegen auf D/G/C jeweils Bund 2. Ein kleiner Barré ist möglich; jede Saite einzeln prüfen. Mit dem Plektrum Bass und oberen Quartklang kurz auffächern. Bei E-Bass die A-Saite stumm halten; der Bass soll nach dem Anschlag weiterklingen.",
       "checklist": [
         "Alle Quarten einzeln geprüft?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -2164,7 +2164,7 @@
     },
     "e6-4-1": {
       "title": "Notenbeispiel · Dichte und Tonende als Klangregler",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Spiele mit wenig Gain und Fingeranschlag. Dämpfe die innere Figur nach jeder Viertel, ohne die obere Saite zu stoppen. Wiederhole mit deinem üblichen Ampklang.",
+      "instructions": "Nur Plektrum: Den gemeinsamen Taktanfang kurz von Bass über Mittelstimme zur Melodie auffächern. Bass und Melodie anschließend liegen lassen; das Plektrum spielt nur die folgenden mittleren Viertel. Die Mittelstimme zum notierten Tonende mit der Greifhand dämpfen, ohne die Melodiesaite zu stoppen. Im zweiten Takt bleibt die Mitte vollständig still. Erst wenig Gain, dann den üblichen Ampklang verwenden. Tapping ist für diese Fassung nicht erforderlich.",
       "checklist": [
         "Mittelstimmenpausen unter gehaltener Melodie hörbar?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -2344,7 +2344,7 @@
     },
     "e7-1-1": {
       "title": "Notenbeispiel · Drei gegen zwei",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Daumen spielt Viertel auf E leer; obere Finger drei Töne pro zwei Daumenanschlägen. Zuerst auf gedämpften Saiten klopfen, dann mit Tonhöhen.",
+      "instructions": "Zuerst beide Stimmen getrennt mit Plektrum spielen. Dann Bassviertel mit Plektrum, obere Töne links durch vorbereitete Hammer-ons aus der Stille und passende Pull-offs erzeugen. Ein Ton auf einer neuen Saite braucht dort einen neuen linken Anschlag; er entsteht nicht durch einen Pull-off auf der alten Saite. An gemeinsamen Einsätzen müssen beide Hände zusammenkommen. Das ist eine fortgeschrittene Anwendung aus der Legato-Einheit; langsamer üben, statt den 3:2-Rhythmus zu verändern.",
       "checklist": [
         "Gemeinsamer Beginn nach jeder Zweiergruppe?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -2446,7 +2446,7 @@
     },
     "e7-3-1": {
       "title": "Notenbeispiel · 7/8 und 5/8 in Gruppen",
-      "instructions": "Lies zuerst Rhythmus und jede Stimme einzeln, dann spiele den vollständigen Satz. Daumen auf jedem Gruppenanfang, obere Finger spielen die notierten Achtel. Erst nur den Rhythmus auf E, dann die Melodietöne.",
+      "instructions": "Mit dem Plektrum den Bass auf den Gruppenanfängen und die obere Achtelfolge spielen. Gemeinsame Einsätze kurz Bass–Melodie auffächern; die folgenden Achtel bleiben im Raster. Später kann die linke Hand den gemeinsamen Melodiebeginn anschlagen, während das Plektrum den Bass spielt. Erst nur den Rhythmus, dann die Tonhöhen verbinden.",
       "checklist": [
         "Letzte Dreiergruppe vollständig?",
         "Zwei vollständige Durchgänge mit klaren Tonenden?"
@@ -3011,7 +3011,7 @@
     "u2-1": {
       "title": "Dreiklänge: Moll und Dur",
       "goal": "Grundton, Terz und Quinte als zusammengehörigen Klang hören.",
-      "text": "Em besteht aus E–G–B, E-Dur aus E–G#–B: nur die Terz ändert sich. Ein Dreiklang bleibt derselbe Akkord, wenn ein Ton in einer anderen Oktave liegt. Spiele zuerst jeden Ton einzeln und singe die Terz über dem Bass.\n\nE-Bass mit Daumen, obere drei Töne mit freien Fingern. G3 und G#3 liegen auf D in Bund 5 und 6; B3 und E4 bleiben liegen."
+      "text": "Em besteht aus E–G–B, E-Dur aus E–G#–B: nur die Terz ändert sich. Ein Dreiklang bleibt derselbe Akkord, wenn ein Ton in einer anderen Oktave liegt. Spiele zuerst jeden Ton einzeln und singe die Terz über dem Bass.\n\nE-Bass zuerst, dann die oberen drei Saiten mit einem kurzen kontrollierten Plektrumstrich. Unbenutzte Saiten stumm halten. G3 und G#3 liegen auf D in Bund 5 und 6; B3 und E4 bleiben liegen. Die Töne dürfen nach dem Auffächern gemeinsam klingen."
     },
     "ku2-1": {
       "title": "Dreiklänge: Moll und Dur",
@@ -3041,7 +3041,7 @@
     "u2-4": {
       "title": "Arpeggio über offenem Bass",
       "goal": "Gebrochene Dreiklänge mit klarer oberster Stimme spielen.",
-      "text": "Ein Arpeggio verteilt Akkordtöne in der Zeit. Die notierten Achtel werden hier beim nächsten Melodieton beendet; nur der Bass hält. Längeres Überklingen ist eine spätere Gestaltungsentscheidung, kein Ersatz für saubere Tonenden.\n\nDaumen hält den Bassrhythmus. Obere Saiten mit i–m–a oder frei gewähltem, wiederholbarem Fingersatz. Den höchsten Ton leicht hervorheben, ohne die Basssaite erneut zu treffen."
+      "text": "Ein Arpeggio verteilt Akkordtöne in der Zeit. Die notierten Achtel werden hier beim nächsten Melodieton beendet; nur der Bass hält. Längeres Überklingen ist eine spätere Gestaltungsentscheidung, kein Ersatz für saubere Tonenden.\n\nDas Plektrum spielt Bass und obere Figur. Bei einem gemeinsamen Einsatz den Bass auf den Puls und den oberen Ton unmittelbar dahinter setzen. Anschließend die notierten Achtel mit kleinen Saitenwechseln spielen; der Bass darf dabei weiterklingen. Den höchsten Ton hervorheben, ohne den Bass erneut zu treffen."
     },
     "ku2-4": {
       "title": "Arpeggio über offenem Bass",
@@ -3056,7 +3056,7 @@
     "u2-rhythm": {
       "title": "Kurze Akkorde und Offbeats",
       "goal": "Zwischen den Klicks einsetzen und rechtzeitig loslassen.",
-      "text": "Die Achtelpause liegt hier auf der Zählzeit, der Akkord auf „und“. Zähle weiter, auch wenn du auf dem Klick nichts anschlägst. Ein kurzer Akkord braucht einen definierten Schluss; die nächste Pause ist kein zusätzlicher Anschlag.\n\nObere drei Saiten gezielt zupfen; Greifdruck zum Tonende lösen, ohne die offenen Basssaiten mitklingen zu lassen. Bass pro Takt separat mit Daumen."
+      "text": "Die Achtelpause liegt hier auf der Zählzeit, der Akkord auf „und“. Zähle weiter, auch wenn du auf dem Klick nichts anschlägst. Ein kurzer Akkord braucht einen definierten Schluss; die nächste Pause ist kein zusätzlicher Anschlag.\n\nDie oberen drei Saiten mit einem kurzen Plektrumstrich auf „und“ anschlagen. Greifdruck zum Tonende lösen; offene Basssaiten kontrolliert dämpfen. Der Bass beginnt separat auf der notierten Zählzeit. Die Achtelpause vor dem Akkord nicht mit einem Anschlag füllen."
     },
     "ku2-rhythm": {
       "title": "Kurze Akkorde und Offbeats",
@@ -3096,7 +3096,7 @@
     "u3-reading": {
       "title": "Synkopen und gebundene Einsätze",
       "goal": "Eine betonte Unterteilung über die nächste Zählzeit halten.",
-      "text": "Die Synkope beginnt zwischen Zählzeiten und klingt über eine stärkere Zählzeit hinweg. Der Haltebogen bedeutet keinen zweiten Anschlag. Unterteile in Achtel, markiere die Viertel mit dem Fuß und sprich die Pausen mit.\n\nMelodie auf D/G, E-Bass mit dem Daumen. Zuerst nur den Melodierhythmus auf gedämpfter Saite spielen; der Fuß hält Viertel."
+      "text": "Die Synkope beginnt zwischen Zählzeiten und klingt über eine stärkere Zählzeit hinweg. Der Haltebogen bedeutet keinen zweiten Anschlag. Unterteile in Achtel, markiere die Viertel mit dem Fuß und sprich die Pausen mit.\n\nMelodie auf D/G, E-Bass mit Plektrum. Beide Rhythmen zunächst einzeln anschlagen; der Fuß hält Viertel. Bei gemeinsamen Einsätzen kurz Bass–Melodie auffächern. Synkopierte Melodietöne mit Haltebogen beim folgenden Bassanschlag weiterhalten."
     },
     "ku3-reading": {
       "title": "Synkopen und gebundene Einsätze",
@@ -3171,7 +3171,7 @@
     "u4-2": {
       "title": "Verminderter Septakkord in Bewegung",
       "goal": "D#–F#–A–C als vier Stimmen nach Em führen.",
-      "text": "D#dim7 stapelt kleine Terzen: D#–F#–A–C. Drei Halbtöne pro Schritt ergeben 3+3+3 bis zur verminderten Septime C. Gleiche Abstände erlauben mehrere Deutungen; hier entscheidet die Auflösung nach Em. Spiele jeden Zielweg einzeln.\n\nBass D#3 auf A Bund 6, oben F#3 auf D4, C4 auf G5, A4 auf F4. Die C-Saite bleibt still. Fingerzupfen statt ungezieltem Anschlag über alle Saiten."
+      "text": "D#dim7 stapelt kleine Terzen: D#–F#–A–C. Drei Halbtöne pro Schritt ergeben 3+3+3 bis zur verminderten Septime C. Gleiche Abstände erlauben mehrere Deutungen; hier entscheidet die Auflösung nach Em. Spiele jeden Zielweg einzeln.\n\nBass D#3 auf A Bund 6, oben F#3 auf D4, C4 auf G5, A4 auf F4. Mit dem Plektrum von tief nach hoch auffächern. Die C-Saite gezielt dämpfen und überspringen oder stumm durchstreichen; sie gehört nicht zum Akkord. Erst langsam jede klingende Saite kontrollieren."
     },
     "ku4-2": {
       "title": "Verminderter Septakkord in Bewegung",
@@ -3216,7 +3216,7 @@
     "u5-2": {
       "title": "Drei Schichten: Bass, Figur, Melodie",
       "goal": "Eine Melodie halten, während die Mittelstimme weiterläuft.",
-      "text": "Drei Schichten haben verschiedene Aufgaben: Bass setzt den Bezug, mittlere Viertel halten Bewegung, lange obere Töne bilden die Melodie. Übe je zwei Schichten zusammen, erst danach alle drei. Die Melodie darf nicht mit jedem inneren Ton neu beginnen.\n\nDaumen Bass, i/m die D- und G-Saite, a die obere C-Saite. Oberen Finger liegen lassen, während die Mittelstimme weiterwechselt. Nur die notierten Saiten dürfen klingen."
+      "text": "Drei Schichten haben verschiedene Aufgaben: Bass setzt den Bezug, mittlere Viertel halten Bewegung, lange obere Töne bilden die Melodie. Übe je zwei Schichten zusammen, erst danach alle drei. Die Melodie darf nicht mit jedem inneren Ton neu beginnen.\n\nGemeinsamen Beginn mit dem Plektrum kurz Bass–Mitte–Melodie auffächern. Die obere Saite halten, während das Plektrum die mittleren Viertel spielt. Nur fällige Stimmen neu anschlagen. Später kann ein vorbereiteter Hammer-on aus der Stille eine Mittelstimme gleichzeitig mit einem Plektrumanschlag auslösen; dafür zuerst die Technik aus Legato-Einheit beherrschen."
     },
     "ku5-2": {
       "title": "Drei Schichten: Bass, Figur, Melodie",
@@ -3236,7 +3236,7 @@
     "u5-4": {
       "title": "12/8: vier große Pulse",
       "goal": "Zwölf Achtel als vier Dreiergruppen lesen und begleiten.",
-      "text": "12/8 enthält zwölf Achtel, hier gruppiert 3+3+3+3. Der Tempowert bezieht sich auf die punktierte Viertel: vier Pulse pro Takt. Diese Achtel sind reguläre Noten des Takts, keine zusätzlich markierten Triolen.\n\nDaumen im Beispiel auf Puls 1 und 3, darüber die Achtelfigur. Die Gruppenanfänge nur leicht betonen; nicht jede dritte Note hart anschlagen."
+      "text": "12/8 enthält zwölf Achtel, hier gruppiert 3+3+3+3. Der Tempowert bezieht sich auf die punktierte Viertel: vier Pulse pro Takt. Diese Achtel sind reguläre Noten des Takts, keine zusätzlich markierten Triolen.\n\nDas Plektrum setzt den Bass im Beispiel auf Puls 1 und 3 und spielt dazwischen die obere Achtelfigur. Gemeinsame Einsätze kurz von tief nach hoch auffächern. Den Abstand der regulären Achtel danach beibehalten; die Gruppenanfänge nur leicht betonen."
     },
     "ku5-4": {
       "title": "12/8: vier große Pulse",
@@ -3246,12 +3246,12 @@
     "u5-6": {
       "title": "Legato: Hammer-on und Pull-off",
       "goal": "Anschläge reduzieren, ohne Rhythmus oder Lautstärke zu verlieren.",
-      "text": "Ein Phrasierungsbogen verbindet verschiedene Tonhöhen; anders als ein Haltebogen verschmilzt er keine gleichen Töne. Hier wird der erste Ton angeschlagen, der nächste mit Hammer-on oder Pull-off erzeugt. Die Vorschau zeigt Tonhöhen und Rhythmus, nicht den Klang der Spieltechnik.\n\nD-Saite: E3 Bund 2 mit 1, F#3 Bund 4 mit 3, G3 Bund 5 mit 4. Beim Pull-off den Zielfinger vorher setzen und die Saite kontrolliert freigeben, nicht weit wegreißen."
+      "text": "Ein Phrasierungsbogen verbindet verschiedene Tonhöhen; anders als ein Haltebogen verschmilzt er keine gleichen Töne. Hier wird der erste Ton angeschlagen, der nächste mit Hammer-on oder Pull-off erzeugt. Die Vorschau zeigt Tonhöhen und Rhythmus, nicht den Klang der Spieltechnik.\n\nD-Saite: E3 Bund 2 mit 1, F#3 Bund 4 mit 3, G3 Bund 5 mit 4. Beim Pull-off den Zielfinger vorher setzen und die Saite kontrolliert freigeben, nicht weit wegreißen.\n\nErst wenn Hammer-ons und Pull-offs bei wenig Gain gleichmäßig gelingen: Left-Hand-Tapping als Hammer-on aus der Stille. D-Saite vor dem Anschlag nicht mit dem Plektrum spielen. E3 an Bund 2 mit Finger 1 kurz und gezielt anschlagen, sofort sauber dämpfen. Keine große Kraft; ein deutlicher Ton und stille Nachbarsaiten sind das Ziel. Dann den linken Anschlag gleichzeitig mit einem Plektrumanschlag auf E2 verbinden. Die rechte Hand bleibt am Plektrum."
     },
     "u5-3": {
       "title": "Sequenz über wechselndem Bass",
       "goal": "Motivkontur und harmonischen Rhythmus gleichzeitig kontrollieren.",
-      "text": "Die Figur wiederholt ihren Rhythmus, während der Bass pro Takt wechselt. Das ist ein harmonischer Rhythmus von einem Akkord pro Takt. Prüfe zuerst die Töne auf den starken Zählzeiten; sie sollen den jeweiligen Akkord verständlich machen.\n\nDie Melodie vor jedem Basswechsel vorauslesen. Basssaite mit Daumen wechseln, obere Finger bleiben im Muster. Nicht beim Lesen mit dem Bass stehen bleiben."
+      "text": "Die Figur wiederholt ihren Rhythmus, während der Bass pro Takt wechselt. Das ist ein harmonischer Rhythmus von einem Akkord pro Takt. Prüfe zuerst die Töne auf den starken Zählzeiten; sie sollen den jeweiligen Akkord verständlich machen.\n\nDie Melodie vor jedem Basswechsel vorauslesen. Mit dem Plektrum erst den neuen Bass, unmittelbar danach den gleichzeitig notierten oberen Ton spielen. Anschließend die Figur fortsetzen, ohne den Bass versehentlich abzudämpfen. Beim nächsten Basswechsel den alten Bass beenden."
     },
     "ku5-3": {
       "title": "Sequenz über wechselndem Bass",
@@ -3271,7 +3271,7 @@
     "u6-1": {
       "title": "Quarten statt Terzschichtung",
       "goal": "Quartenklänge mit einem hörbaren Bassbezug ausbalancieren.",
-      "text": "E–A–D schichtet zwei reine Quarten: je fünf Halbtöne. Ohne Terz ist die Dur/Moll-Zuordnung nicht eindeutig. Der Bass verändert die Deutung. Vergleiche denselben oberen Klang über E und A, ohne ihn sofort als festen Akkordtyp zu etikettieren.\n\nE3–A3–D4 liegen auf D/G/C jeweils Bund 2. Ein kleiner Barré ist möglich; prüfe jede Saite einzeln. Bass mit Daumen, A-Saite bei E-Bass sonst still."
+      "text": "E–A–D schichtet zwei reine Quarten: je fünf Halbtöne. Ohne Terz ist die Dur/Moll-Zuordnung nicht eindeutig. Der Bass verändert die Deutung. Vergleiche denselben oberen Klang über E und A, ohne ihn sofort als festen Akkordtyp zu etikettieren.\n\nE3–A3–D4 liegen auf D/G/C jeweils Bund 2. Ein kleiner Barré ist möglich; jede Saite einzeln prüfen. Mit dem Plektrum Bass und oberen Quartklang kurz auffächern. Bei E-Bass die A-Saite stumm halten; der Bass soll nach dem Anschlag weiterklingen."
     },
     "ku6-1": {
       "title": "Quarten statt Terzschichtung",
@@ -3301,7 +3301,7 @@
     "u6-4": {
       "title": "Dichte und Tonende als Klangregler",
       "goal": "Mit denselben Tonhöhen zwei deutlich verschiedene Texturen gestalten.",
-      "text": "Dichte entsteht durch gleichzeitig klingende Stimmen und deren Ausklang. Mehr Hall oder Gain kann Stimmen verdecken. Gestalte zuerst am Instrument: Bass länger, Mitte kürzer, Melodie klar. Vergleiche erst danach unterschiedliche Sounds bei ähnlicher Lautstärke.\n\nSpiele mit wenig Gain und Fingeranschlag. Dämpfe die innere Figur nach jeder Viertel, ohne die obere Saite zu stoppen. Wiederhole mit deinem üblichen Ampklang."
+      "text": "Dichte entsteht durch gleichzeitig klingende Stimmen und deren Ausklang. Mehr Hall oder Gain kann Stimmen verdecken. Gestalte zuerst am Instrument: Bass länger, Mitte kürzer, Melodie klar. Vergleiche erst danach unterschiedliche Sounds bei ähnlicher Lautstärke.\n\nNur Plektrum: Den gemeinsamen Taktanfang kurz von Bass über Mittelstimme zur Melodie auffächern. Bass und Melodie anschließend liegen lassen; das Plektrum spielt nur die folgenden mittleren Viertel. Die Mittelstimme zum notierten Tonende mit der Greifhand dämpfen, ohne die Melodiesaite zu stoppen. Im zweiten Takt bleibt die Mitte vollständig still. Erst wenig Gain, dann den üblichen Ampklang verwenden. Tapping ist für diese Fassung nicht erforderlich."
     },
     "ku6-4": {
       "title": "Dichte und Tonende als Klangregler",
@@ -3336,7 +3336,7 @@
     "u7-1": {
       "title": "Drei gegen zwei",
       "goal": "Drei obere Einsätze gleichmäßig gegen zwei Basspulse verteilen.",
-      "text": "Drei Vierteltriolen dauern so lange wie zwei gewöhnliche Viertel. Teile diese gemeinsame Spanne gedanklich in sechs: oben auf 1,3,5, unten auf 1,4. Danach soll die Hilfszählung verschwinden, der gemeinsame Beginn aber bleiben.\n\nDaumen spielt Viertel auf E leer; obere Finger drei Töne pro zwei Daumenanschlägen. Zuerst auf gedämpften Saiten klopfen, dann mit Tonhöhen."
+      "text": "Drei Vierteltriolen dauern so lange wie zwei gewöhnliche Viertel. Teile diese gemeinsame Spanne gedanklich in sechs: oben auf 1,3,5, unten auf 1,4. Danach soll die Hilfszählung verschwinden, der gemeinsame Beginn aber bleiben.\n\nZuerst beide Stimmen getrennt mit Plektrum spielen. Dann Bassviertel mit Plektrum, obere Töne links durch vorbereitete Hammer-ons aus der Stille und passende Pull-offs erzeugen. Ein Ton auf einer neuen Saite braucht dort einen neuen linken Anschlag; er entsteht nicht durch einen Pull-off auf der alten Saite. An gemeinsamen Einsätzen müssen beide Hände zusammenkommen. Das ist eine fortgeschrittene Anwendung aus der Legato-Einheit; langsamer üben, statt den 3:2-Rhythmus zu verändern."
     },
     "ku7-1": {
       "title": "Drei gegen zwei",
@@ -3356,7 +3356,7 @@
     "u7-3": {
       "title": "7/8 und 5/8 in Gruppen",
       "goal": "Ungerade Takte als wiederkehrende Gruppen hören.",
-      "text": "7/8 wird hier 2+2+3 gruppiert. Zähle „1-2, 1-2, 1-2-3“. 5/8 folgt als 2+3. Der Tempowert zählt Achtel, nicht Viertel: Bei 120 Achteln pro Minute dauert jedes Achtel eine halbe Sekunde.\n\nDaumen auf jedem Gruppenanfang, obere Finger spielen die notierten Achtel. Erst nur den Rhythmus auf E, dann die Melodietöne."
+      "text": "7/8 wird hier 2+2+3 gruppiert. Zähle „1-2, 1-2, 1-2-3“. 5/8 folgt als 2+3. Der Tempowert zählt Achtel, nicht Viertel: Bei 120 Achteln pro Minute dauert jedes Achtel eine halbe Sekunde.\n\nMit dem Plektrum den Bass auf den Gruppenanfängen und die obere Achtelfolge spielen. Gemeinsame Einsätze kurz Bass–Melodie auffächern; die folgenden Achtel bleiben im Raster. Später kann die linke Hand den gemeinsamen Melodiebeginn anschlagen, während das Plektrum den Bass spielt. Erst nur den Rhythmus, dann die Tonhöhen verbinden."
     },
     "ku7-3": {
       "title": "7/8 und 5/8 in Gruppen",
@@ -3538,6 +3538,7 @@
     "referencebass": "Bass",
     "referencepedal": "Pedalton",
     "referencesingle": "Einstimmig",
-    "referencerest": "Pause"
+    "referencerest": "Pause",
+    "guitarAttack": "Anschlag: Plektrum rechts, Legato/Tapping links. Gemeinsame Einsätze zunächst kurz von tief nach hoch auffächern; gehaltene Töne nicht erneut anschlagen. Die Klaviervorschau spielt das rhythmische Stimmengerüst, nicht diese Anschlagsverteilung."
   }
 }

@@ -95,6 +95,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     await page.selectOption('#language','en');
     assert.match(await page.locator('.harmonic-reference').first().textContent(),/Pedal tone: E2/);
     await page.setViewportSize({width:390,height:844});
+    await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
     assert(await page.locator('svg.score').first().evaluate(svg=>{
       const label=svg.querySelector('.harmonic-reference').getBBox();
       return [...svg.querySelectorAll('.head,.stem,.rest')].every(n=>{const b=n.getBBox();return b.y+b.height<label.y;});

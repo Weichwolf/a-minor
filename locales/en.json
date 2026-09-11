@@ -2,7 +2,7 @@
   "course": {
     "gitarre": {
       "title": "Guitar",
-      "lead": "P4: E2 A2 D3 G3 C4 F4. Tone, pulse and repeatable phrases of your own."
+      "lead": "P4: E2 A2 D3 G3 C4 F4. Tone, pulse and repeatable phrases of your own. Right hand uses only a pick; hammer-ons, pull-offs and tapping use the left hand."
     },
     "keys": {
       "title": "Keyboard",
@@ -161,11 +161,11 @@
     "u0-6": {
       "title": "Two voices: sustain and mute",
       "goal": "Let an open bass string ring while the melody rests.",
-      "text": "Two voices have independent durations. On the shared treble staff, melody stems point up and bass stems down. Whole notes have no stems. Read each voice separately, then combine them. Guitar still sounds an octave below the notation.\n\nUse the thumb for low E and an index or middle finger for melody. Pick plus a free finger is a later alternative. Mute unused strings without cutting off the intended bass. Low gain helps distinguish the voices."
+      "text": "Two voices have independent durations. On the shared treble staff, melody stems point up and bass stems down. Whole notes have no stems. Read each voice separately, then combine them. Guitar still sounds an octave below the notation.\n\nUse only a pick in the right hand. For a shared entry, place the bass on the pulse and pick the melody immediately afterwards: a deliberately brief spread attack. Mute unused strings when skipping or brushing across them. Never reattack a tied note. Then practise separate entries; tapping is not needed for these."
     },
     "e0-6-1": {
       "title": "Bass sustains, melody rests",
-      "instructions": "Play bass alone, then melody alone. Together: attack E2 and E3, mute E3 after two quarters and let E2 continue. Reattack both in the next bar. Stop the bass at the end too.",
+      "instructions": "Pick bass and melody separately first. Together: E2 on beat 1, E3 immediately afterwards. Mute E3 after two quarters while E2 keeps ringing. Repeat the brief spread entry in the next bar. Stop both voices at the end.",
       "checklist": [
         "Melody rest silent while the bass rings?",
         "Both voices deliberately stopped at the end?",
@@ -245,7 +245,7 @@
     },
     "e1-pedal-1": {
       "title": "Open E beneath a singing voice",
-      "instructions": "Melody on the D string, thumb on open low E. Attack E2 once per bar. The melody holds E3 across the second bar: reattack only the bass. In the last bar, end the melody two quarters before the bass.",
+      "instructions": "Melody is on the D string, with picked open E bass. At shared bar openings pick E2 first and the melody immediately afterwards. Melody E3 is tied into bar two: reattack only the bass. In the last bar end the melody two quarters before the bass.",
       "checklist": [
         "Bass quieter than melody?",
         "Held E3 continues through the new bass attack?",
@@ -679,7 +679,7 @@
     },
     "e2-1-1": {
       "title": "Written study · Triads: minor and major",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb on E bass, free fingers on the three upper notes. G3 and G#3 are D-string frets 5 and 6; retain B3 and E4.",
+      "instructions": "Pick E bass first, then the upper three strings with a short controlled stroke. Keep unused strings muted. G3 and G#3 are on D frets 5 and 6; B3 and E4 remain fretted. Let the notes ring together after the spread attack.",
       "checklist": [
         "Third change audible, other notes unchanged?",
         "Two complete passes with clear releases?"
@@ -832,7 +832,7 @@
     },
     "e2-4-1": {
       "title": "Written study · Arpeggio above a bass",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb maintains the bass rhythm. Use i–m–a or another repeatable fingering above. Bring out the highest note without reattacking the bass.",
+      "instructions": "The pick plays both bass and upper figure. At a shared entry, place bass on the pulse and the upper note immediately after it. Continue the written eighths with small string crossings while the bass rings. Bring out the top note without reattacking the bass.",
       "checklist": [
         "Eighths even through chord changes?",
         "Two complete passes with clear releases?"
@@ -910,7 +910,7 @@
     },
     "e2-rhythm-1": {
       "title": "Written study · Short chords and offbeats",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Pluck the upper strings selectively; release fretting pressure at note ends without exciting open bass strings. Thumb plays the bass separately each bar.",
+      "instructions": "Use a short pick stroke across the upper three strings on the offbeat. Release fretting pressure at note-off and control open bass strings. Pick the bass separately on its written beat. Do not fill the eighth rest before the chord with an attack.",
       "checklist": [
         "Chords precisely between clicks?",
         "Two complete passes with clear releases?"
@@ -1114,7 +1114,7 @@
     },
     "e3-reading-1": {
       "title": "Written study · Syncopation and tied entries",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Melody on D/G strings, E bass with the thumb. First play the melody rhythm on a muted string while the foot keeps quarters.",
+      "instructions": "Melody is on D/G, with picked E bass. Pick each rhythm separately first while the foot keeps quarters. Briefly spread shared entries bass–melody. Sustain tied syncopated melody notes through the following bass attack.",
       "checklist": [
         "No extra attacks under ties?",
         "Two complete passes with clear releases?"
@@ -1498,7 +1498,7 @@
     },
     "e4-2-1": {
       "title": "Written study · A diminished seventh in motion",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Bass D#3 at A fret 6; above use F#3 at D4, C4 at G5 and A4 at F4. Keep the C string silent. Fingerpick rather than strumming across every string.",
+      "instructions": "Bass D#3 is on A fret 6, with F#3 on D4, C4 on G5 and A4 on F4. Spread the chord low to high with the pick. Deliberately mute the C string and skip it or brush it silently; it is not part of this chord. Check every sounding string slowly first.",
       "checklist": [
         "All four chord tones without an extra string/key?",
         "Two complete passes with clear releases?"
@@ -1729,7 +1729,7 @@
     },
     "e5-2-1": {
       "title": "Written study · Three layers: bass, figure, melody",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb plays bass, i/m the D and G strings, a the upper C string. Retain the fretting finger above while the inner voice moves. Sound only the written strings.",
+      "instructions": "Briefly spread the shared entry bass–inner voice–melody with the pick. Hold the top string while picking the inner quarters. Reattack only voices due to enter. Later, a prepared left-hand hammer-on from silence can start an inner voice together with a picked attack; first secure the technique in the phase 5 legato unit.",
       "checklist": [
         "Top line sustained without unintended reattacks?",
         "Two complete passes with clear releases?"
@@ -1831,7 +1831,7 @@
     },
     "e5-4-1": {
       "title": "Written study · 12/8: four large pulses",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. In the example the thumb attacks on pulses 1 and 3 beneath the eighth-note figure. Lightly shape group starts rather than striking every third note hard.",
+      "instructions": "Pick the bass on pulses 1 and 3 and play the upper eighth-note figure between them. Briefly spread shared entries low to high. Preserve the regular eighth spacing afterwards and accent group starts only lightly.",
       "checklist": [
         "Four large pulses rather than twelve equal accents?",
         "Two complete passes with clear releases?"
@@ -1891,10 +1891,10 @@
     },
     "e5-6-2": {
       "title": "Deliberate variation · Legato: hammer-on and pull-off",
-      "instructions": "Pick every note once, then use the slurs. Compare durations and levels. Legato notes must not arrive late or much quieter.",
+      "instructions": "Pick every note once, then use the slurs. Compare durations and levels. Legato notes must not arrive late or much quieter. Then, at the same quarter pulse, tap four isolated E3 notes from silence with the left hand, muting each after an eighth. Start without bass, then align each E3 with a picked E2. If muting fails, return to the single voice.",
       "checklist": [
         "Legato notes equal in rhythmic precision and level?",
-        "Unchanged elements retained during comparison?"
+        "Unchanged elements retained during comparison? Left-hand attack from silence clear, aligned with picked bass and without stray open strings?"
       ],
       "position": "P4 · Frets 2–5; open strings as written. Show string cues when needed."
     },
@@ -1909,7 +1909,7 @@
     },
     "e5-3-1": {
       "title": "Written study · Sequence over changing bass",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Read ahead before each bass change. Thumb changes bass strings while upper fingers retain the pattern. Do not stop bass while decoding notes.",
+      "instructions": "Read the melody ahead of each bass change. Pick the new bass first, immediately followed by the upper note written at the same onset. Continue the figure without accidentally muting the bass. End the old bass at the next change.",
       "checklist": [
         "Strong beats fit the current chord?",
         "Two complete passes with clear releases?"
@@ -2011,7 +2011,7 @@
     },
     "e6-1-1": {
       "title": "Written study · Fourth-based sonorities",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. E3–A3–D4 lie on D/G/C at fret 2. A small barre is possible; test each string separately. Thumb plays bass; keep A silent when it is not the bass.",
+      "instructions": "E3–A3–D4 lie on D/G/C at fret 2. A small barre is possible; check each string separately. Briefly spread the bass and upper quartal voicing with the pick. Mute A when using E bass, then let the intended bass sustain.",
       "checklist": [
         "All fourths checked individually?",
         "Two complete passes with clear releases?"
@@ -2164,7 +2164,7 @@
     },
     "e6-4-1": {
       "title": "Written study · Density and release as musical controls",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Use low gain and fingerpicking. End each inner quarter without stopping the upper string. Repeat with your normal amp tone.",
+      "instructions": "Pick only: briefly spread the shared bar opening from bass through inner voice to melody. Let bass and melody ring afterwards; pick only the subsequent inner quarters. Mute the inner voice with the fretting hand at its written release without stopping the melody string. Keep the inner voice completely silent in bar two. Start with low gain, then use your usual amp sound. This version does not require tapping.",
       "checklist": [
         "Inner-voice rests audible beneath held melody?",
         "Two complete passes with clear releases?"
@@ -2344,7 +2344,7 @@
     },
     "e7-1-1": {
       "title": "Written study · Three against two",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb plays quarters on open E; upper fingers play three notes per two thumb attacks. Tap muted strings first, then add pitches.",
+      "instructions": "Pick each voice separately first. Then pick bass quarters while the left hand produces upper notes using prepared hammer-ons from silence and suitable pull-offs. A note on a new string needs a fresh left-hand attack on that string; a pull-off on the previous string cannot create it. Both hands meet at shared entries. This is an advanced application of the legato unit; slow down rather than altering the 3:2 rhythm.",
       "checklist": [
         "Shared start after every two-quarter group?",
         "Two complete passes with clear releases?"
@@ -2446,7 +2446,7 @@
     },
     "e7-3-1": {
       "title": "Written study · Grouped 7/8 and 5/8",
-      "instructions": "Read rhythm and each voice separately first, then play the complete texture. Thumb attacks each group start; upper fingers play the written eighths. Begin with rhythm on E alone before adding melody pitches.",
+      "instructions": "Pick the bass at group starts and the upper eighth-note line. Briefly spread shared entries bass–melody, then keep following eighths on their grid. Later the left hand can attack the shared melody entry while the pick plays bass. Combine rhythm first, then pitches.",
       "checklist": [
         "Final group of three complete?",
         "Two complete passes with clear releases?"
@@ -3011,7 +3011,7 @@
     "u2-1": {
       "title": "Triads: minor and major",
       "goal": "Hear root, third and fifth as one harmony.",
-      "text": "Em contains E–G–B; E major contains E–G#–B: only the third changes. Moving a chord tone to another octave preserves the chord. Play each tone separately and sing the third above the bass.\n\nThumb on E bass, free fingers on the three upper notes. G3 and G#3 are D-string frets 5 and 6; retain B3 and E4."
+      "text": "Em contains E–G–B; E major contains E–G#–B: only the third changes. Moving a chord tone to another octave preserves the chord. Play each tone separately and sing the third above the bass.\n\nPick E bass first, then the upper three strings with a short controlled stroke. Keep unused strings muted. G3 and G#3 are on D frets 5 and 6; B3 and E4 remain fretted. Let the notes ring together after the spread attack."
     },
     "ku2-1": {
       "title": "Triads: minor and major",
@@ -3041,7 +3041,7 @@
     "u2-4": {
       "title": "Arpeggio above a bass",
       "goal": "Play broken triads with a clear upper voice.",
-      "text": "An arpeggio distributes chord tones in time. Here each written eighth ends at the next melodic note; only the bass sustains. Longer overlap is a later artistic choice, not a substitute for controlled releases.\n\nThumb maintains the bass rhythm. Use i–m–a or another repeatable fingering above. Bring out the highest note without reattacking the bass."
+      "text": "An arpeggio distributes chord tones in time. Here each written eighth ends at the next melodic note; only the bass sustains. Longer overlap is a later artistic choice, not a substitute for controlled releases.\n\nThe pick plays both bass and upper figure. At a shared entry, place bass on the pulse and the upper note immediately after it. Continue the written eighths with small string crossings while the bass rings. Bring out the top note without reattacking the bass."
     },
     "ku2-4": {
       "title": "Arpeggio above a bass",
@@ -3056,7 +3056,7 @@
     "u2-rhythm": {
       "title": "Short chords and offbeats",
       "goal": "Enter between clicks and release on time.",
-      "text": "Here the eighth rest falls on the beat and the chord on the offbeat. Keep counting while you play nothing on the click. A short chord needs a defined release; the next rest is not an extra attack.\n\nPluck the upper strings selectively; release fretting pressure at note ends without exciting open bass strings. Thumb plays the bass separately each bar."
+      "text": "Here the eighth rest falls on the beat and the chord on the offbeat. Keep counting while you play nothing on the click. A short chord needs a defined release; the next rest is not an extra attack.\n\nUse a short pick stroke across the upper three strings on the offbeat. Release fretting pressure at note-off and control open bass strings. Pick the bass separately on its written beat. Do not fill the eighth rest before the chord with an attack."
     },
     "ku2-rhythm": {
       "title": "Short chords and offbeats",
@@ -3096,7 +3096,7 @@
     "u3-reading": {
       "title": "Syncopation and tied entries",
       "goal": "Sustain an accented subdivision across the next beat.",
-      "text": "A syncopation begins between beats and continues across a stronger beat. The tie does not create a second attack. Count eighths, mark quarters with your foot and count through rests.\n\nMelody on D/G strings, E bass with the thumb. First play the melody rhythm on a muted string while the foot keeps quarters."
+      "text": "A syncopation begins between beats and continues across a stronger beat. The tie does not create a second attack. Count eighths, mark quarters with your foot and count through rests.\n\nMelody is on D/G, with picked E bass. Pick each rhythm separately first while the foot keeps quarters. Briefly spread shared entries bass–melody. Sustain tied syncopated melody notes through the following bass attack."
     },
     "ku3-reading": {
       "title": "Syncopation and tied entries",
@@ -3171,7 +3171,7 @@
     "u4-2": {
       "title": "A diminished seventh in motion",
       "goal": "Lead D#–F#–A–C as four voices into Em.",
-      "text": "D#dim7 stacks minor thirds: D#–F#–A–C. Steps of three semitones give 3+3+3 to the diminished seventh C. The symmetry allows different interpretations; here resolution to Em establishes the role. Play each voice’s destination separately.\n\nBass D#3 at A fret 6; above use F#3 at D4, C4 at G5 and A4 at F4. Keep the C string silent. Fingerpick rather than strumming across every string."
+      "text": "D#dim7 stacks minor thirds: D#–F#–A–C. Steps of three semitones give 3+3+3 to the diminished seventh C. The symmetry allows different interpretations; here resolution to Em establishes the role. Play each voice’s destination separately.\n\nBass D#3 is on A fret 6, with F#3 on D4, C4 on G5 and A4 on F4. Spread the chord low to high with the pick. Deliberately mute the C string and skip it or brush it silently; it is not part of this chord. Check every sounding string slowly first."
     },
     "ku4-2": {
       "title": "A diminished seventh in motion",
@@ -3216,7 +3216,7 @@
     "u5-2": {
       "title": "Three layers: bass, figure, melody",
       "goal": "Hold a melody while the inner voice continues.",
-      "text": "Three layers have separate roles: bass anchors harmony, inner quarters provide motion, long top notes form the melody. Practise each pair before combining all three. Do not reattack melody with every inner note.\n\nThumb plays bass, i/m the D and G strings, a the upper C string. Retain the fretting finger above while the inner voice moves. Sound only the written strings."
+      "text": "Three layers have separate roles: bass anchors harmony, inner quarters provide motion, long top notes form the melody. Practise each pair before combining all three. Do not reattack melody with every inner note.\n\nBriefly spread the shared entry bass–inner voice–melody with the pick. Hold the top string while picking the inner quarters. Reattack only voices due to enter. Later, a prepared left-hand hammer-on from silence can start an inner voice together with a picked attack; first secure the technique in the phase 5 legato unit."
     },
     "ku5-2": {
       "title": "Three layers: bass, figure, melody",
@@ -3236,7 +3236,7 @@
     "u5-4": {
       "title": "12/8: four large pulses",
       "goal": "Read and accompany twelve eighths as four groups of three.",
-      "text": "12/8 contains twelve eighths, grouped here as 3+3+3+3. Tempo refers to the dotted quarter: four pulses per bar. These eighths are ordinary notes in the meter, not separately marked triplets.\n\nIn the example the thumb attacks on pulses 1 and 3 beneath the eighth-note figure. Lightly shape group starts rather than striking every third note hard."
+      "text": "12/8 contains twelve eighths, grouped here as 3+3+3+3. Tempo refers to the dotted quarter: four pulses per bar. These eighths are ordinary notes in the meter, not separately marked triplets.\n\nPick the bass on pulses 1 and 3 and play the upper eighth-note figure between them. Briefly spread shared entries low to high. Preserve the regular eighth spacing afterwards and accent group starts only lightly."
     },
     "ku5-4": {
       "title": "12/8: four large pulses",
@@ -3246,12 +3246,12 @@
     "u5-6": {
       "title": "Legato: hammer-on and pull-off",
       "goal": "Reduce picked attacks without losing rhythm or level.",
-      "text": "A slur connects different pitches; unlike a tie, it does not merge repeated pitches. Pick the first note, then create the next with a hammer-on or pull-off. Preview demonstrates pitches and rhythm, not the physical technique’s timbre.\n\nD string: E3 fret 2 with 1, F#3 fret 4 with 3, G3 fret 5 with 4. Prepare the target finger before a pull-off and release the string with control rather than pulling far away."
+      "text": "A slur connects different pitches; unlike a tie, it does not merge repeated pitches. Pick the first note, then create the next with a hammer-on or pull-off. Preview demonstrates pitches and rhythm, not the physical technique’s timbre.\n\nD string: E3 fret 2 with 1, F#3 fret 4 with 3, G3 fret 5 with 4. Prepare the target finger before a pull-off and release the string with control rather than pulling far away.\n\nOnly after ordinary hammer-ons and pull-offs are even at low gain: introduce left-hand tapping as a hammer-on from silence. Do not pick the D string first. Tap E3 at fret 2 with finger 1 using a short precise movement, then mute it cleanly. Avoid excess force; aim for a clear note and silent neighbouring strings. Then align the left-hand attack with a picked E2. The right hand keeps the pick."
     },
     "u5-3": {
       "title": "Sequence over changing bass",
       "goal": "Control motif contour and harmonic rhythm together.",
-      "text": "The figure repeats its rhythm while bass changes every bar: one chord per bar is the harmonic rhythm. Check strong-beat notes first; they should clarify each harmony.\n\nRead ahead before each bass change. Thumb changes bass strings while upper fingers retain the pattern. Do not stop bass while decoding notes."
+      "text": "The figure repeats its rhythm while bass changes every bar: one chord per bar is the harmonic rhythm. Check strong-beat notes first; they should clarify each harmony.\n\nRead the melody ahead of each bass change. Pick the new bass first, immediately followed by the upper note written at the same onset. Continue the figure without accidentally muting the bass. End the old bass at the next change."
     },
     "ku5-3": {
       "title": "Sequence over changing bass",
@@ -3271,7 +3271,7 @@
     "u6-1": {
       "title": "Fourth-based sonorities",
       "goal": "Balance fourth-based sonorities above a clear bass reference.",
-      "text": "E–A–D stacks two perfect fourths, five semitones each. Without a third, major/minor identity is ambiguous. Bass changes the interpretation. Compare the same upper sonority over E and A before assigning a fixed chord label.\n\nE3–A3–D4 lie on D/G/C at fret 2. A small barre is possible; test each string separately. Thumb plays bass; keep A silent when it is not the bass."
+      "text": "E–A–D stacks two perfect fourths, five semitones each. Without a third, major/minor identity is ambiguous. Bass changes the interpretation. Compare the same upper sonority over E and A before assigning a fixed chord label.\n\nE3–A3–D4 lie on D/G/C at fret 2. A small barre is possible; check each string separately. Briefly spread the bass and upper quartal voicing with the pick. Mute A when using E bass, then let the intended bass sustain."
     },
     "ku6-1": {
       "title": "Fourth-based sonorities",
@@ -3301,7 +3301,7 @@
     "u6-4": {
       "title": "Density and release as musical controls",
       "goal": "Shape two distinct textures from the same pitches.",
-      "text": "Density comes from simultaneous voices and their decay. More reverb or gain can conceal lines. Shape it first through playing: long bass, short middle, clear melody. Only then compare sounds at similar levels.\n\nUse low gain and fingerpicking. End each inner quarter without stopping the upper string. Repeat with your normal amp tone."
+      "text": "Density comes from simultaneous voices and their decay. More reverb or gain can conceal lines. Shape it first through playing: long bass, short middle, clear melody. Only then compare sounds at similar levels.\n\nPick only: briefly spread the shared bar opening from bass through inner voice to melody. Let bass and melody ring afterwards; pick only the subsequent inner quarters. Mute the inner voice with the fretting hand at its written release without stopping the melody string. Keep the inner voice completely silent in bar two. Start with low gain, then use your usual amp sound. This version does not require tapping."
     },
     "ku6-4": {
       "title": "Density and release as musical controls",
@@ -3336,7 +3336,7 @@
     "u7-1": {
       "title": "Three against two",
       "goal": "Distribute three upper entries evenly against two bass pulses.",
-      "text": "Three quarter-note triplets occupy two ordinary quarters. Subdivide their shared span into six: upper entries on 1,3,5 and lower on 1,4. Eventually remove the counting aid while preserving the shared start.\n\nThumb plays quarters on open E; upper fingers play three notes per two thumb attacks. Tap muted strings first, then add pitches."
+      "text": "Three quarter-note triplets occupy two ordinary quarters. Subdivide their shared span into six: upper entries on 1,3,5 and lower on 1,4. Eventually remove the counting aid while preserving the shared start.\n\nPick each voice separately first. Then pick bass quarters while the left hand produces upper notes using prepared hammer-ons from silence and suitable pull-offs. A note on a new string needs a fresh left-hand attack on that string; a pull-off on the previous string cannot create it. Both hands meet at shared entries. This is an advanced application of the legato unit; slow down rather than altering the 3:2 rhythm."
     },
     "ku7-1": {
       "title": "Three against two",
@@ -3356,7 +3356,7 @@
     "u7-3": {
       "title": "Grouped 7/8 and 5/8",
       "goal": "Hear odd meters as recurring groups.",
-      "text": "Here 7/8 is grouped 2+2+3: count “1-2, 1-2, 1-2-3”. Follow with 5/8 grouped 2+3. Tempo counts eighths, not quarters: at 120 eighths per minute each eighth lasts half a second.\n\nThumb attacks each group start; upper fingers play the written eighths. Begin with rhythm on E alone before adding melody pitches."
+      "text": "Here 7/8 is grouped 2+2+3: count “1-2, 1-2, 1-2-3”. Follow with 5/8 grouped 2+3. Tempo counts eighths, not quarters: at 120 eighths per minute each eighth lasts half a second.\n\nPick the bass at group starts and the upper eighth-note line. Briefly spread shared entries bass–melody, then keep following eighths on their grid. Later the left hand can attack the shared melody entry while the pick plays bass. Combine rhythm first, then pitches."
     },
     "ku7-3": {
       "title": "Grouped 7/8 and 5/8",
@@ -3538,6 +3538,7 @@
     "referencebass": "Bass",
     "referencepedal": "Pedal tone",
     "referencesingle": "Single voice",
-    "referencerest": "Rest"
+    "referencerest": "Rest",
+    "guitarAttack": "Attack: pick in the right hand, legato/tapping in the left. Initially spread shared entries briefly from low to high; do not reattack sustained notes. Piano preview plays the rhythmic voice framework, not this distribution of physical attacks."
   }
 }

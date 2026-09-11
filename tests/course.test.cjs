@@ -279,3 +279,14 @@ test('harmonic references preserve authored chords and name actual bass motion w
   assert.match(el.innerHTML,/harmonic-reference/);assert.match(el.innerHTML,/Pause/);
   for(const e of exercises.filter(e=>e.score))assert.equal(N.references(e.score).length,N.measures(e.score)[0].length);
 });
+
+test('guitar course uses pick-only right hand and introduces left-hand tapping after basic legato', () => {
+  for(const locale of [de,en]) {
+    const guitarText=Object.entries(locale.course).filter(([id])=>!id.startsWith('k')).map(([,v])=>JSON.stringify(v)).join('\n');
+    assert(!/Fingeranschlag|Fingerzupfen|Bass mit Daumen|Daumen spielt|i–m–a|upper fingers|free fingers|Thumb plays/.test(guitarText));
+    assert.match(locale.course['e6-4-1'].instructions,/Plektrum|[Pp]ick/);
+    assert.match(locale.course['e5-6-2'].instructions,/Stille|silence/);
+    assert.match(locale.course['u7-1'].text,/Hammer-ons|hammer-ons/);
+    assert(locale.ui.guitarAttack);
+  }
+});
