@@ -3534,6 +3534,10 @@
     "swingFeel": "Swing reading: preview uses a 2:1 study ratio; tempo counts quarters.",
     "pianoLoading": "Loading piano …",
     "pianoLoadError": "Could not load the piano. Check your connection and press Listen to retry.",
-    "previewInterrupted": "Preview stopped after a playback interruption. Press Listen to restart."
+    "previewInterrupted": "Preview stopped after a playback interruption. Press Listen to restart.",
+    "referencebass": "Bass",
+    "referencepedal": "Pedal tone",
+    "referencesingle": "Single voice",
+    "referencerest": "Rest"
   }
 }

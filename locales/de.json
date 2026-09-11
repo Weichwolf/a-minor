@@ -3534,6 +3534,10 @@
     "swingFeel": "Swing-Leseweise: Vorschau im Verhältnis 2:1; Tempo zählt Viertel.",
     "pianoLoading": "Klavier wird geladen …",
     "pianoLoadError": "Klavier konnte nicht geladen werden. Verbindung prüfen und erneut auf Anhören klicken.",
-    "previewInterrupted": "Vorschau wegen einer Wiedergabeunterbrechung gestoppt. Erneut auf Anhören klicken."
+    "previewInterrupted": "Vorschau wegen einer Wiedergabeunterbrechung gestoppt. Erneut auf Anhören klicken.",
+    "referencebass": "Bass",
+    "referencepedal": "Pedalton",
+    "referencesingle": "Einstimmig",
+    "referencerest": "Pause"
   }
 }

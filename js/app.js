@@ -63,7 +63,7 @@
       const generate = () => AM.notation.generate({...ex.generate,time:ex.score.time});
       if (ex.generate && !generated.has(ex.id)) generated.set(ex.id,generate());
       const sc = () => ({...ex.score,notes:ex.generate ? generated.get(ex.id) : ex.score.notes,instrument});
-      const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries(aids.map(k => [k,!!el.querySelector('[data-aid]')?.checked])));
+      const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries(aids.map(k => [k,!!el.querySelector('[data-aid]')?.checked])),Object.fromEntries(['bass','pedal','single','rest'].map(k => [k,t('reference' + k)])));
       el.querySelector('[data-aid]')?.addEventListener('change',draw);
       el.querySelector('.gen')?.addEventListener('click',() => { stop(); generated.set(ex.id,generate()); draw(); });
       el.querySelector('.listen').onclick = async () => {

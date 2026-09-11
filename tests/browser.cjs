@@ -88,6 +88,18 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     await page.setViewportSize({width:1280,height:900});await page.waitForTimeout(100);
     await page.locator('svg.score').first().screenshot({path:'test-results/final-keyboard-desktop.png'});
     console.log('PASS advanced scores, accompaniment labels, mobile wrapping and preview cancellation');
+    await page.goto(base+'/#/unit/u6-4');await page.waitForSelector('.harmonic-reference');
+    assert.match(await page.locator('.harmonic-reference').first().textContent(),/Bass: E2/);
+    await page.goto(base+'/#/unit/u1-pedal');await page.waitForSelector('.harmonic-reference');
+    assert.match(await page.locator('.harmonic-reference').first().textContent(),/Pedalton: E2/);
+    await page.selectOption('#language','en');
+    assert.match(await page.locator('.harmonic-reference').first().textContent(),/Pedal tone: E2/);
+    await page.setViewportSize({width:390,height:844});
+    assert(await page.locator('svg.score').first().evaluate(svg=>{
+      const label=svg.querySelector('.harmonic-reference').getBBox();
+      return [...svg.querySelectorAll('.head,.stem,.rest')].every(n=>{const b=n.getBBox();return b.y+b.height<label.y;});
+    }),'bass references clear the lowest notes and stems');
+    await page.screenshot({path:'test-results/pedal-references-mobile.png',fullPage:true});
     await page.goto(base+'/#/unit/nonexistent');await page.waitForSelector('.tracks');
     assert.deepEqual(errors,[]);console.log('PASS every unit in both languages, mobile layout and unknown route');
   } finally { await browser?.close(); server.kill(); }

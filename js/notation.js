@@ -31,6 +31,7 @@ AM.notation = (() => {
   function staff(sc, st, L, top, aids, tr, key, x0) {
     const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key), keyMap = Object.fromEntries(ks);
     const REF = stepOf(...C.ref) - tr, yOf = s => bottom - (s - REF) * gap / 2;
+    let extent = bottom;
     let o = `<path d="${C.path}" transform="translate(${20},${bottom + C.dy})" class="clef"/>`;
     (C.dots || []).forEach(([dx, dy]) => o += `<circle cx="${20 + dx}" cy="${bottom + C.dy + dy}" r="2.2" class="head"/>`);
     let kx = 46; ks.forEach(([l, a]) => { o += `<text x="${kx}" y="${top + (a > 0 ? C.ks[l] : C.ksb[l]) * gap / 2 + 4}" class="acc">${ACC[a]}</text>`; kx += 9; });
@@ -45,9 +46,10 @@ AM.notation = (() => {
     st.notes.forEach(n => {
       const d = DUR[(n.d || 'q')[0]], length = ticks(n.d || 'q'), x = x0 + L.x.get(pos), barNo = Math.floor(pos / (beats * PPQ * 4 / unit));
       if (barNo !== lastBar) { acc = {}; lastBar = barNo; }
-      if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
+      if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); extent = Math.max(extent,rm + 18); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
       const ps = pitches(n).map(p => { const q = M.parse(p); return {...q, index:pitches(n).indexOf(p), st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1], up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid;
+      extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names ? bottom + 70 : bottom);
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       for (let s = REF + 10; s <= hi.st; s += 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       let ax = x - 16;
@@ -107,7 +109,7 @@ AM.notation = (() => {
       i = j;
     }
     if (st.outgoing) for (const tie of ties) o += arc(tie.x + 6,tie.y + side * 7,x0 + L.end - 6,tie.y + side * 10);
-    return {svg:o, bottom};
+    return {svg:o, bottom, extent};
   }
 
   function measures(sc) {
@@ -121,6 +123,19 @@ AM.notation = (() => {
       }
       if (pos % size) throw Error('Incomplete measure');
       return bars;
+    });
+  }
+  function references(sc) {
+    const bars = measures(sc), lower = sc.bass ? bars[1] : sc.clef === 'bass' ? bars[0] : null;
+    const tones = bars[0].map((_,b) => (lower?.[b] || []).reduce((out,n) => {
+      const tone = n.r ? null : pitches(n).reduce((a,p) => !a || M.midi(p) < M.midi(a) ? p : a,null);
+      if (out.at(-1) !== tone) out.push(tone); return out;
+    },[]));
+    const fixed = ts => { const ns = [...new Set(ts.filter(Boolean))]; return ns.length === 1 ? ns[0] : null; };
+    return tones.map((ts,b) => {
+      const tone = fixed(ts), pedal = tone && (fixed(tones[b - 1] || []) === tone || fixed(tones[b + 1] || []) === tone);
+      const sounding = bars.some(voice => voice[b]?.some(n => !n.r));
+      return {chord:sc.chords?.[b] || '',kind:lower ? pedal ? 'pedal' : 'bass' : sounding ? 'single' : 'rest',tones:ts};
     });
   }
   function barOrder(sc) {
@@ -144,7 +159,8 @@ AM.notation = (() => {
     }
     return all;
   }
-  function render(el, sc, aids = {}) {
+  function render(el, sc, aids = {}, labels = {}) {
+    const refs = references(sc);
     const barLen = AM.music.meter(sc.time).len * PPQ, bars = measures(sc), poly = sc.instrument === 'guitar' && !!sc.bass;
     const tr = sc.instrument === 'guitar' ? 7 : 0, x0 = 88 + M.keyAcc(sc.key || 'C').length * 9;
     const width = el.clientWidth || Infinity, count = bars[0].length;
@@ -160,20 +176,32 @@ AM.notation = (() => {
       let to = from + 1;
       while (to < count && x0 + layout(makeStaves(from,to + 1),barLen).end + 16 <= width) to++;
       const staves = makeStaves(from,to), L = layout(staves,barLen), y0 = 88;
-      let top = y0, out = '', lines = '', lastBottom = 0;
+      let top = y0, out = '', lines = '', lastBottom = 0, contentBottom = 0;
       staves.forEach((st,i) => {
         if (st.overlay) top = y0;
         const r = staff(sc,st,L,top,i === 0 ? aids : poly ? {} : {...aids,strings:false},tr,sc.key || 'C',x0);
         if (!st.overlay) for (let k = 0; k < 5; k++) lines += `<line x1="8" y1="${top + k * 10}" x2="${x0 + L.end + 8}" y2="${top + k * 10}" class="staff"/>`;
-        out += r.svg; lastBottom = Math.max(lastBottom,r.bottom); top = r.bottom + 106;
+        out += r.svg; contentBottom = Math.max(contentBottom,r.extent); lastBottom = Math.max(lastBottom,r.bottom); top = r.bottom + 106;
       });
       const xe = x0 + L.end;
       out += `<line x1="${xe}" y1="${y0}" x2="${xe}" y2="${lastBottom}" class="bar"/>`;
       if (to === count) out += `<line x1="${xe + 4}" y1="${y0}" x2="${xe + 4}" y2="${lastBottom}" class="bar thick"/>`;
       if (staves.length > 1 && !poly) out += `<line x1="8" y1="${y0}" x2="8" y2="${lastBottom}" class="bar"/>`;
+      const referenceLines = refs.slice(from,to).map((ref,i) => {
+        const names = ref.tones.map(p => p || labels.rest || '—').join(' → ');
+        const text = ref.kind === 'single' && ref.chord ? '' : [labels[ref.kind],names].filter(Boolean).join(': ');
+        const available = L.x.get((i + 1) * barLen) - L.x.get(i * barLen) - 16, lines = [];
+        for (const word of text.split(' ').filter(Boolean)) {
+          if (!lines.length || (lines.at(-1).length + word.length + 1) * 6 > available) lines.push(word);
+          else lines[lines.length - 1] += ' ' + word;
+        }
+        return lines;
+      });
+      const referenceHeight = Math.max(1,...referenceLines.map(lines => lines.length)) * 14;
       for (let b = from; b < to; b++) {
         const x = x0 + L.x.get((b - from) * barLen), end = x0 + L.x.get((b + 1 - from) * barLen) - 14, number = b + 1;
         out += `<text x="${x}" y="14" class="measure">${number}</text>`;
+        referenceLines[b - from].forEach((line,i) => { out += `<text x="${x}" y="${contentBottom + 24 + i * 14}" class="harmonic-reference">${esc(line)}</text>`; });
         if (sc.chords?.[b]) out += `<text x="${x}" y="${y0 - 18}" class="chord">${esc(sc.chords[b])}</text>`;
         if (sc.sections?.[b]) out += `<text x="${x + 24}" y="14" class="section">${esc(sc.sections[b])}</text>`;
         const repeat = sc.repeat;
@@ -183,11 +211,11 @@ AM.notation = (() => {
         const j = sc.jump;
         if (j?.to === number && j.to !== 1) out += `<text x="${x + 12}" y="${y0 - 64}" class="navigation">𝄋</text>`;
         if (j?.coda === number) out += `<text x="${x + 12}" y="${y0 - 64}" class="navigation">𝄌</text>`;
-        if (j?.codaAt === number) out += `<text x="${x}" y="${lastBottom + 60}" class="navigation">→ 𝄌</text>`;
-        if (j?.fine === number) out += `<text x="${x}" y="${lastBottom + 60}" class="navigation">Fine</text>`;
-        if (j?.from === number) out += `<text x="${x}" y="${lastBottom + 60}" class="navigation">${j.to === 1 ? 'D.C.' : 'D.S.'} al ${j.coda ? 'Coda' : 'Fine'}</text>`;
+        if (j?.codaAt === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">→ 𝄌</text>`;
+        if (j?.fine === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">Fine</text>`;
+        if (j?.from === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">${j.to === 1 ? 'D.C.' : 'D.S.'} al ${j.coda ? 'Coda' : 'Fine'}</text>`;
       }
-      html += `<svg viewBox="0 0 ${xe + 16} ${lastBottom + 82}" width="${xe + 16}" class="score" data-from="${from + 1}" data-to="${to}">${lines}${out}</svg>`;
+      html += `<svg viewBox="0 0 ${xe + 16} ${contentBottom + referenceHeight + 66}" width="${xe + 16}" class="score" data-from="${from + 1}" data-to="${to}">${lines}${out}</svg>`;
       from = to;
     }
     el.innerHTML = html;
@@ -239,5 +267,5 @@ AM.notation = (() => {
     });
     return ev;
   };
-  return {render,generate,dur,ticks,events,barOrder,measures};
+  return {render,generate,dur,ticks,events,barOrder,measures,references};
 })();

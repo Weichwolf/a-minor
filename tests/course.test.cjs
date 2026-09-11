@@ -264,3 +264,18 @@ test('MIDI scheduler uses the displayed dotted-quarter pulse in 12/8', () => {
   const snare = sent.filter(x => x.bytes[0] === 0x99 && x.bytes[1] === 38).map(x => x.t);
   assert.deepEqual(snare,[1100,3100]);
 });
+
+test('harmonic references preserve authored chords and name actual bass motion without inventing harmony', () => {
+  const score=id=>exercises.find(e=>e.id===id).score;
+  const pedal=N.references(score('e1-pedal-1'));
+  assert(pedal.every(r=>r.kind==='pedal'&&r.tones.join()==='E2'&&!r.chord));
+  const texture=N.references(score('e6-4-1'));
+  assert.deepEqual(plain(texture.map(r=>r.chord)),['Em','C','Am','B7']);
+  assert.deepEqual(plain(texture.map(r=>r.tones)),[['E2'],['C3'],['A2'],['B2']]);
+  assert(N.references(score('ke0-1-1')).every(r=>r.kind==='single'&&!r.chord));
+  const moving={time:'4/4',notes:[{p:'G4',d:'w'}],bass:[{p:['C3','E3'],d:'q'},{r:1,d:'q'},{p:'B2',d:'h'}]};
+  assert.deepEqual(plain(N.references(moving)[0]),{chord:'',kind:'bass',tones:['C3',null,'B2']});
+  const el={clientWidth:300};N.render(el,moving,{}, {bass:'Bass',rest:'Pause'});
+  assert.match(el.innerHTML,/harmonic-reference/);assert.match(el.innerHTML,/Pause/);
+  for(const e of exercises.filter(e=>e.score))assert.equal(N.references(e.score).length,N.measures(e.score)[0].length);
+});
