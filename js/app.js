@@ -55,7 +55,7 @@
     return `<details class="diagram"><summary>${t(type)}</summary><div id="${id}"></div></details>`;
   }
   function scoreBlock(ex,instrument) {
-    const id = 'sc' + ex.id, aids = ex.aids || [];
+    const id = 'sc' + ex.id, aids = ex.aids || [], shown = ex.show || [];
     const html = `<div class="scorewrap" id="${id}"><div class="row small">${aids.length ? `<label><input type="checkbox" data-aid> ${t('aids')}</label>` : ''}
       ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')} · <a href="assets/piano/credits.html" target="_blank" rel="noopener">Salamander · CC BY 3.0</a></span></div><p class="preview-status small" role="status"></p><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
     setTimeout(() => {
@@ -63,7 +63,7 @@
       const generate = () => AM.notation.generate({...ex.generate,time:ex.score.time});
       if (ex.generate && !generated.has(ex.id)) generated.set(ex.id,generate());
       const sc = () => ({...ex.score,notes:ex.generate ? generated.get(ex.id) : ex.score.notes,instrument});
-      const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries(aids.map(k => [k,!!el.querySelector('[data-aid]')?.checked])),Object.fromEntries(['bass','pedal','single','rest'].map(k => [k,t('reference' + k)])));
+      const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries([...aids.map(k => [k,!!el.querySelector('[data-aid]')?.checked]),...shown.map(k => [k,true])]),Object.fromEntries(['bass','pedal','single','rest'].map(k => [k,t('reference' + k)])));
       el.querySelector('[data-aid]')?.addEventListener('change',draw);
       el.querySelector('.gen')?.addEventListener('click',() => { stop(); generated.set(ex.id,generate()); draw(); });
       el.querySelector('.listen').onclick = async () => {

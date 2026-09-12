@@ -48,7 +48,7 @@ AM.notation = (() => {
       if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); extent = Math.max(extent,rm + 18); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
       const ps = pitches(n).map(p => { const q = M.parse(p); return {...q, index:pitches(n).indexOf(p), st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1], up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid;
-      extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names ? bottom + 70 : bottom);
+      extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names || aids.frets ? bottom + 70 + (aids.names && aids.frets ? 14 : 0) : bottom);
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       for (let s = REF + 10; s <= hi.st; s += 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       let ax = x - 9;
@@ -86,7 +86,8 @@ AM.notation = (() => {
         const q = M.position(p.midi,{s:Array.isArray(n.s) ? n.s[p.index] : n.s,maxFret:sc.maxFret ?? 5,window:sc.stringWindow}), xx = x + (i - (ps.length - 1) / 2) * 15;
         if (q) o += `<circle cx="${xx}" cy="${top - 46}" r="7" class="strc"/><text x="${xx}" y="${top - 42.5}" class="strn">${6 - q.s}</text>`;
       });
-      if (aids.fingers && n.fi != null) o += `<text x="${x}" y="${top - 62}" class="aid">${[].concat(n.fi).join('–')}</text>`;
+      if (aids.frets && sc.instrument === 'guitar') o += `<text x="${x}" y="${bottom + 66 + (aids.names ? 14 : 0)}" class="aid">${ps.map(p => M.position(p.midi,{s:Array.isArray(n.s) ? n.s[p.index] : n.s,maxFret:sc.maxFret ?? 5,window:sc.stringWindow})?.f ?? '').join(' ')}</text>`;
+      if (aids.fingers && n.fi != null) o += `<text x="${x}" y="${top - 55}" class="aid">${[].concat(n.fi).join('–')}</text>`;
       pos += length;
     });
     for (let i = 0; i < stems.length;) {
@@ -189,7 +190,7 @@ AM.notation = (() => {
       if (staves.length > 1 && !poly) out += `<line x1="8" y1="${y0}" x2="8" y2="${lastBottom}" class="bar"/>`;
       const referenceLines = refs.slice(from,to).map((ref,i) => {
         const names = ref.tones.map(p => p || labels.rest || '—').join(' → ');
-        const text = ref.kind === 'single' && ref.chord ? '' : [labels[ref.kind],names].filter(Boolean).join(': ');
+        const text = ref.kind === 'single' && (ref.chord || sc.chords?.some(Boolean)) ? '' : [labels[ref.kind],names].filter(Boolean).join(': ');
         const available = L.x.get((i + 1) * barLen) - L.x.get(i * barLen) - 16, lines = [];
         for (const word of text.split(' ').filter(Boolean)) {
           if (!lines.length || (lines.at(-1).length + word.length + 1) * 6 > available) lines.push(word);

@@ -107,17 +107,21 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     await page.goto(base+'/#/theory');await page.waitForSelector('.toc');
     const toc=await page.locator('.toc li a').allTextContents();assert(toc.length>=30,'table of contents lists every chapter');
     assert.match(await page.locator('h1').innerText(),/Musiklehre/);assert.match(toc.at(-1),/^[A-E]\s/,'appendices are lettered');assert(await page.locator('main i').count()>=1,'italics are rendered');
+    const triads=toc.findIndex(t=>/Dreiklänge/.test(t))+1;assert(triads>0,'chapter on triads listed');
     await page.goto(base+'/#/chapter/c08');await page.waitForSelector('svg.score');
     assert(await page.locator('.figure').count()>=5,'chapters carry many notated examples');
-    assert.match(await page.locator('.figure figcaption').first().innerText(),/^Beispiel 8\.1 · /);
+    assert.equal(await page.locator('.figure figcaption').first().innerText().then(t=>t.split(' ·')[0]),`Beispiel ${triads}.1`,'examples are numbered by chapter and order');
     assert.equal(await page.locator('.ex, .player, [data-done], form[data-log], .check').count(),0,'the textbook carries no tasks, player, progress or log');
     assert.equal(await page.locator('.listen').count(),await page.locator('.figure').count(),'one piano preview per notated example');
-    assert.match(await page.locator('.chapter h2').first().innerText(),/^8\.1/);assert(await page.locator('.chapter ul li').count()>=4,'summary list');
+    assert(( await page.locator('.chapter h2').first().innerText()).startsWith(`${triads}.1 `),'sections are numbered by chapter');assert(await page.locator('.chapter ul li').count()>=4,'summary list');
+    await page.goto(base+'/#/chapter/c02b');await page.waitForSelector('#c02b-c4 svg.score .strc');
+    assert.equal(await page.locator('#c02b-c4 svg.score .strn').allTextContents().then(t=>t.join(' ')),'2 3 4 5 6','string numbers of the five C4 positions');
+    assert.deepEqual(await page.locator('#c02b-c4 svg.score .aid').allTextContents(),['C','0','C','5','C','10','C','15','C','20'],'note names and fret numbers are shown');
     assert(!(await page.locator('main').innerText()).includes('*'),'no asterisks remain in prose');
     await page.goto(base+'/#/chapter/c03');await page.waitForSelector('#c03-triplet svg.score .tuplet');
     assert(await page.evaluate(()=>{const s=[...document.querySelectorAll('#c03-triplet svg.score')].find(x=>x.querySelector('.tuplet'));const c=s.querySelector('.chord').getBBox(),t=s.querySelector('.tuplet').getBBox();return c.y+c.height<=t.y;}),'chord labels sit above tuplet brackets');
     await page.selectOption('#language','en');await page.goto(base+'/#/chapter/c27');await page.waitForSelector('svg.score');
-    assert.match(await page.locator('h1').innerText(),/The five references/);assert.match(await page.locator('.figure figcaption').first().innerText(),/^Example 27\.1 · /);
+    assert.match(await page.locator('h1').innerText(),/The five references/);assert.match(await page.locator('.figure figcaption').first().innerText(),/^Example \d+\.1 · /);
     for (const c of await page.evaluate(()=>AM.i18n.book().parts.flatMap(p=>p.chapters.map(c=>c.id)))) {
       await page.goto(base+'/#/chapter/'+c);await page.waitForSelector('.chapter');
       const text=await page.locator('main').innerText();assert(!/undefined|NaN|prüfen|\(verify\)/.test(text),c);

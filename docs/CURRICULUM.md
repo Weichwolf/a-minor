@@ -1,6 +1,6 @@
 # Lernweg
 
-Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Musiklehre: acht Teile mit 28 Kapiteln und fünf Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
+Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Musiklehre: acht Teile mit 30 Kapiteln und fünf Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
 
 ## Arbeitsweise
 
@@ -104,59 +104,61 @@ Die Einheiten sind keine Wochenvorgaben. Vier Stunden pro Woche bleiben die verf
 
 ## Musiklehre
 
-Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 28 Kapitel, fünf Anhänge, 205 notierte Beispiele mit Klaviervorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen.
+Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 30 Kapitel, fünf Anhänge, 224 notierte Beispiele mit Klaviervorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen und ein Glossar.
 
 ### Teil I · Ton und Schrift
 
 - 1 [Der Ton](https://a-minor.ch/#/chapter/c01) · 7 Beispiele
 - 2 [Die Notenschrift der Tonhöhe](https://a-minor.ch/#/chapter/c02) · 8 Beispiele
-- 3 [Die Notenschrift der Zeit](https://a-minor.ch/#/chapter/c03) · 11 Beispiele
-- 4 [Intervalle](https://a-minor.ch/#/chapter/c04) · 9 Beispiele
+- 3 [Griffbrett und Tastatur: wo die Töne liegen](https://a-minor.ch/#/chapter/c02b) · 9 Beispiele
+- 4 [Die Notenschrift der Zeit](https://a-minor.ch/#/chapter/c03) · 11 Beispiele
+- 5 [Intervalle](https://a-minor.ch/#/chapter/c04) · 9 Beispiele
 
 ### Teil II · Tonleitern, Modi, Tonarten
 
-- 5 [Dur, Moll und die Tonarten](https://a-minor.ch/#/chapter/c05) · 8 Beispiele
-- 6 [Modi, Pentatonik, Chromatik](https://a-minor.ch/#/chapter/c06) · 8 Beispiele
-- 7 [Stimmung und Instrument](https://a-minor.ch/#/chapter/c07) · 7 Beispiele
+- 6 [Dur, Moll und die Tonarten](https://a-minor.ch/#/chapter/c05) · 8 Beispiele
+- 7 [Modi, Pentatonik, Chromatik](https://a-minor.ch/#/chapter/c06) · 8 Beispiele
+- 8 [Stimmung und Instrument](https://a-minor.ch/#/chapter/c07) · 7 Beispiele
+- 9 [Tonarten und Tonleitern in der Praxis](https://a-minor.ch/#/chapter/c07b) · 10 Beispiele
 
 ### Teil III · Akkorde und Harmonik
 
-- 8 [Dreiklänge](https://a-minor.ch/#/chapter/c08) · 8 Beispiele
-- 9 [Terzlose Klänge: Powerchord, Quarten, Vorhaltsakkorde](https://a-minor.ch/#/chapter/c09) · 7 Beispiele
-- 10 [Vierklänge und Akkordsymbole](https://a-minor.ch/#/chapter/c10) · 8 Beispiele
-- 11 [Kadenz und Funktion](https://a-minor.ch/#/chapter/c11) · 8 Beispiele
-- 12 [Stimmführung](https://a-minor.ch/#/chapter/c12) · 6 Beispiele
-- 13 [Erweiterte Harmonik](https://a-minor.ch/#/chapter/c13) · 9 Beispiele
-- 14 [Bassmodelle und Sequenzen](https://a-minor.ch/#/chapter/c14) · 9 Beispiele
+- 10 [Dreiklänge](https://a-minor.ch/#/chapter/c08) · 8 Beispiele
+- 11 [Terzlose Klänge: Powerchord, Quarten, Vorhaltsakkorde](https://a-minor.ch/#/chapter/c09) · 7 Beispiele
+- 12 [Vierklänge und Akkordsymbole](https://a-minor.ch/#/chapter/c10) · 8 Beispiele
+- 13 [Kadenz und Funktion](https://a-minor.ch/#/chapter/c11) · 8 Beispiele
+- 14 [Stimmführung](https://a-minor.ch/#/chapter/c12) · 6 Beispiele
+- 15 [Erweiterte Harmonik](https://a-minor.ch/#/chapter/c13) · 9 Beispiele
+- 16 [Bassmodelle und Sequenzen](https://a-minor.ch/#/chapter/c14) · 9 Beispiele
 
 ### Teil IV · Rhythmus und Zeit
 
-- 15 [Metrum und Unterteilung](https://a-minor.ch/#/chapter/c15) · 10 Beispiele
-- 16 [Tempo und Zeitgestaltung](https://a-minor.ch/#/chapter/c16) · 6 Beispiele
-- 17 [Das Schlagzeug](https://a-minor.ch/#/chapter/c17) · 6 Beispiele
+- 17 [Metrum und Unterteilung](https://a-minor.ch/#/chapter/c15) · 10 Beispiele
+- 18 [Tempo und Zeitgestaltung](https://a-minor.ch/#/chapter/c16) · 6 Beispiele
+- 19 [Das Schlagzeug](https://a-minor.ch/#/chapter/c17) · 6 Beispiele
 
 ### Teil V · Satz
 
-- 18 [Der zweistimmige Satz](https://a-minor.ch/#/chapter/c18) · 7 Beispiele
-- 19 [Melodie und Bass](https://a-minor.ch/#/chapter/c19) · 8 Beispiele
-- 20 [Der mehrschichtige Satz](https://a-minor.ch/#/chapter/c20) · 7 Beispiele
+- 20 [Der zweistimmige Satz](https://a-minor.ch/#/chapter/c18) · 7 Beispiele
+- 21 [Melodie und Bass](https://a-minor.ch/#/chapter/c19) · 8 Beispiele
+- 22 [Der mehrschichtige Satz](https://a-minor.ch/#/chapter/c20) · 7 Beispiele
 
 ### Teil VI · Klang
 
-- 21 [Gitarre und Verstärker](https://a-minor.ch/#/chapter/c21) · 6 Beispiele
-- 22 [Synthesizer](https://a-minor.ch/#/chapter/c22) · 6 Beispiele
-- 23 [Delay und Hall](https://a-minor.ch/#/chapter/c23) · 5 Beispiele
+- 23 [Gitarre und Verstärker](https://a-minor.ch/#/chapter/c21) · 6 Beispiele
+- 24 [Synthesizer](https://a-minor.ch/#/chapter/c22) · 6 Beispiele
+- 25 [Delay und Hall](https://a-minor.ch/#/chapter/c23) · 5 Beispiele
 
 ### Teil VII · Form
 
-- 24 [Motiv, Phrase, Periode](https://a-minor.ch/#/chapter/c24) · 7 Beispiele
-- 25 [Wiederholung als Form](https://a-minor.ch/#/chapter/c25) · 6 Beispiele
-- 26 [Suite, Variation, Programm](https://a-minor.ch/#/chapter/c26) · 6 Beispiele
+- 26 [Motiv, Phrase, Periode](https://a-minor.ch/#/chapter/c24) · 7 Beispiele
+- 27 [Wiederholung als Form](https://a-minor.ch/#/chapter/c25) · 6 Beispiele
+- 28 [Suite, Variation, Programm](https://a-minor.ch/#/chapter/c26) · 6 Beispiele
 
 ### Teil VIII · Die Referenzen
 
-- 27 [Die fünf Referenzen](https://a-minor.ch/#/chapter/c27) · 6 Beispiele
-- 28 [Hören, Analysieren, Schreiben](https://a-minor.ch/#/chapter/c28) · 6 Beispiele
+- 29 [Die fünf Referenzen](https://a-minor.ch/#/chapter/c27) · 6 Beispiele
+- 30 [Hören, Analysieren, Schreiben](https://a-minor.ch/#/chapter/c28) · 6 Beispiele
 
 ### Anhänge
 

@@ -4,14 +4,14 @@ Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard mit eigenständig
 
 - **Gitarre:** E2 A2 D3 G3 C4 F4. Offene Pedaltöne und Melodie, später Arpeggien, Akkorde und bewegter Bass. Noten mit Lageangabe; keine Tabs.
 - **Keyboard:** 49 Tasten, Synthesizer und Klavier. Bass links, Melodie rechts; zunächst ein Klang ohne verpflichtenden Split.
-- **Theorie:** eigenständiges Lehrbuch „Musiklehre“ im Hauptmenü, acht Teile mit 28 Kapiteln und fünf Anhängen, 205 notierte Beispiele mit Klaviervorschau, keine Aufgaben. Allgemeine Musiktheorie, zugeschnitten auf E–A–D, das tiefe Register, den verzerrten Klang und die fünf Referenzen: Ton und Schrift, Tonleitern und Modi, Akkorde und Harmonik, Rhythmus, Satz, Klang, Form, die Referenzen.
+- **Theorie:** eigenständiges Lehrbuch „Musiklehre“ im Hauptmenü, acht Teile mit 30 Kapiteln und fünf Anhängen, 224 notierte Beispiele mit Klaviervorschau, keine Aufgaben. Allgemeine Musiktheorie, zugeschnitten auf E–A–D, das tiefe Register, den verzerrten Klang und die fünf Referenzen: Ton und Schrift, Tonleitern und Modi, Akkorde und Harmonik, Rhythmus, Satz, Klang, Form, die Referenzen.
 - **Referenzen:** My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*). Eigene musikalische Gedanken statt festgelegter Coverstücke.
 
 ## Stand
 
 Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Jam-/Backing-Editor und freie Konfigurationsseiten bleiben entfernt.
 
-Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 28 durchnummerierten Kapiteln und fünf mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 205 Beispiele mit Klaviervorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 326 Aufgaben bleiben in den Instrumentalspuren.
+Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 30 durchnummerierten Kapiteln und fünf mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 224 Beispiele mit Klaviervorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 326 Aufgaben bleiben in den Instrumentalspuren. Zwei Orientierungskapitel legen die Töne auf die Instrumente: Griffbrett und Tastatur (Saiten, Bünde, Lagen, 49 Tasten von C2 bis C6) sowie Tonarten und Tonleitern in der Praxis (Skalenmuster der P4-Gitarre, dasselbe Griffbild für E, A und D, Fingersätze und schwarze Tasten).
 
 Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die im Abgleich erkannten Fähigkeiten sind jetzt mit konkreten Übungen verknüpft. Das ist keine Zusicherung einer Prüfungsgleichwertigkeit; formale Abschlusskriterien liegen nicht vor. Der [vollständige Lernweg](docs/CURRICULUM.md) verlinkt jede neue Einheit.
 
@@ -31,15 +31,15 @@ Musiklehre:
 
 | Teil | Kapitel |
 |---|---|
-| I Ton und Schrift | 1 Der Ton · 2 Notenschrift der Tonhöhe · 3 Notenschrift der Zeit · 4 Intervalle |
-| II Tonleitern, Modi, Tonarten | 5 Dur, Moll, Tonarten · 6 Modi, Pentatonik, Chromatik · 7 Stimmung und Instrument |
-| III Akkorde und Harmonik | 8 Dreiklänge · 9 Terzlose Klänge · 10 Vierklänge und Akkordsymbole · 11 Kadenz und Funktion · 12 Stimmführung · 13 Erweiterte Harmonik · 14 Bassmodelle und Sequenzen |
-| IV Rhythmus und Zeit | 15 Metrum und Unterteilung · 16 Tempo und Zeitgestaltung · 17 Das Schlagzeug |
-| V Satz | 18 Zweistimmiger Satz · 19 Melodie und Bass · 20 Mehrschichtiger Satz |
-| VI Klang | 21 Gitarre und Verstärker · 22 Synthesizer · 23 Delay und Hall |
-| VII Form | 24 Motiv, Phrase, Periode · 25 Wiederholung als Form · 26 Suite, Variation, Programm |
-| VIII Die Referenzen | 27 Die fünf Referenzen · 28 Hören, Analysieren, Schreiben |
-| Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik · D Akkordsymbole · E Glossar |
+| I Ton und Schrift | 1 Der Ton · 2 Die Notenschrift der Tonhöhe · 3 Griffbrett und Tastatur: wo die Töne liegen · 4 Die Notenschrift der Zeit · 5 Intervalle |
+| II Tonleitern, Modi, Tonarten | 6 Dur, Moll und die Tonarten · 7 Modi, Pentatonik, Chromatik · 8 Stimmung und Instrument · 9 Tonarten und Tonleitern in der Praxis |
+| III Akkorde und Harmonik | 10 Dreiklänge · 11 Terzlose Klänge: Powerchord, Quarten, Vorhaltsakkorde · 12 Vierklänge und Akkordsymbole · 13 Kadenz und Funktion · 14 Stimmführung · 15 Erweiterte Harmonik · 16 Bassmodelle und Sequenzen |
+| IV Rhythmus und Zeit | 17 Metrum und Unterteilung · 18 Tempo und Zeitgestaltung · 19 Das Schlagzeug |
+| V Satz | 20 Der zweistimmige Satz · 21 Melodie und Bass · 22 Der mehrschichtige Satz |
+| VI Klang | 23 Gitarre und Verstärker · 24 Synthesizer · 25 Delay und Hall |
+| VII Form | 26 Motiv, Phrase, Periode · 27 Wiederholung als Form · 28 Suite, Variation, Programm |
+| VIII Die Referenzen | 29 Die fünf Referenzen · 30 Hören, Analysieren, Schreiben |
+| Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik und Zeitwerte · D Akkordsymbol-Referenz · E Glossar |
 
 ## Übezeit
 
@@ -129,7 +129,7 @@ Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beid
 
 Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`.
 
-Die Musiklehre liegt in `data/book.json`: `parts` mit `chapters`, jedes Kapitel mit `examples` (`id`, `textId`, `tempo`, `score`, optional `instrument: "guitar"` für oktavierende Gitarrennotation). Der letzte Teil trägt `"appendix": true` und enthält Kapitel ohne Beispiele. Die Texte stehen unter dem Namensraum `book` beider Sprachdateien: Kapitel mit `title` und `text`, Beispiele mit `title`, Takt- und Abschnittsbeschriftungen bei Bedarf als eigener `textId` (`chords`, `sections`). Der Kapiteltext gliedert sich in `## n.m`-Abschnitte und platziert jedes Beispiel genau einmal mit `[[beispiel-id]]`; die Nummerierung „Beispiel n.m“ folgt der Reihenfolge im Text. Kein Beispiel trägt `backing` oder `checklist`.
+Die Musiklehre liegt in `data/book.json`: `parts` mit `chapters`, jedes Kapitel mit `examples` (`id`, `textId`, `tempo`, `score`, optional `instrument: "guitar"` für oktavierende Gitarrennotation und `show` für dauerhaft eingeblendete Hilfen `strings`, `frets`, `names`, `fingers`). Der letzte Teil trägt `"appendix": true` und enthält Kapitel ohne Beispiele. Die Texte stehen unter dem Namensraum `book` beider Sprachdateien: Kapitel mit `title` und `text`, Beispiele mit `title`, Takt- und Abschnittsbeschriftungen bei Bedarf als eigener `textId` (`chords`, `sections`). Der Kapiteltext gliedert sich in `## n.m`-Abschnitte und platziert jedes Beispiel genau einmal mit `[[beispiel-id]]`; Kapitel- und Abschnittsnummern sowie die Nummerierung „Beispiel n.m“ folgen der Reihenfolge im Buch beziehungsweise im Text, Querverweise nennen die Kapitelnummer im Text. Kein Beispiel trägt `backing` oder `checklist`.
 Dauern: `w h q e s`, optional punktiert (`h.`) oder als Triole (`et`, `qt`). Zeitberechnung mit 24 Ticks pro Viertel hält binäre und ternäre Unterteilungen exakt. `tie:1` bindet zur nächsten gleichen Tonhöhe. `p` darf für Akkorde ein Array enthalten; `s` und `fi` können dazu positionsgleiche Arrays sein. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. `score.inner` ergänzt eine unabhängig gehaltene beziehungsweise bewegte Mittelstimme im oberen System. Alle Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
 
 Zusätzliche Notenfelder: `accent`, `staccato`, `harmonic`, `bend` (Halbtöne), `slur`/`slurEnd`. `tuplet:3` startet eine Triolenklammer, `tupletEnd:true` beendet sie. `score.chords` und `score.sections` beschriften Takte; `score.swing:true` interpretiert gerade Achtel in der Vorschau als 2:1-Übemodell.
