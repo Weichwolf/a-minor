@@ -3880,6 +3880,656 @@
         "32 Takte mit unveränderter Figur notiert?",
         "Dichteanstieg nur am Ende, Urteil im Log?"
       ]
+    },
+    "t2": {
+      "title": "Zwei- und Dreiklänge",
+      "goal": "Dreiklang, Umkehrung, Powerchord, Terzen und Sexten, Stimmführung, Voicing in tiefer Stimmung, Zweistimmigkeit und das vollständige Akkordsymbolsystem."
+    },
+    "tu2-1": {
+      "title": "Dreiklang, Umkehrung, Lage",
+      "goal": "Die vier Dreiklangstypen, ihre Umkehrungen und den Unterschied zwischen Umkehrung und Lage sicher kennen.",
+      "text": "Ein Dreiklang ist Grundton, Terz, Quinte. Vier Typen nach Terz und Quinte: Dur (große Terz, reine Quinte), Moll (kleine Terz, reine Quinte), vermindert (kleine Terz, verminderte Quinte), übermäßig (große Terz, übermäßige Quinte). In Halbtönen: Dur 4+3, Moll 3+4, vermindert 3+3, übermäßig 4+4.\n\nIn einer Skala entstehen auf jeder Stufe Dreiklänge. E-Äolisch: Em, F#dim, G, Am, Bm, C, D. E harmonisch Moll ersetzt Bm durch B und D durch D#dim. Die Dur-Akkorde auf b6 und b7 (C, D) sind der modale Klang; der Dur-Akkord auf 5 (B) ist der tonale.\n\nUmkehrung meint, welcher Akkordton im Bass liegt: Grundstellung (1), erste Umkehrung (3 im Bass), zweite Umkehrung (5 im Bass). Lage meint, wie weit die Töne darüber verteilt sind: enge Lage (alle innerhalb einer Oktave), weite Lage (mit Lücken). Em in weiter Lage E2–B3–G4 klingt völlig anders als E4–G4–B4, ist aber derselbe Akkord in derselben Umkehrung.\n\nAuf Gitarre und in dieser Musik ist die weite Lage die Regel: Bass tief, Terz hoch. Grund: die Differenztöne aus Phase 0. Auf dem Keyboard ist die enge Lage in der rechten Hand bequem, wird aber unter E3 matschig. Regel für beide: Terzen nicht unter C3."
+    },
+    "te2-1-1": {
+      "title": "Hören · Dreiklang, Umkehrung, Lage",
+      "instructions": "Type O Negative, „Love You to Death“, Klavier-Intro: Bestimme für die ersten vier Akkorde Typ (Dur/Moll) und Lage (eng/weit). Wo liegt die Terz: in der linken oder rechten Hand? Behauptung: weite Lage, Terz oben, Grundton tief (prüfen).",
+      "checklist": [
+        "Vier Akkorde mit Typ und Lage notiert?",
+        "Terzposition bestimmt?"
+      ]
+    },
+    "te2-1-2": {
+      "title": "Modell · Dreiklang, Umkehrung, Lage",
+      "instructions": "Takt 1–2: derselbe Em eng und weit. Takt 3–4: erste und zweite Umkehrung (G und B im Bass). Takt 5–7: Dur, vermindert, übermäßig über demselben E. Takt 8: zurück zu Em. Spiele jeden Takt, benenne Typ, Umkehrung und Lage laut. Höre besonders, wie eng (Takt 1) und weit (Takt 2) verschieden wirken.",
+      "checklist": [
+        "Acht Takte mit Typ, Umkehrung, Lage benannt?",
+        "Wirkung eng/weit beschrieben?"
+      ]
+    },
+    "te2-1-3": {
+      "title": "Anwendung · Dreiklang, Umkehrung, Lage",
+      "instructions": "Schreibe alle sieben Dreiklänge von E-Äolisch in weiter Lage (Bass unter C3, Terz über C4). Spiele sie auf dem Keyboard als Folge und markiere, welche Dur, Moll, vermindert sind. Wiederhole für A-Äolisch und D-Äolisch ohne Nachschlagen.",
+      "checklist": [
+        "21 Dreiklänge mit Typ notiert?",
+        "Verminderter Akkord in jeder Tonart auf Stufe 2 gefunden?"
+      ]
+    },
+    "tu2-2": {
+      "title": "Der Powerchord: Voicings und Suboktave",
+      "goal": "Die drei Powerchord-Formen und die Rolle der Oktave darunter kennen; Type O Negatives Bassklang verstehen.",
+      "text": "Ein Powerchord ist Grundton und Quinte, oft mit Oktave: 1–5 oder 1–5–8. Ohne Terz ist er weder Dur noch Moll; die Terz liefert der Kontext (Gesang, Keyboard, Melodie) oder niemand. Die dritte Form ist die umgekehrte Quinte: 5–1 (Quarte), z. B. B2–E3. Sie klingt schwerer, weil der Grundton oben liegt und der Differenzton (E2, eine Oktave unter dem Grundton) den Bass ersetzt. Doom-Bands nutzen diese Quartform, wenn der Bass fehlt oder wenn das Riff noch tiefer wirken soll, als die Stimmung erlaubt.\n\nDie Oktave darunter: Type O Negative erzeugen sie elektronisch. Peter Steele spielte Bass mit Oktaver und Chorus; das Ergebnis ist ein Fundament, das eine Oktave unter dem gespielten Ton liegt und gleichzeitig breit schwebt (prüfen). Der Oktaver erzeugt genau den Differenzton aus Phase 0, nur kontrolliert. Gitarre in B, Bass mit Suboktave, Orgel darüber: drei Register, die sich nicht in die Quere kommen.\n\nAuf P4 liegt die Quinte eine Saite höher, zwei Bünde weiter, die Oktave zwei Saiten höher, zwei Bünde weiter. Die Quartform liegt auf zwei Nachbarsaiten im selben Bund. Jede Form ist überall verschiebbar.\n\nPowerchords tragen Riffs, nicht Harmonik. Eine Folge von Powerchords ist eine Basslinie mit Verstärkung. Ihre Terzen zu ergänzen ist die Aufgabe der anderen Instrumente oder der nächsten Einheit."
+    },
+    "te2-2-1": {
+      "title": "Hören · Der Powerchord: Voicings und Suboktave",
+      "instructions": "Type O Negative, „Wolf Moon“: Isoliere im Hauptriff den Bass. Hörst du zwei Oktaven gleichzeitig (Oktaver)? Hörst du Schwebung (Chorus)? Vergleiche mit My Dying Bride, „Your River“: Bass folgt der Gitarre ohne Effekt? Behauptung: Type O breit und oktaviert, MDB trocken und unisono (prüfen).",
+      "checklist": [
+        "Oktaver und Chorus bei Type O bestätigt oder verworfen?",
+        "Bassrolle bei MDB beschrieben?"
+      ]
+    },
+    "te2-2-2": {
+      "title": "Modell · Der Powerchord: Voicings und Suboktave",
+      "instructions": "Drei Powerchord-Formen über E, dann A5 und D5 (Quartenkette), zurück zu E5. Takt 3 zeigt die Quartform B–E: Der Bass E2 ist hier der Differenzton, den ein verzerrter Amp selbst erzeugt. Spiele alle Formen auf P4 und finde für jede die Griffgeometrie. Spiele Takt 3 mit und ohne gespielten Bass und höre, ob der Amp das E2 liefert.",
+      "checklist": [
+        "Drei Formen auf P4 gefunden?",
+        "Differenzton in Takt 3 ohne gespielten Bass geprüft?"
+      ]
+    },
+    "te2-2-3": {
+      "title": "Anwendung · Der Powerchord: Voicings und Suboktave",
+      "instructions": "Schreibe ein achttaktiges Riff nur aus Powerchords auf E, A, D, das jede der drei Formen mindestens zweimal nutzt. Notiere Bass (Grundtöne) und Gitarre getrennt. Spiele es und entscheide, an welcher Stelle eine Terz fehlt und welches Instrument sie liefern müsste.",
+      "checklist": [
+        "Alle drei Formen im Riff, Bass separat notiert?",
+        "Fehlende Terz mit Instrumentzuweisung im Log?"
+      ]
+    },
+    "tu2-3": {
+      "title": "Terzen, Sexten, Parallelführung",
+      "goal": "Diatonische Terzen und Sexten bilden, ihre Größe hören und den Zwei-Gitarren-Klang von My Dying Bride verstehen.",
+      "text": "Zwei Stimmen im Terzabstand durch eine Skala wechseln zwischen großen und kleinen Terzen. In E-Äolisch: E–G klein, F#–A klein, G–B groß, A–C klein, B–D klein, C–E groß, D–F# groß. Die Sexte ist die Umkehrung der Terz: G–E (große Sexte) ist E–G umgekehrt. Kleine Terz ↔ große Sexte, große Terz ↔ kleine Sexte. Terzen klingen dicht, Sexten offen; beide sind „süße“ Intervalle, im Barock die Standardparallelen.\n\nMy Dying Bride führen zwei Gitarren häufig in parallelen Terzen oder Sexten über dem Riff, und die Violine setzt eine dritte Stimme darauf (prüfen). Der Trick: Terzen im Register über E4 und mit weniger Gain als das Riff. Darunter matscht es (Phase 0). Sexten sind unter Gain verträglicher als Terzen, weil ihr Differenzton meist ein Akkordton ist: für G3–E4 (große Sexte, 5:3) liegt er bei E2... genauer: Differenz von 196 und 330 Hz = 134 Hz ≈ C3, ein fremder Ton bei C-Dur-Kontext passend, in Em ein b6. Rechne selbst; die Regel ist: große Sexten funktionieren tiefer als kleine Terzen.\n\nVivaldi schreibt Terzparallelen in fast jedem Ritornell, oft zwischen erster und zweiter Violine; die Bewegung kommt aus dem Bass. Biber setzt zwei Violinen in Terzen und Sexten und wechselt dann in Gegenbewegung, damit es nicht süßlich wird. Diese Abwechslung ist die Regel: Parallelen sind eine Farbe, nicht ein Zustand.\n\nFür dich: Terzen notieren heißt zwei Stimmen schreiben, nicht einen Akkord. Beide haben eigene Notenenden."
+    },
+    "te2-3-1": {
+      "title": "Hören · Terzen, Sexten, Parallelführung",
+      "instructions": "My Dying Bride, „The Snow in My Hand“: Finde die erste Stelle mit zwei Gitarren im Terz- oder Sextabstand. Bestimme das Intervall (singe beide Stimmen) und das Register. Vergleiche mit Biber, Partita II, einem langsamen Satz: Wo laufen die Violinen parallel, wo in Gegenbewegung? Behauptung: MDB bleiben parallel, Biber wechselt innerhalb weniger Takte (prüfen).",
+      "checklist": [
+        "Intervall und Register bei MDB bestimmt?",
+        "Parallel- und Gegenbewegung bei Biber lokalisiert?"
+      ]
+    },
+    "te2-3-2": {
+      "title": "Modell · Terzen, Sexten, Parallelführung",
+      "instructions": "Takt 1–2 Terzen, Takt 3–4 Sexten, beide durch E-Äolisch über E-Pedal. Schreibe unter jedes Intervall „groß“ oder „klein“. Singe die Unterstimme, während die Vorschau läuft, dann die Oberstimme. Spiele die Terzen eine Oktave tiefer mit Gain und höre, wo sie unsauber werden.",
+      "checklist": [
+        "Alle 14 Intervalle als groß/klein beschriftet?",
+        "Untere Grenze sauberer Terzen auf deinem Setup notiert?"
+      ]
+    },
+    "te2-3-3": {
+      "title": "Anwendung · Terzen, Sexten, Parallelführung",
+      "instructions": "Nimm ein viertaktiges Riff aus Powerchords (E, C, D, E). Schreibe darüber eine Melodie und eine zweite Stimme in Terzen. Ersetze in Takt 3 die Terzen durch Sexten, in Takt 4 durch Gegenbewegung (eine Stimme aufwärts, eine abwärts). Nimm alle drei Schichten auf.",
+      "checklist": [
+        "Drei Schichten notiert, Takt 3 und 4 verändert?",
+        "Aufnahme mit hörbarer zweiter Stimme?"
+      ]
+    },
+    "tu2-4": {
+      "title": "Stimmführung: gemeinsamer Ton, kleinster Weg",
+      "goal": "Akkordwechsel als Bewegung einzelner Stimmen denken; die zwei Grundregeln anwenden.",
+      "text": "Ein Akkordwechsel ist keine Griffänderung, sondern drei oder vier Stimmen, die sich je einzeln bewegen oder liegen bleiben. Regel 1: Gemeinsame Töne bleiben liegen. Regel 2: Die übrigen Stimmen gehen den kleinsten Weg, meist einen Halb- oder Ganzton. Regel 3 (Barock): Vermeide, dass zwei Stimmen parallel in Oktaven oder Quinten laufen, wenn sie als eigenständig gehört werden sollen. Im Riff gilt Regel 3 nicht: Powerchords sind absichtliche Quintparallelen.\n\nEm → C: E und G bleiben, B geht nach C. Em → Am: E bleibt, G → A, B → C. Em → D: kein gemeinsamer Ton, alles rückt einen Schritt: E → D oder F#, G → F#, B → A. Em → B7: B bleibt, E → D#, G → F# oder A. So entstehen Voicings, in denen die Oberstimme fast still steht, während der Bass springt. Genau das hört man bei Type O Negative in der Orgel und bei Anathema in der Fläche: der Bass macht die Bewegung, oben ändert sich ein Ton (prüfen).\n\nVivaldi und Biber sind die Lehrmeister: Im Continuo greift der Cembalist nach diesen Regeln, und die Streicherstimmen sind so gesetzt, dass jede Stimme singbar bleibt. Singbar ist das Kriterium: Kannst du jede Stimme deines Voicings einzeln singen? Dann ist die Stimmführung gut.\n\nAuf Gitarre bedeutet Stimmführung oft, einen Finger liegen zu lassen und zwei zu bewegen. Auf dem Keyboard bedeutet es, die rechte Hand nicht zu versetzen, sondern einzelne Finger."
+    },
+    "te2-4-1": {
+      "title": "Hören · Stimmführung: gemeinsamer Ton, kleinster Weg",
+      "instructions": "Type O Negative, „Red Water (Christmas Mourning)“, Orgelpart im Refrain: Verfolge nur die höchste Orgelstimme durch vier Akkordwechsel. Wie oft bewegt sie sich? Wie weit? Behauptung: höchstens ein Ton Bewegung pro Wechsel, oft gar keine (prüfen).",
+      "checklist": [
+        "Oberstimme durch vier Wechsel verfolgt und notiert?",
+        "Bewegungen in Halb-/Ganztönen gezählt?"
+      ]
+    },
+    "te2-4-2": {
+      "title": "Modell · Stimmführung: gemeinsamer Ton, kleinster Weg",
+      "instructions": "Acht Akkorde mit minimaler Stimmführung in drei Oberstimmen. Zeichne für jede Stimme eine Linie durch alle acht Takte und zähle die Halbtöne jeder Bewegung. Finde die Stelle mit dem größten Sprung und erkläre, warum er nötig ist (D hat keinen gemeinsamen Ton mit Em). Spiele auf dem Keyboard mit möglichst liegenden Fingern.",
+      "checklist": [
+        "Drei Stimmlinien mit Halbtonzahlen gezeichnet?",
+        "Größter Sprung gefunden und begründet?"
+      ]
+    },
+    "te2-4-3": {
+      "title": "Anwendung · Stimmführung: gemeinsamer Ton, kleinster Weg",
+      "instructions": "Schreibe die Folge Em–Am–D–G–C–B7–Em in drei Oberstimmen nach den Regeln. Jede Stimme muss einzeln singbar sein. Übertrage sie danach auf die Gitarre: Welche Finger bleiben liegen? Wo zwingt P4 zu einem anderen Voicing? Notiere beide Fassungen.",
+      "checklist": [
+        "Sieben Akkorde mit singbaren Stimmen notiert?",
+        "Gitarrenfassung mit liegenden Fingern markiert?"
+      ]
+    },
+    "tu2-5": {
+      "title": "Voicing in tiefer Stimmung: Type O Negative",
+      "goal": "Wissen, wie tiefe Stimmung Register, Voicing und Arrangement verändert.",
+      "text": "Type O Negative stimmen die Gitarre nach B (B E A D F# B), eine Quarte unter Standard (prüfen). Die tiefste Saite liegt bei B1 ≈ 61,7 Hz. Alle Griffe bleiben gleich, alle Töne klingen eine Quarte tiefer. Ein E-Griff klingt als B, ein A-Griff als E. Das ist für dich relevant, weil P4 dieselbe Idee in die andere Richtung ist: gleiche Geometrie, anderer Tonraum.\n\nWas tiefe Stimmung erzwingt: 1. Terzen wandern nach oben oder verschwinden, weil die Differenztöne unter 40 Hz fallen und nur noch Druck sind. 2. Akkorde werden weiter: Grundton auf der tiefsten Saite, nächster Ton frühestens eine Oktave darüber. 3. Der Bass kann nicht mehr unter der Gitarre liegen; er dopplt sie oder geht mit Oktaver noch tiefer. 4. Die Keyboards übernehmen das Register C4–C6 vollständig, weil die Gitarre dort nicht mehr hinkommt.\n\n*October Rust* zeigt das Ergebnis: Die Gitarre ist ein tiefer, breiter Teppich, oft nur Grundton und Quinte, mit Chorus verbreitert. Die Orgel hat die Terzen. Der Gesang liegt tief und wird eine Oktave höher gedoppelt. Das Arrangement ist ein Schichtkuchen ohne Überlappung.\n\nFür P4 gilt die Umkehrung: Deine höchste Saite ist F4, du hast oben mehr Platz als Standard, unten gleich viel. Terzen sind ab der C-Saite sauber. Tiefe Stimmung brauchst du nicht; wenn du sie willst, gilt: alles um dieselbe Zahl Halbtöne, Terzen um dieselbe Zahl Saiten nach oben."
+    },
+    "te2-5-1": {
+      "title": "Hören · Voicing in tiefer Stimmung: Type O Negative",
+      "instructions": "Type O Negative, „Haunted“: Ordne die Register: Wo liegt die Gitarre, wo der Bass, wo die Orgel, wo die zwei Gesangsstimmen? Schätze jeweils die Oktave. Behauptung: Gitarre B1–B3, Bass mit Suboktave darunter, Orgel ab C4, Gesang um E2–E3 und E3–E4 (prüfen).",
+      "checklist": [
+        "Fünf Register mit Oktavlage geschätzt?",
+        "Überlappungen gefunden oder ausgeschlossen?"
+      ]
+    },
+    "te2-5-2": {
+      "title": "Modell · Voicing in tiefer Stimmung: Type O Negative",
+      "instructions": "Der Schichtkuchen in vier Takten: Gitarre nur Quinte tief, Orgel mit Terz ab G4, Gesangsstimme dazwischen (E4–D4). Nichts überlappt. Spiele die Schichten nacheinander auf dem Keyboard. Verschiebe dann die Orgel eine Oktave tiefer (G3) und höre, was mit der Terz passiert.",
+      "checklist": [
+        "Drei Schichten getrennt und zusammen gespielt?",
+        "Wirkung der tieferen Orgelterz beschrieben?"
+      ]
+    },
+    "te2-5-3": {
+      "title": "Anwendung · Voicing in tiefer Stimmung: Type O Negative",
+      "instructions": "Plane ein Arrangement für deine Mittel: Gitarre P4 (Register angeben), Keyboard, optional Bass. Weise jeder Quelle ein Register zu, das mit keinem anderen überlappt, und lege fest, wer die Terz trägt. Schreibe vier Takte, in denen jede Quelle nur ihr Register benutzt, und nimm sie schichtweise auf.",
+      "checklist": [
+        "Registerplan ohne Überlappung geschrieben?",
+        "Terzträger festgelegt und vier Takte aufgenommen?"
+      ]
+    },
+    "tu2-6": {
+      "title": "Zweistimmigkeit: Bewegungsarten",
+      "goal": "Parallel-, Seiten-, Gegenbewegung erkennen und bewusst einsetzen, wie Violine und Gitarre bei My Dying Bride.",
+      "text": "Zwei Stimmen können sich auf vier Arten bewegen. Parallel: gleiche Richtung, gleicher Abstand (Terzen, Sexten). Gleichlaufend: gleiche Richtung, verschiedener Abstand. Seitenbewegung: eine Stimme liegt, die andere bewegt sich (das Pedal mit Melodie aus Phase 1). Gegenbewegung: entgegengesetzte Richtung. Die Mischung macht Zweistimmigkeit lebendig; reine Parallelen klingen nach einer Stimme mit Effekt.\n\nKonsonanzen zwischen zwei Stimmen: Oktave, Quinte, Terz, Sexte. Dissonanzen: Sekunde, Septime, Tritonus, und die Quarte, wenn sie zum Bass gebildet wird. Im Barock wird eine Dissonanz vorbereitet (der Ton lag vorher als Konsonanz) und schrittweise abwärts aufgelöst. Das ist der Vorhalt: 4–3 oder 7–6 über liegendem Bass. Vivaldis Largo-Sätze bestehen aus Ketten solcher Vorhalte. Doom-Bands machen das intuitiv: Die Violine bei My Dying Bride hält einen Ton, während die Gitarre darunter wechselt, und der gehaltene Ton wird für einen Takt dissonant, bevor er weitergeht (prüfen).\n\nBiber ist die Schule dafür: Die zwei Violinen der *Harmonia artificioso-ariosa* tauschen ständig die Rollen. Die Kanons (eine Stimme folgt der anderen im Abstand) zeigen, dass dieselbe Melodie gegen sich selbst konsonant sein kann, wenn die Bewegungsarten stimmen.\n\nFür Gitarre allein: Bass und Melodie sind bereits Zweistimmigkeit. Seitenbewegung (Pedal) ist der Normalfall, Gegenbewegung (Bass fällt, Melodie steigt) der Höhepunkt."
+    },
+    "te2-6-1": {
+      "title": "Hören · Zweistimmigkeit: Bewegungsarten",
+      "instructions": "My Dying Bride, „Black God“: Klavier und Violine. Bestimme in der ersten Minute die Bewegungsart zwischen der Violine und der Klavieroberstimme an vier Stellen. Finde mindestens einen gehaltenen Violinton, der über einem Wechsel dissonant wird. Behauptung: überwiegend Seitenbewegung mit einem Vorhalt pro Phrase (prüfen).",
+      "checklist": [
+        "Vier Stellen mit Bewegungsart notiert?",
+        "Ein Vorhalt (Vorbereitung, Dissonanz, Auflösung) lokalisiert?"
+      ]
+    },
+    "te2-6-2": {
+      "title": "Modell · Zweistimmigkeit: Bewegungsarten",
+      "instructions": "Vier Takte, vier Bewegungsarten: Takt 1 Seitenbewegung über E, Takt 2 parallele Terzen, Takt 3 Gegenbewegung, Takt 4 Vorhalt: A liegt über E (Quarte, dissonant) und löst nach G (Terz). Benenne für jedes Tonpaar das Intervall. Spiele Takt 4 mehrmals und halte das A länger, bis die Dissonanz deutlich ist.",
+      "checklist": [
+        "Alle Intervalle der vier Takte benannt?",
+        "Vorhalt mit verlängerter Dissonanz gespielt?"
+      ]
+    },
+    "te2-6-3": {
+      "title": "Anwendung · Zweistimmigkeit: Bewegungsarten",
+      "instructions": "Schreibe acht Takte für Bass und Melodie (Gitarre allein oder zwei Hände): mindestens zwei Takte jeder Bewegungsart und genau einen vorbereiteten Vorhalt. Markiere jeden Takt mit der Bewegungsart. Spiele und prüfe, ob die Gegenbewegung als Höhepunkt wirkt.",
+      "checklist": [
+        "Vier Bewegungsarten und ein Vorhalt markiert?",
+        "Höhepunktwirkung der Gegenbewegung beurteilt?"
+      ]
+    },
+    "tu2-7": {
+      "title": "Akkordsymbole vollständig",
+      "goal": "Jedes gängige Symbol in Töne übersetzen und umgekehrt, einschließlich Erweiterungen, sus, add und Slash.",
+      "text": "Ein Symbol nennt Grundton, Terz, Quinte und Zusätze. Lesereihenfolge: Grundton (C), Typ (nichts = Dur, m = Moll, dim/° = vermindert, aug/+ = übermäßig), Septime (7 = kleine, maj7/Δ = große), Erweiterungen (9, 11, 13), Änderungen (b5, #5, b9, #9, #11, b13), Zusätze (add9, add11), Auslassungen (no3, no5), Bass (/E).\n\nSeptakkorde: C7 = C E G Bb (Dominantsept). Cmaj7 = C E G B. Cm7 = C Eb G Bb. Cm(maj7) = C Eb G B. Cdim7 = C Eb Gb Bbb (A). Cm7b5 = C Eb Gb Bb (halbvermindert, ø). C6 = C E G A. Cm6 = C Eb G A.\n\nErweiterungen bauen auf der Septime: C9 = C7 + D. C11 = C9 + F (die Terz wird meist weggelassen, weil E gegen F reibt). C13 = C9 + A. Cmaj9 = Cmaj7 + D. Cm9, Cm11 entsprechend. Ohne Septime heißt der Zusatz add: Cadd9 = C E G D. Cmadd9 = C Eb G D, ein Lieblingsklang von Anathema und vieler Post-Doom-Bands.\n\nsus ersetzt die Terz: Csus4 = C F G, Csus2 = C D G. Ohne Terz ist der Akkord weder Dur noch Moll, wie der Powerchord, aber mit Spannung. C5 = C G. Slash: C/E ist C-Dur mit E im Bass (erste Umkehrung), C/G zweite Umkehrung, Em/C ist etwas anderes: ein Em-Klang über C, tatsächlich ein Cmaj7 ohne Grundtonverdopplung. Der Bass bestimmt.\n\nDas Symbol legt Töne fest, nicht Lage, Verdopplung oder Dauer. Zwei Spieler mit demselben Symbol spielen verschiedene Voicings. Für deine Notation: Symbole über den Noten sind Kommentar, die Noten sind die Wahrheit."
+    },
+    "te2-7-1": {
+      "title": "Hören · Akkordsymbole vollständig",
+      "instructions": "Anathema, „Angelica“: Der Akkord, der den Refrain öffnet. Enthält er eine None (add9)? Einen sus-Ton? Singe alle Töne, die du hörst, und schreibe das Symbol. Vergleiche mit Type O Negative, „Be My Druidess“, Orgelakkord im Refrain: Septime hörbar? Behauptung: Anathema madd9, Type O reine Dreiklänge (prüfen).",
+      "checklist": [
+        "Symbol für beide Akkorde geschrieben?",
+        "Alle gehörten Töne einzeln gesungen?"
+      ]
+    },
+    "te2-7-2": {
+      "title": "Modell · Akkordsymbole vollständig",
+      "instructions": "Acht Symbole, acht Voicings. Decke die Symbole ab, höre jeden Takt und schreibe alle Töne. Leite das Symbol her. Takt 5 und 7 haben dieselben Oberstimmen über C: Warum heißt einer Cmaj7 und der andere Em/C? Takt 8: B7b9 enthält C, den b9; benenne, wohin C und D# gehen wollen.",
+      "checklist": [
+        "Acht Symbole aus den Tönen hergeleitet?",
+        "Cmaj7/Em/C-Frage und b9-Auflösung beantwortet?"
+      ]
+    },
+    "te2-7-3": {
+      "title": "Anwendung · Akkordsymbole vollständig",
+      "instructions": "Schreibe eine Tabelle aller Symboltypen aus dem Text mit Tönen über E, A und D (je Grundton eine Spalte). Spiele jeden Akkord über A auf dem Keyboard in weiter Lage. Wähle vier, die zu deinem Klangbild passen, und schreibe mit ihnen eine achttaktige Folge mit Symbolen über den Noten.",
+      "checklist": [
+        "Tabelle für drei Grundtöne vollständig?",
+        "Achttaktige Folge mit Symbolen und ausgeschriebenen Noten?"
+      ]
+    },
+    "t3": {
+      "title": "Bass und Bewegung",
+      "goal": "Lamento, Quintfall, Ostinato und Ritornello. Der Bass als Fundament oder Gegenstimme, sein Register, und die Sprache der Drums."
+    },
+    "tu3-1": {
+      "title": "Der Lamento-Bass: vom Barock zum Doom",
+      "goal": "Den absteigenden Tetrachord als das gemeinsame Modell aller fünf Referenzen kennen.",
+      "text": "Der Lamento-Bass ist ein absteigender Weg vom Grundton zur Quinte: diatonisch E–D–C–B oder chromatisch E–Eb–D–Db–C–B. Im 17. Jahrhundert war er die feste Formel für Klage (Monteverdi, Purcells „Dido’s Lament“). Vivaldi nutzt ihn in langsamen Sätzen, Biber in Ciaconen als wiederholtes Bassmodell.\n\nWarum er funktioniert: Jeder Schritt ist klein, die Richtung ist eindeutig, und das Ziel (die Quinte B) ist die Dominante, also der Punkt größter Erwartung. Über jedem Basston lässt sich ein anderer Akkord bauen: Em, D (oder Bm/D), C, B. Die Melodie kann liegen bleiben (E über allen vier) oder in Gegenbewegung steigen. Der Bass macht die Arbeit; die Oberstimme darf einfach sein.\n\nDoom hat den Lamento-Bass nicht zitiert, sondern neu gefunden: Em–D–C–B ist die Akkordfolge unzähliger langsamer Riffs, meist als Powerchords. My Dying Bride verwenden ihn diatonisch, oft mit der Violine als liegender Stimme (prüfen). Type O Negative bevorzugen die chromatische Fassung in der Orgel (prüfen). Anathema nehmen den ersten Schritt (E–D) und verweilen.\n\nDie Umkehrung, der aufsteigende Tetrachord B–C–D–E, ist die Ankunft nach dem Abstieg. Zusammen bilden sie ein achttaktiges Modell: vier Takte hinunter, vier hinauf. Das ist bereits eine vollständige Form."
+    },
+    "te3-1-1": {
+      "title": "Hören · Der Lamento-Bass: vom Barock zum Doom",
+      "instructions": "My Dying Bride, „The Crown of Sympathy“: Suche einen Abschnitt, in dem der Bass in vier Schritten abwärts geht. Notiere die vier Töne und bestimme, ob diatonisch oder chromatisch. Hörst du darüber eine liegende Stimme? Behauptung: diatonischer Lamento mit gehaltener Violine (prüfen). Danach Vivaldi, *Der Winter*, Satz 2: Bass des Largo in den ersten vier Takten.",
+      "checklist": [
+        "Vier Basstöne bei MDB notiert, diatonisch/chromatisch bestimmt?",
+        "Bass des Vivaldi-Largo notiert und verglichen?"
+      ]
+    },
+    "te3-1-2": {
+      "title": "Modell · Der Lamento-Bass: vom Barock zum Doom",
+      "instructions": "Takt 1–4 diatonischer Lamento mit Terzen darüber. Takt 5–10 chromatische Fassung; die Oberstimme fällt parallel in Sexten, jede Stufe ein Halbton. Takt 11–12 Ankunft auf Em. Spiele beide Fassungen und benenne über jedem Takt den Akkord, den der Bass mit den zwei Oberstimmen bildet. Welche Fassung erzeugt mehr Erwartung vor Takt 11?",
+      "checklist": [
+        "Akkorde beider Fassungen benannt?",
+        "Erwartungsvergleich im Log?"
+      ]
+    },
+    "te3-1-3": {
+      "title": "Anwendung · Der Lamento-Bass: vom Barock zum Doom",
+      "instructions": "Schreibe acht Takte: vier Takte Lamento abwärts (diatonisch oder chromatisch, deine Wahl), vier Takte Tetrachord aufwärts B–C–D–E. Darüber eine Melodie, die im Abstieg liegen bleibt (E) und im Aufstieg in Gegenbewegung fällt. Spiele mit Half-time-Drums und nimm auf.",
+      "checklist": [
+        "Abstieg und Aufstieg mit passender Melodiebewegung notiert?",
+        "Aufnahme mit Drums?"
+      ]
+    },
+    "tu3-2": {
+      "title": "Quintfall und Sequenzmodelle",
+      "goal": "Die Quintfallsequenz und ihre Varianten als Motor barocker Harmonik verstehen und als Riffmaterial nutzen.",
+      "text": "Die Quintfallsequenz reiht Grundtöne in fallenden Quinten (oder steigenden Quarten): E–A–D–G–C–F#–B–E. In E-Äolisch ergeben sich Em–Am–D–G–C–F#dim–B(m)–Em. Jeder Akkord ist die „Dominante“ des nächsten im Sinne der Bassbewegung, auch wenn er Moll ist. Deshalb erzeugt die Sequenz Zug, ohne dass ein Leitton nötig ist. Mit Leitton (B statt Bm am Ende) kommt die tonale Ankunft dazu.\n\nVivaldi baut ganze Ritornelle aus Quintfällen, oft mit Septakkorden: Jeder Akkord hat eine Septime, die in die Terz des nächsten fällt. Das ist die Septimenkette (Phase 4). Im Sommer, Satz 3, und im Winter, Satz 1, hörst du sie als Motor der Stürme (prüfen). Bei Biber erscheinen Quintfälle in den Tanzsätzen, oft mit Sequenzen der Oberstimme darüber.\n\nAndere Sequenzmodelle: Terzfall (E–C–A–F#: jeder Akkord teilt zwei Töne mit dem nächsten, sehr weich), Sekundfall (der Lamento), Quintstieg (die Umkehrung, wirkt auf- statt abbauend). Eine Sequenz versetzt außerdem ein Motiv der Oberstimme stufenweise; Bass und Oberstimme bewegen sich als Muster.\n\nIn Doom ist der Quintfall selten vollständig; zwei Glieder genügen: Em–Am, Am–D, D–G. Type O Negative haben aber Passagen, die vier Quintfallglieder durchlaufen, meist in Refrains, und dort klingt es sofort „klassisch“ (prüfen). Regel: Je mehr Glieder, desto stärker der Sog, desto weniger modal."
+    },
+    "te3-2-1": {
+      "title": "Hören · Quintfall und Sequenzmodelle",
+      "instructions": "Vivaldi, *Der Sommer*, Satz 3 (Presto): Finde eine Stelle, an der die Bassgrundtöne in Quinten fallen, und notiere mindestens vier Glieder. Danach Type O Negative, „My Girlfriend’s Girlfriend“, Refrain: Grundtöne notieren. Behauptung: Vivaldi durchläuft sechs oder mehr Glieder, Type O höchstens drei (prüfen).",
+      "checklist": [
+        "Mindestens vier Quintfallglieder bei Vivaldi notiert?",
+        "Grundtöne des Type-O-Refrains als Sequenz oder Nicht-Sequenz eingeordnet?"
+      ]
+    },
+    "te3-2-2": {
+      "title": "Modell · Quintfall und Sequenzmodelle",
+      "instructions": "Vollständiger Quintfall durch E-Äolisch mit Leitton am Ende (B statt Bm). Die Oberstimme ist eine Sequenz: dasselbe Dreitonmotiv (5–3–1 jedes Akkords) fällt mit dem Bass. Markiere, wo das Motiv wegen der Skala seine Halbtonabstände ändert. Spiele nur den Bass und singe die Sequenz dazu. Ersetze D# in Takt 7 durch D und höre den Verlust der Ankunft.",
+      "checklist": [
+        "Halbtonänderungen des Motivs markiert?",
+        "Bass gespielt, Sequenz gesungen, D#/D verglichen?"
+      ]
+    },
+    "te3-2-3": {
+      "title": "Anwendung · Quintfall und Sequenzmodelle",
+      "instructions": "Schreibe drei viertaktige Riffs mit demselben Motiv: eines über Quintfall (Em–Am–D–G), eines über Terzfall (Em–C–Am–F#dim), eines über Quintstieg (Em–Bm–F#dim–C). Spiele alle drei und beschreibe die Richtung der Spannung (aufbauend, abbauend, schwebend). Wähle eines für ein Doom-Riff und begründe.",
+      "checklist": [
+        "Drei Sequenzmodelle mit gleichem Motiv notiert?",
+        "Spannungsrichtung je Modell beschrieben, Wahl begründet?"
+      ]
+    },
+    "tu3-3": {
+      "title": "Ostinato und Ritornello",
+      "goal": "Wiederholung als Formprinzip verstehen: das wiederholte Bassmodell (Biber) und das wiederkehrende Tutti (Vivaldi) gegen das Riff.",
+      "text": "Ein Ostinato ist ein Muster, das sich unverändert wiederholt, während sich darüber etwas ändert. Die Ciacona bei Biber ist die reinste Form: ein vier- oder achttaktiges Bassmodell, darüber Variationen ohne Ende. Die Zuhörer kennen den Bass nach dem zweiten Durchgang und hören nur noch, was neu ist. Das Riff ist dasselbe Prinzip: Ein Doom-Riff wiederholt sich, und Gesang, Violine oder Leadgitarre variieren darüber.\n\nDas Ritornello (Vivaldi) ist die andere Wiederholung: ein Tutti-Abschnitt, der zwischen Solo-Episoden wiederkehrt, oft verkürzt oder in anderer Tonart. Die Form eines Vivaldi-Satzes: R – Solo – R′ – Solo – R″ – Solo – R. Die Rückkehr ist das Erkennen; die Episoden sind der Weg. Auf Rock übertragen: Refrain und Strophe, nur dass Vivaldis Refrain jedes Mal ein bisschen anders ist.\n\nBeide Prinzipien beantworten dieselbe Frage: Wie lang darf etwas gleich bleiben? Ostinato: sehr lang, wenn sich darüber etwas bewegt. Ritornello: nur kurz, dafür oft. My Dying Bride kombinieren beides: Ein Riff läuft acht- bis sechzehnmal (Ostinato), und ein Abschnitt kehrt nach langer Abwesenheit wieder (Ritornello). Der Effekt der Wiederkehr nach zehn Minuten ist die stärkste Waffe langer Formen.\n\nRegeln: Ein Ostinato braucht eine Variationsebene darüber, sonst wird es Stillstand. Ein Ritornello braucht Kontrast dazwischen, sonst ist es nur Wiederholung. Beides braucht einen Plan, wann es endet."
+    },
+    "te3-3-1": {
+      "title": "Hören · Ostinato und Ritornello",
+      "instructions": "Biber, Partita III (oder eine andere mit Ciacona): Zähle die Takte des Bassmodells und wie oft es wiederholt wird. Notiere die Basstöne. Dann Vivaldi, *Der Frühling*, Satz 1: Zähle die Ritornello-Einsätze und notiere, welche verkürzt sind. Behauptung: Bibers Bass wiederholt sich über 20-mal, Vivaldis Ritornello erscheint fünfmal (prüfen).",
+      "checklist": [
+        "Bassmodell notiert und Wiederholungen gezählt?",
+        "Ritornello-Einsätze mit Längen notiert?"
+      ]
+    },
+    "te3-3-2": {
+      "title": "Modell · Ostinato und Ritornello",
+      "instructions": "Ein Ciacona-Modell in 3/4: viertaktiger Bass E–B–C–B in Vierteln, Akkorde als Mittelstimme, beim zweiten Durchgang eine Variation darüber. Spiele Bass und Akkorde in Schleife und erfinde bei jedem Durchgang eine neue Oberstimme, ohne den Bass zu ändern. Zähle mit, wie viele Durchgänge du füllen kannst, bevor dir nichts mehr einfällt.",
+      "checklist": [
+        "Mindestens vier Durchgänge mit verschiedener Oberstimme gespielt?",
+        "Bass in allen Durchgängen unverändert?"
+      ]
+    },
+    "te3-3-3": {
+      "title": "Anwendung · Ostinato und Ritornello",
+      "instructions": "Schreibe eine Form mit Ritornello: vier Takte R (Riff mit Akkorden), acht Takte Episode (nur Bass und Melodie, anderes Zentrum), R verkürzt auf zwei Takte, acht Takte Episode, R vollständig. Notiere die Taktzahlen als Plan, dann die Noten. Spiele die Form und höre, ob das verkürzte R als Wiederkehr erkennbar ist.",
+      "checklist": [
+        "Formplan mit Taktzahlen und vollständige Noten?",
+        "Erkennbarkeit des verkürzten Ritornells beurteilt?"
+      ]
+    },
+    "tu3-4": {
+      "title": "Bass: Fundament oder Gegenstimme",
+      "goal": "Die drei Bassrollen unterscheiden und wissen, wann der Bass das Riff doppelt, den Akkord trägt oder selbst Melodie ist.",
+      "text": "Der Bass hat drei mögliche Rollen. 1. Doppelung: Er spielt das Gitarrenriff eine Oktave tiefer. Ergebnis: Druck, Einheit, keine zusätzliche Information. Standard im Doom (My Dying Bride, meist). 2. Fundament: Er spielt Grundtöne in langen Werten, während die Gitarre Akkorde oder Figuren spielt. Ergebnis: Ruhe, Raum für Bewegung darüber. Standard bei Anathema und in jedem Barock-Continuo. 3. Gegenstimme: Er hat eine eigene Linie, die sich unabhängig bewegt, mit Durchgängen, Sprüngen und Rhythmus. Ergebnis: Zweistimmigkeit, Dichte. Peter Steele bei Type O Negative wechselt zwischen 2 und 3, oft im selben Stück, und sein Bass ist dort die eigentliche Melodie (prüfen).\n\nDas Continuo im Barock ist die Quelle aller drei: Der Cellist spielt die Basslinie, die zugleich Fundament (Grundtöne auf den schweren Zählzeiten) und Gegenstimme (Durchgänge dazwischen) ist. Die Bezifferung sagt dem Cembalisten, welche Akkorde darüber gehören. Der Bass ist die Partitur; alles andere ist Ausführung.\n\nFür dich ohne Bassisten: Die Gitarre allein muss die Rolle wählen. Leere Saiten geben Fundament (Rolle 2). Ein bewegter Bass auf der tiefen Saite mit Melodie darüber ist Rolle 3 und das Schwierigste, was der Instrumentalkurs verlangt. Rolle 1 ist im Solospiel unmöglich und wird durch die Oktave im Powerchord angedeutet.\n\nRegel: Der Bass wechselt seltener als die Melodie (Rolle 2) oder gleich oft (Rolle 3), nie öfter. Wenn der Bass hektischer ist als die Oberstimme, kippt das Register."
+    },
+    "te3-4-1": {
+      "title": "Hören · Bass: Fundament oder Gegenstimme",
+      "instructions": "Type O Negative, „Love You to Death“ und „In Praise of Bacchus“: Bestimme für je zwei Abschnitte die Bassrolle (1, 2 oder 3). Singe die Basslinie an einer Rolle-3-Stelle nach. Vergleiche mit Anathema, „Suicide Veil“: Rolle durchgehend? Behauptung: Steele wechselt innerhalb eines Stücks, Anathema bleiben bei Rolle 2 (prüfen).",
+      "checklist": [
+        "Vier Abschnitte mit Bassrolle klassifiziert?",
+        "Eine Rolle-3-Linie nachgesungen?"
+      ]
+    },
+    "te3-4-2": {
+      "title": "Modell · Bass: Fundament oder Gegenstimme",
+      "instructions": "Takt 1–2: Bass doppelt die Melodie (Rolle 1). Takt 3–4: Bass hält Grundtöne unter Akkorden (Rolle 2). Takt 5–8: Bass geht als eigene Linie mit Durchgängen gegen eine ruhige Oberstimme (Rolle 3). Spiele alle drei und beschreibe, welche Rolle am meisten Raum für die Melodie lässt und welche am meisten Druck gibt.",
+      "checklist": [
+        "Drei Rollen gespielt und unterschieden?",
+        "Raum- und Druckwirkung benannt?"
+      ]
+    },
+    "te3-4-3": {
+      "title": "Anwendung · Bass: Fundament oder Gegenstimme",
+      "instructions": "Schreibe zwölf Takte für Gitarre allein: vier Takte Rolle 2 (offener Bass, Melodie darüber), vier Takte Rolle 3 (bewegter Bass auf der tiefen Saite, Melodie hält), vier Takte Rückkehr zu Rolle 2. Notiere beide Stimmen. Die Basslinie in Rolle 3 muss einzeln singbar sein.",
+      "checklist": [
+        "Zwölf Takte mit Rollenwechsel notiert?",
+        "Basslinie in Rolle 3 einzeln gesungen?"
+      ]
+    },
+    "tu3-5": {
+      "title": "Bassregister und Frequenzraum",
+      "goal": "Wissen, wo im Frequenzraum Bass, Kick, Gitarre und Keyboard liegen, und Überlappung als Ursache von Matsch erkennen.",
+      "text": "Frequenzbereiche als Orientierung: Sub-Bass 20–60 Hz (Kick-Grundton, Oktaver, B0–B1). Bass 60–250 Hz (E1 bis B3, das Fundament). Tiefe Mitten 250–500 Hz (der Bereich, in dem Gitarrenakkorde und Bassobertöne kollidieren). Mitten 500–2000 Hz (Gesang, Gitarrenpräsenz, Violine). Höhen ab 2 kHz (Anschlag, Hi-Hat, Luft).\n\nEin Ton ist nicht nur seine Grundfrequenz. E2 (82 Hz) hat Obertöne bei 165, 247, 330, 412 Hz und weiter. Ein verzerrter E5-Powerchord füllt den Bereich 80–2000 Hz fast vollständig. Wenn der Bass dasselbe spielt, kommen dieselben Obertöne dazu, nur lauter. Das ist Doppelung (Rolle 1) und klingt nach Wand. Wenn Gitarre und Bass dagegen in verschiedenen Registern liegen, ist Platz für Keyboards und Gesang.\n\nDer Doom-Klang lebt von einer Entscheidung: Wer besitzt 80–250 Hz? Bei My Dying Bride die Gitarre, der Bass verdoppelt. Bei Type O Negative der Bass mit Suboktave; die Gitarre ist zwar tief gestimmt, aber mit Chorus und weniger Tiefen. Bei Anathema die Gitarre, der Bass liegt darunter und ist schlank. Alle drei funktionieren; keiner lässt zwei Instrumente gleich stark in diesem Bereich.\n\nFür dich: Gitarre allein besitzt alles. Mit Keyboard dazu: Keyboard nicht unter C3, es sei denn, die Gitarre schweigt. Mit Drums: Kick um 50–80 Hz, also unter dem tiefen E; Snare um 200 Hz und 2–4 kHz. Die Kick teilt sich den Raum mit dem Bass, nicht mit der Gitarre."
+    },
+    "te3-5-1": {
+      "title": "Hören · Bassregister und Frequenzraum",
+      "instructions": "Höre je 30 Sekunden Riff aus „Your River“ (MDB), „Wolf Moon“ (Type O), „Sentient“ (Anathema) nacheinander auf denselben Kopfhörern. Beantworte für jedes: Wer besitzt 80–250 Hz? Ist die Kick unter oder über dem Bass? Behauptung: drei verschiedene Antworten auf die erste Frage (prüfen).",
+      "checklist": [
+        "Besitzer des Bassbereichs für alle drei benannt?",
+        "Kick-Position relativ zum Bass bestimmt?"
+      ]
+    },
+    "te3-5-2": {
+      "title": "Modell · Bassregister und Frequenzraum",
+      "instructions": "Frequenzräume als Notenbild: Bass/Kick um E2 (60–90 Hz), Gitarrenquinte E3–B3 (165–250 Hz), Keyboard ab G4 (392 Hz). Spiele die Schichten nacheinander auf dem Keyboard und dann zusammen. Verschiebe die Gitarrenquinte auf E2–B2 und höre die Kollision mit dem Bass. Rechne für alle Töne die Grundfrequenz aus.",
+      "checklist": [
+        "Frequenzen aller Töne gerechnet?",
+        "Kollision bei verschobener Gitarrenquinte gehört?"
+      ]
+    },
+    "te3-5-3": {
+      "title": "Anwendung · Bassregister und Frequenzraum",
+      "instructions": "Nimm ein viertaktiges Riff dreimal auf: Gitarre allein, Gitarre plus Keyboard-Fläche ab C3, Gitarre plus Keyboard-Fläche ab C4. Höre bei gleicher Lautstärke, welche Fassung am klarsten ist. Formuliere deine Registerregel für Keyboard über Gitarre.",
+      "checklist": [
+        "Drei Fassungen bei gleicher Lautstärke verglichen?",
+        "Registerregel im Log?"
+      ]
+    },
+    "tu3-6": {
+      "title": "Drums I: Puls, Backbeat, Half-time, Hi-Hat",
+      "goal": "Die Grammatik eines Schlagzeugpatterns lesen: was Kick, Snare und Hi-Hat jeweils sagen.",
+      "text": "Ein Drumpattern hat drei Ebenen. Die Hi-Hat (oder Ride) gibt die Unterteilung: Viertel, Achtel oder Sechzehntel. Sie ist das Raster, an dem alle anderen hängen. Die Snare gibt den Backbeat: in 4/4 auf 2 und 4 (gerade) oder nur auf 3 (Half-time). Die Kick gibt das Fundament und verbindet sich mit dem Bass: auf 1 und 3 oder auf 1 allein, plus Synkopen, die den Bassrhythmus doppeln.\n\nHalf-time ist der Doom-Standard: Bei ♩ = 60 mit Snare auf 3 fühlt sich der Takt an wie ♩ = 30 in Halben. Dasselbe Riff mit Snare auf 2 und 4 klingt doppelt so schnell, obwohl das Tempo gleich ist. Die Snare definiert die gefühlte Geschwindigkeit; das Tempo definiert nur die Hi-Hat.\n\nHi-Hat-Sprache: geschlossen = trocken, Raster; offen = Akzent, Ausklang; halb offen = Rauschen, Fläche. Ein Pattern mit Hi-Hat in Vierteln lässt das Riff atmen; eines mit Achteln treibt; Sechzehntel füllen. Doom braucht Luft: Viertel oder Achtel, offen nur auf dem letzten Schlag vor der 1.\n\nDynamik: Die Kick auf 1 ist lauter als die auf 3. Die Hi-Hat auf den Schlägen ist lauter als dazwischen (Akzentstruktur). Ohne diese Gewichtung klingt jedes Pattern nach Maschine. Bei Type O Negative sind viele Drums programmiert und gerade deshalb bewusst gewichtet (prüfen). Bei My Dying Bride spielt ein Mensch, und die Half-time-Snare kommt oft minimal spät, was das Gewicht erhöht (prüfen).\n\nGerätneutral: Jedes Pattern ist ein Raster aus Schritten (16 pro Takt bei Sechzehnteln), pro Schritt ein Instrument mit Velocity. Ob SR-18, Digitakt oder SP-404: Raster, Instrument, Velocity, Swing."
+    },
+    "te3-6-1": {
+      "title": "Hören · Drums I: Puls, Backbeat, Half-time, Hi-Hat",
+      "instructions": "My Dying Bride, „Your River“, erstes Riff mit Drums: Bestimme Hi-Hat-Unterteilung, Snare-Position (2+4 oder 3) und Kick-Muster. Schreibe das Pattern als 16-Schritt-Raster. Dann Type O Negative, „Green Man“: dasselbe. Behauptung: MDB Half-time mit Viertel-Hi-Hat, Type O gerade mit Achtel-Hi-Hat (prüfen).",
+      "checklist": [
+        "Zwei Patterns als 16-Schritt-Raster geschrieben?",
+        "Snare-Position beider Stücke bestimmt?"
+      ]
+    },
+    "te3-6-2": {
+      "title": "Modell · Drums I: Puls, Backbeat, Half-time, Hi-Hat",
+      "instructions": "Drums als Noten: oben Hi-Hat (B4), Mitte Snare (E4), unten Kick (E2). Takt 1–2 Half-time: Hi-Hat in Vierteln, Snare auf 3, Kick auf 1 mit Synkope. Takt 3–4 gerade: Hi-Hat in Achteln, Snare auf 2 und 4, Kick auf 1 und 3. Klopfe beide mit zwei Händen und einem Fuß. Schalte die Begleitung zwischen Half-time (Vorgabe) und deinem eigenen Zählen um und höre die gefühlte Tempohalbierung.",
+      "checklist": [
+        "Beide Patterns mit Händen und Fuß geklopft?",
+        "Gefühlte Tempohalbierung bei gleichem Klick bestätigt?"
+      ]
+    },
+    "te3-6-3": {
+      "title": "Anwendung · Drums I: Puls, Backbeat, Half-time, Hi-Hat",
+      "instructions": "Schreibe drei 16-Schritt-Raster für dein Riff aus Phase 1: Half-time mit Viertel-Hi-Hat, Half-time mit Achtel-Hi-Hat, gerade mit Achtel-Hi-Hat. Trage Velocities ein (drei Stufen). Programmiere sie auf einem verfügbaren Gerät oder spiele sie auf den Oberschenkeln zum Riff und entscheide, welches Raster das Riff am besten trägt.",
+      "checklist": [
+        "Drei Raster mit Velocities notiert?",
+        "Wahl mit Begründung im Log?"
+      ]
+    },
+    "tu3-7": {
+      "title": "Drums II: Doom-Drumming, Fills als Form, Pattern bauen",
+      "goal": "Fills, Crashes und Pattern-Wechsel als Formsignale verstehen und ein Pattern gerätneutral bauen.",
+      "text": "In langsamer Musik ist das Schlagzeug weniger Motor als Architekt. Es markiert Formgrenzen: Ein Fill im letzten Takt vor einem Abschnitt, ein Crash auf der 1 des neuen Abschnitts, ein Pattern-Wechsel (Half-time → gerade) beim Übergang von Strophe zu Refrain. Ohne diese Signale hört der Zuhörer die Form nicht; mit ihnen braucht die Harmonie weniger zu tun.\n\nDoom-Drumming: Tempo 50–80, Half-time, Kick verbunden mit dem Bassrhythmus, Toms statt Snare für Übergänge, Crash lang ausklingend, Ride statt Hi-Hat in offenen Abschnitten. Die Pausen sind lang; ein Schlag alle zwei Sekunden ist normal. Jeder Schlag muss deshalb sitzen. Bei My Dying Bride sind die Fills oft nur zwei bis drei Tom-Schläge; das reicht bei diesem Tempo (prüfen). Type O Negative arbeiten mit maschinenhaft gleichen Patterns und setzen Formgrenzen durch Aussetzen: ein Takt ohne Drums vor dem Refrain (prüfen).\n\nBarock hat kein Schlagzeug, aber dieselbe Funktion: Das Continuo markiert Kadenzen durch Verdichtung (mehr Akkordanschläge) und die Ritornelle durch Tutti-Einsatz. Vivaldis Stürme sind Schlagzeugmusik ohne Schlagzeug: Sechzehntel-Tremolo im Bass ist die Doppelkick des 18. Jahrhunderts.\n\nPattern bauen, gerätneutral: 1. Raster wählen (16 Schritte pro Takt, bei 12/8 zwölf). 2. Hi-Hat auf das Raster setzen (jeden zweiten oder vierten Schritt). 3. Snare auf Schritt 9 (Half-time) oder 5 und 13 (gerade). 4. Kick auf 1 und die Schritte, auf denen der Bass anschlägt. 5. Velocity: Schläge auf 1 und 9 stark, andere mittel, Zwischenschläge leise. 6. Fill: letzter Takt vor einer Formgrenze, Hi-Hat weglassen, Toms auf Schritt 13–16. 7. Swing nur, wenn das Riff ternär ist (Phase 5)."
+    },
+    "te3-7-1": {
+      "title": "Hören · Drums II: Doom-Drumming, Fills als Form, Pattern bauen",
+      "instructions": "My Dying Bride, „The Songless Bird“: Markiere jede Formgrenze und notiere, welches Drum-Signal sie ankündigt (Fill, Crash, Pattern-Wechsel, Aussetzen). Dann Type O Negative, „Be My Druidess“: dasselbe. Behauptung: MDB signalisieren mit Tom-Fills, Type O mit Aussetzen und Crash (prüfen).",
+      "checklist": [
+        "Alle Formgrenzen beider Stücke mit Drum-Signal notiert?",
+        "Signaltypen gezählt und verglichen?"
+      ]
+    },
+    "te3-7-2": {
+      "title": "Modell · Drums II: Doom-Drumming, Fills als Form, Pattern bauen",
+      "instructions": "Sechs Takte: drei Takte Half-time-Pattern, ein Fill-Takt (Hi-Hat aus, Toms als G4/E4-Achtel auf 3 und 4), dann Wechsel zu geradem Pattern mit Achtel-Hi-Hat als neuer Abschnitt. Klopfe die Form mit. Schreibe das Fill als 16-Schritt-Raster mit Velocities. Baue dann dasselbe auf einem Gerät oder mit der Stimme und höre, ob der Wechsel nach dem Fill als neuer Abschnitt wirkt.",
+      "checklist": [
+        "Fill als Raster mit Velocities geschrieben?",
+        "Abschnittswechsel nach dem Fill hörbar?"
+      ]
+    },
+    "te3-7-3": {
+      "title": "Anwendung · Drums II: Doom-Drumming, Fills als Form, Pattern bauen",
+      "instructions": "Nimm die 16-taktige Form aus deinem Instrumentalkurs (Phase 8, A–A′–B–A). Schreibe einen Drum-Plan: Pattern pro Abschnitt, Signal an jeder Grenze, Velocity-Verlauf. Als Raster, gerätneutral. Programmiere ihn auf einem Gerät deiner Wahl oder klopfe ihn zur Aufnahme. Prüfe, ob ein Zuhörer die vier Abschnitte ohne Harmonie erkennen könnte.",
+      "checklist": [
+        "Drum-Plan mit Pattern, Signalen und Velocities pro Abschnitt?",
+        "Formerkennbarkeit ohne Harmonie beurteilt?"
+      ]
+    },
+    "t4": {
+      "title": "Funktionale Harmonik",
+      "goal": "Harmonisch und melodisch Moll, Kadenztypen, Septakkorde, dim7, Zwischendominanten, Modulation, barocke Formeln und die Frage, wann Doom Funktion vermeidet."
+    },
+    "tu4-1": {
+      "title": "Harmonisch und melodisch Moll",
+      "goal": "Die drei Mollformen als Werkzeuge für Dominante und Melodieführung kennen, nicht als Skalen zum Auswendiglernen.",
+      "text": "Natürliches Moll (Äolisch) hat keinen Leitton; der Akkord auf 5 ist Moll (Bm in E-Moll). Um eine Dominante zu bekommen, erhöht man die 7: D → D#. Das ergibt harmonisch Moll: E F# G A B C D#. Der Schritt C–D# ist eine übermäßige Sekunde (drei Halbtöne), melodisch sperrig, harmonisch nützlich. Der Akkord auf 5 wird Dur (B), auf 7 vermindert (D#dim), auf 3 übermäßig (G+).\n\nMelodisch Moll erhöht auch die 6, um die übermäßige Sekunde zu vermeiden: E F# G A B C# D#, aufwärts. Abwärts fällt man traditionell in natürliches Moll zurück, weil die Leittonspannung nur aufwärts gebraucht wird. In der Praxis: Vor einer Kadenz aufwärts mit C# und D#, danach abwärts mit D und C.\n\nVivaldi arbeitet in Moll fast durchgehend so: Melodien steigen melodisch, fallen natürlich, und die Kadenz hat immer den Leitton. Der Winter (f-Moll) ist ein Lehrbuch: Höre den Wechsel zwischen Eb und E in der Solovioline, je nach Richtung (prüfen).\n\nDoom benutzt harmonisch Moll fast nur an einer Stelle: dem Schluss. Der Leitton erscheint, wenn ein Abschnitt wirklich enden soll, und sonst nicht. Type O Negative haben in Refrains gelegentlich die Dominante mit Leitton (prüfen); My Dying Bride verwenden die übermäßige Sekunde gelegentlich in der Violine als „orientalische“ Farbe (prüfen). Regel: harmonisch Moll für Akkorde, melodisch Moll für Melodie, natürlich Moll für alles andere."
+    },
+    "te4-1-1": {
+      "title": "Hören · Harmonisch und melodisch Moll",
+      "instructions": "Vivaldi, *Der Winter*, Satz 1: Verfolge die Solovioline in einer aufsteigenden und einer absteigenden Passage. Hörst du den Unterschied zwischen erhöhter und natürlicher 6 und 7? Dann My Dying Bride, „Turn Loose the Swans“: Findest du eine übermäßige Sekunde in der Violine? Behauptung: Vivaldi wechselt richtungsabhängig, MDB nutzen die übermäßige Sekunde als Farbe (prüfen).",
+      "checklist": [
+        "Richtungsabhängige 6/7 bei Vivaldi gehört?",
+        "Übermäßige Sekunde bei MDB gefunden oder ausgeschlossen?"
+      ]
+    },
+    "te4-1-2": {
+      "title": "Modell · Harmonisch und melodisch Moll",
+      "instructions": "Drei Mollformen auf und ab, dann eine Anwendung: Takt 7–8 steigt melodisch (C#, D#) in die Kadenz und fällt natürlich (D, C) danach. Singe jede Form. Spiele Takt 3 (harmonisch) und höre die übermäßige Sekunde C–D#. Ersetze in Takt 8 das D durch D# und höre, warum der Abstieg mit D natürlicher klingt.",
+      "checklist": [
+        "Drei Formen gesungen, übermäßige Sekunde lokalisiert?",
+        "D/D# im Abstieg verglichen?"
+      ]
+    },
+    "te4-1-3": {
+      "title": "Anwendung · Harmonisch und melodisch Moll",
+      "instructions": "Schreibe acht Takte Melodie über Em–Am–B7–Em (je zwei Takte), die die Regel anwendet: aufwärts vor B7 mit C# und D#, abwärts nach Em mit D und C. Markiere jeden erhöhten Ton. Spiele die Melodie über den Akkorden auf dem Keyboard und dann nur die Melodie auf der Gitarre.",
+      "checklist": [
+        "Erhöhte Töne nur aufwärts vor der Dominante?",
+        "Melodie auf beiden Instrumenten gespielt?"
+      ]
+    },
+    "tu4-2": {
+      "title": "Dominante, Leitton, Kadenztypen",
+      "goal": "Die vier Kadenztypen hören und schreiben; wissen, welcher in welcher Referenz vorkommt.",
+      "text": "Eine Kadenz ist ein harmonischer Schluss. Vier Typen: Authentisch: V → I (B7 → Em). Vollkommen, wenn beide in Grundstellung stehen und die Melodie auf dem Grundton endet; sonst unvollkommen. Plagal: IV → I (Am → Em), der „Amen“-Schluss, ohne Leitton, weich. Halbschluss: endet auf V (… → B7), offen, verlangt Fortsetzung. Trugschluss: V → VI (B7 → C), die Dominante löst sich in den falschen Akkord, Überraschung und Verlängerung.\n\nDie Dominante wirkt durch zwei Töne: Leitton (D#) aufwärts nach E, Septime (A) abwärts nach G. Zusammen ein Tritonus. Ohne Septime ist B-Dur eine schwächere Dominante; ohne Leitton (Bm) gar keine. Die Subdominante (Am) bereitet vor: Sie enthält C, das nach B fällt, und A, das liegen bleibt und zur Septime von B7 wird. Am–B7–Em ist deshalb die vollständige Formel: Vorbereitung, Spannung, Lösung.\n\nVivaldi: fast jede Phrase endet authentisch, Abschnittsgrenzen oft mit Trugschluss, um weiterzugehen (prüfen). Biber: Tanzsätze authentisch, Halbschluss in der Mitte jedes Teils. Type O Negative: plagal und authentisch in Refrains, der Beatles-Anteil (prüfen). My Dying Bride: fast nur plagal oder gar keine Kadenz; Abschnitte enden durch Aufhören, nicht durch Lösung (prüfen). Anathema: Halbschlüsse, die nie gelöst werden, als Schwebezustand.\n\nDie Wahl des Kadenztyps ist die wichtigste Entscheidung eines Abschnittsendes. Authentisch schließt, plagal beruhigt, Halbschluss öffnet, Trugschluss verlängert."
+    },
+    "te4-2-1": {
+      "title": "Hören · Dominante, Leitton, Kadenztypen",
+      "instructions": "Suche je einen Abschnittsschluss in: Vivaldi, *Der Herbst*, Satz 1; Type O Negative, „Love You to Death“; My Dying Bride, „Your River“; Anathema, „Far Away“. Bestimme den Kadenztyp oder „keine Kadenz“. Behauptung: vier verschiedene Antworten (prüfen).",
+      "checklist": [
+        "Vier Schlüsse klassifiziert?",
+        "Leitton und Septime jeweils gehört oder als fehlend markiert?"
+      ]
+    },
+    "te4-2-2": {
+      "title": "Modell · Dominante, Leitton, Kadenztypen",
+      "instructions": "Vier Kadenzen: Takt 1–3 authentisch (Am–B7–Em), Takt 4–5 plagal (Am–Em), Takt 6–7 Halbschluss (Am–B7, offen), Takt 8–10 Trugschluss und Nachtrag (B7–C–Em). Spiele jede und halte nach dem letzten Akkord inne: Ist der Schluss vollständig? Verfolge D# und A in Takt 2 und Takt 8: Wohin gehen sie jeweils?",
+      "checklist": [
+        "Vier Kadenztypen gespielt und Vollständigkeit beurteilt?",
+        "Weg von D# und A im Trugschluss benannt?"
+      ]
+    },
+    "te4-2-3": {
+      "title": "Anwendung · Dominante, Leitton, Kadenztypen",
+      "instructions": "Schreibe eine sechzehntaktige Form mit vier Vierergruppen, deren Enden nacheinander Halbschluss, Trugschluss, plagal, authentisch sind. Melodie und Bass ausschreiben. Spiele und höre, ob die Reihenfolge einen Bogen ergibt (offen → verlängert → beruhigt → geschlossen).",
+      "checklist": [
+        "Vier Kadenztypen in vorgegebener Reihenfolge notiert?",
+        "Bogenwirkung im Log beurteilt?"
+      ]
+    },
+    "tu4-3": {
+      "title": "Septakkorde und die Septimenkette",
+      "goal": "Alle Septakkordtypen der Molltonart bilden und die barocke Septimenkette über den Quintfall spielen.",
+      "text": "Die Septime macht aus einem Dreiklang eine Richtung. Sie ist eine Dissonanz zum Grundton und will schrittweise fallen. Typen in E-Äolisch auf jeder Stufe: Em7 (i), F#m7b5 (iiø), Gmaj7 (III), Am7 (iv), Bm7 (v), Cmaj7 (VI), D7 (VII). Mit harmonisch Moll: B7 (V7) und D#dim7 (vii°7). Mit melodisch Moll zusätzlich C#m7b5 und Gmaj7#5.\n\nFünf Typen nach Bauweise: Dominantsept (Dur + kleine Septime: B7, D7), große Septime (Dur + große Septime: Cmaj7, Gmaj7), Mollsept (Moll + kleine Septime: Em7, Am7), halbvermindert (vermindert + kleine Septime: F#m7b5), vollvermindert (vermindert + verminderte Septime: D#dim7). Der Klangcharakter geht von strebend (Dominantsept) über weich (maj7, m7) bis instabil (ø, °7).\n\nDie Septimenkette: Im Quintfall fällt die Septime jedes Akkords in die Terz des nächsten. Em7 (D) → Am7 (C ist die Terz, D fällt nach C), Am7 (G) → D7 (F#), D7 (C) → Gmaj7 (B), Gmaj7 (F#) → Cmaj7 (E), Cmaj7 (B) → F#m7b5 (A), F#m7b5 (E) → B7 (D#), B7 (A) → Em (G). Zwei Stimmen wechseln sich ab: eine hält, eine fällt. Das ist Vivaldis Sequenzmotor und die Grundlage jeder Barockmodulation.\n\nIn Doom sind Septimen selten, weil sie Richtung erzeugen. Wo sie vorkommen, sind es meist m7 und maj7 als Farbe ohne Auflösung: Anathema setzen Em7 und Cmaj7 als Flächen (prüfen), Type O Negative Dominantsepten nur an Schlüssen (prüfen). Die Septimenkette selbst gehört dem Barock; als Riff wäre sie zu tonal."
+    },
+    "te4-3-1": {
+      "title": "Hören · Septakkorde und die Septimenkette",
+      "instructions": "Vivaldi, *Der Sommer*, Satz 1: Finde eine Sequenz, in der du eine fallende Stimme Takt für Takt hörst (Septimenkette). Notiere die fallenden Töne. Dann Anathema, „Eternity Part III“: Hörst du Septimen in den Flächen, und lösen sie sich auf? Behauptung: Vivaldi löst jede Septime, Anathema keine (prüfen).",
+      "checklist": [
+        "Fallende Stimme bei Vivaldi über mindestens vier Akkorde notiert?",
+        "Auflösungsverhalten bei Anathema beschrieben?"
+      ]
+    },
+    "te4-3-2": {
+      "title": "Modell · Septakkorde und die Septimenkette",
+      "instructions": "Septimenkette durch E-Moll. In den zwei Hauptstimmen (Halsrichtung oben) hält abwechselnd eine, während die andere um einen Schritt fällt: die Septime wird zur Terz des nächsten Akkords. Zeichne beide Linien nach und markiere jede Septime. Spiele nur Bass und die zwei Hauptstimmen, dann mit der dritten Stimme. Benenne den Typ jedes Septakkords.",
+      "checklist": [
+        "Alle Septimen markiert und ihr Fall nachvollzogen?",
+        "Sieben Akkordtypen benannt?"
+      ]
+    },
+    "te4-3-3": {
+      "title": "Anwendung · Septakkorde und die Septimenkette",
+      "instructions": "Schreibe zwei viertaktige Beispiele: eines mit Septimen, die sich auflösen (Septimenkette über Am–D7–Gmaj7–Cmaj7), eines mit Septimen als Farbe ohne Auflösung (Em7–Cmaj7 als Flächen, Septime bleibt liegen). Spiele beide. Entscheide, welches in einen Doom-Kontext gehört und welches nach Barock klingt, und begründe mit der Stimmführung.",
+      "checklist": [
+        "Beide Beispiele notiert, Septimen markiert?",
+        "Zuordnung mit Stimmführungsbegründung im Log?"
+      ]
+    },
+    "tu4-4": {
+      "title": "Der verminderte Septakkord und seine Mehrdeutigkeit",
+      "goal": "dim7 als symmetrischen Akkord mit vier Auflösungen verstehen und als Schaltstelle zwischen Tonarten nutzen.",
+      "text": "D#dim7 = D# F# A C: drei kleine Terzen. Der Akkord teilt die Oktave in vier gleiche Teile. Deshalb ist jede Umkehrung wieder ein dim7 in Grundstellung: F#dim7, Adim7, Cdim7 enthalten dieselben Töne. Es gibt nur drei verschiedene dim7-Akkorde insgesamt.\n\nJeder der vier Töne kann Leitton sein und einen Halbton aufwärts lösen: D# → E (Em), F# → G (Gm), A → Bb (Bbm), C → Db (Dbm). Ein dim7 kann also in vier Tonarten münden, die je eine kleine Terz auseinanderliegen. Das ist die klassische Modulationsschaltstelle: hinein als vii°7 der alten Tonart, hinaus als vii°7 der neuen.\n\nAls Dominantersatz: D#dim7 → Em entspricht B7b9 ohne Grundton (B D# F# A C). Der Klang ist schärfer als B7, weil der Tritonus doppelt vorhanden ist (D#–A und F#–C). Im Barock ist der dim7 der Akkord für Schrecken und Sturm: Vivaldi setzt ihn in den Gewittern, oft als Tremolo (prüfen). Im Doom taucht er als Bassdurchgang auf (E–D#–D, Phase 3) und in Orgelflächen bei Type O Negative als „Kirchenklang“ (prüfen). My Dying Bride verwenden ihn in der Violine über liegendem Bass als Spannungston (prüfen).\n\nPraktisch: Ein dim7 über dem eigenen Grundton (Edim7 = E G Bb Db) ist etwas anderes als der Leitton-dim7 (D#dim7). Der erste ist eine Farbe über E, der zweite eine Dominante nach E. Verwechslung führt zu falschen Symbolen."
+    },
+    "te4-4-1": {
+      "title": "Hören · Der verminderte Septakkord und seine Mehrdeutigkeit",
+      "instructions": "Vivaldi, *Der Sommer*, Satz 3 (Sturm): Finde einen Akkord, der „gestapelt“ und richtungslos klingt, bevor er sich löst. Singe seine Töne: Sind es lauter kleine Terzen? Dann Type O Negative, „Red Water (Christmas Mourning)“, Orgel: Gibt es einen solchen Akkord? Behauptung: Vivaldi ja, als Tremolo; Type O ja, als Durchgang (prüfen).",
+      "checklist": [
+        "dim7 bei Vivaldi durch Singen der Terzen bestätigt?",
+        "dim7 bei Type O gefunden oder ausgeschlossen?"
+      ]
+    },
+    "te4-4-2": {
+      "title": "Modell · Der verminderte Septakkord und seine Mehrdeutigkeit",
+      "instructions": "Derselbe dim7 (D# F# A C) löst sich viermal in vier Tonarten: Em, Gm, Bbm, Dbm. Der Bass nimmt jedes Mal einen anderen Akkordton als Leitton. Spiele die vier Auflösungen und benenne für jede, welcher Ton der Leitton ist und wohin die anderen drei gehen. Zähle die Halbtöne zwischen den vier Zieltonarten.",
+      "checklist": [
+        "Vier Auflösungen mit Leitton und Stimmwegen benannt?",
+        "Abstand der Zieltonarten als kleine Terz erkannt?"
+      ]
+    },
+    "te4-4-3": {
+      "title": "Anwendung · Der verminderte Septakkord und seine Mehrdeutigkeit",
+      "instructions": "Schreibe acht Takte, die mit einem dim7 von E-Moll nach G-Moll wechseln und über einen zweiten dim7 zurückkehren. Notiere jeden dim7 mit beiden Symbolen (vii°7 der alten und der neuen Tonart). Spiele die Passage und höre, ob der Wechsel als Modulation oder als Farbwechsel wirkt.",
+      "checklist": [
+        "Zwei dim7 mit doppelter Benennung notiert?",
+        "Wirkung als Modulation oder Farbe beurteilt?"
+      ]
+    },
+    "tu4-5": {
+      "title": "Zwischendominanten",
+      "goal": "Jeden Akkord der Tonart kurz zur Tonika machen können, ohne die Tonart zu verlassen.",
+      "text": "Eine Zwischendominante ist die Dominante eines anderen Akkords als der Tonika. In E-Moll: E7 → Am (V7/iv), A7 → D (V7/VII), D7 → G (V7/III), G7 → C (V7/VI), F#7 → B (V7/V). Jede führt einen Fremdton ein (G# in E7, C# in A7, F# ist schon da, B... F in G7? nein: G7 = G B D F, F ist fremd; F#7 = F# A# C# E, A# und C# sind fremd). Der Fremdton ist der Leitton zum Zielakkord.\n\nWirkung: Der Zielakkord wird für einen Moment zur Tonika, ohne dass die Tonart wechselt. Em–E7–Am: das G# in E7 verwandelt die Tonika in die Dominante der Subdominante. Das ist ein Standardweg im Barock und im Beatles-nahen Teil von Type O Negative (prüfen). Vivaldi reiht Zwischendominanten im Quintfall: E7–A7–D7–G7–C, jeder Akkord Dominante des nächsten, die Kette aus Phase 3 mit lauter Dur-Septakkorden.\n\nIn Doom gibt es Zwischendominanten fast nie, weil sie Dur-Terzen und Richtung bringen. Die Ausnahme ist V7/iv (E7 → Am): Der Wechsel von Em zu E-Dur (Phase 2 des Instrumentalkurses) ist genau das, wenn Am folgt. My Dying Bride nutzen die Dur-Terz gelegentlich als Überraschung, ohne die Auflösung nach Am, also als reine Farbe (prüfen).\n\nNotation: V7/iv liest sich „fünf-sieben von vier“. Der Schrägstrich meint hier Bezug, nicht Basston. Kontext entscheidet, ob Em/G (Basston) oder V/iv (Bezug) gemeint ist; im Zweifel ausschreiben."
+    },
+    "te4-5-1": {
+      "title": "Hören · Zwischendominanten",
+      "instructions": "Type O Negative, „Love You to Death“, Refrain: Gibt es einen Dur-Akkord mit Fremdton, der in den nächsten Akkord „hineinzieht“? Notiere ihn und sein Ziel. Dann Vivaldi, *Der Herbst*, Satz 3: Suche eine Folge von drei Akkorden, die je Dominante des nächsten sind. Behauptung: Type O eine Zwischendominante pro Refrain, Vivaldi Ketten (prüfen).",
+      "checklist": [
+        "Zwischendominante bei Type O mit Ziel notiert oder ausgeschlossen?",
+        "Dreierkette bei Vivaldi notiert?"
+      ]
+    },
+    "te4-5-2": {
+      "title": "Modell · Zwischendominanten",
+      "instructions": "Drei Zwischendominanten in einer Folge: E7 → Am (G#), D7 → G (F#, hier kein Fremdton, aber Septime C), G7 → C (F). Dann B7 → Em als echte Dominante. Markiere jeden Fremdton und seinen Leittonweg. Spiele die Folge einmal mit, einmal ohne die Septakkorde (Em–Am–G–C–Em) und beschreibe, was die Zwischendominanten hinzufügen.",
+      "checklist": [
+        "Fremdtöne und Leittonwege markiert?",
+        "Fassung mit und ohne Zwischendominanten verglichen?"
+      ]
+    },
+    "te4-5-3": {
+      "title": "Anwendung · Zwischendominanten",
+      "instructions": "Schreibe ein achttaktiges Riff in E-Moll, das genau eine Zwischendominante enthält (V7/iv oder V7/VI), an einer Formgrenze. Der Rest bleibt modal. Spiele es mit Powerchords (nur Grundtöne, die Dur-Terz fehlt) und mit vollem Voicing. Höre, ob die Zwischendominante ohne Terz überhaupt existiert.",
+      "checklist": [
+        "Genau eine Zwischendominante an einer Formgrenze?",
+        "Powerchord- und Voicing-Fassung verglichen?"
+      ]
+    },
+    "tu4-6": {
+      "title": "Modulation: Quintverwandt und terzverwandt",
+      "goal": "Zwei Wege in eine neue Tonart kennen und wissen, welcher barock und welcher doom-typisch ist.",
+      "text": "Modulation heißt: Ein neues Zentrum wird bestätigt, meist durch seine eigene Kadenz. Zwei Hauptwege.\n\nQuintverwandt (Barock): Die neue Tonart liegt eine Quinte höher oder tiefer, teilt sechs von sieben Tönen. E-Moll → B-Moll (ein Kreuz mehr) oder A-Moll (eines weniger). Weg: ein gemeinsamer Akkord (Pivot), dann die Dominante der neuen Tonart. Em → G (III, zugleich VI in B-Moll?) … einfacher: Am ist iv in E-Moll und i in A-Moll; Am–E7–Am bestätigt A-Moll. Vivaldi moduliert in jedem schnellen Satz vom Grundton zur Dominante oder zur Paralleltonart (Moll → Dur-Parallele: e → G) und zurück (prüfen). Biber ebenso in jedem Tanzsatz: erster Teil endet in der Dominante, zweiter kehrt zurück.\n\nTerzverwandt (Doom, Romantik): Die neue Tonart liegt eine kleine oder große Terz entfernt und teilt weniger Töne; der Wechsel ist ein Ruck. E → C (große Terz abwärts, „Wechsel ins Weite“), E → G (kleine Terz aufwärts, Parallele, weich), E → C# oder Eb (fremd, hart). Type O Negative wechseln Abschnitte oft terzverwandt ohne Pivot, einfach durch den Bass: Refrain eine Terz höher als die Strophe (prüfen). My Dying Bride verschieben ganze Riffs um eine kleine Terz (prüfen), das ist die Metal-Variante der Sequenz.\n\nChromatische Mediante: E-Dur → C-Dur oder E-Moll → C-Moll, gleicher Typ, Terzabstand, zwei Fremdtöne. Der Klang ist filmisch. Anathema nutzen ihn selten, Type O Negative gelegentlich in der Orgel (prüfen).\n\nRegel: Quintverwandt für Wege, die zurückführen sollen. Terzverwandt für Kontrast, der als Bruch gehört werden darf."
+    },
+    "te4-6-1": {
+      "title": "Hören · Modulation: Quintverwandt und terzverwandt",
+      "instructions": "Biber, Partita V, ein Tanzsatz mit zwei Teilen: Bestimme die Tonart am Ende des ersten Teils relativ zum Anfang (Quinte höher? Parallele?). Dann My Dying Bride, „The Snow in My Hand“: Gibt es einen Riffwechsel, bei dem dasselbe Riff um eine Terz versetzt wiederkehrt? Behauptung: Biber quintverwandt, MDB terzverwandt (prüfen).",
+      "checklist": [
+        "Zieltonart des ersten Biber-Teils bestimmt?",
+        "Terzversetzung bei MDB gefunden oder ausgeschlossen?"
+      ]
+    },
+    "te4-6-2": {
+      "title": "Modell · Modulation: Quintverwandt und terzverwandt",
+      "instructions": "Takt 1–4 quintverwandt: Am als Pivot, E7 als neue Dominante, Ankunft in A-Moll. Takt 5–8 terzverwandt: Em → C → G → Em ohne Dominante, nur Bass und gemeinsame Töne. Spiele beide Hälften und benenne, wo die Erwartung entsteht (Takt 3) und wo der Ruck (Takt 6). Welche Hälfte könnte endlos weitergehen?",
+      "checklist": [
+        "Pivot und neue Dominante in Takt 1–4 benannt?",
+        "Ruckstelle und Endlosfähigkeit beurteilt?"
+      ]
+    },
+    "te4-6-3": {
+      "title": "Anwendung · Modulation: Quintverwandt und terzverwandt",
+      "instructions": "Schreibe sechzehn Takte: acht in E-Moll, dann Wechsel nach G-Moll (kleine Terz, zwei Fremdtöne Bb und Eb) für vier Takte, dann Rückkehr über einen Pivot oder eine Dominante. Beide Wechsel notieren und ihren Typ benennen. Spiele die Form und höre, welcher Wechsel als Bruch und welcher als Weg wirkt.",
+      "checklist": [
+        "Beide Wechsel notiert und typisiert?",
+        "Bruch-/Wegwirkung im Log?"
+      ]
+    },
+    "tu4-7": {
+      "title": "Barocke Formeln und ihr Weg in den Metal",
+      "goal": "Fünf feste Formeln aus Vivaldi und Biber kennen, die in Doom und Gothic weiterleben.",
+      "text": "Barock ist Formelmusik: Ein kleiner Vorrat an Wendungen, immer neu kombiniert. Fünf davon sind direkt in den Metal gewandert.\n\n1. Phrygische Kadenz: iv6 → V in Moll, im Bass ein Halbton abwärts (C → B), in der Oberstimme ein Ganzton aufwärts (A → B). Endet auf der Dominante, offen. Vivaldi schließt langsame Sätze damit (prüfen). Im Doom ist es das Riff-Ende C5 → B5 mit offener Fortsetzung.\n\n2. Neapolitaner: Der Dur-Akkord auf b2 (F-Dur in E-Moll), meist in erster Umkehrung (F/A), vor der Dominante. F → B7 → Em. Der Halbtonschritt F → E in der Oberstimme ist derselbe wie im Phrygischen aus Phase 1, hier aber als Kadenz. Biber setzt ihn in den Sarabanden (prüfen), My Dying Bride als F5-Powerchord vor dem Grundton (prüfen).\n\n3. Lamento: Phase 3. 4. Quintfall mit Septimenkette: Phase 4. 5. Pedalpunkt auf der Dominante: Der Bass hält B, darüber wechseln Em, Am, C, B7, bevor Em kommt. Erzeugt maximale Erwartung; Vivaldi vor jeder Rückkehr des Ritornells (prüfen). Anathema halten Dominantpedale ohne Auflösung, das ist ihr Schwebezustand.\n\nWas der Metal weglässt: die Terzen. Alle fünf Formeln funktionieren mit Powerchords, weil sie im Bass definiert sind. Was der Metal hinzufügt: Wiederholung. Eine barocke Formel erscheint einmal pro Phrase; ein Riff wiederholt sie achtmal. Der Unterschied zwischen Vivaldi und Doom ist nicht das Material, sondern die Wiederholungsrate."
+    },
+    "te4-7-1": {
+      "title": "Hören · Barocke Formeln und ihr Weg in den Metal",
+      "instructions": "Suche in Vivaldi, *Der Winter*, Satz 2 und 3, und in My Dying Bride, „Your River“, je ein Beispiel für zwei der fünf Formeln. Notiere Bass und Oberstimme des Moments. Behauptung: Phrygische Kadenz und Dominantpedal bei Vivaldi, Neapolitaner und Lamento bei MDB (prüfen).",
+      "checklist": [
+        "Vier Formelbeispiele mit Bass und Oberstimme notiert?",
+        "Wiederholungsrate der Formel in beiden Quellen gezählt?"
+      ]
+    },
+    "te4-7-2": {
+      "title": "Modell · Barocke Formeln und ihr Weg in den Metal",
+      "instructions": "Takt 1–2 phrygische Kadenz (C → B im Bass, A → B oben), offen auf B. Takt 3–5 Neapolitaner F/A → B7 → Em; höre F → E in der Oberstimme über drei Takte. Takt 6–9 Dominantpedal: B liegt, darüber Em, Am, B7, Ankunft. Spiele jede Formel einzeln, dann alle. Schreibe jede als Powerchord-Fassung (nur Bass plus Quinte) und prüfe, ob sie erkennbar bleibt.",
+      "checklist": [
+        "Drei Formeln einzeln gespielt und benannt?",
+        "Powerchord-Fassungen geschrieben, Erkennbarkeit beurteilt?"
+      ]
+    },
+    "te4-7-3": {
+      "title": "Anwendung · Barocke Formeln und ihr Weg in den Metal",
+      "instructions": "Baue ein sechzehntaktiges Riff aus zwei Formeln: acht Takte Lamento (zweimal), vier Takte Neapolitaner-Kadenz, vier Takte Dominantpedal mit Ankunft. Alles als Powerchords plus eine Melodiestimme. Spiele es mit Half-time-Drums bei 60 und bei 120 und notiere, ab welchem Tempo es nach Barock statt nach Doom klingt.",
+      "checklist": [
+        "Sechzehn Takte mit drei Formeln als Powerchords notiert?",
+        "Tempo-Kippunkt im Log?"
+      ]
+    },
+    "tu4-8": {
+      "title": "Wann Doom Funktion vermeidet und warum",
+      "goal": "Die Verweigerung der Kadenz als bewusstes Mittel verstehen und gezielt zwischen Ruhe und Lösung wählen.",
+      "text": "Tonale Musik ist Erwartungsmusik: Jede Dominante verspricht, jede Tonika löst ein. Doom verweigert das Versprechen. Das ist keine Unfähigkeit, sondern eine Zeitform. Ein Abschnitt, der nicht kadenziert, verspricht nichts, also enttäuscht er nicht, also kann er lange dauern. Zehn Minuten Vivaldi ohne Kadenz wären unerträglich; zehn Minuten My Dying Bride ohne Kadenz sind das Stück.\n\nDrei Verweigerungen: 1. Keine Dur-Dominante: Bm oder D statt B7 vor Em; der Leitton fehlt, der Grundton kommt zurück wie eine Wiederholung, nicht wie eine Ankunft. 2. Kein Schluss auf der Tonika: Der Abschnitt endet auf C oder D und der nächste beginnt auf E; der Wechsel ist Formgrenze ohne Lösung. 3. Ende durch Aufhören: Das Riff bricht ab, Stille oder ein einzelner Ton. Type O Negative machen das oft mit einem Takt Pause; My Dying Bride mit einem ausklingenden Akkord (prüfen).\n\nWarum es funktioniert: Erwartung entsteht aus Leitton und Septime (Phase 1). Ohne sie ist der Akkordwechsel ein Farbwechsel, und Farbwechsel sind nicht dringend. Der Zuhörer wird vom Wollen ins Hören verlagert. Das ist die Verwandtschaft zur modalen Musik vor 1600 und zum Drone.\n\nWann trotzdem Funktion: einmal pro Stück, am Ende oder am Höhepunkt. Dort trifft eine echte Kadenz mit der Kraft von zehn Minuten Verzicht. Type O Negative beenden Stücke gelegentlich mit einer Dur-Tonika (Picardy-Terz), ein barocker Trick (prüfen). Vivaldi hat diesen Effekt nicht, weil er ständig löst.\n\nEntscheidung pro Abschnitt: verweigern oder lösen. Und pro Stück: wo die eine Lösung sitzt."
+    },
+    "te4-8-1": {
+      "title": "Hören · Wann Doom Funktion vermeidet und warum",
+      "instructions": "My Dying Bride, „The Crown of Sympathy“ vollständig: Zähle die Abschnitte und markiere, welche mit Verweigerung 1, 2 oder 3 enden. Gibt es eine einzige echte Kadenz? Wo? Behauptung: höchstens eine, am Ende oder am Höhepunkt (prüfen). Dann Type O Negative, „Haunted“, Schluss: Dur-Tonika?",
+      "checklist": [
+        "Alle Abschnittsenden nach Verweigerungstyp klassifiziert?",
+        "Position der einen Kadenz (oder ihr Fehlen) notiert?"
+      ]
+    },
+    "te4-8-2": {
+      "title": "Modell · Wann Doom Funktion vermeidet und warum",
+      "instructions": "Dasselbe Riff dreimal mit drei Enden: Takt 1–4 Rückkehr ohne Leitton (Verweigerung 1). Takt 5–8 Ende auf D und Stille (Verweigerung 2 und 3). Takt 9–12 echte Kadenz mit B7 und Dur-Tonika (Picardy). Spiele alle drei und beschreibe die Wirkung des Schlusses jeweils in einem Wort. Verlängere danach Takt 1–4 auf 16 Takte, indem du sie viermal spielst, und prüfe, ob sie trotzdem tragen.",
+      "checklist": [
+        "Drei Enden gespielt und je mit einem Wort beschrieben?",
+        "16-fache Wiederholung ohne Kadenz beurteilt?"
+      ]
+    },
+    "te4-8-3": {
+      "title": "Anwendung · Wann Doom Funktion vermeidet und warum",
+      "instructions": "Nimm dein längstes eigenes Stück aus dem Instrumentalkurs. Markiere jedes Abschnittsende als Verweigerung 1, 2, 3 oder Kadenz. Wenn mehr als eine Kadenz vorkommt, entferne alle bis auf eine und entscheide, wo sie sitzt. Spiele die überarbeitete Fassung und vergleiche die Aufnahme mit der alten.",
+      "checklist": [
+        "Alle Abschnittsenden klassifiziert?",
+        "Auf eine Kadenz reduziert und Vergleich im Log?"
+      ]
     }
   },
   "ui": {

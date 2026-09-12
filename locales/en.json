@@ -3880,6 +3880,656 @@
         "32 bars with unchanged figure notated?",
         "Density rise only at the end, verdict logged?"
       ]
+    },
+    "t2": {
+      "title": "Dyads and triads",
+      "goal": "Triad, inversion, power chord, thirds and sixths, voice leading, voicing in low tunings, two-part writing and the complete chord symbol system."
+    },
+    "tu2-1": {
+      "title": "Triad, inversion, spacing",
+      "goal": "Know the four triad types, their inversions and the difference between inversion and spacing.",
+      "text": "A triad is root, third, fifth. Four types by third and fifth: major (major third, perfect fifth), minor (minor third, perfect fifth), diminished (minor third, diminished fifth), augmented (major third, augmented fifth). In semitones: major 4+3, minor 3+4, diminished 3+3, augmented 4+4.\n\nWithin a scale a triad arises on every degree. E Aeolian: Em, F#dim, G, Am, Bm, C, D. E harmonic minor replaces Bm with B and D with D#dim. The major chords on b6 and b7 (C, D) are the modal sound; the major chord on 5 (B) is the tonal one.\n\nInversion means which chord tone is in the bass: root position (1), first inversion (3 in the bass), second inversion (5 in the bass). Spacing means how far apart the tones above are distributed: close position (all within an octave), open position (with gaps). Em in open position E2–B3–G4 sounds entirely different from E4–G4–B4 but is the same chord in the same inversion.\n\nOn guitar and in this music open spacing is the rule: bass low, third high. Reason: the difference tones from phase 0. On keyboard close spacing in the right hand is comfortable but turns muddy below E3. Rule for both: no thirds below C3."
+    },
+    "te2-1-1": {
+      "title": "Listen · Triad, inversion, spacing",
+      "instructions": "Type O Negative, \"Love You to Death\", piano intro: for the first four chords determine type (major/minor) and spacing (close/open). Where is the third: left or right hand? Claim: open spacing, third on top, root low (verify).",
+      "checklist": [
+        "Four chords with type and spacing written?",
+        "Position of the third determined?"
+      ]
+    },
+    "te2-1-2": {
+      "title": "Model · Triad, inversion, spacing",
+      "instructions": "Bars 1–2: the same Em close and open. Bars 3–4: first and second inversion (G and B in the bass). Bars 5–7: major, diminished, augmented over the same E. Bar 8: back to Em. Play each bar, say type, inversion and spacing aloud. Listen especially to how close (bar 1) and open (bar 2) differ.",
+      "checklist": [
+        "Eight bars named with type, inversion, spacing?",
+        "Close/open effect described?"
+      ]
+    },
+    "te2-1-3": {
+      "title": "Application · Triad, inversion, spacing",
+      "instructions": "Write all seven triads of E Aeolian in open spacing (bass below C3, third above C4). Play them on the keyboard as a sequence and mark which are major, minor, diminished. Repeat for A Aeolian and D Aeolian without looking up.",
+      "checklist": [
+        "21 triads notated with type?",
+        "Diminished chord found on degree 2 in every key?"
+      ]
+    },
+    "tu2-2": {
+      "title": "The power chord: voicings and sub-octave",
+      "goal": "Know the three power chord shapes and the role of the octave below; understand Type O Negative's bass sound.",
+      "text": "A power chord is root and fifth, often with the octave: 1–5 or 1–5–8. Without a third it is neither major nor minor; the third is supplied by the context (vocals, keyboard, melody) or by no one. The third shape is the inverted fifth: 5–1 (a fourth), e.g. B2–E3. It sounds heavier because the root is on top and the difference tone (E2, an octave below the root) replaces the bass. Doom bands use this fourth shape when the bass is absent or when the riff should sound lower than the tuning allows.\n\nThe octave below: Type O Negative produce it electronically. Peter Steele played bass with an octaver and chorus; the result is a foundation an octave below the played tone that at the same time hovers wide (verify). The octaver produces exactly the difference tone from phase 0, only under control. Guitar in B, bass with sub-octave, organ above: three registers that never collide.\n\nOn P4 the fifth lies one string up, two frets over; the octave two strings up, two frets over. The fourth shape lies on two neighbouring strings at the same fret. Every shape moves anywhere.\n\nPower chords carry riffs, not harmony. A sequence of power chords is a bass line with reinforcement. Adding their thirds is the job of the other instruments or of the next unit."
+    },
+    "te2-2-1": {
+      "title": "Listen · The power chord: voicings and sub-octave",
+      "instructions": "Type O Negative, \"Wolf Moon\": isolate the bass in the main riff. Do you hear two octaves at once (octaver)? Do you hear beating (chorus)? Compare with My Dying Bride, \"Your River\": bass follows the guitar without effects? Claim: Type O wide and octaved, MDB dry and in unison (verify).",
+      "checklist": [
+        "Octaver and chorus in Type O confirmed or rejected?",
+        "Bass role in MDB described?"
+      ]
+    },
+    "te2-2-2": {
+      "title": "Model · The power chord: voicings and sub-octave",
+      "instructions": "Three power chord shapes over E, then A5 and D5 (chain of fourths), back to E5. Bar 3 shows the fourth shape B–E: the bass E2 here is the difference tone a distorted amp produces by itself. Play all shapes on P4 and find the fret geometry for each. Play bar 3 with and without the written bass and check whether the amp supplies the E2.",
+      "checklist": [
+        "Three shapes found on P4?",
+        "Difference tone in bar 3 checked without the written bass?"
+      ]
+    },
+    "te2-2-3": {
+      "title": "Application · The power chord: voicings and sub-octave",
+      "instructions": "Write an eight-bar riff of power chords only on E, A, D that uses each of the three shapes at least twice. Notate bass (roots) and guitar separately. Play it and decide where a third is missing and which instrument would have to supply it.",
+      "checklist": [
+        "All three shapes in the riff, bass notated separately?",
+        "Missing third with instrument assignment logged?"
+      ]
+    },
+    "tu2-3": {
+      "title": "Thirds, sixths, parallel motion",
+      "goal": "Build diatonic thirds and sixths, hear their size and understand My Dying Bride's two-guitar sound.",
+      "text": "Two voices a third apart moving through a scale alternate between major and minor thirds. In E Aeolian: E–G minor, F#–A minor, G–B major, A–C minor, B–D minor, C–E major, D–F# major. The sixth is the inversion of the third: G–E (major sixth) is E–G inverted. Minor third ↔ major sixth, major third ↔ minor sixth. Thirds sound dense, sixths open; both are \"sweet\" intervals, the standard parallels of the Baroque.\n\nMy Dying Bride often lead two guitars in parallel thirds or sixths above the riff, and the violin adds a third voice on top (verify). The trick: thirds in the register above E4 and with less gain than the riff. Below that it turns to mud (phase 0). Sixths tolerate gain better than thirds because their difference tone is usually a chord tone: for G3–E4 (major sixth, 5:3) the difference of 196 and 330 Hz is 134 Hz ≈ C3, a foreign tone that fits a C major context, a b6 in Em. Do the arithmetic yourself; the rule is: major sixths work lower than minor thirds.\n\nVivaldi writes parallel thirds in almost every ritornello, often between first and second violin; the motion comes from the bass. Biber sets two violins in thirds and sixths and then switches to contrary motion so it does not turn saccharine. This alternation is the rule: parallels are a colour, not a state.\n\nFor you: notating thirds means writing two voices, not one chord. Both have their own note endings."
+    },
+    "te2-3-1": {
+      "title": "Listen · Thirds, sixths, parallel motion",
+      "instructions": "My Dying Bride, \"The Snow in My Hand\": find the first passage with two guitars a third or sixth apart. Determine the interval (sing both voices) and the register. Compare with Biber, Partita II, a slow movement: where do the violins run parallel, where in contrary motion? Claim: MDB stay parallel, Biber switches within a few bars (verify).",
+      "checklist": [
+        "Interval and register in MDB determined?",
+        "Parallel and contrary motion located in Biber?"
+      ]
+    },
+    "te2-3-2": {
+      "title": "Model · Thirds, sixths, parallel motion",
+      "instructions": "Bars 1–2 thirds, bars 3–4 sixths, both through E Aeolian over an E pedal. Under each interval write \"major\" or \"minor\". Sing the lower voice while the preview plays, then the upper. Play the thirds an octave lower with gain and hear where they become unclean.",
+      "checklist": [
+        "All 14 intervals labelled major/minor?",
+        "Lower limit of clean thirds on your rig noted?"
+      ]
+    },
+    "te2-3-3": {
+      "title": "Application · Thirds, sixths, parallel motion",
+      "instructions": "Take a four-bar power chord riff (E, C, D, E). Above it write a melody and a second voice in thirds. In bar 3 replace the thirds with sixths, in bar 4 with contrary motion (one voice up, one down). Record all three layers.",
+      "checklist": [
+        "Three layers notated, bars 3 and 4 changed?",
+        "Recording with an audible second voice?"
+      ]
+    },
+    "tu2-4": {
+      "title": "Voice leading: common tone, shortest path",
+      "goal": "Think of chord changes as motion of individual voices; apply the two basic rules.",
+      "text": "A chord change is not a change of shape but three or four voices that each move or stay individually. Rule 1: common tones stay. Rule 2: the other voices take the shortest path, usually a semitone or whole tone. Rule 3 (Baroque): avoid two voices moving in parallel octaves or fifths when they are meant to be heard as independent. In a riff rule 3 does not apply: power chords are deliberate parallel fifths.\n\nEm → C: E and G stay, B moves to C. Em → Am: E stays, G → A, B → C. Em → D: no common tone, everything shifts a step: E → D or F#, G → F#, B → A. Em → B7: B stays, E → D#, G → F# or A. This produces voicings in which the top voice almost stands still while the bass leaps. That is exactly what you hear in Type O Negative's organ and in Anathema's pad: the bass makes the motion, on top one tone changes (verify).\n\nVivaldi and Biber are the teachers: in the continuo the harpsichordist voices by these rules, and the string parts are set so that every voice remains singable. Singable is the criterion: can you sing every voice of your voicing on its own? Then the voice leading is good.\n\nOn guitar voice leading often means leaving one finger down and moving two. On keyboard it means not shifting the right hand but individual fingers."
+    },
+    "te2-4-1": {
+      "title": "Listen · Voice leading: common tone, shortest path",
+      "instructions": "Type O Negative, \"Red Water (Christmas Mourning)\", organ part in the chorus: follow only the top organ voice through four chord changes. How often does it move? How far? Claim: at most one step per change, often none (verify).",
+      "checklist": [
+        "Top voice traced through four changes and written?",
+        "Moves counted in semitones/whole tones?"
+      ]
+    },
+    "te2-4-2": {
+      "title": "Model · Voice leading: common tone, shortest path",
+      "instructions": "Eight chords with minimal voice leading in three upper voices. Draw a line for each voice through all eight bars and count the semitones of every move. Find the largest leap and explain why it is necessary (D has no common tone with Em). Play on the keyboard keeping fingers down where possible.",
+      "checklist": [
+        "Three voice lines drawn with semitone counts?",
+        "Largest leap found and justified?"
+      ]
+    },
+    "te2-4-3": {
+      "title": "Application · Voice leading: common tone, shortest path",
+      "instructions": "Write the progression Em–Am–D–G–C–B7–Em in three upper voices by the rules. Every voice must be singable alone. Then transfer it to guitar: which fingers stay down? Where does P4 force a different voicing? Notate both versions.",
+      "checklist": [
+        "Seven chords with singable voices notated?",
+        "Guitar version with held fingers marked?"
+      ]
+    },
+    "tu2-5": {
+      "title": "Voicing in low tunings: Type O Negative",
+      "goal": "Know how a low tuning changes register, voicing and arrangement.",
+      "text": "Type O Negative tune the guitar to B (B E A D F# B), a fourth below standard (verify). The lowest string sits at B1 ≈ 61.7 Hz. All shapes stay the same, all tones sound a fourth lower. An E shape sounds as B, an A shape as E. This matters to you because P4 is the same idea in the other direction: same geometry, different pitch space.\n\nWhat a low tuning forces: 1. Thirds move upward or disappear because the difference tones fall below 40 Hz and become mere pressure. 2. Chords widen: root on the lowest string, next tone at the earliest an octave above. 3. The bass can no longer sit below the guitar; it doubles it or goes lower still with an octaver. 4. The keyboards take over the register C4–C6 entirely because the guitar no longer reaches it.\n\n*October Rust* shows the result: the guitar is a low, wide carpet, often only root and fifth, widened with chorus. The organ has the thirds. The vocal sits low and is doubled an octave higher. The arrangement is a layer cake without overlap.\n\nFor P4 the reverse applies: your highest string is F4, you have more room on top than standard and the same below. Thirds are clean from the C string up. You do not need a low tuning; if you want one, the rule is: everything down by the same number of semitones, thirds up by the same number of strings."
+    },
+    "te2-5-1": {
+      "title": "Listen · Voicing in low tunings: Type O Negative",
+      "instructions": "Type O Negative, \"Haunted\": sort the registers: where is the guitar, the bass, the organ, the two vocal voices? Estimate the octave for each. Claim: guitar B1–B3, bass with sub-octave below, organ from C4, vocals around E2–E3 and E3–E4 (verify).",
+      "checklist": [
+        "Five registers estimated with octave numbers?",
+        "Overlaps found or ruled out?"
+      ]
+    },
+    "te2-5-2": {
+      "title": "Model · Voicing in low tunings: Type O Negative",
+      "instructions": "The layer cake in four bars: guitar only the fifth, low; organ with the third from G4; vocal line between (E4–D4). Nothing overlaps. Play the layers one after another on the keyboard. Then move the organ an octave lower (G3) and hear what happens to the third.",
+      "checklist": [
+        "Three layers played separately and together?",
+        "Effect of the lower organ third described?"
+      ]
+    },
+    "te2-5-3": {
+      "title": "Application · Voicing in low tunings: Type O Negative",
+      "instructions": "Plan an arrangement for your means: P4 guitar (state register), keyboard, optional bass. Assign every source a register that overlaps with no other, and decide who carries the third. Write four bars in which every source uses only its register, and record them layer by layer.",
+      "checklist": [
+        "Register plan without overlap written?",
+        "Third carrier decided and four bars recorded?"
+      ]
+    },
+    "tu2-6": {
+      "title": "Two-part writing: types of motion",
+      "goal": "Recognise and deliberately use parallel, oblique and contrary motion, as violin and guitar do in My Dying Bride.",
+      "text": "Two voices can move in four ways. Parallel: same direction, same interval (thirds, sixths). Similar: same direction, different interval. Oblique: one voice holds, the other moves (the pedal with melody from phase 1). Contrary: opposite directions. The mixture keeps two-part writing alive; pure parallels sound like one voice with an effect.\n\nConsonances between two voices: octave, fifth, third, sixth. Dissonances: second, seventh, tritone, and the fourth when formed against the bass. In the Baroque a dissonance is prepared (the tone was previously a consonance) and resolved stepwise downward. That is the suspension: 4–3 or 7–6 over a held bass. Vivaldi's Largo movements consist of chains of such suspensions. Doom bands do this intuitively: the violin in My Dying Bride holds a tone while the guitar changes beneath, and the held tone becomes dissonant for a bar before moving on (verify).\n\nBiber is the school for this: the two violins of *Harmonia artificioso-ariosa* constantly swap roles. The canons (one voice follows the other at a distance) show that the same melody can be consonant against itself when the types of motion are right.\n\nFor guitar alone: bass and melody are already two-part writing. Oblique motion (pedal) is the default, contrary motion (bass falls, melody rises) the climax."
+    },
+    "te2-6-1": {
+      "title": "Listen · Two-part writing: types of motion",
+      "instructions": "My Dying Bride, \"Black God\": piano and violin. In the first minute determine the type of motion between the violin and the piano top voice at four points. Find at least one held violin tone that becomes dissonant across a change. Claim: mostly oblique motion with one suspension per phrase (verify).",
+      "checklist": [
+        "Four points noted with type of motion?",
+        "One suspension (preparation, dissonance, resolution) located?"
+      ]
+    },
+    "te2-6-2": {
+      "title": "Model · Two-part writing: types of motion",
+      "instructions": "Four bars, four types of motion: bar 1 oblique over E, bar 2 parallel thirds, bar 3 contrary motion, bar 4 suspension: A held over E (fourth, dissonant) resolving to G (third). Name the interval for every pair of tones. Play bar 4 several times and hold the A longer until the dissonance is clear.",
+      "checklist": [
+        "All intervals of the four bars named?",
+        "Suspension played with prolonged dissonance?"
+      ]
+    },
+    "te2-6-3": {
+      "title": "Application · Two-part writing: types of motion",
+      "instructions": "Write eight bars for bass and melody (guitar alone or two hands): at least two bars of each type of motion and exactly one prepared suspension. Mark every bar with its type of motion. Play and check whether the contrary motion works as the climax.",
+      "checklist": [
+        "Four types of motion and one suspension marked?",
+        "Climax effect of contrary motion assessed?"
+      ]
+    },
+    "tu2-7": {
+      "title": "Chord symbols complete",
+      "goal": "Translate every common symbol into tones and back, including extensions, sus, add and slash chords.",
+      "text": "A symbol names root, third, fifth and additions. Reading order: root (C), type (nothing = major, m = minor, dim/° = diminished, aug/+ = augmented), seventh (7 = minor, maj7/Δ = major), extensions (9, 11, 13), alterations (b5, #5, b9, #9, #11, b13), additions (add9, add11), omissions (no3, no5), bass (/E).\n\nSeventh chords: C7 = C E G Bb (dominant seventh). Cmaj7 = C E G B. Cm7 = C Eb G Bb. Cm(maj7) = C Eb G B. Cdim7 = C Eb Gb Bbb (A). Cm7b5 = C Eb Gb Bb (half-diminished, ø). C6 = C E G A. Cm6 = C Eb G A.\n\nExtensions build on the seventh: C9 = C7 + D. C11 = C9 + F (the third is usually omitted because E rubs against F). C13 = C9 + A. Cmaj9 = Cmaj7 + D. Cm9, Cm11 likewise. Without a seventh the addition is called add: Cadd9 = C E G D. Cmadd9 = C Eb G D, a favourite sound of Anathema and many post-doom bands.\n\nsus replaces the third: Csus4 = C F G, Csus2 = C D G. Without a third the chord is neither major nor minor, like the power chord, but with tension. C5 = C G. Slash: C/E is C major with E in the bass (first inversion), C/G second inversion; Em/C is something else: an Em sound over C, in fact a Cmaj7 without root doubling. The bass decides.\n\nThe symbol fixes tones, not spacing, doubling or duration. Two players with the same symbol play different voicings. For your notation: symbols above the notes are commentary, the notes are the truth."
+    },
+    "te2-7-1": {
+      "title": "Listen · Chord symbols complete",
+      "instructions": "Anathema, \"Angelica\": the chord that opens the chorus. Does it contain a ninth (add9)? A sus tone? Sing all the tones you hear and write the symbol. Compare with Type O Negative, \"Be My Druidess\", organ chord in the chorus: seventh audible? Claim: Anathema madd9, Type O plain triads (verify).",
+      "checklist": [
+        "Symbol written for both chords?",
+        "All heard tones sung individually?"
+      ]
+    },
+    "te2-7-2": {
+      "title": "Model · Chord symbols complete",
+      "instructions": "Eight symbols, eight voicings. Cover the symbols, listen to each bar and write all tones. Derive the symbol. Bars 5 and 7 have the same upper voices over C: why is one called Cmaj7 and the other Em/C? Bar 8: B7b9 contains C, the b9; name where C and D# want to go.",
+      "checklist": [
+        "Eight symbols derived from the tones?",
+        "Cmaj7/Em/C question and b9 resolution answered?"
+      ]
+    },
+    "te2-7-3": {
+      "title": "Application · Chord symbols complete",
+      "instructions": "Write a table of all symbol types from the text with tones over E, A and D (one column per root). Play every chord over A on the keyboard in open spacing. Choose four that suit your sound and write an eight-bar progression with symbols above the notes.",
+      "checklist": [
+        "Table complete for three roots?",
+        "Eight-bar progression with symbols and written-out notes?"
+      ]
+    },
+    "t3": {
+      "title": "Bass and motion",
+      "goal": "Lamento, circle of fifths, ostinato and ritornello. The bass as foundation or countervoice, its register, and the language of drums."
+    },
+    "tu3-1": {
+      "title": "The lamento bass: from Baroque to doom",
+      "goal": "Know the descending tetrachord as the model shared by all five references.",
+      "text": "The lamento bass is a descending path from the root to the fifth: diatonic E–D–C–B or chromatic E–Eb–D–Db–C–B. In the 17th century it was the fixed formula for lament (Monteverdi, Purcell's \"Dido's Lament\"). Vivaldi uses it in slow movements, Biber in ciaccone as a repeated bass model.\n\nWhy it works: every step is small, the direction is unambiguous, and the goal (the fifth B) is the dominant, the point of greatest expectation. A different chord can be built over each bass tone: Em, D (or Bm/D), C, B. The melody can hold (E over all four) or rise in contrary motion. The bass does the work; the upper voice may be simple.\n\nDoom did not quote the lamento bass; it rediscovered it: Em–D–C–B is the progression of countless slow riffs, mostly as power chords. My Dying Bride use it diatonically, often with the violin as a held voice (verify). Type O Negative prefer the chromatic version in the organ (verify). Anathema take the first step (E–D) and linger.\n\nThe reverse, the ascending tetrachord B–C–D–E, is the arrival after the descent. Together they form an eight-bar model: four bars down, four up. That is already a complete form."
+    },
+    "te3-1-1": {
+      "title": "Listen · The lamento bass: from Baroque to doom",
+      "instructions": "My Dying Bride, \"The Crown of Sympathy\": find a section in which the bass descends in four steps. Write the four tones and decide whether it is diatonic or chromatic. Do you hear a held voice above? Claim: diatonic lamento with sustained violin (verify). Then Vivaldi, *Winter*, movement 2: the bass of the Largo in its first four bars.",
+      "checklist": [
+        "Four bass tones in MDB written, diatonic/chromatic decided?",
+        "Bass of the Vivaldi Largo written and compared?"
+      ]
+    },
+    "te3-1-2": {
+      "title": "Model · The lamento bass: from Baroque to doom",
+      "instructions": "Bars 1–4 diatonic lamento with thirds above. Bars 5–10 chromatic version; the upper voices fall in parallel sixths, one semitone per step. Bars 11–12 arrival on Em. Play both versions and name above each bar the chord the bass forms with the two upper voices. Which version creates more expectation before bar 11?",
+      "checklist": [
+        "Chords of both versions named?",
+        "Expectation comparison logged?"
+      ]
+    },
+    "te3-1-3": {
+      "title": "Application · The lamento bass: from Baroque to doom",
+      "instructions": "Write eight bars: four bars of lamento descending (diatonic or chromatic, your choice), four bars of the ascending tetrachord B–C–D–E. Above it a melody that holds (E) during the descent and falls in contrary motion during the ascent. Play with half-time drums and record.",
+      "checklist": [
+        "Descent and ascent notated with matching melodic motion?",
+        "Recording with drums?"
+      ]
+    },
+    "tu3-2": {
+      "title": "Circle of fifths and sequence models",
+      "goal": "Understand the circle-of-fifths sequence and its variants as the engine of Baroque harmony and use it as riff material.",
+      "text": "The circle-of-fifths sequence strings roots in falling fifths (or rising fourths): E–A–D–G–C–F#–B–E. In E Aeolian this yields Em–Am–D–G–C–F#dim–B(m)–Em. Each chord is the \"dominant\" of the next in terms of bass motion, even when it is minor. That is why the sequence creates pull without needing a leading tone. With a leading tone (B instead of Bm at the end) the tonal arrival is added.\n\nVivaldi builds whole ritornelli from falling fifths, often with seventh chords: each chord has a seventh that falls into the third of the next. That is the chain of sevenths (phase 4). In Summer, movement 3, and Winter, movement 1, you hear it as the engine of the storms (verify). In Biber falling fifths appear in the dance movements, often with sequences of the upper voice above.\n\nOther sequence models: falling thirds (E–C–A–F#: each chord shares two tones with the next, very soft), falling seconds (the lamento), rising fifths (the reverse, builds instead of releasing). A sequence also transposes a motif of the upper voice stepwise; bass and upper voice move as a pattern.\n\nIn doom the circle of fifths is rarely complete; two links suffice: Em–Am, Am–D, D–G. Type O Negative do have passages that run through four links, mostly in choruses, and there it immediately sounds \"classical\" (verify). Rule: the more links, the stronger the pull, the less modal."
+    },
+    "te3-2-1": {
+      "title": "Listen · Circle of fifths and sequence models",
+      "instructions": "Vivaldi, *Summer*, movement 3 (Presto): find a spot where the bass roots fall in fifths and write at least four links. Then Type O Negative, \"My Girlfriend's Girlfriend\", chorus: write the roots. Claim: Vivaldi runs through six or more links, Type O at most three (verify).",
+      "checklist": [
+        "At least four falling-fifth links in Vivaldi written?",
+        "Roots of the Type O chorus classified as sequence or non-sequence?"
+      ]
+    },
+    "te3-2-2": {
+      "title": "Model · Circle of fifths and sequence models",
+      "instructions": "Complete circle of fifths through E Aeolian with a leading tone at the end (B instead of Bm). The upper voice is a sequence: the same three-tone motif (5–3–1 of each chord) falls with the bass. Mark where the motif changes its semitone spacing because of the scale. Play only the bass and sing the sequence. Replace D# in bar 7 with D and hear the arrival vanish.",
+      "checklist": [
+        "Semitone changes of the motif marked?",
+        "Bass played, sequence sung, D#/D compared?"
+      ]
+    },
+    "te3-2-3": {
+      "title": "Application · Circle of fifths and sequence models",
+      "instructions": "Write three four-bar riffs with the same motif: one over falling fifths (Em–Am–D–G), one over falling thirds (Em–C–Am–F#dim), one over rising fifths (Em–Bm–F#dim–C). Play all three and describe the direction of tension (building, releasing, floating). Choose one for a doom riff and justify.",
+      "checklist": [
+        "Three sequence models notated with the same motif?",
+        "Tension direction described per model, choice justified?"
+      ]
+    },
+    "tu3-3": {
+      "title": "Ostinato and ritornello",
+      "goal": "Understand repetition as a form principle: the repeated bass model (Biber) and the returning tutti (Vivaldi) versus the riff.",
+      "text": "An ostinato is a pattern that repeats unchanged while something above it changes. The ciacona in Biber is the purest form: a four- or eight-bar bass model with endless variations above. Listeners know the bass after the second pass and only hear what is new. The riff is the same principle: a doom riff repeats and vocals, violin or lead guitar vary above it.\n\nThe ritornello (Vivaldi) is the other repetition: a tutti section that returns between solo episodes, often shortened or in another key. The form of a Vivaldi movement: R – solo – R′ – solo – R″ – solo – R. The return is recognition; the episodes are the journey. Transferred to rock: chorus and verse, except that Vivaldi's chorus is a little different every time.\n\nBoth principles answer the same question: how long may something stay the same? Ostinato: very long, if something moves above it. Ritornello: only briefly, but often. My Dying Bride combine both: a riff runs eight to sixteen times (ostinato), and a section returns after a long absence (ritornello). The effect of return after ten minutes is the strongest weapon of long forms.\n\nRules: an ostinato needs a layer of variation above it, otherwise it becomes stasis. A ritornello needs contrast between its appearances, otherwise it is mere repetition. Both need a plan for when they end."
+    },
+    "te3-3-1": {
+      "title": "Listen · Ostinato and ritornello",
+      "instructions": "Biber, Partita III (or another with a ciacona): count the bars of the bass model and how often it repeats. Write the bass tones. Then Vivaldi, *Spring*, movement 1: count the ritornello entries and note which are shortened. Claim: Biber's bass repeats over 20 times, Vivaldi's ritornello appears five times (verify).",
+      "checklist": [
+        "Bass model written and repetitions counted?",
+        "Ritornello entries noted with lengths?"
+      ]
+    },
+    "te3-3-2": {
+      "title": "Model · Ostinato and ritornello",
+      "instructions": "A ciacona model in 3/4: four-bar bass E–B–C–B in quarters, chords as middle voice, a variation above on the second pass. Play bass and chords in a loop and invent a new upper voice on every pass without changing the bass. Count how many passes you can fill before you run out of ideas.",
+      "checklist": [
+        "At least four passes played with different upper voices?",
+        "Bass unchanged in all passes?"
+      ]
+    },
+    "te3-3-3": {
+      "title": "Application · Ostinato and ritornello",
+      "instructions": "Write a form with a ritornello: four bars R (riff with chords), eight bars episode (bass and melody only, different centre), R shortened to two bars, eight bars episode, R complete. Write the bar counts as a plan, then the notes. Play the form and check whether the shortened R is recognisable as a return.",
+      "checklist": [
+        "Form plan with bar counts and complete notes?",
+        "Recognisability of the shortened ritornello assessed?"
+      ]
+    },
+    "tu3-4": {
+      "title": "Bass: foundation or countervoice",
+      "goal": "Distinguish the three bass roles and know when the bass doubles the riff, carries the chord or is itself a melody.",
+      "text": "The bass has three possible roles. 1. Doubling: it plays the guitar riff an octave lower. Result: pressure, unity, no extra information. Standard in doom (My Dying Bride, mostly). 2. Foundation: it plays roots in long values while the guitar plays chords or figures. Result: calm, room for motion above. Standard in Anathema and in every Baroque continuo. 3. Countervoice: it has its own line moving independently, with passing tones, leaps and rhythm. Result: two-part writing, density. Peter Steele in Type O Negative alternates between 2 and 3, often in the same piece, and there his bass is the actual melody (verify).\n\nThe Baroque continuo is the source of all three: the cellist plays the bass line, which is at once foundation (roots on the strong beats) and countervoice (passing tones between). The figures tell the harpsichordist which chords belong above. The bass is the score; everything else is execution.\n\nFor you without a bassist: the guitar alone has to choose the role. Open strings give foundation (role 2). A moving bass on the low string with melody above is role 3 and the hardest thing the instrument course demands. Role 1 is impossible in solo playing and is hinted at by the octave in the power chord.\n\nRule: the bass changes less often than the melody (role 2) or as often (role 3), never more often. When the bass is busier than the upper voice, the register tips over."
+    },
+    "te3-4-1": {
+      "title": "Listen · Bass: foundation or countervoice",
+      "instructions": "Type O Negative, \"Love You to Death\" and \"In Praise of Bacchus\": for two sections each determine the bass role (1, 2 or 3). Sing the bass line at a role-3 spot. Compare with Anathema, \"Suicide Veil\": one role throughout? Claim: Steele switches within a piece, Anathema stay in role 2 (verify).",
+      "checklist": [
+        "Four sections classified by bass role?",
+        "One role-3 line sung back?"
+      ]
+    },
+    "te3-4-2": {
+      "title": "Model · Bass: foundation or countervoice",
+      "instructions": "Bars 1–2: bass doubles the melody (role 1). Bars 3–4: bass holds roots under chords (role 2). Bars 5–8: bass moves as its own line with passing tones against a calm upper voice (role 3). Play all three and describe which role leaves the most room for the melody and which gives the most pressure.",
+      "checklist": [
+        "Three roles played and distinguished?",
+        "Room and pressure effects named?"
+      ]
+    },
+    "te3-4-3": {
+      "title": "Application · Bass: foundation or countervoice",
+      "instructions": "Write twelve bars for guitar alone: four bars role 2 (open bass, melody above), four bars role 3 (moving bass on the low string, melody holds), four bars return to role 2. Notate both voices. The bass line in role 3 must be singable on its own.",
+      "checklist": [
+        "Twelve bars with role change notated?",
+        "Bass line in role 3 sung on its own?"
+      ]
+    },
+    "tu3-5": {
+      "title": "Bass register and frequency space",
+      "goal": "Know where bass, kick, guitar and keyboard sit in frequency space and recognise overlap as the cause of mud.",
+      "text": "Frequency ranges for orientation: sub-bass 20–60 Hz (kick fundamental, octaver, B0–B1). Bass 60–250 Hz (E1 to B3, the foundation). Low mids 250–500 Hz (the area where guitar chords and bass overtones collide). Mids 500–2000 Hz (vocals, guitar presence, violin). Highs from 2 kHz (attack, hi-hat, air).\n\nA tone is not only its fundamental. E2 (82 Hz) has overtones at 165, 247, 330, 412 Hz and beyond. A distorted E5 power chord fills the range 80–2000 Hz almost completely. When the bass plays the same, the same overtones are added, only louder. That is doubling (role 1) and sounds like a wall. When guitar and bass sit in different registers instead, there is room for keyboards and vocals.\n\nThe doom sound lives on one decision: who owns 80–250 Hz? In My Dying Bride the guitar, the bass doubles. In Type O Negative the bass with sub-octave; the guitar is tuned low but with chorus and fewer lows. In Anathema the guitar, the bass sits beneath and is slim. All three work; none lets two instruments be equally strong in that range.\n\nFor you: guitar alone owns everything. With keyboard added: keyboard not below C3 unless the guitar is silent. With drums: kick around 50–80 Hz, i.e. below the low E; snare around 200 Hz and 2–4 kHz. The kick shares space with the bass, not with the guitar."
+    },
+    "te3-5-1": {
+      "title": "Listen · Bass register and frequency space",
+      "instructions": "Listen to 30 seconds of riff each from \"Your River\" (MDB), \"Wolf Moon\" (Type O), \"Sentient\" (Anathema) on the same headphones. Answer for each: who owns 80–250 Hz? Is the kick below or above the bass? Claim: three different answers to the first question (verify).",
+      "checklist": [
+        "Owner of the bass range named for all three?",
+        "Kick position relative to the bass determined?"
+      ]
+    },
+    "te3-5-2": {
+      "title": "Model · Bass register and frequency space",
+      "instructions": "Frequency spaces as a score: bass/kick around E2 (60–90 Hz), guitar fifth E3–B3 (165–250 Hz), keyboard from G4 (392 Hz). Play the layers one after another on the keyboard, then together. Move the guitar fifth to E2–B2 and hear the collision with the bass. Compute the fundamental of every tone.",
+      "checklist": [
+        "Fundamentals of all tones computed?",
+        "Collision with the shifted guitar fifth heard?"
+      ]
+    },
+    "te3-5-3": {
+      "title": "Application · Bass register and frequency space",
+      "instructions": "Record a four-bar riff three times: guitar alone, guitar plus keyboard pad from C3, guitar plus keyboard pad from C4. At equal loudness judge which version is clearest. Formulate your register rule for keyboard over guitar.",
+      "checklist": [
+        "Three versions compared at equal loudness?",
+        "Register rule logged?"
+      ]
+    },
+    "tu3-6": {
+      "title": "Drums I: pulse, backbeat, half-time, hi-hat",
+      "goal": "Read the grammar of a drum pattern: what kick, snare and hi-hat each say.",
+      "text": "A drum pattern has three levels. The hi-hat (or ride) gives the subdivision: quarters, eighths or sixteenths. It is the grid everything else hangs on. The snare gives the backbeat: in 4/4 on 2 and 4 (straight) or only on 3 (half-time). The kick gives the foundation and links to the bass: on 1 and 3 or on 1 alone, plus syncopations doubling the bass rhythm.\n\nHalf-time is the doom standard: at ♩ = 60 with snare on 3 the bar feels like ♩ = 30 in half notes. The same riff with snare on 2 and 4 sounds twice as fast although the tempo is the same. The snare defines the felt speed; the tempo only defines the hi-hat.\n\nHi-hat language: closed = dry, grid; open = accent, sustain; half open = noise, pad. A pattern with the hi-hat in quarters lets the riff breathe; one in eighths drives; sixteenths fill. Doom needs air: quarters or eighths, open only on the last beat before the 1.\n\nDynamics: the kick on 1 is louder than the one on 3. The hi-hat on the beats is louder than in between (accent structure). Without this weighting every pattern sounds like a machine. In Type O Negative many drums are programmed and deliberately weighted for exactly that reason (verify). In My Dying Bride a human plays, and the half-time snare often lands minimally late, which increases the weight (verify).\n\nDevice-neutral: every pattern is a grid of steps (16 per bar at sixteenths), one instrument with velocity per step. Whether SR-18, Digitakt or SP-404: grid, instrument, velocity, swing."
+    },
+    "te3-6-1": {
+      "title": "Listen · Drums I: pulse, backbeat, half-time, hi-hat",
+      "instructions": "My Dying Bride, \"Your River\", first riff with drums: determine hi-hat subdivision, snare position (2+4 or 3) and kick pattern. Write the pattern as a 16-step grid. Then Type O Negative, \"Green Man\": the same. Claim: MDB half-time with quarter hi-hat, Type O straight with eighth hi-hat (verify).",
+      "checklist": [
+        "Two patterns written as 16-step grids?",
+        "Snare position of both pieces determined?"
+      ]
+    },
+    "te3-6-2": {
+      "title": "Model · Drums I: pulse, backbeat, half-time, hi-hat",
+      "instructions": "Drums as notes: top hi-hat (B4), middle snare (E4), bottom kick (E2). Bars 1–2 half-time: hi-hat in quarters, snare on 3, kick on 1 with a syncopation. Bars 3–4 straight: hi-hat in eighths, snare on 2 and 4, kick on 1 and 3. Tap both with two hands and one foot. Switch between the half-time accompaniment (preset) and your own counting and hear the felt halving of tempo.",
+      "checklist": [
+        "Both patterns tapped with hands and foot?",
+        "Felt halving of tempo at the same click confirmed?"
+      ]
+    },
+    "te3-6-3": {
+      "title": "Application · Drums I: pulse, backbeat, half-time, hi-hat",
+      "instructions": "Write three 16-step grids for your phase-1 riff: half-time with quarter hi-hat, half-time with eighth hi-hat, straight with eighth hi-hat. Enter velocities (three levels). Program them on an available device or tap them on your thighs to the riff and decide which grid carries the riff best.",
+      "checklist": [
+        "Three grids with velocities written?",
+        "Choice with reason logged?"
+      ]
+    },
+    "tu3-7": {
+      "title": "Drums II: doom drumming, fills as form, building patterns",
+      "goal": "Understand fills, crashes and pattern changes as form signals and build a pattern device-neutrally.",
+      "text": "In slow music the drums are less an engine than an architect. They mark form boundaries: a fill in the last bar before a section, a crash on the 1 of the new section, a pattern change (half-time → straight) at the transition from verse to chorus. Without these signals the listener does not hear the form; with them the harmony has less to do.\n\nDoom drumming: tempo 50–80, half-time, kick tied to the bass rhythm, toms instead of snare for transitions, crash with long decay, ride instead of hi-hat in open sections. The rests are long; one hit every two seconds is normal. So every hit has to sit. In My Dying Bride the fills are often only two or three tom hits; at this tempo that suffices (verify). Type O Negative work with machine-like identical patterns and set form boundaries by dropping out: one bar without drums before the chorus (verify).\n\nThe Baroque has no drum kit but the same function: the continuo marks cadences by thickening (more chord strokes) and the ritornelli by tutti entry. Vivaldi's storms are drum music without drums: sixteenth-note tremolo in the bass is the double kick of the 18th century.\n\nBuilding a pattern, device-neutral: 1. Choose the grid (16 steps per bar, twelve in 12/8). 2. Put the hi-hat on the grid (every second or fourth step). 3. Snare on step 9 (half-time) or 5 and 13 (straight). 4. Kick on 1 and on the steps where the bass attacks. 5. Velocity: hits on 1 and 9 strong, others medium, in-between hits soft. 6. Fill: last bar before a form boundary, drop the hi-hat, toms on steps 13–16. 7. Swing only if the riff is ternary (phase 5)."
+    },
+    "te3-7-1": {
+      "title": "Listen · Drums II: doom drumming, fills as form, building patterns",
+      "instructions": "My Dying Bride, \"The Songless Bird\": mark every form boundary and note which drum signal announces it (fill, crash, pattern change, dropout). Then Type O Negative, \"Be My Druidess\": the same. Claim: MDB signal with tom fills, Type O with dropouts and crashes (verify).",
+      "checklist": [
+        "All form boundaries of both pieces noted with drum signal?",
+        "Signal types counted and compared?"
+      ]
+    },
+    "te3-7-2": {
+      "title": "Model · Drums II: doom drumming, fills as form, building patterns",
+      "instructions": "Six bars: three bars of half-time pattern, one fill bar (hi-hat off, toms as G4/E4 eighths on 3 and 4), then a change to the straight pattern with eighth hi-hat as a new section. Tap the form along. Write the fill as a 16-step grid with velocities. Then build the same on a device or with your voice and check whether the change after the fill reads as a new section.",
+      "checklist": [
+        "Fill written as a grid with velocities?",
+        "Section change after the fill audible?"
+      ]
+    },
+    "te3-7-3": {
+      "title": "Application · Drums II: doom drumming, fills as form, building patterns",
+      "instructions": "Take the 16-bar form from your instrument course (phase 8, A–A′–B–A). Write a drum plan: pattern per section, signal at every boundary, velocity contour. As grids, device-neutral. Program it on a device of your choice or tap it to the recording. Check whether a listener could recognise the four sections without harmony.",
+      "checklist": [
+        "Drum plan with pattern, signals and velocities per section?",
+        "Form recognisability without harmony assessed?"
+      ]
+    },
+    "t4": {
+      "title": "Functional harmony",
+      "goal": "Harmonic and melodic minor, cadence types, seventh chords, dim7, secondary dominants, modulation, Baroque formulas and the question of when doom avoids function."
+    },
+    "tu4-1": {
+      "title": "Harmonic and melodic minor",
+      "goal": "Know the three minor forms as tools for dominant and melodic motion, not as scales to memorise.",
+      "text": "Natural minor (Aeolian) has no leading tone; the chord on 5 is minor (Bm in E minor). To get a dominant you raise the 7: D → D#. That yields harmonic minor: E F# G A B C D#. The step C–D# is an augmented second (three semitones), melodically awkward, harmonically useful. The chord on 5 becomes major (B), on 7 diminished (D#dim), on 3 augmented (G+).\n\nMelodic minor also raises the 6 to avoid the augmented second: E F# G A B C# D#, ascending. Descending you traditionally fall back to natural minor because the leading-tone tension is only needed upward. In practice: before a cadence ascend with C# and D#, afterwards descend with D and C.\n\nVivaldi works in minor almost always this way: melodies rise melodic, fall natural, and the cadence always has the leading tone. Winter (F minor) is a textbook: hear the alternation between Eb and E in the solo violin depending on direction (verify).\n\nDoom uses harmonic minor almost only in one place: the ending. The leading tone appears when a section is really meant to end, and otherwise not. Type O Negative occasionally have the dominant with leading tone in choruses (verify); My Dying Bride occasionally use the augmented second in the violin as an \"oriental\" colour (verify). Rule: harmonic minor for chords, melodic minor for melody, natural minor for everything else."
+    },
+    "te4-1-1": {
+      "title": "Listen · Harmonic and melodic minor",
+      "instructions": "Vivaldi, *Winter*, movement 1: follow the solo violin in one ascending and one descending passage. Do you hear the difference between raised and natural 6 and 7? Then My Dying Bride, \"Turn Loose the Swans\": can you find an augmented second in the violin? Claim: Vivaldi switches by direction, MDB use the augmented second as colour (verify).",
+      "checklist": [
+        "Direction-dependent 6/7 heard in Vivaldi?",
+        "Augmented second in MDB found or ruled out?"
+      ]
+    },
+    "te4-1-2": {
+      "title": "Model · Harmonic and melodic minor",
+      "instructions": "Three minor forms up and down, then an application: bars 7–8 rise melodic (C#, D#) into the cadence and fall natural (D, C) afterwards. Sing every form. Play bar 3 (harmonic) and hear the augmented second C–D#. Replace the D in bar 8 with D# and hear why the descent with D sounds more natural.",
+      "checklist": [
+        "Three forms sung, augmented second located?",
+        "D/D# in the descent compared?"
+      ]
+    },
+    "te4-1-3": {
+      "title": "Application · Harmonic and melodic minor",
+      "instructions": "Write eight bars of melody over Em–Am–B7–Em (two bars each) applying the rule: ascend before B7 with C# and D#, descend after Em with D and C. Mark every raised tone. Play the melody over the chords on the keyboard, then the melody alone on guitar.",
+      "checklist": [
+        "Raised tones only ascending before the dominant?",
+        "Melody played on both instruments?"
+      ]
+    },
+    "tu4-2": {
+      "title": "Dominant, leading tone, cadence types",
+      "goal": "Hear and write the four cadence types; know which appears in which reference.",
+      "text": "A cadence is a harmonic close. Four types: authentic: V → I (B7 → Em). Perfect when both are in root position and the melody ends on the root; otherwise imperfect. Plagal: IV → I (Am → Em), the \"amen\" close, without leading tone, soft. Half cadence: ends on V (… → B7), open, demands continuation. Deceptive: V → VI (B7 → C), the dominant resolves to the wrong chord, surprise and extension.\n\nThe dominant works through two tones: leading tone (D#) up to E, seventh (A) down to G. Together a tritone. Without the seventh B major is a weaker dominant; without the leading tone (Bm) none at all. The subdominant (Am) prepares: it contains C, which falls to B, and A, which stays and becomes the seventh of B7. Am–B7–Em is therefore the complete formula: preparation, tension, release.\n\nVivaldi: almost every phrase ends authentically, section boundaries often with a deceptive cadence in order to continue (verify). Biber: dance movements authentic, half cadence in the middle of each part. Type O Negative: plagal and authentic in choruses, the Beatles share (verify). My Dying Bride: almost only plagal or no cadence at all; sections end by stopping, not by resolving (verify). Anathema: half cadences never resolved, as a state of suspension.\n\nThe choice of cadence type is the most important decision at a section ending. Authentic closes, plagal calms, half cadence opens, deceptive extends."
+    },
+    "te4-2-1": {
+      "title": "Listen · Dominant, leading tone, cadence types",
+      "instructions": "Find one section ending each in: Vivaldi, *Autumn*, movement 1; Type O Negative, \"Love You to Death\"; My Dying Bride, \"Your River\"; Anathema, \"Far Away\". Determine the cadence type or \"no cadence\". Claim: four different answers (verify).",
+      "checklist": [
+        "Four endings classified?",
+        "Leading tone and seventh heard or marked as absent each time?"
+      ]
+    },
+    "te4-2-2": {
+      "title": "Model · Dominant, leading tone, cadence types",
+      "instructions": "Four cadences: bars 1–3 authentic (Am–B7–Em), bars 4–5 plagal (Am–Em), bars 6–7 half cadence (Am–B7, open), bars 8–10 deceptive and afterthought (B7–C–Em). Play each and pause after the last chord: is the close complete? Trace D# and A in bar 2 and bar 8: where does each go?",
+      "checklist": [
+        "Four cadence types played and completeness assessed?",
+        "Path of D# and A in the deceptive cadence named?"
+      ]
+    },
+    "te4-2-3": {
+      "title": "Application · Dominant, leading tone, cadence types",
+      "instructions": "Write a sixteen-bar form with four groups of four whose endings are, in order, half cadence, deceptive, plagal, authentic. Write out melody and bass. Play and judge whether the order forms an arc (open → extended → calmed → closed).",
+      "checklist": [
+        "Four cadence types notated in the given order?",
+        "Arc effect assessed in the log?"
+      ]
+    },
+    "tu4-3": {
+      "title": "Seventh chords and the chain of sevenths",
+      "goal": "Build all seventh chord types of the minor key and play the Baroque chain of sevenths over the circle of fifths.",
+      "text": "The seventh turns a triad into a direction. It is a dissonance against the root and wants to fall stepwise. Types in E Aeolian on every degree: Em7 (i), F#m7b5 (iiø), Gmaj7 (III), Am7 (iv), Bm7 (v), Cmaj7 (VI), D7 (VII). With harmonic minor: B7 (V7) and D#dim7 (vii°7). With melodic minor also C#m7b5 and Gmaj7#5.\n\nFive types by construction: dominant seventh (major + minor seventh: B7, D7), major seventh (major + major seventh: Cmaj7, Gmaj7), minor seventh (minor + minor seventh: Em7, Am7), half-diminished (diminished + minor seventh: F#m7b5), fully diminished (diminished + diminished seventh: D#dim7). The character runs from striving (dominant seventh) via soft (maj7, m7) to unstable (ø, °7).\n\nThe chain of sevenths: in the circle of fifths the seventh of each chord falls into the third of the next. Em7 (D) → Am7 (C is the third, D falls to C), Am7 (G) → D7 (F#), D7 (C) → Gmaj7 (B), Gmaj7 (F#) → Cmaj7 (E), Cmaj7 (B) → F#m7b5 (A), F#m7b5 (E) → B7 (D#), B7 (A) → Em (G). Two voices alternate: one holds, one falls. That is Vivaldi's sequence engine and the basis of every Baroque modulation.\n\nIn doom sevenths are rare because they create direction. Where they occur they are mostly m7 and maj7 as colour without resolution: Anathema set Em7 and Cmaj7 as pads (verify), Type O Negative use dominant sevenths only at closes (verify). The chain of sevenths itself belongs to the Baroque; as a riff it would be too tonal."
+    },
+    "te4-3-1": {
+      "title": "Listen · Seventh chords and the chain of sevenths",
+      "instructions": "Vivaldi, *Summer*, movement 1: find a sequence in which you hear a falling voice bar by bar (chain of sevenths). Write the falling tones. Then Anathema, \"Eternity Part III\": do you hear sevenths in the pads, and do they resolve? Claim: Vivaldi resolves every seventh, Anathema none (verify).",
+      "checklist": [
+        "Falling voice in Vivaldi written over at least four chords?",
+        "Resolution behaviour in Anathema described?"
+      ]
+    },
+    "te4-3-2": {
+      "title": "Model · Seventh chords and the chain of sevenths",
+      "instructions": "Chain of sevenths through E minor. In the two main voices (stems up) one holds while the other falls a step: the seventh becomes the third of the next chord. Trace both lines and mark every seventh. Play only bass and the two main voices, then with the third voice. Name the type of every seventh chord.",
+      "checklist": [
+        "All sevenths marked and their fall traced?",
+        "Seven chord types named?"
+      ]
+    },
+    "te4-3-3": {
+      "title": "Application · Seventh chords and the chain of sevenths",
+      "instructions": "Write two four-bar examples: one with sevenths that resolve (chain of sevenths over Am–D7–Gmaj7–Cmaj7), one with sevenths as colour without resolution (Em7–Cmaj7 as pads, seventh stays). Play both. Decide which belongs in a doom context and which sounds Baroque, and justify with the voice leading.",
+      "checklist": [
+        "Both examples notated, sevenths marked?",
+        "Assignment with voice-leading reasoning logged?"
+      ]
+    },
+    "tu4-4": {
+      "title": "The diminished seventh chord and its ambiguity",
+      "goal": "Understand dim7 as a symmetrical chord with four resolutions and use it as a switch between keys.",
+      "text": "D#dim7 = D# F# A C: three minor thirds. The chord divides the octave into four equal parts. Therefore every inversion is again a dim7 in root position: F#dim7, Adim7, Cdim7 contain the same tones. There are only three different dim7 chords in total.\n\nEach of the four tones can be a leading tone and resolve a semitone upward: D# → E (Em), F# → G (Gm), A → Bb (Bbm), C → Db (Dbm). One dim7 can therefore land in four keys, each a minor third apart. That is the classic modulation switch: enter as vii°7 of the old key, exit as vii°7 of the new.\n\nAs dominant substitute: D#dim7 → Em corresponds to B7b9 without root (B D# F# A C). The sound is sharper than B7 because the tritone is present twice (D#–A and F#–C). In the Baroque the dim7 is the chord for terror and storm: Vivaldi sets it in the thunderstorms, often as tremolo (verify). In doom it appears as a bass passing tone (E–D#–D, phase 3) and in Type O Negative's organ pads as \"church sound\" (verify). My Dying Bride use it in the violin over a held bass as a tension tone (verify).\n\nPractical: a dim7 over its own root (Edim7 = E G Bb Db) is something different from the leading-tone dim7 (D#dim7). The first is a colour over E, the second a dominant into E. Confusing them leads to wrong symbols."
+    },
+    "te4-4-1": {
+      "title": "Listen · The diminished seventh chord and its ambiguity",
+      "instructions": "Vivaldi, *Summer*, movement 3 (storm): find a chord that sounds \"stacked\" and directionless before it resolves. Sing its tones: are they all minor thirds? Then Type O Negative, \"Red Water (Christmas Mourning)\", organ: is there such a chord? Claim: Vivaldi yes, as tremolo; Type O yes, in passing (verify).",
+      "checklist": [
+        "dim7 in Vivaldi confirmed by singing the thirds?",
+        "dim7 in Type O found or ruled out?"
+      ]
+    },
+    "te4-4-2": {
+      "title": "Model · The diminished seventh chord and its ambiguity",
+      "instructions": "The same dim7 (D# F# A C) resolves four times into four keys: Em, Gm, Bbm, Dbm. Each time the bass takes a different chord tone as the leading tone. Play the four resolutions and name for each which tone is the leading tone and where the other three go. Count the semitones between the four target keys.",
+      "checklist": [
+        "Four resolutions named with leading tone and voice paths?",
+        "Distance between target keys recognised as a minor third?"
+      ]
+    },
+    "te4-4-3": {
+      "title": "Application · The diminished seventh chord and its ambiguity",
+      "instructions": "Write eight bars that move from E minor to G minor via a dim7 and return via a second dim7. Notate every dim7 with both symbols (vii°7 of the old and the new key). Play the passage and judge whether the change reads as modulation or as a colour shift.",
+      "checklist": [
+        "Two dim7 chords notated with double naming?",
+        "Effect as modulation or colour assessed?"
+      ]
+    },
+    "tu4-5": {
+      "title": "Secondary dominants",
+      "goal": "Be able to make any chord of the key briefly the tonic without leaving the key.",
+      "text": "A secondary dominant is the dominant of a chord other than the tonic. In E minor: E7 → Am (V7/iv), A7 → D (V7/VII), D7 → G (V7/III), G7 → C (V7/VI), F#7 → B (V7/V). Each introduces a foreign tone (G# in E7, C# in A7; in G7 = G B D F the F is foreign; in F#7 = F# A# C# E the A# and C# are foreign). The foreign tone is the leading tone into the target chord.\n\nEffect: the target chord becomes the tonic for a moment without the key changing. Em–E7–Am: the G# in E7 turns the tonic into the dominant of the subdominant. That is a standard route in the Baroque and in the Beatles-adjacent side of Type O Negative (verify). Vivaldi strings secondary dominants in the circle of fifths: E7–A7–D7–G7–C, each chord the dominant of the next, the chain from phase 3 with dominant sevenths throughout.\n\nIn doom secondary dominants almost never occur because they bring major thirds and direction. The exception is V7/iv (E7 → Am): the change from Em to E major (phase 2 of the instrument course) is exactly that when Am follows. My Dying Bride occasionally use the major third as a surprise without the resolution to Am, i.e. as pure colour (verify).\n\nNotation: V7/iv reads \"five-seven of four\". The slash here means reference, not bass tone. Context decides whether Em/G (bass tone) or V/iv (reference) is meant; when in doubt write it out."
+    },
+    "te4-5-1": {
+      "title": "Listen · Secondary dominants",
+      "instructions": "Type O Negative, \"Love You to Death\", chorus: is there a major chord with a foreign tone that \"pulls\" into the next chord? Write it and its target. Then Vivaldi, *Autumn*, movement 3: find a run of three chords each the dominant of the next. Claim: Type O one secondary dominant per chorus, Vivaldi chains (verify).",
+      "checklist": [
+        "Secondary dominant in Type O written with target or ruled out?",
+        "Chain of three in Vivaldi written?"
+      ]
+    },
+    "te4-5-2": {
+      "title": "Model · Secondary dominants",
+      "instructions": "Three secondary dominants in one progression: E7 → Am (G#), D7 → G (F#, no foreign tone here, but seventh C), G7 → C (F). Then B7 → Em as the real dominant. Mark every foreign tone and its leading-tone path. Play the progression once with and once without the seventh chords (Em–Am–G–C–Em) and describe what the secondary dominants add.",
+      "checklist": [
+        "Foreign tones and leading-tone paths marked?",
+        "Version with and without secondary dominants compared?"
+      ]
+    },
+    "te4-5-3": {
+      "title": "Application · Secondary dominants",
+      "instructions": "Write an eight-bar riff in E minor containing exactly one secondary dominant (V7/iv or V7/VI) at a form boundary. The rest stays modal. Play it with power chords (roots only, the major third missing) and with full voicing. Judge whether the secondary dominant exists at all without the third.",
+      "checklist": [
+        "Exactly one secondary dominant at a form boundary?",
+        "Power-chord and voiced versions compared?"
+      ]
+    },
+    "tu4-6": {
+      "title": "Modulation: fifth-related and third-related",
+      "goal": "Know two routes into a new key and which is Baroque and which is doom-typical.",
+      "text": "Modulation means: a new centre is confirmed, usually by its own cadence. Two main routes.\n\nFifth-related (Baroque): the new key lies a fifth higher or lower and shares six of seven tones. E minor → B minor (one sharp more) or A minor (one less). Route: a shared chord (pivot), then the dominant of the new key. Am is iv in E minor and i in A minor; Am–E7–Am confirms A minor. Vivaldi modulates in every fast movement from the tonic to the dominant or to the relative key (minor → relative major: e → G) and back (verify). Biber likewise in every dance movement: the first part ends in the dominant, the second returns.\n\nThird-related (doom, Romanticism): the new key lies a minor or major third away and shares fewer tones; the change is a jolt. E → C (major third down, \"shift into width\"), E → G (minor third up, relative, soft), E → C# or Eb (foreign, hard). Type O Negative often change sections third-related without a pivot, simply through the bass: chorus a third higher than the verse (verify). My Dying Bride shift whole riffs by a minor third (verify), the metal variant of the sequence.\n\nChromatic mediant: E major → C major or E minor → C minor, same type, a third apart, two foreign tones. The sound is cinematic. Anathema use it rarely, Type O Negative occasionally in the organ (verify).\n\nRule: fifth-related for routes that are meant to lead back. Third-related for contrast that may be heard as a break."
+    },
+    "te4-6-1": {
+      "title": "Listen · Modulation: fifth-related and third-related",
+      "instructions": "Biber, Partita V, a two-part dance movement: determine the key at the end of the first part relative to the beginning (a fifth up? relative?). Then My Dying Bride, \"The Snow in My Hand\": is there a riff change where the same riff returns shifted by a third? Claim: Biber fifth-related, MDB third-related (verify).",
+      "checklist": [
+        "Target key of the first Biber part determined?",
+        "Third shift in MDB found or ruled out?"
+      ]
+    },
+    "te4-6-2": {
+      "title": "Model · Modulation: fifth-related and third-related",
+      "instructions": "Bars 1–4 fifth-related: Am as pivot, E7 as the new dominant, arrival in A minor. Bars 5–8 third-related: Em → C → G → Em without dominant, bass and common tones only. Play both halves and name where expectation arises (bar 3) and where the jolt is (bar 6). Which half could continue endlessly?",
+      "checklist": [
+        "Pivot and new dominant in bars 1–4 named?",
+        "Jolt point and endless-loop capability assessed?"
+      ]
+    },
+    "te4-6-3": {
+      "title": "Application · Modulation: fifth-related and third-related",
+      "instructions": "Write sixteen bars: eight in E minor, then a change to G minor (minor third, two foreign tones Bb and Eb) for four bars, then a return via a pivot or a dominant. Notate both changes and name their type. Play the form and judge which change reads as a break and which as a route.",
+      "checklist": [
+        "Both changes notated and typed?",
+        "Break/route effect logged?"
+      ]
+    },
+    "tu4-7": {
+      "title": "Baroque formulas and their path into metal",
+      "goal": "Know five fixed formulas from Vivaldi and Biber that live on in doom and gothic.",
+      "text": "Baroque is formula music: a small stock of turns, endlessly recombined. Five of them migrated straight into metal.\n\n1. Phrygian cadence: iv6 → V in minor, a semitone down in the bass (C → B), a whole tone up in the top voice (A → B). Ends on the dominant, open. Vivaldi closes slow movements with it (verify). In doom it is the riff ending C5 → B5 with an open continuation.\n\n2. Neapolitan: the major chord on b2 (F major in E minor), usually in first inversion (F/A), before the dominant. F → B7 → Em. The semitone step F → E in the top voice is the same as in the Phrygian of phase 1, but here as a cadence. Biber sets it in the sarabandes (verify), My Dying Bride as an F5 power chord before the root (verify).\n\n3. Lamento: phase 3. 4. Circle of fifths with chain of sevenths: phase 4. 5. Pedal point on the dominant: the bass holds B while Em, Am, C, B7 change above before Em arrives. Creates maximum expectation; Vivaldi before every return of the ritornello (verify). Anathema hold dominant pedals without resolution; that is their state of suspension.\n\nWhat metal leaves out: the thirds. All five formulas work with power chords because they are defined in the bass. What metal adds: repetition. A Baroque formula appears once per phrase; a riff repeats it eight times. The difference between Vivaldi and doom is not the material but the rate of repetition."
+    },
+    "te4-7-1": {
+      "title": "Listen · Baroque formulas and their path into metal",
+      "instructions": "In Vivaldi, *Winter*, movements 2 and 3, and in My Dying Bride, \"Your River\", find one example each of two of the five formulas. Write bass and top voice of the moment. Claim: Phrygian cadence and dominant pedal in Vivaldi, Neapolitan and lamento in MDB (verify).",
+      "checklist": [
+        "Four formula examples written with bass and top voice?",
+        "Repetition rate of the formula counted in both sources?"
+      ]
+    },
+    "te4-7-2": {
+      "title": "Model · Baroque formulas and their path into metal",
+      "instructions": "Bars 1–2 Phrygian cadence (C → B in the bass, A → B on top), open on B. Bars 3–5 Neapolitan F/A → B7 → Em; hear F → E in the top voice across three bars. Bars 6–9 dominant pedal: B held, Em, Am, B7 above, arrival. Play each formula alone, then all. Write each as a power-chord version (bass plus fifth only) and check whether it stays recognisable.",
+      "checklist": [
+        "Three formulas played individually and named?",
+        "Power-chord versions written, recognisability assessed?"
+      ]
+    },
+    "te4-7-3": {
+      "title": "Application · Baroque formulas and their path into metal",
+      "instructions": "Build a sixteen-bar riff from two formulas: eight bars lamento (twice), four bars Neapolitan cadence, four bars dominant pedal with arrival. All as power chords plus one melody voice. Play it with half-time drums at 60 and at 120 and note from which tempo it sounds Baroque instead of doom.",
+      "checklist": [
+        "Sixteen bars with three formulas notated as power chords?",
+        "Tempo tipping point logged?"
+      ]
+    },
+    "tu4-8": {
+      "title": "When doom avoids function and why",
+      "goal": "Understand the refusal of the cadence as a deliberate device and choose intentionally between rest and resolution.",
+      "text": "Tonal music is music of expectation: every dominant promises, every tonic delivers. Doom refuses the promise. That is not inability but a form of time. A section that does not cadence promises nothing, so it does not disappoint, so it can last long. Ten minutes of Vivaldi without a cadence would be unbearable; ten minutes of My Dying Bride without a cadence is the piece.\n\nThree refusals: 1. No major dominant: Bm or D instead of B7 before Em; the leading tone is missing, the root returns like a repetition, not like an arrival. 2. No close on the tonic: the section ends on C or D and the next begins on E; the change is a form boundary without resolution. 3. Ending by stopping: the riff breaks off, silence or a single tone. Type O Negative often do this with one bar of rest; My Dying Bride with a ringing chord (verify).\n\nWhy it works: expectation arises from leading tone and seventh (phase 1). Without them the chord change is a colour change, and colour changes are not urgent. The listener is moved from wanting to hearing. That is the kinship with modal music before 1600 and with the drone.\n\nWhen function nonetheless: once per piece, at the end or at the climax. There a real cadence lands with the force of ten minutes of abstention. Type O Negative occasionally end pieces with a major tonic (Picardy third), a Baroque trick (verify). Vivaldi does not have this effect because he resolves constantly.\n\nDecision per section: refuse or resolve. And per piece: where the one resolution sits."
+    },
+    "te4-8-1": {
+      "title": "Listen · When doom avoids function and why",
+      "instructions": "My Dying Bride, \"The Crown of Sympathy\" complete: count the sections and mark which end with refusal 1, 2 or 3. Is there a single real cadence? Where? Claim: at most one, at the end or the climax (verify). Then Type O Negative, \"Haunted\", ending: major tonic?",
+      "checklist": [
+        "All section endings classified by refusal type?",
+        "Position of the one cadence (or its absence) noted?"
+      ]
+    },
+    "te4-8-2": {
+      "title": "Model · When doom avoids function and why",
+      "instructions": "The same riff three times with three endings: bars 1–4 return without leading tone (refusal 1). Bars 5–8 end on D and silence (refusals 2 and 3). Bars 9–12 real cadence with B7 and major tonic (Picardy). Play all three and describe the effect of each ending in one word. Then extend bars 1–4 to 16 bars by playing them four times and check whether they still carry.",
+      "checklist": [
+        "Three endings played and each described in one word?",
+        "Sixteen-bar repetition without cadence assessed?"
+      ]
+    },
+    "te4-8-3": {
+      "title": "Application · When doom avoids function and why",
+      "instructions": "Take your longest own piece from the instrument course. Mark every section ending as refusal 1, 2, 3 or cadence. If more than one cadence occurs, remove all but one and decide where it sits. Play the revised version and compare the recording with the old one.",
+      "checklist": [
+        "All section endings classified?",
+        "Reduced to one cadence and comparison logged?"
+      ]
     }
   },
   "ui": {
