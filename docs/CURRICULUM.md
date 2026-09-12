@@ -1,6 +1,6 @@
 # Lernweg
 
-Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Musiklehre: acht Teile mit 28 Kapiteln und vier Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
+Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Musiklehre: acht Teile mit 28 Kapiteln und fünf Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
 
 ## Arbeitsweise
 
@@ -104,7 +104,7 @@ Die Einheiten sind keine Wochenvorgaben. Vier Stunden pro Woche bleiben die verf
 
 ## Musiklehre
 
-Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 28 Kapitel, vier Anhänge, 205 notierte Beispiele mit Klaviervorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen.
+Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 28 Kapitel, fünf Anhänge, 205 notierte Beispiele mit Klaviervorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen.
 
 ### Teil I · Ton und Schrift
 
@@ -164,6 +164,7 @@ Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-mino
 - B [Verzerrung und Intermodulation](https://a-minor.ch/#/chapter/cB)
 - C [Delay-Mathematik und Zeitwerte](https://a-minor.ch/#/chapter/cC)
 - D [Akkordsymbol-Referenz](https://a-minor.ch/#/chapter/cE)
+- E [Glossar](https://a-minor.ch/#/chapter/cG)
 
 ## Abschluss
 

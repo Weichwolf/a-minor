@@ -4,14 +4,14 @@ Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard mit eigenständig
 
 - **Gitarre:** E2 A2 D3 G3 C4 F4. Offene Pedaltöne und Melodie, später Arpeggien, Akkorde und bewegter Bass. Noten mit Lageangabe; keine Tabs.
 - **Keyboard:** 49 Tasten, Synthesizer und Klavier. Bass links, Melodie rechts; zunächst ein Klang ohne verpflichtenden Split.
-- **Theorie:** eigenständiges Lehrbuch „Musiklehre“ im Hauptmenü, acht Teile mit 28 Kapiteln und vier Anhängen, 205 notierte Beispiele mit Klaviervorschau, keine Aufgaben. Allgemeine Musiktheorie, zugeschnitten auf E–A–D, das tiefe Register, den verzerrten Klang und die fünf Referenzen: Ton und Schrift, Tonleitern und Modi, Akkorde und Harmonik, Rhythmus, Satz, Klang, Form, die Referenzen.
+- **Theorie:** eigenständiges Lehrbuch „Musiklehre“ im Hauptmenü, acht Teile mit 28 Kapiteln und fünf Anhängen, 205 notierte Beispiele mit Klaviervorschau, keine Aufgaben. Allgemeine Musiktheorie, zugeschnitten auf E–A–D, das tiefe Register, den verzerrten Klang und die fünf Referenzen: Ton und Schrift, Tonleitern und Modi, Akkorde und Harmonik, Rhythmus, Satz, Klang, Form, die Referenzen.
 - **Referenzen:** My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*). Eigene musikalische Gedanken statt festgelegter Coverstücke.
 
 ## Stand
 
 Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Jam-/Backing-Editor und freie Konfigurationsseiten bleiben entfernt.
 
-Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 28 durchnummerierten Kapiteln und vier mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 205 Beispiele mit Klaviervorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 326 Aufgaben bleiben in den Instrumentalspuren.
+Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 28 durchnummerierten Kapiteln und fünf mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 205 Beispiele mit Klaviervorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 326 Aufgaben bleiben in den Instrumentalspuren.
 
 Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die im Abgleich erkannten Fähigkeiten sind jetzt mit konkreten Übungen verknüpft. Das ist keine Zusicherung einer Prüfungsgleichwertigkeit; formale Abschlusskriterien liegen nicht vor. Der [vollständige Lernweg](docs/CURRICULUM.md) verlinkt jede neue Einheit.
 
@@ -39,7 +39,7 @@ Musiklehre:
 | VI Klang | 21 Gitarre und Verstärker · 22 Synthesizer · 23 Delay und Hall |
 | VII Form | 24 Motiv, Phrase, Periode · 25 Wiederholung als Form · 26 Suite, Variation, Programm |
 | VIII Die Referenzen | 27 Die fünf Referenzen · 28 Hören, Analysieren, Schreiben |
-| Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik · D Akkordsymbole |
+| Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik · D Akkordsymbole · E Glossar |
 
 ## Übezeit
 
