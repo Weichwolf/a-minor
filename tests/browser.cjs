@@ -104,8 +104,13 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     await page.selectOption('#language','de');
     await page.goto(base+'/#/');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),3);
     await page.goto(base+'/#/unit/tu0-7');await page.waitForSelector('svg.score');
-    assert.deepEqual(await page.locator('.ex .kind').allTextContents(),['Hören / Analyse','Modell','Anwenden']);
-    assert.match(await page.locator('main').innerText(),/Behauptung am Album prüfen/);
+    assert.deepEqual(await page.locator('.example .kind').allTextContents(),['Hörbeispiel','Notenbeispiel','Anwendung']);
+    assert.equal(await page.locator('.ex').count(),0,'textbook units carry no task cards');
+    assert.equal(await page.locator('.player').count(),0,'textbook units carry no accompaniment player');
+    assert.equal(await page.locator('[data-done], form[data-log], .check').count(),0,'no progress, log or checklist in the textbook');
+    assert.equal(await page.locator('.listen').count(),1,'one piano preview per notated example');
+    await page.goto(base+'/#/phase/t0');await page.waitForSelector('.units');assert.match(await page.locator('.unit .meta').first().innerText(),/Lehrtext/);
+    await page.goto(base+'/#/track/theory');await page.waitForSelector('.phases');assert.match(await page.locator('.phase .meta').first().innerText(),/Lehrtext/);
     await page.goto(base+'/#/unit/ta-3');await page.waitForSelector('.text');
     const appendix=await page.locator('main').innerText();assert(!/geplant|nicht ausgearbeitet/.test(appendix));assert.match(appendix,/60000/);
     assert.equal(await page.locator('.ex').count(),0);assert.match(await page.locator('.crumbs').innerText(),/Anhänge/);
@@ -113,7 +118,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     await page.setViewportSize({width:390,height:844});await page.goto(base+'/#/unit/ta-4');await page.waitForSelector('.text');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'appendix tables fit mobile width');
     await page.setViewportSize({width:1280,height:900});
-    console.log('PASS theory track, hear/model/apply labels and reference appendices');
+    console.log('PASS theory textbook: examples without tasks or player, reference appendices');
     await page.goto(base+'/#/unit/nonexistent');await page.waitForSelector('.tracks');
     assert.deepEqual(errors,[]);console.log('PASS every unit in both languages, mobile layout and unknown route');
   } finally { await browser?.close(); server.kill(); }

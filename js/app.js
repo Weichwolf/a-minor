@@ -99,15 +99,16 @@
     const done = S.isDone(ex.id), logs = S.get().log.filter(l => l.ex === ex.id);
     return `<article class="ex${done ? ' done' : ''}" id="${ex.id}"><header><span class="kind k-${ex.kind}">${t(ex.kind)}</span><h3>${esc(ex.title)}</h3>
       <label class="donebox"><input type="checkbox" data-done="${ex.id}"${done ? ' checked' : ''}> ${t('mastered')}</label></header>
-      ${ex.position ? `<p class="position">${esc(ex.position)}</p>` : ''}<p>${inline(ex.instructions || '')}</p>${ex.kind === 'hear' ? `<p class="small">${t('verify')}</p>` : ''}
+      ${ex.position ? `<p class="position">${esc(ex.position)}</p>` : ''}<p>${inline(ex.instructions || '')}</p>
       ${ex.score ? scoreBlock(ex,unit.track.instrument) : ''}${ex.fretboard ? diagram(ex.fretboard,'fretboard') : ''}${ex.piano ? diagram(ex.piano,'piano') : ''}
       ${ex.backing ? playerControls(ex.backing,ex.tempo) : ''}<ul class="check">${(ex.checklist || []).map(c => `<li>${esc(c)}</li>`).join('')}</ul>
       <details class="log"><summary>${t('log')} (${logs.length})</summary><form data-log="${ex.id}"><input name="note" aria-label="${t('note')}" placeholder="${t('logPlaceholder')}" required><button>${t('save')}</button></form>
       <ul>${logs.map(l => `<li><span class="date">${esc(l.date)}</span> ${esc(l.note)}</li>`).join('')}</ul></details></article>`;
   }
+  const exampleCard = (ex,unit) => `<section class="example" id="${ex.id}"><h3><span class="kind k-${ex.kind}">${t(ex.kind)}</span> ${esc(ex.title)}</h3><div class="body">${md(ex.text || '')}</div>${ex.score ? scoreBlock(ex,unit.track.instrument) : ''}</section>`;
   const phaseCard = (p,i) => {
     const ex = p.units.flatMap(u => u.exercises), done = ex.filter(e => S.isDone(e.id)).length;
-    return `<a class="phase${p.planned ? ' planned' : ''}" href="#/phase/${p.id}"><div class="num">${p.reference ? 'A' : i}</div><div><h2>${esc(p.title)}</h2><p>${esc(p.goal)}</p><div class="meta">${p.units.length} ${t('units')} · ${ex.length ? `${done}/${ex.length} ${t('exercises')}` : t(p.reference ? 'reference' : 'planned')}</div></div></a>`;
+    return `<a class="phase${p.planned ? ' planned' : ''}" href="#/phase/${p.id}"><div class="num">${p.reference ? 'A' : i}</div><div><h2>${esc(p.title)}</h2><p>${esc(p.goal)}</p><div class="meta">${p.units.length} ${t('units')} · ${ex.length ? `${done}/${ex.length} ${t('exercises')}` : t(p.reference ? 'reference' : p.track.instrument === 'theory' ? 'reading' : 'planned')}</div></div></a>`;
   };
   const courseLink = () => `<a href="#/">${t('course')}</a>`;
   const views = {
@@ -115,13 +116,13 @@
       <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t(track.instrument === 'theory' ? 'theoryScope' : 'scope')}</div></a>`).join('')}</div>`,
     track(id) {
       const track = tracks.find(x => x.id === id); if (!track) return views.home();
-      return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.map(phaseCard).join('')}</div>`;
+      return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.map((p,i) => phaseCard({...p,track},i)).join('')}</div>`;
     },
     phase(id) {
       const p = phases.find(x => x.id === id); if (!p) return views.home(); const i = p.track.phases.findIndex(x => x.id === id);
       const label = p.reference ? esc(p.title) : `${t('phase')} ${i}`, num = p.reference ? 'A' : i;
       return `<nav class="crumbs">${courseLink()} › <a href="#/track/${p.track.id}">${esc(p.track.title)}</a> › ${label}</nav><h1>${p.reference ? esc(p.title) : `${t('phase')} ${i}: ${esc(p.title)}`}</h1><p class="lead">${esc(p.goal)}</p>
-        <div class="units">${p.units.map((u,j) => { const [d,n] = progress(u); return `<a class="unit" href="#/unit/${u.id}"><div class="num">${num}.${j + 1}</div><div><h2>${esc(u.title)}</h2><p>${esc(u.goal)}</p>${n ? `<div class="meta">${d}/${n} ${t('exercises')}</div><div class="bar"><div style="width:${d / n * 100}%"></div></div>` : `<div class="meta">${t(p.reference ? 'reference' : 'planned')}</div>`}</div></a>`; }).join('')}</div>`;
+        <div class="units">${p.units.map((u,j) => { const [d,n] = progress(u); return `<a class="unit" href="#/unit/${u.id}"><div class="num">${num}.${j + 1}</div><div><h2>${esc(u.title)}</h2><p>${esc(u.goal)}</p>${n ? `<div class="meta">${d}/${n} ${t('exercises')}</div><div class="bar"><div style="width:${d / n * 100}%"></div></div>` : `<div class="meta">${t(p.reference ? 'reference' : p.track.instrument === 'theory' ? 'reading' : 'planned')}</div>`}</div></a>`; }).join('')}</div>`;
     },
     unit(id) {
       const u = units.find(x => x.id === id); if (!u) return views.home();
@@ -129,7 +130,8 @@
       return `<nav class="crumbs">${courseLink()} › <a href="#/track/${u.track.id}">${esc(u.track.title)}</a> › <a href="#/phase/${u.phase.id}">${u.phase.reference ? esc(u.phase.title) : `${t('phase')} ${pi}`}</a></nav>
         <h1>${esc(u.title)}</h1><p class="lead">${esc(u.goal)}</p><div class="text">${md(u.text || '')}</div>
         ${u.track.instrument === 'guitar' ? `<p class="small">${t('guitarAttack')}</p>` : ''}
-        ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : u.phase.reference ? '' : `<p>${t('plannedDetail')}</p>`}
+        ${(u.examples || []).map(e => exampleCard(e,u)).join('')}
+        ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : u.phase.reference || u.examples?.length ? '' : `<p>${t('plannedDetail')}</p>`}
         <nav class="pn">${k > 0 ? `<a href="#/unit/${siblings[k - 1].id}">‹ ${esc(siblings[k - 1].title)}</a>` : '<span></span>'}${k >= 0 && k < siblings.length - 1 ? `<a href="#/unit/${siblings[k + 1].id}">${esc(siblings[k + 1].title)} ›</a>` : ''}</nav>`;
     },
     midi:() => `<h1>MIDI</h1><p>${t('midiLead')}</p><div class="row"><button id="connect">${t('findOutputs')}</button><label>${t('output')} <select id="output"><option value="">${t('chooseDevice')}</option></select></label></div>

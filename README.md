@@ -4,14 +4,14 @@ Zweisprachiger Improvisations- und Theoriekurs für P4-Gitarre und Keyboard. Not
 
 - **Gitarre:** E2 A2 D3 G3 C4 F4. Offene Pedaltöne und Melodie, später Arpeggien, Akkorde und bewegter Bass. Noten mit Lageangabe; keine Tabs.
 - **Keyboard:** 49 Tasten, Synthesizer und Klavier. Bass links, Melodie rechts; zunächst ein Klang ohne verpflichtenden Split.
-- **Theorie:** Was die Referenzen tun, warum es funktioniert und was sie teilen, aufgebaut auf E–A–D. Notation, Modi, Harmonik, Bass und Drums, Zeit, Synthese und Effekte, Form, eigene Sprache.
+- **Theorie:** Lehrbuch ohne Aufgaben. Was die Referenzen tun, warum es funktioniert und was sie teilen, aufgebaut auf E–A–D. Notation, Modi, Harmonik, Bass und Drums, Zeit, Synthese und Effekte, Form, eigene Sprache.
 - **Referenzen:** My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*). Eigene musikalische Gedanken statt festgelegter Coverstücke.
 
 ## Stand
 
 Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Jam-/Backing-Editor und freie Konfigurationsseiten bleiben entfernt.
 
-Die Theoriespur hat 67 Einheiten in Phase 0–8 (7, 7, 7, 7, 8, 7, 10, 7, 7) und fünf Anhänge. Jede Einheit hat drei Aufgaben (Hören, Modell, Anwendung): 67 × 3 = 201. Gesamt 326 + 201 = 527 Aufgaben. Referenzstellen sind nach Track und Formstelle benannt, nicht nach Zeit; jede Aussage über eine Stelle trägt die Markierung „prüfen“, bis sie am Album bestätigt ist. Die Gerätetabellen in Anhang D sind gegen die Handbücher geprüft (Quellen im [fachlichen Abgleich](docs/COURSE_AUDIT.md)); wenige Restpunkte tragen die Markierung „prüfen“.
+Die Theoriespur ist ein Lehrbuch: 67 Einheiten in Phase 0–8 (7, 7, 7, 7, 8, 7, 10, 7, 7) und fünf Anhänge. Jede Einheit besteht aus Lehrtext und drei Beispielen: Hörbeispiel (Referenzstelle), Notenbeispiel (Partitur mit Klaviervorschau) und Anwendung (beschriebener Fall): 67 × 3 = 201 Beispiele. Keine Aufgaben, keine Checklisten, kein Begleit-Player und keine Fortschrittsmarkierung; die 326 Aufgaben bleiben in den Instrumentalspuren. Referenzstellen sind nach Track und Formstelle benannt, nicht nach Zeit; jede Aussage über eine Stelle trägt die Markierung „prüfen“, bis sie am Album bestätigt ist. Die Gerätetabellen in Anhang D sind gegen die Handbücher geprüft (Quellen im [fachlichen Abgleich](docs/COURSE_AUDIT.md)); wenige Restpunkte tragen die Markierung „prüfen“.
 
 Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die im Abgleich erkannten Fähigkeiten sind jetzt mit konkreten Übungen verknüpft. Das ist keine Zusicherung einer Prüfungsgleichwertigkeit; formale Abschlusskriterien liegen nicht vor. Der [vollständige Lernweg](docs/CURRICULUM.md) verlinkt jede neue Einheit.
 
@@ -33,7 +33,7 @@ Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, d
 Vier Sitzungen zu je einer Stunde. Drei mit 45 Minuten Gitarre und 15 Minuten Keyboard, eine mit umgekehrter Gewichtung:
 Gitarre 3 × 45 + 15 = 150 Minuten; Keyboard 3 × 15 + 45 = 90 Minuten pro Woche.
 
-Theorie kommt dazu: eine Einheit pro Woche, etwa 60 Minuten außerhalb der Instrumentalzeit, davon die Hälfte Hören am Album. Modell-Aufgaben werden am Keyboard gespielt, Anwendungen mit dem Instrument der Woche.
+Theorie kommt dazu: eine Einheit pro Woche lesen, das Hörbeispiel am Album prüfen, das Notenbeispiel in der Vorschau hören und nach Wunsch nachspielen. Etwa 45 Minuten außerhalb der Instrumentalzeit; nichts davon wird markiert.
 
 Eine Einheit pro Instrument bearbeiten. Bereits sichere Aufgaben dienen als Einstiegskontrolle. Hören/singen → spielen → wiederholen → genau eine Eigenschaft verändern → aufnehmen und vergleichen. „Sicher abrufbar“ erst nach Wiederholung an zwei Übetagen ohne Hilfen. Bestehende Markierungen bleiben erhalten; überarbeitete Übungen erneut prüfen.
 
@@ -112,7 +112,7 @@ Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beid
 }
 ```
 
-Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`. Theorieaufgaben haben `kind` `hear`, `model` oder `apply` in dieser Reihenfolge; `hear` blendet den Prüfhinweis ein. Eine Phase mit `"reference": true` enthält Einheiten ohne Aufgaben (Anhänge) und zeigt keinen Planungshinweis.
+Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`. Theorieeinheiten haben statt `exercises` ein Array `examples` mit `kind` `hear`, `notation` und `application` in dieser Reihenfolge; nur `notation` trägt `score` und `tempo`, keines trägt `backing` oder `checklist`. Beispieltexte haben `title` und `text`. Eine Phase mit `"reference": true` enthält Einheiten ohne Beispiele (Anhänge).
 Dauern: `w h q e s`, optional punktiert (`h.`) oder als Triole (`et`, `qt`). Zeitberechnung mit 24 Ticks pro Viertel hält binäre und ternäre Unterteilungen exakt. `tie:1` bindet zur nächsten gleichen Tonhöhe. `p` darf für Akkorde ein Array enthalten; `s` und `fi` können dazu positionsgleiche Arrays sein. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. `score.inner` ergänzt eine unabhängig gehaltene beziehungsweise bewegte Mittelstimme im oberen System. Alle Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
 
 Zusätzliche Notenfelder: `accent`, `staccato`, `harmonic`, `bend` (Halbtöne), `slur`/`slurEnd`. `tuplet:3` startet eine Triolenklammer, `tupletEnd:true` beendet sie. `score.chords` und `score.sections` beschriften Takte; `score.swing:true` interpretiert gerade Achtel in der Vorschau als 2:1-Übemodell.
@@ -141,7 +141,7 @@ npm run test:browser
 
 Node.js und Python 3 erforderlich; Browsertest startet seinen lokalen Server selbst. Chromium liegt standardmäßig unter `/usr/bin/chromium`, alternativ `CHROMIUM_PATH` setzen. Playwright ist ausschließlich eine Entwicklungsabhängigkeit.
 
-Die Tests prüfen die Einheitenzahl, die Aufgabenfolge Hören/Modell/Anwendung der Theoriespur, aufgabenlose Anhänge, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Zusätzlich: Sample-Integrität, Anschlagsschichten, Retuning, Dämpfung, Ladewiederholung, Abbruch während des Ladens und Audio-Rendering im Browser (Dynamik, Tonenden, Polyphonie). Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
+Die Tests prüfen die Einheitenzahl, die Beispielfolge Hörbeispiel/Notenbeispiel/Anwendung der Theoriespur ohne Aufgaben, Begleitung oder Checklisten, verwaiste Texte, aufgabenlose Anhänge, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Zusätzlich: Sample-Integrität, Anschlagsschichten, Retuning, Dämpfung, Ladewiederholung, Abbruch während des Ladens und Audio-Rendering im Browser (Dynamik, Tonenden, Polyphonie). Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
 
 Akkordsymbole bleiben oberhalb der Noten sichtbar. Unter jedem Takt stehen die tatsächlichen Bass- beziehungsweise Pedaltöne, einschließlich Basswechseln und Pausen; reine Einzelstimmen erhalten keine erfundenen Akkorde. Die Angaben folgen den klingenden Oktaven (auch bei oktavierender Gitarrennotation) und der internationalen Benennung B/H: B entspricht deutschem H, Bb deutschem B.
 

@@ -13,19 +13,22 @@ const translate = x => Array.isArray(x) ? x.map(translate) : x && typeof x === '
 const tracks = translate(raw);
 const plain = x => JSON.parse(JSON.stringify(x));
 const exercises = Object.values(tracks).flatMap(t => t.phases.filter(p => !p.planned).flatMap(p => p.units.flatMap(u => u.exercises.map(e => ({...e, instrument:t.instrument})))));
+const examples = Object.values(tracks).flatMap(t => t.phases.flatMap(p => p.units.flatMap(u => (u.examples || []).map(e => ({...e, instrument:t.instrument, example:true})))));
+const scored = [...exercises, ...examples].filter(e => e.score);
 
 test('course specifications: IDs, criteria, measure lengths, ties, ranges and finger positions', () => {
   const ids = new Set();
-  for (const e of exercises) {
+  for (const e of [...exercises, ...examples]) {
     assert(!ids.has(e.id), e.id); ids.add(e.id);
-    assert(e.checklist?.length, e.id);
+    if (e.example) { assert(!e.backing && !e.checklist, e.id + ': examples carry no tasks'); assert(e.title && e.text, e.id); }
+    else assert(e.checklist?.length, e.id);
     if (e.backing) assert(B.build(e.backing).len > 0, e.id);
     if (!e.score) continue;
     const sc = e.score, notes = e.generate ? N.generate({...e.generate, time:sc.time}) : sc.notes;
     const [b,u] = sc.time.split('/').map(Number), bar = b * 4 / u;
     const length = ns => ns.reduce((n,x) => n + N.ticks(x.d), 0) / N.ticks('q');
     assert.equal(length(notes) % bar, 0, e.id + ': complete measures');
-    assert.equal(N.barOrder({...sc,notes}).length * bar, e.backing.bars * bar, e.id + ': accompaniment length including form');
+    if (e.backing) assert.equal(N.barOrder({...sc,notes}).length * bar, e.backing.bars * bar, e.id + ': accompaniment length including form');
     for (const voice of [sc.bass,sc.inner].filter(Boolean)) assert.equal(length(voice),length(notes),e.id + ': aligned voices');
     for (const ns of [notes, sc.bass || [],sc.inner || []]) ns.forEach((n,i) => {
       if (n.tie) assert.deepEqual(n.p, ns[i + 1]?.p, e.id + ': tie target');
@@ -100,7 +103,8 @@ test('translations cover the same complete schema and UI keys; musical data has 
     assert.deepEqual(Object.keys(de.course[id]).sort(),Object.keys(en.course[id]).sort(),id);
     for (const lang of [de,en]) for (const value of Object.values(lang.course[id])) assert(Array.isArray(value) ? value.every(v => typeof v === 'string' && v.length) : typeof value === 'string' && value.length,id);
   }
-  const walk = x => { if (!x || typeof x !== 'object') return; if (x.textId) assert(de.course[x.textId]); for (const [k,v] of Object.entries(x)) { assert(!['title','goal','text','instructions','checklist','position'].includes(k)); walk(v); } }; walk(raw);
+  const used = new Set(); const walk = x => { if (!x || typeof x !== 'object') return; if (x.textId) { assert(de.course[x.textId]); used.add(x.textId); } for (const [k,v] of Object.entries(x)) { assert(!['title','goal','text','instructions','checklist','position'].includes(k)); walk(v); } }; walk(raw);
+  for (const id of Object.keys(de.course)) assert(used.has(id) || ['gitarre','keys','theorie'].includes(id),id + ': orphaned text');
 });
 
 test('guitar polyphony shares one staff, preserves independent durations and uses opposing stems', () => {
@@ -131,7 +135,7 @@ test('shared journal merges independent devices, resolves repeated delivery and 
 });
 
 test('all written combinations fit separate guitar strings and reachable keyboard hands', () => {
-  for (const e of exercises.filter(e => e.score && !e.generate)) {
+  for (const e of scored.filter(e => !e.generate)) {
     const sc = e.score, events = [];
     [sc.notes,sc.bass || [],sc.inner || []].forEach((notes,voice) => {
       let t = 0;
@@ -170,7 +174,7 @@ test('legacy restore preserves repeated practice notes and remains idempotent', 
   const before = S.export(); S.import(backup); assert.equal(S.export(),before);
 });
 
-test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks; theory units are hear, model, apply', () => {
+test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks; theory units are textbook examples', () => {
   const ids = new Set();
   for (const track of Object.values(tracks)) for (const [i,phase] of track.phases.entries()) {
     assert(!phase.planned,phase.id);
@@ -181,14 +185,17 @@ test('phases 2–8 contain seven guitar and six keyboard units with complete bil
       assert(!/Geplant\.|nicht ausgearbeitet/.test(unit.text),unit.id);
       if (phase.reference) { assert.equal(unit.exercises.length,0,unit.id); assert(unit.text.length > 600,unit.id + ': reference text'); continue; }
       if (theory) {
-        assert.deepEqual(unit.exercises.map(e => e.kind),['hear','model','apply'],unit.id);
-        assert(unit.exercises[1].score,unit.id + ': written model');
+        assert.equal(unit.exercises.length,0,unit.id + ': textbook units carry no tasks');
+        assert.deepEqual(unit.examples.map(e => e.kind),['hear','notation','application'],unit.id);
+        assert(unit.examples[1].score && !unit.examples[1].backing,unit.id + ': notated example without accompaniment');
         assert(unit.text.length > 400,unit.id + ': theory text');
+        for (const ex of unit.examples) for (const bundle of [de,en]) { assert(bundle.course[ex.textId].title.length > 3,ex.id); assert(bundle.course[ex.textId].text.length > 120,ex.id); assert(!bundle.course[ex.textId].checklist,ex.id); }
+        continue;
       }
       if (i < 2) continue;
       assert.equal(unit.exercises.length,3,unit.id);
-      assert(unit.exercises[theory ? 1 : 0].score,unit.id + ': written example');
-      if (!theory) assert.equal(unit.exercises[2].kind,'compose',unit.id + ': independent application');
+      assert(unit.exercises[0].score,unit.id + ': written example');
+      assert.equal(unit.exercises[2].kind,'compose',unit.id + ': independent application');
       for (const ex of unit.exercises) for (const bundle of [de,en]) {
         assert(bundle.course[ex.textId].instructions.length > 80,ex.id);
         assert.equal(bundle.course[ex.textId].checklist.length,2,ex.id);
@@ -210,7 +217,7 @@ test('triplet durations, compound pulse and odd-meter groups retain exact measur
   assert.throws(() => M.meter('7/8',[2,2,2]));
   const swung = N.events({swing:true,notes:[{p:'E3',d:'e'},{p:'G3',d:'e'},{p:'E3',d:'q'}]});
   assert.equal(swung[1].t,2/3);assert.equal(swung[2].t,1);
-  for (const e of exercises) if (e.score) {
+  for (const e of scored) {
     for (const notes of [e.score.notes || [],e.score.bass || [],e.score.inner || []]) {
       let group = false;
       for (const note of notes) {
@@ -285,7 +292,7 @@ test('harmonic references preserve authored chords and name actual bass motion w
   assert.deepEqual(plain(N.references(moving)[0]),{chord:'',kind:'bass',tones:['C3',null,'B2']});
   const el={clientWidth:300};N.render(el,moving,{}, {bass:'Bass',rest:'Pause'});
   assert.match(el.innerHTML,/harmonic-reference/);assert.match(el.innerHTML,/Pause/);
-  for(const e of exercises.filter(e=>e.score))assert.equal(N.references(e.score).length,N.measures(e.score)[0].length);
+  for(const e of scored)assert.equal(N.references(e.score).length,N.measures(e.score)[0].length);
 });
 
 test('guitar course uses pick-only right hand and introduces left-hand tapping after basic legato', () => {

@@ -23125,16 +23125,18 @@
         "units": [
           {
             "id": "tu0-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-1",
+            "examples": [
               {
-                "id": "te0-1-1",
-                "textId": "te0-1-1",
+                "id": "tx0-1-1",
+                "textId": "tx0-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-1-2",
-                "textId": "te0-1-2",
-                "kind": "model",
+                "id": "tx0-1-2",
+                "textId": "tx0-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "E",
@@ -23217,33 +23219,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te0-1-3",
-                "textId": "te0-1-3",
-                "kind": "apply"
+                "id": "tx0-1-3",
+                "textId": "tx0-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-1"
+            ]
           },
           {
             "id": "tu0-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-2",
+            "examples": [
               {
-                "id": "te0-2-1",
-                "textId": "te0-2-1",
+                "id": "tx0-2-1",
+                "textId": "tx0-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-2-2",
-                "textId": "te0-2-2",
-                "kind": "model",
+                "id": "tx0-2-2",
+                "textId": "tx0-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "C",
@@ -23312,33 +23310,29 @@
                       "d": "q"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 2
                 }
               },
               {
-                "id": "te0-2-3",
-                "textId": "te0-2-3",
-                "kind": "apply"
+                "id": "tx0-2-3",
+                "textId": "tx0-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-2"
+            ]
           },
           {
             "id": "tu0-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-3",
+            "examples": [
               {
-                "id": "te0-3-1",
-                "textId": "te0-3-1",
+                "id": "tx0-3-1",
+                "textId": "tx0-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-3-2",
-                "textId": "te0-3-2",
-                "kind": "model",
+                "id": "tx0-3-2",
+                "textId": "tx0-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -23433,33 +23427,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te0-3-3",
-                "textId": "te0-3-3",
-                "kind": "apply"
+                "id": "tx0-3-3",
+                "textId": "tx0-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-3"
+            ]
           },
           {
             "id": "tu0-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-4",
+            "examples": [
               {
-                "id": "te0-4-1",
-                "textId": "te0-4-1",
+                "id": "tx0-4-1",
+                "textId": "tx0-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-4-2",
-                "textId": "te0-4-2",
-                "kind": "model",
+                "id": "tx0-4-2",
+                "textId": "tx0-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -23605,33 +23595,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 7
                 }
               },
               {
-                "id": "te0-4-3",
-                "textId": "te0-4-3",
-                "kind": "apply"
+                "id": "tx0-4-3",
+                "textId": "tx0-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-4"
+            ]
           },
           {
             "id": "tu0-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-5",
+            "examples": [
               {
-                "id": "te0-5-1",
-                "textId": "te0-5-1",
+                "id": "tx0-5-1",
+                "textId": "tx0-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-5-2",
-                "textId": "te0-5-2",
-                "kind": "model",
+                "id": "tx0-5-2",
+                "textId": "tx0-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -23690,33 +23676,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te0-5-3",
-                "textId": "te0-5-3",
-                "kind": "apply"
+                "id": "tx0-5-3",
+                "textId": "tx0-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-5"
+            ]
           },
           {
             "id": "tu0-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-6",
+            "examples": [
               {
-                "id": "te0-6-1",
-                "textId": "te0-6-1",
+                "id": "tx0-6-1",
+                "textId": "tx0-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-6-2",
-                "textId": "te0-6-2",
-                "kind": "model",
+                "id": "tx0-6-2",
+                "textId": "tx0-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -23777,33 +23759,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te0-6-3",
-                "textId": "te0-6-3",
-                "kind": "apply"
+                "id": "tx0-6-3",
+                "textId": "tx0-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-6"
+            ]
           },
           {
             "id": "tu0-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu0-7",
+            "examples": [
               {
-                "id": "te0-7-1",
-                "textId": "te0-7-1",
+                "id": "tx0-7-1",
+                "textId": "tx0-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te0-7-2",
-                "textId": "te0-7-2",
-                "kind": "model",
+                "id": "tx0-7-2",
+                "textId": "tx0-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "E",
@@ -23850,20 +23828,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 3
                 }
               },
               {
-                "id": "te0-7-3",
-                "textId": "te0-7-3",
-                "kind": "apply"
+                "id": "tx0-7-3",
+                "textId": "tx0-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu0-7"
+            ]
           }
         ],
         "textId": "t0"
@@ -23873,16 +23845,18 @@
         "units": [
           {
             "id": "tu1-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-1",
+            "examples": [
               {
-                "id": "te1-1-1",
-                "textId": "te1-1-1",
+                "id": "tx1-1-1",
+                "textId": "tx1-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-1-2",
-                "textId": "te1-1-2",
-                "kind": "model",
+                "id": "tx1-1-2",
+                "textId": "tx1-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -23965,33 +23939,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te1-1-3",
-                "textId": "te1-1-3",
-                "kind": "apply"
+                "id": "tx1-1-3",
+                "textId": "tx1-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-1"
+            ]
           },
           {
             "id": "tu1-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-2",
+            "examples": [
               {
-                "id": "te1-2-1",
-                "textId": "te1-2-1",
+                "id": "tx1-2-1",
+                "textId": "tx1-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-2-2",
-                "textId": "te1-2-2",
-                "kind": "model",
+                "id": "tx1-2-2",
+                "textId": "tx1-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "C",
@@ -24261,33 +24231,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 7
                 }
               },
               {
-                "id": "te1-2-3",
-                "textId": "te1-2-3",
-                "kind": "apply"
+                "id": "tx1-2-3",
+                "textId": "tx1-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-2"
+            ]
           },
           {
             "id": "tu1-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-3",
+            "examples": [
               {
-                "id": "te1-3-1",
-                "textId": "te1-3-1",
+                "id": "tx1-3-1",
+                "textId": "tx1-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-3-2",
-                "textId": "te1-3-2",
-                "kind": "model",
+                "id": "tx1-3-2",
+                "textId": "tx1-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -24418,33 +24384,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te1-3-3",
-                "textId": "te1-3-3",
-                "kind": "apply"
+                "id": "tx1-3-3",
+                "textId": "tx1-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-3"
+            ]
           },
           {
             "id": "tu1-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-4",
+            "examples": [
               {
-                "id": "te1-4-1",
-                "textId": "te1-4-1",
+                "id": "tx1-4-1",
+                "textId": "tx1-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-4-2",
-                "textId": "te1-4-2",
-                "kind": "model",
+                "id": "tx1-4-2",
+                "textId": "tx1-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -24571,33 +24533,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te1-4-3",
-                "textId": "te1-4-3",
-                "kind": "apply"
+                "id": "tx1-4-3",
+                "textId": "tx1-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-4"
+            ]
           },
           {
             "id": "tu1-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-5",
+            "examples": [
               {
-                "id": "te1-5-1",
-                "textId": "te1-5-1",
+                "id": "tx1-5-1",
+                "textId": "tx1-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-5-2",
-                "textId": "te1-5-2",
-                "kind": "model",
+                "id": "tx1-5-2",
+                "textId": "tx1-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "A",
@@ -24704,33 +24662,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te1-5-3",
-                "textId": "te1-5-3",
-                "kind": "apply"
+                "id": "tx1-5-3",
+                "textId": "tx1-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-5"
+            ]
           },
           {
             "id": "tu1-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-6",
+            "examples": [
               {
-                "id": "te1-6-1",
-                "textId": "te1-6-1",
+                "id": "tx1-6-1",
+                "textId": "tx1-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-6-2",
-                "textId": "te1-6-2",
-                "kind": "model",
+                "id": "tx1-6-2",
+                "textId": "tx1-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -24837,33 +24791,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te1-6-3",
-                "textId": "te1-6-3",
-                "kind": "apply"
+                "id": "tx1-6-3",
+                "textId": "tx1-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-6"
+            ]
           },
           {
             "id": "tu1-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu1-7",
+            "examples": [
               {
-                "id": "te1-7-1",
-                "textId": "te1-7-1",
+                "id": "tx1-7-1",
+                "textId": "tx1-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te1-7-2",
-                "textId": "te1-7-2",
-                "kind": "model",
+                "id": "tx1-7-2",
+                "textId": "tx1-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25146,20 +25096,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te1-7-3",
-                "textId": "te1-7-3",
-                "kind": "apply"
+                "id": "tx1-7-3",
+                "textId": "tx1-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu1-7"
+            ]
           }
         ],
         "textId": "t1"
@@ -25169,16 +25113,18 @@
         "units": [
           {
             "id": "tu2-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-1",
+            "examples": [
               {
-                "id": "te2-1-1",
-                "textId": "te2-1-1",
+                "id": "tx2-1-1",
+                "textId": "tx2-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-1-2",
-                "textId": "te2-1-2",
-                "kind": "model",
+                "id": "tx2-1-2",
+                "textId": "tx2-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25286,33 +25232,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te2-1-3",
-                "textId": "te2-1-3",
-                "kind": "apply"
+                "id": "tx2-1-3",
+                "textId": "tx2-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-1"
+            ]
           },
           {
             "id": "tu2-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-2",
+            "examples": [
               {
-                "id": "te2-2-1",
-                "textId": "te2-2-1",
+                "id": "tx2-2-1",
+                "textId": "tx2-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-2-2",
-                "textId": "te2-2-2",
-                "kind": "model",
+                "id": "tx2-2-2",
+                "textId": "tx2-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25396,33 +25338,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 6
                 }
               },
               {
-                "id": "te2-2-3",
-                "textId": "te2-2-3",
-                "kind": "apply"
+                "id": "tx2-2-3",
+                "textId": "tx2-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-2"
+            ]
           },
           {
             "id": "tu2-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-3",
+            "examples": [
               {
-                "id": "te2-3-1",
-                "textId": "te2-3-1",
+                "id": "tx2-3-1",
+                "textId": "tx2-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-3-2",
-                "textId": "te2-3-2",
-                "kind": "model",
+                "id": "tx2-3-2",
+                "textId": "tx2-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25575,33 +25513,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te2-3-3",
-                "textId": "te2-3-3",
-                "kind": "apply"
+                "id": "tx2-3-3",
+                "textId": "tx2-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-3"
+            ]
           },
           {
             "id": "tu2-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-4",
+            "examples": [
               {
-                "id": "te2-4-1",
-                "textId": "te2-4-1",
+                "id": "tx2-4-1",
+                "textId": "tx2-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-4-2",
-                "textId": "te2-4-2",
-                "kind": "model",
+                "id": "tx2-4-2",
+                "textId": "tx2-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25716,33 +25650,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te2-4-3",
-                "textId": "te2-4-3",
-                "kind": "apply"
+                "id": "tx2-4-3",
+                "textId": "tx2-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-4"
+            ]
           },
           {
             "id": "tu2-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-5",
+            "examples": [
               {
-                "id": "te2-5-1",
-                "textId": "te2-5-1",
+                "id": "tx2-5-1",
+                "textId": "tx2-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-5-2",
-                "textId": "te2-5-2",
-                "kind": "model",
+                "id": "tx2-5-2",
+                "textId": "tx2-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25839,33 +25769,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te2-5-3",
-                "textId": "te2-5-3",
-                "kind": "apply"
+                "id": "tx2-5-3",
+                "textId": "tx2-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-5"
+            ]
           },
           {
             "id": "tu2-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-6",
+            "examples": [
               {
-                "id": "te2-6-1",
-                "textId": "te2-6-1",
+                "id": "tx2-6-1",
+                "textId": "tx2-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-6-2",
-                "textId": "te2-6-2",
-                "kind": "model",
+                "id": "tx2-6-2",
+                "textId": "tx2-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -25968,33 +25894,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te2-6-3",
-                "textId": "te2-6-3",
-                "kind": "apply"
+                "id": "tx2-6-3",
+                "textId": "tx2-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-6"
+            ]
           },
           {
             "id": "tu2-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu2-7",
+            "examples": [
               {
-                "id": "te2-7-1",
-                "textId": "te2-7-1",
+                "id": "tx2-7-1",
+                "textId": "tx2-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te2-7-2",
-                "textId": "te2-7-2",
-                "kind": "model",
+                "id": "tx2-7-2",
+                "textId": "tx2-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -26109,20 +26031,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te2-7-3",
-                "textId": "te2-7-3",
-                "kind": "apply"
+                "id": "tx2-7-3",
+                "textId": "tx2-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu2-7"
+            ]
           }
         ],
         "textId": "t2"
@@ -26132,16 +26048,18 @@
         "units": [
           {
             "id": "tu3-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-1",
+            "examples": [
               {
-                "id": "te3-1-1",
-                "textId": "te3-1-1",
+                "id": "tx3-1-1",
+                "textId": "tx3-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-1-2",
-                "textId": "te3-1-2",
-                "kind": "model",
+                "id": "tx3-1-2",
+                "textId": "tx3-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -26300,33 +26218,29 @@
                     "type": "drums",
                     "drums": "half"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 12
                 }
               },
               {
-                "id": "te3-1-3",
-                "textId": "te3-1-3",
-                "kind": "apply"
+                "id": "tx3-1-3",
+                "textId": "tx3-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-1"
+            ]
           },
           {
             "id": "tu3-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-2",
+            "examples": [
               {
-                "id": "te3-2-1",
-                "textId": "te3-2-1",
+                "id": "tx3-2-1",
+                "textId": "tx3-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-2-2",
-                "textId": "te3-2-2",
-                "kind": "model",
+                "id": "tx3-2-2",
+                "textId": "tx3-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -26465,33 +26379,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te3-2-3",
-                "textId": "te3-2-3",
-                "kind": "apply"
+                "id": "tx3-2-3",
+                "textId": "tx3-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-2"
+            ]
           },
           {
             "id": "tu3-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-3",
+            "examples": [
               {
-                "id": "te3-3-1",
-                "textId": "te3-3-1",
+                "id": "tx3-3-1",
+                "textId": "tx3-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-3-2",
-                "textId": "te3-3-2",
-                "kind": "model",
+                "id": "tx3-3-2",
+                "textId": "tx3-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -26716,33 +26626,29 @@
                       "d": "q"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "3/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te3-3-3",
-                "textId": "te3-3-3",
-                "kind": "apply"
+                "id": "tx3-3-3",
+                "textId": "tx3-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-3"
+            ]
           },
           {
             "id": "tu3-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-4",
+            "examples": [
               {
-                "id": "te3-4-1",
-                "textId": "te3-4-1",
+                "id": "tx3-4-1",
+                "textId": "tx3-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-4-2",
-                "textId": "te3-4-2",
-                "kind": "model",
+                "id": "tx3-4-2",
+                "textId": "tx3-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -26903,33 +26809,29 @@
                       "d": "h"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te3-4-3",
-                "textId": "te3-4-3",
-                "kind": "apply"
+                "id": "tx3-4-3",
+                "textId": "tx3-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-4"
+            ]
           },
           {
             "id": "tu3-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-5",
+            "examples": [
               {
-                "id": "te3-5-1",
-                "textId": "te3-5-1",
+                "id": "tx3-5-1",
+                "textId": "tx3-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-5-2",
-                "textId": "te3-5-2",
-                "kind": "model",
+                "id": "tx3-5-2",
+                "textId": "tx3-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -27032,33 +26934,29 @@
                       "d": "q"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te3-5-3",
-                "textId": "te3-5-3",
-                "kind": "apply"
+                "id": "tx3-5-3",
+                "textId": "tx3-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-5"
+            ]
           },
           {
             "id": "tu3-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-6",
+            "examples": [
               {
-                "id": "te3-6-1",
-                "textId": "te3-6-1",
+                "id": "tx3-6-1",
+                "textId": "tx3-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-6-2",
-                "textId": "te3-6-2",
-                "kind": "model",
+                "id": "tx3-6-2",
+                "textId": "tx3-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -27301,33 +27199,29 @@
                     "type": "drums",
                     "drums": "half"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te3-6-3",
-                "textId": "te3-6-3",
-                "kind": "apply"
+                "id": "tx3-6-3",
+                "textId": "tx3-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-6"
+            ]
           },
           {
             "id": "tu3-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu3-7",
+            "examples": [
               {
-                "id": "te3-7-1",
-                "textId": "te3-7-1",
+                "id": "tx3-7-1",
+                "textId": "tx3-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te3-7-2",
-                "textId": "te3-7-2",
-                "kind": "model",
+                "id": "tx3-7-2",
+                "textId": "tx3-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -27647,20 +27541,14 @@
                     "type": "drums",
                     "drums": "half"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 6
                 }
               },
               {
-                "id": "te3-7-3",
-                "textId": "te3-7-3",
-                "kind": "apply"
+                "id": "tx3-7-3",
+                "textId": "tx3-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu3-7"
+            ]
           }
         ],
         "textId": "t3"
@@ -27670,16 +27558,18 @@
         "units": [
           {
             "id": "tu4-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-1",
+            "examples": [
               {
-                "id": "te4-1-1",
-                "textId": "te4-1-1",
+                "id": "tx4-1-1",
+                "textId": "tx4-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-1-2",
-                "textId": "te4-1-2",
-                "kind": "model",
+                "id": "tx4-1-2",
+                "textId": "tx4-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -27954,33 +27844,29 @@
                       "d": "h"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te4-1-3",
-                "textId": "te4-1-3",
-                "kind": "apply"
+                "id": "tx4-1-3",
+                "textId": "tx4-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-1"
+            ]
           },
           {
             "id": "tu4-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-2",
+            "examples": [
               {
-                "id": "te4-2-1",
-                "textId": "te4-2-1",
+                "id": "tx4-2-1",
+                "textId": "tx4-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-2-2",
-                "textId": "te4-2-2",
-                "kind": "model",
+                "id": "tx4-2-2",
+                "textId": "tx4-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -28121,33 +28007,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 10
                 }
               },
               {
-                "id": "te4-2-3",
-                "textId": "te4-2-3",
-                "kind": "apply"
+                "id": "tx4-2-3",
+                "textId": "tx4-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-2"
+            ]
           },
           {
             "id": "tu4-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-3",
+            "examples": [
               {
-                "id": "te4-3-1",
-                "textId": "te4-3-1",
+                "id": "tx4-3-1",
+                "textId": "tx4-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-3-2",
-                "textId": "te4-3-2",
-                "kind": "model",
+                "id": "tx4-3-2",
+                "textId": "tx4-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -28292,33 +28174,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te4-3-3",
-                "textId": "te4-3-3",
-                "kind": "apply"
+                "id": "tx4-3-3",
+                "textId": "tx4-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-3"
+            ]
           },
           {
             "id": "tu4-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-4",
+            "examples": [
               {
-                "id": "te4-4-1",
-                "textId": "te4-4-1",
+                "id": "tx4-4-1",
+                "textId": "tx4-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-4-2",
-                "textId": "te4-4-2",
-                "kind": "model",
+                "id": "tx4-4-2",
+                "textId": "tx4-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -28433,33 +28311,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te4-4-3",
-                "textId": "te4-4-3",
-                "kind": "apply"
+                "id": "tx4-4-3",
+                "textId": "tx4-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-4"
+            ]
           },
           {
             "id": "tu4-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-5",
+            "examples": [
               {
-                "id": "te4-5-1",
-                "textId": "te4-5-1",
+                "id": "tx4-5-1",
+                "textId": "tx4-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-5-2",
-                "textId": "te4-5-2",
-                "kind": "model",
+                "id": "tx4-5-2",
+                "textId": "tx4-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -28587,33 +28461,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 9
                 }
               },
               {
-                "id": "te4-5-3",
-                "textId": "te4-5-3",
-                "kind": "apply"
+                "id": "tx4-5-3",
+                "textId": "tx4-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-5"
+            ]
           },
           {
             "id": "tu4-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-6",
+            "examples": [
               {
-                "id": "te4-6-1",
-                "textId": "te4-6-1",
+                "id": "tx4-6-1",
+                "textId": "tx4-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-6-2",
-                "textId": "te4-6-2",
-                "kind": "model",
+                "id": "tx4-6-2",
+                "textId": "tx4-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -28728,33 +28598,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te4-6-3",
-                "textId": "te4-6-3",
-                "kind": "apply"
+                "id": "tx4-6-3",
+                "textId": "tx4-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-6"
+            ]
           },
           {
             "id": "tu4-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-7",
+            "examples": [
               {
-                "id": "te4-7-1",
-                "textId": "te4-7-1",
+                "id": "tx4-7-1",
+                "textId": "tx4-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-7-2",
-                "textId": "te4-7-2",
-                "kind": "model",
+                "id": "tx4-7-2",
+                "textId": "tx4-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -28895,33 +28761,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 9
                 }
               },
               {
-                "id": "te4-7-3",
-                "textId": "te4-7-3",
-                "kind": "apply"
+                "id": "tx4-7-3",
+                "textId": "tx4-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-7"
+            ]
           },
           {
             "id": "tu4-8",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu4-8",
+            "examples": [
               {
-                "id": "te4-8-1",
-                "textId": "te4-8-1",
+                "id": "tx4-8-1",
+                "textId": "tx4-8-1",
                 "kind": "hear"
               },
               {
-                "id": "te4-8-2",
-                "textId": "te4-8-2",
-                "kind": "model",
+                "id": "tx4-8-2",
+                "textId": "tx4-8-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -29075,20 +28937,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 12
                 }
               },
               {
-                "id": "te4-8-3",
-                "textId": "te4-8-3",
-                "kind": "apply"
+                "id": "tx4-8-3",
+                "textId": "tx4-8-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu4-8"
+            ]
           }
         ],
         "textId": "t4"
@@ -29098,16 +28954,18 @@
         "units": [
           {
             "id": "tu5-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-1",
+            "examples": [
               {
-                "id": "te5-1-1",
-                "textId": "te5-1-1",
+                "id": "tx5-1-1",
+                "textId": "tx5-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-1-2",
-                "textId": "te5-1-2",
-                "kind": "model",
+                "id": "tx5-1-2",
+                "textId": "tx5-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -29314,33 +29172,29 @@
                     "type": "drums",
                     "drums": "compound"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "12/8",
-                  "bars": 4
                 }
               },
               {
-                "id": "te5-1-3",
-                "textId": "te5-1-3",
-                "kind": "apply"
+                "id": "tx5-1-3",
+                "textId": "tx5-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-1"
+            ]
           },
           {
             "id": "tu5-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-2",
+            "examples": [
               {
-                "id": "te5-2-1",
-                "textId": "te5-2-1",
+                "id": "tx5-2-1",
+                "textId": "tx5-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-2-2",
-                "textId": "te5-2-2",
-                "kind": "model",
+                "id": "tx5-2-2",
+                "textId": "tx5-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -29492,33 +29346,29 @@
                     "type": "drums",
                     "drums": "shuffle"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te5-2-3",
-                "textId": "te5-2-3",
-                "kind": "apply"
+                "id": "tx5-2-3",
+                "textId": "tx5-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-2"
+            ]
           },
           {
             "id": "tu5-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-3",
+            "examples": [
               {
-                "id": "te5-3-1",
-                "textId": "te5-3-1",
+                "id": "tx5-3-1",
+                "textId": "tx5-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-3-2",
-                "textId": "te5-3-2",
-                "kind": "model",
+                "id": "tx5-3-2",
+                "textId": "tx5-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -29652,33 +29502,29 @@
                     "type": "drums",
                     "drums": "compound"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "6/8",
-                  "bars": 4
                 }
               },
               {
-                "id": "te5-3-3",
-                "textId": "te5-3-3",
-                "kind": "apply"
+                "id": "tx5-3-3",
+                "textId": "tx5-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-3"
+            ]
           },
           {
             "id": "tu5-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-4",
+            "examples": [
               {
-                "id": "te5-4-1",
-                "textId": "te5-4-1",
+                "id": "tx5-4-1",
+                "textId": "tx5-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-4-2",
-                "textId": "te5-4-2",
-                "kind": "model",
+                "id": "tx5-4-2",
+                "textId": "tx5-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -29847,33 +29693,29 @@
                       "d": "q."
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "7/8",
-                  "bars": 4
                 }
               },
               {
-                "id": "te5-4-3",
-                "textId": "te5-4-3",
-                "kind": "apply"
+                "id": "tx5-4-3",
+                "textId": "tx5-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-4"
+            ]
           },
           {
             "id": "tu5-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-5",
+            "examples": [
               {
-                "id": "te5-5-1",
-                "textId": "te5-5-1",
+                "id": "tx5-5-1",
+                "textId": "tx5-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-5-2",
-                "textId": "te5-5-2",
-                "kind": "model",
+                "id": "tx5-5-2",
+                "textId": "tx5-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30012,33 +29854,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te5-5-3",
-                "textId": "te5-5-3",
-                "kind": "apply"
+                "id": "tx5-5-3",
+                "textId": "tx5-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-5"
+            ]
           },
           {
             "id": "tu5-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-6",
+            "examples": [
               {
-                "id": "te5-6-1",
-                "textId": "te5-6-1",
+                "id": "tx5-6-1",
+                "textId": "tx5-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-6-2",
-                "textId": "te5-6-2",
-                "kind": "model",
+                "id": "tx5-6-2",
+                "textId": "tx5-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30147,33 +29985,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te5-6-3",
-                "textId": "te5-6-3",
-                "kind": "apply"
+                "id": "tx5-6-3",
+                "textId": "tx5-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-6"
+            ]
           },
           {
             "id": "tu5-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu5-7",
+            "examples": [
               {
-                "id": "te5-7-1",
-                "textId": "te5-7-1",
+                "id": "tx5-7-1",
+                "textId": "tx5-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te5-7-2",
-                "textId": "te5-7-2",
-                "kind": "model",
+                "id": "tx5-7-2",
+                "textId": "tx5-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30344,20 +30178,14 @@
                     "type": "drums",
                     "drums": "half"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te5-7-3",
-                "textId": "te5-7-3",
-                "kind": "apply"
+                "id": "tx5-7-3",
+                "textId": "tx5-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu5-7"
+            ]
           }
         ],
         "textId": "t5"
@@ -30367,16 +30195,18 @@
         "units": [
           {
             "id": "tu6-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-1",
+            "examples": [
               {
-                "id": "te6-1-1",
-                "textId": "te6-1-1",
+                "id": "tx6-1-1",
+                "textId": "tx6-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-1-2",
-                "textId": "te6-1-2",
-                "kind": "model",
+                "id": "tx6-1-2",
+                "textId": "tx6-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30439,33 +30269,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-1-3",
-                "textId": "te6-1-3",
-                "kind": "apply"
+                "id": "tx6-1-3",
+                "textId": "tx6-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-1"
+            ]
           },
           {
             "id": "tu6-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-2",
+            "examples": [
               {
-                "id": "te6-2-1",
-                "textId": "te6-2-1",
+                "id": "tx6-2-1",
+                "textId": "tx6-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-2-2",
-                "textId": "te6-2-2",
-                "kind": "model",
+                "id": "tx6-2-2",
+                "textId": "tx6-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30592,33 +30418,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 6
                 }
               },
               {
-                "id": "te6-2-3",
-                "textId": "te6-2-3",
-                "kind": "apply"
+                "id": "tx6-2-3",
+                "textId": "tx6-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-2"
+            ]
           },
           {
             "id": "tu6-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-3",
+            "examples": [
               {
-                "id": "te6-3-1",
-                "textId": "te6-3-1",
+                "id": "tx6-3-1",
+                "textId": "tx6-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-3-2",
-                "textId": "te6-3-2",
-                "kind": "model",
+                "id": "tx6-3-2",
+                "textId": "tx6-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30734,33 +30556,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 6
                 }
               },
               {
-                "id": "te6-3-3",
-                "textId": "te6-3-3",
-                "kind": "apply"
+                "id": "tx6-3-3",
+                "textId": "tx6-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-3"
+            ]
           },
           {
             "id": "tu6-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-4",
+            "examples": [
               {
-                "id": "te6-4-1",
-                "textId": "te6-4-1",
+                "id": "tx6-4-1",
+                "textId": "tx6-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-4-2",
-                "textId": "te6-4-2",
-                "kind": "model",
+                "id": "tx6-4-2",
+                "textId": "tx6-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30902,33 +30720,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-4-3",
-                "textId": "te6-4-3",
-                "kind": "apply"
+                "id": "tx6-4-3",
+                "textId": "tx6-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-4"
+            ]
           },
           {
             "id": "tu6-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-5",
+            "examples": [
               {
-                "id": "te6-5-1",
-                "textId": "te6-5-1",
+                "id": "tx6-5-1",
+                "textId": "tx6-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-5-2",
-                "textId": "te6-5-2",
-                "kind": "model",
+                "id": "tx6-5-2",
+                "textId": "tx6-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -30999,33 +30813,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-5-3",
-                "textId": "te6-5-3",
-                "kind": "apply"
+                "id": "tx6-5-3",
+                "textId": "tx6-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-5"
+            ]
           },
           {
             "id": "tu6-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-6",
+            "examples": [
               {
-                "id": "te6-6-1",
-                "textId": "te6-6-1",
+                "id": "tx6-6-1",
+                "textId": "tx6-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-6-2",
-                "textId": "te6-6-2",
-                "kind": "model",
+                "id": "tx6-6-2",
+                "textId": "tx6-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31183,33 +30993,29 @@
                     }
                   ],
                   "tempo": 72
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-6-3",
-                "textId": "te6-6-3",
-                "kind": "apply"
+                "id": "tx6-6-3",
+                "textId": "tx6-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-6"
+            ]
           },
           {
             "id": "tu6-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-7",
+            "examples": [
               {
-                "id": "te6-7-1",
-                "textId": "te6-7-1",
+                "id": "tx6-7-1",
+                "textId": "tx6-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-7-2",
-                "textId": "te6-7-2",
-                "kind": "model",
+                "id": "tx6-7-2",
+                "textId": "tx6-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31324,33 +31130,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-7-3",
-                "textId": "te6-7-3",
-                "kind": "apply"
+                "id": "tx6-7-3",
+                "textId": "tx6-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-7"
+            ]
           },
           {
             "id": "tu6-8",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-8",
+            "examples": [
               {
-                "id": "te6-8-1",
-                "textId": "te6-8-1",
+                "id": "tx6-8-1",
+                "textId": "tx6-8-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-8-2",
-                "textId": "te6-8-2",
-                "kind": "model",
+                "id": "tx6-8-2",
+                "textId": "tx6-8-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31409,33 +31211,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-8-3",
-                "textId": "te6-8-3",
-                "kind": "apply"
+                "id": "tx6-8-3",
+                "textId": "tx6-8-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-8"
+            ]
           },
           {
             "id": "tu6-9",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-9",
+            "examples": [
               {
-                "id": "te6-9-1",
-                "textId": "te6-9-1",
+                "id": "tx6-9-1",
+                "textId": "tx6-9-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-9-2",
-                "textId": "te6-9-2",
-                "kind": "model",
+                "id": "tx6-9-2",
+                "textId": "tx6-9-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31526,33 +31324,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-9-3",
-                "textId": "te6-9-3",
-                "kind": "apply"
+                "id": "tx6-9-3",
+                "textId": "tx6-9-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-9"
+            ]
           },
           {
             "id": "tu6-10",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu6-10",
+            "examples": [
               {
-                "id": "te6-10-1",
-                "textId": "te6-10-1",
+                "id": "tx6-10-1",
+                "textId": "tx6-10-1",
                 "kind": "hear"
               },
               {
-                "id": "te6-10-2",
-                "textId": "te6-10-2",
-                "kind": "model",
+                "id": "tx6-10-2",
+                "textId": "tx6-10-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31634,20 +31428,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te6-10-3",
-                "textId": "te6-10-3",
-                "kind": "apply"
+                "id": "tx6-10-3",
+                "textId": "tx6-10-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu6-10"
+            ]
           }
         ],
         "textId": "t6"
@@ -31657,16 +31445,18 @@
         "units": [
           {
             "id": "tu7-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-1",
+            "examples": [
               {
-                "id": "te7-1-1",
-                "textId": "te7-1-1",
+                "id": "tx7-1-1",
+                "textId": "tx7-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-1-2",
-                "textId": "te7-1-2",
-                "kind": "model",
+                "id": "tx7-1-2",
+                "textId": "tx7-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31807,33 +31597,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-1-3",
-                "textId": "te7-1-3",
-                "kind": "apply"
+                "id": "tx7-1-3",
+                "textId": "tx7-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-1"
+            ]
           },
           {
             "id": "tu7-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-2",
+            "examples": [
               {
-                "id": "te7-2-1",
-                "textId": "te7-2-1",
+                "id": "tx7-2-1",
+                "textId": "tx7-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-2-2",
-                "textId": "te7-2-2",
-                "kind": "model",
+                "id": "tx7-2-2",
+                "textId": "tx7-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -31973,33 +31759,29 @@
                     }
                   ],
                   "tempo": 60
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "3/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-2-3",
-                "textId": "te7-2-3",
-                "kind": "apply"
+                "id": "tx7-2-3",
+                "textId": "tx7-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-2"
+            ]
           },
           {
             "id": "tu7-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-3",
+            "examples": [
               {
-                "id": "te7-3-1",
-                "textId": "te7-3-1",
+                "id": "tx7-3-1",
+                "textId": "tx7-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-3-2",
-                "textId": "te7-3-2",
-                "kind": "model",
+                "id": "tx7-3-2",
+                "textId": "tx7-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -32261,33 +32043,29 @@
                     }
                   ],
                   "tempo": 96
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-3-3",
-                "textId": "te7-3-3",
-                "kind": "apply"
+                "id": "tx7-3-3",
+                "textId": "tx7-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-3"
+            ]
           },
           {
             "id": "tu7-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-4",
+            "examples": [
               {
-                "id": "te7-4-1",
-                "textId": "te7-4-1",
+                "id": "tx7-4-1",
+                "textId": "tx7-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-4-2",
-                "textId": "te7-4-2",
-                "kind": "model",
+                "id": "tx7-4-2",
+                "textId": "tx7-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -32432,33 +32210,29 @@
                       "d": "h"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-4-3",
-                "textId": "te7-4-3",
-                "kind": "apply"
+                "id": "tx7-4-3",
+                "textId": "tx7-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-4"
+            ]
           },
           {
             "id": "tu7-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-5",
+            "examples": [
               {
-                "id": "te7-5-1",
-                "textId": "te7-5-1",
+                "id": "tx7-5-1",
+                "textId": "tx7-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-5-2",
-                "textId": "te7-5-2",
-                "kind": "model",
+                "id": "tx7-5-2",
+                "textId": "tx7-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -32671,33 +32445,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-5-3",
-                "textId": "te7-5-3",
-                "kind": "apply"
+                "id": "tx7-5-3",
+                "textId": "tx7-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-5"
+            ]
           },
           {
             "id": "tu7-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-6",
+            "examples": [
               {
-                "id": "te7-6-1",
-                "textId": "te7-6-1",
+                "id": "tx7-6-1",
+                "textId": "tx7-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-6-2",
-                "textId": "te7-6-2",
-                "kind": "model",
+                "id": "tx7-6-2",
+                "textId": "tx7-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -32820,33 +32590,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-6-3",
-                "textId": "te7-6-3",
-                "kind": "apply"
+                "id": "tx7-6-3",
+                "textId": "tx7-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-6"
+            ]
           },
           {
             "id": "tu7-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu7-7",
+            "examples": [
               {
-                "id": "te7-7-1",
-                "textId": "te7-7-1",
+                "id": "tx7-7-1",
+                "textId": "tx7-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te7-7-2",
-                "textId": "te7-7-2",
-                "kind": "model",
+                "id": "tx7-7-2",
+                "textId": "tx7-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33015,20 +32781,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te7-7-3",
-                "textId": "te7-7-3",
-                "kind": "apply"
+                "id": "tx7-7-3",
+                "textId": "tx7-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu7-7"
+            ]
           }
         ],
         "textId": "t7"
@@ -33038,16 +32798,18 @@
         "units": [
           {
             "id": "tu8-1",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-1",
+            "examples": [
               {
-                "id": "te8-1-1",
-                "textId": "te8-1-1",
+                "id": "tx8-1-1",
+                "textId": "tx8-1-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-1-2",
-                "textId": "te8-1-2",
-                "kind": "model",
+                "id": "tx8-1-2",
+                "textId": "tx8-1-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33186,33 +32948,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te8-1-3",
-                "textId": "te8-1-3",
-                "kind": "apply"
+                "id": "tx8-1-3",
+                "textId": "tx8-1-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-1"
+            ]
           },
           {
             "id": "tu8-2",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-2",
+            "examples": [
               {
-                "id": "te8-2-1",
-                "textId": "te8-2-1",
+                "id": "tx8-2-1",
+                "textId": "tx8-2-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-2-2",
-                "textId": "te8-2-2",
-                "kind": "model",
+                "id": "tx8-2-2",
+                "textId": "tx8-2-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33317,33 +33075,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te8-2-3",
-                "textId": "te8-2-3",
-                "kind": "apply"
+                "id": "tx8-2-3",
+                "textId": "tx8-2-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-2"
+            ]
           },
           {
             "id": "tu8-3",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-3",
+            "examples": [
               {
-                "id": "te8-3-1",
-                "textId": "te8-3-1",
+                "id": "tx8-3-1",
+                "textId": "tx8-3-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-3-2",
-                "textId": "te8-3-2",
-                "kind": "model",
+                "id": "tx8-3-2",
+                "textId": "tx8-3-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33590,33 +33344,29 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te8-3-3",
-                "textId": "te8-3-3",
-                "kind": "apply"
+                "id": "tx8-3-3",
+                "textId": "tx8-3-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-3"
+            ]
           },
           {
             "id": "tu8-4",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-4",
+            "examples": [
               {
-                "id": "te8-4-1",
-                "textId": "te8-4-1",
+                "id": "tx8-4-1",
+                "textId": "tx8-4-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-4-2",
-                "textId": "te8-4-2",
-                "kind": "model",
+                "id": "tx8-4-2",
+                "textId": "tx8-4-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33751,33 +33501,29 @@
                     "type": "drums",
                     "drums": "half"
                   }
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te8-4-3",
-                "textId": "te8-4-3",
-                "kind": "apply"
+                "id": "tx8-4-3",
+                "textId": "tx8-4-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-4"
+            ]
           },
           {
             "id": "tu8-5",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-5",
+            "examples": [
               {
-                "id": "te8-5-1",
-                "textId": "te8-5-1",
+                "id": "tx8-5-1",
+                "textId": "tx8-5-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-5-2",
-                "textId": "te8-5-2",
-                "kind": "model",
+                "id": "tx8-5-2",
+                "textId": "tx8-5-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33863,33 +33609,29 @@
                     }
                   ],
                   "tempo": 60
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te8-5-3",
-                "textId": "te8-5-3",
-                "kind": "apply"
+                "id": "tx8-5-3",
+                "textId": "tx8-5-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-5"
+            ]
           },
           {
             "id": "tu8-6",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-6",
+            "examples": [
               {
-                "id": "te8-6-1",
-                "textId": "te8-6-1",
+                "id": "tx8-6-1",
+                "textId": "tx8-6-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-6-2",
-                "textId": "te8-6-2",
-                "kind": "model",
+                "id": "tx8-6-2",
+                "textId": "tx8-6-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -33982,33 +33724,29 @@
                       "d": "q"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 4
                 }
               },
               {
-                "id": "te8-6-3",
-                "textId": "te8-6-3",
-                "kind": "apply"
+                "id": "tx8-6-3",
+                "textId": "tx8-6-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-6"
+            ]
           },
           {
             "id": "tu8-7",
-            "exercises": [
+            "exercises": [],
+            "textId": "tu8-7",
+            "examples": [
               {
-                "id": "te8-7-1",
-                "textId": "te8-7-1",
+                "id": "tx8-7-1",
+                "textId": "tx8-7-1",
                 "kind": "hear"
               },
               {
-                "id": "te8-7-2",
-                "textId": "te8-7-2",
-                "kind": "model",
+                "id": "tx8-7-2",
+                "textId": "tx8-7-2",
+                "kind": "notation",
                 "tempo": 60,
                 "score": {
                   "key": "Em",
@@ -34107,20 +33845,14 @@
                       "d": "w"
                     }
                   ]
-                },
-                "backing": {
-                  "type": "click",
-                  "time": "4/4",
-                  "bars": 8
                 }
               },
               {
-                "id": "te8-7-3",
-                "textId": "te8-7-3",
-                "kind": "apply"
+                "id": "tx8-7-3",
+                "textId": "tx8-7-3",
+                "kind": "application"
               }
-            ],
-            "textId": "tu8-7"
+            ]
           }
         ],
         "textId": "t8"

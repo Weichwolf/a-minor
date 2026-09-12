@@ -104,7 +104,7 @@ Die Einheiten sind keine Wochenvorgaben. Vier Stunden pro Woche bleiben die verf
 
 ## Theorie
 
-Neun Phasen und fünf Anhänge. Jede Einheit hat drei Aufgaben: **Hören** (Referenzstelle mit prüfbarer Behauptung), **Modell** (Notenbeispiel mit Vorschau) und **Anwendung** (schreiben, patchen, aufnehmen). Anhänge sind Nachschlagetexte ohne Aufgaben. Referenzstellen sind nach Track und Formstelle benannt; Zeitangaben trägt der Lernende nach dem ersten Hören ins Log ein. Jede Aussage über eine Stelle ist mit „prüfen“ markiert, bis sie am Album bestätigt wurde.
+Lehrbuch: neun Phasen und fünf Anhänge, keine Aufgaben. Jede Einheit besteht aus Lehrtext und drei Beispielen: **Hörbeispiel** (Referenzstelle mit prüfbarer Aussage), **Notenbeispiel** (Partitur mit Klaviervorschau) und **Anwendung** (ein beschriebener Fall, wie das Prinzip in einem Stück wirkt). Anhänge sind Nachschlagetexte. Referenzstellen sind nach Track und Formstelle benannt, nicht nach Zeit. Jede Aussage über eine Stelle ist mit „prüfen“ markiert, bis sie am Album bestätigt wurde.
 
 ### Phase 0: Ton und Schrift
 
@@ -214,4 +214,4 @@ Das letzte Modell umfasst 32 Takte. Das eigene Abschlussstück umfasst mindesten
 
 Die technischen Prüfungen sichern Notendaten und Darstellung ab. Reale Handhaltung, Klangbalance, Intonation beim Bending und Ausdruck müssen am Instrument beziehungsweise an der Aufnahme beurteilt werden. Der Gigajam-Abgleich dokumentiert erkennbare Repertoirefähigkeiten, keine formale Prüfungszulassung.
 
-Die Theoriespur endet mit einem eigenen Regelwerk, einem dokumentierten Stück nach dem siebenstufigen Workflow, einer Repertoireliste mit Set und einem datierten Laufbahnplan.
+Die Theoriespur endet mit der Beschreibung eines Regelwerks, eines Stücks nach dem siebenstufigen Workflow, einer Repertoireliste mit Set und eines Laufbahnplans; die Ausführung gehört in die Instrumentalspuren und ins eigene Log.
