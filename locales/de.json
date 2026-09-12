@@ -4737,6 +4737,300 @@
         "Zwei Pattern-Fassungen mit gleichem Riff aufgenommen?",
         "Standard gewählt und gerätneutral notiert?"
       ]
+    },
+    "t6": {
+      "title": "Klang",
+      "goal": "Synthese subtraktiv, Wavetable und FM; Pads, Orgel, Streicher; Delay-Physik, Tape und BBD, Approximation auf 2290, G-Major, Nova System; Hall, Chorus, Gain-Staging und Frequenzräume im Arrangement."
+    },
+    "tu6-1": {
+      "title": "Subtraktive Synthese: Oszillator, Filter, Hüllkurve",
+      "goal": "Die Signalkette eines subtraktiven Synthesizers von der Wellenform bis zum Ausgang beherrschen.",
+      "text": "Subtraktiv heißt: Ein obertonreiches Signal wird durch Filter reduziert. Die Kette: Oszillator → Filter → Verstärker, jeweils mit Hüllkurve und LFO als Modulation.\n\nOszillator: Sägezahn hat alle Teiltöne (1/n), klingt hell und schneidend, Basis für Streicher und Bläser. Rechteck hat nur ungerade Teiltöne, klingt hohl, klarinettenartig; Pulsbreite verändert das Spektrum (schmal = näselnd). Dreieck hat ungerade Teiltöne mit 1/n², weich, flötenartig. Sinus hat nur den Grundton. Zwei Oszillatoren leicht verstimmt (Detune, 5–15 Cent) ergeben Schwebung und Breite; das ist die Grundlage jedes Pads.\n\nFilter: Tiefpass lässt alles unter der Grenzfrequenz (Cutoff) durch. Resonanz betont die Grenzfrequenz. 24 dB/Oktave (Moog-Typ) schneidet steil und warm, 12 dB (Oberheim-Typ) flach und offen. Hochpass entfernt Tiefen (für Pads über einer Gitarre unverzichtbar). Bandpass lässt ein Band durch, nasal.\n\nHüllkurve ADSR: Attack (Zeit bis zum Maximum), Decay (Zeit bis zum Sustain-Pegel), Sustain (Pegel, solange die Taste hält), Release (Zeit bis zur Stille nach Loslassen). Eine Hüllkurve auf dem Verstärker formt die Lautstärke; eine auf dem Filter formt den Klangverlauf (Cutoff öffnet beim Anschlag und schließt). Pad: Attack 0,5–2 s, Release 1–3 s. Orgel: Attack 0, Sustain voll, Release 0,1 s. Bass: Attack 0, Decay kurz, Sustain mittel.\n\nLFO: langsame Schwingung, die Tonhöhe (Vibrato), Filter (Wah) oder Lautstärke (Tremolo) moduliert. Rate in Hz, Amount in Prozent. Ein LFO auf Pulsbreite (PWM) ist der klassische Streicherklang.\n\nNord Lead A1 und Blofeld sind beide subtraktiv (Blofeld zusätzlich Wavetable, Einheit 2). Die Begriffe sind identisch; nur die Bedienoberfläche unterscheidet sich. Alle Patchrezepte in diesem Kurs sind als Parameter formuliert und in Anhang D auf die Geräte übersetzt."
+    },
+    "te6-1-1": {
+      "title": "Hören · Subtraktive Synthese: Oszillator, Filter, Hüllkurve",
+      "instructions": "Type O Negative, „Love You to Death“, Keyboardflächen unter dem Refrain: Bestimme nach Gehör Wellenform (hell/sägezahnartig oder hohl/rechteckig), Attack (sofort oder einschwingend) und Release (abrupt oder nachklingend). Dann Anathema, „Eternity Part I“, Streicherfläche: dasselbe. Behauptung: Type O Orgel mit Attack 0, Anathema Pad mit Attack über 0,5 s (prüfen).",
+      "checklist": [
+        "Wellenform, Attack, Release beider Flächen geschätzt?",
+        "Schätzung am eigenen Synth nachgebaut und verglichen?"
+      ]
+    },
+    "te6-1-2": {
+      "title": "Modell · Subtraktive Synthese: Oszillator, Filter, Hüllkurve",
+      "instructions": "Derselbe Em-Akkord mit vier Klängen; die Klaviervorschau zeigt nur die Töne. Baue am Synth vier Patches: 1. ein Sägezahn, Filter offen, Attack 0. 2. ein Rechteck, sonst gleich. 3. ein Dreieck. 4. zwei Sägezähne, Detune 10 Cent, Attack 1 s, Release 2 s, Cutoff halb, Hochpass 200 Hz. Spiele den Akkord mit jedem und notiere die Parameter als Tabelle. Beschreibe die Obertöne, die du bei 1 gegenüber 2 hörst.",
+      "checklist": [
+        "Vier Patches gebaut und Parameter tabelliert?",
+        "Obertonunterschied Säge/Rechteck beschrieben?"
+      ]
+    },
+    "te6-1-3": {
+      "title": "Anwendung · Subtraktive Synthese: Oszillator, Filter, Hüllkurve",
+      "instructions": "Baue drei Grundpatches für den Kurs und speichere sie: „Pad“ (zwei Oszillatoren, langsam), „Orgel“ (Rechteck oder Sinus-Stapel, Attack 0, Release kurz), „Bass“ (Sägezahn, Filterhüllkurve, kurzer Decay). Schreibe jedes als Parameterliste gerätneutral auf. Spiele mit jedem die Folge Em–C–D–Em und prüfe, ob der Patch seiner Rolle entspricht.",
+      "checklist": [
+        "Drei Patches gespeichert und gerätneutral dokumentiert?",
+        "Rollentauglichkeit mit der Akkordfolge geprüft?"
+      ]
+    },
+    "tu6-2": {
+      "title": "Wavetable, FM und Modulation",
+      "goal": "Die zwei anderen Syntheseformen des Blofeld kennen und Modulationsrouting als Werkzeug nutzen.",
+      "text": "Wavetable: Statt einer festen Wellenform hat der Oszillator eine Tabelle aus vielen Wellenformen (im Blofeld je 64 pro Tabelle). Ein Parameter (Wave Position) wählt die aktuelle; wird er mit Hüllkurve oder LFO moduliert, wandert der Klang durch die Tabelle. Das ergibt Bewegung im Spektrum, die ein Filter allein nicht liefert: metallisch, glasig, vokalartig. Für Flächen, die sich langsam verändern (Wave Position über 8 Sekunden mit einer Hüllkurve), ist das der Blofeld-Klang schlechthin.\n\nFM (Frequenzmodulation): Ein Oszillator (Modulator) moduliert die Tonhöhe eines anderen (Carrier) so schnell, dass neue Obertöne entstehen. Das Verhältnis der Frequenzen bestimmt, ob das Ergebnis harmonisch (ganzzahlig: 1:1, 2:1, 3:1) oder unharmonisch (1:1,41) klingt. Die Modulationstiefe bestimmt die Helligkeit. Glocken, E-Piano, metallische Bässe. Blofeld hat FM zwischen den Oszillatoren; Nord Lead A1 nur in reduzierter Form. Type O Negatives Glocken- und Chorklänge sind teils FM (prüfen: Vergleiche mit einem DX7-Glockenpatch).\n\nModulationsmatrix: Quelle → Ziel → Amount. Quellen: Hüllkurven, LFOs, Velocity, Modrad, Aftertouch, Keytrack. Ziele: Cutoff, Pitch, Wave Position, Pulsbreite, Lautstärke, FM-Amount. Klanggestaltung ist zu 80 % die Wahl dieser Verbindungen. Beispiele: Velocity → Cutoff (härter anschlagen = heller), LFO → Pitch mit 5 Hz und 10 Cent (Vibrato), Hüllkurve → Wave Position (Klang wandert beim Anschlag), Keytrack → Cutoff (hohe Töne heller).\n\nFür dich: Wavetable für Flächen mit innerer Bewegung, FM für Glocken und Akzente, subtraktiv für alles andere. Nord Lead A1 deckt subtraktiv breit ab; Blofeld ergänzt Wavetable und FM."
+    },
+    "te6-2-1": {
+      "title": "Hören · Wavetable, FM und Modulation",
+      "instructions": "Type O Negative, „Red Water (Christmas Mourning)“: Die Glocken. Harmonisch oder unharmonisch (klingt der Ton nach einem klaren Grundton oder nach Metall)? Dann Anathema, „Far Away“, Keyboardfläche: Verändert sich der Klang, während ein Akkord liegt (Bewegung im Spektrum)? Behauptung: Glocken leicht unharmonisch (FM-artig), Anathema-Fläche statisch (prüfen).",
+      "checklist": [
+        "Harmonizität der Glocken beurteilt?",
+        "Spektrale Bewegung der Fläche beurteilt?"
+      ]
+    },
+    "te6-2-2": {
+      "title": "Modell · Wavetable, FM und Modulation",
+      "instructions": "Takt 1–2 ein liegender Akkord für ein Wavetable-Pad: Wave Position von einer Hüllkurve über 8 s durchfahren. Takt 3–4 eine Glockenlinie für FM: Carrier 1:1, Modulator 3,5:1, Modulationstiefe von einer Hüllkurve mit kurzem Decay. Takt 5–6 beides zusammen. Baue beide Patches (Blofeld oder ein FM-fähiges Gerät) und notiere die Parameter. Wenn nur der Nord Lead verfügbar ist: FM-Anteil und Waveform-Morph verwenden.",
+      "checklist": [
+        "Wavetable-Pad mit hörbarer Bewegung über 8 s?",
+        "FM-Glocke mit unharmonischem Verhältnis gebaut?"
+      ]
+    },
+    "te6-2-3": {
+      "title": "Anwendung · Wavetable, FM und Modulation",
+      "instructions": "Erstelle eine Modulationstabelle für dein Pad-Patch: fünf Verbindungen (Quelle, Ziel, Amount) und je einen Satz, was sie musikalisch bewirken. Mindestens eine Verbindung auf Velocity, eine auf Modrad. Spiele acht Takte Em–C mit dem Patch und nutze beide Spielhilfen bewusst. Nimm auf.",
+      "checklist": [
+        "Fünf Modulationsverbindungen dokumentiert?",
+        "Velocity und Modrad in der Aufnahme hörbar?"
+      ]
+    },
+    "tu6-3": {
+      "title": "Pads, Orgel, Streicher: die Keyboardrollen der Referenzen",
+      "goal": "Die drei Keyboardklänge, die Doom und Gothic tragen, programmieren und ihrer Rolle im Arrangement zuordnen.",
+      "text": "Drei Klänge decken fast alles ab, was Josh Silver (Type O Negative), Martin Powell (My Dying Bride) und Anathemas Keyboards tun.\n\nOrgel: Rechteck oder gestapelte Sinustöne (Grundton, Oktave, Quinte, zweite Oktave: die Zugriegel-Idee), Attack 0, Sustain voll, Release kurz, wenig Filter, optional Leslie-artige Modulation (LFO auf Amplitude und leichtes Pitch, 0,7 Hz langsam / 6 Hz schnell). Rolle: Fläche mit Terz, unbeweglich, Kirchenklang. Type O Negative fast durchgehend (prüfen). Voicing: enge Lage rechts ab C4, Bass weglassen (die Gitarre hat ihn).\n\nStreicher/Pad: zwei bis drei Sägezähne, Detune 8–15 Cent, PWM-LFO 0,3 Hz, Tiefpass 24 dB mit Cutoff bei etwa 2 kHz, Hochpass 150 Hz, Attack 0,8 s, Release 1,5 s, Chorus oder Ensemble-Effekt, Hall. Rolle: Fläche ohne Anschlag, füllt zwischen Gitarrenakkorden. My Dying Bride und Anathema (prüfen). Voicing: weite Lage, Oberstimme führt, langsame Stimmführung aus Phase 2.\n\nChor: wie Pad, aber Bandpass um 800 Hz mit leichter Resonanz und ein Formant-Filter oder Wavetable mit Vokalwellen; Attack 1 s. Rolle: „Stimme“ ohne Text, im Register C4–C6. Type O Negative (prüfen).\n\nKlavier bleibt Klavier: keine Programmierung, aber Rollenwahl. Bei My Dying Bride ist das Klavier oft allein oder mit Violine, nie unter dem Riff (prüfen). Bei Type O Negative eröffnet es Stücke und verschwindet dann.\n\nRegel: Pro Abschnitt ein Keyboardklang. Zwei gleichzeitig nur, wenn sie verschiedene Register haben (Orgel C4–C5, Chor C5–C6)."
+    },
+    "te6-3-1": {
+      "title": "Hören · Pads, Orgel, Streicher: die Keyboardrollen der Referenzen",
+      "instructions": "Type O Negative, „Haunted“ und „Die with Me“: Ordne jedem Keyboardklang, den du hörst, einen der drei Typen zu (Orgel, Pad, Chor) und notiere sein Register. Dann My Dying Bride, „Sear Me MCMXCIII“: Klavier und was noch? Behauptung: Type O Orgel plus Chor in verschiedenen Registern, MDB Klavier ohne Pad (prüfen).",
+      "checklist": [
+        "Jeder gehörte Keyboardklang typisiert und mit Register notiert?",
+        "Gleichzeitige Klänge auf Registertrennung geprüft?"
+      ]
+    },
+    "te6-3-2": {
+      "title": "Modell · Pads, Orgel, Streicher: die Keyboardrollen der Referenzen",
+      "instructions": "Drei Rollen über Em–C: Takt 1–2 Orgel in enger Lage ab G4, Takt 3–4 Pad in weiter Lage mit gehaltenem Akkord, Takt 5–6 Orgel plus Chorstimme darüber (B5–C6). Programmiere Orgel, Pad und Chor nach den Rezepten im Text und spiele die sechs Takte mit Klangwechsel. Notiere für jeden Klang Attack und Release in Sekunden.",
+      "checklist": [
+        "Drei Klänge programmiert und im Wechsel gespielt?",
+        "Attack/Release pro Klang dokumentiert?"
+      ]
+    },
+    "te6-3-3": {
+      "title": "Anwendung · Pads, Orgel, Streicher: die Keyboardrollen der Referenzen",
+      "instructions": "Nimm ein achttaktiges Gitarrenriff auf. Lege drei Keyboardspuren darüber, je eine mit Orgel, Pad, Chor, jeweils in ihrem Register. Höre jede Kombination (Riff + ein Klang) und entscheide, welcher Klang das Riff am besten ergänzt, ohne es zu verdecken. Begründe mit Register und Attack.",
+      "checklist": [
+        "Drei Kombinationen aufgenommen?",
+        "Wahl mit Register- und Attack-Begründung im Log?"
+      ]
+    },
+    "tu6-4": {
+      "title": "Delay-Physik: Zeit, Feedback, Filter, Modulation",
+      "goal": "Die vier Parameter jedes Delays verstehen und Delay-Zeiten aus dem Tempo berechnen.",
+      "text": "Ein Delay speichert das Signal und gibt es verzögert wieder aus. Vier Parameter bestimmen alles.\n\nZeit: Abstand zwischen Original und Wiederholung. Unter 30 ms hört man keine Wiederholung, sondern Verdopplung (Doubling) oder Kammfilter. 30–100 ms: Slapback, ein einzelnes Echo, Rockabilly und Gesang. 100–500 ms: rhythmisches Delay, hörbar als Wiederholung im Takt. Über 500 ms: Raumwirkung, Ambient. Tempo-Synchronisation: 60000 / BPM = Viertel in Millisekunden. Bei ♩ = 60: Viertel 1000 ms, Achtel 500, punktierte Achtel 750, Triole 333. Bei 72: Viertel 833, Achtel 417, punktierte Achtel 625.\n\nFeedback: Anteil des Ausgangs, der zurück in den Eingang geht. 0 % = ein Echo. 30–50 % = drei bis fünf hörbare Wiederholungen. Über 70 % = lange Fahne, ab 100 % Selbstoszillation. Doom nutzt eher wenig Feedback mit langer Zeit als viel Feedback mit kurzer Zeit.\n\nFilter: Jede Wiederholung wird gefiltert. Tiefpass macht die Echos dunkler (Tape-Charakter), Hochpass verhindert Matsch im Bass. Ohne Filter bleiben die Wiederholungen so hell wie das Original und verdecken den nächsten Ton.\n\nModulation: Ein LFO auf der Delay-Zeit erzeugt Tonhöhenschwankung in den Wiederholungen. Leicht (0,3 Hz, wenig Tiefe) = Tape-Gleichlaufschwankung, Wärme. Stark = Chorus-artig, seekrank.\n\nMusikalisch: Ein punktiertes Achtel-Delay über Achtelnoten erzeugt Sechzehntelmuster (der U2-Effekt). Ein Viertel-Delay über Ganzen verdichtet die Fläche. Ein Delay auf der cleanen Arpeggio-Gitarre füllt Lücken zwischen den Tönen (Anathema, prüfen). Auf verzerrten Riffs ist Delay selten sinnvoll, weil das Signal bereits dicht ist; Ausnahme: Solo und Ausklänge."
+    },
+    "te6-4-1": {
+      "title": "Hören · Delay-Physik: Zeit, Feedback, Filter, Modulation",
+      "instructions": "Anathema, „Sentient“ und „Angelica“, cleane Gitarre: Hörst du Wiederholungen? Miss oder schätze die Delay-Zeit relativ zum Tempo (Achtel? punktierte Achtel? Viertel?). Wie viele Wiederholungen? Werden sie dunkler? Behauptung: punktiertes Achtel oder Viertel, zwei bis drei Wiederholungen, gefiltert (prüfen).",
+      "checklist": [
+        "Delay-Zeit als Notenwert bestimmt?",
+        "Anzahl und Filterung der Wiederholungen beschrieben?"
+      ]
+    },
+    "te6-4-2": {
+      "title": "Modell · Delay-Physik: Zeit, Feedback, Filter, Modulation",
+      "instructions": "Takt 1 ein Arpeggio in Achteln mit Pausen. Takt 2 dasselbe, aber die Wiederholungen eines punktierten Achtel-Delays sind als Sechzehntel ausgeschrieben (nur die erste Wiederholung, leiser gedacht). Takt 3–4 ein gehaltener Akkord, dann mit Viertel-Delay als vier Anschläge. Rechne die Delay-Zeiten für ♩ = 60, 72 und 90. Stelle das punktierte Achtel-Delay an einem deiner Geräte ein und spiele Takt 1: Der Klang muss Takt 2 ergeben.",
+      "checklist": [
+        "Delay-Zeiten für drei Tempi berechnet (Achtel, pkt. Achtel, Viertel)?",
+        "Punktiertes Delay am Gerät eingestellt, Takt 1 ergibt Takt 2?"
+      ]
+    },
+    "te6-4-3": {
+      "title": "Anwendung · Delay-Physik: Zeit, Feedback, Filter, Modulation",
+      "instructions": "Erstelle eine Delay-Tabelle für Tempi von 50 bis 100 in Fünferschritten: Viertel, Achtel, punktierte Achtel, Achteltriole, Halbe in Millisekunden. Baue dann drei Delay-Einstellungen für dein Setup: „Arpeggio“ (punktiertes Achtel, 35 % Feedback, Tiefpass), „Fläche“ (Viertel, 50 %, dunkel), „Solo“ (Achtel, 25 %, hell). Notiere jede mit allen vier Parametern.",
+      "checklist": [
+        "Tabelle mit 11 Tempi × 5 Werten?",
+        "Drei Einstellungen mit vier Parametern dokumentiert?"
+      ]
+    },
+    "tu6-5": {
+      "title": "Tape, BBD, digital: was hörbar ist",
+      "goal": "Die drei Delay-Technologien an ihren Artefakten erkennen und wissen, welche Parameter sie nachbilden.",
+      "text": "Tape-Delay (Echoplex, Space Echo, Binson): Das Signal wird auf Band aufgenommen und von einem Wiedergabekopf verzögert gelesen. Artefakte: Höhenverlust pro Durchlauf (jede Wiederholung dunkler, etwa 3–6 dB bei 5 kHz), Gleichlaufschwankungen (langsame Tonhöhenmodulation, 0,3–1 Hz, wenige Cent), Bandsättigung (leichte Kompression und Verzerrung bei hohem Pegel, die Wiederholungen werden „weicher“ und lauter als erwartet), Rauschen. Zeitbereich typisch 80–600 ms. Klang: warm, verwaschen, die Wiederholungen verschmelzen zu einer Fahne.\n\nBBD (Bucket Brigade Device, Analog-Delay wie Memory Man, DM-2): Eine Kette von Kondensatoren reicht das Signal weiter, getaktet von einem Oszillator. Artefakte: starker Höhenverlust (Tiefpass oft bei 3 kHz, jede Wiederholung dunkler), Taktrauschen, leichte Verzerrung, kurze Maximalzeit (300–600 ms bei alten Geräten). Modulation ist eingebaut (Chorus-Schaltung): der Takt wird von einem LFO moduliert. Klang: dunkel, dicht, „hinter“ dem Original.\n\nDigital: exakte Kopie, beliebige Zeit, kein Höhenverlust, es sei denn absichtlich. Klang: klar, präsent, kann klinisch wirken; Wiederholungen konkurrieren mit dem Original.\n\nDieselben vier Parameter aus Einheit 4 bilden alles ab: Tape = mittlere Zeit, Tiefpass moderat, Modulation leicht, Sättigung (falls vorhanden). BBD = Tiefpass stark, Modulation eingebaut, Zeit kurz. Digital = Filter aus, Modulation aus. Die Referenzen: Type O Negative auf Gitarre und Bass eher Chorus (BBD-Familie) als Delay (prüfen); Anathema digitales oder Tape-artiges Delay auf cleaner Gitarre (prüfen); My Dying Bride Hall statt Delay (prüfen).\n\nUnterscheidungstest: Höre die dritte Wiederholung. Tape: dunkler und leicht schwankend. BBD: viel dunkler, fast nur Mitten. Digital: identisch zum Original."
+    },
+    "te6-5-1": {
+      "title": "Hören · Tape, BBD, digital: was hörbar ist",
+      "instructions": "Nimm zwei Referenzstellen mit hörbarem Delay: Anathema, „Sentient“ (cleane Gitarre) und eine Stelle deiner Wahl aus einem beliebigen Album mit klar erkennbarem Echo. Wende den Unterscheidungstest an: dritte Wiederholung, dunkler? schwankend? identisch? Ordne Tape, BBD oder digital zu. Behauptung: Anathema digital oder Tape, nicht BBD (prüfen).",
+      "checklist": [
+        "Dritte Wiederholung an zwei Stellen beurteilt?",
+        "Technologie zugeordnet und begründet?"
+      ]
+    },
+    "te6-5-2": {
+      "title": "Modell · Tape, BBD, digital: was hörbar ist",
+      "instructions": "Ein einzelner Ton pro Takt, damit die Wiederholungen frei stehen. Stelle an einem Gerät drei Delays mit derselben Zeit (Viertel) und demselben Feedback (50 %) ein: 1. Tape-Modell: Tiefpass 5 kHz, Modulation 0,5 Hz leicht, Sättigung falls vorhanden. 2. BBD-Modell: Tiefpass 2,5 kHz, Modulation 0,8 Hz etwas tiefer. 3. Digital: alles aus. Spiele den Ton und höre die dritte Wiederholung. Notiere die Unterschiede in Worten.",
+      "checklist": [
+        "Drei Modelle mit gleicher Zeit und Feedback eingestellt?",
+        "Unterschiede der dritten Wiederholung beschrieben?"
+      ]
+    },
+    "te6-5-3": {
+      "title": "Anwendung · Tape, BBD, digital: was hörbar ist",
+      "instructions": "Spiele dasselbe viertaktige Arpeggio mit den drei Delay-Modellen und nimm auf. Höre jede Aufnahme mit dem Gitarrenriff darunter (aus einer früheren Aufnahme). Entscheide, welches Modell sich am besten unter das Riff legt, ohne es zu verdecken, und welches allein am besten klingt. Die zwei Antworten dürfen verschieden sein.",
+      "checklist": [
+        "Drei Aufnahmen mit und ohne Riff verglichen?",
+        "Zwei Entscheidungen mit Begründung im Log?"
+      ]
+    },
+    "tu6-6": {
+      "title": "Approximation auf 2290, G-Major, Nova System",
+      "goal": "Tape- und BBD-Charakter mit den Parametern der drei TC-Geräte nachbilden und die Ergebnisse als Presets dokumentieren.",
+      "text": "Alle drei Geräte sind digitale Delays; Tape und BBD müssen aus Zeit, Feedback, Filter und Modulation gebaut werden. Parameterbezeichnungen unterscheiden sich; die folgende Zuordnung ist nach Handbüchern erstellt und am Gerät zu prüfen (prüfen).\n\nTC 2290: Delay-Zeit in ms bis 32 s (je nach Speicher), Feedback in Prozent, „Feedback High-Cut“/Filter im Feedbackweg, Modulation über den internen LFO auf Delay-Zeit (Pitch-Mod) mit Speed und Depth, „Dynamic Delay“ (Ducking: das Delay wird leiser, solange gespielt wird). Tape-Näherung: Zeit nach Tabelle, Feedback 40 %, High-Cut so tief wie das Gerät erlaubt (um 5 kHz), Pitch-Mod Speed 0,4 Hz, Depth minimal. BBD-Näherung: High-Cut tiefer (2–3 kHz, falls erreichbar; sonst EQ vor dem Delay), Mod Speed 0,8 Hz, Depth etwas höher, Zeit unter 400 ms. Die 2290 färbt von sich aus kaum; ihr Charakter ist die Modulation.\n\nTC G-Major: Delay-Block mit Typen (Single, Ping-Pong, Dual, „Tape“ oder ähnlich je nach Firmware), Feedback, Hi-Cut und Lo-Cut im Feedback, Modulation (Speed, Depth), Tempo-Sync mit Notenwert. Tape-Näherung: Typ Tape falls vorhanden, sonst Single mit Hi-Cut 4–5 kHz, Feedback 40 %, Mod Depth klein. BBD: Hi-Cut 2,5 kHz, Lo-Cut 150 Hz, Mod etwas höher. G-Major hat außerdem Chorus, Pitch und Hall in derselben Kette; Reihenfolge der Blöcke beachten.\n\nTC Nova System: Delay-Block mit Typen (Clean, Analog, Tape, Ping-Pong, Dynamic, je nach Firmware), Feedback, Hi-Cut, Lo-Cut, Tempo-Sync. Die Typen „Analog“ und „Tape“ sind bereits Approximationen; prüfe, wie stark sie filtern und modulieren, und korrigiere mit Hi-Cut und Modulation nach. Nova hat Drive und Kompressor vor dem Delay; für BBD-Charakter leichte Drive vor dem Delay.\n\nVorgehen: 1. Referenzklang bestimmen (Tape oder BBD, Zeit als Notenwert). 2. Gerät wählen. 3. Preset nach Tabelle bauen. 4. Unterscheidungstest anwenden (dritte Wiederholung). 5. Als Preset speichern und die Parameter ins Log. Anhang D enthält die Übersetzungstabelle der Parameternamen."
+    },
+    "te6-6-1": {
+      "title": "Hören · Approximation auf 2290, G-Major, Nova System",
+      "instructions": "Höre Anathema, „Sentient“, cleane Gitarre, und bestimme das Ziel: Notenwert, ungefähres Feedback (Anzahl hörbarer Wiederholungen), Helligkeit der Wiederholungen. Schreibe eine Zielbeschreibung in fünf Parametern, bevor du ein Gerät anfasst. Behauptung: punktiertes Achtel, drei Wiederholungen, mittel gefiltert (prüfen).",
+      "checklist": [
+        "Zielbeschreibung mit fünf Parametern vor dem Bauen geschrieben?",
+        "Feedback über Wiederholungszahl geschätzt?"
+      ]
+    },
+    "te6-6-2": {
+      "title": "Modell · Approximation auf 2290, G-Major, Nova System",
+      "instructions": "Testmaterial: ein Arpeggio bei ♩ = 72. Baue das Tape-Preset nacheinander auf 2290, G-Major und Nova System nach den Rezepten im Text: Zeit 625 ms (punktierte Achtel bei 72), Feedback 40 %, High-Cut um 5 kHz, Modulation leicht. Spiele das Arpeggio mit jedem Gerät und nimm auf. Notiere pro Gerät die tatsächlichen Parameternamen und -werte. Wo ein Gerät einen Parameter nicht hat, notiere den Ersatz.",
+      "checklist": [
+        "Tape-Preset auf allen drei Geräten gebaut und aufgenommen?",
+        "Parameternamen und Ersatzlösungen pro Gerät dokumentiert?"
+      ]
+    },
+    "te6-6-3": {
+      "title": "Anwendung · Approximation auf 2290, G-Major, Nova System",
+      "instructions": "Wiederhole das Verfahren für das BBD-Preset auf allen drei Geräten. Vergleiche die sechs Aufnahmen (2 Modelle × 3 Geräte) blind: Lass die Reihenfolge mischen und ordne nach Gehör zu. Notiere Trefferquote und welches Gerät welchem Modell am nächsten kommt. Speichere die zwei besten als benannte Presets.",
+      "checklist": [
+        "Sechs Aufnahmen blind zugeordnet, Trefferquote notiert?",
+        "Zwei Presets gespeichert und dokumentiert?"
+      ]
+    },
+    "tu6-7": {
+      "title": "Hall: Raum, Platte, Feder, und wann keiner",
+      "goal": "Halltypen an ihren Parametern erkennen und Hall als Registerentscheidung verstehen.",
+      "text": "Hall ist die Summe tausender Reflexionen. Parameter: Pre-Delay (Zeit bis zur ersten Reflexion, 0–100 ms; größer = größerer Raum und mehr Trennung vom Original), Decay/Nachhallzeit (Zeit bis −60 dB, 0,5–10 s), Dämpfung/High-Damp (Höhen sterben früher als Tiefen, wie in echten Räumen), Diffusion (Dichte der Reflexionen), Mix. Hochpass auf dem Hallsignal (150–300 Hz) hält den Bassbereich sauber; das ist die wichtigste Einstellung für diese Musik.\n\nTypen: Room (kurz, 0,5–1,5 s, natürlich), Hall (lang, 2–5 s, Konzertsaal, Kirche), Plate (dicht, hell, ohne Raumgefühl, klassisch für Gesang und Snare), Spring (Federhall, metallisch, Gitarrenverstärker, kurzer „Boing“), Ambient/Shimmer (mit Tonhöhenverschiebung, kein Vorbild in den Referenzen).\n\nDie Referenzen: My Dying Bride nutzen langen Hall auf Violine und Gesang, kurzen oder keinen auf dem Riff (prüfen). Type O Negative haben Hall auf allem, aber mit Hochpass, sodass der Bass trocken bleibt (prüfen). Anathema legen Plate oder Hall auf die cleane Gitarre und wenig auf die verzerrte (prüfen). Vivaldi und Biber wurden in Kirchen und Sälen gespielt; historische Aufnahmen haben 2–4 s natürlichen Hall, der Teil des Klangs ist.\n\nRegel: Hall verlängert Töne (Phase 5) und füllt Register. Auf dem Fundament (Bass, tiefe Gitarre) kein oder minimaler Hall mit Hochpass, sonst Matsch. Auf Linie und Fläche (Violine, Pad, Leadgitarre) langer Hall. Auf dem Riff: Room oder nichts. Bei Solospiel ohne Band ist Hall das einzige „zweite Instrument“, das du hast; nutze ihn, aber nur oben.\n\nDie drei TC-Geräte haben je einen Hall-Block; G-Major und Nova mit Typen (Room, Hall, Plate, Spring), 2290 ohne (nur über Delay-Netzwerke). Anhang D ordnet die Parameter zu."
+    },
+    "te6-7-1": {
+      "title": "Hören · Hall: Raum, Platte, Feder, und wann keiner",
+      "instructions": "My Dying Bride, „Sear Me MCMXCIII“: Schätze die Nachhallzeit auf der Violine (Sekunden vom Tonende bis zur Stille) und auf dem Klavier. Dann Type O Negative, „Haunted“: Hat der Bass Hall? Die Orgel? Behauptung: MDB-Violine über 3 s, Type-O-Bass trocken, Orgel lang (prüfen).",
+      "checklist": [
+        "Nachhallzeiten geschätzt?",
+        "Hall pro Instrument bei Type O bestimmt?"
+      ]
+    },
+    "te6-7-2": {
+      "title": "Modell · Hall: Raum, Platte, Feder, und wann keiner",
+      "instructions": "Takt 1–2 ein Riff mit Pausen, Takt 3–4 eine hohe Linie mit Pausen. Spiele Takt 1–2 mit Room (0,8 s, Hochpass 200 Hz, Mix 15 %) und mit Hall (3 s, Mix 40 %): Die Pausen müssen im ersten Fall hörbar bleiben und werden im zweiten gefüllt. Spiele Takt 3–4 mit denselben zwei Einstellungen. Entscheide für jede Hälfte, welche Einstellung passt, und notiere die Parameter.",
+      "checklist": [
+        "Beide Hälften mit beiden Halltypen gespielt?",
+        "Zuordnung mit Parametern im Log?"
+      ]
+    },
+    "te6-7-3": {
+      "title": "Anwendung · Hall: Raum, Platte, Feder, und wann keiner",
+      "instructions": "Baue zwei Hall-Presets auf G-Major oder Nova System: „Riff“ (Room, kurz, Hochpass hoch, wenig Mix) und „Linie“ (Hall oder Plate, lang, Pre-Delay 40 ms, mehr Mix). Spiele ein achttaktiges Solostück, das zwischen Riff und hoher Linie wechselt, und schalte die Presets an den Grenzen um. Nimm auf und höre, ob der Wechsel als Raumwechsel stört oder als Registerwechsel hilft.",
+      "checklist": [
+        "Zwei Presets gebaut und dokumentiert?",
+        "Umschaltwirkung im Log beurteilt?"
+      ]
+    },
+    "tu6-8": {
+      "title": "Chorus, Flanger, Phaser: der Type-O-Klang",
+      "goal": "Die drei Modulationseffekte unterscheiden und Chorus als Breitenwerkzeug für Bass und Gitarre einsetzen.",
+      "text": "Alle drei sind kurze Delays mit modulierter Zeit, gemischt mit dem Original. Der Unterschied ist die Zeit und ob Feedback vorhanden ist.\n\nChorus: 15–35 ms, LFO 0,3–2 Hz, kein oder wenig Feedback. Ergebnis: Tonhöhenschwebung wie zwei leicht verstimmte Instrumente, Breite, „Ensemble“. Stereo-Chorus schickt Original und Effekt auf verschiedene Seiten. Das ist die BBD-Technologie aus Einheit 5 in kurzer Form; alte Chorus-Pedale sind BBD.\n\nFlanger: 1–10 ms, LFO langsam, mit Feedback. Ergebnis: Kammfilter, der durch das Spektrum wandert, „Düsenflugzeug“. Auffällig; in den Referenzen selten.\n\nPhaser: kein Delay, sondern Allpass-Filter, die Phasen verschieben; Kerben im Spektrum wandern. Weicher als Flanger, ohne Tonhöhenschwebung. Klassisch auf E-Piano und Orgel.\n\nType O Negative: Chorus auf Bass und Gitarre fast durchgehend (prüfen). Der Bass mit Chorus und Oktaver (Phase 2) wird breit und tief zugleich; die Gitarre in B mit Chorus verliert Schärfe und gewinnt Fläche. Das ist der Grund, warum das Album trotz weniger Instrumente voll klingt. Anathema: Chorus auf cleaner Gitarre, gelegentlich (prüfen). My Dying Bride: fast kein Chorus (prüfen).\n\nEinstellung für Bass: Chorus Rate 0,5 Hz, Depth 30 %, Mix 40 %, Hochpass auf dem Effektsignal, damit der Grundton trocken bleibt (sonst wird das Fundament unscharf). Für Gitarre clean: Rate 0,8 Hz, Depth 40 %, Mix 50 %. Für verzerrte Gitarre: nach der Verzerrung, Rate 0,3 Hz, Depth 20 %, Mix 30 %; mehr wird seekrank.\n\nGerätzuordnung: G-Major und Nova haben Chorus, Flanger, Phaser als Blöcke. 2290 hat Chorus über modulierte kurze Delays. Nord Lead A1 und Blofeld haben Chorus als Effektsektion, der Blofeld auch Phaser und Flanger. Anhang D."
+    },
+    "te6-8-1": {
+      "title": "Hören · Chorus, Flanger, Phaser: der Type-O-Klang",
+      "instructions": "Type O Negative, „Love You to Death“, Bass unter der ersten Strophe und Gitarre im Refrain: Hörst du Schwebung (Chorus)? Schätze die Rate (langsam unter 1 Hz oder schneller). Dann Anathema, „Angelica“, cleane Gitarre: Chorus? Behauptung: Type O Bass und Gitarre mit langsamem Chorus, Anathema wenig (prüfen).",
+      "checklist": [
+        "Chorus auf Bass und Gitarre bei Type O bestätigt und Rate geschätzt?",
+        "Anathema-Gitarre beurteilt?"
+      ]
+    },
+    "te6-8-2": {
+      "title": "Modell · Chorus, Flanger, Phaser: der Type-O-Klang",
+      "instructions": "Derselbe Powerchord viermal. Spiele ihn trocken, mit Chorus (25 ms, 0,5 Hz, 30 %), mit Flanger (3 ms, 0,2 Hz, Feedback 50 %), mit Phaser (4 Stufen, 0,3 Hz). Nimm alle vier auf. Beschreibe für jeden Effekt, ob die Tonhöhe schwebt (Chorus), das Spektrum wandert (Flanger/Phaser), und ob das Fundament unscharf wird. Wiederhole mit Hochpass auf dem Effektsignal.",
+      "checklist": [
+        "Vier Fassungen aufgenommen und Artefakte beschrieben?",
+        "Hochpass-Wirkung auf das Fundament beurteilt?"
+      ]
+    },
+    "te6-8-3": {
+      "title": "Anwendung · Chorus, Flanger, Phaser: der Type-O-Klang",
+      "instructions": "Baue den Type-O-Bassklang nach: Oktaver (falls vorhanden, sonst Keyboard-Bass eine Oktave tiefer dazu), Chorus langsam, Hochpass auf dem Chorus-Signal, leichte Verzerrung. Spiele ein viertaktiges Riff und nimm auf. Vergleiche mit einer trockenen Fassung unter deinem Gitarrenriff: Welche trägt besser? Notiere die Kette mit allen Werten.",
+      "checklist": [
+        "Kette mit Oktave, Chorus, Hochpass gebaut und dokumentiert?",
+        "Vergleich unter dem Gitarrenriff im Log?"
+      ]
+    },
+    "tu6-9": {
+      "title": "Gain-Staging und Verzerrungsarten",
+      "goal": "Die Signalkette der Gitarre als Folge von Pegeln verstehen und Verzerrungstypen dem Klangziel zuordnen.",
+      "text": "Gain-Staging heißt: An jeder Stufe der Kette ist der Pegel so, dass die nächste Stufe weder rauscht (zu leise) noch ungewollt verzerrt (zu laut). Die Kette: Tonabnehmer → (Pedale) → Vorstufe → Effektschleife (hier sitzen 2290, G-Major, Nova) → Endstufe → Lautsprecher. Verzerrung gehört vor die Effektschleife; Delay, Hall, Chorus dahinter. Sonst werden die Wiederholungen mitverzerrt und verschmieren.\n\nVerzerrungstypen: Overdrive (weiches Clipping, Röhrenvorstufe, dynamisch: leise spielen = fast clean), Distortion (hartes Clipping, mehr Kompression, gleichmäßig), Fuzz (extremes Clipping, Rechteck-nahe Wellenform, Doom-Klassiker seit Sabbath, matschig bei Akkorden), High-Gain (mehrstufige Vorstufenverzerrung, sehr komprimiert, Metal-Standard). Mehr Gain = mehr Kombinationstöne (Phase 0) = weniger verträgliche Intervalle. Regel: So wenig Gain, wie das Sustain-Ziel erlaubt (Phase 5).\n\nDie Referenzen: My Dying Bride Distortion mittel bis hoch, Gitarren in Terzen deshalb im hohen Register (prüfen). Type O Negative Distortion mit Chorus, eher mittel, wenig Höhen, viel Tiefmitten (prüfen). Anathema zwei Gitarren: eine clean mit Kompressor, eine verzerrt mittel (prüfen).\n\nPegelkontrolle in der Schleife: G-Major und Nova haben Eingangs- und Ausgangspegel; die 2290 ebenfalls. Ziel: Eingangs-LED knapp unter Clip beim lautesten Akkord. Zu leise → Rauschen bei Hall und Delay. Zu laut → digitales Clipping, hart und hässlich. Nova hat zusätzlich eigene Drive-Blöcke, die vor die Modulationseffekte gehören.\n\nKompressor: Vor der Verzerrung erhöht er Sustain und glättet den Anschlag (clean Arpeggio, Anathema). Nach der Verzerrung ist er meist überflüssig, weil Verzerrung schon komprimiert."
+    },
+    "te6-9-1": {
+      "title": "Hören · Gain-Staging und Verzerrungsarten",
+      "instructions": "Vergleiche die Verzerrung dreier Riffs: My Dying Bride, „The Crown of Sympathy“; Type O Negative, „Wolf Moon“; Anathema, „Sentient“ (verzerrter Teil). Ordne jedem einen Typ zu (Overdrive, Distortion, Fuzz, High-Gain) und schätze das Gain (niedrig, mittel, hoch). Behauptung: alle drei mittel, keiner Fuzz oder High-Gain (prüfen).",
+      "checklist": [
+        "Drei Riffs mit Typ und Gain-Schätzung?",
+        "Tiefmitten- und Höhenanteil je Riff beschrieben?"
+      ]
+    },
+    "te6-9-2": {
+      "title": "Modell · Gain-Staging und Verzerrungsarten",
+      "instructions": "Pro Takt ein Em-Dreiklang mit Terz und dann ein Powerchord ohne Terz. Spiele die vier Takte mit vier Gain-Stufen: clean, Overdrive, Distortion, Fuzz (oder die vier Stufen deines Amps). Höre in jedem Takt, ob die Terz noch als Ton oder schon als Rauschen erscheint. Notiere für jede Stufe: Terz brauchbar ja/nein, Sustain in Sekunden, Anschlag hart/weich.",
+      "checklist": [
+        "Vier Gain-Stufen mit Terz- und Sustain-Urteil notiert?",
+        "Gain-Stufe für Terzen und Gain-Stufe für Powerchords festgelegt?"
+      ]
+    },
+    "te6-9-3": {
+      "title": "Anwendung · Gain-Staging und Verzerrungsarten",
+      "instructions": "Zeichne deine gesamte Signalkette mit Pegel an jeder Stufe: Tonabnehmer, Pedale, Vorstufe, Schleife (welches Gerät in welcher Reihenfolge), Endstufe. Stelle die Eingangspegel der Effektgeräte nach der Regel ein (knapp unter Clip beim lautesten Akkord) und notiere die Werte. Spiele ein Riff mit Delay und Hall und prüfe, ob die Wiederholungen sauber (unverzerrt) sind.",
+      "checklist": [
+        "Signalkette mit Reihenfolge und Pegeln gezeichnet?",
+        "Wiederholungen unverzerrt bestätigt?"
+      ]
+    },
+    "tu6-10": {
+      "title": "Frequenzräume im Arrangement",
+      "goal": "Alle Klangquellen eines Stücks so verteilen, dass jede ihren Bereich hat; EQ als Platzschaffung, nicht als Verschönerung.",
+      "text": "Ein Arrangement ist ein Frequenzplan. Jede Quelle hat einen Grundtonbereich und einen Obertonbereich; beide dürfen sich mit anderen Quellen nicht ungeplant überlagern. Phase 3 hat die Bereiche genannt: Sub 20–60, Bass 60–250, Tiefmitten 250–500, Mitten 500–2k, Höhen 2k–20k Hz.\n\nTypische Verteilung für dein Setup: Kick 50–80 Hz plus Anschlag 3–5 kHz. Bass 60–200 Hz plus Obertöne bis 1 kHz. Gitarre verzerrt 100 Hz–4 kHz, mit Schwerpunkt 200–800 Hz. Gitarre clean 150 Hz–6 kHz. Pad 300 Hz–8 kHz mit Hochpass bei 300. Orgel 250 Hz–5 kHz. Chor/Linie 500 Hz–8 kHz. Hi-Hat ab 5 kHz.\n\nWerkzeuge: Hochpass auf allem, was nicht Fundament ist (die wichtigste Regel). Tiefpass auf Verzerrung über 6–8 kHz (Fizz weg). Schmale Absenkung dort, wo zwei Quellen kollidieren: Gitarre bei 300 Hz absenken, wenn der Bass dort sitzt; Pad bei 800 Hz, wenn der Gesang oder die Linie dort liegt. Nie zwei Quellen im selben Bereich gleich laut.\n\nDie Referenzen als Frequenzpläne: Type O Negative: Bass unten allein, Gitarre in den Tiefmitten, Orgel und Chor in den Mitten und Höhen, Gesang in zwei Oktaven dazwischen; das ist ein perfekter Stapel (prüfen). My Dying Bride: Gitarren doppeln sich, Bass verdoppelt die Gitarren; Violine und Gesang über allem; der Stapel ist unten dicht und oben dünn (prüfen). Anathema: cleane und verzerrte Gitarre teilen sich die Mitten durch Stereo-Position, nicht durch Frequenz (prüfen).\n\nBei Solospiel (Gitarre allein oder Keyboard allein) ist der Frequenzplan das Register der Stimmen: Bass tief, Melodie hoch, Innenstimme dazwischen. Der Instrumentalkurs hat das musikalisch gelehrt; hier ist die akustische Begründung."
+    },
+    "te6-10-1": {
+      "title": "Hören · Frequenzräume im Arrangement",
+      "instructions": "Zeichne für drei Stellen einen Frequenzplan (Quelle, Bereich von–bis Hz geschätzt): Type O Negative, „Be My Druidess“, Refrain; My Dying Bride, „Your River“, Riff mit Violine; Anathema, „Eternity Part I“, voller Abschnitt. Markiere Überlappungen. Behauptung: Type O ohne Überlappung, MDB Überlappung unten, Anathema Überlappung in den Mitten (prüfen).",
+      "checklist": [
+        "Drei Frequenzpläne gezeichnet?",
+        "Überlappungen markiert und mit der Behauptung verglichen?"
+      ]
+    },
+    "te6-10-2": {
+      "title": "Modell · Frequenzräume im Arrangement",
+      "instructions": "Der Stapel wächst pro Takt um eine Schicht: Bass E2, Gitarrenquinte E3–B3, Pad ab G4, Linie ab G5. Baue ihn mit deinen Quellen nach: Keyboard-Bass, Gitarre, Pad-Patch, Linie auf Gitarre oder Synth. Setze auf Pad und Linie einen Hochpass bei 300 Hz. Höre den Stapel mit und ohne die Hochpässe. Notiere, welche Schicht ohne Hochpass das Fundament verdeckt.",
+      "checklist": [
+        "Vier Schichten mit eigenen Quellen aufgebaut?",
+        "Hochpass-Wirkung pro Schicht beurteilt?"
+      ]
+    },
+    "te6-10-3": {
+      "title": "Anwendung · Frequenzräume im Arrangement",
+      "instructions": "Erstelle den Frequenzplan für dein Abschlussstück aus dem Instrumentalkurs, erweitert um Drums, Bass und eine Keyboardschicht. Trage für jede Quelle Bereich, Hochpass-Frequenz und eine Absenkung ein, wo sie mit einer anderen kollidiert. Nimm eine viertaktige Stelle mit allen Schichten auf, einmal ohne, einmal mit EQ-Plan, und vergleiche.",
+      "checklist": [
+        "Frequenzplan mit Hochpass und Absenkung pro Quelle?",
+        "Vergleich ohne/mit EQ im Log?"
+      ]
     }
   },
   "ui": {

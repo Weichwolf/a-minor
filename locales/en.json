@@ -4737,6 +4737,300 @@
         "Two pattern versions recorded with the same riff?",
         "Standard chosen and noted device-neutrally?"
       ]
+    },
+    "t6": {
+      "title": "Sound",
+      "goal": "Subtractive, wavetable and FM synthesis; pads, organ, strings; delay physics, tape and BBD, approximation on 2290, G-Major, Nova System; reverb, chorus, gain staging and frequency spaces in the arrangement."
+    },
+    "tu6-1": {
+      "title": "Subtractive synthesis: oscillator, filter, envelope",
+      "goal": "Master the signal chain of a subtractive synthesizer from waveform to output.",
+      "text": "Subtractive means: a harmonically rich signal is reduced by filters. The chain: oscillator → filter → amplifier, each with envelope and LFO as modulation.\n\nOscillator: sawtooth has all partials (1/n), sounds bright and cutting, the basis for strings and brass. Square has only odd partials, sounds hollow, clarinet-like; pulse width changes the spectrum (narrow = nasal). Triangle has odd partials at 1/n², soft, flute-like. Sine has only the fundamental. Two oscillators slightly detuned (5–15 cents) produce beating and width; that is the basis of every pad.\n\nFilter: low-pass lets everything below the cutoff frequency through. Resonance emphasises the cutoff. 24 dB/octave (Moog type) cuts steeply and warm, 12 dB (Oberheim type) gently and open. High-pass removes lows (indispensable for pads over a guitar). Band-pass lets a band through, nasal.\n\nEnvelope ADSR: attack (time to maximum), decay (time to the sustain level), sustain (level while the key is held), release (time to silence after release). An envelope on the amplifier shapes loudness; one on the filter shapes the timbral course (cutoff opens on attack and closes). Pad: attack 0.5–2 s, release 1–3 s. Organ: attack 0, sustain full, release 0.1 s. Bass: attack 0, decay short, sustain medium.\n\nLFO: slow oscillation modulating pitch (vibrato), filter (wah) or loudness (tremolo). Rate in Hz, amount in percent. An LFO on pulse width (PWM) is the classic string sound.\n\nNord Lead A1 and Blofeld are both subtractive (Blofeld also wavetable, unit 2). The terms are identical; only the front panel differs. All patch recipes in this course are formulated as parameters and translated to the devices in appendix D."
+    },
+    "te6-1-1": {
+      "title": "Listen · Subtractive synthesis: oscillator, filter, envelope",
+      "instructions": "Type O Negative, \"Love You to Death\", keyboard pads under the chorus: determine by ear the waveform (bright/sawtooth-like or hollow/square), attack (immediate or swelling) and release (abrupt or lingering). Then Anathema, \"Eternity Part I\", string pad: the same. Claim: Type O organ with attack 0, Anathema pad with attack over 0.5 s (verify).",
+      "checklist": [
+        "Waveform, attack, release of both pads estimated?",
+        "Estimate rebuilt on your own synth and compared?"
+      ]
+    },
+    "te6-1-2": {
+      "title": "Model · Subtractive synthesis: oscillator, filter, envelope",
+      "instructions": "The same Em chord with four sounds; the piano preview shows only the tones. Build four patches on the synth: 1. one sawtooth, filter open, attack 0. 2. one square, otherwise identical. 3. one triangle. 4. two sawtooths, detune 10 cents, attack 1 s, release 2 s, cutoff half, high-pass 200 Hz. Play the chord with each and write the parameters as a table. Describe the overtones you hear in 1 compared with 2.",
+      "checklist": [
+        "Four patches built and parameters tabulated?",
+        "Overtone difference saw/square described?"
+      ]
+    },
+    "te6-1-3": {
+      "title": "Application · Subtractive synthesis: oscillator, filter, envelope",
+      "instructions": "Build three base patches for the course and save them: \"Pad\" (two oscillators, slow), \"Organ\" (square or sine stack, attack 0, short release), \"Bass\" (sawtooth, filter envelope, short decay). Write each as a device-neutral parameter list. Play Em–C–D–Em with each and check whether the patch matches its role.",
+      "checklist": [
+        "Three patches saved and documented device-neutrally?",
+        "Role suitability checked with the progression?"
+      ]
+    },
+    "tu6-2": {
+      "title": "Wavetable, FM and modulation",
+      "goal": "Know the two other synthesis forms of the Blofeld and use modulation routing as a tool.",
+      "text": "Wavetable: instead of a fixed waveform the oscillator has a table of many waveforms (in the Blofeld 64 per table). One parameter (wave position) selects the current one; modulated by envelope or LFO, the sound travels through the table. This gives spectral motion a filter alone cannot supply: metallic, glassy, vowel-like. For pads that change slowly (wave position over 8 seconds with an envelope) this is the Blofeld sound par excellence.\n\nFM (frequency modulation): one oscillator (modulator) modulates the pitch of another (carrier) so fast that new overtones arise. The frequency ratio determines whether the result sounds harmonic (integer: 1:1, 2:1, 3:1) or inharmonic (1:1.41). The modulation depth determines brightness. Bells, electric piano, metallic basses. The Blofeld has FM between its oscillators; the Nord Lead A1 only in reduced form. Type O Negative's bell and choir sounds are partly FM (verify: compare with a DX7 bell patch).\n\nModulation matrix: source → destination → amount. Sources: envelopes, LFOs, velocity, mod wheel, aftertouch, keytrack. Destinations: cutoff, pitch, wave position, pulse width, loudness, FM amount. Sound design is 80 % the choice of these connections. Examples: velocity → cutoff (hit harder = brighter), LFO → pitch at 5 Hz and 10 cents (vibrato), envelope → wave position (sound travels on attack), keytrack → cutoff (high notes brighter).\n\nFor you: wavetable for pads with inner motion, FM for bells and accents, subtractive for everything else. The Nord Lead A1 covers subtractive broadly; the Blofeld adds wavetable and FM."
+    },
+    "te6-2-1": {
+      "title": "Listen · Wavetable, FM and modulation",
+      "instructions": "Type O Negative, \"Red Water (Christmas Mourning)\": the bells. Harmonic or inharmonic (does the tone have a clear fundamental or sound like metal)? Then Anathema, \"Far Away\", keyboard pad: does the sound change while a chord is held (spectral motion)? Claim: bells slightly inharmonic (FM-like), Anathema pad static (verify).",
+      "checklist": [
+        "Harmonicity of the bells assessed?",
+        "Spectral motion of the pad assessed?"
+      ]
+    },
+    "te6-2-2": {
+      "title": "Model · Wavetable, FM and modulation",
+      "instructions": "Bars 1–2 a held chord for a wavetable pad: sweep wave position with an envelope over 8 s. Bars 3–4 a bell line for FM: carrier 1:1, modulator 3.5:1, modulation depth from an envelope with short decay. Bars 5–6 both together. Build both patches (Blofeld or an FM-capable device) and note the parameters. If only the Nord Lead is available: use its FM amount and waveform morph.",
+      "checklist": [
+        "Wavetable pad with audible motion over 8 s?",
+        "FM bell built with an inharmonic ratio?"
+      ]
+    },
+    "te6-2-3": {
+      "title": "Application · Wavetable, FM and modulation",
+      "instructions": "Create a modulation table for your pad patch: five connections (source, destination, amount) with one sentence each on what they do musically. At least one connection on velocity, one on mod wheel. Play eight bars of Em–C with the patch and use both performance controls deliberately. Record.",
+      "checklist": [
+        "Five modulation connections documented?",
+        "Velocity and mod wheel audible in the recording?"
+      ]
+    },
+    "tu6-3": {
+      "title": "Pads, organ, strings: the keyboard roles of the references",
+      "goal": "Program the three keyboard sounds that carry doom and gothic and assign them their role in the arrangement.",
+      "text": "Three sounds cover almost everything Josh Silver (Type O Negative), Martin Powell (My Dying Bride) and Anathema's keyboards do.\n\nOrgan: square or stacked sines (fundamental, octave, fifth, second octave: the drawbar idea), attack 0, sustain full, release short, little filtering, optional Leslie-like modulation (LFO on amplitude and slight pitch, 0.7 Hz slow / 6 Hz fast). Role: pad with the third, immobile, church sound. Type O Negative almost throughout (verify). Voicing: close position right hand from C4, omit the bass (the guitar has it).\n\nStrings/pad: two or three sawtooths, detune 8–15 cents, PWM LFO 0.3 Hz, 24 dB low-pass with cutoff around 2 kHz, high-pass 150 Hz, attack 0.8 s, release 1.5 s, chorus or ensemble effect, reverb. Role: pad without attack, fills between guitar chords. My Dying Bride and Anathema (verify). Voicing: open position, top voice leads, slow voice leading from phase 2.\n\nChoir: like pad, but band-pass around 800 Hz with slight resonance and a formant filter or wavetable with vowel waves; attack 1 s. Role: \"voice\" without text, in the register C4–C6. Type O Negative (verify).\n\nPiano stays piano: no programming, but a role choice. In My Dying Bride the piano is often alone or with violin, never under the riff (verify). In Type O Negative it opens pieces and then disappears.\n\nRule: one keyboard sound per section. Two at once only if they occupy different registers (organ C4–C5, choir C5–C6)."
+    },
+    "te6-3-1": {
+      "title": "Listen · Pads, organ, strings: the keyboard roles of the references",
+      "instructions": "Type O Negative, \"Haunted\" and \"Die with Me\": assign each keyboard sound you hear to one of the three types (organ, pad, choir) and note its register. Then My Dying Bride, \"Sear Me MCMXCIII\": piano and what else? Claim: Type O organ plus choir in different registers, MDB piano without pad (verify).",
+      "checklist": [
+        "Every keyboard sound heard typed and noted with register?",
+        "Simultaneous sounds checked for register separation?"
+      ]
+    },
+    "te6-3-2": {
+      "title": "Model · Pads, organ, strings: the keyboard roles of the references",
+      "instructions": "Three roles over Em–C: bars 1–2 organ in close position from G4, bars 3–4 pad in open position with a held chord, bars 5–6 organ plus choir voice above (B5–C6). Program organ, pad and choir from the recipes in the text and play the six bars with sound changes. Note attack and release in seconds for each sound.",
+      "checklist": [
+        "Three sounds programmed and played in alternation?",
+        "Attack/release documented per sound?"
+      ]
+    },
+    "te6-3-3": {
+      "title": "Application · Pads, organ, strings: the keyboard roles of the references",
+      "instructions": "Record an eight-bar guitar riff. Lay three keyboard tracks over it, one each with organ, pad, choir, each in its register. Listen to every combination (riff + one sound) and decide which sound complements the riff best without masking it. Justify with register and attack.",
+      "checklist": [
+        "Three combinations recorded?",
+        "Choice justified with register and attack in the log?"
+      ]
+    },
+    "tu6-4": {
+      "title": "Delay physics: time, feedback, filter, modulation",
+      "goal": "Understand the four parameters of every delay and calculate delay times from tempo.",
+      "text": "A delay stores the signal and plays it back later. Four parameters determine everything.\n\nTime: the gap between original and repeat. Below 30 ms you hear no repeat but doubling or comb filtering. 30–100 ms: slapback, a single echo, rockabilly and vocals. 100–500 ms: rhythmic delay, audible as a repeat in time. Above 500 ms: spatial effect, ambient. Tempo sync: 60000 / BPM = quarter note in milliseconds. At ♩ = 60: quarter 1000 ms, eighth 500, dotted eighth 750, triplet 333. At 72: quarter 833, eighth 417, dotted eighth 625.\n\nFeedback: the share of the output fed back into the input. 0 % = one echo. 30–50 % = three to five audible repeats. Above 70 % = long tail, from 100 % self-oscillation. Doom uses low feedback with long time rather than high feedback with short time.\n\nFilter: every repeat is filtered. Low-pass makes the echoes darker (tape character), high-pass prevents mud in the bass. Without filtering the repeats stay as bright as the original and mask the next note.\n\nModulation: an LFO on the delay time creates pitch wobble in the repeats. Slight (0.3 Hz, little depth) = tape wow and flutter, warmth. Strong = chorus-like, seasick.\n\nMusically: a dotted-eighth delay over eighth notes creates sixteenth patterns (the U2 effect). A quarter-note delay over whole notes thickens the pad. A delay on the clean arpeggio guitar fills gaps between notes (Anathema, verify). On distorted riffs delay is rarely useful because the signal is already dense; exceptions: solo and decays."
+    },
+    "te6-4-1": {
+      "title": "Listen · Delay physics: time, feedback, filter, modulation",
+      "instructions": "Anathema, \"Sentient\" and \"Angelica\", clean guitar: do you hear repeats? Measure or estimate the delay time relative to the tempo (eighth? dotted eighth? quarter?). How many repeats? Do they get darker? Claim: dotted eighth or quarter, two to three repeats, filtered (verify).",
+      "checklist": [
+        "Delay time determined as a note value?",
+        "Number and filtering of repeats described?"
+      ]
+    },
+    "te6-4-2": {
+      "title": "Model · Delay physics: time, feedback, filter, modulation",
+      "instructions": "Bar 1 an arpeggio in eighths with rests. Bar 2 the same, but the repeats of a dotted-eighth delay are written out as sixteenths (only the first repeat, imagined quieter). Bars 3–4 a held chord, then with quarter-note delay as four attacks. Compute the delay times for ♩ = 60, 72 and 90. Set the dotted-eighth delay on one of your units and play bar 1: the result must sound like bar 2.",
+      "checklist": [
+        "Delay times calculated for three tempi (eighth, dotted eighth, quarter)?",
+        "Dotted delay set on the unit, bar 1 produces bar 2?"
+      ]
+    },
+    "te6-4-3": {
+      "title": "Application · Delay physics: time, feedback, filter, modulation",
+      "instructions": "Create a delay table for tempi from 50 to 100 in steps of five: quarter, eighth, dotted eighth, eighth triplet, half in milliseconds. Then build three delay settings for your rig: \"Arpeggio\" (dotted eighth, 35 % feedback, low-pass), \"Pad\" (quarter, 50 %, dark), \"Solo\" (eighth, 25 %, bright). Note each with all four parameters.",
+      "checklist": [
+        "Table with 11 tempi × 5 values?",
+        "Three settings documented with four parameters?"
+      ]
+    },
+    "tu6-5": {
+      "title": "Tape, BBD, digital: what is audible",
+      "goal": "Recognise the three delay technologies by their artefacts and know which parameters emulate them.",
+      "text": "Tape delay (Echoplex, Space Echo, Binson): the signal is recorded to tape and read back delayed by a playback head. Artefacts: high-frequency loss per pass (each repeat darker, about 3–6 dB at 5 kHz), wow and flutter (slow pitch modulation, 0.3–1 Hz, a few cents), tape saturation (slight compression and distortion at high level; repeats become \"softer\" and louder than expected), noise. Time range typically 80–600 ms. Sound: warm, blurred, the repeats merge into a tail.\n\nBBD (bucket brigade device, analog delay such as Memory Man, DM-2): a chain of capacitors passes the signal along, clocked by an oscillator. Artefacts: strong high-frequency loss (low-pass often at 3 kHz, each repeat darker), clock noise, slight distortion, short maximum time (300–600 ms on old units). Modulation is built in (chorus circuit): the clock is modulated by an LFO. Sound: dark, dense, \"behind\" the original.\n\nDigital: exact copy, any time, no high-frequency loss unless deliberate. Sound: clear, present, can seem clinical; repeats compete with the original.\n\nThe same four parameters from unit 4 cover everything: tape = medium time, moderate low-pass, slight modulation, saturation (if available). BBD = strong low-pass, built-in modulation, short time. Digital = filter off, modulation off. The references: Type O Negative on guitar and bass more chorus (BBD family) than delay (verify); Anathema digital or tape-like delay on clean guitar (verify); My Dying Bride reverb instead of delay (verify).\n\nDiscrimination test: listen to the third repeat. Tape: darker and slightly wobbling. BBD: much darker, almost only mids. Digital: identical to the original."
+    },
+    "te6-5-1": {
+      "title": "Listen · Tape, BBD, digital: what is audible",
+      "instructions": "Take two reference passages with audible delay: Anathema, \"Sentient\" (clean guitar) and a passage of your choice from any album with a clearly recognisable echo. Apply the discrimination test: third repeat, darker? wobbling? identical? Assign tape, BBD or digital. Claim: Anathema digital or tape, not BBD (verify).",
+      "checklist": [
+        "Third repeat assessed at two passages?",
+        "Technology assigned with reasoning?"
+      ]
+    },
+    "te6-5-2": {
+      "title": "Model · Tape, BBD, digital: what is audible",
+      "instructions": "A single tone per bar so the repeats stand free. On one unit set three delays with the same time (quarter) and the same feedback (50 %): 1. tape model: low-pass 5 kHz, modulation 0.5 Hz slight, saturation if available. 2. BBD model: low-pass 2.5 kHz, modulation 0.8 Hz slightly deeper. 3. digital: everything off. Play the tone and listen to the third repeat. Note the differences in words.",
+      "checklist": [
+        "Three models set with the same time and feedback?",
+        "Differences of the third repeat described?"
+      ]
+    },
+    "te6-5-3": {
+      "title": "Application · Tape, BBD, digital: what is audible",
+      "instructions": "Play the same four-bar arpeggio with the three delay models and record. Listen to each recording with the guitar riff underneath (from an earlier recording). Decide which model sits best under the riff without masking it, and which sounds best alone. The two answers may differ.",
+      "checklist": [
+        "Three recordings compared with and without the riff?",
+        "Two decisions with reasoning logged?"
+      ]
+    },
+    "tu6-6": {
+      "title": "Approximation on 2290, G-Major, Nova System",
+      "goal": "Emulate tape and BBD character with the parameters of the three TC units and document the results as presets.",
+      "text": "All three units are digital delays; tape and BBD have to be built from time, feedback, filter and modulation. Parameter names differ; the following mapping is compiled from manuals and must be checked at the unit (verify).\n\nTC 2290: delay time in ms up to 32 s (depending on memory), feedback in percent, \"feedback high-cut\"/filter in the feedback path, modulation via the internal LFO on delay time (pitch mod) with speed and depth, \"dynamic delay\" (ducking: the delay gets quieter while you play). Tape approximation: time from the table, feedback 40 %, high-cut as low as the unit allows (around 5 kHz), pitch mod speed 0.4 Hz, depth minimal. BBD approximation: high-cut lower (2–3 kHz if reachable; otherwise EQ before the delay), mod speed 0.8 Hz, depth a little higher, time under 400 ms. The 2290 colours very little by itself; its character is the modulation.\n\nTC G-Major: delay block with types (single, ping-pong, dual, \"tape\" or similar depending on firmware), feedback, hi-cut and lo-cut in the feedback, modulation (speed, depth), tempo sync with note value. Tape approximation: type tape if available, otherwise single with hi-cut 4–5 kHz, feedback 40 %, mod depth small. BBD: hi-cut 2.5 kHz, lo-cut 150 Hz, mod slightly higher. The G-Major also has chorus, pitch and reverb in the same chain; mind the block order.\n\nTC Nova System: delay block with types (clean, analog, tape, ping-pong, dynamic, depending on firmware), feedback, hi-cut, lo-cut, tempo sync. The types \"analog\" and \"tape\" are already approximations; check how strongly they filter and modulate and correct with hi-cut and modulation. Nova has drive and compressor before the delay; for BBD character use slight drive before the delay.\n\nProcedure: 1. Determine the reference sound (tape or BBD, time as a note value). 2. Choose the unit. 3. Build the preset from the table. 4. Apply the discrimination test (third repeat). 5. Save as a preset and log the parameters. Appendix D holds the translation table of parameter names."
+    },
+    "te6-6-1": {
+      "title": "Listen · Approximation on 2290, G-Major, Nova System",
+      "instructions": "Listen to Anathema, \"Sentient\", clean guitar, and define the target: note value, approximate feedback (number of audible repeats), brightness of the repeats. Write a target description in five parameters before touching a unit. Claim: dotted eighth, three repeats, medium filtering (verify).",
+      "checklist": [
+        "Target description with five parameters written before building?",
+        "Feedback estimated from the repeat count?"
+      ]
+    },
+    "te6-6-2": {
+      "title": "Model · Approximation on 2290, G-Major, Nova System",
+      "instructions": "Test material: an arpeggio at ♩ = 72. Build the tape preset in turn on the 2290, G-Major and Nova System from the recipes in the text: time 625 ms (dotted eighth at 72), feedback 40 %, high-cut around 5 kHz, modulation slight. Play the arpeggio with each unit and record. Note the actual parameter names and values per unit. Where a unit lacks a parameter, note the substitute.",
+      "checklist": [
+        "Tape preset built and recorded on all three units?",
+        "Parameter names and substitutes documented per unit?"
+      ]
+    },
+    "te6-6-3": {
+      "title": "Application · Approximation on 2290, G-Major, Nova System",
+      "instructions": "Repeat the procedure for the BBD preset on all three units. Compare the six recordings (2 models × 3 units) blind: shuffle the order and assign by ear. Note the hit rate and which unit comes closest to which model. Save the two best as named presets.",
+      "checklist": [
+        "Six recordings assigned blind, hit rate noted?",
+        "Two presets saved and documented?"
+      ]
+    },
+    "tu6-7": {
+      "title": "Reverb: room, plate, spring, and when none",
+      "goal": "Recognise reverb types by their parameters and understand reverb as a register decision.",
+      "text": "Reverb is the sum of thousands of reflections. Parameters: pre-delay (time to the first reflection, 0–100 ms; larger = larger room and more separation from the original), decay/reverb time (time to −60 dB, 0.5–10 s), damping/high-damp (highs die earlier than lows, as in real rooms), diffusion (density of reflections), mix. A high-pass on the reverb signal (150–300 Hz) keeps the bass range clean; that is the most important setting for this music.\n\nTypes: room (short, 0.5–1.5 s, natural), hall (long, 2–5 s, concert hall, church), plate (dense, bright, without room feel, classic for vocals and snare), spring (metallic, guitar amplifier, short \"boing\"), ambient/shimmer (with pitch shift, no model in the references).\n\nThe references: My Dying Bride use long reverb on violin and vocals, short or none on the riff (verify). Type O Negative have reverb on everything but with a high-pass so the bass stays dry (verify). Anathema put plate or hall on the clean guitar and little on the distorted one (verify). Vivaldi and Biber were played in churches and halls; historical recordings have 2–4 s of natural reverb that is part of the sound.\n\nRule: reverb lengthens tones (phase 5) and fills registers. On the foundation (bass, low guitar) no or minimal reverb with a high-pass, otherwise mud. On line and pad (violin, pad, lead guitar) long reverb. On the riff: room or nothing. In solo playing without a band, reverb is the only \"second instrument\" you have; use it, but only on top.\n\nThe three TC units each have a reverb block; G-Major and Nova with types (room, hall, plate, spring), the 2290 without (only via delay networks). Appendix D maps the parameters."
+    },
+    "te6-7-1": {
+      "title": "Listen · Reverb: room, plate, spring, and when none",
+      "instructions": "My Dying Bride, \"Sear Me MCMXCIII\": estimate the reverb time on the violin (seconds from note end to silence) and on the piano. Then Type O Negative, \"Haunted\": does the bass have reverb? The organ? Claim: MDB violin over 3 s, Type O bass dry, organ long (verify).",
+      "checklist": [
+        "Reverb times estimated?",
+        "Reverb per instrument in Type O determined?"
+      ]
+    },
+    "te6-7-2": {
+      "title": "Model · Reverb: room, plate, spring, and when none",
+      "instructions": "Bars 1–2 a riff with rests, bars 3–4 a high line with rests. Play bars 1–2 with room (0.8 s, high-pass 200 Hz, mix 15 %) and with hall (3 s, mix 40 %): the rests must stay audible in the first case and are filled in the second. Play bars 3–4 with the same two settings. Decide for each half which setting fits and note the parameters.",
+      "checklist": [
+        "Both halves played with both reverb types?",
+        "Assignment with parameters logged?"
+      ]
+    },
+    "te6-7-3": {
+      "title": "Application · Reverb: room, plate, spring, and when none",
+      "instructions": "Build two reverb presets on the G-Major or Nova System: \"Riff\" (room, short, high-pass high, little mix) and \"Line\" (hall or plate, long, pre-delay 40 ms, more mix). Play an eight-bar solo piece alternating between riff and high line and switch presets at the boundaries. Record and judge whether the change disturbs as a room change or helps as a register change.",
+      "checklist": [
+        "Two presets built and documented?",
+        "Switching effect assessed in the log?"
+      ]
+    },
+    "tu6-8": {
+      "title": "Chorus, flanger, phaser: the Type O sound",
+      "goal": "Distinguish the three modulation effects and use chorus as a width tool for bass and guitar.",
+      "text": "All three are short delays with modulated time mixed with the original. The difference is the time and whether there is feedback.\n\nChorus: 15–35 ms, LFO 0.3–2 Hz, no or little feedback. Result: pitch beating like two slightly detuned instruments, width, \"ensemble\". Stereo chorus sends original and effect to different sides. This is the BBD technology from unit 5 in short form; old chorus pedals are BBD.\n\nFlanger: 1–10 ms, slow LFO, with feedback. Result: a comb filter sweeping through the spectrum, \"jet plane\". Conspicuous; rare in the references.\n\nPhaser: no delay but all-pass filters shifting phase; notches in the spectrum sweep. Softer than a flanger, without pitch beating. Classic on electric piano and organ.\n\nType O Negative: chorus on bass and guitar almost throughout (verify). The bass with chorus and octaver (phase 2) becomes wide and deep at once; the guitar in B with chorus loses edge and gains pad. That is why the album sounds full despite few instruments. Anathema: chorus on clean guitar, occasionally (verify). My Dying Bride: almost no chorus (verify).\n\nSetting for bass: chorus rate 0.5 Hz, depth 30 %, mix 40 %, high-pass on the effect signal so the fundamental stays dry (otherwise the foundation blurs). For clean guitar: rate 0.8 Hz, depth 40 %, mix 50 %. For distorted guitar: after the distortion, rate 0.3 Hz, depth 20 %, mix 30 %; more gets seasick.\n\nUnit mapping: G-Major and Nova have chorus, flanger, phaser as blocks. The 2290 has chorus via modulated short delays. Nord Lead A1 and Blofeld have chorus as an effect section, the Blofeld also phaser and flanger. Appendix D."
+    },
+    "te6-8-1": {
+      "title": "Listen · Chorus, flanger, phaser: the Type O sound",
+      "instructions": "Type O Negative, \"Love You to Death\", bass under the first verse and guitar in the chorus: do you hear beating (chorus)? Estimate the rate (slow below 1 Hz or faster). Then Anathema, \"Angelica\", clean guitar: chorus? Claim: Type O bass and guitar with slow chorus, Anathema little (verify).",
+      "checklist": [
+        "Chorus on bass and guitar in Type O confirmed and rate estimated?",
+        "Anathema guitar assessed?"
+      ]
+    },
+    "te6-8-2": {
+      "title": "Model · Chorus, flanger, phaser: the Type O sound",
+      "instructions": "The same power chord four times. Play it dry, with chorus (25 ms, 0.5 Hz, 30 %), with flanger (3 ms, 0.2 Hz, feedback 50 %), with phaser (4 stages, 0.3 Hz). Record all four. For each effect describe whether the pitch beats (chorus), the spectrum sweeps (flanger/phaser), and whether the foundation blurs. Repeat with a high-pass on the effect signal.",
+      "checklist": [
+        "Four versions recorded and artefacts described?",
+        "High-pass effect on the foundation assessed?"
+      ]
+    },
+    "te6-8-3": {
+      "title": "Application · Chorus, flanger, phaser: the Type O sound",
+      "instructions": "Rebuild the Type O bass sound: octaver (if available, otherwise add keyboard bass an octave lower), slow chorus, high-pass on the chorus signal, slight distortion. Play a four-bar riff and record. Compare with a dry version under your guitar riff: which carries better? Note the chain with all values.",
+      "checklist": [
+        "Chain with octave, chorus, high-pass built and documented?",
+        "Comparison under the guitar riff logged?"
+      ]
+    },
+    "tu6-9": {
+      "title": "Gain staging and distortion types",
+      "goal": "Understand the guitar signal chain as a series of levels and match distortion types to the sound goal.",
+      "text": "Gain staging means: at every stage of the chain the level is such that the next stage neither hisses (too quiet) nor distorts unintentionally (too loud). The chain: pickup → (pedals) → preamp → effects loop (where 2290, G-Major, Nova sit) → power amp → speaker. Distortion belongs before the effects loop; delay, reverb, chorus after. Otherwise the repeats get distorted too and smear.\n\nDistortion types: overdrive (soft clipping, tube preamp, dynamic: play softly = nearly clean), distortion (hard clipping, more compression, even), fuzz (extreme clipping, near-square waveform, doom classic since Sabbath, muddy on chords), high gain (multi-stage preamp distortion, very compressed, metal standard). More gain = more combination tones (phase 0) = fewer tolerable intervals. Rule: as little gain as the sustain goal allows (phase 5).\n\nThe references: My Dying Bride distortion medium to high, guitars in thirds therefore in the high register (verify). Type O Negative distortion with chorus, rather medium, few highs, lots of low mids (verify). Anathema two guitars: one clean with compressor, one medium distortion (verify).\n\nLevel control in the loop: G-Major and Nova have input and output levels; so does the 2290. Target: input LED just below clip on the loudest chord. Too quiet → hiss with reverb and delay. Too loud → digital clipping, hard and ugly. Nova also has its own drive blocks that belong before the modulation effects.\n\nCompressor: before distortion it increases sustain and smooths the attack (clean arpeggio, Anathema). After distortion it is mostly redundant because distortion already compresses."
+    },
+    "te6-9-1": {
+      "title": "Listen · Gain staging and distortion types",
+      "instructions": "Compare the distortion of three riffs: My Dying Bride, \"The Crown of Sympathy\"; Type O Negative, \"Wolf Moon\"; Anathema, \"Sentient\" (distorted part). Assign each a type (overdrive, distortion, fuzz, high gain) and estimate the gain (low, medium, high). Claim: all three medium, none fuzz or high gain (verify).",
+      "checklist": [
+        "Three riffs with type and gain estimate?",
+        "Low-mid and high content described per riff?"
+      ]
+    },
+    "te6-9-2": {
+      "title": "Model · Gain staging and distortion types",
+      "instructions": "Per bar an Em triad with the third, then a power chord without it. Play the four bars with four gain levels: clean, overdrive, distortion, fuzz (or the four stages of your amp). In each bar hear whether the third still appears as a tone or already as noise. Note for each level: third usable yes/no, sustain in seconds, attack hard/soft.",
+      "checklist": [
+        "Four gain levels noted with third and sustain verdicts?",
+        "Gain level for thirds and gain level for power chords fixed?"
+      ]
+    },
+    "te6-9-3": {
+      "title": "Application · Gain staging and distortion types",
+      "instructions": "Draw your entire signal chain with level at each stage: pickup, pedals, preamp, loop (which unit in which order), power amp. Set the input levels of the effects units by the rule (just below clip on the loudest chord) and note the values. Play a riff with delay and reverb and check whether the repeats are clean (undistorted).",
+      "checklist": [
+        "Signal chain drawn with order and levels?",
+        "Repeats confirmed undistorted?"
+      ]
+    },
+    "tu6-10": {
+      "title": "Frequency spaces in the arrangement",
+      "goal": "Distribute all sound sources of a piece so that each has its range; EQ as space-making, not as beautification.",
+      "text": "An arrangement is a frequency plan. Every source has a fundamental range and an overtone range; neither may overlap unplanned with other sources. Phase 3 named the ranges: sub 20–60, bass 60–250, low mids 250–500, mids 500–2k, highs 2k–20k Hz.\n\nTypical distribution for your setup: kick 50–80 Hz plus attack 3–5 kHz. Bass 60–200 Hz plus overtones up to 1 kHz. Distorted guitar 100 Hz–4 kHz, centred 200–800 Hz. Clean guitar 150 Hz–6 kHz. Pad 300 Hz–8 kHz with high-pass at 300. Organ 250 Hz–5 kHz. Choir/line 500 Hz–8 kHz. Hi-hat from 5 kHz.\n\nTools: high-pass on everything that is not foundation (the most important rule). Low-pass on distortion above 6–8 kHz (fizz gone). Narrow cut where two sources collide: cut the guitar at 300 Hz if the bass sits there; the pad at 800 Hz if the vocal or line sits there. Never two sources equally loud in the same range.\n\nThe references as frequency plans: Type O Negative: bass alone at the bottom, guitar in the low mids, organ and choir in the mids and highs, vocals in two octaves between; a perfect stack (verify). My Dying Bride: guitars double each other, bass doubles the guitars; violin and vocals above everything; the stack is dense below and thin above (verify). Anathema: clean and distorted guitar share the mids via stereo position, not frequency (verify).\n\nIn solo playing (guitar alone or keyboard alone) the frequency plan is the register of the voices: bass low, melody high, inner voice between. The instrument course taught this musically; here is the acoustic reasoning."
+    },
+    "te6-10-1": {
+      "title": "Listen · Frequency spaces in the arrangement",
+      "instructions": "Draw a frequency plan for three passages (source, estimated range from–to Hz): Type O Negative, \"Be My Druidess\", chorus; My Dying Bride, \"Your River\", riff with violin; Anathema, \"Eternity Part I\", full section. Mark overlaps. Claim: Type O without overlap, MDB overlap at the bottom, Anathema overlap in the mids (verify).",
+      "checklist": [
+        "Three frequency plans drawn?",
+        "Overlaps marked and compared with the claim?"
+      ]
+    },
+    "te6-10-2": {
+      "title": "Model · Frequency spaces in the arrangement",
+      "instructions": "The stack grows by one layer per bar: bass E2, guitar fifth E3–B3, pad from G4, line from G5. Rebuild it with your sources: keyboard bass, guitar, pad patch, line on guitar or synth. Put a high-pass at 300 Hz on pad and line. Listen to the stack with and without the high-passes. Note which layer masks the foundation without the high-pass.",
+      "checklist": [
+        "Four layers built with your own sources?",
+        "High-pass effect assessed per layer?"
+      ]
+    },
+    "te6-10-3": {
+      "title": "Application · Frequency spaces in the arrangement",
+      "instructions": "Create the frequency plan for your final piece from the instrument course, extended with drums, bass and one keyboard layer. For each source enter range, high-pass frequency and one cut where it collides with another. Record a four-bar passage with all layers, once without and once with the EQ plan, and compare.",
+      "checklist": [
+        "Frequency plan with high-pass and cut per source?",
+        "Comparison without/with EQ logged?"
+      ]
     }
   },
   "ui": {
