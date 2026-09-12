@@ -1,13 +1,13 @@
 AM.notation = (() => {
   const M = AM.music, PPQ = 24;
   const DUR = {w:4, h:2, q:1, e:.5, s:.25};
-  const ACC = {1:'♯', '-1':'♭', 0:'♮', 2:'𝄪', '-2':'𝄫'};
+  const ACC = {1:'accidentalSharp', '-1':'accidentalFlat', 0:'accidentalNatural', 2:'accidentalDoubleSharp', '-2':'accidentalDoubleFlat'};
   const CLEF = {
-    treble:{path:'M0 30 c0 6 -8 8 -8 2 c0 -5 8 -5 8 0 v-60 c0 -6 5 -9 6 -2 c1 8 -10 14 -14 24 c-5 14 5 22 13 19 c8 -3 7 -17 -2 -17 c-9 0 -10 12 -3 14', ref:['E', 4], dy:0,
-      ks:{F:0, C:3, G:-1, D:2, A:5, E:1, B:4}, ksb:{B:4, E:1, A:5, D:2, G:6, C:3, F:7}},
-    bass:{path:'M-4 -30 c 6 -12 22 -8 22 4 c 0 14 -12 22 -24 30 M-4 -30 c -6 0 -7 8 -1 8 c 6 0 5 -8 1 -8', dots:[[22, -34], [22, -26]], ref:['G', 2], dy:-10,
-      ks:{F:2, C:5, G:1, D:4, A:7, E:3, B:6}, ksb:{B:6, E:3, A:7, D:4, G:8, C:5, F:9}},
+    treble:{glyph:'gClef', line:3, ref:['E', 4], ks:{F:0, C:3, G:-1, D:2, A:5, E:1, B:4}, ksb:{B:4, E:1, A:5, D:2, G:6, C:3, F:7}},
+    bass:{glyph:'fClef', line:1, ref:['G', 2], ks:{F:2, C:5, G:1, D:4, A:7, E:3, B:6}, ksb:{B:6, E:3, A:7, D:4, G:8, C:5, F:9}},
   };
+  const glyph = (name, x, y, cls, scale = 1) => `<path d="${AM.glyphs[name].d}" transform="translate(${x},${y})${scale === 1 ? '' : ` scale(${scale})`}" class="${cls || 'glyph'}"/>`;
+  const STEM = 35;
   const ticks = d => { if (!/^[whqes](?:\.|t)?$/.test(d)) throw Error('Invalid duration'); return DUR[d[0]] * PPQ * (d.endsWith('.') ? 1.5 : d.endsWith('t') ? 2 / 3 : 1); };
   const dur = d => ticks(d) / PPQ;
   const esc = value => String(value).replace(/[&<>"']/g,c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -32,9 +32,8 @@ AM.notation = (() => {
     const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key), keyMap = Object.fromEntries(ks);
     const REF = stepOf(...C.ref) - tr, yOf = s => bottom - (s - REF) * gap / 2;
     let extent = bottom;
-    let o = `<path d="${C.path}" transform="translate(${20},${bottom + C.dy})" class="clef"/>`;
-    (C.dots || []).forEach(([dx, dy]) => o += `<circle cx="${20 + dx}" cy="${bottom + C.dy + dy}" r="2.2" class="head"/>`);
-    let kx = 46; ks.forEach(([l, a]) => { o += `<text x="${kx}" y="${top + (a > 0 ? C.ks[l] : C.ksb[l]) * gap / 2 + 4}" class="acc">${ACC[a]}</text>`; kx += 9; });
+    let o = glyph(st.clef === 'treble' && sc.instrument === 'guitar' ? 'gClef8vb' : C.glyph, 12, top + C.line * gap, 'clef');
+    let kx = 44; ks.forEach(([l, a]) => { o += glyph(ACC[a], kx, top + (a > 0 ? C.ks[l] : C.ksb[l]) * gap / 2, 'acc'); kx += AM.glyphs[ACC[a]].w + 2; });
     const [beats, unit] = (sc.time || '4/4').split('/').map(Number);
     o += `<text x="${kx + 10}" y="${mid - 2}" class="tsig">${beats}</text><text x="${kx + 10}" y="${bottom - 2}" class="tsig">${unit}</text>`;
     L.bars.forEach(b => o += `<line x1="${x0 + b}" y1="${top}" x2="${x0 + b}" y2="${bottom}" class="bar"/>`);
@@ -52,18 +51,18 @@ AM.notation = (() => {
       extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names ? bottom + 70 : bottom);
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       for (let s = REF + 10; s <= hi.st; s += 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
-      let ax = x - 16;
+      let ax = x - 9;
       ps.forEach((p, i) => {
         const k = p.letter + p.octave, cur = acc[k] ?? keyMap[p.letter] ?? 0;
-        if (p.acc !== cur) { o += `<text x="${ax}" y="${p.y + 4}" class="acc">${ACC[p.acc]}</text>`; acc[k] = p.acc; ax -= 9; }
+        if (p.acc !== cur && !ties.some(t => t.midi === p.midi)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); acc[k] = p.acc; ax -= w + 3; }
         const shift = i > 0 && p.st - ps[i - 1].st === 1 ? (up ? 11 : -11) : 0;
         o += n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
         if (n.d?.endsWith('.')) o += `<circle cx="${x + 10 + shift}" cy="${p.y - (p.st % 2 === REF % 2 ? 3 : 0)}" r="1.8" class="dotd"/>`;
       });
       if (d < 4) {
-        const sx = up ? x + 5 : x - 5, sy = up ? hi.y - 30 : lo.y + 30, from = up ? lo.y : hi.y;
+        const sx = up ? x + 5 : x - 5, sy = up ? hi.y - STEM : lo.y + STEM, from = up ? lo.y : hi.y;
         const flags = d < 1 ? (d < .5 ? 2 : 1) : 0;
-        stems.push({sx,sy,from,up,flags,t:pos,end:pos + length,group:Math.floor(pos / (M.meter(sc.time).compound ? PPQ * 1.5 : PPQ))});
+        stems.push({sx,sy,from,up,flags,x,lo:lo.y,hi:hi.y,t:pos,end:pos + length,group:Math.floor(pos / (M.meter(sc.time).compound ? PPQ * 1.5 : PPQ))});
       }
       for (const tie of ties) {
         const target = ps.find(p => p.midi === tie.midi);
@@ -71,7 +70,7 @@ AM.notation = (() => {
       }
       if (pos === 0 && st.incoming) for (const p of ps) if (st.incoming.includes(p.midi)) o += arc(x0 - 24,p.y + side * 10,x - 6,p.y + side * 7);
       ties = n.tie ? ps.map(p => ({x,y:p.y,midi:p.midi})) : [];
-      if (n.tuplet) tuplet = {x,y:Math.min(top - 10,hi.y - 42)};
+      if (n.tuplet) tuplet = {x,y:Math.min(top - 36,hi.y - 42)};
       if (tuplet) tuplet.y = Math.min(tuplet.y,hi.y - 42);
       if (n.tupletEnd && tuplet) {
         o += `<path d="M${tuplet.x - 7} ${tuplet.y + 5} v-5 H${x + 7} v5" class="tuplet"/><text x="${(tuplet.x + x) / 2}" y="${tuplet.y - 3}" class="tuplet-number">3</text>`;
@@ -79,27 +78,28 @@ AM.notation = (() => {
       }
       if (n.slur) slur = {x,y:hi.y - 12};
       if (n.slurEnd && slur) { o += `<path d="M${slur.x} ${slur.y} Q${(slur.x + x) / 2} ${Math.min(slur.y,hi.y - 12) - 14} ${x} ${hi.y - 12}" class="slur"/>`; slur = null; }
-      if (n.accent) o += `<text x="${x}" y="${Math.min(top - 8,hi.y - 34)}" class="accent">&gt;</text>`;
+      if (n.accent) o += `<text x="${x}" y="${st.direction === 'down' ? lo.y + (d < 4 ? STEM + 18 : 22) : st.direction === 'up' ? hi.y - (d < 4 ? STEM + 6 : 14) : up ? lo.y + (n.staccato ? 30 : 22) : hi.y - 14}" class="accent">&gt;</text>`;
       if (n.bend) { const target = M.pcName(hi.midi + n.bend,false); o += `<path d="M${x + 8} ${hi.y - 4} Q${x + 28} ${hi.y - 8} ${x + 28} ${hi.y - 36} l-4 6 m4 -6 l4 6" class="bend"/><text x="${x + 28}" y="${hi.y - 42}" class="aid">${target}</text>`; }
-      if (n.staccato) o += `<circle cx="${x}" cy="${lo.y + 12}" r="1.8" class="dotd"/>`;
+      if (n.staccato) o += `<circle cx="${x}" cy="${up ? lo.y + 12 : hi.y - 12}" r="1.8" class="dotd"/>`;
       if (aids.names) o += `<text x="${x}" y="${bottom + 66}" class="aid">${ps.map(p => p.letter + (p.acc > 0 ? '#'.repeat(p.acc) : 'b'.repeat(-p.acc))).join(' ')}</text>`;
       if (aids.strings && sc.instrument === 'guitar') ps.forEach((p,i) => {
         const q = M.position(p.midi,{s:Array.isArray(n.s) ? n.s[p.index] : n.s,maxFret:sc.maxFret ?? 5,window:sc.stringWindow}), xx = x + (i - (ps.length - 1) / 2) * 15;
-        if (q) o += `<circle cx="${xx}" cy="${top - 44}" r="7" class="strc"/><text x="${xx}" y="${top - 40.5}" class="strn">${6 - q.s}</text>`;
+        if (q) o += `<circle cx="${xx}" cy="${top - 46}" r="7" class="strc"/><text x="${xx}" y="${top - 42.5}" class="strn">${6 - q.s}</text>`;
       });
-      if (aids.fingers && n.fi != null) o += `<text x="${x}" y="${top - 58}" class="aid">${[].concat(n.fi).join('–')}</text>`;
+      if (aids.fingers && n.fi != null) o += `<text x="${x}" y="${top - 62}" class="aid">${[].concat(n.fi).join('–')}</text>`;
       pos += length;
     });
     for (let i = 0; i < stems.length;) {
       const first = stems[i], group = [first]; let j = i + 1;
-      while (first.flags && j < stems.length && stems[j].flags && stems[j].group === first.group && stems[j].up === first.up && stems[j - 1].end === stems[j].t) group.push(stems[j++]);
+      while (first.flags && j < stems.length && stems[j].flags && stems[j].group === first.group && stems[j - 1].end === stems[j].t) group.push(stems[j++]);
+      if (group.length > 1 && group.some(s => s.up !== first.up)) {
+        const up = group.reduce((a,s) => a + (s.lo + s.hi) / 2,0) / group.length > mid;
+        for (const s of group) Object.assign(s,{up,sx:up ? s.x + 5 : s.x - 5,sy:up ? s.hi - STEM : s.lo + STEM,from:up ? s.lo : s.hi});
+      }
       const beamY = first.up ? Math.min(...group.map(s => s.sy)) : Math.max(...group.map(s => s.sy));
       group.forEach((s,k) => {
         o += `<line x1="${s.sx}" y1="${s.from}" x2="${s.sx}" y2="${group.length > 1 ? beamY : s.sy}" class="stem"/>`;
-        if (group.length === 1) for (let f = 0; f < s.flags; f++) {
-          const fy = s.sy + (s.up ? f * 7 : -f * 7);
-          o += `<path d="M${s.sx} ${fy} c0 ${s.up ? 8 : -8} 12 ${s.up ? 10 : -10} 8 ${s.up ? 20 : -20} c2 ${s.up ? -7 : 7} -2 ${s.up ? -12 : 12} -8 ${s.up ? -14 : 14}" class="flag"/>`;
-        }
+        if (group.length === 1 && s.flags) o += glyph((s.flags > 1 ? 'flag16th' : 'flag8th') + (s.up ? 'Up' : 'Down'), s.sx, s.sy, 'flag');
         else for (let f = 0; f < s.flags; f++) {
           const next = group[k + 1], prev = group[k - 1], y = beamY + (s.up ? f * 6 : -f * 6);
           if (next?.flags > f) o += `<line x1="${s.sx}" y1="${y}" x2="${next.sx}" y2="${y}" class="beam"/>`;
@@ -168,14 +168,14 @@ AM.notation = (() => {
       const voice = (i,clef,direction,overlay = false) => ({clef,direction,overlay,notes:bars[i].slice(from,to).flat(),incoming:bars[i][from - 1]?.at(-1)?.tie ? pitches(bars[i][from - 1].at(-1)).map(M.midi) : null,outgoing:to < count});
       const staves = [voice(0,sc.clef || 'treble',poly || sc.inner ? 'up' : null)];
       if (sc.bass) staves.push({...voice(1,poly ? 'treble' : 'bass',poly ? 'down' : null,poly),restOffset:poly ? 40 : 0});
-      if (sc.inner) staves.push({...voice(2,'treble','down',true),restOffset:20});
+      if (sc.inner) staves.push({...voice(2,'treble','down',true),restOffset:40});
       return staves;
     };
     let from = 0, html = '';
     while (from < count) {
       let to = from + 1;
       while (to < count && x0 + layout(makeStaves(from,to + 1),barLen).end + 16 <= width) to++;
-      const staves = makeStaves(from,to), L = layout(staves,barLen), y0 = 88;
+      const staves = makeStaves(from,to), L = layout(staves,barLen), y0 = 104;
       let top = y0, out = '', lines = '', lastBottom = 0, contentBottom = 0;
       staves.forEach((st,i) => {
         if (st.overlay) top = y0;
@@ -202,16 +202,16 @@ AM.notation = (() => {
         const x = x0 + L.x.get((b - from) * barLen), end = x0 + L.x.get((b + 1 - from) * barLen) - 14, number = b + 1;
         out += `<text x="${x}" y="14" class="measure">${number}</text>`;
         referenceLines[b - from].forEach((line,i) => { out += `<text x="${x}" y="${contentBottom + 24 + i * 14}" class="harmonic-reference">${esc(line)}</text>`; });
-        if (sc.chords?.[b]) out += `<text x="${x}" y="${y0 - 18}" class="chord">${esc(sc.chords[b])}</text>`;
+        if (sc.chords?.[b]) out += `<text x="${x}" y="${y0 - 74}" class="chord">${esc(sc.chords[b])}</text>`;
         if (sc.sections?.[b]) out += `<text x="${x + 24}" y="14" class="section">${esc(sc.sections[b])}</text>`;
         const repeat = sc.repeat;
-        if (repeat?.from === number) out += `<text x="${x - 14}" y="${y0 + 28}" class="repeat">𝄆</text>`;
-        if (repeat && (repeat.endings?.[0] || repeat.to) === number) out += `<text x="${end}" y="${y0 + 28}" class="repeat">𝄇</text>`;
+        if (repeat?.from === number) out += glyph('repeatLeft', x - 22, y0 + 40, 'repeat');
+        if (repeat && (repeat.endings?.[0] || repeat.to) === number) out += glyph('repeatRight', end - 2, y0 + 40, 'repeat');
         if (repeat?.endings?.includes(number)) out += `<path d="M${x} 31 v-8 H${end}" class="volta"/><text x="${x + 4}" y="36" class="measure">${repeat.endings.indexOf(number) + 1}.</text>`;
         const j = sc.jump;
-        if (j?.to === number && j.to !== 1) out += `<text x="${x + 12}" y="${y0 - 64}" class="navigation">𝄋</text>`;
-        if (j?.coda === number) out += `<text x="${x + 12}" y="${y0 - 64}" class="navigation">𝄌</text>`;
-        if (j?.codaAt === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">→ 𝄌</text>`;
+        if (j?.to === number && j.to !== 1) out += glyph('segno', x, y0 - 40, 'navigation', .7);
+        if (j?.coda === number) out += glyph('coda', x, y0 - 40, 'navigation', .6);
+        if (j?.codaAt === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">→</text>` + glyph('coda', x + 14, contentBottom + referenceHeight + 47, 'navigation', .5);
         if (j?.fine === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">Fine</text>`;
         if (j?.from === number) out += `<text x="${x}" y="${contentBottom + referenceHeight + 44}" class="navigation">${j.to === 1 ? 'D.C.' : 'D.S.'} al ${j.coda ? 'Coda' : 'Fine'}</text>`;
       }
@@ -222,11 +222,8 @@ AM.notation = (() => {
     return {beats:count * barLen / PPQ};
   }
   function rest(x, d, mid, gap) {
-    if (d >= 4) return `<rect x="${x - 6}" y="${mid - gap}" width="12" height="5" class="rest"/>`;
-    if (d >= 2) return `<rect x="${x - 6}" y="${mid - 5}" width="12" height="5" class="rest"/>`;
-    if (d >= 1) return `<path d="M${x - 3} ${mid - 14} l 7 8 l -6 7 l 6 8 c -6 -3 -9 1 -5 6 c -6 -4 -6 -10 0 -10 l -5 -7 l 5 -6 z" class="rest"/>`;
-    const extra = d < .5 ? `<path d="M${x + 1} ${mid - 1} c -2 5 -8 5 -8 1 c 0 -3 3 -3 4 -1" class="rest8"/>` : '';
-    return extra + `<path d="M${x + 4} ${mid - 8} l -5 16 M${x + 4} ${mid - 8} c -2 5 -8 5 -8 1 c 0 -3 3 -3 4 -1" class="rest8"/>`;
+    const name = d >= 4 ? 'restWhole' : d >= 2 ? 'restHalf' : d >= 1 ? 'restQuarter' : d >= .5 ? 'rest8th' : 'rest16th';
+    return glyph(name, x - AM.glyphs[name].w / 2, d >= 4 ? mid - gap : mid, 'rest');
   }
   function generate(g) {
     const pcs = M.scalePcs(g.root || 'C', g.scale || 'major'), lo = M.midi(g.range[0]), hi = M.midi(g.range[1]);

@@ -5,7 +5,7 @@
   }
   const I = AM.i18n, t = I.t, S = AM.store, $ = s => document.querySelector(s);
   const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
-  const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+  const inline = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/(^|[\s(„»])\*([^*\n]+?)\*(?=[\s.,;:)“«]|$)/g, '$1<i>$2</i>');
   const md = text => text.trim().split(/\n\s*\n/).map(b => /^- /m.test(b) ? '<ul>' + b.split('\n').map(l => '<li>' + inline(l.replace(/^- /, '')) + '</li>').join('') + '</ul>' : '<p>' + inline(b) + '</p>').join('');
   let tracks, phases, units, allEx, player, playerUI, serial = 0;
   const generated = new Map(), scoreDraws = new Set();
@@ -105,34 +105,51 @@
       <details class="log"><summary>${t('log')} (${logs.length})</summary><form data-log="${ex.id}"><input name="note" aria-label="${t('note')}" placeholder="${t('logPlaceholder')}" required><button>${t('save')}</button></form>
       <ul>${logs.map(l => `<li><span class="date">${esc(l.date)}</span> ${esc(l.note)}</li>`).join('')}</ul></details></article>`;
   }
-  const exampleCard = (ex,unit) => `<section class="example" id="${ex.id}"><h3><span class="kind k-${ex.kind}">${t(ex.kind)}</span> ${esc(ex.title)}</h3><div class="body">${md(ex.text || '')}</div>${ex.score ? scoreBlock(ex,unit.track.instrument) : ''}</section>`;
   const phaseCard = (p,i) => {
     const ex = p.units.flatMap(u => u.exercises), done = ex.filter(e => S.isDone(e.id)).length;
-    return `<a class="phase${p.planned ? ' planned' : ''}" href="#/phase/${p.id}"><div class="num">${p.reference ? 'A' : i}</div><div><h2>${esc(p.title)}</h2><p>${esc(p.goal)}</p><div class="meta">${p.units.length} ${t('units')} · ${ex.length ? `${done}/${ex.length} ${t('exercises')}` : t(p.reference ? 'reference' : p.track.instrument === 'theory' ? 'reading' : 'planned')}</div></div></a>`;
+    return `<a class="phase${p.planned ? ' planned' : ''}" href="#/phase/${p.id}"><div class="num">${p.reference ? 'A' : i}</div><div><h2>${esc(p.title)}</h2><p>${esc(p.goal)}</p><div class="meta">${p.units.length} ${t('units')} · ${ex.length ? `${done}/${ex.length} ${t('exercises')}` : t('planned')}</div></div></a>`;
   };
   const courseLink = () => `<a href="#/">${t('course')}</a>`;
+  const chapterNumbers = b => { const n = new Map(); let i = 0, a = 0; for (const part of b.parts) for (const c of part.chapters) n.set(c.id, part.appendix ? String.fromCharCode(65 + a++) : String(++i)); return n; };
   const views = {
     home:() => `<h1>a-minor</h1><p class="lead">${t('lead')}</p><div class="text"><h2>${t('week')}</h2>${md(t('schedule'))}</div>
-      <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t(track.instrument === 'theory' ? 'theoryScope' : 'scope')}</div></a>`).join('')}</div>`,
+      <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t('scope')}</div></a>`).join('')}</div>`,
     track(id) {
       const track = tracks.find(x => x.id === id); if (!track) return views.home();
-      return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.map((p,i) => phaseCard({...p,track},i)).join('')}</div>`;
+      return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.map(phaseCard).join('')}</div>`;
     },
     phase(id) {
       const p = phases.find(x => x.id === id); if (!p) return views.home(); const i = p.track.phases.findIndex(x => x.id === id);
-      const label = p.reference ? esc(p.title) : `${t('phase')} ${i}`, num = p.reference ? 'A' : i;
-      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${p.track.id}">${esc(p.track.title)}</a> › ${label}</nav><h1>${p.reference ? esc(p.title) : `${t('phase')} ${i}: ${esc(p.title)}`}</h1><p class="lead">${esc(p.goal)}</p>
-        <div class="units">${p.units.map((u,j) => { const [d,n] = progress(u); return `<a class="unit" href="#/unit/${u.id}"><div class="num">${num}.${j + 1}</div><div><h2>${esc(u.title)}</h2><p>${esc(u.goal)}</p>${n ? `<div class="meta">${d}/${n} ${t('exercises')}</div><div class="bar"><div style="width:${d / n * 100}%"></div></div>` : `<div class="meta">${t(p.reference ? 'reference' : p.track.instrument === 'theory' ? 'reading' : 'planned')}</div>`}</div></a>`; }).join('')}</div>`;
+      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${p.track.id}">${esc(p.track.title)}</a> › ${t('phase')} ${i}</nav><h1>${t('phase')} ${i}: ${esc(p.title)}</h1><p class="lead">${esc(p.goal)}</p>
+        <div class="units">${p.units.map((u,j) => { const [d,n] = progress(u); return `<a class="unit" href="#/unit/${u.id}"><div class="num">${i}.${j + 1}</div><div><h2>${esc(u.title)}</h2><p>${esc(u.goal)}</p>${n ? `<div class="meta">${d}/${n} ${t('exercises')}</div><div class="bar"><div style="width:${d / n * 100}%"></div></div>` : `<div class="meta">${t('planned')}</div>`}</div></a>`; }).join('')}</div>`;
     },
     unit(id) {
       const u = units.find(x => x.id === id); if (!u) return views.home();
       const siblings = units.filter(x => x.track === u.track && !x.phase.planned), k = siblings.indexOf(u), pi = u.track.phases.findIndex(p => p.id === u.phase.id);
-      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${u.track.id}">${esc(u.track.title)}</a> › <a href="#/phase/${u.phase.id}">${u.phase.reference ? esc(u.phase.title) : `${t('phase')} ${pi}`}</a></nav>
+      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${u.track.id}">${esc(u.track.title)}</a> › <a href="#/phase/${u.phase.id}">${t('phase')} ${pi}</a></nav>
         <h1>${esc(u.title)}</h1><p class="lead">${esc(u.goal)}</p><div class="text">${md(u.text || '')}</div>
         ${u.track.instrument === 'guitar' ? `<p class="small">${t('guitarAttack')}</p>` : ''}
-        ${(u.examples || []).map(e => exampleCard(e,u)).join('')}
-        ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : u.phase.reference || u.examples?.length ? '' : `<p>${t('plannedDetail')}</p>`}
+        ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : `<p>${t('plannedDetail')}</p>`}
         <nav class="pn">${k > 0 ? `<a href="#/unit/${siblings[k - 1].id}">‹ ${esc(siblings[k - 1].title)}</a>` : '<span></span>'}${k >= 0 && k < siblings.length - 1 ? `<a href="#/unit/${siblings[k + 1].id}">${esc(siblings[k + 1].title)} ›</a>` : ''}</nav>`;
+    },
+    theory() {
+      const b = I.book(), n = chapterNumbers(b);
+      return `<h1>${esc(b.title)}</h1><p class="lead">${esc(b.lead)}</p><div class="text">${md(b.intro || '')}</div>
+        ${b.parts.map(part => `<section class="toc"><h2>${esc(part.title)}</h2><ol>${part.chapters.map(c => `<li><a href="#/chapter/${c.id}"><span class="num">${n.get(c.id)}</span> ${esc(c.title)}</a></li>`).join('')}</ol></section>`).join('')}`;
+    },
+    chapter(id) {
+      const b = I.book(), n = chapterNumbers(b), all = b.parts.flatMap(p => p.chapters.map(c => ({...c,part:p}))), k = all.findIndex(c => c.id === id);
+      if (k < 0) return views.theory();
+      const c = all[k], examples = new Map(c.examples.map(e => [e.id,e]));
+      let count = 0;
+      const blocks = c.text.trim().split(/\n\s*\n/).map(block => {
+        const heading = /^(##+) (.*)$/.exec(block), place = /^\[\[(.+)\]\]$/.exec(block.trim());
+        if (heading) return `<h${heading[1].length}>${inline(heading[2])}</h${heading[1].length}>`;
+        if (place) { const e = examples.get(place[1]); if (!e) return ''; count++; return `<figure class="figure" id="${e.id}"><figcaption>${t('example')} ${n.get(c.id)}.${count} · ${esc(e.title)}</figcaption>${scoreBlock(e,e.instrument || 'theory')}</figure>`; }
+        return md(block);
+      }).join('');
+      return `<nav class="crumbs"><a href="#/theory">${esc(b.title)}</a> › ${esc(c.part.title)}</nav><h1><span class="chapter-number">${n.get(c.id)}</span> ${esc(c.title)}</h1><article class="chapter">${blocks}</article>
+        <nav class="pn">${k > 0 ? `<a href="#/chapter/${all[k - 1].id}">‹ ${n.get(all[k - 1].id)} ${esc(all[k - 1].title)}</a>` : '<span></span>'}${k < all.length - 1 ? `<a href="#/chapter/${all[k + 1].id}">${n.get(all[k + 1].id)} ${esc(all[k + 1].title)} ›</a>` : ''}</nav>`;
     },
     midi:() => `<h1>MIDI</h1><p>${t('midiLead')}</p><div class="row"><button id="connect">${t('findOutputs')}</button><label>${t('output')} <select id="output"><option value="">${t('chooseDevice')}</option></select></label></div>
       <p id="midi-status" role="status"></p><div class="text">${md(t('hardware'))}</div><p><a href="https://www.alesis.com/rscdn/919/documents/sr18_reference_manual_reve.pdf">SR-18 · System Setup</a> · <a href="https://mx.yamaha.com/files/download/other_assets/0/892960/mx49mx61mx88_en_rm_b0.pdf">MX49 · Reference Manual</a></p>

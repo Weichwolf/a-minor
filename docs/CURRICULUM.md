@@ -1,6 +1,6 @@
 # Lernweg
 
-Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Theorie: Phase 0–8 mit 67 Einheiten und fünf Anhängen, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
+Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Musiklehre: acht Teile mit 28 Kapiteln und vier Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
 
 ## Arbeitsweise
 
@@ -102,111 +102,68 @@ Die Einheiten sind keine Wochenvorgaben. Vier Stunden pro Woche bleiben die verf
 | [Allein tragfähig: Übergänge der Gitarre](https://a-minor.ch/#/unit/u8-7) | [Abschluss: ein eigenes Solostück](https://a-minor.ch/#/unit/ku8-6) |
 | [Abschluss: ein eigenes Solostück](https://a-minor.ch/#/unit/u8-6) | — |
 
-## Theorie
+## Musiklehre
 
-Lehrbuch: neun Phasen und fünf Anhänge, keine Aufgaben. Jede Einheit besteht aus Lehrtext und drei Beispielen: **Hörbeispiel** (Referenzstelle mit prüfbarer Aussage), **Notenbeispiel** (Partitur mit Klaviervorschau) und **Anwendung** (ein beschriebener Fall, wie das Prinzip in einem Stück wirkt). Anhänge sind Nachschlagetexte. Referenzstellen sind nach Track und Formstelle benannt, nicht nach Zeit. Jede Aussage über eine Stelle ist mit „prüfen“ markiert, bis sie am Album bestätigt wurde.
+Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 28 Kapitel, vier Anhänge, 205 notierte Beispiele mit Klaviervorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen.
 
-### Phase 0: Ton und Schrift
+### Teil I · Ton und Schrift
 
-- [Frequenz, Obertöne, Intervall als Verhältnis](https://a-minor.ch/#/unit/tu0-1)
-- [Warum E A D: Quarten, Quinten und ihre Komplemente](https://a-minor.ch/#/unit/tu0-2)
-- [Notenschrift vollständig](https://a-minor.ch/#/unit/tu0-3)
-- [Rhythmusschrift vollständig](https://a-minor.ch/#/unit/tu0-4)
-- [Gehörmethode: Rhythmus vor Tonhöhe, Bass vor Melodie](https://a-minor.ch/#/unit/tu0-5)
-- [Referenzen kartieren: Instrumente, Register, Rollen](https://a-minor.ch/#/unit/tu0-6)
-- [Verzerrung als nichtlineares System](https://a-minor.ch/#/unit/tu0-7)
+- 1 [Der Ton](https://a-minor.ch/#/chapter/c01) · 7 Beispiele
+- 2 [Die Notenschrift der Tonhöhe](https://a-minor.ch/#/chapter/c02) · 8 Beispiele
+- 3 [Die Notenschrift der Zeit](https://a-minor.ch/#/chapter/c03) · 11 Beispiele
+- 4 [Intervalle](https://a-minor.ch/#/chapter/c04) · 9 Beispiele
 
-### Phase 1: Zentrum und Modus
+### Teil II · Tonleitern, Modi, Tonarten
 
-- [Grundton, Drone, Pedal](https://a-minor.ch/#/unit/tu1-1)
-- [Die sieben Modi aus einer Tonklasse](https://a-minor.ch/#/unit/tu1-2)
-- [Äolisch und Phrygisch: die Grundfarben von Doom](https://a-minor.ch/#/unit/tu1-3)
-- [Dorisch und Lydisch als Kontrastfarben](https://a-minor.ch/#/unit/tu1-4)
-- [E–A–D: I–IV–V, Quartenkette, drei Zentren](https://a-minor.ch/#/unit/tu1-5)
-- [Modal oder tonal: wann ein Akkord Funktion hat](https://a-minor.ch/#/unit/tu1-6)
-- [Anathema, Eternity: Fläche, Bass und Zeit](https://a-minor.ch/#/unit/tu1-7)
+- 5 [Dur, Moll und die Tonarten](https://a-minor.ch/#/chapter/c05) · 8 Beispiele
+- 6 [Modi, Pentatonik, Chromatik](https://a-minor.ch/#/chapter/c06) · 8 Beispiele
+- 7 [Stimmung und Instrument](https://a-minor.ch/#/chapter/c07) · 7 Beispiele
 
-### Phase 2: Zwei- und Dreiklänge
+### Teil III · Akkorde und Harmonik
 
-- [Dreiklang, Umkehrung, Lage](https://a-minor.ch/#/unit/tu2-1)
-- [Der Powerchord: Voicings und Suboktave](https://a-minor.ch/#/unit/tu2-2)
-- [Terzen, Sexten, Parallelführung](https://a-minor.ch/#/unit/tu2-3)
-- [Stimmführung: gemeinsamer Ton, kleinster Weg](https://a-minor.ch/#/unit/tu2-4)
-- [Voicing in tiefer Stimmung: Type O Negative](https://a-minor.ch/#/unit/tu2-5)
-- [Zweistimmigkeit: Bewegungsarten](https://a-minor.ch/#/unit/tu2-6)
-- [Akkordsymbole vollständig](https://a-minor.ch/#/unit/tu2-7)
+- 8 [Dreiklänge](https://a-minor.ch/#/chapter/c08) · 8 Beispiele
+- 9 [Terzlose Klänge: Powerchord, Quarten, Vorhaltsakkorde](https://a-minor.ch/#/chapter/c09) · 7 Beispiele
+- 10 [Vierklänge und Akkordsymbole](https://a-minor.ch/#/chapter/c10) · 8 Beispiele
+- 11 [Kadenz und Funktion](https://a-minor.ch/#/chapter/c11) · 8 Beispiele
+- 12 [Stimmführung](https://a-minor.ch/#/chapter/c12) · 6 Beispiele
+- 13 [Erweiterte Harmonik](https://a-minor.ch/#/chapter/c13) · 9 Beispiele
+- 14 [Bassmodelle und Sequenzen](https://a-minor.ch/#/chapter/c14) · 9 Beispiele
 
-### Phase 3: Bass und Bewegung
+### Teil IV · Rhythmus und Zeit
 
-- [Der Lamento-Bass: vom Barock zum Doom](https://a-minor.ch/#/unit/tu3-1)
-- [Quintfall und Sequenzmodelle](https://a-minor.ch/#/unit/tu3-2)
-- [Ostinato und Ritornello](https://a-minor.ch/#/unit/tu3-3)
-- [Bass: Fundament oder Gegenstimme](https://a-minor.ch/#/unit/tu3-4)
-- [Bassregister und Frequenzraum](https://a-minor.ch/#/unit/tu3-5)
-- [Drums I: Puls, Backbeat, Half-time, Hi-Hat](https://a-minor.ch/#/unit/tu3-6)
-- [Drums II: Doom-Drumming, Fills als Form, Pattern bauen](https://a-minor.ch/#/unit/tu3-7)
+- 15 [Metrum und Unterteilung](https://a-minor.ch/#/chapter/c15) · 10 Beispiele
+- 16 [Tempo und Zeitgestaltung](https://a-minor.ch/#/chapter/c16) · 6 Beispiele
+- 17 [Das Schlagzeug](https://a-minor.ch/#/chapter/c17) · 6 Beispiele
 
-### Phase 4: Funktionale Harmonik
+### Teil V · Satz
 
-- [Harmonisch und melodisch Moll](https://a-minor.ch/#/unit/tu4-1)
-- [Dominante, Leitton, Kadenztypen](https://a-minor.ch/#/unit/tu4-2)
-- [Septakkorde und die Septimenkette](https://a-minor.ch/#/unit/tu4-3)
-- [Der verminderte Septakkord und seine Mehrdeutigkeit](https://a-minor.ch/#/unit/tu4-4)
-- [Zwischendominanten](https://a-minor.ch/#/unit/tu4-5)
-- [Modulation: Quintverwandt und terzverwandt](https://a-minor.ch/#/unit/tu4-6)
-- [Barocke Formeln und ihr Weg in den Metal](https://a-minor.ch/#/unit/tu4-7)
-- [Wann Doom Funktion vermeidet und warum](https://a-minor.ch/#/unit/tu4-8)
+- 18 [Der zweistimmige Satz](https://a-minor.ch/#/chapter/c18) · 7 Beispiele
+- 19 [Melodie und Bass](https://a-minor.ch/#/chapter/c19) · 8 Beispiele
+- 20 [Der mehrschichtige Satz](https://a-minor.ch/#/chapter/c20) · 7 Beispiele
 
-### Phase 5: Zeit
+### Teil VI · Klang
 
-- [Unterteilung: binär, ternär, 12/8](https://a-minor.ch/#/unit/tu5-1)
-- [Swing und Shuffle](https://a-minor.ch/#/unit/tu5-2)
-- [Polyrhythmus und Hemiole](https://a-minor.ch/#/unit/tu5-3)
-- [Ungerade Takte](https://a-minor.ch/#/unit/tu5-4)
-- [Tempo und Ausklang: warum langsam bei Gain funktioniert](https://a-minor.ch/#/unit/tu5-5)
-- [Rubato, Fermate, barockes Zeitgefühl](https://a-minor.ch/#/unit/tu5-6)
-- [Agogik im Doom: Verzögerung als Mittel](https://a-minor.ch/#/unit/tu5-7)
+- 21 [Gitarre und Verstärker](https://a-minor.ch/#/chapter/c21) · 6 Beispiele
+- 22 [Synthesizer](https://a-minor.ch/#/chapter/c22) · 6 Beispiele
+- 23 [Delay und Hall](https://a-minor.ch/#/chapter/c23) · 5 Beispiele
 
-### Phase 6: Klang
+### Teil VII · Form
 
-- [Subtraktive Synthese: Oszillator, Filter, Hüllkurve](https://a-minor.ch/#/unit/tu6-1)
-- [Wavetable, FM und Modulation](https://a-minor.ch/#/unit/tu6-2)
-- [Pads, Orgel, Streicher: die Keyboardrollen der Referenzen](https://a-minor.ch/#/unit/tu6-3)
-- [Delay-Physik: Zeit, Feedback, Filter, Modulation](https://a-minor.ch/#/unit/tu6-4)
-- [Tape, BBD, digital: was hörbar ist](https://a-minor.ch/#/unit/tu6-5)
-- [Approximation auf 2290, G-Major, Nova System](https://a-minor.ch/#/unit/tu6-6)
-- [Hall: Raum, Platte, Feder, und wann keiner](https://a-minor.ch/#/unit/tu6-7)
-- [Chorus, Flanger, Phaser: der Type-O-Klang](https://a-minor.ch/#/unit/tu6-8)
-- [Gain-Staging und Verzerrungsarten](https://a-minor.ch/#/unit/tu6-9)
-- [Frequenzräume im Arrangement](https://a-minor.ch/#/unit/tu6-10)
+- 24 [Motiv, Phrase, Periode](https://a-minor.ch/#/chapter/c24) · 7 Beispiele
+- 25 [Wiederholung als Form](https://a-minor.ch/#/chapter/c25) · 6 Beispiele
+- 26 [Suite, Variation, Programm](https://a-minor.ch/#/chapter/c26) · 6 Beispiele
 
-### Phase 7: Form
+### Teil VIII · Die Referenzen
 
-- [Riff-Form gegen Strophe und Refrain](https://a-minor.ch/#/unit/tu7-1)
-- [Suite und Tanzsätze: Biber](https://a-minor.ch/#/unit/tu7-2)
-- [Ritornello und Programmmusik: Vivaldi](https://a-minor.ch/#/unit/tu7-3)
-- [Lange Formen: acht bis zwölf Minuten tragen](https://a-minor.ch/#/unit/tu7-4)
-- [Kontrast, Dichtebogen, Dynamik](https://a-minor.ch/#/unit/tu7-5)
-- [Intro, Outro, Übergang](https://a-minor.ch/#/unit/tu7-6)
-- [Stimme als Registerlücke](https://a-minor.ch/#/unit/tu7-7)
-
-### Phase 8: Eigene Sprache
-
-- [Was die fünf Referenzen teilen und was nicht](https://a-minor.ch/#/unit/tu8-1)
-- [Eigene Stilregeln schreiben](https://a-minor.ch/#/unit/tu8-2)
-- [Kompositions-Workflow: vom Motiv zum Arrangement](https://a-minor.ch/#/unit/tu8-3)
-- [Rollen verteilen: Gitarre, Bass, Drums, Synth aus einer Hand](https://a-minor.ch/#/unit/tu8-4)
-- [Aufnahme und Reproduzierbarkeit](https://a-minor.ch/#/unit/tu8-5)
-- [Repertoire: Stücke, Versionen, Set](https://a-minor.ch/#/unit/tu8-6)
-- [Laufbahn ohne Geld: veröffentlichen, wiederholen, weiterentwickeln](https://a-minor.ch/#/unit/tu8-7)
+- 27 [Die fünf Referenzen](https://a-minor.ch/#/chapter/c27) · 6 Beispiele
+- 28 [Hören, Analysieren, Schreiben](https://a-minor.ch/#/chapter/c28) · 6 Beispiele
 
 ### Anhänge
 
-- [A · Akustik und Stimmung](https://a-minor.ch/#/unit/ta-1)
-- [B · Verzerrung und Intermodulation](https://a-minor.ch/#/unit/ta-2)
-- [C · Delay-Mathematik und Zeitwerte](https://a-minor.ch/#/unit/ta-3)
-- [D · Gerätetabellen](https://a-minor.ch/#/unit/ta-4)
-- [E · Akkordsymbol-Referenz](https://a-minor.ch/#/unit/ta-5)
+- A [Akustik und Stimmung](https://a-minor.ch/#/chapter/cA)
+- B [Verzerrung und Intermodulation](https://a-minor.ch/#/chapter/cB)
+- C [Delay-Mathematik und Zeitwerte](https://a-minor.ch/#/chapter/cC)
+- D [Akkordsymbol-Referenz](https://a-minor.ch/#/chapter/cE)
 
 ## Abschluss
 
@@ -214,4 +171,4 @@ Das letzte Modell umfasst 32 Takte. Das eigene Abschlussstück umfasst mindesten
 
 Die technischen Prüfungen sichern Notendaten und Darstellung ab. Reale Handhaltung, Klangbalance, Intonation beim Bending und Ausdruck müssen am Instrument beziehungsweise an der Aufnahme beurteilt werden. Der Gigajam-Abgleich dokumentiert erkennbare Repertoirefähigkeiten, keine formale Prüfungszulassung.
 
-Die Theoriespur endet mit der Beschreibung eines Regelwerks, eines Stücks nach dem siebenstufigen Workflow, einer Repertoireliste mit Set und eines Laufbahnplans; die Ausführung gehört in die Instrumentalspuren und ins eigene Log.
+Die Musiklehre endet mit den fünf Referenzen und einem Kapitel über Hören, Analysieren und Schreiben: Hörmethode, Analyse in vier Ebenen, der siebenstufige Arbeitsweg, Rollen aus einer Hand, eigene Regeln, Dokumentation, Repertoire und Set; die Ausführung gehört in die Instrumentalspuren und ins eigene Log.

@@ -5,22 +5,23 @@ const vm = require('node:vm');
 const memory = new Map();
 const context = vm.createContext({console, structuredClone, crypto:require('node:crypto').webcrypto, Date, Math, performance, setTimeout, clearTimeout, navigator:{}, localStorage:{getItem:k => memory.get(k), setItem:(k,v) => memory.set(k,v)}});
 context.window = context;
-for (const f of ['js/music.js','js/notation.js','js/audio.js','js/store.js']) vm.runInContext(fs.readFileSync(f,'utf8'), context);
+for (const f of ['js/music.js','js/glyphs.js','js/notation.js','js/audio.js','js/store.js']) vm.runInContext(fs.readFileSync(f,'utf8'), context);
 const {music:M, notation:N, backing:B, audio:A, store:S} = context.AM;
 const de = JSON.parse(fs.readFileSync('locales/de.json','utf8')), en = JSON.parse(fs.readFileSync('locales/en.json','utf8'));
-const raw = JSON.parse(fs.readFileSync('data/course.json','utf8'));
-const translate = x => Array.isArray(x) ? x.map(translate) : x && typeof x === 'object' ? {...Object.fromEntries(Object.entries(x).map(([k,v]) => [k,translate(v)])), ...de.course[x.textId]} : x;
-const tracks = translate(raw);
+const raw = JSON.parse(fs.readFileSync('data/course.json','utf8')), rawBook = JSON.parse(fs.readFileSync('data/book.json','utf8'));
+const translate = (x,texts) => Array.isArray(x) ? x.map(v => translate(v,texts)) : x && typeof x === 'object' ? {...Object.fromEntries(Object.entries(x).map(([k,v]) => [k,translate(v,texts)])), ...texts[x.textId]} : x;
+const tracks = translate(raw,de.course), book = translate(rawBook,de.book);
 const plain = x => JSON.parse(JSON.stringify(x));
 const exercises = Object.values(tracks).flatMap(t => t.phases.filter(p => !p.planned).flatMap(p => p.units.flatMap(u => u.exercises.map(e => ({...e, instrument:t.instrument})))));
-const examples = Object.values(tracks).flatMap(t => t.phases.flatMap(p => p.units.flatMap(u => (u.examples || []).map(e => ({...e, instrument:t.instrument, example:true})))));
+const chapters = book.parts.flatMap(p => p.chapters.map(c => ({...c, part:p})));
+const examples = chapters.flatMap(c => c.examples.map(e => ({...e, instrument:e.instrument || 'theory', example:true, chapter:c.id})));
 const scored = [...exercises, ...examples].filter(e => e.score);
 
 test('course specifications: IDs, criteria, measure lengths, ties, ranges and finger positions', () => {
   const ids = new Set();
   for (const e of [...exercises, ...examples]) {
     assert(!ids.has(e.id), e.id); ids.add(e.id);
-    if (e.example) { assert(!e.backing && !e.checklist, e.id + ': examples carry no tasks'); assert(e.title && e.text, e.id); }
+    if (e.example) { assert(!e.backing && !e.checklist && !e.aids, e.id + ': book examples carry no tasks'); assert(e.title && e.score, e.id); }
     else assert(e.checklist?.length, e.id);
     if (e.backing) assert(B.build(e.backing).len > 0, e.id);
     if (!e.score) continue;
@@ -103,8 +104,10 @@ test('translations cover the same complete schema and UI keys; musical data has 
     assert.deepEqual(Object.keys(de.course[id]).sort(),Object.keys(en.course[id]).sort(),id);
     for (const lang of [de,en]) for (const value of Object.values(lang.course[id])) assert(Array.isArray(value) ? value.every(v => typeof v === 'string' && v.length) : typeof value === 'string' && value.length,id);
   }
-  const used = new Set(); const walk = x => { if (!x || typeof x !== 'object') return; if (x.textId) { assert(de.course[x.textId]); used.add(x.textId); } for (const [k,v] of Object.entries(x)) { assert(!['title','goal','text','instructions','checklist','position'].includes(k)); walk(v); } }; walk(raw);
-  for (const id of Object.keys(de.course)) assert(used.has(id) || ['gitarre','keys','theorie'].includes(id),id + ': orphaned text');
+  const used = new Set(); const walk = x => { if (!x || typeof x !== 'object') return; if (x.textId) { assert(de.course[x.textId] || de.book[x.textId],x.textId); used.add(x.textId); } for (const [k,v] of Object.entries(x)) { assert(!['title','goal','text','instructions','checklist','position'].includes(k)); walk(v); } }; walk(raw); walk(rawBook);
+  for (const id of Object.keys(de.course)) assert(used.has(id) || ['gitarre','keys'].includes(id),id + ': orphaned course text');
+  assert.deepEqual(Object.keys(de.book).sort(),Object.keys(en.book).sort());
+  for (const id of Object.keys(de.book)) { assert(used.has(id),id + ': orphaned book text'); assert.deepEqual(Object.keys(de.book[id]).sort(),Object.keys(en.book[id]).sort(),id); }
 });
 
 test('guitar polyphony shares one staff, preserves independent durations and uses opposing stems', () => {
@@ -174,24 +177,15 @@ test('legacy restore preserves repeated practice notes and remains idempotent', 
   const before = S.export(); S.import(backup); assert.equal(S.export(),before);
 });
 
-test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks; theory units are textbook examples', () => {
+test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks', () => {
   const ids = new Set();
+  assert.deepEqual(Object.keys(tracks),['gitarre','keys']);
   for (const track of Object.values(tracks)) for (const [i,phase] of track.phases.entries()) {
     assert(!phase.planned,phase.id);
-    const theory = track.instrument === 'theory';
-    if (i >= 2 && !theory) assert.equal(phase.units.length,track.instrument === 'guitar' ? 7 : 6,phase.id);
+    if (i >= 2) assert.equal(phase.units.length,track.instrument === 'guitar' ? 7 : 6,phase.id);
     for (const unit of phase.units) {
       assert(!ids.has(unit.id),unit.id);ids.add(unit.id);
       assert(!/Geplant\.|nicht ausgearbeitet/.test(unit.text),unit.id);
-      if (phase.reference) { assert.equal(unit.exercises.length,0,unit.id); assert(unit.text.length > 600,unit.id + ': reference text'); continue; }
-      if (theory) {
-        assert.equal(unit.exercises.length,0,unit.id + ': textbook units carry no tasks');
-        assert.deepEqual(unit.examples.map(e => e.kind),['hear','notation','application'],unit.id);
-        assert(unit.examples[1].score && !unit.examples[1].backing,unit.id + ': notated example without accompaniment');
-        assert(unit.text.length > 400,unit.id + ': theory text');
-        for (const ex of unit.examples) for (const bundle of [de,en]) { assert(bundle.course[ex.textId].title.length > 3,ex.id); assert(bundle.course[ex.textId].text.length > 120,ex.id); assert(!bundle.course[ex.textId].checklist,ex.id); }
-        continue;
-      }
       if (i < 2) continue;
       assert.equal(unit.exercises.length,3,unit.id);
       assert(unit.exercises[0].score,unit.id + ': written example');
@@ -304,4 +298,21 @@ test('guitar course uses pick-only right hand and introduces left-hand tapping a
     assert.match(locale.course['u7-1'].text,/Hammer-ons|hammer-ons/);
     assert(locale.ui.guitarAttack);
   }
+});
+
+test('the theory book is complete, bilingual, verified and places every example exactly once', () => {
+  assert(chapters.length >= 30,'chapters');
+  for (const bundle of [de,en]) for (const c of chapters) {
+    const text = bundle.book[c.id].text;
+    assert(text.length > 1500,c.id + ': chapter length');
+    assert(!/prüfen|\(verify\)/i.test(text),c.id + ': unverified marker');
+    assert(!/Nord|Blofeld|Digitakt|SP-404|SR-18|G-Major|Nova System|2290/.test(text),c.id + ': the textbook names no specific devices');
+    assert(/^## /m.test(text),c.id + ': numbered sections');
+    const placed = [...text.matchAll(/^\[\[(.+)\]\]$/gm)].map(m => m[1]);
+    for (const e of c.examples) assert.equal(placed.filter(p => p === e.id).length,1,c.id + ': example ' + e.id + ' placed once');
+    for (const p of placed) assert(c.examples.some(e => e.id === p),c.id + ': unknown placeholder ' + p);
+    if (!c.part.appendix) assert(c.examples.length >= 5,c.id + ': at least five notated examples');
+  }
+  assert(book.parts.filter(p => p.appendix).length === 1 && book.parts.at(-1).appendix,'appendices last');
+  for (const e of examples) assert(!e.backing,e.id);
 });

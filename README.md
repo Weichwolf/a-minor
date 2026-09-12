@@ -1,39 +1,52 @@
 # a-minor
 
-Zweisprachiger Improvisations- und Theoriekurs für P4-Gitarre und Keyboard. Notenlesen, Gehör, Harmonik, Klang und selbstständiges Solospiel wachsen gemeinsam.
+Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard mit eigenständigem Lehrbuch der Musiktheorie. Notenlesen, Gehör, Harmonik, Klang und selbstständiges Solospiel wachsen gemeinsam.
 
 - **Gitarre:** E2 A2 D3 G3 C4 F4. Offene Pedaltöne und Melodie, später Arpeggien, Akkorde und bewegter Bass. Noten mit Lageangabe; keine Tabs.
 - **Keyboard:** 49 Tasten, Synthesizer und Klavier. Bass links, Melodie rechts; zunächst ein Klang ohne verpflichtenden Split.
-- **Theorie:** Lehrbuch ohne Aufgaben. Was die Referenzen tun, warum es funktioniert und was sie teilen, aufgebaut auf E–A–D. Notation, Modi, Harmonik, Bass und Drums, Zeit, Synthese und Effekte, Form, eigene Sprache.
+- **Theorie:** eigenständiges Lehrbuch „Musiklehre“ im Hauptmenü, acht Teile mit 28 Kapiteln und vier Anhängen, 205 notierte Beispiele mit Klaviervorschau, keine Aufgaben. Allgemeine Musiktheorie, zugeschnitten auf E–A–D, das tiefe Register, den verzerrten Klang und die fünf Referenzen: Ton und Schrift, Tonleitern und Modi, Akkorde und Harmonik, Rhythmus, Satz, Klang, Form, die Referenzen.
 - **Referenzen:** My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*). Eigene musikalische Gedanken statt festgelegter Coverstücke.
 
 ## Stand
 
 Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Jam-/Backing-Editor und freie Konfigurationsseiten bleiben entfernt.
 
-Die Theoriespur ist ein Lehrbuch: 67 Einheiten in Phase 0–8 (7, 7, 7, 7, 8, 7, 10, 7, 7) und fünf Anhänge. Jede Einheit besteht aus Lehrtext und drei Beispielen: Hörbeispiel (Referenzstelle), Notenbeispiel (Partitur mit Klaviervorschau) und Anwendung (beschriebener Fall): 67 × 3 = 201 Beispiele. Keine Aufgaben, keine Checklisten, kein Begleit-Player und keine Fortschrittsmarkierung; die 326 Aufgaben bleiben in den Instrumentalspuren. Referenzstellen sind nach Track und Formstelle benannt, nicht nach Zeit; jede Aussage über eine Stelle trägt die Markierung „prüfen“, bis sie am Album bestätigt ist. Die Gerätetabellen in Anhang D sind gegen die Handbücher geprüft (Quellen im [fachlichen Abgleich](docs/COURSE_AUDIT.md)); wenige Restpunkte tragen die Markierung „prüfen“.
+Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 28 durchnummerierten Kapiteln und vier mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 205 Beispiele mit Klaviervorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 326 Aufgaben bleiben in den Instrumentalspuren.
 
 Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die im Abgleich erkannten Fähigkeiten sind jetzt mit konkreten Übungen verknüpft. Das ist keine Zusicherung einer Prüfungsgleichwertigkeit; formale Abschlusskriterien liegen nicht vor. Der [vollständige Lernweg](docs/CURRICULUM.md) verlinkt jede neue Einheit.
 
-| Phase | Instrumente | Theorie |
-|---|---|---|
-| 0 | Ton, P4-Orientierung, Noten, Puls, Dämpfung, unabhängige Stimmen | Obertöne, Stimmungslogik, Noten- und Rhythmusschrift, Hörmethode, Referenzkarte, Verzerrung |
-| 1 | Motiv, Variation, Pedalton/Melodie, Äolisch/Phrygisch, eigene Miniatur | Pedal, sieben Modi, Äolisch/Phrygisch, Dorisch/Lydisch, E–A–D als drei Zentren, modal/tonal |
-| 2 | Zweiklänge, Dreiklänge, Arpeggien, Akzente und Rhythmusgitarre | Dreiklang, Powerchord, Terzen/Sexten, Stimmführung, tiefe Stimmung, Zweistimmigkeit, Akkordsymbole |
-| 3 | Bewegter Bass, Lamento, Synkopen, Sechzehntel, Formzeichen | Lamento, Quintfall, Ostinato/Ritornello, Bassrollen, Frequenzraum, Drums I und II |
-| 4 | Harmonisch Moll, Sext-/Septakkorde, Akkordsymbole und Stimmführung | Mollformen, Kadenzen, Septimenkette, dim7, Zwischendominanten, Modulation, Barockformeln, Verweigerung |
-| 5 | Sequenzen, Figuration, Triolen, 12/8, Shuffle und Swing | Unterteilung, Swing, Polyrhythmus/Hemiole, ungerade Takte, Tempo/Ausklang, Rubato, Agogik |
-| 6 | Quarten, Lydisch, Register und Klangkontraste | Subtraktiv, Wavetable/FM, Pads/Orgel/Chor, Delay, Tape/BBD, TC-Presets, Hall, Chorus, Gain, Frequenzplan |
-| 7 | Gruppierung, ungerade Takte, Solo und Rückkehr in die Form | Riff/Song, Suite, Ritornello/Programm, lange Formen, Dichtebogen, Intro/Outro, Stimmlücke |
-| 8 | Eigenständiges Arrangement mit Bass, Melodie, Arpeggien und Akkorden | Gemeinsamkeiten, Regelwerk, Workflow, Schichtaufnahme, Dokumentation, Repertoire, Laufbahn |
-| A | | Anhänge: Akustik, Intermodulation, Delay-Mathematik, Gerätetabellen, Akkordsymbole |
+| Phase | Instrumente |
+|---|---|
+| 0 | Ton, P4-Orientierung, Noten, Puls, Dämpfung, unabhängige Stimmen |
+| 1 | Motiv, Variation, Pedalton/Melodie, Äolisch/Phrygisch, eigene Miniatur |
+| 2 | Zweiklänge, Dreiklänge, Arpeggien, Akzente und Rhythmusgitarre |
+| 3 | Bewegter Bass, Lamento, Synkopen, Sechzehntel, Formzeichen |
+| 4 | Harmonisch Moll, Sext-/Septakkorde, Akkordsymbole und Stimmführung |
+| 5 | Sequenzen, Figuration, Triolen, 12/8, Shuffle und Swing |
+| 6 | Quarten, Lydisch, Register und Klangkontraste |
+| 7 | Gruppierung, ungerade Takte, Solo und Rückkehr in die Form |
+| 8 | Eigenständiges Arrangement mit Bass, Melodie, Arpeggien und Akkorden |
+
+Musiklehre:
+
+| Teil | Kapitel |
+|---|---|
+| I Ton und Schrift | 1 Der Ton · 2 Notenschrift der Tonhöhe · 3 Notenschrift der Zeit · 4 Intervalle |
+| II Tonleitern, Modi, Tonarten | 5 Dur, Moll, Tonarten · 6 Modi, Pentatonik, Chromatik · 7 Stimmung und Instrument |
+| III Akkorde und Harmonik | 8 Dreiklänge · 9 Terzlose Klänge · 10 Vierklänge und Akkordsymbole · 11 Kadenz und Funktion · 12 Stimmführung · 13 Erweiterte Harmonik · 14 Bassmodelle und Sequenzen |
+| IV Rhythmus und Zeit | 15 Metrum und Unterteilung · 16 Tempo und Zeitgestaltung · 17 Das Schlagzeug |
+| V Satz | 18 Zweistimmiger Satz · 19 Melodie und Bass · 20 Mehrschichtiger Satz |
+| VI Klang | 21 Gitarre und Verstärker · 22 Synthesizer · 23 Delay und Hall |
+| VII Form | 24 Motiv, Phrase, Periode · 25 Wiederholung als Form · 26 Suite, Variation, Programm |
+| VIII Die Referenzen | 27 Die fünf Referenzen · 28 Hören, Analysieren, Schreiben |
+| Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik · D Akkordsymbole |
 
 ## Übezeit
 
 Vier Sitzungen zu je einer Stunde. Drei mit 45 Minuten Gitarre und 15 Minuten Keyboard, eine mit umgekehrter Gewichtung:
 Gitarre 3 × 45 + 15 = 150 Minuten; Keyboard 3 × 15 + 45 = 90 Minuten pro Woche.
 
-Theorie kommt dazu: eine Einheit pro Woche lesen, das Hörbeispiel am Album prüfen, das Notenbeispiel in der Vorschau hören und nach Wunsch nachspielen. Etwa 45 Minuten außerhalb der Instrumentalzeit; nichts davon wird markiert.
+Theorie kommt dazu: ein Kapitel pro Woche lesen, jedes Beispiel in der Vorschau hören und nach Wunsch nachspielen, die Zusammenfassung am Ende wiederholen. Etwa 45 Minuten außerhalb der Instrumentalzeit; nichts davon wird markiert.
 
 Eine Einheit pro Instrument bearbeiten. Bereits sichere Aufgaben dienen als Einstiegskontrolle. Hören/singen → spielen → wiederholen → genau eine Eigenschaft verändern → aufnehmen und vergleichen. „Sicher abrufbar“ erst nach Wiederholung an zwei Übetagen ohne Hilfen. Bestehende Markierungen bleiben erhalten; überarbeitete Übungen erneut prüfen.
 
@@ -66,7 +79,7 @@ MX49: Drum-Kit auf Part 10. SR-18: MIDI-Interface mit DIN-Ausgang, MIDI CH 10, D
 
 Alle Drum-Muster enthalten geschlossene Hi-Hat (Note 42) mit hörbar gewichteten MIDI-Velocities. Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Shuffle verwendet lange/kurze Achtel im Übeverhältnis 2:1. In 12/8 sind es vier große Pulse mit je drei Hi-Hat-Achteln; 5/8 und 7/8 betonen die vorgegebenen Gruppen. Auch 3/4 bietet Klick und Drums.
 
-Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/8 und 12/8, ♪ bei 5/8 und 7/8. Vorschau und MIDI verwenden dieselbe Einheit. Bass und Pads werden selbst gespielt, nicht vom Player erzeugt. Die separate Notenvorschau verwendet lokal gehostete Salamander-Klaviersamples (Alexander Holm, CC BY 3.0); sie berücksichtigt Stimmen, Haltebögen, Akzente, Staccato, Bend-Zielton, Swing und Formabläufe. Sie simuliert keine Gitarren-Anschlagtechnik.
+Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/8 und 12/8, ♪ bei 5/8 und 7/8. Vorschau und MIDI verwenden dieselbe Einheit. Bass und Pads werden selbst gespielt, nicht vom Player erzeugt. Die separate Notenvorschau verwendet lokal gehostete Salamander-Klaviersamples (Alexander Holm, CC BY 3.0); sie berücksichtigt Stimmen, Haltebögen, Akzente, Staccato, Bend-Zielton, Swing und Formabläufe. Sie simuliert keine Gitarren-Anschlagtechnik. Die Notenschrift setzt Schlüssel, Pausen, Fähnchen, Vorzeichen, Wiederholungs- und Sprungzeichen als Umrisse der SMuFL-Schrift Bravura (Steinberg, SIL Open Font License 1.1, `assets/glyphs/OFL.txt`); Notenköpfe, Hälse, Balken und Bögen zeichnet der Renderer selbst.
 
 „Anhören“ wiederholt die vollständige notierte Form einschließlich Pausen bis zum Stoppen. Ausklänge dürfen über die Loop-Grenze reichen, ohne den nächsten Einsatz zu verzögern. Geladen werden nur die nötigen Anschlagsschichten und Tonhöhen. Der Satz umfasst 17 Grundtöne × 3 Schichten = 51 Stereo-MP3s, zusammen 6.092.470 Bytes. Anschlag und natürlicher Ausklang stammen aus der Aufnahme. Eine kurze Einschaltglättung und eine registerabhängige exponentielle Dämpfung mit abnehmenden Höhen formen die Notenenden. Stoppen blendet aus und verwirft geplante Einsätze; abgebrochenes Laden startet später nicht selbstständig. Kein zusätzlicher Klangregler.
 
@@ -82,10 +95,12 @@ Speicherung gilt pro Browserprofil und Origin; localhost und a-minor.ch haben ge
 
 | Datei | Aufgabe |
 |---|---|
-| `data/course.json` | Sprachunabhängige IDs, Phasenstruktur (drei Spuren), Noten, Hilfen und Begleitvorgaben |
-| `locales/de.json`, `locales/en.json` | Kurstexte und Oberflächentexte |
+| `data/course.json` | Sprachunabhängige IDs, Phasenstruktur (zwei Spuren), Noten, Hilfen und Begleitvorgaben |
+| `data/book.json` | Musiklehre: Teile, Kapitel und Beispielpartituren |
+| `js/glyphs.js`, `assets/glyphs/` | Bravura-Notenglyphen (Schlüssel, Pausen, Fähnchen, Vorzeichen, Wiederholungs- und Sprungzeichen) mit Lizenz |
+| `locales/de.json`, `locales/en.json` | Kurstexte, Buchtexte und Oberflächentexte |
 | `js/i18n.js` | Laden und Zusammenführen der Sprachdaten |
-| `js/app.js` | Ansichten, Sprachwechsel, Übungen und MIDI-Bedienung |
+| `js/app.js` | Ansichten (Kurs, Musiklehre, MIDI, Log), Sprachwechsel, Übungen und MIDI-Bedienung |
 | `js/music.js` | Tonhöhen, Intervalle, Skalen und P4-Positionen |
 | `js/notation.js` | Noten-SVG, Stimmen, Haltebögen und Lesegenerator |
 | `js/audio.js` | MIDI-Kursbegleitung und separate Notenvorschau |
@@ -112,7 +127,9 @@ Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beid
 }
 ```
 
-Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`. Theorieeinheiten haben statt `exercises` ein Array `examples` mit `kind` `hear`, `notation` und `application` in dieser Reihenfolge; nur `notation` trägt `score` und `tempo`, keines trägt `backing` oder `checklist`. Beispieltexte haben `title` und `text`. Eine Phase mit `"reference": true` enthält Einheiten ohne Beispiele (Anhänge).
+Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`.
+
+Die Musiklehre liegt in `data/book.json`: `parts` mit `chapters`, jedes Kapitel mit `examples` (`id`, `textId`, `tempo`, `score`, optional `instrument: "guitar"` für oktavierende Gitarrennotation). Der letzte Teil trägt `"appendix": true` und enthält Kapitel ohne Beispiele. Die Texte stehen unter dem Namensraum `book` beider Sprachdateien: Kapitel mit `title` und `text`, Beispiele mit `title`, Takt- und Abschnittsbeschriftungen bei Bedarf als eigener `textId` (`chords`, `sections`). Der Kapiteltext gliedert sich in `## n.m`-Abschnitte und platziert jedes Beispiel genau einmal mit `[[beispiel-id]]`; die Nummerierung „Beispiel n.m“ folgt der Reihenfolge im Text. Kein Beispiel trägt `backing` oder `checklist`.
 Dauern: `w h q e s`, optional punktiert (`h.`) oder als Triole (`et`, `qt`). Zeitberechnung mit 24 Ticks pro Viertel hält binäre und ternäre Unterteilungen exakt. `tie:1` bindet zur nächsten gleichen Tonhöhe. `p` darf für Akkorde ein Array enthalten; `s` und `fi` können dazu positionsgleiche Arrays sein. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. `score.inner` ergänzt eine unabhängig gehaltene beziehungsweise bewegte Mittelstimme im oberen System. Alle Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
 
 Zusätzliche Notenfelder: `accent`, `staccato`, `harmonic`, `bend` (Halbtöne), `slur`/`slurEnd`. `tuplet:3` startet eine Triolenklammer, `tupletEnd:true` beendet sie. `score.chords` und `score.sections` beschriften Takte; `score.swing:true` interpretiert gerade Achtel in der Vorschau als 2:1-Übemodell.
@@ -141,7 +158,7 @@ npm run test:browser
 
 Node.js und Python 3 erforderlich; Browsertest startet seinen lokalen Server selbst. Chromium liegt standardmäßig unter `/usr/bin/chromium`, alternativ `CHROMIUM_PATH` setzen. Playwright ist ausschließlich eine Entwicklungsabhängigkeit.
 
-Die Tests prüfen die Einheitenzahl, die Beispielfolge Hörbeispiel/Notenbeispiel/Anwendung der Theoriespur ohne Aufgaben, Begleitung oder Checklisten, verwaiste Texte, aufgabenlose Anhänge, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Zusätzlich: Sample-Integrität, Anschlagsschichten, Retuning, Dämpfung, Ladewiederholung, Abbruch während des Ladens und Audio-Rendering im Browser (Dynamik, Tonenden, Polyphonie). Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
+Die Tests prüfen die Einheitenzahl, die Vollständigkeit der Musiklehre (mindestens 30 Kapitel, mindestens fünf Beispiele pro Kapitel, jedes Beispiel genau einmal platziert, gleiche Reihenfolge in beiden Sprachen, keine Aufgaben, keine „prüfen“-Markierungen, keine Gerätenamen), verwaiste Texte, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Zusätzlich: Sample-Integrität, Anschlagsschichten, Retuning, Dämpfung, Ladewiederholung, Abbruch während des Ladens und Audio-Rendering im Browser (Dynamik, Tonenden, Polyphonie). Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
 
 Akkordsymbole bleiben oberhalb der Noten sichtbar. Unter jedem Takt stehen die tatsächlichen Bass- beziehungsweise Pedaltöne, einschließlich Basswechseln und Pausen; reine Einzelstimmen erhalten keine erfundenen Akkorde. Die Angaben folgen den klingenden Oktaven (auch bei oktavierender Gitarrennotation) und der internationalen Benennung B/H: B entspricht deutschem H, Bb deutschem B.
 
