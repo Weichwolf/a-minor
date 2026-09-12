@@ -152,6 +152,7 @@ test('all written combinations fit separate guitar strings and reachable keyboar
         if (frets.length) assert(Math.max(...frets) - Math.min(...frets) <= 4,e.id + ': excessive fret span at ' + t / N.ticks('q'));
       } else {
         assert.equal(new Set(active.map(n => n.midi)).size,active.length,e.id + ': simultaneous voices on one key');
+        if (e.instrument === 'theory') continue;
         for (const hand of [active.filter(n => n.voice === 1),active.filter(n => n.voice !== 1)]) {
           assert(hand.length <= 5,e.id + ': more than five notes in one hand');
           if (hand.length) assert(Math.max(...hand.map(n => n.midi)) - Math.min(...hand.map(n => n.midi)) <= 12,e.id + ': hand wider than an octave');
@@ -169,18 +170,24 @@ test('legacy restore preserves repeated practice notes and remains idempotent', 
   const before = S.export(); S.import(backup); assert.equal(S.export(),before);
 });
 
-test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks', () => {
+test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks; theory units are hear, model, apply', () => {
   const ids = new Set();
   for (const track of Object.values(tracks)) for (const [i,phase] of track.phases.entries()) {
     assert(!phase.planned,phase.id);
-    if (i >= 2) assert.equal(phase.units.length,track.instrument === 'guitar' ? 7 : 6,phase.id);
+    const theory = track.instrument === 'theory';
+    if (i >= 2 && !theory) assert.equal(phase.units.length,track.instrument === 'guitar' ? 7 : 6,phase.id);
     for (const unit of phase.units) {
       assert(!ids.has(unit.id),unit.id);ids.add(unit.id);
       assert(!/Geplant\.|nicht ausgearbeitet/.test(unit.text),unit.id);
+      if (theory) {
+        assert.deepEqual(unit.exercises.map(e => e.kind),['hear','model','apply'],unit.id);
+        assert(unit.exercises[1].score,unit.id + ': written model');
+        assert(unit.text.length > 400,unit.id + ': theory text');
+      }
       if (i < 2) continue;
       assert.equal(unit.exercises.length,3,unit.id);
-      assert(unit.exercises[0].score,unit.id + ': written example');
-      assert.equal(unit.exercises[2].kind,'compose',unit.id + ': independent application');
+      assert(unit.exercises[theory ? 1 : 0].score,unit.id + ': written example');
+      if (!theory) assert.equal(unit.exercises[2].kind,'compose',unit.id + ': independent application');
       for (const ex of unit.exercises) for (const bundle of [de,en]) {
         assert(bundle.course[ex.textId].instructions.length > 80,ex.id);
         assert.equal(bundle.course[ex.textId].checklist.length,2,ex.id);
@@ -282,7 +289,7 @@ test('harmonic references preserve authored chords and name actual bass motion w
 
 test('guitar course uses pick-only right hand and introduces left-hand tapping after basic legato', () => {
   for(const locale of [de,en]) {
-    const guitarText=Object.entries(locale.course).filter(([id])=>!id.startsWith('k')).map(([,v])=>JSON.stringify(v)).join('\n');
+    const guitarText=Object.entries(locale.course).filter(([id])=>!/^(k|t)/.test(id)).map(([,v])=>JSON.stringify(v)).join('\n');
     assert(!/Fingeranschlag|Fingerzupfen|Bass mit Daumen|Daumen spielt|i–m–a|upper fingers|free fingers|Thumb plays/.test(guitarText));
     assert.match(locale.course['e6-4-1'].instructions,/Plektrum|[Pp]ick/);
     assert.match(locale.course['e5-6-2'].instructions,/Stille|silence/);

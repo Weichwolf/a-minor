@@ -3462,6 +3462,424 @@
       "title": "Abschluss: ein eigenes Solostück",
       "goal": "Eine vollständige notierte Form lesen, gestalten und selbst entwickeln.",
       "text": "Das 32-taktige Modell bündelt Motiv, Kontrast, drei Schichten, Triolen und Kadenz. Es ist ein Arbeitsbeispiel, kein Ersatz für dein eigenes Stück. Prüfe zuerst vier Takte, dann acht, dann die vollständige Form. Ein Abschluss braucht hörbare Gestaltung und reproduzierbare Entscheidungen.\n\nPrüfe Balance, lesbare Handlagen und gezielte Tonenden. Im Triolenabschnitt spielt links eine gebrochene Bassfigur; Hände einzeln vorbereiten. Spiele mindestens eine Aufnahme mit klavierartigem Ausklang; eine zweite darf deinen Synthklang verwenden."
+    },
+    "theorie": {
+      "title": "Theorie",
+      "lead": "Was die Referenzen tun, warum es funktioniert und was sie teilen. Noten, Harmonik, Rhythmus, Klang und Form auf E–A–D aufgebaut. Hören, Modell, Anwendung."
+    },
+    "t0": {
+      "title": "Ton und Schrift",
+      "goal": "Frequenz, Obertöne, Stimmung, vollständige Noten- und Rhythmusschrift, Hörmethode. Referenzen kartieren, Verzerrung physikalisch verstehen."
+    },
+    "tu0-1": {
+      "title": "Frequenz, Obertöne, Intervall als Verhältnis",
+      "goal": "Intervalle als Frequenzverhältnisse hören und rechnen; die Obertonreihe auf E kennen.",
+      "text": "Ein Ton ist eine periodische Schwingung. Die tiefe E-Saite schwingt mit etwa 82,4 Hz (E2). Eine Saite schwingt nicht nur als Ganzes, sondern gleichzeitig in Hälften, Dritteln, Vierteln. Diese Teilschwingungen heißen Obertöne. Ihre Frequenzen sind ganzzahlige Vielfache: 2f, 3f, 4f. Für E2 = 82,4 Hz: 164,8 (E3), 247,2 (B3), 329,6 (E4), 412 (≈G#4), 494,4 (B4), 576,8 (≈D5), 659,2 (E5).\n\nDie Reihe enthält also Oktave, Quinte, große Terz und eine tiefe kleine Septime. Der siebte Teilton liegt 31 Cent unter dem temperierten D, der fünfte 14 Cent unter G#. Ein Powerchord E–B verstärkt Teiltöne, die schon in der Saite stecken. Das ist der Grund, warum er auch bei Verzerrung stabil bleibt.\n\nIntervalle sind Verhältnisse: Oktave 2:1, Quinte 3:2, Quarte 4:3, große Terz 5:4, kleine Terz 6:5. Kleine Zahlen klingen verschmolzen, große Zahlen rau. Die temperierte Stimmung ersetzt diese Verhältnisse durch Potenzen von 2^(1/12); die Quinte wird 2 Cent zu klein, die große Terz 14 Cent zu groß. Auf der Gitarre hörst du das an schwebenden Terzen bei Gain.\n\nDer Klang eines Instruments hängt davon ab, welche Teiltöne wie stark vorhanden sind. Ein Klavier hat leicht gespreizte Obertöne (Inharmonizität), ein Synthesizer-Sägezahn alle Teiltöne mit Amplitude 1/n, ein Rechteck nur die ungeraden. Das ist der Ausgangspunkt für Phase 6."
+    },
+    "te0-1-1": {
+      "title": "Hören · Frequenz, Obertöne, Intervall als Verhältnis",
+      "instructions": "Type O Negative, *October Rust*, „Love You to Death“: Höre den ersten verzerrten Gitarreneinsatz nach dem Klavier-Intro. Bestimme, ob die Gitarre Quinten oder Terzen spielt, ohne Instrument. Danach mit der Gitarre prüfen: Welche Teiltöne hörst du über dem Grundton? Behauptung: Quinten und Oktaven, keine Terzen im tiefen Register (prüfen).",
+      "checklist": [
+        "Quinte oder Terz ohne Instrument bestimmt und danach geprüft?",
+        "Zeitstelle und Höreindruck im Log?"
+      ]
+    },
+    "te0-1-2": {
+      "title": "Modell · Frequenz, Obertöne, Intervall als Verhältnis",
+      "instructions": "Die Obertonreihe auf E2, Teiltöne 1–8. Spiele jeden Ton auf Gitarre oder Keyboard und singe ihn. Berechne die Frequenz jedes Teiltons aus 82,4 Hz und vergleiche mit der temperierten Tonhöhe: Wo liegt die größte Abweichung? Flageolett über Bund 12, 7 und 5 der E-Saite liefert Teilton 2, 3 und 4 direkt.",
+      "checklist": [
+        "Alle acht Frequenzen gerechnet und die zwei größten Abweichungen benannt?",
+        "Teilton 2, 3, 4 als Flageolett gefunden?"
+      ]
+    },
+    "te0-1-3": {
+      "title": "Anwendung · Frequenz, Obertöne, Intervall als Verhältnis",
+      "instructions": "Nimm E2 und B2 gleichzeitig auf, einmal clean, einmal mit Gain. Beschreibe im Log, welche zusätzlichen Tonhöhen bei Gain erscheinen. Wiederhole mit E2 und G2. Formuliere in einem Satz, warum Doom-Riffs Quinten tief und Terzen hoch legen.",
+      "checklist": [
+        "Vier Aufnahmen, Unterschied clean/Gain beschrieben?",
+        "Satz zur Registerwahl steht im Log?"
+      ]
+    },
+    "tu0-2": {
+      "title": "Warum E A D: Quarten, Quinten und ihre Komplemente",
+      "goal": "Die Logik der Gitarrenstimmung verstehen und E–A–D als Quartenkette mit drei Zentren lesen.",
+      "text": "Quarte (5 Halbtöne) und Quinte (7 Halbtöne) ergänzen sich zur Oktave: 5 + 7 = 12. Wer eine Quarte aufwärts geht, landet auf demselben Tonnamen wie eine Quinte abwärts. E aufwärts zu A, A aufwärts zu D: das ist dieselbe Bewegung wie E abwärts zu A abwärts zu D im Quintenzirkel. Die tiefen Gitarrensaiten folgen dieser Kette. Der Bass hat sie vollständig: E A D G.\n\nDie Standardstimmung bricht die Kette zwischen G und B (große Terz), damit sechs Saiten in zwei Oktaven E2–E4 passen und Dur-/Moll-Griffe mit vier Fingern erreichbar sind. Reine Quarten (P4: E A D G C F) halten die Geometrie auf allen Saiten gleich: jedes Intervall hat eine Form, die überall gilt. Der Preis ist ein Tonraum bis F4 und ungewohnte Akkordformen. Type O Negative stimmen dieselbe Standardkette eine Quarte tiefer: B E A D F# B (prüfen). Die Beziehungen bleiben, das Register sinkt.\n\nE–A–D als Tonvorrat sind drei mögliche Zentren. In A: E ist V, D ist IV, die klassische Kadenzachse. In E: A ist IV, D ist bVII, die modale Achse von E-Äolisch oder E-Mixolydisch. In D: A ist V, E ist II. Dieselben drei Töne tragen also eine funktionale und eine modale Lesart. Der Kurs baut beide Lesarten auf.\n\nLeere Saiten sind Pedaltöne ohne Greifhand. Auf E, A und D lässt sich also über jedem der drei Zentren ein Pedal halten und darüber bewegen. Das ist der praktische Grund, warum diese Musik auf Gitarre so gut funktioniert: das Fundament kostet keinen Finger."
+    },
+    "te0-2-1": {
+      "title": "Hören · Warum E A D: Quarten, Quinten und ihre Komplemente",
+      "instructions": "Anathema, *Eternity*, „Sentient“ und der Beginn von „Angelica“: Bestimme das Bassfundament der ersten Minute jeder Nummer. Bleibt es auf einem Ton oder wechselt es zwischen zwei Zentren? Behauptung: lange Pedaltöne, Wechsel im Quart-/Quintabstand (prüfen). Notiere den gehörten Grundton als Buchstaben, nicht als Griff.",
+      "checklist": [
+        "Grundton beider Stellen als Buchstabe notiert?",
+        "Intervall zwischen den Zentren bestimmt?"
+      ]
+    },
+    "te0-2-2": {
+      "title": "Modell · Warum E A D: Quarten, Quinten und ihre Komplemente",
+      "instructions": "Takt 1: Standardstimmung, Takt 2: P4. Die ersten vier Saiten sind gleich. Zähle die Halbtöne zwischen allen Nachbarsaiten beider Stimmungen. Schreibe unter jede Saite ihren Ton als Stufe in E, A und D (z. B. D = bVII in E, IV in A, I in D).",
+      "checklist": [
+        "Halbtonabstände beider Stimmungen vollständig gezählt?",
+        "Stufentabelle für E, A und D geschrieben?"
+      ]
+    },
+    "te0-2-3": {
+      "title": "Anwendung · Warum E A D: Quarten, Quinten und ihre Komplemente",
+      "instructions": "Spiele acht Takte nur mit leeren Saiten E, A, D als Bass, je zwei Takte pro Zentrum und zurück nach E. Höre, an welcher Stelle der Wechsel wie eine Kadenz klingt (V–I) und wo wie ein modaler Farbwechsel (I–bVII). Notiere Reihenfolge und Wirkung.",
+      "checklist": [
+        "Kadenzwirkung und modale Wirkung an konkreten Wechseln benannt?",
+        "Acht Takte aufgenommen?"
+      ]
+    },
+    "tu0-3": {
+      "title": "Notenschrift vollständig",
+      "goal": "Schlüssel, Oktavlagen, Vorzeichnung, Versetzungszeichen und Enharmonik ohne Lücke beherrschen.",
+      "text": "Fünf Linien, ein Schlüssel legt einen Ton fest. Violinschlüssel: G4 auf der zweiten Linie. Bassschlüssel: F3 auf der vierten Linie. C4 liegt zwischen beiden Systemen auf einer Hilfslinie. Gitarre klingt eine Oktave tiefer als notiert; im Kurs steht das klingende E2 als E3 im Violinsystem. Der Bass notiert ebenso oktaviert im Bassschlüssel. Keyboard notiert klingend.\n\nOktavlagen: C4 = MIDI 60 = 261,6 Hz. Jede Oktave verdoppelt die Frequenz und erhöht die Zahl um eins. E2 ist die tiefe Gitarrensaite, E1 die tiefe Basssaite, B0 die tiefe Saite einer nach B gestimmten Gitarre (prüfen: Type O Negative).\n\nVorzeichnung: Kreuze in der Folge F C G D A E B, Bs in der Folge B E A D G C F. Die letzte Kreuznote plus Halbton ist die Dur-Tonart; das vorletzte B ist die Dur-Tonart. Moll liegt eine kleine Terz darunter. Em hat ein Kreuz (F#), Am keines, Dm ein B (Bb). Die drei Zentren des Kurses liegen also nebeneinander im Quintenzirkel.\n\nVersetzungszeichen gelten bis zum Taktstrich in derselben Oktavlage. Enharmonik: G# und Ab sind dieselbe Taste, aber nicht dieselbe Funktion. In E-Dur ist G# die Terz, in E-Moll wäre Ab ein Fremdton. Schreibe den Ton so, wie er sich bewegt: Leittöne aufwärts als Kreuz, absteigende Durchgänge als B. Der chromatische Bass E–Eb–D–Db–C–B aus Phase 3 ist deshalb mit Bs notiert."
+    },
+    "te0-3-1": {
+      "title": "Hören · Notenschrift vollständig",
+      "instructions": "My Dying Bride, *Turn Loose the Swans*, „Sear Me MCMXCIII“: Klavier und Violine ohne Gitarre. Bestimme die Tonart nach Gehör über die Schlusstöne der Phrasen und schreibe die Vorzeichnung. Prüfe am Keyboard, ob die Terz groß oder klein ist. Behauptung: Moll, Violine im Register über C5 (prüfen).",
+      "checklist": [
+        "Tonart und Vorzeichnung geschrieben, Terz geprüft?",
+        "Register der Violine als Oktavlage benannt?"
+      ]
+    },
+    "te0-3-2": {
+      "title": "Modell · Notenschrift vollständig",
+      "instructions": "E-Äolisch aufwärts mit Vorzeichnung, E harmonisch Moll abwärts mit Versetzungszeichen D#. Benenne jede Note mit Oktavlage. Schreibe dieselbe Folge im Bassschlüssel zwei Oktaven tiefer auf Papier. Schreibe D#5 einmal als Eb5 und erkläre, warum das hier falsch wäre.",
+      "checklist": [
+        "Alle 16 Töne mit Oktavlage benannt, Bassschlüssel-Fassung geschrieben?",
+        "Begründung D# statt Eb im Log?"
+      ]
+    },
+    "te0-3-3": {
+      "title": "Anwendung · Notenschrift vollständig",
+      "instructions": "Schreibe die leeren Saiten von Gitarre (P4), Bass (E A D G) und die tiefste Taste deines 49er-Keyboards jeweils klingend und, wo üblich, oktaviert notiert. Schreibe daneben die Vorzeichnungen von Em, Am, Dm, E, A, D. Kontrolliere am Instrument.",
+      "checklist": [
+        "Klingende und notierte Lage für alle Saiten korrekt?",
+        "Sechs Vorzeichnungen ohne Nachschlagen?"
+      ]
+    },
+    "tu0-4": {
+      "title": "Rhythmusschrift vollständig",
+      "goal": "Alle Notenwerte, Punktierungen, Bindungen, Pausen, Taktarten und Balkensetzung sicher lesen und schreiben.",
+      "text": "Ganze, Halbe, Viertel, Achtel, Sechzehntel: jede Stufe halbiert. Ein Punkt addiert die Hälfte, ein zweiter Punkt ein weiteres Viertel. Ein Haltebogen verbindet gleiche Tonhöhen zu einer Dauer; ein Phrasierungsbogen verbindet verschiedene Tonhöhen und sagt nichts über Dauer. Pausen haben dieselben Werte wie Noten; eine Ganze Pause hängt unter der vierten Linie, eine Halbe sitzt auf der dritten.\n\nDie Taktart nennt oben die Zahl der Schläge, unten den Notenwert eines Schlags. 4/4: vier Viertel. 3/4: drei Viertel. 6/8, 9/8, 12/8: zusammengesetzt, die Achtel gruppieren sich zu dritt, der gefühlte Puls ist die punktierte Viertel. 5/8 und 7/8: die Achtel gruppieren sich ungleich, hier 2+3 und 2+2+3. Der Tempowert nennt immer, welcher Wert gezählt wird: ♩ = 60, ♩. = 60 oder ♪ = 120 bedeuten drei verschiedene Dinge.\n\nBalken zeigen die Gruppierung: in 4/4 pro Viertel, in 12/8 pro Dreiergruppe. Eine Synkope liegt zwischen den Schlägen und klingt über den nächsten Schlag hinweg; sie wird mit Bindung geschrieben, nicht als versteckter Wert über den Schlag. Regel: Jeder Schlag im Takt bleibt sichtbar.\n\nDoom lebt von Tempi zwischen 50 und 80 Vierteln. Bei ♩ = 60 dauert eine Ganze vier Sekunden. Ein Riff aus vier Ganzen ist ein 16-Sekunden-Gedanke. Die Referenzen strecken so Zeit, und die Schrift muss das abbilden: Ganze und Halbe sind normale Werte, nicht Ausnahmen."
+    },
+    "te0-4-1": {
+      "title": "Hören · Rhythmusschrift vollständig",
+      "instructions": "My Dying Bride, „The Crown of Sympathy“: Zähle das Tempo der ersten Gitarrenphrase in Vierteln pro Minute (Stoppuhr, 8 Schläge). Bestimme, ob die Gitarre in Ganzen, Halben oder Vierteln denkt. Vergleiche mit Vivaldi, *Der Winter*, Satz 1, Beginn: Tempo und kleinster Wert. Behauptung: Doom-Phrase in Halben und Ganzen, Vivaldi in Achteln bei ähnlichem Grundpuls (prüfen).",
+      "checklist": [
+        "Beide Tempi gemessen und notiert?",
+        "Kleinster Notenwert beider Stellen bestimmt?"
+      ]
+    },
+    "te0-4-2": {
+      "title": "Modell · Rhythmusschrift vollständig",
+      "instructions": "Sieben Takte auf einem Ton: Viertel, Achtelpaar, Punktierung, Achtelpausen, Sechzehntel, Haltebogen über den Taktstrich. Klatsche jeden Takt einzeln, dann alle mit Klick. Schreibe unter jeden Takt die Zählsilben (1 und 2 e und a). Erkläre, warum Takt 6–7 mit Haltebogen und nicht mit einer Note über den Taktstrich geschrieben ist.",
+      "checklist": [
+        "Alle sieben Takte mit Zählsilben beschriftet?",
+        "Haltebogen-Regel in einem Satz erklärt?"
+      ]
+    },
+    "te0-4-3": {
+      "title": "Anwendung · Rhythmusschrift vollständig",
+      "instructions": "Schreibe je einen Takt in 4/4, 3/4, 6/8, 12/8, 7/8 (2+2+3) und 5/8 (2+3) mit korrekten Balken, jeweils mit mindestens einer Pause und einem punktierten Wert. Schreibe den passenden Tempowert dazu (♩, ♩. oder ♪). Spiele jeden Takt viermal auf einem Ton.",
+      "checklist": [
+        "Sechs Takte mit korrekter Balkensetzung und Tempoeinheit?",
+        "Jeder Takt viermal ohne Verlust des Pulses?"
+      ]
+    },
+    "tu0-5": {
+      "title": "Gehörmethode: Rhythmus vor Tonhöhe, Bass vor Melodie",
+      "goal": "Eine feste Reihenfolge fürs Heraushören haben, die auch bei dichten Aufnahmen trägt.",
+      "text": "Heraushören scheitert selten am Ohr, meist an der Reihenfolge. Die Methode: 1. Form: Abschnitte zählen, Taktzahl pro Abschnitt. 2. Puls und Taktart: mitklopfen, Betonung finden, Tempo messen. 3. Bass: tiefste Stimme, Tonwechsel pro Takt notieren, zuerst nur die Buchstaben. 4. Rhythmus der Melodie auf einem Ton klatschen. 5. Tonhöhen der Melodie, ausgehend von Anfang und Schluss jeder Phrase. 6. Innenstimmen und Akkordtypen zuletzt.\n\nDer Bass ist der Schlüssel, weil er in dieser Musik den Akkord bestimmt. Die Gitarre spielt oft nur Quinten; ob der Akkord Dur oder Moll ist, verraten Gesang, Keyboards oder gar nichts. Ein Akkordsymbol ohne Terz ist ehrlicher als eine geratene Terz.\n\nHilfsmittel: halbe Geschwindigkeit ohne Tonhöhenänderung, Loop von zwei Takten, Mitsingen in bequemer Oktave. Nicht: Griffbilder raten und die Aufnahme passend hören. Wenn zwei Töne möglich scheinen, beide spielen und die Aufnahme entscheiden lassen.\n\nBei Barock die Umkehrung: Bass läuft, Oberstimme ist oft eine Sequenz. Erst die Sequenzformel erkennen (welches Intervall wird wie oft versetzt), dann ausschreiben. Bei Type O Negative sind die Stimmen in Oktaven gedoppelt; nur die tiefste Stimme zählt für die Notation."
+    },
+    "te0-5-1": {
+      "title": "Hören · Gehörmethode: Rhythmus vor Tonhöhe, Bass vor Melodie",
+      "instructions": "Type O Negative, „Red Water (Christmas Mourning)“: Erster Gesangsabschnitt. Führe die sechs Schritte der Methode durch und halte nach jedem Schritt an. Notiere die Basstöne als Buchstaben pro Takt, danach den Rhythmus der Gesangsmelodie. Tonhöhen der Melodie erst im dritten Durchgang. Behauptung: Bass wechselt seltener als einmal pro Takt (prüfen).",
+      "checklist": [
+        "Sechs Schritte einzeln protokolliert?",
+        "Bassbuchstaben vor Melodietönen notiert?"
+      ]
+    },
+    "te0-5-2": {
+      "title": "Modell · Gehörmethode: Rhythmus vor Tonhöhe, Bass vor Melodie",
+      "instructions": "Höre die Vorschau dreimal ohne auf die Noten zu sehen. Durchgang 1: Bassbuchstaben. Durchgang 2: Rhythmus der Oberstimme klatschen. Durchgang 3: Tonhöhen der Oberstimme, zuerst Anfang und Schluss. Erst dann vergleichen. Markiere, welcher Schritt am meisten Versuche brauchte.",
+      "checklist": [
+        "Drei Durchgänge in der vorgegebenen Reihenfolge?",
+        "Schwächster Schritt im Log benannt?"
+      ]
+    },
+    "te0-5-3": {
+      "title": "Anwendung · Gehörmethode: Rhythmus vor Tonhöhe, Bass vor Melodie",
+      "instructions": "Wähle einen zweitaktigen Ausschnitt aus Vivaldi, *Der Sommer*, Satz 3 (Presto). Erkenne zuerst die Sequenzformel der Oberstimme, dann den Bass, dann die Notation. Schreibe die zwei Takte aus und spiele sie langsam auf dem Keyboard. Vergleiche mit der Aufnahme.",
+      "checklist": [
+        "Sequenzformel vor dem Ausschreiben benannt?",
+        "Zwei Takte notiert und am Keyboard verglichen?"
+      ]
+    },
+    "tu0-6": {
+      "title": "Referenzen kartieren: Instrumente, Register, Rollen",
+      "goal": "Für jedes Referenzalbum wissen, wer welches Register besetzt und welche Rolle trägt.",
+      "text": "Vier Rollen tragen fast jedes Stück: Fundament (Bass, tiefe Gitarre, Pedal der Orgel), Puls (Drums, Continuo-Rhythmus, Riff-Anschlag), Fläche (Keyboards, Streicher, gehaltene Akkorde) und Linie (Gesang, Violine, Leadgitarre). Register ordnen sich grob: Fundament E1–E3, Riffs E2–E4, Flächen C3–C6, Linie C4–C6.\n\nMy Dying Bride, *Turn Loose the Swans*: zwei Gitarren, oft in Terzen oder Oktaven; Violine und Keyboards (Martin Powell) als Linie und Fläche; Bass folgt meist dem Riff; Drums in Half-time. Gesang wechselt zwischen Growl im Riffregister und Sprechstimme.\n\nType O Negative, *October Rust*: Gitarre nach B gestimmt, Bass mit Chorus und Oktaver als zweite Fläche, Keyboards (Josh Silver) als Orgel/Chor/Glocken, Gesang tief und in Oktaven gedoppelt. Sehr wenige Instrumente, sehr viel Register: alles ist breit.\n\nAnathema, *Eternity*: cleane Arpeggio-Gitarre und verzerrte Rhythmusgitarre gleichzeitig, Keyboards als Streicherfläche, klarer Gesang in mittlerer Lage. Der Bass trägt lange Töne, die Drums halten Viertel.\n\nVivaldi, *Le quattro stagioni*: Solovioline (Linie), Ripieno-Streicher (Fläche und Puls), Continuo (Fundament: Cello, Cembalo/Orgel). Biber, *Harmonia artificioso-ariosa*: zwei Violinen (oder Violen d’amore) über Continuo; die Linie ist doppelt, die Fläche entsteht aus der Zweistimmigkeit selbst.\n\nGemeinsam: ein Fundament, das langsamer wechselt als die Linie. Das ist die Struktur, die dieser Kurs auf Gitarre allein oder Keyboard allein nachbaut."
+    },
+    "te0-6-1": {
+      "title": "Hören · Referenzen kartieren: Instrumente, Register, Rollen",
+      "instructions": "Höre je eine Minute aus fünf Stücken, eines pro Referenz: „Your River“ (MDB), „Green Man“ (Type O), „Eternity Part I“ (Anathema), *Der Frühling* Satz 1 (Vivaldi), Partita I, erster Satz (Biber). Fülle für jedes eine Tabelle: Fundament, Puls, Fläche, Linie, jeweils Instrument und geschätztes Register. Behauptung: In allen fünf wechselt das Fundament seltener als die Linie (prüfen).",
+      "checklist": [
+        "Fünf Tabellen mit vier Rollen ausgefüllt?",
+        "Behauptung über Wechselhäufigkeit für jedes Stück geprüft?"
+      ]
+    },
+    "te0-6-2": {
+      "title": "Modell · Referenzen kartieren: Instrumente, Register, Rollen",
+      "instructions": "Vier Register nacheinander: Fundament (E2–B2), Riff (E3–B3), Fläche (G4–E5), Linie (G5–B5). Spiele die vier Takte auf dem Keyboard und höre, wie sich jede Schicht anfühlt. Dann alle vier gleichzeitig als einen Klang: Beschreibe, welche Schicht am wenigsten fehlt, wenn du sie weglässt.",
+      "checklist": [
+        "Vier Schichten einzeln und zusammen gespielt?",
+        "Entbehrlichste Schicht benannt und begründet?"
+      ]
+    },
+    "te0-6-3": {
+      "title": "Anwendung · Referenzen kartieren: Instrumente, Register, Rollen",
+      "instructions": "Schreibe eine Registerkarte für dein eigenes Setup: Gitarre P4, Bass (falls vorhanden), 49-Tasten-Keyboard, Synths. Trage für jede Quelle ein, welche der vier Rollen sie im Solospiel übernehmen kann und welche Rolle beim Solospiel zwangsläufig fehlt. Diese Karte ist Grundlage für Phase 8.",
+      "checklist": [
+        "Alle eigenen Quellen mit Register und Rollen eingetragen?",
+        "Fehlende Rolle im Solospiel benannt?"
+      ]
+    },
+    "tu0-7": {
+      "title": "Verzerrung als nichtlineares System",
+      "goal": "Verstehen, warum Quinten unter Gain tragen und Terzen matschen; Differenztöne berechnen.",
+      "text": "Ein linearer Verstärker gibt nur die Frequenzen aus, die hineingehen. Verzerrung schneidet die Wellenform ab (Clipping). Das erzeugt für jeden Ton zusätzliche Obertöne und für jedes Tonpaar Kombinationstöne: Summe und Differenz der Frequenzen sowie deren Vielfache. Bei zwei Tönen f1 und f2 entstehen f2 − f1, f1 + f2, 2f1 − f2 und weitere.\n\nQuinte 3:2 (E3 = 165 Hz, B3 = 247 Hz): Differenz 82 Hz = E2. Der Kombinationston ist der Grundton eine Oktave tiefer. Der Powerchord verstärkt sich selbst. Summe 412 Hz ≈ G#4: eine leichte Dur-Färbung, die man bei starker Verzerrung tatsächlich hört.\n\nGroße Terz 5:4 (E4 = 330, G#4 = 415): Differenz 85 Hz ≈ E2. Wieder der Grundton, zwei Oktaven tiefer. Die große Terz ist also unter Gain verträglich, wenn sie hoch liegt.\n\nKleine Terz 6:5 (E4 = 330, G4 = 392): Differenz 62 Hz ≈ B1/C2. Ein fremder Ton, der nicht zum Em-Akkord gehört. Je tiefer die Terz liegt, desto lauter und tiefer wird dieser Fremdton. Das ist der physikalische Grund, warum tiefe Mollterzen unter Verzerrung matschen und warum Doom-Gitarren die Terz weglassen, hoch legen oder dem Keyboard überlassen.\n\nKonsequenzen: Powerchords tief, Terzen hoch oder clean. Zwei Gitarren in Terzen (My Dying Bride) klingen deshalb im Register über E3 und mit moderatem Gain. Type O Negative lassen Terzen oft den Gesang und die Orgel tragen. Mehr Gain bedeutet mehr Kombinationstöne, also weniger verträgliche Intervalle."
+    },
+    "te0-7-1": {
+      "title": "Hören · Verzerrung als nichtlineares System",
+      "instructions": "My Dying Bride, „The Songless Bird“: Finde eine Stelle, an der beide Gitarren in Terzen spielen, und eine, an der sie Quinten oder Oktaven spielen. Vergleiche Register und Gain-Eindruck. Behauptung: Terzen liegen höher und klingen weniger verzerrt als die Quintriffs (prüfen).",
+      "checklist": [
+        "Terz- und Quintstelle gefunden und Register geschätzt?",
+        "Gain-Eindruck beider Stellen verglichen?"
+      ]
+    },
+    "te0-7-2": {
+      "title": "Modell · Verzerrung als nichtlineares System",
+      "instructions": "Oben das Intervall, unten der berechnete Differenzton. Rechne alle drei nach: Frequenzen aus dem Anhang Akustik, Differenz bilden, nächsten Ton suchen. Spiele dann jedes Intervall auf der Gitarre mit viel Gain und höre, ob der Differenzton dem Bass entspricht. Takt 3 ergibt einen Ton außerhalb von Em.",
+      "checklist": [
+        "Drei Differenztöne selbst gerechnet?",
+        "Fremdton in Takt 3 am Instrument gehört oder als nicht hörbar protokolliert?"
+      ]
+    },
+    "te0-7-3": {
+      "title": "Anwendung · Verzerrung als nichtlineares System",
+      "instructions": "Baue ein viertaktiges Riff, das dieselben Tonklassen E, G, B verwendet: Takt 1–2 nur Quinten und Oktaven tief, Takt 3–4 die Terz G im Register über E4. Nimm mit deinem üblichen Gain auf. Formuliere eine Regel für dein eigenes Setup: ab welchem Register wird die kleine Terz sauber?",
+      "checklist": [
+        "Riff aufgenommen und Terzregister variiert?",
+        "Eigene Registerregel im Log?"
+      ]
+    },
+    "t1": {
+      "title": "Zentrum und Modus",
+      "goal": "Grundton, Pedal und die sieben Modi. Äolisch, Phrygisch, Dorisch, Lydisch als Farben über E, A und D. Modal von tonal unterscheiden."
+    },
+    "tu1-1": {
+      "title": "Grundton, Drone, Pedal",
+      "goal": "Wissen, wodurch ein Ton zum Zentrum wird, und warum ein Pedalton Modalität überhaupt erst hörbar macht.",
+      "text": "Ein Zentrum entsteht nicht durch eine Skala, sondern durch Gewicht: Dauer, Wiederkehr, tiefe Lage, Betonung und Schlussposition. Ein Ton, der lange liegt, oft wiederkehrt, im Bass sitzt und Phrasen beendet, wird als Grundton gehört, egal welche Töne darüber laufen. Das ist der Pedalton. Drone ist derselbe Gedanke ohne Unterbrechung.\n\nÜber einem E-Pedal bestimmt die Melodie den Modus: F# oder F, C oder C#, D oder D#. Ohne Pedal wäre dieselbe Melodie mehrdeutig. E F G A B C D über E ist Phrygisch, dieselben Töne über C sind C-Dur, über A A-Moll. Der Bass entscheidet, nicht die Tonmenge.\n\nDie Referenzen arbeiten fast durchgehend mit Pedalen. Anathema halten ganze Abschnitte auf einem Basston und wechseln nur die Gitarrenfarbe darüber. Type O Negative lassen Bass und Orgel liegen, während der Gesang die Terz hin- und herschiebt. Vivaldi baut Pedalpunkte in die Ritornelle (Orgelpunkt auf der Dominante vor der Rückkehr). Biber setzt in den Ciaconen ein wiederholtes Bassmodell, ein rhythmisiertes Pedal.\n\nFür dich: Der offene E-, A- oder D-Bass ist das Pedal. Alles, was der Kurs an Modi lehrt, ist zunächst nur „welche Töne über welchem Pedal“. Kadenzen kommen später und brauchen Basswechsel."
+    },
+    "te1-1-1": {
+      "title": "Hören · Grundton, Drone, Pedal",
+      "instructions": "Anathema, „The Beloved“: Höre den Beginn und zähle, wie viele Takte der Bass auf einem Ton bleibt, bevor er wechselt. Bestimme dann, ob die Gitarre darüber die Terz oder die Sekunde verändert. Behauptung: mindestens acht Takte ein Basston, Farbwechsel nur in der Oberstimme (prüfen).",
+      "checklist": [
+        "Taktzahl des Pedals gezählt?",
+        "Veränderter Skalenton benannt?"
+      ]
+    },
+    "te1-1-2": {
+      "title": "Modell · Grundton, Drone, Pedal",
+      "instructions": "Ein Pedal, vier Farben: Phrygisch (F), Äolisch (F#), Dorisch (C#), Dur (G#). Nur je ein Ton ändert sich. Höre jeden Takt zweimal und benenne den veränderten Ton, bevor du auf die Noten siehst. Spiele dann die vier Takte über deinem eigenen E-Pedal auf Gitarre oder Keyboard.",
+      "checklist": [
+        "Vier veränderte Töne ohne Noten benannt?",
+        "Vier Takte über eigenem Pedal gespielt?"
+      ]
+    },
+    "te1-1-3": {
+      "title": "Anwendung · Grundton, Drone, Pedal",
+      "instructions": "Spiele acht Takte E-Pedal und singe darüber. Ändere pro zwei Takte genau einen Ton (F/F#, C/C#, D/D#, G/G#). Nimm auf. Schreibe, welcher Wechsel am stärksten wirkt und welcher kaum auffällt. Wiederhole dasselbe über A-Pedal mit den passenden Tönen (Bb/B, F/F#, G/G#, C/C#).",
+      "checklist": [
+        "Vier Wechsel über E und über A aufgenommen?",
+        "Stärkster und schwächster Wechsel benannt?"
+      ]
+    },
+    "tu1-2": {
+      "title": "Die sieben Modi aus einer Tonklasse",
+      "goal": "Alle Modi als Umordnung derselben sieben Töne kennen und über jedem der drei Zentren bilden.",
+      "text": "Die weißen Tasten C D E F G A B enthalten sieben Modi, je nachdem, welcher Ton Zentrum ist: C Ionisch (Dur), D Dorisch, E Phrygisch, F Lydisch, G Mixolydisch, A Äolisch (Moll), B Lokrisch. Die Halbtöne liegen immer zwischen E–F und B–C; ihre Position relativ zum Zentrum macht den Charakter.\n\nHalbtonschema (Abstände in Halbtönen): Ionisch 2-2-1-2-2-2-1, Dorisch 2-1-2-2-2-1-2, Phrygisch 1-2-2-2-1-2-2, Lydisch 2-2-2-1-2-2-1, Mixolydisch 2-2-1-2-2-1-2, Äolisch 2-1-2-2-1-2-2, Lokrisch 1-2-2-1-2-2-2.\n\nOrdnung nach Helligkeit: Lydisch, Ionisch, Mixolydisch, Dorisch, Äolisch, Phrygisch, Lokrisch. Jeder Schritt nach rechts erniedrigt genau einen Ton: #4 → 4, 7 → b7, 3 → b3, 6 → b6, 2 → b2, 5 → b5. Das ist die Reihenfolge des Quintenzirkels. Wer das kennt, kann jeden Modus über jedem Zentrum in Sekunden bilden.\n\nÜber E: E-Lydisch (E F# G# A# B C# D#), E-Dur, E-Mixolydisch (D), E-Dorisch (G, C#), E-Äolisch (G, C), E-Phrygisch (F), E-Lokrisch (F, Bb). Über A und D entsprechend. Die Referenzen nutzen Äolisch (Grundfarbe), Phrygisch (Verdunklung), Dorisch (Aufhellung in Moll), Lydisch und Ionisch (Kontrast). Lokrisch hat keine reine Quinte und taugt nicht als Zentrum; er erscheint nur als Durchgang."
+    },
+    "te1-2-1": {
+      "title": "Hören · Die sieben Modi aus einer Tonklasse",
+      "instructions": "Type O Negative, „Green Man“: Bestimme den Modus des Hauptteils über dem Bass. Ist die Terz groß? Ist die Septime klein? Behauptung: Dur-Terz mit kleiner Septime, also Mixolydisch, oder reines Dur (prüfen, beides ist plausibel; entscheide am siebten Ton).",
+      "checklist": [
+        "Terz und Septime einzeln bestimmt?",
+        "Modus mit Begründung im Log?"
+      ]
+    },
+    "te1-2-2": {
+      "title": "Modell · Die sieben Modi aus einer Tonklasse",
+      "instructions": "Sieben Modi über E, von hell nach dunkel; pro Takt wird genau ein Ton erniedrigt. Markiere in jedem Takt den neuen Ton. Spiele die Reihe auf dem Keyboard und singe mit. Bilde danach ohne Noten dieselbe Reihe über A und über D und schreibe die Töne auf.",
+      "checklist": [
+        "Sieben veränderte Töne markiert?",
+        "Reihe über A und D ohne Vorlage geschrieben?"
+      ]
+    },
+    "te1-2-3": {
+      "title": "Anwendung · Die sieben Modi aus einer Tonklasse",
+      "instructions": "Nimm ein viertaktiges Motiv aus fünf Tönen und spiele es über E-Pedal in Äolisch, Dorisch, Phrygisch und Lydisch, ohne Rhythmus oder Kontur zu ändern. Nimm alle vier auf. Ordne sie nach Gehör von hell nach dunkel und prüfe die Reihenfolge gegen die Tabelle.",
+      "checklist": [
+        "Vier Fassungen mit identischem Rhythmus aufgenommen?",
+        "Höreindruck stimmt mit der Helligkeitsreihe überein, Abweichung notiert?"
+      ]
+    },
+    "tu1-3": {
+      "title": "Äolisch und Phrygisch: die Grundfarben von Doom",
+      "goal": "b6 und b2 als die beiden Töne erkennen, die den dunklen Klang der Referenzen tragen.",
+      "text": "Äolisch ist natürliches Moll: 1 2 b3 4 5 b6 b7. Sein charakteristischer Ton ist b6, in E das C. Der Schritt b6 → 5 (C → B) ist ein Halbton abwärts und die häufigste Schlusswendung in dieser Musik. Der Akkord auf b6 ist Dur (C), der auf b7 ebenfalls (D). Die Folge Em–C–D–Em ist deshalb das Grundmodell modalen Molls: drei Akkorde, kein Leitton, keine Dominante.\n\nPhrygisch erniedrigt zusätzlich die 2: 1 b2 b3 4 5 b6 b7, in E das F. Der Halbton über dem Grundton drückt die Melodie nach unten; F–E ist der phrygische Schluss. Der Akkord auf b2 ist Dur (F), auf 5 vermindert (Bdim). Phrygisch hat also keinen brauchbaren Dominantakkord; er lebt von der Melodiebewegung b2–1.\n\nMy Dying Bride verwenden Äolisch als Normalzustand und rutschen zur Verdunklung nach Phrygisch, oft in der Violine. Type O Negative bleiben meist äolisch, aber der Bass betont b6 als eigenen Akkord (C über E-Moll). Anathema nutzen b6 als Fläche (C-Akkord unter E-Melodie), und die Wirkung ist nicht Trauer, sondern Weite.\n\nDie Verwechslungsgefahr: b6 und b2 sind beide Halbton-Nachbarn eines Akkordtons (5 und 1). Beide erzeugen Spannung nach unten. Unterschied: b6 löst sich in die Quinte, b2 in den Grundton. Der zweite Fall wirkt endgültiger."
+    },
+    "te1-3-1": {
+      "title": "Hören · Äolisch und Phrygisch: die Grundfarben von Doom",
+      "instructions": "My Dying Bride, „Turn Loose the Swans“ (Titelstück): Suche die Stelle, an der die Violine zum ersten Mal ein b2 (Halbton über dem Grundton) spielt. Vergleiche mit einer Stelle, an der nur b6 vorkommt. Behauptung: Das Stück beginnt äolisch und verdunkelt sich in der Violine phrygisch (prüfen).",
+      "checklist": [
+        "b2-Stelle und b6-Stelle gefunden?",
+        "Wirkungsunterschied in einem Satz?"
+      ]
+    },
+    "te1-3-2": {
+      "title": "Modell · Äolisch und Phrygisch: die Grundfarben von Doom",
+      "instructions": "Takt 1–4 äolisch: Em–C–D–Em, Schluss über C–B in der Melodie. Takt 5–8 phrygisch: Em–F–Em, Schluss F–E. Der Bass spielt Quinten wie eine tiefe Gitarre. Spiele beide Hälften und benenne, welcher Halbtonschritt jeweils den Schluss macht. Vertausche dann: Takt 4 mit F–E enden lassen, Takt 8 mit C–B.",
+      "checklist": [
+        "Beide Schlusswendungen benannt?",
+        "Vertauschte Fassung gespielt und Unterschied beschrieben?"
+      ]
+    },
+    "te1-3-3": {
+      "title": "Anwendung · Äolisch und Phrygisch: die Grundfarben von Doom",
+      "instructions": "Schreibe acht Takte über E-Pedal: vier äolisch, vier phrygisch. Verwende in jeder Hälfte genau einen der beiden Schlüsse. Übertrage dieselben acht Takte nach A (b6 = F, b2 = Bb) und spiele beide Fassungen. Notiere, welche Tonart auf deinem Instrument die dunklere Wirkung hat und warum (Register).",
+      "checklist": [
+        "Acht Takte in E und in A notiert?",
+        "Registerbegründung im Log?"
+      ]
+    },
+    "tu1-4": {
+      "title": "Dorisch und Lydisch als Kontrastfarben",
+      "goal": "Die aufgehellten Modi als Mittel für Kontrast innerhalb eines Stücks kennen.",
+      "text": "Dorisch ist Moll mit großer Sexte: 1 2 b3 4 5 6 b7, in E das C#. Der Akkord auf IV wird Dur (A statt Am). Em–A ist die dorische Grundbewegung; sie klingt nach Moll, aber nicht nach Trauer. Anathema nutzen sie in helleren Abschnitten, und viele Doom-Bands setzen sie ein, wenn ein Riff „schweben“ soll, ohne Dur zu werden.\n\nLydisch ist Dur mit erhöhter Quarte: 1 2 3 #4 5 6 7, in C das F#. Dieselben Tonklassen wie E-Äolisch, anderes Zentrum. Die #4 zieht nicht nach unten wie eine gewöhnliche 4, sondern schwebt. Der Akkord auf II ist Dur (D über C). Lydisch entsteht in dieser Musik meist nicht durch neue Töne, sondern durch Basswechsel: ein E-Moll-Stück, dessen Bass auf C liegen bleibt, klingt lydisch, solange F# in der Melodie vorkommt.\n\nDas ist der Kern des Kurses: E-Äolisch, C-Lydisch, G-Ionisch, D-Mixolydisch, A-Dorisch, B-Phrygisch sind ein Tonvorrat. Der Bass wählt die Farbe. Ein Stück kann auf E dunkel beginnen, auf C weit werden, auf A dorisch schweben und auf E schließen, ohne einen einzigen Fremdton.\n\nVivaldi kennt diese modale Denkweise nicht als System, aber die Wirkung kommt vor: Der lange Orgelpunkt am Ende des ersten Frühlingssatzes hält die Harmonie an. Biber schreibt in den Partiten Sätze über liegendem Bass, die dorisch oder mixolydisch klingen, bevor die Kadenz sie tonal einordnet."
+    },
+    "te1-4-1": {
+      "title": "Hören · Dorisch und Lydisch als Kontrastfarben",
+      "instructions": "Anathema, „Eternity Part II“ oder „Radiance“: Finde einen Abschnitt, in dem der Bass auf C oder A liegt, während die Gitarre den Tonvorrat von E-Moll behält. Bestimme den Modus, der dadurch entsteht. Behauptung: mindestens eine Stelle klingt lydisch (Dur mit #4) allein durch den Bass (prüfen).",
+      "checklist": [
+        "Basston und entstehender Modus bestimmt?",
+        "#4 in der Melodie tatsächlich gehört?"
+      ]
+    },
+    "te1-4-2": {
+      "title": "Modell · Dorisch und Lydisch als Kontrastfarben",
+      "instructions": "Takt 1–2: Em–A, dorische Aufhellung durch C#. Takt 3–4: C-Bass unter E-Moll-Tönen, das F# macht Lydisch. Takt 5–6: A-Moll als Rückweg, Schluss auf E. Spiele die acht Takte und benenne pro Takt Zentrum und Modus. Ersetze dann C# in Takt 2 durch C und höre den Unterschied.",
+      "checklist": [
+        "Zentrum und Modus pro Takt benannt?",
+        "C#/C-Vergleich beschrieben?"
+      ]
+    },
+    "te1-4-3": {
+      "title": "Anwendung · Dorisch und Lydisch als Kontrastfarben",
+      "instructions": "Komponiere zwölf Takte ohne Fremdton zum E-Moll-Vorrat: vier auf E, vier auf C, vier auf A, dann Schluss auf E. Die Melodie darf sich wiederholen; nur der Bass wechselt. Nimm auf und schreibe pro Abschnitt den Modusnamen darüber.",
+      "checklist": [
+        "Drei Zentren mit derselben Tonmenge?",
+        "Modusnamen über jedem Abschnitt korrekt?"
+      ]
+    },
+    "tu1-5": {
+      "title": "E–A–D: I–IV–V, Quartenkette, drei Zentren",
+      "goal": "Dieselben drei Grundtöne funktional, modal und als gleichberechtigte Zentren lesen können.",
+      "text": "Drei Töne, drei Lesarten.\n\nFunktional in A: D ist IV (Subdominante), E ist V (Dominante). A–D–E–A ist die Kadenz, die seit dem Barock Tonalität definiert. E als Dominante braucht die große Terz G#, damit ein Leitton nach A entsteht. Ohne G# ist E-Moll keine Dominante, sondern ein modaler Nachbar.\n\nModal in E: A ist IV, D ist bVII. Em–A–D–Em hat keinen Leitton; D-Dur enthält F#, das nicht nach E zieht, sondern liegen bleibt. Das ist die Bewegung fast aller Referenzriffs: der Bass geht in Quarten und Quinten, aber die Harmonie bleibt in einem Modus. Gefühl von Weg ohne Gefühl von Ankunft.\n\nAls drei Zentren: Jedes der drei kann für einen Abschnitt Grundton sein. E dunkel (Äolisch/Phrygisch), A dorisch oder äolisch, D mixolydisch oder dur. Ein Stück, das zwischen ihnen wechselt, moduliert nicht im tonalen Sinn; es verschiebt das Gewicht innerhalb einer Tonmenge.\n\nDie Quartenkette E–A–D ist auch die Richtung, in der Kadenzen fallen: V → I ist ein Quintfall, also derselbe Weg. Barock nutzt ihn als Quintfallsequenz (Phase 3 und 4). Doom nutzt ihn als Bassriff ohne Auflösung. Die Töne sind gleich, die Erwartung ist verschieden, und die Erwartung entsteht durch Terzen und Septimen, nicht durch Grundtöne."
+    },
+    "te1-5-1": {
+      "title": "Hören · E–A–D: I–IV–V, Quartenkette, drei Zentren",
+      "instructions": "Type O Negative, „Be My Druidess“: Notiere die Grundtöne des Hauptriffs als Buchstaben. Bestimme, ob sie im Quart-/Quintabstand liegen. Höre dann Vivaldi, *Der Herbst*, Satz 1, Beginn: Notiere die ersten Bassgrundtöne. Behauptung: Beide bewegen sich in Quarten/Quinten, aber nur Vivaldi hat Leittöne (prüfen).",
+      "checklist": [
+        "Grundtonfolgen beider Stellen notiert?",
+        "Leitton bei Vivaldi benannt, bei Type O ausgeschlossen?"
+      ]
+    },
+    "te1-5-2": {
+      "title": "Modell · E–A–D: I–IV–V, Quartenkette, drei Zentren",
+      "instructions": "Takt 1–4: A–D–E–A, funktional, mit G# als Leitton in Takt 3. Takt 5–8: Em–A–D–Em, modal, mit G statt G#. Der Bass ist in beiden Hälften fast gleich. Spiele beide und beschreibe, was Takt 3 anders macht als Takt 8. Ersetze dann G# in Takt 3 durch G und höre, wie die Kadenz verschwindet.",
+      "checklist": [
+        "Unterschied Takt 3 / Takt 8 in einem Satz?",
+        "G#/G-Tausch gespielt und Wirkung beschrieben?"
+      ]
+    },
+    "te1-5-3": {
+      "title": "Anwendung · E–A–D: I–IV–V, Quartenkette, drei Zentren",
+      "instructions": "Schreibe zwei Fassungen desselben achttaktigen Bassriffs auf E, A, D: eine mit einem Leitton (G# vor A oder C# vor D) an genau einer Stelle, eine ganz ohne. Nimm beide auf. Entscheide, welche du für ein Doom-Stück nimmst und welche für ein barockes Modell, und begründe mit dem Terzton.",
+      "checklist": [
+        "Zwei Fassungen mit identischem Bass notiert?",
+        "Zuordnung mit Terzbegründung im Log?"
+      ]
+    },
+    "tu1-6": {
+      "title": "Modal oder tonal: wann ein Akkord Funktion hat",
+      "goal": "Ein Kriterium haben, um an jeder Stelle zu sagen, ob Harmonie drängt oder ruht.",
+      "text": "Tonal heißt: Akkorde haben Rollen (Tonika, Subdominante, Dominante), und die Dominante erzeugt eine Erwartung, die die Tonika einlöst. Die Erwartung entsteht durch zwei Töne: den Leitton (7 → 1, Halbton aufwärts) und die Septime der Dominante (4 → 3, Halbton oder Ganzton abwärts). Beide zusammen bilden einen Tritonus, das instabilste Intervall. B7 nach Em: D# → E, A → G.\n\nModal heißt: Akkorde sind Farben über einem Zentrum. Sie folgen aufeinander, aber sie lösen sich nicht auf. Es gibt keinen Tritonus, der zwingt. Em–C–D–Em kann endlos laufen. Das ist nicht primitiver, sondern eine andere Zeitform: Zustand statt Weg.\n\nKriterium: Enthält der Akkord vor dem Grundton den Leitton (in E: D#)? Dann tonal. Enthält er b7 (D) oder gar keine Terz? Dann modal. Doom und Gothic sind fast vollständig modal; die wenigen tonalen Stellen wirken deshalb stark. Type O Negative setzen an Refrainenden gelegentlich eine echte Dominante, und genau dort klingt es nach Beatles (prüfen). Vivaldi ist vollständig tonal; die Sequenzen sind Ketten von Dominanten. Biber steht dazwischen: Tanzsätze tonal, Ciaconen modal gefärbt.\n\nKonsequenz für deine Stücke: Entscheide pro Abschnitt. Ein modaler Abschnitt darf lang sein, weil er nicht drängt. Ein tonaler Schluss darf kurz sein, weil er löst. Mische nicht beiläufig; ein zufälliges D# in einem modalen Riff klingt nach Fehler, ein geplantes nach Ankunft."
+    },
+    "te1-6-1": {
+      "title": "Hören · Modal oder tonal: wann ein Akkord Funktion hat",
+      "instructions": "Type O Negative, „Haunted“ und „Die with Me“: Suche je einen Abschnittsschluss. Bestimme, ob der Akkord vor dem Grundton einen Leitton enthält. Höre danach Vivaldi, *Der Frühling*, Satz 1, Ende des ersten Ritornells: Leitton hörbar? Behauptung: Type O überwiegend ohne Leitton, Vivaldi immer mit (prüfen).",
+      "checklist": [
+        "Drei Schlüsse als modal/tonal klassifiziert?",
+        "Leitton jeweils als Tonname benannt?"
+      ]
+    },
+    "te1-6-2": {
+      "title": "Modell · Modal oder tonal: wann ein Akkord Funktion hat",
+      "instructions": "Takt 1–4 modal (D vor Em), Takt 5–8 tonal (B7 vor Em). Nur Takt 3 und 7 unterscheiden sich. Spiele beide Hälften und beschreibe die Erwartung vor dem letzten Takt. Benenne die zwei Töne in B7, die die Spannung machen, und wohin sie gehen.",
+      "checklist": [
+        "Erwartung vor Takt 4 und Takt 8 verglichen?",
+        "D# → E und A → G benannt?"
+      ]
+    },
+    "te1-6-3": {
+      "title": "Anwendung · Modal oder tonal: wann ein Akkord Funktion hat",
+      "instructions": "Nimm dein Phase-1-Motiv aus dem Instrumentalkurs. Schreibe eine sechzehntaktige Form: zwölf Takte modal auf E ohne D#, vier Takte Schluss mit genau einem B7. Spiele die Form zweimal, einmal mit, einmal ohne den B7. Notiere, ob der modale Teil ohne den Schluss vollständig wirkt.",
+      "checklist": [
+        "Sechzehn Takte mit genau einem Leitton-Akkord notiert?",
+        "Vollständigkeit ohne Schluss beurteilt?"
+      ]
+    },
+    "tu1-7": {
+      "title": "Anathema, Eternity: Fläche, Bass und Zeit",
+      "goal": "Ein ganzes Album als Anwendung der Modalität lesen und daraus Regeln für lange Abschnitte ziehen.",
+      "text": "*Eternity* (1996) ist der Übergang von Doom-Death zu atmosphärischem Rock. Was bleibt: langsame Harmonik, Pedaltöne, lange Formen. Was neu ist: cleane Gitarrenarpeggien als Fläche, Keyboards als Streicher, klarer Gesang. Das Album zeigt, wie Modalität ohne Verzerrung trägt.\n\nBeobachtungen zum Prüfen: Die Abschnitte sind lang, oft 16 oder 32 Takte auf zwei bis drei Akkorden. Der Bass wechselt selten und meist in Quarten oder Terzen (E → C, E → A). Die Arpeggien behalten ihre Figur über dem Wechsel; nur ein oder zwei Töne passen sich an. Die Melodie liegt in der Mitte (C4–C5), die Fläche darüber, der Bass weit darunter. Dazwischen ist Luft. Diese Luft ist der Klang.\n\nDas Modell dahinter ist Pink Floyd, das Modell davor Barock: Vivaldis Largo-Sätze (*Der Winter*, Satz 2) sind genau das: eine Fläche (Pizzicato-Streicher), ein Bass (lang), eine Linie (Solovioline). Der Unterschied ist die Harmonik: Vivaldi wechselt jeden Takt tonal, Anathema alle vier bis acht Takte modal.\n\nRegeln für lange modale Abschnitte: 1. Der Bass wechselt maximal alle vier Takte. 2. Die Figur (Arpeggio) bleibt gleich, die Töne passen sich an. 3. Die Melodie hat Pausen, die länger sind als ihre Phrasen. 4. Ein Ton der Fläche bleibt über den ganzen Abschnitt liegen (gemeinsamer Ton). 5. Dichte steigt nur einmal, am Ende."
+    },
+    "te1-7-1": {
+      "title": "Hören · Anathema, Eternity: Fläche, Bass und Zeit",
+      "instructions": "Anathema, „Eternity Part I“ vollständig. Zeichne eine Zeitleiste: Abschnittsgrenzen, Basston pro Abschnitt, Taktzahl pro Abschnitt, Dichte (1–4 Rollen aktiv). Prüfe die fünf Regeln aus dem Text einzeln. Behauptung: Regel 1 und 2 gelten durchgehend, Regel 5 gilt einmal pro Stück (prüfen).",
+      "checklist": [
+        "Zeitleiste mit Basstönen und Taktzahlen gezeichnet?",
+        "Fünf Regeln einzeln bestätigt oder widerlegt?"
+      ]
+    },
+    "te1-7-2": {
+      "title": "Modell · Anathema, Eternity: Fläche, Bass und Zeit",
+      "instructions": "Acht Takte nach den fünf Regeln: Bass alle zwei Takte, Figur bleibt, E und E5 liegen als gemeinsame Töne über allem, ein Ton pro Wechsel passt sich an. Spiele die Figur auf dem Keyboard, singe eine Melodie mit langen Pausen darüber. Markiere, welcher Ton bei jedem Basswechsel verändert wurde.",
+      "checklist": [
+        "Veränderter Ton pro Basswechsel markiert?",
+        "Melodie mit Pausen länger als Phrasen gesungen?"
+      ]
+    },
+    "te1-7-3": {
+      "title": "Anwendung · Anathema, Eternity: Fläche, Bass und Zeit",
+      "instructions": "Schreibe einen 32-taktigen Abschnitt nach den fünf Regeln über E, C, A, E (je acht Takte). Notiere Figur, Bass und eine Melodie mit mindestens 50 % Pausen. Die Dichte steigt nur in den letzten vier Takten. Nimm auf und höre, ob 32 Takte ohne Wechsel der Figur tragen.",
+      "checklist": [
+        "32 Takte mit unveränderter Figur notiert?",
+        "Dichteanstieg nur am Ende, Urteil im Log?"
+      ]
     }
   },
   "ui": {
@@ -3539,6 +3957,11 @@
     "referencepedal": "Pedalton",
     "referencesingle": "Einstimmig",
     "referencerest": "Pause",
-    "guitarAttack": "Anschlag: Plektrum rechts, Legato/Tapping links. Gemeinsame Einsätze zunächst kurz von tief nach hoch auffächern; gehaltene Töne nicht erneut anschlagen. Die Klaviervorschau spielt das rhythmische Stimmengerüst, nicht diese Anschlagsverteilung."
+    "guitarAttack": "Anschlag: Plektrum rechts, Legato/Tapping links. Gemeinsame Einsätze zunächst kurz von tief nach hoch auffächern; gehaltene Töne nicht erneut anschlagen. Die Klaviervorschau spielt das rhythmische Stimmengerüst, nicht diese Anschlagsverteilung.",
+    "hear": "Hören / Analyse",
+    "model": "Modell",
+    "apply": "Anwenden",
+    "verify": "Behauptung am Album prüfen; Zeitstelle nach dem ersten Hören ins Log.",
+    "theoryScope": "Phase 0–8 + Anhänge · Theorie"
   }
 }

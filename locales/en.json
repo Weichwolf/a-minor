@@ -3462,6 +3462,424 @@
       "title": "Final project: an original solo piece",
       "goal": "Read, shape and develop a complete notated form.",
       "text": "The 32-bar model combines motif, contrast, three layers, triplets and cadence. It is a working example, not a substitute for your own piece. Check four bars, then eight, then the whole form. Completion requires audible shaping and repeatable decisions.\n\nCheck balance, readable hand positions and deliberate releases. Left plays a broken bass figure in the triplet section; prepare hands separately. Make at least one recording with piano-like decay; another may use your synth tone."
+    },
+    "theorie": {
+      "title": "Theory",
+      "lead": "What the references do, why it works and what they share. Notation, harmony, rhythm, sound and form built on E–A–D. Listen, model, apply."
+    },
+    "t0": {
+      "title": "Tone and notation",
+      "goal": "Frequency, overtones, tuning, complete pitch and rhythm notation, a listening method. Map the references and understand distortion physically."
+    },
+    "tu0-1": {
+      "title": "Frequency, overtones, interval as ratio",
+      "goal": "Hear and calculate intervals as frequency ratios; know the overtone series on E.",
+      "text": "A tone is a periodic vibration. The low E string vibrates at about 82.4 Hz (E2). A string does not only vibrate as a whole but simultaneously in halves, thirds, quarters. These partial vibrations are overtones. Their frequencies are integer multiples: 2f, 3f, 4f. For E2 = 82.4 Hz: 164.8 (E3), 247.2 (B3), 329.6 (E4), 412 (≈G#4), 494.4 (B4), 576.8 (≈D5), 659.2 (E5).\n\nThe series therefore contains the octave, the fifth, the major third and a low minor seventh. The seventh partial sits 31 cents below the tempered D, the fifth partial 14 cents below G#. A power chord E–B reinforces partials that are already in the string. That is why it stays stable under distortion.\n\nIntervals are ratios: octave 2:1, fifth 3:2, fourth 4:3, major third 5:4, minor third 6:5. Small numbers sound fused, large numbers rough. Equal temperament replaces these ratios with powers of 2^(1/12); the fifth becomes 2 cents too small, the major third 14 cents too wide. On guitar you hear this as beating thirds under gain.\n\nAn instrument's timbre depends on which partials are present and how strong. A piano has slightly stretched overtones (inharmonicity), a synthesizer sawtooth has all partials at amplitude 1/n, a square wave only the odd ones. This is the starting point for phase 6."
+    },
+    "te0-1-1": {
+      "title": "Listen · Frequency, overtones, interval as ratio",
+      "instructions": "Type O Negative, *October Rust*, \"Love You to Death\": listen to the first distorted guitar entry after the piano intro. Decide whether the guitar plays fifths or thirds, without an instrument. Then check with the guitar: which partials do you hear above the root? Claim: fifths and octaves, no thirds in the low register (verify).",
+      "checklist": [
+        "Fifth or third decided without an instrument, then checked?",
+        "Timestamp and impression logged?"
+      ]
+    },
+    "te0-1-2": {
+      "title": "Model · Frequency, overtones, interval as ratio",
+      "instructions": "The overtone series on E2, partials 1–8. Play each tone on guitar or keyboard and sing it. Compute each partial from 82.4 Hz and compare with the tempered pitch: where is the largest deviation? Harmonics over frets 12, 7 and 5 of the E string give partials 2, 3 and 4 directly.",
+      "checklist": [
+        "All eight frequencies calculated and the two largest deviations named?",
+        "Partials 2, 3, 4 found as harmonics?"
+      ]
+    },
+    "te0-1-3": {
+      "title": "Application · Frequency, overtones, interval as ratio",
+      "instructions": "Record E2 and B2 together, once clean, once with gain. Describe in the log which additional pitches appear with gain. Repeat with E2 and G2. State in one sentence why doom riffs put fifths low and thirds high.",
+      "checklist": [
+        "Four recordings, clean/gain difference described?",
+        "Sentence about register choice logged?"
+      ]
+    },
+    "tu0-2": {
+      "title": "Why E A D: fourths, fifths and their complements",
+      "goal": "Understand the logic of guitar tuning and read E–A–D as a chain of fourths with three centres.",
+      "text": "The fourth (5 semitones) and the fifth (7 semitones) complete each other to the octave: 5 + 7 = 12. Going up a fourth lands on the same letter as going down a fifth. E up to A, A up to D: this is the same motion as E down to A down to D in the circle of fifths. The low guitar strings follow this chain. The bass has it complete: E A D G.\n\nStandard tuning breaks the chain between G and B (a major third) so that six strings fit two octaves E2–E4 and major/minor shapes are reachable with four fingers. Pure fourths (P4: E A D G C F) keep the geometry identical on all strings: every interval has one shape that works everywhere. The price is a range up to F4 and unfamiliar chord shapes. Type O Negative tune the same standard chain a fourth lower: B E A D F# B (verify). The relationships stay, the register drops.\n\nE–A–D as a pitch set are three possible centres. In A: E is V, D is IV, the classic cadence axis. In E: A is IV, D is bVII, the modal axis of E Aeolian or E Mixolydian. In D: A is V, E is II. The same three tones therefore carry a functional and a modal reading. The course builds both.\n\nOpen strings are pedal tones without a fretting hand. On E, A and D you can hold a pedal over any of the three centres and move above it. That is the practical reason this music works so well on guitar: the foundation costs no finger."
+    },
+    "te0-2-1": {
+      "title": "Listen · Why E A D: fourths, fifths and their complements",
+      "instructions": "Anathema, *Eternity*, \"Sentient\" and the opening of \"Angelica\": determine the bass foundation of the first minute of each. Does it stay on one tone or alternate between two centres? Claim: long pedal tones, changes by a fourth or fifth (verify). Write the root you hear as a letter, not as a shape.",
+      "checklist": [
+        "Root of both passages written as a letter?",
+        "Interval between the centres determined?"
+      ]
+    },
+    "te0-2-2": {
+      "title": "Model · Why E A D: fourths, fifths and their complements",
+      "instructions": "Bar 1: standard tuning, bar 2: P4. The first four strings are identical. Count the semitones between all neighbouring strings in both tunings. Under each string write its tone as a degree in E, A and D (e.g. D = bVII in E, IV in A, I in D).",
+      "checklist": [
+        "Semitone gaps of both tunings fully counted?",
+        "Degree table for E, A and D written?"
+      ]
+    },
+    "te0-2-3": {
+      "title": "Application · Why E A D: fourths, fifths and their complements",
+      "instructions": "Play eight bars using only the open strings E, A, D as bass, two bars per centre and back to E. Listen for where the change sounds like a cadence (V–I) and where like a modal colour change (I–bVII). Note order and effect.",
+      "checklist": [
+        "Cadential and modal effect named at specific changes?",
+        "Eight bars recorded?"
+      ]
+    },
+    "tu0-3": {
+      "title": "Pitch notation complete",
+      "goal": "Master clefs, octave registers, key signatures, accidentals and enharmonics without gaps.",
+      "text": "Five lines, one clef fixes one pitch. Treble clef: G4 on the second line. Bass clef: F3 on the fourth line. C4 sits between both staves on a ledger line. Guitar sounds an octave lower than written; in this course the sounding E2 appears as E3 in the treble staff. Bass is likewise written an octave up in the bass clef. Keyboard is written at pitch.\n\nOctave numbers: C4 = MIDI 60 = 261.6 Hz. Each octave doubles the frequency and raises the number by one. E2 is the low guitar string, E1 the low bass string, B0 the low string of a guitar tuned to B (verify: Type O Negative).\n\nKey signatures: sharps in the order F C G D A E B, flats in the order B E A D G C F. The last sharp plus a semitone is the major key; the second-to-last flat is the major key. Minor sits a minor third below. Em has one sharp (F#), Am none, Dm one flat (Bb). The three centres of this course sit next to each other in the circle of fifths.\n\nAccidentals last until the barline in the same octave. Enharmonics: G# and Ab are the same key but not the same function. In E major G# is the third, in E minor Ab would be a foreign tone. Write a tone the way it moves: leading tones upward as sharps, descending passing tones as flats. That is why the chromatic bass E–Eb–D–Db–C–B in phase 3 is written with flats."
+    },
+    "te0-3-1": {
+      "title": "Listen · Pitch notation complete",
+      "instructions": "My Dying Bride, *Turn Loose the Swans*, \"Sear Me MCMXCIII\": piano and violin without guitar. Determine the key by ear from the phrase endings and write its signature. Check at the keyboard whether the third is major or minor. Claim: minor, violin in the register above C5 (verify).",
+      "checklist": [
+        "Key and signature written, third checked?",
+        "Violin register named as an octave number?"
+      ]
+    },
+    "te0-3-2": {
+      "title": "Model · Pitch notation complete",
+      "instructions": "E Aeolian ascending with key signature, E harmonic minor descending with the accidental D#. Name every note with octave number. Write the same line in the bass clef two octaves lower on paper. Write D#5 once as Eb5 and explain why that would be wrong here.",
+      "checklist": [
+        "All 16 tones named with octave, bass-clef version written?",
+        "Reason for D# instead of Eb logged?"
+      ]
+    },
+    "te0-3-3": {
+      "title": "Application · Pitch notation complete",
+      "instructions": "Write the open strings of guitar (P4), bass (E A D G) and the lowest key of your 49-key keyboard, each at sounding pitch and, where customary, in transposed notation. Next to it write the key signatures of Em, Am, Dm, E, A, D. Check at the instrument.",
+      "checklist": [
+        "Sounding and written registers correct for all strings?",
+        "Six key signatures without looking up?"
+      ]
+    },
+    "tu0-4": {
+      "title": "Rhythm notation complete",
+      "goal": "Read and write all note values, dots, ties, rests, time signatures and beaming reliably.",
+      "text": "Whole, half, quarter, eighth, sixteenth: each step halves. A dot adds half, a second dot adds another quarter. A tie joins equal pitches into one duration; a slur joins different pitches and says nothing about duration. Rests have the same values as notes; a whole rest hangs below the fourth line, a half rest sits on the third.\n\nThe time signature gives the number of beats on top and the note value of one beat below. 4/4: four quarters. 3/4: three quarters. 6/8, 9/8, 12/8: compound, eighths group in threes, the felt pulse is the dotted quarter. 5/8 and 7/8: eighths group unequally, here 2+3 and 2+2+3. The tempo mark always states which value is counted: ♩ = 60, ♩. = 60 or ♪ = 120 mean three different things.\n\nBeams show grouping: per quarter in 4/4, per group of three in 12/8. A syncopation sits between beats and sounds across the next beat; it is written with a tie, not as a hidden value across the beat. Rule: every beat in the bar stays visible.\n\nDoom lives on tempi between 50 and 80 quarters. At ♩ = 60 a whole note lasts four seconds. A riff of four whole notes is a sixteen-second thought. The references stretch time this way, and notation has to show it: whole and half notes are normal values, not exceptions."
+    },
+    "te0-4-1": {
+      "title": "Listen · Rhythm notation complete",
+      "instructions": "My Dying Bride, \"The Crown of Sympathy\": count the tempo of the first guitar phrase in quarters per minute (stopwatch, 8 beats). Decide whether the guitar thinks in whole, half or quarter notes. Compare with Vivaldi, *Winter*, movement 1, opening: tempo and smallest value. Claim: the doom phrase in halves and wholes, Vivaldi in eighths at a similar pulse (verify).",
+      "checklist": [
+        "Both tempi measured and logged?",
+        "Smallest note value of both passages determined?"
+      ]
+    },
+    "te0-4-2": {
+      "title": "Model · Rhythm notation complete",
+      "instructions": "Seven bars on one tone: quarters, eighth pairs, dotting, eighth rests, sixteenths, a tie across the barline. Clap each bar alone, then all with the click. Write the counting syllables (1 and 2 e and a) under every bar. Explain why bars 6–7 use a tie instead of a note crossing the barline.",
+      "checklist": [
+        "All seven bars labelled with counting syllables?",
+        "Tie rule explained in one sentence?"
+      ]
+    },
+    "te0-4-3": {
+      "title": "Application · Rhythm notation complete",
+      "instructions": "Write one bar each in 4/4, 3/4, 6/8, 12/8, 7/8 (2+2+3) and 5/8 (2+3) with correct beaming, each with at least one rest and one dotted value. Add the matching tempo unit (♩, ♩. or ♪). Play every bar four times on one tone.",
+      "checklist": [
+        "Six bars with correct beaming and tempo unit?",
+        "Every bar four times without losing the pulse?"
+      ]
+    },
+    "tu0-5": {
+      "title": "Listening method: rhythm before pitch, bass before melody",
+      "goal": "Have a fixed order for transcribing that holds up on dense recordings.",
+      "text": "Transcribing rarely fails at the ear, mostly at the order. The method: 1. Form: count sections, bars per section. 2. Pulse and meter: tap along, find the accent, measure tempo. 3. Bass: lowest voice, note changes per bar, letters only at first. 4. Clap the melody's rhythm on one tone. 5. Melody pitches, starting from the first and last note of each phrase. 6. Inner voices and chord types last.\n\nThe bass is the key because in this music it determines the chord. The guitar often plays only fifths; whether the chord is major or minor is told by the vocals, the keyboards or by nothing at all. A chord symbol without a third is more honest than a guessed third.\n\nTools: half speed without pitch change, a two-bar loop, singing along in a comfortable octave. Not: guessing shapes and hearing the recording to fit. When two tones seem possible, play both and let the recording decide.\n\nFor Baroque, reverse it: the bass moves, the upper voice is often a sequence. Recognise the sequence formula first (which interval is transposed how many times), then write it out. In Type O Negative voices are doubled in octaves; only the lowest voice counts for the notation."
+    },
+    "te0-5-1": {
+      "title": "Listen · Listening method: rhythm before pitch, bass before melody",
+      "instructions": "Type O Negative, \"Red Water (Christmas Mourning)\": first vocal section. Run the six steps of the method and stop after each. Write the bass tones as letters per bar, then the rhythm of the vocal melody. Melody pitches only in the third pass. Claim: the bass changes less than once per bar (verify).",
+      "checklist": [
+        "Six steps logged individually?",
+        "Bass letters written before melody pitches?"
+      ]
+    },
+    "te0-5-2": {
+      "title": "Model · Listening method: rhythm before pitch, bass before melody",
+      "instructions": "Listen to the preview three times without looking at the notes. Pass 1: bass letters. Pass 2: clap the upper voice rhythm. Pass 3: upper voice pitches, first and last note first. Only then compare. Mark which step needed the most attempts.",
+      "checklist": [
+        "Three passes in the given order?",
+        "Weakest step named in the log?"
+      ]
+    },
+    "te0-5-3": {
+      "title": "Application · Listening method: rhythm before pitch, bass before melody",
+      "instructions": "Choose a two-bar excerpt from Vivaldi, *Summer*, movement 3 (Presto). Identify the sequence formula of the upper voice first, then the bass, then notate. Write out the two bars and play them slowly on the keyboard. Compare with the recording.",
+      "checklist": [
+        "Sequence formula named before writing out?",
+        "Two bars notated and compared at the keyboard?"
+      ]
+    },
+    "tu0-6": {
+      "title": "Mapping the references: instruments, registers, roles",
+      "goal": "For each reference album know who occupies which register and carries which role.",
+      "text": "Four roles carry almost every piece: foundation (bass, low guitar, organ pedal), pulse (drums, continuo rhythm, riff attack), pad (keyboards, strings, sustained chords) and line (vocals, violin, lead guitar). Registers sort roughly: foundation E1–E3, riffs E2–E4, pads C3–C6, line C4–C6.\n\nMy Dying Bride, *Turn Loose the Swans*: two guitars, often in thirds or octaves; violin and keyboards (Martin Powell) as line and pad; bass mostly follows the riff; drums in half-time. Vocals alternate between growl in the riff register and spoken voice.\n\nType O Negative, *October Rust*: guitar tuned to B, bass with chorus and octaver as a second pad, keyboards (Josh Silver) as organ/choir/bells, vocals low and doubled in octaves. Very few instruments, a great deal of register: everything is wide.\n\nAnathema, *Eternity*: clean arpeggio guitar and distorted rhythm guitar at the same time, keyboards as a string pad, clear vocals in the middle register. The bass carries long tones, the drums hold quarters.\n\nVivaldi, *Le quattro stagioni*: solo violin (line), ripieno strings (pad and pulse), continuo (foundation: cello, harpsichord/organ). Biber, *Harmonia artificioso-ariosa*: two violins (or violas d'amore) over continuo; the line is doubled, the pad emerges from the two-part writing itself.\n\nShared: a foundation that changes more slowly than the line. That is the structure this course rebuilds on guitar alone or keyboard alone."
+    },
+    "te0-6-1": {
+      "title": "Listen · Mapping the references: instruments, registers, roles",
+      "instructions": "Listen to one minute each from five pieces, one per reference: \"Your River\" (MDB), \"Green Man\" (Type O), \"Eternity Part I\" (Anathema), *Spring* movement 1 (Vivaldi), Partita I, first movement (Biber). For each fill a table: foundation, pulse, pad, line, each with instrument and estimated register. Claim: in all five the foundation changes less often than the line (verify).",
+      "checklist": [
+        "Five tables with four roles filled in?",
+        "Claim about rate of change checked for each piece?"
+      ]
+    },
+    "te0-6-2": {
+      "title": "Model · Mapping the references: instruments, registers, roles",
+      "instructions": "Four registers in turn: foundation (E2–B2), riff (E3–B3), pad (G4–E5), line (G5–B5). Play the four bars on the keyboard and hear how each layer feels. Then all four together as one sound: describe which layer is missed least when you drop it.",
+      "checklist": [
+        "Four layers played alone and together?",
+        "Most dispensable layer named with a reason?"
+      ]
+    },
+    "te0-6-3": {
+      "title": "Application · Mapping the references: instruments, registers, roles",
+      "instructions": "Write a register map for your own setup: P4 guitar, bass (if available), 49-key keyboard, synths. For each source enter which of the four roles it can take in solo playing and which role is inevitably missing when playing alone. This map is the basis for phase 8.",
+      "checklist": [
+        "All own sources entered with register and roles?",
+        "Missing role in solo playing named?"
+      ]
+    },
+    "tu0-7": {
+      "title": "Distortion as a nonlinear system",
+      "goal": "Understand why fifths carry under gain and thirds turn muddy; calculate difference tones.",
+      "text": "A linear amplifier outputs only the frequencies that go in. Distortion cuts the waveform (clipping). This creates extra overtones for every tone and combination tones for every pair: the sum and difference of the frequencies and their multiples. For two tones f1 and f2 you get f2 − f1, f1 + f2, 2f1 − f2 and more.\n\nFifth 3:2 (E3 = 165 Hz, B3 = 247 Hz): difference 82 Hz = E2. The combination tone is the root an octave lower. The power chord reinforces itself. Sum 412 Hz ≈ G#4: a slight major colouring that you really hear under heavy distortion.\n\nMajor third 5:4 (E4 = 330, G#4 = 415): difference 85 Hz ≈ E2. Again the root, two octaves down. The major third is therefore tolerable under gain when it sits high.\n\nMinor third 6:5 (E4 = 330, G4 = 392): difference 62 Hz ≈ B1/C2. A foreign tone that does not belong to the Em chord. The lower the third sits, the louder and lower this foreign tone becomes. That is the physical reason low minor thirds turn to mud under distortion and why doom guitars omit the third, place it high or leave it to the keyboard.\n\nConsequences: power chords low, thirds high or clean. Two guitars in thirds (My Dying Bride) therefore sit in the register above E3 with moderate gain. Type O Negative often let vocals and organ carry the thirds. More gain means more combination tones, hence fewer tolerable intervals."
+    },
+    "te0-7-1": {
+      "title": "Listen · Distortion as a nonlinear system",
+      "instructions": "My Dying Bride, \"The Songless Bird\": find a passage where both guitars play in thirds and one where they play fifths or octaves. Compare register and perceived gain. Claim: the thirds sit higher and sound less distorted than the fifth riffs (verify).",
+      "checklist": [
+        "Third and fifth passages found, registers estimated?",
+        "Perceived gain of both passages compared?"
+      ]
+    },
+    "te0-7-2": {
+      "title": "Model · Distortion as a nonlinear system",
+      "instructions": "Top: the interval; bottom: the calculated difference tone. Recompute all three: frequencies from the acoustics appendix, take the difference, find the nearest tone. Then play each interval on the guitar with heavy gain and check whether the difference tone matches the bass. Bar 3 yields a tone outside Em.",
+      "checklist": [
+        "Three difference tones calculated yourself?",
+        "Foreign tone in bar 3 heard at the instrument or logged as inaudible?"
+      ]
+    },
+    "te0-7-3": {
+      "title": "Application · Distortion as a nonlinear system",
+      "instructions": "Build a four-bar riff using the same pitch classes E, G, B: bars 1–2 only fifths and octaves low, bars 3–4 the third G in the register above E4. Record with your usual gain. Formulate a rule for your own rig: from which register does the minor third stay clean?",
+      "checklist": [
+        "Riff recorded with varied third register?",
+        "Own register rule logged?"
+      ]
+    },
+    "t1": {
+      "title": "Centre and mode",
+      "goal": "Root, pedal and the seven modes. Aeolian, Phrygian, Dorian, Lydian as colours over E, A and D. Distinguish modal from tonal."
+    },
+    "tu1-1": {
+      "title": "Root, drone, pedal",
+      "goal": "Know what makes a tone the centre, and why a pedal tone is what makes modality audible in the first place.",
+      "text": "A centre is created not by a scale but by weight: duration, recurrence, low register, accent and final position. A tone that lies long, returns often, sits in the bass and ends phrases is heard as the root, whatever runs above it. That is the pedal tone. A drone is the same idea without interruption.\n\nOver an E pedal the melody determines the mode: F# or F, C or C#, D or D#. Without the pedal the same melody would be ambiguous. E F G A B C D over E is Phrygian, the same tones over C are C major, over A they are A minor. The bass decides, not the pitch set.\n\nThe references work with pedals almost throughout. Anathema hold whole sections on one bass tone and change only the guitar colour above it. Type O Negative let bass and organ lie while the vocal shifts the third back and forth. Vivaldi builds pedal points into the ritornelli (organ point on the dominant before the return). Biber sets a repeated bass model in the ciaccone, a rhythmicised pedal.\n\nFor you: the open E, A or D bass is the pedal. Everything this course teaches about modes is at first just \"which tones over which pedal\". Cadences come later and need bass changes."
+    },
+    "te1-1-1": {
+      "title": "Listen · Root, drone, pedal",
+      "instructions": "Anathema, \"The Beloved\": listen to the opening and count how many bars the bass stays on one tone before changing. Then decide whether the guitar above changes the third or the second. Claim: at least eight bars on one bass tone, colour change only in the upper voice (verify).",
+      "checklist": [
+        "Number of pedal bars counted?",
+        "Changed scale degree named?"
+      ]
+    },
+    "te1-1-2": {
+      "title": "Model · Root, drone, pedal",
+      "instructions": "One pedal, four colours: Phrygian (F), Aeolian (F#), Dorian (C#), major (G#). Only one tone changes each time. Listen to each bar twice and name the changed tone before looking at the notes. Then play the four bars over your own E pedal on guitar or keyboard.",
+      "checklist": [
+        "Four changed tones named without the score?",
+        "Four bars played over your own pedal?"
+      ]
+    },
+    "te1-1-3": {
+      "title": "Application · Root, drone, pedal",
+      "instructions": "Play eight bars of E pedal and sing over it. Every two bars change exactly one tone (F/F#, C/C#, D/D#, G/G#). Record. Write which change has the strongest effect and which hardly registers. Repeat over an A pedal with the matching tones (Bb/B, F/F#, G/G#, C/C#).",
+      "checklist": [
+        "Four changes over E and over A recorded?",
+        "Strongest and weakest change named?"
+      ]
+    },
+    "tu1-2": {
+      "title": "The seven modes from one pitch set",
+      "goal": "Know all modes as a reordering of the same seven tones and build them over each of the three centres.",
+      "text": "The white keys C D E F G A B contain seven modes, depending on which tone is the centre: C Ionian (major), D Dorian, E Phrygian, F Lydian, G Mixolydian, A Aeolian (minor), B Locrian. The semitones always lie between E–F and B–C; their position relative to the centre makes the character.\n\nSemitone pattern (steps in semitones): Ionian 2-2-1-2-2-2-1, Dorian 2-1-2-2-2-1-2, Phrygian 1-2-2-2-1-2-2, Lydian 2-2-2-1-2-2-1, Mixolydian 2-2-1-2-2-1-2, Aeolian 2-1-2-2-1-2-2, Locrian 1-2-2-1-2-2-2.\n\nOrder by brightness: Lydian, Ionian, Mixolydian, Dorian, Aeolian, Phrygian, Locrian. Each step to the right lowers exactly one tone: #4 → 4, 7 → b7, 3 → b3, 6 → b6, 2 → b2, 5 → b5. That is the order of the circle of fifths. Knowing this, you can build any mode over any centre in seconds.\n\nOver E: E Lydian (E F# G# A# B C# D#), E major, E Mixolydian (D), E Dorian (G, C#), E Aeolian (G, C), E Phrygian (F), E Locrian (F, Bb). Over A and D likewise. The references use Aeolian (base colour), Phrygian (darkening), Dorian (brightening within minor), Lydian and Ionian (contrast). Locrian has no perfect fifth and does not work as a centre; it appears only in passing."
+    },
+    "te1-2-1": {
+      "title": "Listen · The seven modes from one pitch set",
+      "instructions": "Type O Negative, \"Green Man\": determine the mode of the main section over the bass. Is the third major? Is the seventh minor? Claim: major third with minor seventh, i.e. Mixolydian, or plain major (verify, both are plausible; decide on the seventh degree).",
+      "checklist": [
+        "Third and seventh determined separately?",
+        "Mode with reasoning logged?"
+      ]
+    },
+    "te1-2-2": {
+      "title": "Model · The seven modes from one pitch set",
+      "instructions": "Seven modes over E from bright to dark; each bar lowers exactly one tone. Mark the new tone in every bar. Play the series on the keyboard and sing along. Then, without the score, build the same series over A and over D and write the tones down.",
+      "checklist": [
+        "Seven changed tones marked?",
+        "Series over A and D written without a model?"
+      ]
+    },
+    "te1-2-3": {
+      "title": "Application · The seven modes from one pitch set",
+      "instructions": "Take a four-bar motif of five tones and play it over an E pedal in Aeolian, Dorian, Phrygian and Lydian, without changing rhythm or contour. Record all four. Order them by ear from bright to dark and check the order against the table.",
+      "checklist": [
+        "Four versions recorded with identical rhythm?",
+        "Impression matches the brightness order, deviation noted?"
+      ]
+    },
+    "tu1-3": {
+      "title": "Aeolian and Phrygian: the base colours of doom",
+      "goal": "Recognise b6 and b2 as the two tones that carry the dark sound of the references.",
+      "text": "Aeolian is natural minor: 1 2 b3 4 5 b6 b7. Its characteristic tone is b6, in E the C. The step b6 → 5 (C → B) is a semitone down and the most common closing move in this music. The chord on b6 is major (C), the one on b7 as well (D). The progression Em–C–D–Em is therefore the base model of modal minor: three chords, no leading tone, no dominant.\n\nPhrygian lowers the 2 as well: 1 b2 b3 4 5 b6 b7, in E the F. The semitone above the root pushes the melody downward; F–E is the Phrygian close. The chord on b2 is major (F), on 5 diminished (Bdim). Phrygian therefore has no usable dominant chord; it lives from the melodic motion b2–1.\n\nMy Dying Bride use Aeolian as the default state and slip into Phrygian to darken, often in the violin. Type O Negative mostly stay Aeolian, but the bass emphasises b6 as its own chord (C over E minor). Anathema use b6 as a pad (C chord under an E melody), and the effect is not grief but width.\n\nThe trap: b6 and b2 are both semitone neighbours of a chord tone (5 and 1). Both create downward tension. Difference: b6 resolves into the fifth, b2 into the root. The second case feels more final."
+    },
+    "te1-3-1": {
+      "title": "Listen · Aeolian and Phrygian: the base colours of doom",
+      "instructions": "My Dying Bride, \"Turn Loose the Swans\" (title track): find the spot where the violin first plays a b2 (semitone above the root). Compare with a passage that uses only b6. Claim: the piece begins Aeolian and darkens to Phrygian in the violin (verify).",
+      "checklist": [
+        "b2 spot and b6 spot found?",
+        "Difference in effect in one sentence?"
+      ]
+    },
+    "te1-3-2": {
+      "title": "Model · Aeolian and Phrygian: the base colours of doom",
+      "instructions": "Bars 1–4 Aeolian: Em–C–D–Em, close via C–B in the melody. Bars 5–8 Phrygian: Em–F–Em, close F–E. The bass plays fifths like a low guitar. Play both halves and name which semitone step makes each close. Then swap: end bar 4 with F–E and bar 8 with C–B.",
+      "checklist": [
+        "Both closing moves named?",
+        "Swapped version played and difference described?"
+      ]
+    },
+    "te1-3-3": {
+      "title": "Application · Aeolian and Phrygian: the base colours of doom",
+      "instructions": "Write eight bars over an E pedal: four Aeolian, four Phrygian. Use exactly one of the two closes in each half. Transpose the same eight bars to A (b6 = F, b2 = Bb) and play both versions. Note which key has the darker effect on your instrument and why (register).",
+      "checklist": [
+        "Eight bars notated in E and in A?",
+        "Register reasoning logged?"
+      ]
+    },
+    "tu1-4": {
+      "title": "Dorian and Lydian as contrast colours",
+      "goal": "Know the brightened modes as a means of contrast within one piece.",
+      "text": "Dorian is minor with a major sixth: 1 2 b3 4 5 6 b7, in E the C#. The chord on IV becomes major (A instead of Am). Em–A is the basic Dorian motion; it sounds minor but not mournful. Anathema use it in brighter sections, and many doom bands reach for it when a riff should \"float\" without turning major.\n\nLydian is major with a raised fourth: 1 2 3 #4 5 6 7, in C the F#. Same pitch classes as E Aeolian, different centre. The #4 does not pull down like an ordinary 4; it hovers. The chord on II is major (D over C). In this music Lydian usually does not arise from new tones but from bass changes: an E minor piece whose bass stays on C sounds Lydian as long as F# appears in the melody.\n\nThat is the core of this course: E Aeolian, C Lydian, G Ionian, D Mixolydian, A Dorian, B Phrygian are one pitch set. The bass chooses the colour. A piece can begin dark on E, widen on C, float Dorian on A and close on E without a single foreign tone.\n\nVivaldi does not know this modal thinking as a system, but the effect occurs: the long pedal point at the end of the first Spring movement holds the harmony still. In the partitas Biber writes movements over a sustained bass that sound Dorian or Mixolydian before the cadence sorts them tonally."
+    },
+    "te1-4-1": {
+      "title": "Listen · Dorian and Lydian as contrast colours",
+      "instructions": "Anathema, \"Eternity Part II\" or \"Radiance\": find a section in which the bass sits on C or A while the guitar keeps the E minor pitch set. Determine the mode that results. Claim: at least one passage sounds Lydian (major with #4) through the bass alone (verify).",
+      "checklist": [
+        "Bass tone and resulting mode determined?",
+        "#4 actually heard in the melody?"
+      ]
+    },
+    "te1-4-2": {
+      "title": "Model · Dorian and Lydian as contrast colours",
+      "instructions": "Bars 1–2: Em–A, Dorian brightening via C#. Bars 3–4: C bass under E minor tones, the F# makes it Lydian. Bars 5–6: A minor as the way back, close on E. Play the eight bars and name centre and mode per bar. Then replace C# in bar 2 with C and hear the difference.",
+      "checklist": [
+        "Centre and mode named per bar?",
+        "C#/C comparison described?"
+      ]
+    },
+    "te1-4-3": {
+      "title": "Application · Dorian and Lydian as contrast colours",
+      "instructions": "Compose twelve bars without any tone foreign to the E minor set: four on E, four on C, four on A, then close on E. The melody may repeat; only the bass changes. Record and write the mode name above each section.",
+      "checklist": [
+        "Three centres with the same pitch set?",
+        "Mode names above each section correct?"
+      ]
+    },
+    "tu1-5": {
+      "title": "E–A–D: I–IV–V, chain of fourths, three centres",
+      "goal": "Read the same three roots functionally, modally and as equal centres.",
+      "text": "Three tones, three readings.\n\nFunctional in A: D is IV (subdominant), E is V (dominant). A–D–E–A is the cadence that has defined tonality since the Baroque. E as dominant needs the major third G# so that a leading tone into A exists. Without G#, E minor is not a dominant but a modal neighbour.\n\nModal in E: A is IV, D is bVII. Em–A–D–Em has no leading tone; D major contains F#, which does not pull to E but stays. This is the motion of almost all reference riffs: the bass moves in fourths and fifths, but the harmony stays inside one mode. A sense of travel without a sense of arrival.\n\nAs three centres: any of the three can be the root for a section. E dark (Aeolian/Phrygian), A Dorian or Aeolian, D Mixolydian or major. A piece that shifts between them does not modulate in the tonal sense; it shifts weight within one pitch set.\n\nThe chain of fourths E–A–D is also the direction in which cadences fall: V → I is a descending fifth, the same path. The Baroque uses it as the circle-of-fifths sequence (phases 3 and 4). Doom uses it as a bass riff without resolution. The tones are the same, the expectation differs, and expectation comes from thirds and sevenths, not from roots."
+    },
+    "te1-5-1": {
+      "title": "Listen · E–A–D: I–IV–V, chain of fourths, three centres",
+      "instructions": "Type O Negative, \"Be My Druidess\": write the roots of the main riff as letters. Determine whether they lie a fourth or fifth apart. Then listen to Vivaldi, *Autumn*, movement 1, opening: write the first bass roots. Claim: both move in fourths/fifths, but only Vivaldi has leading tones (verify).",
+      "checklist": [
+        "Root sequences of both passages written?",
+        "Leading tone named in Vivaldi, ruled out in Type O?"
+      ]
+    },
+    "te1-5-2": {
+      "title": "Model · E–A–D: I–IV–V, chain of fourths, three centres",
+      "instructions": "Bars 1–4: A–D–E–A, functional, with G# as leading tone in bar 3. Bars 5–8: Em–A–D–Em, modal, with G instead of G#. The bass is nearly identical in both halves. Play both and describe what bar 3 does differently from bar 8. Then replace G# in bar 3 with G and hear the cadence disappear.",
+      "checklist": [
+        "Difference between bar 3 and bar 8 in one sentence?",
+        "G#/G swap played and effect described?"
+      ]
+    },
+    "te1-5-3": {
+      "title": "Application · E–A–D: I–IV–V, chain of fourths, three centres",
+      "instructions": "Write two versions of the same eight-bar bass riff on E, A, D: one with a leading tone (G# before A or C# before D) in exactly one place, one with none. Record both. Decide which you would use for a doom piece and which for a Baroque model, and justify with the third.",
+      "checklist": [
+        "Two versions with identical bass notated?",
+        "Assignment with third-based reasoning logged?"
+      ]
+    },
+    "tu1-6": {
+      "title": "Modal or tonal: when a chord has function",
+      "goal": "Have a criterion for saying at any point whether harmony pushes or rests.",
+      "text": "Tonal means: chords have roles (tonic, subdominant, dominant), and the dominant creates an expectation the tonic fulfils. The expectation comes from two tones: the leading tone (7 → 1, semitone up) and the seventh of the dominant (4 → 3, semitone or whole tone down). Together they form a tritone, the most unstable interval. B7 to Em: D# → E, A → G.\n\nModal means: chords are colours over a centre. They follow each other but do not resolve. There is no tritone forcing anything. Em–C–D–Em can run forever. That is not more primitive but a different form of time: state instead of path.\n\nCriterion: does the chord before the root contain the leading tone (in E: D#)? Then tonal. Does it contain b7 (D) or no third at all? Then modal. Doom and gothic are almost entirely modal; the few tonal moments therefore hit hard. Type O Negative occasionally place a real dominant at chorus ends, and exactly there it sounds like the Beatles (verify). Vivaldi is entirely tonal; the sequences are chains of dominants. Biber sits in between: dance movements tonal, ciaccone modally coloured.\n\nConsequence for your pieces: decide per section. A modal section may be long because it does not push. A tonal close may be short because it resolves. Do not mix casually; an accidental D# in a modal riff sounds like a mistake, a planned one like arrival."
+    },
+    "te1-6-1": {
+      "title": "Listen · Modal or tonal: when a chord has function",
+      "instructions": "Type O Negative, \"Haunted\" and \"Die with Me\": find one section ending in each. Determine whether the chord before the root contains a leading tone. Then listen to Vivaldi, *Spring*, movement 1, end of the first ritornello: leading tone audible? Claim: Type O mostly without leading tone, Vivaldi always with (verify).",
+      "checklist": [
+        "Three closes classified as modal/tonal?",
+        "Leading tone named as a pitch each time?"
+      ]
+    },
+    "te1-6-2": {
+      "title": "Model · Modal or tonal: when a chord has function",
+      "instructions": "Bars 1–4 modal (D before Em), bars 5–8 tonal (B7 before Em). Only bars 3 and 7 differ. Play both halves and describe the expectation before the last bar. Name the two tones in B7 that create the tension and where they go.",
+      "checklist": [
+        "Expectation before bar 4 and bar 8 compared?",
+        "D# → E and A → G named?"
+      ]
+    },
+    "te1-6-3": {
+      "title": "Application · Modal or tonal: when a chord has function",
+      "instructions": "Take your phase-1 motif from the instrument course. Write a sixteen-bar form: twelve bars modal on E without D#, four bars of close with exactly one B7. Play the form twice, once with and once without the B7. Note whether the modal part feels complete without the close.",
+      "checklist": [
+        "Sixteen bars with exactly one leading-tone chord notated?",
+        "Completeness without the close assessed?"
+      ]
+    },
+    "tu1-7": {
+      "title": "Anathema, Eternity: pad, bass and time",
+      "goal": "Read a whole album as an application of modality and derive rules for long sections from it.",
+      "text": "*Eternity* (1996) is the transition from doom-death to atmospheric rock. What remains: slow harmony, pedal tones, long forms. What is new: clean guitar arpeggios as pad, keyboards as strings, clear vocals. The album shows how modality carries without distortion.\n\nObservations to verify: sections are long, often 16 or 32 bars on two or three chords. The bass changes rarely and mostly by a fourth or a third (E → C, E → A). The arpeggios keep their figure across the change; only one or two tones adapt. The melody sits in the middle (C4–C5), the pad above, the bass far below. Between them is air. That air is the sound.\n\nThe model behind it is Pink Floyd, the model before that is Baroque: Vivaldi's Largo movements (*Winter*, movement 2) are exactly this: a pad (pizzicato strings), a bass (long), a line (solo violin). The difference is harmony: Vivaldi changes tonally every bar, Anathema modally every four to eight bars.\n\nRules for long modal sections: 1. The bass changes at most every four bars. 2. The figure (arpeggio) stays, the tones adapt. 3. The melody has rests longer than its phrases. 4. One tone of the pad stays across the whole section (common tone). 5. Density rises only once, at the end."
+    },
+    "te1-7-1": {
+      "title": "Listen · Anathema, Eternity: pad, bass and time",
+      "instructions": "Anathema, \"Eternity Part I\" complete. Draw a timeline: section boundaries, bass tone per section, bars per section, density (1–4 roles active). Check the five rules from the text one by one. Claim: rules 1 and 2 hold throughout, rule 5 holds once per piece (verify).",
+      "checklist": [
+        "Timeline with bass tones and bar counts drawn?",
+        "Five rules individually confirmed or refuted?"
+      ]
+    },
+    "te1-7-2": {
+      "title": "Model · Anathema, Eternity: pad, bass and time",
+      "instructions": "Eight bars after the five rules: bass every two bars, figure stays, E and E5 lie over everything as common tones, one tone adapts per change. Play the figure on the keyboard, sing a melody with long rests over it. Mark which tone changed at every bass change.",
+      "checklist": [
+        "Changed tone marked per bass change?",
+        "Melody sung with rests longer than phrases?"
+      ]
+    },
+    "te1-7-3": {
+      "title": "Application · Anathema, Eternity: pad, bass and time",
+      "instructions": "Write a 32-bar section after the five rules over E, C, A, E (eight bars each). Notate figure, bass and a melody with at least 50 % rests. Density rises only in the last four bars. Record and judge whether 32 bars carry without changing the figure.",
+      "checklist": [
+        "32 bars with unchanged figure notated?",
+        "Density rise only at the end, verdict logged?"
+      ]
     }
   },
   "ui": {
@@ -3539,6 +3957,11 @@
     "referencepedal": "Pedal tone",
     "referencesingle": "Single voice",
     "referencerest": "Rest",
-    "guitarAttack": "Attack: pick in the right hand, legato/tapping in the left. Initially spread shared entries briefly from low to high; do not reattack sustained notes. Piano preview plays the rhythmic voice framework, not this distribution of physical attacks."
+    "guitarAttack": "Attack: pick in the right hand, legato/tapping in the left. Initially spread shared entries briefly from low to high; do not reattack sustained notes. Piano preview plays the rhythmic voice framework, not this distribution of physical attacks.",
+    "hear": "Listen / analyse",
+    "model": "Model",
+    "apply": "Apply",
+    "verify": "Verify the claim against the album; log the timestamp after the first listen.",
+    "theoryScope": "Phases 0–8 + appendices · theory"
   }
 }

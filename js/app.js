@@ -99,7 +99,7 @@
     const done = S.isDone(ex.id), logs = S.get().log.filter(l => l.ex === ex.id);
     return `<article class="ex${done ? ' done' : ''}" id="${ex.id}"><header><span class="kind k-${ex.kind}">${t(ex.kind)}</span><h3>${esc(ex.title)}</h3>
       <label class="donebox"><input type="checkbox" data-done="${ex.id}"${done ? ' checked' : ''}> ${t('mastered')}</label></header>
-      ${ex.position ? `<p class="position">${esc(ex.position)}</p>` : ''}<p>${inline(ex.instructions || '')}</p>
+      ${ex.position ? `<p class="position">${esc(ex.position)}</p>` : ''}<p>${inline(ex.instructions || '')}</p>${ex.kind === 'hear' ? `<p class="small">${t('verify')}</p>` : ''}
       ${ex.score ? scoreBlock(ex,unit.track.instrument) : ''}${ex.fretboard ? diagram(ex.fretboard,'fretboard') : ''}${ex.piano ? diagram(ex.piano,'piano') : ''}
       ${ex.backing ? playerControls(ex.backing,ex.tempo) : ''}<ul class="check">${(ex.checklist || []).map(c => `<li>${esc(c)}</li>`).join('')}</ul>
       <details class="log"><summary>${t('log')} (${logs.length})</summary><form data-log="${ex.id}"><input name="note" aria-label="${t('note')}" placeholder="${t('logPlaceholder')}" required><button>${t('save')}</button></form>
@@ -112,7 +112,7 @@
   const courseLink = () => `<a href="#/">${t('course')}</a>`;
   const views = {
     home:() => `<h1>a-minor</h1><p class="lead">${t('lead')}</p><div class="text"><h2>${t('week')}</h2>${md(t('schedule'))}</div>
-      <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t('scope')}</div></a>`).join('')}</div>`,
+      <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t(track.instrument === 'theory' ? 'theoryScope' : 'scope')}</div></a>`).join('')}</div>`,
     track(id) {
       const track = tracks.find(x => x.id === id); if (!track) return views.home();
       return `<nav class="crumbs">${courseLink()} › ${esc(track.title)}</nav><h1>${esc(track.title)}</h1><p class="lead">${esc(track.lead)}</p><div class="phases">${track.phases.map(phaseCard).join('')}</div>`;
