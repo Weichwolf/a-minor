@@ -69,4 +69,21 @@ Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beis
 - [Yamaha MX49/MX61/MX88 Reference Manual](https://mx.yamaha.com/files/download/other_assets/0/892960/mx49mx61mx88_en_rm_b0.pdf): Parts und MIDI-Kanäle, Drum-Part 10.
 - [musictheory.net: Staff, Clefs and Ledger Lines](https://www.musictheory.net/lessons/10), [Dots and Ties](https://www.musictheory.net/lessons/14).
 
+## Quellen der Theorie-Anhänge (2026-09-12)
+
+Anhang D (Gerätetabellen) wurde gegen die Handbücher geprüft; Parameternamen und Wertebereiche stammen aus diesen Quellen:
+
+- [Nord Lead A1 User Manual v1.3x](https://www.nordkeyboards.com/wt/documents/88/Nord%20Lead%20A1%20English%20User%20Manual%20v1.3x%20Edition%20F.pdf): Oszillatorkonfigurationen (Pitch, Detune, Shape, Sync, FM, AM, Dual Osc, Noise), Filtertypen LP12/LP24/HP/BP/Ladder M/Ladder TB, Amp/Mod Env mit Attack/Decay/Release, Morph, FX-Sektion, Delay mit Clock-Divisionen, Reverb Room/Stage/Hall.
+- [Waldorf Blofeld User's Manual](https://archive.org/details/synthmanual-blofeld-owners-manual): Oszillator-Shapes, Wavetable-Position über Pulsewidth/PWM, Filtertypen, Hüllkurvenmodi, LFO, Modulationsmatrix (16 Slots, 4 Modifier), Effect 1/2 mit Delay, Clocked Delay und Reverb nur in Effect 2.
+- [TC 2290 Owner's Manual](https://archive.org/details/TC-2290-owners-manual): Feedback-Filter HI 2/4/8/33 kHz und LOW 0/0,1/0,2/0,4 kHz, Modulationssets DELAY/PAN/DYN mit WAVEFORM, SPEED 0,10–10 Hz, DEPTH, LEARN-Taste.
+- [TC G-Major User's Manual SW 1.27](https://www.manualslib.com/manual/532643/Tc-Electronic-G-Major.html): Delay-Typen Single, Ping Pong, Dynamic, Dual; FB Hi Cut 2–20 kHz, FB Lo Cut 20 Hz–2 kHz; Reverb Spring/Hall/Room/Plate mit Decay, Pre Delay, Size, Hi/Lo Color, Hi/Lo Factor, Diffuse; Chorus/Flanger-Parameter.
+- [TC Nova System User Manual](https://www.manualslib.com/manual/640151/Tc-Electronic-Nova-System.html): Delay-Typen Clean, Analog, Tape, Ping Pong, Dynamic Delay, Dual Delay; Drive 0–24 dB bei Analog/Tape; HiCut/LoCut 20 Hz–20 kHz; Reverb-Typen und Hi Col/Lo Col; Spill-over.
+- [Alesis SR-18 Reference Manual](https://www.alesis.com/rscdn/919/documents/sr18_reference_manual_reve.pdf): Swing 54/58/62 %, Velocity Sensitivity Fixed 1–8/Soft/Medium/Loud, Assign Mode Multi/Single/Group 1–8, Fill A/B, Pattern Length 1–128 Beats, Clock In.
+- [Elektron Digitakt User Manual OS 1.51](https://www.manualslib.com/manual/2166470/Elektron-Digitakt.html): Swing 51–80 %, Micro Timing, Retrig, Trig Conditions, Fill-Modus, Chains. Der Zahlenbereich ±23/384 stammt aus der Handbuchgrafik und ist am Gerät zu prüfen.
+- [Roland SP-404MK2 Reference Manual v4/v5](https://static.roland.com/assets/media/pdf/SP-404MK2_v4_reference_eng02_W.pdf): QTZ-Raster und SHUFFLE −50…+50, Microscope mit Velocity und Timing je Note, FIXED VELOCITY, 16 VELOCITY, MUTE GROUP, Pad Curve Type (v5).
+- [IMSLP: Harmonia artificioso-ariosa](https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)): Besetzung, Scordaturen und Satzfolgen der sieben Partien (Anhang A, Theorie 7.2 und 3.3).
+- Type O Negative, B-Standard-Stimmung: [Kenny Hickey, Equipboard](https://equipboard.com/pros/kenny-hickey) und [Wikipedia](https://en.wikipedia.org/wiki/Kenny_Hickey).
+
+Nicht am Gerät geprüft: tatsächlicher Klang der Tape-/BBD-Näherungen, Digitakt-Mikrotiming-Bereich, SP-404MK2-Pattern-Ketten. Diese Stellen tragen im Anhang die Markierung „prüfen“.
+
 Hardwareklang und tatsächliches Timing an SR-18/MX49 sind im Entwicklungscontainer nicht überprüfbar. Browser- und MIDI-Mocktests ersetzen diesen Hörtest nicht.
