@@ -5031,6 +5031,213 @@
         "Frequenzplan mit Hochpass und Absenkung pro Quelle?",
         "Vergleich ohne/mit EQ im Log?"
       ]
+    },
+    "t7": {
+      "title": "Form",
+      "goal": "Riff-Form und Strophe/Refrain, Suite und Tanzsätze, Ritornello und Programmmusik, lange Formen, Kontrast und Dichtebogen, Intro/Outro/Übergang, Stimme als Registerlücke."
+    },
+    "tu7-1": {
+      "title": "Riff-Form gegen Strophe und Refrain",
+      "goal": "Die zwei Grundbauweisen von Rockformen unterscheiden und wissen, welche die Referenzen wählen.",
+      "text": "Strophe/Refrain (Song-Form): Abschnitte mit verschiedenen Funktionen, meist A (Strophe, Text erzählt, harmonisch offen) und B (Refrain, Text wiederholt, harmonisch geschlossen, dichter), oft mit C (Bridge, Kontrast, einmalig). Typische Reihenfolge: Intro – A – B – A – B – C – B – Outro. Die Form lebt vom Wiedererkennen des Refrains. Type O Negative sind hier zu Hause: *October Rust* ist ein Song-Album mit ausgedehnten Intros und Outros (prüfen).\n\nRiff-Form: Abschnitte sind Riffs, nicht Funktionen. Riff 1 (8 Takte, viermal), Riff 2 (8 Takte, viermal), Riff 1 verkürzt, Riff 3 (neues Tempo oder Taktart), Riff 2 als Schluss. Kein Refrain im Songsinn, aber Wiederkehr. Die Form lebt von Kontrast zwischen den Riffs und von der Länge der Wiederholungen. My Dying Bride bauen so: Stücke von 8–12 Minuten aus fünf bis sieben Riffs, jedes lang genug, um ein Zustand zu werden (prüfen).\n\nAnathema mischen: Song-Form mit Riff-Längen. Strophen sind vier bis acht Takte auf einem Riff, Refrains ebenso, aber die Abschnitte dauern doppelt so lang wie in einem Popsong (prüfen).\n\nBarock: Die Tanzsätze bei Biber sind zweiteilig (A A B B, jeder Teil wiederholt), die Ritornellsätze bei Vivaldi sind Wechsel von Tutti und Solo (Phase 3). Beides ist näher an der Riff-Form als an Strophe/Refrain: Abschnitte sind musikalische Zustände, nicht Textfunktionen.\n\nEntscheidung für dein Stück: Song-Form, wenn eine Idee (der Refrain) alles andere überstrahlen soll. Riff-Form, wenn mehrere Ideen gleichwertig sind und die Zeit trägt. Ohne Gesang ist Riff-Form der natürliche Weg; ein instrumentaler „Refrain“ braucht ein Motiv, das so stark ist wie ein Text."
+    },
+    "te7-1-1": {
+      "title": "Hören · Riff-Form gegen Strophe und Refrain",
+      "instructions": "Skizziere die Form von Type O Negative, „Love You to Death“, und My Dying Bride, „The Songless Bird“, als Buchstabenkette mit Taktzahlen (A8 B8 A8 …). Zähle die verschiedenen Abschnitte. Behauptung: Type O drei bis vier Abschnittstypen mit Refrain-Wiederkehr, MDB fünf bis sieben Riffs ohne Refrain (prüfen).",
+      "checklist": [
+        "Beide Formen als Buchstabenkette mit Taktzahlen?",
+        "Anzahl der Abschnittstypen verglichen?"
+      ]
+    },
+    "te7-1-2": {
+      "title": "Modell · Riff-Form gegen Strophe und Refrain",
+      "instructions": "Eine Miniatur-Song-Form: A (zwei Takte, offen auf E-Pedal), B (zwei Takte, harmonisch bewegt, höher). Zweimal, mit anderem Schluss. Spiele sie und beschreibe, was B zum „Refrain“ macht (Register, Basswechsel, Schlussnote). Baue dann dieselben acht Takte als Riff-Form um: A viermal, dann B viermal, ohne Wechsel. Welche Fassung trägt länger?",
+      "checklist": [
+        "Refrain-Merkmale von B benannt?",
+        "Riff-Fassung gespielt und Tragfähigkeit verglichen?"
+      ]
+    },
+    "te7-1-3": {
+      "title": "Anwendung · Riff-Form gegen Strophe und Refrain",
+      "instructions": "Entscheide für dein Abschlussstück: Song-Form oder Riff-Form. Schreibe den Formplan als Buchstabenkette mit Taktzahlen und Tempo pro Abschnitt, bevor du eine Note schreibst. Begründe die Wahl in zwei Sätzen mit Bezug auf eine Referenz. Der Plan muss mindestens 48 Takte umfassen.",
+      "checklist": [
+        "Formplan mit Taktzahlen und Tempi, mindestens 48 Takte?",
+        "Wahl mit Referenzbezug begründet?"
+      ]
+    },
+    "tu7-2": {
+      "title": "Suite und Tanzsätze: Biber",
+      "goal": "Die Suite als Folge kontrastierender Kurzformen verstehen und als Modell für ein Album oder ein langes Stück nutzen.",
+      "text": "Bibers *Harmonia artificioso-ariosa* (1696) besteht aus sieben Partiten, jede eine Suite: Praeludium, dann Tanzsätze (Allemande, Courante, Sarabande, Gigue, dazu Aria, Gavotte, Passacaglia, Ciacona je nach Partita). Jeder Satz hat einen festen Charakter durch Taktart, Tempo und Rhythmus: Allemande 4/4 gemäßigt mit Auftakt; Courante 3/2 oder 3/4 fließend; Sarabande 3/4 langsam mit Betonung auf 2; Gigue 6/8 oder 12/8 schnell, punktiert; Ciacona/Passacaglia 3/4 über Bassmodell.\n\nDas Prinzip: Kontrast durch Typ, nicht durch Material. Alle Sätze stehen in derselben Tonart; was wechselt, ist Zeitgestalt. Eine Suite von 15 Minuten hat sechs verschiedene Zeitgefühle in einer Tonart. Das ist die Umkehrung des Doom-Prinzips, wo ein Zeitgefühl (langsam, Half-time) über verschiedene Harmonien läuft.\n\nScordatura: Biber schreibt für umgestimmte Violinen. Die Stimmung ist Teil der Komposition; sie ermöglicht Akkorde und Resonanzen, die in Normalstimmung nicht gehen. Das ist die exakte Parallele zu P4 und zur B-Stimmung von Type O Negative: Die Stimmung wählt die Musik. Bibers Partita VII verlangt zwei Violen d’amore, Instrumente mit Resonanzsaiten, also eingebautem Hall.\n\nÜbertragung: Ein Album oder ein langes Stück als Suite: Praeludium (frei, Rubato, Phase 5), langsamer Satz (Sarabande-Gefühl: 3/4, Betonung auf 2), Ostinato-Satz (Ciacona: Bassmodell, Phase 3), schneller Satz (Gigue: 12/8, Phase 5), Schluss. Alle in E, A oder D. My Dying Bride kommen dem in ihren Mehrteilern nahe (prüfen); Type O Negative haben mit „Haunted“ eine Art Suite in einem Stück (prüfen)."
+    },
+    "te7-2-1": {
+      "title": "Hören · Suite und Tanzsätze: Biber",
+      "instructions": "Biber, eine Partita vollständig (I oder III): Notiere pro Satz Taktart, Tempo (geschätzt), Charakter in einem Wort und Tonart. Dann Type O Negative, „Haunted“: Zähle die Abschnitte mit verschiedenem Zeitgefühl. Behauptung: Biber sechs Sätze in einer Tonart, „Haunted“ drei bis vier Zeitgefühle in einer Tonart (prüfen).",
+      "checklist": [
+        "Satztabelle der Partita ausgefüllt?",
+        "Zeitgefühle in „Haunted“ gezählt?"
+      ]
+    },
+    "te7-2-2": {
+      "title": "Modell · Suite und Tanzsätze: Biber",
+      "instructions": "Eine Sarabande: 3/4, langsam, der zweite Schlag ist lang (Viertel–Halbe). Acht Takte in E-Moll mit Leitton. Spiele sie und betone die Halbe auf 2, nicht die 1. Schreibe dann dieselben acht Takte als Gigue um: 12/8 (jeder 3/4-Takt wird ein 12/8-Takt: Viertel → punktierte Viertel), Tempo doppelt. Der Charakterwechsel entsteht nur aus der Zeitgestalt.",
+      "checklist": [
+        "Sarabande mit Betonung auf 2 gespielt?",
+        "Gigue-Umschrift derselben Töne notiert und gespielt?"
+      ]
+    },
+    "te7-2-3": {
+      "title": "Anwendung · Suite und Tanzsätze: Biber",
+      "instructions": "Plane eine Suite in E aus vier Sätzen: Praeludium (frei, 16 Takte ohne festen Puls), Sarabande (3/4, 16 Takte), Ciacona (Bassmodell 4 Takte, mindestens 6 Durchgänge), Gigue (12/8, 16 Takte). Schreibe für jeden Satz Taktart, Tempo, Bassmodell und ein Motiv. Komponiere den ersten Satz vollständig.",
+      "checklist": [
+        "Vier Sätze mit Taktart, Tempo, Bass, Motiv geplant?",
+        "Praeludium vollständig notiert und gespielt?"
+      ]
+    },
+    "tu7-3": {
+      "title": "Ritornello und Programmmusik: Vivaldi",
+      "goal": "Die Ritornellform als Wechsel von Wiederkehr und Episode beherrschen und Programm als Formhilfe verstehen.",
+      "text": "*Le quattro stagioni* (1725) sind vier Violinkonzerte mit je drei Sätzen (schnell, langsam, schnell). Die schnellen Sätze sind Ritornellformen: Das Tutti stellt ein Thema vor (Ritornello), der Solist spielt Episoden, das Ritornello kehrt in verschiedenen Tonarten und Längen wieder, am Ende vollständig in der Grundtonart. Typisch: R (Tonika) – Ep – R (Dominante oder Parallele) – Ep – R (andere Tonart) – Ep – R (Tonika). Vier bis fünf Ritornelle, dazwischen drei bis vier Episoden.\n\nDas Programm: Vivaldi legte jedem Konzert ein Sonett bei und schrieb die Verse in die Partitur (Vogelgesang, Gewitter, schlafender Hirte, Jagd, Eiswind). Die Musik bildet Bilder nach: Triller = Vögel, Tremolo im Bass = Donner, Punktierungen = Zähneklappern. Das Programm hilft der Form: Der Hörer weiß, warum ein Abschnitt kommt, und der Komponist hat einen Grund für Kontrast.\n\nÜbertragung auf Doom: Die Referenzalben sind Programmmusik mit Text statt Sonett. Ein instrumentales Stück kann ein stilles Programm haben: eine Szene, ein Ablauf, den nur du kennst. Das ist keine Esoterik, sondern Formhilfe: Wenn du weißt, dass Abschnitt B „das Gewitter“ ist, weißt du, wie dicht, wie laut, wie lang.\n\nRitornello als Riff-Form: Ein Riff (R) kehrt zwischen freien Abschnitten (Ep) wieder, jedes Mal etwas anders (verkürzt, andere Tonart, andere Textur). Das ist genau das Solo-Segno-Coda-Modell des Instrumentalkurses (Phase 7), nur mit mehr Wiederkehr. My Dying Bride tun das, ohne es so zu nennen (prüfen).\n\nRegel: Das Ritornello muss beim ersten Mal vollständig sein, damit die verkürzten Wiederkehren erkennbar bleiben. Die letzte Wiederkehr ist wieder vollständig."
+    },
+    "te7-3-1": {
+      "title": "Hören · Ritornello und Programmmusik: Vivaldi",
+      "instructions": "Vivaldi, *Der Sommer*, Satz 3 (Presto): Markiere jeden Ritornello-Einsatz mit Länge und Tonart (Grundton, Dominante, andere). Zähle die Episoden. Dann *Der Frühling*, Satz 1: Welche Programmbilder erkennst du (Vögel, Bach, Gewitter)? Behauptung: Presto mit fünf Ritornellen, Frühling mit drei erkennbaren Bildern (prüfen).",
+      "checklist": [
+        "Ritornello-Einsätze mit Länge und Tonart notiert?",
+        "Programmbilder mit musikalischem Mittel benannt?"
+      ]
+    },
+    "te7-3-2": {
+      "title": "Modell · Ritornello und Programmmusik: Vivaldi",
+      "instructions": "Ritornellform in acht Takten: R (zwei Takte, Motiv mit Leitton), Episode (Sequenz in Achteln über E und D), R′ verkürzt auf einen Takt, Episode über A und B (Dominantpedal-Gefühl), R vollständig als Schluss. Spiele sie und markiere jeden R-Einsatz. Ersetze dann R′ durch eine weitere Episode und höre, ob das Stück den Halt verliert.",
+      "checklist": [
+        "R-Einsätze markiert und Verkürzung erkannt?",
+        "Fassung ohne R′ gespielt und Wirkung beurteilt?"
+      ]
+    },
+    "te7-3-3": {
+      "title": "Anwendung · Ritornello und Programmmusik: Vivaldi",
+      "instructions": "Schreibe ein stilles Programm für dein Abschlussstück: drei Bilder oder Zustände in einem Satz je. Ordne jedem einen Abschnitt zu und leite daraus Tempo, Dichte, Register ab. Baue dann ein Riff als Ritornello, das zwischen den drei Abschnitten wiederkehrt, beim ersten und letzten Mal vollständig, dazwischen verkürzt. Formplan mit Taktzahlen.",
+      "checklist": [
+        "Drei Programmbilder mit abgeleiteten Parametern?",
+        "Ritornello-Plan mit vollständigen und verkürzten Einsätzen?"
+      ]
+    },
+    "tu7-4": {
+      "title": "Lange Formen: acht bis zwölf Minuten tragen",
+      "goal": "Wissen, wie My Dying Bride lange Stücke bauen, und die Werkzeuge dafür benennen.",
+      "text": "*Turn Loose the Swans* hat Stücke von sieben bis zwölf Minuten. Was sie zusammenhält, ist nicht ein Refrain, sondern ein Netz aus Wiederkehr, Kontrast und Steigerung.\n\nWerkzeuge: 1. Riff-Längen: Jedes Riff läuft lang genug, um Zustand zu werden (mindestens viermal acht Takte bei ♩ = 60, also über zwei Minuten). 2. Wenige Riffs: fünf bis sieben pro Stück, nicht fünfzehn. 3. Wiederkehr: mindestens ein Riff kehrt nach langer Abwesenheit zurück, oft in anderer Textur (Klavier statt Gitarre, oder umgekehrt). 4. Ein Bruch: ein Abschnitt, der alles andere verweigert (Stille, nur Klavier, nur Sprechstimme, anderes Tempo). 5. Steigerung am Ende: die dichteste Stelle liegt im letzten Viertel. 6. Kein Schluss durch Kadenz, sondern durch Ausdünnen oder Abbruch (Phase 4).\n\nDie Zeitform ist episch: Der Hörer soll die Uhr verlieren. Deshalb keine Vierergruppen-Erwartung durchgehend; Phrasen von sechs, zehn oder zwölf Takten kommen vor, und Abschnittslängen wechseln (prüfen). Der Gesang ist Text, aber die Musik trägt ohne ihn; die Instrumentalfassung eines MDB-Stücks wäre immer noch ein Stück.\n\nDie Gefahr langer Formen: Beliebigkeit. Der Test: Kann jedes Riff begründen, warum es an seiner Stelle steht? Wenn zwei Abschnitte vertauschbar sind, ist einer überflüssig. Und: Was kehrt wieder? Ohne Wiederkehr ist es eine Aneinanderreihung, kein Stück.\n\nBarocke Parallele: Vivaldis Konzerte sind kurz (3–4 Minuten pro Satz), aber die Ritornellform ist ein Modell für Länge: Mit sieben Ritornellen und sechs Episoden trägt sie zwölf Minuten. Biber verlängert durch Variation über Ostinato. Beides ist Wiederkehr; MDB haben es intuitiv."
+    },
+    "te7-4-1": {
+      "title": "Hören · Lange Formen: acht bis zwölf Minuten tragen",
+      "instructions": "My Dying Bride, „The Crown of Sympathy“ (über zwölf Minuten): Zeichne eine Zeitleiste mit Minuten. Trage ein: jedes Riff (Buchstabe), seine Länge, Wiederkehren, den Bruch, die dichteste Stelle. Prüfe die sechs Werkzeuge aus dem Text einzeln. Behauptung: fünf bis sieben Riffs, ein Bruch, dichteste Stelle nach Minute 9 (prüfen).",
+      "checklist": [
+        "Zeitleiste mit Riffs, Längen, Wiederkehr, Bruch, Dichte?",
+        "Sechs Werkzeuge einzeln bestätigt oder widerlegt?"
+      ]
+    },
+    "te7-4-2": {
+      "title": "Modell · Lange Formen: acht bis zwölf Minuten tragen",
+      "instructions": "Eine lange Form im Kleinen: Riff A (Powerchords), Riff B (Melodie), Bruch (Stille, dann ein Ton), A wiederkehrend in anderer Textur (Einzelstimmen wie Klavier statt Quinten). Spiele die acht Takte. Verlängere dann im Kopf: A viermal, B viermal, Bruch zwei Takte, A′ viermal. Das sind 34 Takte, bei ♩ = 60 über zwei Minuten. Spiele diese Fassung durch und stoppe die Zeit.",
+      "checklist": [
+        "Acht Takte gespielt und die vier Bausteine benannt?",
+        "34-Takt-Fassung durchgespielt und Zeit gemessen?"
+      ]
+    },
+    "te7-4-3": {
+      "title": "Anwendung · Lange Formen: acht bis zwölf Minuten tragen",
+      "instructions": "Plane ein Stück von mindestens acht Minuten bei ♩ = 60 (also mindestens 120 Takte). Höchstens sechs Riffs. Trage in eine Zeitleiste ein: Riff, Länge in Takten, Textur, Wiederkehren, den Bruch, die dichteste Stelle. Wende den Vertauschbarkeitstest auf jedes Riffpaar an. Komponiere die ersten 32 Takte.",
+      "checklist": [
+        "Zeitleiste über mindestens 120 Takte mit höchstens sechs Riffs?",
+        "Vertauschbarkeitstest dokumentiert, erste 32 Takte notiert?"
+      ]
+    },
+    "tu7-5": {
+      "title": "Kontrast, Dichtebogen, Dynamik",
+      "goal": "Dichte als planbare Kurve über ein Stück verstehen und Dynamik ohne Lautstärkeregler erzeugen.",
+      "text": "Dichte hat vier Dimensionen: Anzahl der Stimmen, Anzahl der Anschläge pro Takt, Registerbreite (Abstand tiefster zu höchster Ton), Klangdichte (Gain, Hall, Chorus). Jede lässt sich einzeln steuern. Ein Abschnitt mit einer Stimme, vielen Anschlägen, engem Register und viel Gain ist anders dicht als einer mit vier Stimmen, wenigen Anschlägen, weitem Register und clean.\n\nDer Dichtebogen eines Stücks: Zeichne die vier Dimensionen über die Zeitleiste. Typisch für Doom: Stimmen und Register wachsen bis zum letzten Viertel, Anschläge bleiben niedrig, Gain ist konstant hoch, mit einem Einbruch in der Mitte (der Bruch aus Einheit 4). Typisch für Type O Negative: Dichte springt an Abschnittsgrenzen (Strophe dünn, Refrain voll), ohne Bogen innerhalb der Abschnitte (prüfen). Typisch für Vivaldi: Ritornell dicht, Episode dünn, im Wechsel; der Bogen ist eine Zickzacklinie mit steigenden Spitzen.\n\nDynamik ohne Regler: Laut ist relativ. Eine Stelle wird laut, wenn davor etwas leise war. Vier Takte Stille oder eine einzelne Stimme vor dem vollen Riff machen das Riff lauter, als jeder Regler könnte. Das ist die Terrassendynamik des Barock (Vivaldis Tutti/Solo) und der Half-time-Einbruch im Doom. Crescendo (allmählich) gibt es im Barock kaum und im Doom nur als Dichtezuwachs: eine Stimme nach der anderen dazu, nicht alle zusammen lauter.\n\nKontrast braucht Referenz: Etwas ist nur dunkel, wenn vorher etwas hell war. Deshalb der C-Lydisch-Abschnitt im Instrumentalkurs (Phase 6): Er ist da, damit die Rückkehr nach E dunkel klingt.\n\nRegel: Pro Stück ein Maximum aller vier Dimensionen, und es liegt nicht am Anfang. Pro Stück ein Minimum, und es liegt nicht am Ende."
+    },
+    "te7-5-1": {
+      "title": "Hören · Kontrast, Dichtebogen, Dynamik",
+      "instructions": "Anathema, „Eternity Part I“ und Vivaldi, *Der Winter*, Satz 1: Zeichne für beide den Dichtebogen in vier Linien (Stimmen, Anschläge, Register, Klang) über die Zeit. Wo liegt das Maximum? Wo das Minimum? Behauptung: Anathema Bogen mit einem Maximum am Ende, Vivaldi Zickzack mit Maximum im letzten Ritornell (prüfen).",
+      "checklist": [
+        "Zwei Dichtebögen mit vier Linien gezeichnet?",
+        "Maximum und Minimum beider Stücke lokalisiert?"
+      ]
+    },
+    "te7-5-2": {
+      "title": "Modell · Kontrast, Dichtebogen, Dynamik",
+      "instructions": "Ein Dichtebogen in acht Takten: Takt 1 eine Stimme, Takt 2 Bass dazu, Takt 3 Mittelstimme dazu, Takt 4 alle mit mehr Anschlägen (Maximum). Takt 5 Stille (Minimum), Takt 6 ein hoher Ton, Takt 7–8 Abbau. Spiele ihn und zähle für jeden Takt Stimmen und Anschläge. Höre, wie laut Takt 6 nach Takt 5 wirkt, obwohl es ein einzelner Ton ist.",
+      "checklist": [
+        "Stimmen und Anschläge pro Takt gezählt?",
+        "Lautheitswirkung von Takt 6 beschrieben?"
+      ]
+    },
+    "te7-5-3": {
+      "title": "Anwendung · Kontrast, Dichtebogen, Dynamik",
+      "instructions": "Zeichne den Dichtebogen für dein geplantes langes Stück in vier Linien über den Formplan. Lege Maximum und Minimum fest (nicht am Anfang, nicht am Ende). Setze vor das Maximum mindestens zwei Takte Minimum. Komponiere die vier Takte um das Maximum herum aus und nimm sie auf: zwei Takte Minimum, zwei Takte Maximum.",
+      "checklist": [
+        "Vier Dichtelinien über den Formplan gezeichnet?",
+        "Minimum-Maximum-Stelle komponiert und aufgenommen?"
+      ]
+    },
+    "tu7-6": {
+      "title": "Intro, Outro, Übergang",
+      "goal": "Die drei Nahtstellen eines Stücks als eigene Formteile behandeln, nicht als Restflächen.",
+      "text": "Intro: Es setzt Tonart, Tempo, Klang und Erwartung. Vier Arten: 1. Riff ohne Drums (der Zuhörer lernt das Riff, dann kommt der Puls; MDB, prüfen). 2. Fremdes Instrument allein (Klavier, Orgel, Streicher; Type O Negative, prüfen). 3. Freier Klang ohne Puls (Arpeggio, Hall; Anathema, prüfen). 4. Sofort das volle Riff (kein Intro; selten in diesen Referenzen). Länge: 8 bis 32 Takte bei Doom, das Intro darf ein eigener Abschnitt sein.\n\nOutro: Es beendet. Vier Arten: 1. Ausdünnen (Stimmen verschwinden nacheinander, bis eine bleibt). 2. Wiederkehr des Intros (Rahmen; Type O Negative oft, prüfen). 3. Fade-out (Aufnahmetechnik, kein Formmittel; vermeiden, außer als Zitat). 4. Abbruch auf einem Akkord mit langem Ausklang (MDB, prüfen). Barock: Vivaldi endet mit dem vollständigen Ritornello, Biber mit der Kadenz des letzten Tanzsatzes; kein Outro im Rocksinn.\n\nÜbergang: Die Stelle zwischen zwei Abschnitten. Werkzeuge: Fill (Phase 3), Aussetzen (ein Takt nur Bass oder nur Drums), Überlappung (die Fläche des alten Abschnitts liegt noch, wenn der neue beginnt), gemeinsamer Ton (eine Stimme hält über die Grenze), Tempo-Modulation (neuer Abschnitt in halbem oder doppeltem Tempo, ohne Bruch des Pulses: ♩ = 60 wird ♩ = 120 mit Snare auf 2 und 4 statt 3, fühlt sich wie Beschleunigung an, ist aber dasselbe Raster). Type O Negative wechseln Abschnitte oft abrupt mit einem Takt Stille (prüfen); My Dying Bride überlappen mit Violine oder Ausklang (prüfen).\n\nRegel: Ein Übergang ist gelungen, wenn der Hörer die Grenze bemerkt, aber nicht stolpert. Wenn er nicht bemerkt, ist es kein neuer Abschnitt; wenn er stolpert, fehlt ein Werkzeug."
+    },
+    "te7-6-1": {
+      "title": "Hören · Intro, Outro, Übergang",
+      "instructions": "Vergleiche die Intros von „Love You to Death“ (Type O), „Your River“ (MDB), „Sentient“ (Anathema): Art (1–4), Länge in Takten, was zuerst da ist (Tonart, Tempo, Klang). Dann je ein Outro: Art (1–4). Behauptung: drei verschiedene Intro-Arten, zwei verschiedene Outro-Arten (prüfen).",
+      "checklist": [
+        "Drei Intros mit Art, Länge und Reihenfolge der Elemente?",
+        "Drei Outros mit Art?"
+      ]
+    },
+    "te7-6-2": {
+      "title": "Modell · Intro, Outro, Übergang",
+      "instructions": "Intro (eine Stimme, dann Bass dazu), Riff, Übergang durch Aussetzen (ein Bassschlag, dann Stille), neuer Abschnitt B auf A, Outro als Rahmen (die Intro-Stimme kehrt zurück, Bass verschwindet). Spiele die acht Takte. Ersetze den Übergang (Takt 5) einmal durch Überlappung (Bass hält E durch) und einmal durch einen Fill in der Vorschau-Begleitung; höre, welcher Übergang das B deutlicher macht.",
+      "checklist": [
+        "Intro, Übergang und Outro als eigene Teile gespielt?",
+        "Zwei alternative Übergänge verglichen?"
+      ]
+    },
+    "te7-6-3": {
+      "title": "Anwendung · Intro, Outro, Übergang",
+      "instructions": "Schreibe für dein Abschlussstück Intro und Outro als eigene Abschnitte (je mindestens 8 Takte) und bestimme für jeden Übergang im Formplan ein Werkzeug. Komponiere Intro, den ersten Übergang und das Outro aus. Nimm Intro und Outro hintereinander auf und höre, ob sie als Rahmen zusammenpassen.",
+      "checklist": [
+        "Intro und Outro je 8+ Takte, Übergangswerkzeug pro Grenze?",
+        "Intro/Outro-Rahmen aufgenommen und beurteilt?"
+      ]
+    },
+    "tu7-7": {
+      "title": "Stimme als Registerlücke",
+      "goal": "Verstehen, welchen Platz der Gesang in den Referenzen einnimmt, und diesen Platz instrumental füllen oder bewusst leer lassen.",
+      "text": "Der Kurs behandelt keinen Gesang. Aber vier der fünf Referenzen haben ihn, und seine Abwesenheit hinterlässt ein Loch, das man kennen muss.\n\nRegister: Steele (Type O Negative) singt Bassbariton, etwa E2–E4, oft in Oktaven gedoppelt (prüfen). Stainthorpe (My Dying Bride) growlt im Riffregister (um E2–E3) und spricht/singt darüber (E3–E4) (prüfen). Cavanagh (Anathema) singt Tenor, E3–A4 (prüfen). Vivaldi hat keine Stimme, aber die Solovioline besetzt exakt das Sopranregister (G4–E6). Biber ebenso.\n\nFunktion: Die Stimme trägt bei Type O und Anathema die Melodie; bei MDB trägt sie Text und Klangfarbe, die Melodie liegt oft in der Violine. Ohne Stimme fehlt: die Linie in den Mitten (E3–E4 bei Steele/Stainthorpe, E3–A4 bei Cavanagh). Bei Vivaldi fehlt nichts; sein Modell ist instrumental.\n\nDrei Antworten für instrumentales Spiel: 1. Die Linie auf ein Instrument legen, das im Stimmregister liegt: Gitarre auf D/G/C-Saiten, Keyboard rechte Hand um C4, Synth-Lead. Das ist Vivaldis Lösung (Violine statt Sopran). 2. Das Register leer lassen und die Lücke zum Klangmerkmal machen: Bass unten, Pad oben, dazwischen Luft. Das ist ein eigener Klang, kein Fehler. 3. Die Linie abwechselnd besetzen: Abschnitt A Gitarre, Abschnitt B Keyboard, wie zwei Sänger.\n\nWas nicht funktioniert: Das Stimmregister mit Akkorden füllen. Akkorde in E3–E4 sind das Riffregister; sie machen dicht, nicht melodisch. Eine Linie braucht eine Stimme, keinen Block.\n\nRegel: Bevor du ein Stück schreibst, entscheide, wer singt. Wenn niemand, entscheide, ob die Lücke Absicht ist."
+    },
+    "te7-7-1": {
+      "title": "Hören · Stimme als Registerlücke",
+      "instructions": "Höre je eine Minute Type O Negative, „Love You to Death“, und Anathema, „Angelica“, und stelle dir die Stimme weg. Was bleibt im Register E3–A4? Ist es leer? Dann Vivaldi, *Der Winter*, Satz 2: Die Violine als Stimme; welches Instrument in deinem Setup könnte diese Linie übernehmen? Behauptung: bei Type O bleibt die Orgel in dem Register, bei Anathema nichts (prüfen).",
+      "checklist": [
+        "Registerinhalt ohne Stimme für beide Stücke beschrieben?",
+        "Instrument für die Vivaldi-Linie gewählt und begründet?"
+      ]
+    },
+    "te7-7-2": {
+      "title": "Modell · Stimme als Registerlücke",
+      "instructions": "Bass unten, Pad oben, und das Stimmregister (B3–A4) in der Mittelstimme: Takt 1–2 leer (Lücke als Klang), Takt 3–4 Linie für Gitarre, Takt 5–6 Linie für Keyboard (anderer Charakter), Takt 7–8 wieder leer. Spiele die acht Takte mit deinen Instrumenten. Beschreibe die Lücke in Takt 1–2 und 7–8: wirkt sie leer oder weit? Fülle sie testweise mit einem Akkord in E3–E4 und höre den Unterschied.",
+      "checklist": [
+        "Lücke, Gitarrenlinie, Keyboardlinie gespielt?",
+        "Wirkung der Lücke und des Akkordfüllers verglichen?"
+      ]
+    },
+    "te7-7-3": {
+      "title": "Anwendung · Stimme als Registerlücke",
+      "instructions": "Entscheide für jeden Abschnitt deines Abschlussstücks: Wer besetzt das Stimmregister (Gitarre, Keyboard, niemand)? Trage es in den Formplan ein. Mindestens ein Abschnitt lässt die Lücke offen, mindestens einer besetzt sie mit einer Linie. Komponiere je einen dieser Abschnitte aus und nimm beide auf.",
+      "checklist": [
+        "Registerbesetzung pro Abschnitt im Formplan?",
+        "Ein leerer und ein besetzter Abschnitt aufgenommen?"
+      ]
     }
   },
   "ui": {

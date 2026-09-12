@@ -5031,6 +5031,213 @@
         "Frequency plan with high-pass and cut per source?",
         "Comparison without/with EQ logged?"
       ]
+    },
+    "t7": {
+      "title": "Form",
+      "goal": "Riff form and verse/chorus, suite and dance movements, ritornello and programme music, long forms, contrast and density arc, intro/outro/transition, the voice as a register gap."
+    },
+    "tu7-1": {
+      "title": "Riff form versus verse and chorus",
+      "goal": "Distinguish the two basic constructions of rock form and know which the references choose.",
+      "text": "Verse/chorus (song form): sections with different functions, usually A (verse, lyrics narrate, harmonically open) and B (chorus, lyrics repeat, harmonically closed, denser), often with C (bridge, contrast, once only). Typical order: intro – A – B – A – B – C – B – outro. The form lives on recognising the chorus. Type O Negative are at home here: *October Rust* is a song album with extended intros and outros (verify).\n\nRiff form: sections are riffs, not functions. Riff 1 (8 bars, four times), riff 2 (8 bars, four times), riff 1 shortened, riff 3 (new tempo or meter), riff 2 as the ending. No chorus in the song sense, but return. The form lives on contrast between riffs and on the length of repetitions. My Dying Bride build this way: pieces of 8–12 minutes from five to seven riffs, each long enough to become a state (verify).\n\nAnathema mix: song form with riff lengths. Verses are four to eight bars on one riff, choruses likewise, but the sections last twice as long as in a pop song (verify).\n\nBaroque: Biber's dance movements are binary (A A B B, each part repeated), Vivaldi's ritornello movements alternate tutti and solo (phase 3). Both are closer to riff form than to verse/chorus: sections are musical states, not lyric functions.\n\nDecision for your piece: song form if one idea (the chorus) should outshine everything else. Riff form if several ideas are equal and time carries. Without vocals riff form is the natural route; an instrumental \"chorus\" needs a motif as strong as a lyric."
+    },
+    "te7-1-1": {
+      "title": "Listen · Riff form versus verse and chorus",
+      "instructions": "Sketch the form of Type O Negative, \"Love You to Death\", and My Dying Bride, \"The Songless Bird\", as a letter chain with bar counts (A8 B8 A8 …). Count the distinct sections. Claim: Type O three to four section types with chorus return, MDB five to seven riffs without a chorus (verify).",
+      "checklist": [
+        "Both forms as letter chains with bar counts?",
+        "Number of section types compared?"
+      ]
+    },
+    "te7-1-2": {
+      "title": "Model · Riff form versus verse and chorus",
+      "instructions": "A miniature song form: A (two bars, open on an E pedal), B (two bars, harmonically moving, higher). Twice, with a different ending. Play it and describe what makes B the \"chorus\" (register, bass change, final note). Then rebuild the same eight bars as riff form: A four times, then B four times, without alternation. Which version carries longer?",
+      "checklist": [
+        "Chorus features of B named?",
+        "Riff version played and endurance compared?"
+      ]
+    },
+    "te7-1-3": {
+      "title": "Application · Riff form versus verse and chorus",
+      "instructions": "Decide for your final piece: song form or riff form. Write the form plan as a letter chain with bar counts and tempo per section before writing a single note. Justify the choice in two sentences referring to one reference. The plan must cover at least 48 bars.",
+      "checklist": [
+        "Form plan with bar counts and tempi, at least 48 bars?",
+        "Choice justified with a reference?"
+      ]
+    },
+    "tu7-2": {
+      "title": "Suite and dance movements: Biber",
+      "goal": "Understand the suite as a sequence of contrasting short forms and use it as a model for an album or a long piece.",
+      "text": "Biber's *Harmonia artificioso-ariosa* (1696) consists of seven partitas, each a suite: praeludium, then dance movements (allemande, courante, sarabande, gigue, plus aria, gavotte, passacaglia, ciacona depending on the partita). Each movement has a fixed character through meter, tempo and rhythm: allemande 4/4 moderate with upbeat; courante 3/2 or 3/4 flowing; sarabande 3/4 slow with emphasis on 2; gigue 6/8 or 12/8 fast, dotted; ciacona/passacaglia 3/4 over a bass model.\n\nThe principle: contrast through type, not through material. All movements are in the same key; what changes is the shape of time. A fifteen-minute suite has six different feels of time in one key. That is the reverse of the doom principle, where one feel of time (slow, half-time) runs over different harmonies.\n\nScordatura: Biber writes for retuned violins. The tuning is part of the composition; it enables chords and resonances impossible in normal tuning. That is the exact parallel to P4 and to Type O Negative's B tuning: the tuning chooses the music. Biber's Partita VII calls for two violas d'amore, instruments with sympathetic strings, i.e. built-in reverb.\n\nTransfer: an album or a long piece as a suite: praeludium (free, rubato, phase 5), slow movement (sarabande feel: 3/4, emphasis on 2), ostinato movement (ciacona: bass model, phase 3), fast movement (gigue: 12/8, phase 5), ending. All in E, A or D. My Dying Bride come close to this in their multi-part pieces (verify); Type O Negative have in \"Haunted\" a kind of suite within one piece (verify)."
+    },
+    "te7-2-1": {
+      "title": "Listen · Suite and dance movements: Biber",
+      "instructions": "Biber, one partita complete (I or III): note per movement meter, tempo (estimated), character in one word and key. Then Type O Negative, \"Haunted\": count the sections with a different feel of time. Claim: Biber six movements in one key, \"Haunted\" three to four feels of time in one key (verify).",
+      "checklist": [
+        "Movement table of the partita filled in?",
+        "Feels of time in \"Haunted\" counted?"
+      ]
+    },
+    "te7-2-2": {
+      "title": "Model · Suite and dance movements: Biber",
+      "instructions": "A sarabande: 3/4, slow, the second beat is long (quarter–half). Eight bars in E minor with leading tone. Play it and emphasise the half note on 2, not the 1. Then rewrite the same eight bars as a gigue: 12/8 (each 3/4 bar becomes one 12/8 bar: quarter → dotted quarter), double tempo. The character change comes from the shape of time alone.",
+      "checklist": [
+        "Sarabande played with emphasis on 2?",
+        "Gigue rewrite of the same tones notated and played?"
+      ]
+    },
+    "te7-2-3": {
+      "title": "Application · Suite and dance movements: Biber",
+      "instructions": "Plan a suite in E of four movements: praeludium (free, 16 bars without fixed pulse), sarabande (3/4, 16 bars), ciacona (4-bar bass model, at least 6 passes), gigue (12/8, 16 bars). For each movement write meter, tempo, bass model and one motif. Compose the first movement completely.",
+      "checklist": [
+        "Four movements planned with meter, tempo, bass, motif?",
+        "Praeludium fully notated and played?"
+      ]
+    },
+    "tu7-3": {
+      "title": "Ritornello and programme music: Vivaldi",
+      "goal": "Master the ritornello form as an alternation of return and episode and understand programme as a formal aid.",
+      "text": "*Le quattro stagioni* (1725) are four violin concertos with three movements each (fast, slow, fast). The fast movements are ritornello forms: the tutti presents a theme (ritornello), the soloist plays episodes, the ritornello returns in various keys and lengths, at the end complete in the home key. Typical: R (tonic) – ep – R (dominant or relative) – ep – R (other key) – ep – R (tonic). Four to five ritornelli, three to four episodes between.\n\nThe programme: Vivaldi attached a sonnet to each concerto and wrote the lines into the score (birdsong, thunderstorm, sleeping shepherd, hunt, icy wind). The music depicts images: trills = birds, tremolo in the bass = thunder, dotted rhythms = chattering teeth. The programme helps the form: the listener knows why a section arrives, and the composer has a reason for contrast.\n\nTransfer to doom: the reference albums are programme music with lyrics instead of a sonnet. An instrumental piece can have a silent programme: a scene, a sequence only you know. That is not mysticism but a formal aid: if you know section B is \"the thunderstorm\", you know how dense, how loud, how long.\n\nRitornello as riff form: one riff (R) returns between free sections (ep), each time slightly different (shortened, another key, another texture). That is exactly the solo-segno-coda model of the instrument course (phase 7), only with more return. My Dying Bride do this without naming it (verify).\n\nRule: the ritornello must be complete the first time so that the shortened returns stay recognisable. The last return is complete again."
+    },
+    "te7-3-1": {
+      "title": "Listen · Ritornello and programme music: Vivaldi",
+      "instructions": "Vivaldi, *Summer*, movement 3 (Presto): mark every ritornello entry with length and key (tonic, dominant, other). Count the episodes. Then *Spring*, movement 1: which programme images do you recognise (birds, brook, thunderstorm)? Claim: Presto with five ritornelli, Spring with three recognisable images (verify).",
+      "checklist": [
+        "Ritornello entries noted with length and key?",
+        "Programme images named with their musical device?"
+      ]
+    },
+    "te7-3-2": {
+      "title": "Model · Ritornello and programme music: Vivaldi",
+      "instructions": "Ritornello form in eight bars: R (two bars, motif with leading tone), episode (sequence in eighths over E and D), R′ shortened to one bar, episode over A and B (dominant-pedal feel), R complete as the ending. Play it and mark every R entry. Then replace R′ with another episode and hear whether the piece loses its anchor.",
+      "checklist": [
+        "R entries marked and shortening recognised?",
+        "Version without R′ played and effect assessed?"
+      ]
+    },
+    "te7-3-3": {
+      "title": "Application · Ritornello and programme music: Vivaldi",
+      "instructions": "Write a silent programme for your final piece: three images or states in one sentence each. Assign each a section and derive tempo, density, register from it. Then build one riff as a ritornello returning between the three sections, complete the first and last time, shortened between. Form plan with bar counts.",
+      "checklist": [
+        "Three programme images with derived parameters?",
+        "Ritornello plan with complete and shortened entries?"
+      ]
+    },
+    "tu7-4": {
+      "title": "Long forms: carrying eight to twelve minutes",
+      "goal": "Know how My Dying Bride build long pieces and name the tools for it.",
+      "text": "*Turn Loose the Swans* has pieces of seven to twelve minutes. What holds them together is not a chorus but a web of return, contrast and build.\n\nTools: 1. Riff lengths: each riff runs long enough to become a state (at least four times eight bars at ♩ = 60, i.e. over two minutes). 2. Few riffs: five to seven per piece, not fifteen. 3. Return: at least one riff comes back after a long absence, often in another texture (piano instead of guitar, or vice versa). 4. One break: a section that refuses everything else (silence, piano only, spoken voice only, another tempo). 5. Build at the end: the densest point sits in the last quarter. 6. No ending by cadence but by thinning or breaking off (phase 4).\n\nThe form of time is epic: the listener should lose the clock. Hence no constant four-group expectation; phrases of six, ten or twelve bars occur and section lengths vary (verify). The vocals are lyrics, but the music carries without them; an instrumental version of an MDB piece would still be a piece.\n\nThe danger of long forms: arbitrariness. The test: can every riff justify why it stands where it stands? If two sections are interchangeable, one is superfluous. And: what returns? Without return it is a sequence of events, not a piece.\n\nBaroque parallel: Vivaldi's concertos are short (3–4 minutes per movement), but the ritornello form is a model for length: with seven ritornelli and six episodes it carries twelve minutes. Biber extends through variation over ostinato. Both are return; MDB have it intuitively."
+    },
+    "te7-4-1": {
+      "title": "Listen · Long forms: carrying eight to twelve minutes",
+      "instructions": "My Dying Bride, \"The Crown of Sympathy\" (over twelve minutes): draw a timeline in minutes. Enter: every riff (letter), its length, returns, the break, the densest point. Check the six tools from the text individually. Claim: five to seven riffs, one break, densest point after minute 9 (verify).",
+      "checklist": [
+        "Timeline with riffs, lengths, returns, break, density?",
+        "Six tools individually confirmed or refuted?"
+      ]
+    },
+    "te7-4-2": {
+      "title": "Model · Long forms: carrying eight to twelve minutes",
+      "instructions": "A long form in miniature: riff A (power chords), riff B (melody), break (silence, then one tone), A returning in another texture (single voices like piano instead of fifths). Play the eight bars. Then extend mentally: A four times, B four times, break two bars, A′ four times. That is 34 bars, over two minutes at ♩ = 60. Play this version through and time it.",
+      "checklist": [
+        "Eight bars played and the four building blocks named?",
+        "34-bar version played through and timed?"
+      ]
+    },
+    "te7-4-3": {
+      "title": "Application · Long forms: carrying eight to twelve minutes",
+      "instructions": "Plan a piece of at least eight minutes at ♩ = 60 (i.e. at least 120 bars). At most six riffs. Enter into a timeline: riff, length in bars, texture, returns, the break, the densest point. Apply the interchangeability test to every pair of riffs. Compose the first 32 bars.",
+      "checklist": [
+        "Timeline over at least 120 bars with at most six riffs?",
+        "Interchangeability test documented, first 32 bars notated?"
+      ]
+    },
+    "tu7-5": {
+      "title": "Contrast, density arc, dynamics",
+      "goal": "Understand density as a plannable curve across a piece and create dynamics without a volume knob.",
+      "text": "Density has four dimensions: number of voices, number of attacks per bar, register width (distance from lowest to highest tone), sonic density (gain, reverb, chorus). Each can be controlled individually. A section with one voice, many attacks, narrow register and heavy gain is dense in a different way from one with four voices, few attacks, wide register and clean.\n\nThe density arc of a piece: draw the four dimensions over the timeline. Typical for doom: voices and register grow until the last quarter, attacks stay low, gain is constantly high, with a drop in the middle (the break from unit 4). Typical for Type O Negative: density jumps at section boundaries (verse thin, chorus full) without an arc within sections (verify). Typical for Vivaldi: ritornello dense, episode thin, alternating; the arc is a zigzag with rising peaks.\n\nDynamics without a knob: loud is relative. A passage becomes loud when something before it was quiet. Four bars of silence or a single voice before the full riff make the riff louder than any knob could. That is the terraced dynamics of the Baroque (Vivaldi's tutti/solo) and the half-time drop in doom. Crescendo (gradual) hardly exists in the Baroque and in doom only as density growth: one voice after another added, not everything louder together.\n\nContrast needs reference: something is only dark if something before was bright. Hence the C Lydian section in the instrument course (phase 6): it exists so that the return to E sounds dark.\n\nRule: per piece one maximum of all four dimensions, and it is not at the beginning. Per piece one minimum, and it is not at the end."
+    },
+    "te7-5-1": {
+      "title": "Listen · Contrast, density arc, dynamics",
+      "instructions": "Anathema, \"Eternity Part I\" and Vivaldi, *Winter*, movement 1: draw the density arc for both in four lines (voices, attacks, register, sound) over time. Where is the maximum? Where the minimum? Claim: Anathema arc with one maximum at the end, Vivaldi zigzag with maximum in the last ritornello (verify).",
+      "checklist": [
+        "Two density arcs drawn with four lines?",
+        "Maximum and minimum of both pieces located?"
+      ]
+    },
+    "te7-5-2": {
+      "title": "Model · Contrast, density arc, dynamics",
+      "instructions": "A density arc in eight bars: bar 1 one voice, bar 2 bass added, bar 3 middle voice added, bar 4 all with more attacks (maximum). Bar 5 silence (minimum), bar 6 one high tone, bars 7–8 wind-down. Play it and count voices and attacks for every bar. Hear how loud bar 6 feels after bar 5 although it is a single tone.",
+      "checklist": [
+        "Voices and attacks per bar counted?",
+        "Perceived loudness of bar 6 described?"
+      ]
+    },
+    "te7-5-3": {
+      "title": "Application · Contrast, density arc, dynamics",
+      "instructions": "Draw the density arc for your planned long piece in four lines over the form plan. Fix maximum and minimum (not at the start, not at the end). Place at least two bars of minimum before the maximum. Compose the four bars around the maximum and record them: two bars minimum, two bars maximum.",
+      "checklist": [
+        "Four density lines drawn over the form plan?",
+        "Minimum-to-maximum passage composed and recorded?"
+      ]
+    },
+    "tu7-6": {
+      "title": "Intro, outro, transition",
+      "goal": "Treat the three seams of a piece as form sections of their own, not leftover space.",
+      "text": "Intro: it sets key, tempo, sound and expectation. Four kinds: 1. Riff without drums (the listener learns the riff, then the pulse arrives; MDB, verify). 2. A foreign instrument alone (piano, organ, strings; Type O Negative, verify). 3. Free sound without pulse (arpeggio, reverb; Anathema, verify). 4. The full riff at once (no intro; rare in these references). Length: 8 to 32 bars in doom; the intro may be a section of its own.\n\nOutro: it ends. Four kinds: 1. Thinning (voices disappear one after another until one remains). 2. Return of the intro (frame; Type O Negative often, verify). 3. Fade-out (a recording technique, not a formal device; avoid except as quotation). 4. Break-off on a chord with long decay (MDB, verify). Baroque: Vivaldi ends with the complete ritornello, Biber with the cadence of the last dance movement; no outro in the rock sense.\n\nTransition: the spot between two sections. Tools: fill (phase 3), dropout (one bar of bass only or drums only), overlap (the pad of the old section still lies when the new one begins), common tone (one voice holds across the boundary), tempo modulation (new section at half or double tempo without breaking the pulse: ♩ = 60 becomes ♩ = 120 with snare on 2 and 4 instead of 3; feels like acceleration but is the same grid). Type O Negative often change sections abruptly with one bar of silence (verify); My Dying Bride overlap with violin or decay (verify).\n\nRule: a transition succeeds when the listener notices the boundary but does not stumble. If they do not notice, it is not a new section; if they stumble, a tool is missing."
+    },
+    "te7-6-1": {
+      "title": "Listen · Intro, outro, transition",
+      "instructions": "Compare the intros of \"Love You to Death\" (Type O), \"Your River\" (MDB), \"Sentient\" (Anathema): kind (1–4), length in bars, what arrives first (key, tempo, sound). Then one outro each: kind (1–4). Claim: three different intro kinds, two different outro kinds (verify).",
+      "checklist": [
+        "Three intros with kind, length and order of elements?",
+        "Three outros with kind?"
+      ]
+    },
+    "te7-6-2": {
+      "title": "Model · Intro, outro, transition",
+      "instructions": "Intro (one voice, then bass added), riff, transition by dropout (one bass hit, then silence), new section B on A, outro as frame (the intro voice returns, bass disappears). Play the eight bars. Replace the transition (bar 5) once with overlap (bass holds E through) and once with a fill from the preview accompaniment; hear which transition makes B clearer.",
+      "checklist": [
+        "Intro, transition and outro played as sections of their own?",
+        "Two alternative transitions compared?"
+      ]
+    },
+    "te7-6-3": {
+      "title": "Application · Intro, outro, transition",
+      "instructions": "For your final piece write intro and outro as sections of their own (at least 8 bars each) and assign one tool to every transition in the form plan. Compose intro, the first transition and the outro. Record intro and outro back to back and hear whether they fit as a frame.",
+      "checklist": [
+        "Intro and outro 8+ bars each, transition tool per boundary?",
+        "Intro/outro frame recorded and assessed?"
+      ]
+    },
+    "tu7-7": {
+      "title": "The voice as a register gap",
+      "goal": "Understand the place vocals occupy in the references and fill that place instrumentally or leave it deliberately empty.",
+      "text": "This course does not cover vocals. But four of the five references have them, and their absence leaves a hole you need to know.\n\nRegister: Steele (Type O Negative) sings bass-baritone, about E2–E4, often doubled in octaves (verify). Stainthorpe (My Dying Bride) growls in the riff register (around E2–E3) and speaks/sings above it (E3–E4) (verify). Cavanagh (Anathema) sings tenor, E3–A4 (verify). Vivaldi has no voice, but the solo violin occupies exactly the soprano register (G4–E6). Biber likewise.\n\nFunction: in Type O and Anathema the voice carries the melody; in MDB it carries lyrics and timbre, the melody often lies in the violin. Without a voice what is missing is: the line in the mids (E3–E4 for Steele/Stainthorpe, E3–A4 for Cavanagh). In Vivaldi nothing is missing; his model is instrumental.\n\nThree answers for instrumental playing: 1. Put the line on an instrument that sits in the vocal register: guitar on the D/G/C strings, keyboard right hand around C4, synth lead. That is Vivaldi's solution (violin instead of soprano). 2. Leave the register empty and make the gap a sonic feature: bass below, pad above, air between. That is a sound of its own, not a mistake. 3. Occupy the line in turns: section A guitar, section B keyboard, like two singers.\n\nWhat does not work: filling the vocal register with chords. Chords in E3–E4 are the riff register; they make density, not melody. A line needs a voice, not a block.\n\nRule: before writing a piece, decide who sings. If nobody, decide whether the gap is intentional."
+    },
+    "te7-7-1": {
+      "title": "Listen · The voice as a register gap",
+      "instructions": "Listen to one minute each of Type O Negative, \"Love You to Death\", and Anathema, \"Angelica\", and imagine the voice removed. What remains in the register E3–A4? Is it empty? Then Vivaldi, *Winter*, movement 2: the violin as voice; which instrument in your setup could take this line? Claim: in Type O the organ stays in that register, in Anathema nothing (verify).",
+      "checklist": [
+        "Register content without the voice described for both pieces?",
+        "Instrument for the Vivaldi line chosen and justified?"
+      ]
+    },
+    "te7-7-2": {
+      "title": "Model · The voice as a register gap",
+      "instructions": "Bass below, pad above, and the vocal register (B3–A4) in the middle voice: bars 1–2 empty (gap as sound), bars 3–4 a line for guitar, bars 5–6 a line for keyboard (different character), bars 7–8 empty again. Play the eight bars with your instruments. Describe the gap in bars 1–2 and 7–8: does it feel empty or wide? Test-fill it with a chord in E3–E4 and hear the difference.",
+      "checklist": [
+        "Gap, guitar line, keyboard line played?",
+        "Effect of the gap and the chord filler compared?"
+      ]
+    },
+    "te7-7-3": {
+      "title": "Application · The voice as a register gap",
+      "instructions": "Decide for every section of your final piece: who occupies the vocal register (guitar, keyboard, nobody)? Enter it in the form plan. At least one section leaves the gap open, at least one fills it with a line. Compose one of each and record both.",
+      "checklist": [
+        "Register occupation per section in the form plan?",
+        "One empty and one occupied section recorded?"
+      ]
     }
   },
   "ui": {
