@@ -4530,6 +4530,213 @@
         "All section endings classified?",
         "Reduced to one cadence and comparison logged?"
       ]
+    },
+    "t5": {
+      "title": "Time",
+      "goal": "Subdivision, triplets, 12/8, swing, polyrhythm, odd meters, tempo and decay, rubato and agogics: how slow music shapes time."
+    },
+    "tu5-1": {
+      "title": "Subdivision: binary, ternary, 12/8",
+      "goal": "Grasp duple and triple subdivision as the two basic kinds of time and read 12/8 as notated triple.",
+      "text": "A pulse can be divided in two or in three. Two: eighths in 4/4, the straight feel. Three: triplets in 4/4 or eighths in 12/8, the rocking feel. All further subdivisions are combinations: sixteenths = 2×2, sextuplets = 2×3 or 3×2, 6/8 = 2 pulses × 3.\n\n12/8 is the honest way to notate triple: four dotted quarters per bar, each in three eighths. The tempo mark names the dotted quarter. Triplets in 4/4 are the same sound with different writing; you use them when the triple occurs only occasionally. Rule: more than half the piece ternary → 12/8 (or 6/8), otherwise triplets.\n\nDoom is mostly binary and slow, but the rocking variant occurs: Type O Negative have 6/8 and 12/8 pieces, and the waltz tone (3/4, one pulse in three) is their Beatles and Sabbath heritage (verify). My Dying Bride switch between binary and ternary within a piece, often at section boundaries (verify). Vivaldi writes gigues and pastorales in 12/8 or 6/8: the Danza pastorale of Spring is 12/8 (verify). Biber likewise in gigues.\n\nThe difference is physical: binary is walking, ternary is rocking. A riff conceived binary becomes softer and longer in 12/8. Playing the same tone sequence in both subdivisions is the best exercise for hearing the difference, not just counting it."
+    },
+    "te5-1-1": {
+      "title": "Listen · Subdivision: binary, ternary, 12/8",
+      "instructions": "Vivaldi, *Spring*, movement 3 (Danza pastorale): count the pulse and the subdivision. Then Type O Negative, \"Be My Druidess\" and \"Green Man\": which is binary, which ternary? Claim: Vivaldi 12/8, one of the Type O pieces ternary (verify). Tap the pulse with one hand and the subdivision with the other for each.",
+      "checklist": [
+        "Subdivision of all three pieces determined?",
+        "Pulse and subdivision tapped simultaneously?"
+      ]
+    },
+    "te5-1-2": {
+      "title": "Model · Subdivision: binary, ternary, 12/8",
+      "instructions": "Four bars of 12/8: arpeggio in groups of three, bass in dotted halves (two big pulses). Count \"1-2-3 2-2-3 3-2-3 4-2-3\". Then play the same tone sequence in 4/4 as straight eighths (E G B E G B E G) and hear how the riff \"walks\" instead of \"rocks\". In 12/8 the tempo mark names the dotted quarter.",
+      "checklist": [
+        "Four big pulses counted instead of twelve equal ones?",
+        "Binary version of the same tones played and compared?"
+      ]
+    },
+    "te5-1-3": {
+      "title": "Application · Subdivision: binary, ternary, 12/8",
+      "instructions": "Write one riff twice: as 4/4 with straight eighths and as 12/8. Same tone sequence, same chords, same basic pulse (♩ = ♩.). Record both with matching accompaniment. Decide which version feels heavier and state why (number of attacks per pulse, accent spacing).",
+      "checklist": [
+        "Both versions notated and recorded?",
+        "Heaviness verdict with reason logged?"
+      ]
+    },
+    "tu5-2": {
+      "title": "Swing and shuffle",
+      "goal": "Read ternary phrasing in binary notation, understand the ratio as a parameter and know where the references swing.",
+      "text": "Swing shifts the second eighth of every quarter backward. Notation shows straight eighths with the indication \"swing\" or \"shuffle\"; performance is long–short. The ratio varies: 2:1 (triplet shuffle, 67 %), 3:2 (60 %), 3:1 (dotted, 75 %). At slow tempo the ratio becomes more extreme, at fast tempo straighter. There is no correct value, only a fitting one.\n\nShuffle is the blues term, swing the jazz term; musically the same principle, culturally different ratios and accents. In metal it is usually called shuffle and comes from blues via Black Sabbath. Type O Negative have shuffle sections; \"Cinnamon Girl\" as a cover carries the rock shuffle into the doom context (verify). My Dying Bride rarely swing, but their triplet riffs are related.\n\nThe Baroque swings in a sense as well: the French practice of \"notes inégales\" plays notated equal eighths unequally, long–short. Whether Vivaldi (Italian) was played this way is disputed; historically informed recordings sometimes do (verify on your recording). The point for you: unequal eighths have been a performance decision, not a notation question, for 300 years.\n\nDevice-neutral: swing on drum machines is a percentage that shifts the even sixteenths or eighths. 50 % = straight, 67 % = triplet, 75 % = dotted. The riff has to play the same ratio, otherwise it rubs. Rule: fix the swing value before practising the riff."
+    },
+    "te5-2-1": {
+      "title": "Listen · Swing and shuffle",
+      "instructions": "Type O Negative, \"Cinnamon Girl\": determine the swing ratio of the eighths by ear (2:1, 3:2 or straight). Tap along. Then a Vivaldi recording of your choice, *Autumn*, movement 1: does the ensemble play the eighths equal or unequal? Claim: Type O about 2:1, Vivaldi depending on the recording (verify and note the ensemble).",
+      "checklist": [
+        "Swing ratio in Type O estimated?",
+        "Eighth-note equality in Vivaldi noted with the ensemble named?"
+      ]
+    },
+    "te5-2-2": {
+      "title": "Model · Swing and shuffle",
+      "instructions": "A shuffle riff notated straight with a swing indication; the preview plays 2:1. Play it three times: straight, 2:1, 3:1. Record and judge which ratio fits at 60 and which at 100 quarters. Write one bar out in triplets (quarter triplet + eighth triplet per beat) and compare readability with the swing notation.",
+      "checklist": [
+        "Three ratios compared at two tempi?",
+        "One bar written out in triplets?"
+      ]
+    },
+    "te5-2-3": {
+      "title": "Application · Swing and shuffle",
+      "instructions": "Write an eight-bar shuffle riff on E and A with one break (one bar of straight eighths as contrast). Fix the swing ratio and note it as a percentage for the drum machine. Record with shuffle accompaniment. Check whether the straight bar reads as contrast or as a mistake.",
+      "checklist": [
+        "Riff notated with swing percentage?",
+        "Effect of the straight bar assessed?"
+      ]
+    },
+    "tu5-3": {
+      "title": "Polyrhythm and hemiola",
+      "goal": "Know two simultaneous subdivisions and the Baroque hemiola as a device against uniformity.",
+      "text": "Polyrhythm: two voices divide the same span differently, 3 against 2 or 4 against 3. The shared span is divided into the least common multiple: 3:2 into six (top 1,3,5; bottom 1,4), 4:3 into twelve. After learning, the helper count should disappear and only the shared beginning remain.\n\nHemiola: a change of grouping within the same eighths. In 6/8 six eighths are normally 3+3 (two pulses); the hemiola groups them 2+2+2 (three pulses) for one bar, usually before the cadence. The bar briefly feels like 3/4. Biber and Vivaldi place it in almost every triple meter before the close (verify): uniformity breaks, the cadence gains weight. In 3/4 across two bars: six quarters as 3+3 instead of 2+2+2, the same idea one level up.\n\nIn metal the hemiola is the accent shift 3+3+2 in 4/4 (phase 7 of the instrument course): eight eighths, but the accents come every three. Type O Negative use it in riffs with a straight hi-hat beneath so that the guitar runs \"against\" the drums (verify). My Dying Bride set 3 against 2 between violin (triplets) and riff (eighths) (verify).\n\nThe difference between polyrhythm and hemiola: polyrhythm is simultaneous (two layers), hemiola is successive (one layer changes grouping). Both depend on the base count staying audible; without a reference it is just another meter."
+    },
+    "te5-3-1": {
+      "title": "Listen · Polyrhythm and hemiola",
+      "instructions": "Biber, a gigue or sarabande in triple meter: find the bar before a cadence in which the accent changes from two to three (or three to two). Tap the base count through it. Then Type O Negative, a riff of your choice with 3+3+2: does the hi-hat run straight beneath? Claim: hemiola in Biber before every cadence, 3+3+2 in Type O over a straight hi-hat (verify).",
+      "checklist": [
+        "Hemiola bar in Biber located and base count held?",
+        "3+3+2 riff noted with hi-hat behaviour?"
+      ]
+    },
+    "te5-3-2": {
+      "title": "Model · Polyrhythm and hemiola",
+      "instructions": "Three bars of 6/8 in 3+3, then bar 3 as hemiola: the same six eighths but accents and bass in 2+2+2. Bar 4 arrival. Clap the base pulse (two per bar) through all four bars, including the hemiola. Then play 3 against 2: right hand bar 3 as written, left hand bass as two dotted quarters instead of three quarters.",
+      "checklist": [
+        "Base pulse held through the hemiola?",
+        "3 against 2 in bar 3 played with both hands?"
+      ]
+    },
+    "te5-3-3": {
+      "title": "Application · Polyrhythm and hemiola",
+      "instructions": "Write eight bars in 6/8 with exactly two hemiolas, each before a form boundary. The bass makes the grouping audible. Record with 12/8 or 6/8 accompaniment (the drums stay 3+3). Check whether the hemiola reads as tension before the boundary or as stumbling.",
+      "checklist": [
+        "Two hemiolas notated before form boundaries?",
+        "Effect against unchanged drums assessed?"
+      ]
+    },
+    "tu5-4": {
+      "title": "Odd meters",
+      "goal": "Understand 5/8, 7/8 and 5/4 as groupings and judge their place in this music.",
+      "text": "An odd meter is a chain of groups of two and three that does not split into equal halves. 5/8 = 2+3 or 3+2. 7/8 = 2+2+3, 3+2+2 or 2+3+2. 5/4 = 3+2 or 2+3 in quarters. The grouping is part of the composition, not just the notation; 2+3 and 3+2 are different rhythms. In eighth-note meters the tempo mark names the eighth.\n\nOdd meters are rare in the references. My Dying Bride occasionally use them as riff extensions: a 4/4 riff gets a 7/8 or 5/4 bar that shifts the repetition (verify). Type O Negative stay almost entirely even. Vivaldi knows no odd meters, but his phrase lengths are often odd (5 or 7 bars), which works similarly: the expectation of the four-group is broken. Biber likewise in free movements (Praeludium).\n\nTwo uses: 1. As the basic meter of a section: the listener learns the grouping after two bars and then hears it as normal; that works well for 5/4 and 7/8, badly for 11 or 13. 2. As a single bar in an even context: a shortening (7/8 instead of 4/4, one eighth missing) or a lengthening (5/4, one quarter more). The second is more typical of doom: the riff \"catches\" once and moves on.\n\nRule: odd meters must come from the riff (the phrase really is seven eighths long), not from the wish to be odd. If you cannot sing the grouping, it is wrong."
+    },
+    "te5-4-1": {
+      "title": "Listen · Odd meters",
+      "instructions": "My Dying Bride, \"The Crown of Sympathy\" and \"Turn Loose the Swans\": find spots where the riff seems one beat too short or too long. Count: 7/8? 5/4? Or only a syncopation? Claim: at least one bar in one of the two pieces is really odd (verify). Then Vivaldi, *Winter*, movement 1: count the length of the first solo phrase in bars.",
+      "checklist": [
+        "Seemingly odd spots recounted and classified?",
+        "Phrase length in Vivaldi counted?"
+      ]
+    },
+    "te5-4-2": {
+      "title": "Model · Odd meters",
+      "instructions": "Four bars of 7/8 in 2+2+3. The bass plays the group durations (quarter, quarter, dotted quarter). Say \"1-2 1-2 1-2-3\" and play. Rewrite the same riff as 2+3+2 (move the accents, adjust bass durations) and play both. Sing both groupings without an instrument; the one you can sing is the right one for you.",
+      "checklist": [
+        "2+2+3 spoken and played?",
+        "2+3+2 rewrite notated and both sung?"
+      ]
+    },
+    "te5-4-3": {
+      "title": "Application · Odd meters",
+      "instructions": "Take an eight-bar 4/4 riff and change exactly one bar: once to 7/8 (shortening), once to 5/4 (lengthening). Notate both versions with meter changes. Play them and describe whether the riff \"catches\" (shortening) or \"breathes\" (lengthening). Decide which version you keep.",
+      "checklist": [
+        "Both versions notated with meter changes?",
+        "Effect description and decision logged?"
+      ]
+    },
+    "tu5-5": {
+      "title": "Tempo and decay: why slow works with gain",
+      "goal": "Understand the relationship between tempo, sustain, distortion and reverb and derive tempo decisions from it.",
+      "text": "A clean guitar tone decays noticeably after about two to four seconds. Distortion compresses: the quiet phases of the decay are raised, the tone seems constant until it tips abruptly into noise. A distorted power chord carries six to ten seconds. At ♩ = 60 that is one and a half to two and a half bars. That is the physical basis of doom: whole notes are possible because the instrument holds them.\n\nConversely: at ♩ = 140 and eighths each tone lasts 0.2 seconds; distortion has no decay to compress, it only thickens the attack. Fast metal therefore sounds percussive, slow metal pad-like, with the same amp.\n\nReverb extends further. A room with two seconds of decay makes every tone half a beat longer at ♩ = 60. At fast tempo it smears the attacks. Doom can use reverb, thrash cannot. Type O Negative use long reverb and chorus because their tempi allow it (verify); Anathema use reverb on clean guitar where it fills the gaps between arpeggio tones (verify).\n\nVivaldi's strings have the problem reversed: the bow holds the tone as long as desired without distortion. In return there is no natural decay; note endings are bowing decisions. The churches where Baroque was played had three to five seconds of reverb, and the tempi of the slow movements are built on that.\n\nTempo decision: determine the longest note in your riff. Its duration in seconds must be shorter than the sustain of your rig. With whole notes at ♩ = 60 you need four seconds of sustain; check that at the amp, not in your imagination."
+    },
+    "te5-5-1": {
+      "title": "Listen · Tempo and decay: why slow works with gain",
+      "instructions": "My Dying Bride, \"Your River\": measure the duration of the longest held guitar chord in seconds and convert it into bars at the measured tempo. Then Anathema, \"Sentient\": how long is the reverb on the clean guitar (time from attack to silence at a rest)? Claim: MDB hold across two bars, Anathema reverb over one second (verify).",
+      "checklist": [
+        "Longest chord duration measured and converted to bars?",
+        "Reverb length in Anathema measured?"
+      ]
+    },
+    "te5-5-2": {
+      "title": "Model · Tempo and decay: why slow works with gain",
+      "instructions": "Eight bars with ties across two and three bars. At ♩ = 60 the final chord lasts twelve seconds. Play the progression on guitar with your gain and measure how long each chord actually carries before it tips. Then set the tempo so that the longest chord just holds. Repeat clean: at what tempo does the clean version carry?",
+      "checklist": [
+        "Sustain of your own rig measured in seconds?",
+        "Minimum tempo for gain and clean versions noted?"
+      ]
+    },
+    "te5-5-3": {
+      "title": "Application · Tempo and decay: why slow works with gain",
+      "instructions": "Create a sustain table for your rig: clean, medium gain, high gain, each with and without reverb, each with seconds until audible tipping for E2, E3 and E4. From it derive for every setting the slowest sensible tempo for whole notes. This table belongs in the acoustics appendix of your log.",
+      "checklist": [
+        "Table with 18 measurements?",
+        "Slowest tempo derived per setting?"
+      ]
+    },
+    "tu5-6": {
+      "title": "Rubato, fermata, Baroque sense of time",
+      "goal": "Know time stretching as an expressive device and where it is permitted in this music.",
+      "text": "Rubato means \"stolen\": time is stretched in one place and given back in another, so that the base pulse survives across the phrase. A fermata holds a tone or rest for an indefinite length; time stands still. Ritardando slows gradually, usually before a close. Accelerando speeds up.\n\nThe Baroque has less rubato than Romanticism, but not none: cadences are stretched, solo passages breathe, slow movements are dead without stretching. Vivaldi's Largo movements demand that the solo violin phrase freely over the steady bass (verify: compare two recordings). In the praeludia Biber writes free passages without a fixed meter that are meant to sound improvised.\n\nDoom with drums has no rubato: the drum machine or the drummer holds. But doom has fermatas: the last chord of a section rings out, the drums drop out, then the next riff begins. My Dying Bride do this at almost every major boundary (verify). Type O Negative have intros and outros without meter in which the organ lies freely (verify). Anathema often begin pieces with a free guitar arpeggio before the pulse enters (verify).\n\nFor solo playing without drums rubato is the most important freedom: you can stretch a phrase because nobody holds against you. The danger is formlessness. Rule: rubato within the phrase, not between phrases; the start of every phrase lands on time. Fermata only at form boundaries and never twice in a row."
+    },
+    "te5-6-1": {
+      "title": "Listen · Rubato, fermata, Baroque sense of time",
+      "instructions": "Vivaldi, *Winter*, movement 2, in two different recordings: measure the duration of the first eight bars in both. Where does the violin stretch? Then Anathema, \"Eternity Part I\", opening: how many seconds pass before a fixed pulse is audible? Claim: recordings differ by more than 10 %, Anathema intro free for over 20 seconds (verify).",
+      "checklist": [
+        "Duration of the eight bars compared in two recordings?",
+        "Length of the free intro measured?"
+      ]
+    },
+    "te5-6-2": {
+      "title": "Model · Rubato, fermata, Baroque sense of time",
+      "instructions": "A phrase with cadence and fermata: bars 1–4 in time, bars 5–6 final tone (hold it freely, longer than written), bar 7 silence (fermata on the rest), bar 8 new start, low. Play without click: stretch bar 4 (ritardando into the cadence), hold bars 5–6 by feel, begin bar 8 on a new pulse you set yourself. Record and measure how long your fermata was.",
+      "checklist": [
+        "Ritardando, fermata and new start played without click?",
+        "Fermata length measured and assessed?"
+      ]
+    },
+    "te5-6-3": {
+      "title": "Application · Rubato, fermata, Baroque sense of time",
+      "instructions": "Play your phase-1 piece from the instrument course twice without accompaniment: once strictly in time, once with rubato within phrases and one fermata at the form boundary. Compare the recordings: does each phrase start land on time? Does the fermata read as articulation or as interruption?",
+      "checklist": [
+        "Both versions recorded?",
+        "Phrase starts and fermata effect assessed?"
+      ]
+    },
+    "tu5-7": {
+      "title": "Agogics in doom: delay as a device",
+      "goal": "Understand microtiming: laid-back, on the beat, ahead of the beat, and what doom uses of it.",
+      "text": "Agogics is the small deviation from the grid: a tone arriving ten to forty milliseconds after the beat sounds heavy (\"laid-back\"); one before it sounds pushing. Both at constant tempo. It is not rubato (the tempo stays) but placement.\n\nDoom lives on laid-back. The snare on 3 minimally late, the guitar attack minimally behind the kick, the vocal behind everything. This creates weight because the ear hears the delay as inertia, as mass. My Dying Bride have it in the drums (verify); Type O Negative achieve it with programmed drums through deliberately late snares or through bass playing behind the machine (verify). Anathema play more on the beat; their weight comes from register and reverb, not timing (verify).\n\nVivaldi has agogics in the accent: the first beat is longer, not just louder. Baroque performance practice speaks of \"good\" and \"bad\" notes; the good ones may be longer. That is the same micro-delay applied to note lengths instead of attacks.\n\nDevice-neutral: on drum machines this is called \"nudge\", \"micro-timing\" or \"offset\": shifting single steps by milliseconds. The SR-18 barely can, Digitakt and SP-404 can per step. Without a device: programming the snare a sixteenth-triplet late is too much; real agogics lies below the grid. With your own hand: deliberately play behind the click, record, measure the gap.\n\nRule: one element behind the beat (usually snare or guitar), never all. If everything is late, only the tempo is slower."
+    },
+    "te5-7-1": {
+      "title": "Listen · Agogics in doom: delay as a device",
+      "instructions": "My Dying Bride, \"The Songless Bird\", a half-time passage: listen to the snare on 3. Is it on the beat or behind it? Compare with Type O Negative, \"Green Man\": snare on 2 and 4, where? If you have a DAW: look at the waveform, measure kick-to-snare distance. Claim: MDB snare 10–30 ms late, Type O on the grid (verify).",
+      "checklist": [
+        "Snare placement of both pieces assessed?",
+        "If DAW: distance measured in milliseconds?"
+      ]
+    },
+    "te5-7-2": {
+      "title": "Model · Agogics in doom: delay as a device",
+      "instructions": "Four times the same bar: fifths on 1 and 3. Play bars 1–2 exactly on the click, bars 3–4 deliberately 20–30 ms behind, at unchanged tempo. Record. If you have a DAW, measure the gap; otherwise judge by comparison whether the second half feels heavier. Then exaggerate (an eighth late) and hear when weight turns into error.",
+      "checklist": [
+        "Both halves recorded, gap measured or estimated?",
+        "Boundary between weight and error named?"
+      ]
+    },
+    "te5-7-3": {
+      "title": "Application · Agogics in doom: delay as a device",
+      "instructions": "Program or tap a half-time pattern in two versions: snare on the grid, snare delayed by a small amount (nudge, or by hand). Play the same riff over both and record. Describe the difference and decide which version becomes your standard. Note the setting device-neutrally (milliseconds or percent of a sixteenth).",
+      "checklist": [
+        "Two pattern versions recorded with the same riff?",
+        "Standard chosen and noted device-neutrally?"
+      ]
     }
   },
   "ui": {

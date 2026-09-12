@@ -4530,6 +4530,213 @@
         "Alle Abschnittsenden klassifiziert?",
         "Auf eine Kadenz reduziert und Vergleich im Log?"
       ]
+    },
+    "t5": {
+      "title": "Zeit",
+      "goal": "Unterteilung, Triolen, 12/8, Swing, Polyrhythmus, ungerade Takte, Tempo und Ausklang, Rubato und Agogik: wie langsame Musik Zeit gestaltet."
+    },
+    "tu5-1": {
+      "title": "Unterteilung: binär, ternär, 12/8",
+      "goal": "Zweier- und Dreierunterteilung als die zwei Grundarten von Zeit begreifen und 12/8 als notierten Dreier lesen.",
+      "text": "Ein Puls kann in zwei oder in drei geteilt werden. Zwei: Achtel in 4/4, das gerade Gefühl. Drei: Triolen in 4/4 oder Achtel in 12/8, das wiegende Gefühl. Alle weiteren Unterteilungen sind Kombinationen: Sechzehntel = 2×2, Sextolen = 2×3 oder 3×2, 6/8 = 2 Pulse × 3.\n\n12/8 ist der ehrliche Weg, Dreier zu notieren: vier punktierte Viertel pro Takt, jede in drei Achtel. Der Tempowert nennt die punktierte Viertel. Triolen in 4/4 sind derselbe Klang mit anderer Schrift; man nimmt sie, wenn der Dreier nur gelegentlich vorkommt. Regel: Mehr als die Hälfte des Stücks ternär → 12/8 (oder 6/8), sonst Triolen.\n\nDoom ist überwiegend binär und langsam, aber die wiegende Variante kommt vor: Type O Negative haben 6/8- und 12/8-Stücke, und der Walzerton (3/4, ein Puls in drei) ist ihr Beatles- und Sabbath-Erbe (prüfen). My Dying Bride wechseln innerhalb eines Stücks zwischen binär und ternär, oft an Abschnittsgrenzen (prüfen). Vivaldi schreibt Gigues und Pastoralen in 12/8 oder 6/8: die Danza pastorale des Frühlings ist 12/8 (prüfen). Biber ebenso in Gigues.\n\nDer Unterschied ist körperlich: Binär ist Gehen, ternär ist Wiegen. Ein Riff, das binär gedacht war, wird in 12/8 weicher und länger. Dieselbe Tonfolge in beiden Unterteilungen zu spielen ist die beste Übung, um den Unterschied zu hören, nicht nur zu zählen."
+    },
+    "te5-1-1": {
+      "title": "Hören · Unterteilung: binär, ternär, 12/8",
+      "instructions": "Vivaldi, *Der Frühling*, Satz 3 (Danza pastorale): Zähle den Puls und die Unterteilung. Dann Type O Negative, „Be My Druidess“ und „Green Man“: Welches ist binär, welches ternär? Behauptung: Vivaldi 12/8, eines der Type-O-Stücke ternär (prüfen). Klopfe jeweils den Puls mit einer Hand und die Unterteilung mit der anderen.",
+      "checklist": [
+        "Unterteilung aller drei Stücke bestimmt?",
+        "Puls und Unterteilung gleichzeitig geklopft?"
+      ]
+    },
+    "te5-1-2": {
+      "title": "Modell · Unterteilung: binär, ternär, 12/8",
+      "instructions": "Vier Takte 12/8: Arpeggio in Dreiergruppen, Bass in punktierten Halben (zwei große Pulse). Zähle „1-2-3 2-2-3 3-2-3 4-2-3“. Spiele dieselbe Tonfolge danach in 4/4 als gerade Achtel (E G B E G B E G) und höre, wie das Riff „geht“ statt „wiegt“. Der Tempowert nennt in 12/8 die punktierte Viertel.",
+      "checklist": [
+        "Vier große Pulse gezählt statt zwölf gleicher?",
+        "Binäre Fassung derselben Töne gespielt und verglichen?"
+      ]
+    },
+    "te5-1-3": {
+      "title": "Anwendung · Unterteilung: binär, ternär, 12/8",
+      "instructions": "Schreibe ein Riff zweimal: als 4/4 mit geraden Achteln und als 12/8. Gleiche Tonfolge, gleiche Akkorde, gleicher Grundpuls (♩ = ♩.). Nimm beide mit passender Begleitung auf. Entscheide, welche Fassung schwerer wirkt, und formuliere, woran das liegt (Anzahl der Anschläge pro Puls, Betonungsabstand).",
+      "checklist": [
+        "Beide Fassungen notiert und aufgenommen?",
+        "Schwere-Urteil mit Begründung im Log?"
+      ]
+    },
+    "tu5-2": {
+      "title": "Swing und Shuffle",
+      "goal": "Ternäre Phrasierung in binärer Schrift lesen, das Verhältnis als Stellgröße verstehen und wissen, wo die Referenzen swingen.",
+      "text": "Swing verschiebt die zweite Achtel jedes Viertels nach hinten. Notiert werden gerade Achtel mit dem Hinweis „swing“ oder „shuffle“; gespielt wird lang–kurz. Das Verhältnis ist variabel: 2:1 (Triolen-Shuffle, 67 %), 3:2 (60 %), 3:1 (punktiert, 75 %). Bei langsamem Tempo wird das Verhältnis extremer, bei schnellem gerader. Es gibt keinen richtigen Wert, nur einen passenden.\n\nShuffle ist der Blues-Begriff, Swing der Jazz-Begriff; musikalisch dasselbe Prinzip, kulturell verschiedene Verhältnisse und Betonungen. Im Metal heißt es meist Shuffle und kommt aus dem Blues über Black Sabbath. Type O Negative haben Shuffle-Abschnitte; „Cinnamon Girl“ als Cover trägt den Rock-Shuffle in den Doom-Kontext (prüfen). My Dying Bride swingen selten, aber ihre Triolen-Riffs sind verwandt.\n\nBarock swingt in gewisser Weise ebenfalls: Die französische Praxis der „notes inégales“ spielt notierte gleiche Achtel ungleich, lang–kurz. Ob Vivaldi (italienisch) so gespielt wurde, ist umstritten; historische Aufnahmen tun es teils (prüfen an deiner Aufnahme). Der Punkt für dich: ungleiche Achtel sind eine Aufführungsentscheidung, keine Notationsfrage, seit 300 Jahren.\n\nGerätneutral: Swing auf Drumcomputern ist ein Prozentwert, der die geraden Sechzehntel oder Achtel verschiebt. 50 % = gerade, 67 % = Triole, 75 % = punktiert. Das Riff muss dasselbe Verhältnis spielen, sonst reibt es. Regel: Swing-Wert festlegen, bevor das Riff geübt wird."
+    },
+    "te5-2-1": {
+      "title": "Hören · Swing und Shuffle",
+      "instructions": "Type O Negative, „Cinnamon Girl“: Bestimme das Swing-Verhältnis der Achtel nach Gehör (2:1, 3:2 oder gerade). Klopfe mit. Dann eine Vivaldi-Aufnahme deiner Wahl, *Der Herbst*, Satz 1: Spielt das Ensemble die Achtel gleich oder ungleich? Behauptung: Type O etwa 2:1, Vivaldi je nach Aufnahme (prüfen und Ensemble notieren).",
+      "checklist": [
+        "Swing-Verhältnis bei Type O geschätzt?",
+        "Achtelgleichheit bei Vivaldi mit Ensemble-Angabe notiert?"
+      ]
+    },
+    "te5-2-2": {
+      "title": "Modell · Swing und Shuffle",
+      "instructions": "Ein Shuffle-Riff, gerade notiert, mit Swing-Hinweis; die Vorschau spielt 2:1. Spiele es dreimal: gerade, 2:1, 3:1. Nimm auf und höre, welches Verhältnis bei 60 und welches bei 100 Vierteln passt. Schreibe einen Takt in Triolen aus (Viertel-Triole + Achtel-Triole pro Viertel) und vergleiche die Lesbarkeit mit der Swing-Schreibweise.",
+      "checklist": [
+        "Drei Verhältnisse bei zwei Tempi verglichen?",
+        "Ein Takt in Triolen ausgeschrieben?"
+      ]
+    },
+    "te5-2-3": {
+      "title": "Anwendung · Swing und Shuffle",
+      "instructions": "Schreibe ein achttaktiges Shuffle-Riff auf E und A mit einem Break (ein Takt gerade Achtel als Kontrast). Lege das Swing-Verhältnis fest und notiere es als Prozentwert für den Drumcomputer. Nimm mit Shuffle-Begleitung auf. Prüfe, ob der gerade Takt als Kontrast wirkt oder als Fehler.",
+      "checklist": [
+        "Riff mit Swing-Prozentwert notiert?",
+        "Wirkung des geraden Takts beurteilt?"
+      ]
+    },
+    "tu5-3": {
+      "title": "Polyrhythmus und Hemiole",
+      "goal": "Zwei gleichzeitige Unterteilungen und die barocke Hemiole als Mittel gegen Gleichmaß kennen.",
+      "text": "Polyrhythmus: Zwei Stimmen teilen dieselbe Zeitspanne verschieden, 3 gegen 2 oder 4 gegen 3. Die gemeinsame Spanne wird in das kleinste gemeinsame Vielfache geteilt: 3:2 in sechs (oben 1,3,5; unten 1,4), 4:3 in zwölf. Nach dem Lernen soll die Hilfszählung verschwinden und nur der gemeinsame Beginn bleiben.\n\nHemiole: Ein Wechsel der Gruppierung innerhalb derselben Achtel. In 6/8 sind sechs Achtel normalerweise 3+3 (zwei Pulse); die Hemiole gruppiert sie 2+2+2 (drei Pulse) für einen Takt, meist vor der Kadenz. Der Takt fühlt sich kurz wie 3/4 an. Biber und Vivaldi setzen sie in fast jedem Dreiertakt vor dem Schluss (prüfen): Das Gleichmaß bricht, die Kadenz bekommt Gewicht. In 3/4 über zwei Takte: sechs Viertel als 3+3 statt 2+2+2, dieselbe Idee auf höherer Ebene.\n\nIm Metal ist die Hemiole die Akzentverschiebung 3+3+2 in 4/4 (Phase 7 des Instrumentalkurses): acht Achtel, aber die Akzente kommen alle drei. Type O Negative nutzen sie in Riffs mit gerader Hi-Hat darunter, sodass die Gitarre „gegen“ die Drums läuft (prüfen). My Dying Bride setzen 3 gegen 2 zwischen Violine (Triolen) und Riff (Achtel) (prüfen).\n\nDer Unterschied zwischen Polyrhythmus und Hemiole: Polyrhythmus ist gleichzeitig (zwei Schichten), Hemiole ist nacheinander (eine Schicht wechselt die Gruppierung). Beides lebt davon, dass die Grundzählung hörbar bleibt; ohne Referenz ist es nur ein anderer Takt."
+    },
+    "te5-3-1": {
+      "title": "Hören · Polyrhythmus und Hemiole",
+      "instructions": "Biber, eine Gigue oder Sarabande in Dreiertakt: Finde den Takt vor einer Kadenz, in dem die Betonung von zwei auf drei (oder drei auf zwei) wechselt. Klopfe die Grundzählung durch. Dann Type O Negative, ein Riff deiner Wahl mit 3+3+2: Läuft die Hi-Hat gerade darunter? Behauptung: Hemiole bei Biber vor jeder Kadenz, 3+3+2 bei Type O über gerader Hi-Hat (prüfen).",
+      "checklist": [
+        "Hemiolentakt bei Biber lokalisiert und Grundzählung gehalten?",
+        "3+3+2-Riff mit Hi-Hat-Verhalten notiert?"
+      ]
+    },
+    "te5-3-2": {
+      "title": "Modell · Polyrhythmus und Hemiole",
+      "instructions": "Drei Takte 6/8 in 3+3, dann Takt 3 als Hemiole: dieselben sechs Achtel, aber Akzente und Bass in 2+2+2. Takt 4 Ankunft. Klatsche den Grundpuls (zwei pro Takt) durch alle vier Takte, auch durch die Hemiole. Spiele dann 3 gegen 2: rechte Hand Takt 3 wie notiert, linke Hand Bass als zwei punktierte Viertel statt drei Viertel.",
+      "checklist": [
+        "Grundpuls durch die Hemiole gehalten?",
+        "3 gegen 2 in Takt 3 mit beiden Händen gespielt?"
+      ]
+    },
+    "te5-3-3": {
+      "title": "Anwendung · Polyrhythmus und Hemiole",
+      "instructions": "Schreibe acht Takte in 6/8 mit genau zwei Hemiolen, je vor einer Formgrenze. Der Bass macht die Gruppierung hörbar. Nimm mit 12/8- oder 6/8-Begleitung auf (die Drums bleiben 3+3). Prüfe, ob die Hemiole als Spannung vor der Grenze wirkt oder als Stolpern.",
+      "checklist": [
+        "Zwei Hemiolen vor Formgrenzen notiert?",
+        "Wirkung gegen gleichbleibende Drums beurteilt?"
+      ]
+    },
+    "tu5-4": {
+      "title": "Ungerade Takte",
+      "goal": "5/8, 7/8 und 5/4 als Gruppierungen verstehen und ihren Platz in dieser Musik einschätzen.",
+      "text": "Ein ungerader Takt ist eine Kette aus Zweier- und Dreiergruppen, die nicht in gleiche Hälften zerfällt. 5/8 = 2+3 oder 3+2. 7/8 = 2+2+3, 3+2+2 oder 2+3+2. 5/4 = 3+2 oder 2+3 in Vierteln. Die Gruppierung ist Teil der Komposition, nicht nur der Notation; 2+3 und 3+2 sind verschiedene Rhythmen. Der Tempowert nennt bei Achteltakten die Achtel.\n\nUngerade Takte sind in den Referenzen selten. My Dying Bride verwenden sie gelegentlich als Riff-Verlängerung: ein 4/4-Riff bekommt einen 7/8- oder 5/4-Takt, der die Wiederholung verschiebt (prüfen). Type O Negative bleiben fast durchgehend gerade. Vivaldi kennt keine ungeraden Takte, aber seine Phrasenlängen sind oft ungerade (5 oder 7 Takte), was ähnlich wirkt: Die Erwartung der Vierergruppe wird gebrochen. Biber ebenso in freien Sätzen (Praeludium).\n\nZwei Verwendungen: 1. Als Grundtakt eines Abschnitts: Der Zuhörer lernt die Gruppierung nach zwei Takten und hört sie dann als normal; das funktioniert bei 5/4 und 7/8 gut, bei 11 oder 13 schlecht. 2. Als einzelner Takt in geradem Umfeld: eine Kürzung (7/8 statt 4/4, ein Achtel fehlt) oder Verlängerung (5/4, ein Viertel mehr). Das zweite ist doom-typischer: Das Riff „hakt“ einmal und läuft weiter.\n\nRegel: Ungerade Takte müssen aus dem Riff kommen (die Phrase ist wirklich sieben Achtel lang), nicht aus dem Wunsch, ungerade zu sein. Wenn du die Gruppierung nicht singen kannst, ist sie falsch."
+    },
+    "te5-4-1": {
+      "title": "Hören · Ungerade Takte",
+      "instructions": "My Dying Bride, „The Crown of Sympathy“ und „Turn Loose the Swans“: Suche Stellen, an denen das Riff einen Schlag zu kurz oder zu lang erscheint. Zähle nach: 7/8? 5/4? Oder nur eine Synkope? Behauptung: mindestens ein Takt in einem der beiden Stücke ist tatsächlich ungerade (prüfen). Dann Vivaldi, *Der Winter*, Satz 1: Zähle die Länge der ersten Solophrase in Takten.",
+      "checklist": [
+        "Vermeintlich ungerade Stellen nachgezählt und klassifiziert?",
+        "Phrasenlänge bei Vivaldi gezählt?"
+      ]
+    },
+    "te5-4-2": {
+      "title": "Modell · Ungerade Takte",
+      "instructions": "Vier Takte 7/8 in 2+2+3. Der Bass spielt die Gruppendauern (Viertel, Viertel, punktierte Viertel). Sprich „1-2 1-2 1-2-3“ und spiele. Schreibe dasselbe Riff als 2+3+2 um (Akzente versetzen, Bassdauern anpassen) und spiele beide. Singe beide Gruppierungen ohne Instrument; die, die du singen kannst, ist die richtige für dich.",
+      "checklist": [
+        "2+2+3 gesprochen und gespielt?",
+        "2+3+2-Umschrift notiert und beide gesungen?"
+      ]
+    },
+    "te5-4-3": {
+      "title": "Anwendung · Ungerade Takte",
+      "instructions": "Nimm ein achttaktiges 4/4-Riff und verändere genau einen Takt: einmal zu 7/8 (Kürzung), einmal zu 5/4 (Verlängerung). Notiere beide Fassungen mit Taktwechsel. Spiele sie und beschreibe, ob das Riff „hakt“ (Kürzung) oder „atmet“ (Verlängerung). Entscheide, welche Fassung du behältst.",
+      "checklist": [
+        "Beide Fassungen mit Taktwechsel notiert?",
+        "Wirkungsbeschreibung und Entscheidung im Log?"
+      ]
+    },
+    "tu5-5": {
+      "title": "Tempo und Ausklang: warum langsam bei Gain funktioniert",
+      "goal": "Den Zusammenhang zwischen Tempo, Sustain, Verzerrung und Hall verstehen und daraus Tempoentscheidungen ableiten.",
+      "text": "Ein cleaner Gitarrenton klingt nach etwa zwei bis vier Sekunden deutlich ab. Verzerrung komprimiert: Die leisen Phasen des Ausklangs werden angehoben, der Ton bleibt scheinbar konstant, bis er abrupt in Rauschen kippt. Ein verzerrter Powerchord trägt sechs bis zehn Sekunden. Bei ♩ = 60 sind das anderthalb bis zweieinhalb Takte. Das ist die physikalische Grundlage von Doom: Ganze Noten sind möglich, weil das Instrument sie hält.\n\nUmgekehrt: Bei ♩ = 140 und Achteln dauert jeder Ton 0,2 Sekunden; die Verzerrung hat keinen Ausklang zu komprimieren, sie verdichtet nur den Anschlag. Schneller Metal klingt deshalb perkussiv, langsamer Metal flächig, mit demselben Amp.\n\nHall verlängert weiter. Ein Raum mit zwei Sekunden Nachhall macht bei ♩ = 60 jeden Ton eine halbe Zählzeit länger. Bei schnellem Tempo verschmiert er die Anschläge. Doom kann Hall nutzen, Thrash nicht. Type O Negative setzen langen Hall und Chorus, weil ihre Tempi es erlauben (prüfen); Anathema nutzen Hall auf cleaner Gitarre, wo er die Lücken zwischen Arpeggiotönen füllt (prüfen).\n\nVivaldis Streicher haben das Problem umgekehrt: Der Bogen hält den Ton beliebig lang, ohne Verzerrung. Dafür gibt es keinen natürlichen Ausklang; Notenenden sind Bogenentscheidungen. Die Kirchenräume, in denen Barock gespielt wurde, hatten drei bis fünf Sekunden Nachhall, und die Tempi der langsamen Sätze sind darauf gebaut.\n\nTempoentscheidung: Bestimme die längste Note deines Riffs. Ihre Dauer in Sekunden muss kürzer sein als das Sustain deines Setups. Bei Ganzen und ♩ = 60 brauchst du vier Sekunden Sustain; prüfe das am Amp, nicht in der Vorstellung."
+    },
+    "te5-5-1": {
+      "title": "Hören · Tempo und Ausklang: warum langsam bei Gain funktioniert",
+      "instructions": "My Dying Bride, „Your River“: Miss die Dauer des längsten gehaltenen Gitarrenakkords in Sekunden und rechne sie in Takte beim gemessenen Tempo um. Dann Anathema, „Sentient“: Wie lang ist der Hall auf der cleanen Gitarre (Zeit vom Anschlag bis zur Stille an einer Pause)? Behauptung: MDB halten über zwei Takte, Anathema-Hall über eine Sekunde (prüfen).",
+      "checklist": [
+        "Längste Akkorddauer gemessen und in Takte umgerechnet?",
+        "Halllänge bei Anathema gemessen?"
+      ]
+    },
+    "te5-5-2": {
+      "title": "Modell · Tempo und Ausklang: warum langsam bei Gain funktioniert",
+      "instructions": "Acht Takte mit Haltebögen über zwei und drei Takte. Bei ♩ = 60 dauert der Schlussakkord zwölf Sekunden. Spiele die Folge auf der Gitarre mit deinem Gain und miss, wie lange jeder Akkord tatsächlich trägt, bevor er kippt. Setze das Tempo dann so, dass der längste Akkord gerade noch hält. Wiederhole clean: Bei welchem Tempo trägt die cleane Fassung?",
+      "checklist": [
+        "Sustain des eigenen Setups in Sekunden gemessen?",
+        "Mindesttempo für Gain- und Clean-Fassung notiert?"
+      ]
+    },
+    "te5-5-3": {
+      "title": "Anwendung · Tempo und Ausklang: warum langsam bei Gain funktioniert",
+      "instructions": "Erstelle eine Sustain-Tabelle für dein Setup: clean, mittleres Gain, hohes Gain, jeweils mit und ohne Hall, jeweils Sekunden bis zum hörbaren Kippen für E2, E3 und E4. Leite daraus für jede Einstellung das langsamste sinnvolle Tempo bei Ganzen ab. Diese Tabelle gehört in den Anhang Akustik deines Logs.",
+      "checklist": [
+        "Tabelle mit 18 Messwerten?",
+        "Langsamstes Tempo pro Einstellung abgeleitet?"
+      ]
+    },
+    "tu5-6": {
+      "title": "Rubato, Fermate, barockes Zeitgefühl",
+      "goal": "Zeitdehnung als Ausdrucksmittel kennen und wissen, wo sie in dieser Musik erlaubt ist.",
+      "text": "Rubato heißt „gestohlen“: Die Zeit wird an einer Stelle gedehnt und an einer anderen zurückgegeben, sodass der Grundpuls über die Phrase erhalten bleibt. Fermate hält einen Ton oder eine Pause unbestimmt lang; die Zeit steht. Ritardando verlangsamt allmählich, meist vor einem Schluss. Accelerando beschleunigt.\n\nBarock hat weniger Rubato als die Romantik, aber nicht keines: Kadenzen werden gedehnt, Solopassagen atmen, langsame Sätze sind ohne Dehnung tot. Vivaldis Largo-Sätze verlangen, dass die Solovioline über dem gleichmäßigen Bass frei phrasiert (prüfen: Vergleiche zwei Aufnahmen). Biber schreibt in den Praeludien freie Passagen ohne festen Takt, die wie improvisiert klingen sollen.\n\nDoom mit Drums hat keinen Rubato: Der Drumcomputer oder der Schlagzeuger hält. Aber Doom hat Fermaten: Der letzte Akkord eines Abschnitts klingt aus, die Drums setzen aus, dann beginnt das nächste Riff. My Dying Bride tun das an fast jeder großen Grenze (prüfen). Type O Negative haben Intros und Outros ohne Takt, in denen die Orgel frei liegt (prüfen). Anathema beginnen Stücke oft mit freiem Gitarrenarpeggio, bevor der Puls einsetzt (prüfen).\n\nFür Solospiel ohne Drums ist Rubato die wichtigste Freiheit: Du kannst eine Phrase dehnen, weil niemand dagegen hält. Die Gefahr ist Formlosigkeit. Regel: Rubato innerhalb der Phrase, nicht zwischen Phrasen; der Anfang jeder Phrase kommt auf die Zeit. Fermate nur an Formgrenzen und nie zweimal hintereinander."
+    },
+    "te5-6-1": {
+      "title": "Hören · Rubato, Fermate, barockes Zeitgefühl",
+      "instructions": "Vivaldi, *Der Winter*, Satz 2, in zwei verschiedenen Aufnahmen: Miss die Dauer der ersten acht Takte in beiden. Wo dehnt die Violine? Dann Anathema, „Eternity Part I“, Anfang: Wie viele Sekunden vergehen, bis ein fester Puls hörbar ist? Behauptung: Aufnahmen unterscheiden sich um mehr als 10 %, Anathema-Intro über 20 Sekunden frei (prüfen).",
+      "checklist": [
+        "Dauer der acht Takte in zwei Aufnahmen verglichen?",
+        "Länge des freien Intros gemessen?"
+      ]
+    },
+    "te5-6-2": {
+      "title": "Modell · Rubato, Fermate, barockes Zeitgefühl",
+      "instructions": "Eine Phrase mit Kadenz und Fermate: Takt 1–4 im Takt, Takt 5–6 Schlusston (halte ihn frei, länger als notiert), Takt 7 Stille (Fermate auf der Pause), Takt 8 Neubeginn tief. Spiele ohne Klick: Dehne Takt 4 (Ritardando in die Kadenz), halte Takt 5–6 nach Gefühl, beginne Takt 8 auf einem selbst gesetzten neuen Puls. Nimm auf und miss, wie lang deine Fermate war.",
+      "checklist": [
+        "Ritardando, Fermate und Neubeginn ohne Klick gespielt?",
+        "Fermatenlänge gemessen und beurteilt?"
+      ]
+    },
+    "te5-6-3": {
+      "title": "Anwendung · Rubato, Fermate, barockes Zeitgefühl",
+      "instructions": "Spiele dein Phase-1-Stück aus dem Instrumentalkurs zweimal ohne Begleitung: einmal streng im Takt, einmal mit Rubato innerhalb der Phrasen und einer Fermate an der Formgrenze. Vergleiche die Aufnahmen: Bleibt der Phrasenanfang jeweils auf der Zeit? Wirkt die Fermate als Gliederung oder als Unterbrechung?",
+      "checklist": [
+        "Beide Fassungen aufgenommen?",
+        "Phrasenanfänge und Fermatenwirkung beurteilt?"
+      ]
+    },
+    "tu5-7": {
+      "title": "Agogik im Doom: Verzögerung als Mittel",
+      "goal": "Mikrotiming verstehen: Laid-back, auf dem Schlag, vor dem Schlag, und was Doom davon nutzt.",
+      "text": "Agogik ist die kleine Abweichung vom Raster: ein Ton, der zehn bis vierzig Millisekunden nach dem Schlag kommt, klingt schwer („laid-back“); einer davor klingt drängend. Beides bei konstantem Tempo. Es ist kein Rubato (das Tempo bleibt), sondern Platzierung.\n\nDoom lebt von laid-back. Die Snare auf 3 minimal spät, der Gitarrenanschlag minimal hinter der Kick, der Gesang hinter allem. Das erzeugt Gewicht, weil das Ohr die Verzögerung als Trägheit hört, als Masse. My Dying Bride haben das in den Drums (prüfen); Type O Negative erreichen es mit programmierten Drums durch bewusst spät gesetzte Snares oder durch Bass, der hinter der Maschine spielt (prüfen). Anathema spielen eher auf dem Schlag; ihre Schwere kommt aus Register und Hall, nicht aus Timing (prüfen).\n\nVivaldi hat Agogik in der Betonung: Die erste Zählzeit ist länger, nicht nur lauter. Barocke Aufführungspraxis spricht von „guten“ und „schlechten“ Noten; die guten dürfen länger sein. Das ist dieselbe Mikroverzögerung, nur auf Notenlängen statt Einsätze angewandt.\n\nGerätneutral: Auf Drumcomputern heißt das „Nudge“, „Micro-Timing“ oder „Offset“: einzelne Schritte um Millisekunden verschieben. SR-18 kann das kaum, Digitakt und SP-404 können es pro Schritt. Ohne Gerät: Snare eine Sechzehntel-Triole spät programmieren ist zu viel; echte Agogik liegt unter dem Raster. Mit eigener Hand: absichtlich hinter dem Klick spielen, aufnehmen, Abstand messen.\n\nRegel: Ein Element hinter dem Schlag (meist Snare oder Gitarre), nie alle. Wenn alles spät ist, ist nur das Tempo langsamer."
+    },
+    "te5-7-1": {
+      "title": "Hören · Agogik im Doom: Verzögerung als Mittel",
+      "instructions": "My Dying Bride, „The Songless Bird“, eine Half-time-Passage: Höre auf die Snare auf 3. Liegt sie auf dem Schlag oder dahinter? Vergleiche mit Type O Negative, „Green Man“: Snare auf 2 und 4, wo? Wenn du eine DAW hast: Wellenform ansehen, Abstand Kick zu Snare messen. Behauptung: MDB-Snare 10–30 ms spät, Type O auf dem Raster (prüfen).",
+      "checklist": [
+        "Snare-Platzierung beider Stücke beurteilt?",
+        "Falls DAW: Abstand in Millisekunden gemessen?"
+      ]
+    },
+    "te5-7-2": {
+      "title": "Modell · Agogik im Doom: Verzögerung als Mittel",
+      "instructions": "Viermal derselbe Takt: Quinten auf 1 und 3. Spiele Takt 1–2 exakt auf den Klick, Takt 3–4 absichtlich 20–30 ms dahinter, bei unverändertem Tempo. Nimm auf. Wenn du eine DAW hast, miss den Abstand; sonst höre im Vergleich, ob die zweite Hälfte schwerer wirkt. Übertreibe dann (eine Achtel spät) und höre, wann aus Gewicht ein Fehler wird.",
+      "checklist": [
+        "Beide Hälften aufgenommen, Abstand gemessen oder geschätzt?",
+        "Grenze zwischen Gewicht und Fehler benannt?"
+      ]
+    },
+    "te5-7-3": {
+      "title": "Anwendung · Agogik im Doom: Verzögerung als Mittel",
+      "instructions": "Programmiere oder klopfe ein Half-time-Pattern in zwei Fassungen: Snare auf dem Raster, Snare um einen kleinen Betrag verzögert (Nudge, oder mit der Hand). Spiele dasselbe Riff über beide und nimm auf. Beschreibe den Unterschied und lege fest, welche Fassung dein Standard wird. Notiere die Einstellung gerätneutral (Millisekunden oder Prozent eines Sechzehntels).",
+      "checklist": [
+        "Zwei Pattern-Fassungen mit gleichem Riff aufgenommen?",
+        "Standard gewählt und gerätneutral notiert?"
+      ]
     }
   },
   "ui": {
