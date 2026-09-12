@@ -101,6 +101,19 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
       return [...svg.querySelectorAll('.head,.stem,.rest')].every(n=>{const b=n.getBBox();return b.y+b.height<label.y;});
     }),'bass references clear the lowest notes and stems');
     await page.screenshot({path:'test-results/pedal-references-mobile.png',fullPage:true});
+    await page.selectOption('#language','de');
+    await page.goto(base+'/#/');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),3);
+    await page.goto(base+'/#/unit/tu0-7');await page.waitForSelector('svg.score');
+    assert.deepEqual(await page.locator('.ex .kind').allTextContents(),['Hören / Analyse','Modell','Anwenden']);
+    assert.match(await page.locator('main').innerText(),/Behauptung am Album prüfen/);
+    await page.goto(base+'/#/unit/ta-3');await page.waitForSelector('.text');
+    const appendix=await page.locator('main').innerText();assert(!/geplant|nicht ausgearbeitet/.test(appendix));assert.match(appendix,/60000/);
+    assert.equal(await page.locator('.ex').count(),0);assert.match(await page.locator('.crumbs').innerText(),/Anhänge/);
+    await page.goto(base+'/#/phase/ta');await page.waitForSelector('.units');assert.match(await page.locator('.unit .meta').first().innerText(),/Nachschlagen/);
+    await page.setViewportSize({width:390,height:844});await page.goto(base+'/#/unit/ta-4');await page.waitForSelector('.text');
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'appendix tables fit mobile width');
+    await page.setViewportSize({width:1280,height:900});
+    console.log('PASS theory track, hear/model/apply labels and reference appendices');
     await page.goto(base+'/#/unit/nonexistent');await page.waitForSelector('.tracks');
     assert.deepEqual(errors,[]);console.log('PASS every unit in both languages, mobile layout and unknown route');
   } finally { await browser?.close(); server.kill(); }

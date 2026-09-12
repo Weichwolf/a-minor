@@ -107,7 +107,7 @@
   }
   const phaseCard = (p,i) => {
     const ex = p.units.flatMap(u => u.exercises), done = ex.filter(e => S.isDone(e.id)).length;
-    return `<a class="phase${p.planned ? ' planned' : ''}" href="#/phase/${p.id}"><div class="num">${i}</div><div><h2>${esc(p.title)}</h2><p>${esc(p.goal)}</p><div class="meta">${p.units.length} ${t('units')} · ${ex.length ? `${done}/${ex.length} ${t('exercises')}` : t('planned')}</div></div></a>`;
+    return `<a class="phase${p.planned ? ' planned' : ''}" href="#/phase/${p.id}"><div class="num">${p.reference ? 'A' : i}</div><div><h2>${esc(p.title)}</h2><p>${esc(p.goal)}</p><div class="meta">${p.units.length} ${t('units')} · ${ex.length ? `${done}/${ex.length} ${t('exercises')}` : t(p.reference ? 'reference' : 'planned')}</div></div></a>`;
   };
   const courseLink = () => `<a href="#/">${t('course')}</a>`;
   const views = {
@@ -119,16 +119,17 @@
     },
     phase(id) {
       const p = phases.find(x => x.id === id); if (!p) return views.home(); const i = p.track.phases.findIndex(x => x.id === id);
-      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${p.track.id}">${esc(p.track.title)}</a> › ${t('phase')} ${i}</nav><h1>${t('phase')} ${i}: ${esc(p.title)}</h1><p class="lead">${esc(p.goal)}</p>
-        <div class="units">${p.units.map((u,j) => { const [d,n] = progress(u); return `<a class="unit" href="#/unit/${u.id}"><div class="num">${i}.${j + 1}</div><div><h2>${esc(u.title)}</h2><p>${esc(u.goal)}</p>${n ? `<div class="meta">${d}/${n} ${t('exercises')}</div><div class="bar"><div style="width:${d / n * 100}%"></div></div>` : `<div class="meta">${t('planned')}</div>`}</div></a>`; }).join('')}</div>`;
+      const label = p.reference ? esc(p.title) : `${t('phase')} ${i}`, num = p.reference ? 'A' : i;
+      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${p.track.id}">${esc(p.track.title)}</a> › ${label}</nav><h1>${p.reference ? esc(p.title) : `${t('phase')} ${i}: ${esc(p.title)}`}</h1><p class="lead">${esc(p.goal)}</p>
+        <div class="units">${p.units.map((u,j) => { const [d,n] = progress(u); return `<a class="unit" href="#/unit/${u.id}"><div class="num">${num}.${j + 1}</div><div><h2>${esc(u.title)}</h2><p>${esc(u.goal)}</p>${n ? `<div class="meta">${d}/${n} ${t('exercises')}</div><div class="bar"><div style="width:${d / n * 100}%"></div></div>` : `<div class="meta">${t(p.reference ? 'reference' : 'planned')}</div>`}</div></a>`; }).join('')}</div>`;
     },
     unit(id) {
       const u = units.find(x => x.id === id); if (!u) return views.home();
       const siblings = units.filter(x => x.track === u.track && !x.phase.planned), k = siblings.indexOf(u), pi = u.track.phases.findIndex(p => p.id === u.phase.id);
-      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${u.track.id}">${esc(u.track.title)}</a> › <a href="#/phase/${u.phase.id}">${t('phase')} ${pi}</a></nav>
+      return `<nav class="crumbs">${courseLink()} › <a href="#/track/${u.track.id}">${esc(u.track.title)}</a> › <a href="#/phase/${u.phase.id}">${u.phase.reference ? esc(u.phase.title) : `${t('phase')} ${pi}`}</a></nav>
         <h1>${esc(u.title)}</h1><p class="lead">${esc(u.goal)}</p><div class="text">${md(u.text || '')}</div>
         ${u.track.instrument === 'guitar' ? `<p class="small">${t('guitarAttack')}</p>` : ''}
-        ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : `<p>${t('plannedDetail')}</p>`}
+        ${u.exercises.length ? u.exercises.map(e => exerciseCard(e,u)).join('') : u.phase.reference ? '' : `<p>${t('plannedDetail')}</p>`}
         <nav class="pn">${k > 0 ? `<a href="#/unit/${siblings[k - 1].id}">‹ ${esc(siblings[k - 1].title)}</a>` : '<span></span>'}${k >= 0 && k < siblings.length - 1 ? `<a href="#/unit/${siblings[k + 1].id}">${esc(siblings[k + 1].title)} ›</a>` : ''}</nav>`;
     },
     midi:() => `<h1>MIDI</h1><p>${t('midiLead')}</p><div class="row"><button id="connect">${t('findOutputs')}</button><label>${t('output')} <select id="output"><option value="">${t('chooseDevice')}</option></select></label></div>

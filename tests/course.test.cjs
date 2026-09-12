@@ -179,6 +179,7 @@ test('phases 2–8 contain seven guitar and six keyboard units with complete bil
     for (const unit of phase.units) {
       assert(!ids.has(unit.id),unit.id);ids.add(unit.id);
       assert(!/Geplant\.|nicht ausgearbeitet/.test(unit.text),unit.id);
+      if (phase.reference) { assert.equal(unit.exercises.length,0,unit.id); assert(unit.text.length > 600,unit.id + ': reference text'); continue; }
       if (theory) {
         assert.deepEqual(unit.exercises.map(e => e.kind),['hear','model','apply'],unit.id);
         assert(unit.exercises[1].score,unit.id + ': written model');
