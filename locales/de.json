@@ -5238,6 +5238,213 @@
         "Registerbesetzung pro Abschnitt im Formplan?",
         "Ein leerer und ein besetzter Abschnitt aufgenommen?"
       ]
+    },
+    "t8": {
+      "title": "Eigene Sprache",
+      "goal": "Gemeinsamkeiten der Referenzen, eigene Stilregeln, Kompositions-Workflow, Rollenverteilung aus einer Hand, Aufnahme und Reproduzierbarkeit, Repertoire, und eine Laufbahn ohne Geld."
+    },
+    "tu8-1": {
+      "title": "Was die fünf Referenzen teilen und was nicht",
+      "goal": "Die gemeinsame Grammatik der Referenzen in zehn Sätzen benennen und die Unterschiede als Wahlmöglichkeiten sehen.",
+      "text": "Gemeinsam: 1. Ein Fundament, das seltener wechselt als die Linie. 2. Moll als Grundfarbe, mit b6 als Charakterton. 3. Quart-/Quintbewegung im Bass (E–A–D, Quintfall, Lamento). 4. Wiederholung als Form: Riff, Ostinato, Ritornello. 5. Kontrast durch Register und Dichte, nicht durch Tempo. 6. Lange Töne: Ganze und Halbe sind normale Werte. 7. Zweistimmigkeit (Terzen, Sexten, Gegenbewegung) über dem Fundament. 8. Ein klarer Höhepunkt pro Stück, spät. 9. Die Stimmung des Instruments als Kompositionsmittel (Scordatura, B-Stimmung, P4). 10. Ein Klangraum, in dem jede Rolle ihr Register hat.\n\nNicht gemeinsam, also Wahl: Kadenz (Vivaldi immer, MDB fast nie). Tempo (Vivaldi 100–140, Doom 50–80). Gain (Metal ja, Barock nein; aber das Sustain-Ziel ist dasselbe). Form (Suite, Ritornell, Riff, Song). Stimme (vier haben sie, eine nicht). Programm (Vivaldi explizit, Type O über Text, MDB über Text, Biber keins). Swing (Type O gelegentlich, sonst gerade). Ungerade Takte (MDB selten, sonst nie).\n\nDer gemeinsame Nenner ist nicht ein Stil, sondern eine Haltung zur Zeit: Sie darf lang sein, weil das Fundament trägt. Vivaldi und Doom teilen den Pedalpunkt, die Sequenz, den absteigenden Bass; sie unterscheiden sich in der Wiederholungsrate und der Auflösung. Type O Negative sind die Brücke: Beatles-Kadenzen in Sabbath-Tempo mit Kirchenorgel. Anathema sind der Ausweg aus dem Metal bei gleicher Harmonik.\n\nFür deine Sprache: Die zehn gemeinsamen Punkte sind die Grammatik. Die Wahlmöglichkeiten sind das Vokabular. Ein Stück, das die Grammatik bricht, klingt fremd; eines, das nur im Vokabular variiert, klingt nach dir und trotzdem nach diesem Feld."
+    },
+    "te8-1-1": {
+      "title": "Hören · Was die fünf Referenzen teilen und was nicht",
+      "instructions": "Wähle aus jeder Referenz ein Stück (fünf insgesamt) und prüfe die zehn gemeinsamen Punkte als Tabelle: Punkt × Stück, ja/nein/teilweise. Dann die acht Wahlmöglichkeiten: Welche Option nimmt jedes Stück? Behauptung: mindestens acht der zehn Punkte gelten für alle fünf (prüfen).",
+      "checklist": [
+        "Tabelle 10 × 5 ausgefüllt?",
+        "Wahlmöglichkeiten pro Stück notiert und Behauptung geprüft?"
+      ]
+    },
+    "te8-1-2": {
+      "title": "Modell · Was die fünf Referenzen teilen und was nicht",
+      "instructions": "Acht Takte, die alle zehn Punkte enthalten: langsam wechselnder Bass in Quarten/Terzen, Moll mit b6 (C), Wiederholung des Motivs, Zweistimmigkeit mit gehaltener Innenstimme, lange Werte, Höhepunkt spät (Takt 7–8 mit der einzigen Kadenz). Spiele die Takte und finde für jeden der zehn Punkte die Stelle, an der er erfüllt ist. Streiche dann einen Punkt (z. B. die Kadenz durch D–Em ersetzen) und höre, ob das Stück noch zum Feld gehört.",
+      "checklist": [
+        "Zehn Punkte im Beispiel lokalisiert?",
+        "Ein Punkt gestrichen und Zugehörigkeit beurteilt?"
+      ]
+    },
+    "te8-1-3": {
+      "title": "Anwendung · Was die fünf Referenzen teilen und was nicht",
+      "instructions": "Schreibe acht Takte, die absichtlich drei der zehn Punkte brechen (z. B. schneller Basswechsel, Dur, keine Wiederholung). Spiele sie neben dem Modell. Beschreibe, welcher Bruch das Stück am weitesten aus dem Feld trägt. Das ist die Grenze deiner Sprache; notiere sie.",
+      "checklist": [
+        "Drei Brüche notiert und gespielt?",
+        "Stärkster Bruch als Grenze im Log benannt?"
+      ]
+    },
+    "tu8-2": {
+      "title": "Eigene Stilregeln schreiben",
+      "goal": "Aus Grammatik und Vokabular ein persönliches Regelwerk von zehn bis fünfzehn Sätzen ableiten.",
+      "text": "Ein Stil ist eine Menge von Entscheidungen, die man nicht jedes Mal neu trifft. Die Referenzen haben solche Regeln, meist ungeschrieben: Type O Negative stimmen nach B, nutzen Chorus auf allem, setzen Orgel und lassen den Bass die Melodie führen. My Dying Bride spielen Half-time, führen zwei Gitarren in Terzen, setzen Violine als dritte Stimme und beenden ohne Kadenz. Diese Regeln sind erkennbar, weil sie konsequent sind.\n\nDeine Regeln entstehen aus vier Quellen: 1. Instrument: P4-Gitarre, 49 Tasten, drei Synths, drei Effektgeräte. Was das Setup gut kann, wird Regel; was es nicht kann, wird Ausschluss. 2. Referenzen: Welche Wahlmöglichkeiten aus Einheit 1 nimmst du? Kadenz ja oder nein, Tempo, Form. 3. Gehör: Was du in Phase 0–7 als „passt“ ins Log geschrieben hast. 4. Grenzen: Was du in Einheit 1 als Bruch erkannt hast.\n\nForm einer Regel: kurz, prüfbar, mit Ausnahme. „Bass wechselt höchstens alle zwei Takte; Ausnahme: Kadenz.“ „Terzen nie unter C4; Ausnahme: clean.“ „Ein Leitton pro Stück.“ „Tempo 55–75 in Vierteln; 12/8 bei 40–50 in punktierten Vierteln.“ „Keyboard nie im Gitarrenregister, außer die Gitarre schweigt.“ „Delay nur auf cleaner Gitarre.“ „Jedes Stück hat einen Bruch.“ „Kein Fade-out.“\n\nRegeln sind keine Fesseln, sondern Zeitersparnis: Wer weiß, dass der Bass ruhig bleibt, muss über den Bass nicht nachdenken und kann über die Linie nachdenken. Sie sind revidierbar; ein Stück, das eine Regel bricht und besser ist, ändert die Regel.\n\nZehn bis fünfzehn Regeln reichen. Mehr ist ein Handbuch, weniger ist kein Stil."
+    },
+    "te8-2-1": {
+      "title": "Hören · Eigene Stilregeln schreiben",
+      "instructions": "Leite aus je einem Album die ungeschriebenen Regeln ab: *October Rust* und *Turn Loose the Swans*, je fünf Regeln in der Form „kurz, prüfbar, mit Ausnahme“. Prüfe jede Regel an einem zweiten Stück desselben Albums. Behauptung: mindestens vier von fünf Regeln halten albumweit (prüfen).",
+      "checklist": [
+        "Zehn Regeln in prüfbarer Form?",
+        "Jede Regel an einem zweiten Stück geprüft?"
+      ]
+    },
+    "te8-2-2": {
+      "title": "Modell · Eigene Stilregeln schreiben",
+      "instructions": "Fünf Beispielregeln als Takte: 1. Bass höchstens alle zwei Takte (Takt 1–4). 2. Terzen nur über C5 (Takt 2). 3. Jede Phrase hat eine Pause (Takt 3). 4. Gehaltener Ton über Basswechsel (Takt 4–5). 5. Bruch vor dem Schluss (Takt 7). Spiele die acht Takte und benenne jede Regel an ihrer Stelle. Schreibe dann deine eigene erste Regel und ändere die acht Takte so, dass sie sie erfüllen.",
+      "checklist": [
+        "Fünf Regeln im Beispiel lokalisiert?",
+        "Eigene Regel formuliert und im Beispiel umgesetzt?"
+      ]
+    },
+    "te8-2-3": {
+      "title": "Anwendung · Eigene Stilregeln schreiben",
+      "instructions": "Schreibe dein Regelwerk: zehn bis fünfzehn Regeln aus den vier Quellen, jede kurz, prüfbar, mit Ausnahme. Prüfe dein längstes bisheriges Stück gegen jede Regel und markiere Verstöße. Entscheide pro Verstoß: Stück ändern oder Regel ändern. Das Regelwerk ist ein lebendes Dokument; datiere es.",
+      "checklist": [
+        "10–15 Regeln in prüfbarer Form, datiert?",
+        "Eigenes Stück geprüft, Verstöße entschieden?"
+      ]
+    },
+    "tu8-3": {
+      "title": "Kompositions-Workflow: vom Motiv zum Arrangement",
+      "goal": "Eine feste Reihenfolge haben, die von einer Idee zu einem fertigen Stück führt, ohne sich in Details zu verlieren.",
+      "text": "Sieben Schritte, in dieser Reihenfolge, jeder mit einem prüfbaren Ergebnis.\n\n1. Motiv (ein Tag): drei bis fünf Töne mit Rhythmus, singbar, notiert. Test: Kannst du es nach einer Stunde Pause ohne Blatt singen? 2. Fundament (ein Tag): Bassweg für 8–16 Takte unter dem Motiv, Modus festgelegt. Test: Bass allein ergibt eine Form. 3. Formplan (ein Tag): Buchstabenkette mit Taktzahlen, Tempo, Dichtebogen, Bruch, Höhepunkt, Kadenz ja/nein. Nach Phase 7. Test: Der Plan ist ohne Noten lesbar. 4. Skizze (zwei bis drei Tage): jeder Abschnitt in Bass und Linie, ohne Innenstimmen, ohne Klang. Test: Die Skizze lässt sich in einem Durchgang spielen, mit Fehlern. 5. Innenstimmen und Texturen (zwei bis drei Tage): wo drei Schichten, wo Arpeggio, wo Akkord, wo Lücke. Nach Phase 2 und 3. Test: Jede Stimme einzeln singbar. 6. Klang (ein bis zwei Tage): Patches, Effekte, Frequenzplan, Drums. Nach Phase 6. Test: Eine viertaktige Stelle klingt wie das Ziel. 7. Partitur und Aufnahme (zwei Tage): sauber notiert, an zwei Tagen aufgenommen. Nach Instrumentalkurs Phase 8.\n\nDie Reihenfolge ist wichtig: Klang vor Form führt zu Presets ohne Stück; Innenstimmen vor Fundament zu Akkorden ohne Bass. Wer bei Schritt 5 merkt, dass Schritt 3 falsch war, geht zurück. Rückwärts ist erlaubt, Überspringen nicht.\n\nDie Referenzen arbeiteten vermutlich anders (Band im Proberaum), aber das Ergebnis lässt sich so lesen: Bei MDB ist das Riff (Schritt 1+2 zugleich) der Kern; bei Type O Negative der Song (Schritt 3 früh); bei Anathema die Textur (Schritt 5 und 6 früh). Vivaldi hatte Schritt 3 als Konvention (Ritornellform) und brauchte ihn nicht zu planen.\n\nZeitplan: Bei vier Stunden pro Woche dauert ein Stück von acht Minuten sechs bis zehn Wochen. Das ist normal. Ein Stück pro Quartal ist eine gute Rate."
+    },
+    "te8-3-1": {
+      "title": "Hören · Kompositions-Workflow: vom Motiv zum Arrangement",
+      "instructions": "Nimm ein Referenzstück (Type O Negative, „Green Man“) und rekonstruiere rückwärts die sieben Schritte: Was ist das Motiv? Der Bassweg? Der Formplan? Wo sind Innenstimmen, wo Lücken? Welche Klänge? Schreibe jeden Schritt in zwei Zeilen. Behauptung: Motiv und Bassweg sind in den ersten 30 Sekunden vollständig hörbar (prüfen).",
+      "checklist": [
+        "Sieben Schritte rückwärts rekonstruiert?",
+        "Motiv und Bassweg aus den ersten 30 Sekunden notiert?"
+      ]
+    },
+    "te8-3-2": {
+      "title": "Modell · Kompositions-Workflow: vom Motiv zum Arrangement",
+      "instructions": "Der Workflow in acht Takten: dasselbe Motiv viermal, jedes Mal eine Schicht mehr: allein, mit Bass (Schritt 2), mit Innenstimme (Schritt 5), mit Textur (Innenstimme in Achteln, Schritt 5+6). Spiele jede Stufe und prüfe den jeweiligen Test aus dem Text: Motiv singbar? Bass allein eine Form? Innenstimme einzeln singbar? Textur ohne Verlust der Linie?",
+      "checklist": [
+        "Vier Stufen gespielt?",
+        "Vier Tests angewendet und Ergebnis notiert?"
+      ]
+    },
+    "te8-3-3": {
+      "title": "Anwendung · Kompositions-Workflow: vom Motiv zum Arrangement",
+      "instructions": "Führe den Workflow vollständig für ein neues Stück von mindestens 32 Takten durch. Führe pro Schritt einen Log-Eintrag mit Datum und Testergebnis. Wenn du zurückgehst, notiere warum. Ergebnis: Partitur, zwei Aufnahmen, sieben Log-Einträge.",
+      "checklist": [
+        "Sieben Log-Einträge mit Datum und Testergebnis?",
+        "Partitur und zwei Aufnahmen vorhanden?"
+      ]
+    },
+    "tu8-4": {
+      "title": "Rollen verteilen: Gitarre, Bass, Drums, Synth aus einer Hand",
+      "goal": "Ein Stück so anlegen, dass eine Person alle Rollen nacheinander aufnehmen kann und das Ergebnis wie ein Ensemble klingt.",
+      "text": "Ohne Band gibt es zwei Wege: Solospiel (der Instrumentalkurs) oder Schichtaufnahme (Overdub). Der zweite braucht Planung, weil jede Rolle allein eingespielt wird und sich nicht anpassen kann.\n\nReihenfolge der Aufnahme: 1. Drums oder Klick (das Raster; Phase 3 und 5, gerätneutral programmiert). 2. Bass (das Fundament; entscheidet Harmonie). 3. Rhythmusgitarre (Riff; hört auf Bass). 4. Keyboard-Fläche (hört auf Gitarre, füllt Register). 5. Linie (Leadgitarre oder Synth; hört auf alles). 6. Ohren zu, einen Tag warten, dann Frequenzplan (Phase 6) und Korrekturen.\n\nRegeln für Schichten: Jede Rolle hat ihr Register (Phase 6, Einheit 10). Jede Rolle hat ihren Rhythmus: Drums halten, Bass hält oder geht, Gitarre schlägt, Fläche liegt, Linie atmet. Zwei Rollen mit demselben Rhythmus sind eine Rolle (Doppelung, Phase 3); das ist erlaubt, aber eine Entscheidung. Jede Rolle hat Pausen; eine Schicht, die nie schweigt, ist ein Teppich, kein Instrument.\n\nWas Overdub nicht kann: reagieren. Ein Bassist, der auf den Gitarristen hört, spielt anders als eine Bassspur zu einer Gitarrenspur. Ersatz: Aufnahme in zwei Durchgängen, beim zweiten die frühere Schicht anpassen. Und: Agogik (Phase 5) pro Schicht bewusst setzen, weil sie nicht von selbst entsteht.\n\nDie Referenzen: Type O Negative sind ein Studioalbum mit vielen Schichten; das ist der Beweis, dass Schichtung Band ersetzen kann (prüfen). Anathema klingen nach Band im Raum. MDB dazwischen. Für dich: Das Solospiel bleibt die Prüfung (trägt das Stück allein?), die Schichtung ist die Veröffentlichung."
+    },
+    "te8-4-1": {
+      "title": "Hören · Rollen verteilen: Gitarre, Bass, Drums, Synth aus einer Hand",
+      "instructions": "Type O Negative, „Be My Druidess“: Zähle die Schichten (Drums, Bass, Gitarren, Keyboards, Stimmen) und bestimme für jede Rhythmusrolle (hält, geht, schlägt, liegt, atmet). Finde zwei Schichten mit demselben Rhythmus (Doppelung). Behauptung: mindestens sechs Schichten, davon zwei gedoppelt (prüfen).",
+      "checklist": [
+        "Schichten gezählt und Rhythmusrolle je Schicht notiert?",
+        "Doppelung gefunden?"
+      ]
+    },
+    "te8-4-2": {
+      "title": "Modell · Rollen verteilen: Gitarre, Bass, Drums, Synth aus einer Hand",
+      "instructions": "Vier Rollen, vier Rhythmen: Bass hält (Ganze), Gitarre schlägt (Viertel mit Pausen), Fläche liegt (Ganze, anderes Register), Linie atmet (Pause, dann zwei Töne). Nimm die vier Takte als vier Schichten nacheinander auf, in der Reihenfolge aus dem Text, jeweils zur vorigen Aufnahme. Höre das Ergebnis: Klingt es wie vier Instrumente oder wie eine Person viermal?",
+      "checklist": [
+        "Vier Schichten in der vorgegebenen Reihenfolge aufgenommen?",
+        "Ensemble-Eindruck beurteilt und Grund benannt?"
+      ]
+    },
+    "te8-4-3": {
+      "title": "Anwendung · Rollen verteilen: Gitarre, Bass, Drums, Synth aus einer Hand",
+      "instructions": "Nimm 16 Takte deines Abschlussstücks als Schichtaufnahme auf: Drums (programmiert), Bass, Gitarre, Keyboard, Linie. Notiere pro Schicht Register, Rhythmusrolle und Agogik-Entscheidung. Vergleiche mit deiner Solofassung derselben 16 Takte: Was gewinnt die Schichtung, was verliert sie?",
+      "checklist": [
+        "Fünf Schichten mit Register, Rolle, Agogik dokumentiert?",
+        "Vergleich Schichtung/Solo im Log?"
+      ]
+    },
+    "tu8-5": {
+      "title": "Aufnahme und Reproduzierbarkeit",
+      "goal": "Eine Aufnahme als Dokument behandeln: was festgehalten wird, damit ein Stück in einem Jahr wieder spielbar ist.",
+      "text": "Eine Aufnahme ist nicht das Stück; sie ist eine Aufführung. Das Stück ist die Partitur plus die Klangdokumentation. Reproduzierbar heißt: Du kannst es in einem Jahr mit denselben Mitteln wieder so spielen, und jemand anderes könnte es mit seinen Mitteln annähern.\n\nWas dokumentiert werden muss: 1. Partitur (Instrumentalkurs Phase 8): Schlüssel, Vorzeichnung, Takt, Tempoeinheit, alle Stimmen, Formzeichen, Lagenangaben. 2. Klangblatt: pro Rolle Instrument, Patch (Parameterliste, gerätneutral plus Gerätepreset), Effekte (Gerät, Preset, die vier Delay-Parameter, Halltyp), Gain-Stufe, Frequenzplan. 3. Drum-Raster (16 Schritte, Velocities, Swing-Prozent, Nudge). 4. Aufnahmeprotokoll: Datum, Reihenfolge der Schichten, Tempo, welche Aufnahme die Referenz ist. 5. Abweichungen: wo die Aufnahme von der Partitur abweicht und warum (Rubato, Fehler, spontane Änderung).\n\nDrei Aufnahmen pro Stück, wie im Instrumentalkurs: mit Drums, allein, mit improvisierter Variante. Die Solofassung ist die Prüfung; wenn sie nicht trägt, ist das Stück auf Produktion angewiesen. Das ist nicht falsch, aber es muss bewusst sein.\n\nDie Referenzen als Dokumente: Vivaldi und Biber existieren als Partituren; jede Aufnahme ist eine Lesart, und der Vergleich zweier Aufnahmen (Phase 5) zeigt, was die Partitur offenlässt. Type O Negative existiert nur als Aufnahme; die Band hat es live anders gespielt. Für dich: Partitur und Aufnahme zusammen, damit beides möglich ist.\n\nFormatfrage: Partitur als Notenblatt (Papier oder PDF), Klangblatt als Text, Drums als Raster. Nicht in einem DAW-Projekt vergraben, das in fünf Jahren nicht mehr öffnet."
+    },
+    "te8-5-1": {
+      "title": "Hören · Aufnahme und Reproduzierbarkeit",
+      "instructions": "Vergleiche zwei Aufnahmen von Vivaldi, *Der Sommer*, Satz 3, verschiedener Ensembles: Tempo, Achtelgleichheit, Verzierungen, Dichte des Continuo. Liste fünf Unterschiede. Dann: Welche davon stehen in der Partitur, welche sind Lesart? Behauptung: Tempo und Verzierungen sind Lesart, Tonhöhen und Form Partitur (prüfen).",
+      "checklist": [
+        "Fünf Unterschiede zweier Aufnahmen gelistet?",
+        "Jeder Unterschied als Partitur oder Lesart eingeordnet?"
+      ]
+    },
+    "te8-5-2": {
+      "title": "Modell · Aufnahme und Reproduzierbarkeit",
+      "instructions": "Vier Takte als vollständiges Dokument. Schreibe zu diesem Beispiel das Klangblatt (Gitarre: Gain-Stufe, Hall; Bass: Klang; Drums: Half-time-Raster mit Velocities) und ein Aufnahmeprotokoll mit heutigem Datum. Nimm die vier Takte auf. Lies dann nur aus deinem Dokument und spiele sie erneut, ohne die Aufnahme zu hören. Vergleiche: Was fehlt im Dokument?",
+      "checklist": [
+        "Klangblatt und Protokoll geschrieben, Aufnahme gemacht?",
+        "Aus dem Dokument reproduziert und Lücken benannt?"
+      ]
+    },
+    "te8-5-3": {
+      "title": "Anwendung · Aufnahme und Reproduzierbarkeit",
+      "instructions": "Erstelle für dein Abschlussstück das vollständige Dokument: Partitur, Klangblatt, Drum-Raster, Aufnahmeprotokoll, Abweichungsliste. Drei Aufnahmen an drei Tagen. Lege das Dokument so ab, dass es ohne Software lesbar ist (PDF, Text, Papier). Prüfe nach einer Woche: Kannst du das Stück nur aus dem Dokument wieder aufbauen?",
+      "checklist": [
+        "Fünf Dokumentteile vorhanden, drei Aufnahmen?",
+        "Wiederaufbau nach einer Woche geprüft?"
+      ]
+    },
+    "tu8-6": {
+      "title": "Repertoire: Stücke, Versionen, Set",
+      "goal": "Aus einzelnen Stücken einen Bestand machen, der spielbar bleibt und sich zu einer Reihenfolge fügt.",
+      "text": "Ein Repertoire ist eine Menge von Stücken, die du jederzeit spielen kannst. Nicht die, die du einmal konntest. Die Referenzen haben Repertoires von 30–60 Stücken über Jahrzehnte; ein Set sind 8–12 davon in einer Reihenfolge.\n\nPflege: Jedes Stück hat einen Zustand: neu (in Arbeit), aktiv (jederzeit spielbar, in den letzten vier Wochen gespielt), ruhend (spielbar nach einem Tag Übung), archiviert (dokumentiert, nicht mehr gespielt). Wöchentlich ein ruhendes Stück reaktivieren, damit der aktive Bestand rotiert. Vier Stunden pro Woche tragen etwa sechs bis acht aktive Stücke neben neuer Arbeit.\n\nVersionen: Ein Stück existiert in mehreren Fassungen: Solo (Gitarre allein), Solo (Keyboard allein), Schichtaufnahme, Kurzfassung (4 Minuten statt 9), Variante in anderer Tonart (Phase 8 des Instrumentalkurses: E → A). Versionen sind keine Kopien; jede ist eine eigene Entscheidung, was das Stück im Kern ist. Vivaldi hat eigene Konzerte mehrfach umgearbeitet; Type O Negative haben Stücke in Radio- und Albumfassung (prüfen).\n\nSet: Eine Reihenfolge von Stücken ist eine Form auf höherer Ebene, mit denselben Regeln: Kontrast, Dichtebogen, Höhepunkt spät, Rahmen (erstes und letztes Stück verwandt). Tonarten: Nachbarn im Quintenzirkel (E, A, D) fließen; ein Terzsprung (E → C) ist ein Bruch, für die Mitte. Tempi: nicht zwei langsame Doom-Stücke hintereinander, außer als Absicht. Ein Set von 40 Minuten sind fünf bis sechs Stücke dieser Länge.\n\nDie Suite (Phase 7) ist das barocke Modell für ein Set: Sätze in einer Tonart mit verschiedenen Zeitgefühlen. Ein Album ist ein aufgenommenes Set."
+    },
+    "te8-6-1": {
+      "title": "Hören · Repertoire: Stücke, Versionen, Set",
+      "instructions": "Analysiere *October Rust* als Set: Tonart, Tempo, Länge und Dichte jedes Stücks in einer Tabelle. Zeichne den Dichtebogen des Albums. Wo ist der Bruch, wo der Höhepunkt? Dann dasselbe für eine Vivaldi-Jahreszeit (drei Sätze). Behauptung: *October Rust* hat den Höhepunkt in der zweiten Hälfte und einen Rahmen aus Intro und Outro (prüfen).",
+      "checklist": [
+        "Album-Tabelle mit vier Spalten pro Stück?",
+        "Dichtebogen des Albums und der Jahreszeit gezeichnet?"
+      ]
+    },
+    "te8-6-2": {
+      "title": "Modell · Repertoire: Stücke, Versionen, Set",
+      "instructions": "Ein Set in vier Takten: jeder Takt steht für ein Stück. E ruhig, A dichter (Quintverwandt, fließt), C als Bruch (Terzsprung), E als Höhepunkt und Rahmen. Spiele die vier Takte und höre die Übergänge: E → A weich, A → C hart, C → E Rückkehr. Ordne dann deine bisherigen eigenen Stücke diesen vier Positionen zu.",
+      "checklist": [
+        "Drei Übergangsqualitäten gehört und benannt?",
+        "Eigene Stücke den vier Positionen zugeordnet?"
+      ]
+    },
+    "te8-6-3": {
+      "title": "Anwendung · Repertoire: Stücke, Versionen, Set",
+      "instructions": "Lege eine Repertoireliste an: jedes eigene Stück mit Zustand (neu, aktiv, ruhend, archiviert), Versionen, Tonart, Tempo, Länge, Datum der letzten Aufführung. Stelle aus den aktiven und ruhenden Stücken ein Set von 30–40 Minuten zusammen, mit Begründung der Reihenfolge nach Tonart, Tempo, Dichte. Spiele das Set einmal durch und stoppe die Zeit.",
+      "checklist": [
+        "Repertoireliste mit Zustand und Versionen?",
+        "Set mit begründeter Reihenfolge einmal durchgespielt?"
+      ]
+    },
+    "tu8-7": {
+      "title": "Laufbahn ohne Geld: veröffentlichen, wiederholen, weiterentwickeln",
+      "goal": "Eine musikalische Laufbahn als Praxis über Jahre anlegen, mit Veröffentlichung als Disziplin, nicht als Ziel.",
+      "text": "Eine Laufbahn ohne Einkommen ist eine Praxis mit Öffentlichkeit. Drei Bestandteile: Werk (die Stücke und ihre Dokumente), Rhythmus (wann etwas fertig wird), Öffentlichkeit (wer es hört).\n\nWerk: Das Repertoire aus Einheit 6, wachsend um etwa vier Stücke pro Jahr bei vier Stunden pro Woche. In fünf Jahren zwanzig Stücke, davon zehn aktiv. Das ist ein Album und ein Set.\n\nRhythmus: Veröffentlichung als Termin, nicht als Gefühl. Ein Stück pro Quartal, dokumentiert und aufgenommen, unabhängig davon, ob es das beste ist. Ein Set pro Jahr, durchgespielt und aufgenommen. Vivaldi schrieb auf Bestellung mit Terminen; Biber für den Hof; die Bands für Labelverträge. Der Termin ist das, was Amateure meist fehlt, und er ist kostenlos.\n\nÖffentlichkeit: Hören ist genug. Eine Aufnahme, die jemand hört, ist veröffentlicht. Formen: eine Seite mit den Aufnahmen und Partituren (ohne Konto, ohne Kommentar, ohne Zahlen), eine Aufführung für zwei Personen, ein Stück pro Jahr an einen Menschen geschickt, der es versteht. Keine Plattform, die Reichweite misst; Reichweite ist die Währung, die du nicht brauchst. Was du brauchst, ist die Rückmeldung von wenigen, die zuhören.\n\nWeiterentwicklung: Das Regelwerk (Einheit 2) wird jährlich revidiert. Ein Stück pro Jahr bricht eine Regel absichtlich. Alle zwei Jahre ein neues Werkzeug (ein Instrument, eine Technik, eine Form), nach diesem Kurs: eigene Einheit schreiben. Alle fünf Jahre die Referenzen prüfen: Sind es noch dieselben? Was ist dazugekommen?\n\nDer Maßstab: nicht, ob es jemand kauft, sondern ob du es in zehn Jahren noch spielen willst. Vivaldi war 200 Jahre vergessen; *Turn Loose the Swans* ist über dreißig Jahre alt und wird noch gehört. Das ist keine Garantie, aber die einzige Referenz, die zählt."
+    },
+    "te8-7-1": {
+      "title": "Hören · Laufbahn ohne Geld: veröffentlichen, wiederholen, weiterentwickeln",
+      "instructions": "Höre *Turn Loose the Swans* vollständig, in einem Durchgang, ohne Notizen. Schreibe danach aus dem Gedächtnis: Welche drei Stellen sind geblieben? Warum? Wiederhole dasselbe mit einer Vivaldi-Jahreszeit. Behauptung: Die erinnerten Stellen sind Wiederkehren oder Brüche, nie Anfänge (prüfen).",
+      "checklist": [
+        "Je drei erinnerte Stellen mit Grund?",
+        "Behauptung über Wiederkehr/Bruch geprüft?"
+      ]
+    },
+    "te8-7-2": {
+      "title": "Modell · Laufbahn ohne Geld: veröffentlichen, wiederholen, weiterentwickeln",
+      "instructions": "Fünf Jahre als acht Takte: Die Linie steigt von E4 über den Dreiklang zum Höhepunkt E5 (Jahr 5, Album) und kehrt zum Ausgangston zurück, verändert durch den Weg. Der Bass bleibt E, wechselt einmal nach A und C (neues Werkzeug, Bruch) und kehrt zurück. Spiele die Takte und lege für jeden ein Datum fest: Was ist am Ende dieses Jahres fertig?",
+      "checklist": [
+        "Acht Takte gespielt und als Zeitplan gelesen?",
+        "Ein Datum und ein Ergebnis pro Jahr festgelegt?"
+      ]
+    },
+    "te8-7-3": {
+      "title": "Anwendung · Laufbahn ohne Geld: veröffentlichen, wiederholen, weiterentwickeln",
+      "instructions": "Schreibe deinen Laufbahnplan auf eine Seite: Werk (Stückzahl pro Jahr), Rhythmus (Quartalstermine für die nächsten zwei Jahre mit Datum), Öffentlichkeit (die Form, die du wählst, und die zwei Menschen, die zuerst hören), Weiterentwicklung (das nächste Werkzeug, die nächste Regelrevision). Veröffentliche das erste fertige Stück dieses Kurses in der gewählten Form bis zum ersten Termin.",
+      "checklist": [
+        "Einseitiger Plan mit datierten Terminen für zwei Jahre?",
+        "Erstes Stück in der gewählten Form veröffentlicht?"
+      ]
     }
   },
   "ui": {

@@ -5238,6 +5238,213 @@
         "Register occupation per section in the form plan?",
         "One empty and one occupied section recorded?"
       ]
+    },
+    "t8": {
+      "title": "Own language",
+      "goal": "What the references share, your own style rules, a composition workflow, distributing roles from one pair of hands, recording and reproducibility, repertoire, and a career without money."
+    },
+    "tu8-1": {
+      "title": "What the five references share and what they do not",
+      "goal": "Name the shared grammar of the references in ten sentences and see the differences as options.",
+      "text": "Shared: 1. A foundation that changes less often than the line. 2. Minor as base colour with b6 as the character tone. 3. Fourth/fifth motion in the bass (E–A–D, circle of fifths, lamento). 4. Repetition as form: riff, ostinato, ritornello. 5. Contrast through register and density, not through tempo. 6. Long tones: whole and half notes are normal values. 7. Two-part writing (thirds, sixths, contrary motion) over the foundation. 8. One clear climax per piece, late. 9. The instrument's tuning as a compositional device (scordatura, B tuning, P4). 10. A sonic space in which every role has its register.\n\nNot shared, hence a choice: cadence (Vivaldi always, MDB almost never). Tempo (Vivaldi 100–140, doom 50–80). Gain (metal yes, Baroque no; but the sustain goal is the same). Form (suite, ritornello, riff, song). Voice (four have it, one does not). Programme (Vivaldi explicit, Type O via lyrics, MDB via lyrics, Biber none). Swing (Type O occasionally, otherwise straight). Odd meters (MDB rarely, otherwise never).\n\nThe common denominator is not a style but an attitude to time: it may be long because the foundation carries. Vivaldi and doom share the pedal point, the sequence, the descending bass; they differ in repetition rate and resolution. Type O Negative are the bridge: Beatles cadences at Sabbath tempo with church organ. Anathema are the way out of metal with the same harmony.\n\nFor your language: the ten shared points are the grammar. The options are the vocabulary. A piece that breaks the grammar sounds foreign; one that varies only in vocabulary sounds like you and still like this field."
+    },
+    "te8-1-1": {
+      "title": "Listen · What the five references share and what they do not",
+      "instructions": "Choose one piece from each reference (five in total) and check the ten shared points as a table: point × piece, yes/no/partly. Then the eight options: which option does each piece take? Claim: at least eight of the ten points hold for all five (verify).",
+      "checklist": [
+        "Table 10 × 5 filled in?",
+        "Options per piece noted and claim checked?"
+      ]
+    },
+    "te8-1-2": {
+      "title": "Model · What the five references share and what they do not",
+      "instructions": "Eight bars containing all ten points: slowly changing bass in fourths/thirds, minor with b6 (C), repetition of the motif, two-part writing with a held inner voice, long values, climax late (bars 7–8 with the only cadence). Play the bars and find for each of the ten points the spot where it is fulfilled. Then remove one point (e.g. replace the cadence with D–Em) and hear whether the piece still belongs to the field.",
+      "checklist": [
+        "Ten points located in the example?",
+        "One point removed and belonging assessed?"
+      ]
+    },
+    "te8-1-3": {
+      "title": "Application · What the five references share and what they do not",
+      "instructions": "Write eight bars that deliberately break three of the ten points (e.g. fast bass changes, major, no repetition). Play them next to the model. Describe which break carries the piece furthest out of the field. That is the border of your language; note it.",
+      "checklist": [
+        "Three breaks notated and played?",
+        "Strongest break named as the border in the log?"
+      ]
+    },
+    "tu8-2": {
+      "title": "Writing your own style rules",
+      "goal": "Derive a personal rulebook of ten to fifteen sentences from grammar and vocabulary.",
+      "text": "A style is a set of decisions you do not make anew every time. The references have such rules, mostly unwritten: Type O Negative tune to B, use chorus on everything, employ organ and let the bass lead the melody. My Dying Bride play half-time, lead two guitars in thirds, use violin as a third voice and end without a cadence. These rules are recognisable because they are consistent.\n\nYour rules arise from four sources: 1. Instrument: P4 guitar, 49 keys, three synths, three effects units. What the setup does well becomes a rule; what it cannot do becomes an exclusion. 2. References: which options from unit 1 do you take? Cadence yes or no, tempo, form. 3. Ear: what you wrote as \"fits\" in the log in phases 0–7. 4. Borders: what you recognised as a break in unit 1.\n\nForm of a rule: short, testable, with an exception. \"Bass changes at most every two bars; exception: cadence.\" \"Thirds never below C4; exception: clean.\" \"One leading tone per piece.\" \"Tempo 55–75 in quarters; 12/8 at 40–50 in dotted quarters.\" \"Keyboard never in the guitar register unless the guitar is silent.\" \"Delay only on clean guitar.\" \"Every piece has a break.\" \"No fade-out.\"\n\nRules are not shackles but time savers: if you know the bass stays calm, you need not think about the bass and can think about the line. They are revisable; a piece that breaks a rule and is better changes the rule.\n\nTen to fifteen rules suffice. More is a manual, fewer is not a style."
+    },
+    "te8-2-1": {
+      "title": "Listen · Writing your own style rules",
+      "instructions": "Derive the unwritten rules from one album each: *October Rust* and *Turn Loose the Swans*, five rules each in the form \"short, testable, with exception\". Check every rule against a second piece from the same album. Claim: at least four of five rules hold album-wide (verify).",
+      "checklist": [
+        "Ten rules in testable form?",
+        "Every rule checked against a second piece?"
+      ]
+    },
+    "te8-2-2": {
+      "title": "Model · Writing your own style rules",
+      "instructions": "Five example rules as bars: 1. Bass at most every two bars (bars 1–4). 2. Thirds only above C5 (bar 2). 3. Every phrase has a rest (bar 3). 4. Held tone across a bass change (bars 4–5). 5. Break before the ending (bar 7). Play the eight bars and name each rule at its spot. Then write your own first rule and change the eight bars so that they fulfil it.",
+      "checklist": [
+        "Five rules located in the example?",
+        "Own rule formulated and implemented in the example?"
+      ]
+    },
+    "te8-2-3": {
+      "title": "Application · Writing your own style rules",
+      "instructions": "Write your rulebook: ten to fifteen rules from the four sources, each short, testable, with exception. Check your longest piece so far against every rule and mark violations. Decide per violation: change the piece or change the rule. The rulebook is a living document; date it.",
+      "checklist": [
+        "10–15 rules in testable form, dated?",
+        "Own piece checked, violations decided?"
+      ]
+    },
+    "tu8-3": {
+      "title": "Composition workflow: from motif to arrangement",
+      "goal": "Have a fixed order that leads from an idea to a finished piece without getting lost in details.",
+      "text": "Seven steps, in this order, each with a testable result.\n\n1. Motif (one day): three to five tones with rhythm, singable, notated. Test: can you sing it without the sheet after an hour's break? 2. Foundation (one day): bass path for 8–16 bars under the motif, mode fixed. Test: the bass alone forms a shape. 3. Form plan (one day): letter chain with bar counts, tempo, density arc, break, climax, cadence yes/no. After phase 7. Test: the plan is readable without notes. 4. Sketch (two to three days): every section in bass and line, no inner voices, no sound. Test: the sketch can be played through in one pass, with mistakes. 5. Inner voices and textures (two to three days): where three layers, where arpeggio, where chord, where gap. After phases 2 and 3. Test: every voice singable alone. 6. Sound (one to two days): patches, effects, frequency plan, drums. After phase 6. Test: a four-bar passage sounds like the target. 7. Score and recording (two days): cleanly notated, recorded on two days. After instrument course phase 8.\n\nThe order matters: sound before form leads to presets without a piece; inner voices before foundation to chords without bass. If at step 5 you notice step 3 was wrong, go back. Backwards is allowed, skipping is not.\n\nThe references presumably worked differently (band in the rehearsal room), but the result can be read this way: in MDB the riff (steps 1+2 at once) is the core; in Type O Negative the song (step 3 early); in Anathema the texture (steps 5 and 6 early). Vivaldi had step 3 as a convention (ritornello form) and did not need to plan it.\n\nSchedule: at four hours a week an eight-minute piece takes six to ten weeks. That is normal. One piece per quarter is a good rate."
+    },
+    "te8-3-1": {
+      "title": "Listen · Composition workflow: from motif to arrangement",
+      "instructions": "Take a reference piece (Type O Negative, \"Green Man\") and reconstruct the seven steps backwards: what is the motif? The bass path? The form plan? Where are inner voices, where gaps? Which sounds? Write every step in two lines. Claim: motif and bass path are fully audible in the first 30 seconds (verify).",
+      "checklist": [
+        "Seven steps reconstructed backwards?",
+        "Motif and bass path from the first 30 seconds written?"
+      ]
+    },
+    "te8-3-2": {
+      "title": "Model · Composition workflow: from motif to arrangement",
+      "instructions": "The workflow in eight bars: the same motif four times, each time one layer more: alone, with bass (step 2), with inner voice (step 5), with texture (inner voice in eighths, steps 5+6). Play each stage and apply the respective test from the text: motif singable? Bass alone a shape? Inner voice singable alone? Texture without losing the line?",
+      "checklist": [
+        "Four stages played?",
+        "Four tests applied and results noted?"
+      ]
+    },
+    "te8-3-3": {
+      "title": "Application · Composition workflow: from motif to arrangement",
+      "instructions": "Run the workflow completely for a new piece of at least 32 bars. Keep one log entry per step with date and test result. If you go back, note why. Result: score, two recordings, seven log entries.",
+      "checklist": [
+        "Seven log entries with date and test result?",
+        "Score and two recordings present?"
+      ]
+    },
+    "tu8-4": {
+      "title": "Distributing roles: guitar, bass, drums, synth from one pair of hands",
+      "goal": "Lay out a piece so that one person can record all roles in turn and the result sounds like an ensemble.",
+      "text": "Without a band there are two routes: solo playing (the instrument course) or layered recording (overdub). The second needs planning because every role is recorded alone and cannot adapt.\n\nRecording order: 1. Drums or click (the grid; phases 3 and 5, programmed device-neutrally). 2. Bass (the foundation; decides harmony). 3. Rhythm guitar (riff; listens to the bass). 4. Keyboard pad (listens to the guitar, fills register). 5. Line (lead guitar or synth; listens to everything). 6. Ears off, wait a day, then frequency plan (phase 6) and corrections.\n\nRules for layers: every role has its register (phase 6, unit 10). Every role has its rhythm: drums hold, bass holds or walks, guitar strikes, pad lies, line breathes. Two roles with the same rhythm are one role (doubling, phase 3); that is allowed but a decision. Every role has rests; a layer that never falls silent is a carpet, not an instrument.\n\nWhat overdub cannot do: react. A bassist who listens to the guitarist plays differently from a bass track against a guitar track. Substitute: record in two passes, adjusting the earlier layer in the second. And: set agogics (phase 5) deliberately per layer because it does not arise by itself.\n\nThe references: Type O Negative is a studio album with many layers; that is the proof that layering can replace a band (verify). Anathema sound like a band in a room. MDB in between. For you: solo playing remains the test (does the piece carry alone?), layering is the release."
+    },
+    "te8-4-1": {
+      "title": "Listen · Distributing roles: guitar, bass, drums, synth from one pair of hands",
+      "instructions": "Type O Negative, \"Be My Druidess\": count the layers (drums, bass, guitars, keyboards, voices) and determine each one's rhythm role (holds, walks, strikes, lies, breathes). Find two layers with the same rhythm (doubling). Claim: at least six layers, two of them doubled (verify).",
+      "checklist": [
+        "Layers counted and rhythm role noted per layer?",
+        "Doubling found?"
+      ]
+    },
+    "te8-4-2": {
+      "title": "Model · Distributing roles: guitar, bass, drums, synth from one pair of hands",
+      "instructions": "Four roles, four rhythms: bass holds (whole notes), guitar strikes (quarters with rests), pad lies (whole notes, other register), line breathes (rest, then two tones). Record the four bars as four layers in turn, in the order from the text, each against the previous recording. Listen to the result: does it sound like four instruments or like one person four times?",
+      "checklist": [
+        "Four layers recorded in the given order?",
+        "Ensemble impression assessed and reason named?"
+      ]
+    },
+    "te8-4-3": {
+      "title": "Application · Distributing roles: guitar, bass, drums, synth from one pair of hands",
+      "instructions": "Record 16 bars of your final piece as a layered recording: drums (programmed), bass, guitar, keyboard, line. Note per layer register, rhythm role and agogic decision. Compare with your solo version of the same 16 bars: what does layering gain, what does it lose?",
+      "checklist": [
+        "Five layers documented with register, role, agogics?",
+        "Layered/solo comparison logged?"
+      ]
+    },
+    "tu8-5": {
+      "title": "Recording and reproducibility",
+      "goal": "Treat a recording as a document: what is captured so that a piece is playable again in a year.",
+      "text": "A recording is not the piece; it is a performance. The piece is the score plus the sound documentation. Reproducible means: you can play it the same way in a year with the same means, and someone else could approximate it with theirs.\n\nWhat must be documented: 1. Score (instrument course phase 8): clef, key signature, meter, tempo unit, all voices, form signs, position marks. 2. Sound sheet: per role instrument, patch (parameter list, device-neutral plus device preset), effects (unit, preset, the four delay parameters, reverb type), gain level, frequency plan. 3. Drum grid (16 steps, velocities, swing percent, nudge). 4. Recording protocol: date, order of layers, tempo, which recording is the reference. 5. Deviations: where the recording departs from the score and why (rubato, mistake, spontaneous change).\n\nThree recordings per piece, as in the instrument course: with drums, alone, with an improvised variant. The solo version is the test; if it does not carry, the piece depends on production. That is not wrong, but it must be conscious.\n\nThe references as documents: Vivaldi and Biber exist as scores; every recording is a reading, and comparing two recordings (phase 5) shows what the score leaves open. Type O Negative exists only as a recording; the band played it differently live. For you: score and recording together so that both are possible.\n\nFormat question: score as sheet music (paper or PDF), sound sheet as text, drums as grid. Not buried in a DAW project that will no longer open in five years."
+    },
+    "te8-5-1": {
+      "title": "Listen · Recording and reproducibility",
+      "instructions": "Compare two recordings of Vivaldi, *Summer*, movement 3, by different ensembles: tempo, equality of eighths, ornaments, density of the continuo. List five differences. Then: which of these are in the score, which are reading? Claim: tempo and ornaments are reading, pitches and form are score (verify).",
+      "checklist": [
+        "Five differences between two recordings listed?",
+        "Each difference classified as score or reading?"
+      ]
+    },
+    "te8-5-2": {
+      "title": "Model · Recording and reproducibility",
+      "instructions": "Four bars as a complete document. For this example write the sound sheet (guitar: gain level, reverb; bass: sound; drums: half-time grid with velocities) and a recording protocol with today's date. Record the four bars. Then read only from your document and play them again without hearing the recording. Compare: what is missing from the document?",
+      "checklist": [
+        "Sound sheet and protocol written, recording made?",
+        "Reproduced from the document and gaps named?"
+      ]
+    },
+    "te8-5-3": {
+      "title": "Application · Recording and reproducibility",
+      "instructions": "Create the complete document for your final piece: score, sound sheet, drum grid, recording protocol, deviation list. Three recordings on three days. File the document so that it is readable without software (PDF, text, paper). Check after a week: can you rebuild the piece from the document alone?",
+      "checklist": [
+        "Five document parts present, three recordings?",
+        "Rebuild checked after a week?"
+      ]
+    },
+    "tu8-6": {
+      "title": "Repertoire: pieces, versions, set",
+      "goal": "Turn individual pieces into a stock that stays playable and fits into an order.",
+      "text": "A repertoire is a set of pieces you can play at any time. Not those you could once play. The references have repertoires of 30–60 pieces over decades; a set is 8–12 of them in an order.\n\nMaintenance: every piece has a state: new (in progress), active (playable any time, played in the last four weeks), resting (playable after a day's practice), archived (documented, no longer played). Reactivate one resting piece each week so that the active stock rotates. Four hours a week carry about six to eight active pieces alongside new work.\n\nVersions: a piece exists in several versions: solo (guitar alone), solo (keyboard alone), layered recording, short version (4 minutes instead of 9), variant in another key (instrument course phase 8: E → A). Versions are not copies; each is its own decision about what the piece is at its core. Vivaldi reworked his own concertos several times; Type O Negative have pieces in radio and album versions (verify).\n\nSet: an order of pieces is a form on a higher level with the same rules: contrast, density arc, climax late, frame (first and last piece related). Keys: neighbours in the circle of fifths (E, A, D) flow; a third leap (E → C) is a break, for the middle. Tempi: not two slow doom pieces in a row unless intended. A 40-minute set is five to six pieces of this length.\n\nThe suite (phase 7) is the Baroque model for a set: movements in one key with different feels of time. An album is a recorded set."
+    },
+    "te8-6-1": {
+      "title": "Listen · Repertoire: pieces, versions, set",
+      "instructions": "Analyse *October Rust* as a set: key, tempo, length and density of every piece in a table. Draw the density arc of the album. Where is the break, where the climax? Then the same for one Vivaldi season (three movements). Claim: *October Rust* has its climax in the second half and a frame of intro and outro (verify).",
+      "checklist": [
+        "Album table with four columns per piece?",
+        "Density arc of the album and the season drawn?"
+      ]
+    },
+    "te8-6-2": {
+      "title": "Model · Repertoire: pieces, versions, set",
+      "instructions": "A set in four bars: each bar stands for one piece. E calm, A denser (fifth-related, flows), C as break (third leap), E as climax and frame. Play the four bars and hear the transitions: E → A soft, A → C hard, C → E return. Then assign your own pieces so far to these four positions.",
+      "checklist": [
+        "Three transition qualities heard and named?",
+        "Own pieces assigned to the four positions?"
+      ]
+    },
+    "te8-6-3": {
+      "title": "Application · Repertoire: pieces, versions, set",
+      "instructions": "Create a repertoire list: every own piece with state (new, active, resting, archived), versions, key, tempo, length, date of last performance. From the active and resting pieces assemble a set of 30–40 minutes with reasons for the order by key, tempo, density. Play the set through once and time it.",
+      "checklist": [
+        "Repertoire list with state and versions?",
+        "Set with justified order played through once?"
+      ]
+    },
+    "tu8-7": {
+      "title": "A career without money: publish, repeat, develop",
+      "goal": "Set up a musical career as a practice over years, with publishing as discipline, not as goal.",
+      "text": "A career without income is a practice with a public. Three components: work (the pieces and their documents), rhythm (when something gets finished), public (who hears it).\n\nWork: the repertoire from unit 6, growing by about four pieces per year at four hours a week. In five years twenty pieces, ten of them active. That is an album and a set.\n\nRhythm: publishing as a deadline, not as a feeling. One piece per quarter, documented and recorded, regardless of whether it is the best. One set per year, played through and recorded. Vivaldi wrote on commission with deadlines; Biber for the court; the bands for label contracts. The deadline is what amateurs mostly lack, and it is free.\n\nPublic: hearing is enough. A recording that someone hears is published. Forms: one page with the recordings and scores (no account, no comments, no numbers), a performance for two people, one piece per year sent to a person who understands it. No platform that measures reach; reach is the currency you do not need. What you need is feedback from the few who listen.\n\nDevelopment: the rulebook (unit 2) is revised yearly. One piece per year breaks a rule deliberately. Every two years a new tool (an instrument, a technique, a form); after this course: write your own unit. Every five years check the references: are they still the same? What has been added?\n\nThe measure: not whether someone buys it, but whether you still want to play it in ten years. Vivaldi was forgotten for 200 years; *Turn Loose the Swans* is over thirty years old and still heard. That is no guarantee, but the only reference that counts."
+    },
+    "te8-7-1": {
+      "title": "Listen · A career without money: publish, repeat, develop",
+      "instructions": "Listen to *Turn Loose the Swans* complete, in one pass, without notes. Afterwards write from memory: which three passages stayed? Why? Repeat with one Vivaldi season. Claim: the remembered passages are returns or breaks, never openings (verify).",
+      "checklist": [
+        "Three remembered passages each with reason?",
+        "Claim about return/break checked?"
+      ]
+    },
+    "te8-7-2": {
+      "title": "Model · A career without money: publish, repeat, develop",
+      "instructions": "Five years as eight bars: the line rises from E4 through the triad to the climax E5 (year 5, album) and returns to the starting tone, changed by the journey. The bass stays E, changes once to A and C (new tool, break) and returns. Play the bars and set a date for each: what is finished at the end of that year?",
+      "checklist": [
+        "Eight bars played and read as a schedule?",
+        "One date and one result per year fixed?"
+      ]
+    },
+    "te8-7-3": {
+      "title": "Application · A career without money: publish, repeat, develop",
+      "instructions": "Write your career plan on one page: work (pieces per year), rhythm (quarterly deadlines for the next two years with dates), public (the form you choose and the two people who hear first), development (the next tool, the next rule revision). Publish the first finished piece of this course in the chosen form by the first deadline.",
+      "checklist": [
+        "One-page plan with dated deadlines for two years?",
+        "First piece published in the chosen form?"
+      ]
     }
   },
   "ui": {
