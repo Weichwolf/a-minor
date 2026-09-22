@@ -181,6 +181,8 @@ Gitarrenanschlag: rechte Hand ausschließlich Plektrum, linke Hand Hammer-ons/Pu
 
 ## Repertoire
 
+[Instrumenten- und Rollenmix](docs/audio/REPERTOIRE_MIX.md): vollständige Audio-Prüfung aller Stücke; kalibrierte Pegel in den gemeinsamen MIDI-Dateien.
+
 Die Gitarre übernimmt Riffs, Powerchords, Themen und Soli; der Bandbass trägt das Fundament. Gitarren- und Keyboardsoli behalten Begleitung. Zweistimmiges Gitarrensolospiel bleibt Bestandteil des Kurses.
 
 Menü **Kurs · Repertoire · Theorie**. Grade 0–5 mit je fünf eigenen englisch benannten Stücken: 6 × 5 = 30 Kompositionen, jeweils Gitarre und Keyboard, also 30 × 2 = 60 Übeparts/PDFs. [Stücktabelle und Formen](docs/REPERTOIRE_PROPOSAL.md).

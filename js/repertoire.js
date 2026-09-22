@@ -3,7 +3,7 @@ AM.repertoire = (() => {
   const labels={guitar:'guitarInstrument',keys:'keyboardInstrument',bass:'bassInstrument',drums:'drums'};
   let catalog,run=0,mount=0,controls,external,timer,stopAll=()=>{},draws=[],current;
   const cache=new Map();
-  const json=async url=>{const r=await fetch(url);if(!r.ok)throw Error('repertoireLoadError');return r.json();};
+  const json=async url=>{const r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw Error('repertoireLoadError');return r.json();};
   const ready=json('data/repertoire.json').then(data=>catalog=data);
   const link=(instrument,grade)=>'#/repertoire/'+instrument+(grade===undefined?'':'/'+grade);
   const title=instrument=>t(labels[instrument]);
@@ -25,7 +25,7 @@ AM.repertoire = (() => {
   async function load(piece,instrument,token) {
     const target=document.querySelector('#repertoire-piece');
     try {
-      if(!cache.has(piece.id))cache.set(piece.id,Promise.all([json(piece.score),fetch(piece.midi).then(r=>{if(!r.ok)throw Error('repertoireLoadError');return r.arrayBuffer();}).then(b=>new Uint8Array(b))]).catch(e=>{cache.delete(piece.id);throw e;}));
+      if(!cache.has(piece.id))cache.set(piece.id,Promise.all([json(piece.score),fetch(piece.midi,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('repertoireLoadError');return r.arrayBuffer();}).then(b=>new Uint8Array(b))]).catch(e=>{cache.delete(piece.id);throw e;}));
       const [score,bytes]=await cache.get(piece.id);if(token!==mount||!target.isConnected)return;
       const sequence=AM.midi.decode(bytes),ex='rep-'+instrument+'-'+piece.id;
       let levels=Object.fromEntries(Object.values(AM.midi.channels).map(ch=>[ch,1])),guide=0;

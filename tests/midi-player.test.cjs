@@ -14,3 +14,10 @@ test('loop skips count-in after first pass and stays on the original clock',()=>
 test('disconnect and interrupted clocks stop all connected ports without a late burst',()=>{
  for(const disconnect of [false,true]){const s=setup();let error;const p=new s.AM.MIDIFilePlayer(sequence,{portFor:ch=>s.ports[ch],onEnd:e=>error=e});p.play();if(disconnect)s.ports[6].state='disconnected';s.advance(disconnect?25:2000);assert.equal(error.message,disconnect?'disconnected':'timingInterrupted');assert.equal(p.playing,false);assert(!s.sent.some(e=>e.data?.[0]===153));assert(s.sent.some(e=>e.ch===9&&e.data?.[1]===120));}
 });
+
+test('authored volume automation and user expression remain independent through loops and mix changes',()=>{
+ const s=setup(),seq={duration:1,events:[{t:0,data:[182,121,0]},{t:0,data:[182,7,127]},{t:0,data:[198,29]},{t:0,data:[150,52,60]},{t:.4,data:[134,52,0]},{t:.5,data:[182,7,96]},{t:.5,data:[150,59,80]},{t:.9,data:[134,59,0]}]},p=new s.AM.MIDIFilePlayer(seq,{loop:true,portFor:ch=>s.ports[ch],levels:{6:.25}});
+ p.play();for(let t=25;t<=1350;t+=25){s.advance(t);if(t===300)p.setMix({6:.5});}
+ assert.deepEqual(s.sent.filter(e=>e.data?.[1]===7).map(e=>e.data[2]),[127,96,127]);
+ assert(s.sent.some(e=>e.data?.join()==='182,11,90'));assert(s.sent.some(e=>e.data?.join()==='150,52,60'));p.stop();
+});

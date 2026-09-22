@@ -2,9 +2,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
+import {groups,baseVolume} from './repertoire-mix.mjs';
 const scope=vm.createContext({console,TextEncoder,TextDecoder,Uint8Array,DataView});scope.window=scope;
 for(const f of ['music','notation','midi'])vm.runInContext(fs.readFileSync(`js/${f}.js`,'utf8'),scope);
 const {music:M,notation:N,midi:MIDI}=scope.AM;
+const unmixed=process.argv.includes('--unmixed');
+const mix=unmixed?null:JSON.parse(fs.readFileSync('scripts/repertoire-mix.json'));
+if(mix&&mix.bankSha256!==createHash('sha256').update(fs.readFileSync('assets/soundfont/FluidR3-a-minor.sf2')).digest('hex'))throw Error('Recalibrate repertoire mix after a SoundFont change');
 const themes=JSON.parse(fs.readFileSync('scripts/repertoire-themes.json'));
 const gradeNames=['00 Debut Grade','01 Grade One','02 Grade Two','03 Grade Three','04 Grade Four','05 Grade Five'];
 const harmony={Em:['E','G','B'],Am:['A','C','E'],Dm:['D','F','A'],Bm:['B','D','F#'],C:['C','E','G'],D:['D','F#','A'],G:['G','B','D'],F:['F','A','C'],Bb:['Bb','D','F'],B7:['B','D#','F#','A'],E7:['E','G#','B','D'],A7:['A','C#','E','G'],Bdim:['B','D','F'],'G#dim7':['G#','B','D','F'],E5:['E','B'],A5:['A','E'],G5:['G','D'],C5:['C','G'],D5:['D','A']};
@@ -128,11 +132,12 @@ function build(song) {
   return {id:song.id,title:song.title,grade:song.grade,key:song.key,tempo:song.tempo,time:song.time,style:song.style,maxFret,programs,prerequisites:phases,description,sections,bars:flat.length};
 }
 function midi(piece) {
-  const events=[{tick:0,data:MIDI.text(3,piece.title),order:-10}],channel=MIDI.channels;let beat=0;
-  for(const [role,ch]of Object.entries(channel)){events.push({tick:0,data:[176|ch,121,0],order:-9},{tick:0,data:[176|ch,0,0],order:-8},{tick:0,data:[176|ch,32,0],order:-8},{tick:0,data:[192|ch,piece.programs[role]],order:-7},{tick:0,data:[176|ch,7,role==='drums'?92:role==='bass'?88:100],order:-6},{tick:0,data:[176|ch,10,role==='guitar'?48:role==='keys'?80:64],order:-6},{tick:0,data:[176|ch,91,role==='bass'?8:22],order:-6},{tick:0,data:[176|ch,93,0],order:-6});}
+  const events=[{tick:0,data:MIDI.text(3,piece.title),order:-10}],channel=MIDI.channels,partGroups=groups(piece),balance=mix?.pieces[piece.id];let beat=0;
+  if(mix&&balance?.scoreSha256!==createHash('sha256').update(JSON.stringify(piece,null,2)+'\n').digest('hex'))throw Error('Recalibrate changed arrangement: '+piece.id);
+  for(const [role,ch]of Object.entries(channel)){events.push({tick:0,data:[176|ch,121,0],order:-9},{tick:0,data:[176|ch,0,0],order:-8},{tick:0,data:[176|ch,32,0],order:-8},{tick:0,data:[192|ch,piece.programs[role]],order:-7},{tick:0,data:[176|ch,7,baseVolume[role]],order:-6},{tick:0,data:[176|ch,10,role==='guitar'?48:role==='keys'?80:64],order:-6},{tick:0,data:[176|ch,91,role==='bass'?8:22],order:-6},{tick:0,data:[176|ch,93,0],order:-6});}
   function note(n,start,ch){const on=Math.round((start+n.t)*480),off=Math.round((start+n.t+n.dur)*480);events.push({tick:on,data:[144|ch,n.midi,n.velocity],order:2},{tick:off,data:[128|ch,n.midi,0],order:-1});if(n.bend){events.push({tick:on,data:[176|ch,101,0],order:-3},{tick:on,data:[176|ch,100,0],order:-3},{tick:on,data:[176|ch,6,2],order:-3});for(let i=0;i<=16;i++){const bend=Math.round(8192+8191*i/16);events.push({tick:on+Math.round((off-on)*.55*i/16),data:[224|ch,bend&127,bend>>7],order:1});}events.push({tick:off,data:[224|ch,0,64],order:0});}}
   for(const section of piece.sections){const m=M.meter(section.time,section.groups);events.push({tick:Math.round(beat*480),data:MIDI.text(6,section.name),order:-10},{tick:Math.round(beat*480),data:MIDI.tempo(piece.tempo*m.q),order:-10},{tick:Math.round(beat*480),data:MIDI.meta(88,[m.n,Math.log2(m.d),m.compound?36:24,8]),order:-10});
-    for(const b of section.bars){if(piece.style==='power')events.push({tick:Math.round(beat*480),data:[192|channel.guitar,(b.number-1)%2?30:28],order:-5});const sf=M.KEYS[b.key]??0;events.push({tick:Math.round(beat*480),data:MIDI.meta(89,[(sf+256)%256,b.key.endsWith('m')?1:0]),order:-10});
+    for(const b of section.bars){if(balance)for(const [role,ch]of Object.entries(channel)){const volume=balance.volumes[partGroups[b.number-1].groups[role]];if(!Number.isInteger(volume)||volume<1||volume>127)throw Error('Missing mix '+piece.id+' '+role);events.push({tick:Math.round(beat*480),data:[176|ch,7,volume],order:-4});}if(piece.style==='power')events.push({tick:Math.round(beat*480),data:[192|channel.guitar,(b.number-1)%2?30:28],order:-5});const sf=M.KEYS[b.key]??0;events.push({tick:Math.round(beat*480),data:MIDI.meta(89,[(sf+256)%256,b.key.endsWith('m')?1:0]),order:-10});
       for(const role of ['guitar','keys']){const sc={...b[role],time:b.time,swing:b.swing};for(const n of N.events(sc)){note({...n,velocity:Math.min(110,(n.voice===1?Math.round(b.dynamics[role]*.7):b.dynamics[role])+(n.accent?12:0))},beat,channel[role]);}}
       for(const n of N.events({notes:b.bass,time:b.time,swing:b.swing}))note({...n,velocity:76},beat,channel.bass);
       for(const n of b.drums)note(n,beat,channel.drums);
@@ -142,9 +147,10 @@ function midi(piece) {
   return MIDI.encode(events,Math.round(beat*480));
 }
 const manifest=[];
-for(const theme of themes){
-  const piece=build(theme),dir=path.join('repertoire',gradeNames[piece.grade],piece.title);fs.mkdirSync(dir,{recursive:true});
-  const bytes=midi(piece);fs.writeFileSync(path.join(dir,piece.title+'.mid'),bytes);
+const built=themes.map(theme=>{const piece=build(theme);return {piece,bytes:midi(piece)};});
+for(const {piece,bytes} of built){
+  const dir=path.join('repertoire',gradeNames[piece.grade],piece.title);fs.mkdirSync(dir,{recursive:true});
+  fs.writeFileSync(path.join(dir,piece.title+'.mid'),bytes);
   fs.writeFileSync(path.join(dir,'score.json'),JSON.stringify(piece,null,2)+'\n');
   const {sections,...entry}=piece;const decoded=MIDI.decode(bytes);
   manifest.push({...entry,dir,midi:dir+'/'+piece.title+'.mid',score:dir+'/score.json',sha256:createHash('sha256').update(bytes).digest('hex'),duration:decoded.duration,sections:sections.map(s=>({name:s.name,startBar:s.startBar,bars:s.bars.length,time:s.time,startBeat:s.startBeat}))});

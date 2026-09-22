@@ -47,7 +47,7 @@
       "dir": "repertoire/00 Debut Grade/Ember",
       "midi": "repertoire/00 Debut Grade/Ember/Ember.mid",
       "score": "repertoire/00 Debut Grade/Ember/score.json",
-      "sha256": "63ffceb1c068bc546643469220a323c5bf04fc7a7ab63285919d52a2fe94bfb5",
+      "sha256": "aba38dcc01c3dd49f09752b64fdbd41bc0630f1e55ce35209711a367414066e2",
       "duration": 32,
       "sections": [
         {
@@ -113,7 +113,7 @@
       "dir": "repertoire/00 Debut Grade/Stone and Breath",
       "midi": "repertoire/00 Debut Grade/Stone and Breath/Stone and Breath.mid",
       "score": "repertoire/00 Debut Grade/Stone and Breath/score.json",
-      "sha256": "75d08e0101ab4164cf9da98c15696a44bb1ee56f04241816f7a5c035ab0176bc",
+      "sha256": "e4cc96c9c16aa220117a37f517da7c1339afa8eb1e5d5083c6d388b4fc853d8a",
       "duration": 51.428592000000016,
       "sections": [
         {
@@ -172,7 +172,7 @@
       "dir": "repertoire/00 Debut Grade/Empty Halls",
       "midi": "repertoire/00 Debut Grade/Empty Halls/Empty Halls.mid",
       "score": "repertoire/00 Debut Grade/Empty Halls/score.json",
-      "sha256": "846b15ecda4be6ebb5f388803d52dbdfd63a2055110e4b79ab18e5031bad86dd",
+      "sha256": "73343c81f4c40c82847fa2276a3b5deb7243377634aa9c7ce56394d1f75927c8",
       "duration": 43.636367999999976,
       "sections": [
         {
@@ -238,7 +238,7 @@
       "dir": "repertoire/00 Debut Grade/Beneath the Ash",
       "midi": "repertoire/00 Debut Grade/Beneath the Ash/Beneath the Ash.mid",
       "score": "repertoire/00 Debut Grade/Beneath the Ash/score.json",
-      "sha256": "9864db277853d586259bd40c4b257660df7225814368e100d23345b3f159e6c3",
+      "sha256": "62327a21a407fdf0b1d86bb73c9967eb48714729201fe80a9013f75ad3a66b24",
       "duration": 60,
       "sections": [
         {
@@ -304,7 +304,7 @@
       "dir": "repertoire/00 Debut Grade/Last Light",
       "midi": "repertoire/00 Debut Grade/Last Light/Last Light.mid",
       "score": "repertoire/00 Debut Grade/Last Light/score.json",
-      "sha256": "9b08ded461698568624088db1f5ca98ffce1acc64e1693fc0e29bd148ae2bfb8",
+      "sha256": "8c0bb810d0f8af0b5496041258ec02f24b57f4a766b720735cc884f2d13a76e1",
       "duration": 53.33331200000007,
       "sections": [
         {
@@ -372,7 +372,7 @@
       "dir": "repertoire/01 Grade One/Mossbound",
       "midi": "repertoire/01 Grade One/Mossbound/Mossbound.mid",
       "score": "repertoire/01 Grade One/Mossbound/score.json",
-      "sha256": "407e4ec5a455e013d247d8c35e3d1c9b3b0612e02163be1b3a37cdf51a1afe37",
+      "sha256": "79e0051dffbcf8b7571c9f17d1346c2d3557bfbaea81a9ffd567cab495db6c26",
       "duration": 50.526335999999965,
       "sections": [
         {
@@ -440,7 +440,7 @@
       "dir": "repertoire/01 Grade One/The Second Threshold",
       "midi": "repertoire/01 Grade One/The Second Threshold/The Second Threshold.mid",
       "score": "repertoire/01 Grade One/The Second Threshold/score.json",
-      "sha256": "57c4c14ddd0e25fcfcfa967fe76873a314ba01255c24bafabcd9c1f20191f79e",
+      "sha256": "979498ae12a3a176f461e24bd7edee127e1a701ab68495288fb0898ad6725290",
       "duration": 64,
       "sections": [
         {
@@ -508,7 +508,7 @@
       "dir": "repertoire/01 Grade One/Black Glass",
       "midi": "repertoire/01 Grade One/Black Glass/Black Glass.mid",
       "score": "repertoire/01 Grade One/Black Glass/score.json",
-      "sha256": "275c8f2c1b1de34fca4288334c44c3aad80c8af3192afb8753864d23c6d1b996",
+      "sha256": "4b7bdf1f62ea1137b3e10a69377c1dc306fc214b79ee6ea3931cc1ec0dc871d2",
       "duration": 72,
       "sections": [
         {
@@ -569,7 +569,7 @@
       "dir": "repertoire/01 Grade One/Iron Rain",
       "midi": "repertoire/01 Grade One/Iron Rain/Iron Rain.mid",
       "score": "repertoire/01 Grade One/Iron Rain/score.json",
-      "sha256": "c44e68f6b33388467d9760b2b54bc7f37d7d2b350cb8e2a1826d0047531ef42e",
+      "sha256": "777a615f5b3632df266fa784363066eee2906921b0ec39fef23044ee7918bda7",
       "duration": 62.608703999999996,
       "sections": [
         {
@@ -630,7 +630,7 @@
       "dir": "repertoire/01 Grade One/November Window",
       "midi": "repertoire/01 Grade One/November Window/November Window.mid",
       "score": "repertoire/01 Grade One/November Window/score.json",
-      "sha256": "7a876dc4ea06aae6751e896718a51c14fa22489b2a9d45b8a4baff329fb35d61",
+      "sha256": "067656bd0fb3115a6ef7261998be79638dd41d11f9a336b40c6d3c638523184d",
       "duration": 59.99997599999994,
       "sections": [
         {
@@ -689,7 +689,7 @@
       "dir": "repertoire/02 Grade Two/The Descent",
       "midi": "repertoire/02 Grade Two/The Descent/The Descent.mid",
       "score": "repertoire/02 Grade Two/The Descent/score.json",
-      "sha256": "d086f3b827cd8d5c5a7460496085edaa86f898378c63d99305057b4a4535a77e",
+      "sha256": "15918e08ea859dc8b08df8b6665577efa8539acb0ba781e552ed2b2334426b32",
       "duration": 90,
       "sections": [
         {
@@ -748,7 +748,7 @@
       "dir": "repertoire/02 Grade Two/Crooked Footsteps",
       "midi": "repertoire/02 Grade Two/Crooked Footsteps/Crooked Footsteps.mid",
       "score": "repertoire/02 Grade Two/Crooked Footsteps/score.json",
-      "sha256": "6be5b577fdee2f66e93120eacdf86b46ba94692b14674db9957e0c4a7d15cb75",
+      "sha256": "d693d64ed8f281b2e13747d6beca11dc3c31883a37b9cdde3c63bf8bee2638b9",
       "duration": 65.45452800000034,
       "sections": [
         {
@@ -807,7 +807,7 @@
       "dir": "repertoire/02 Grade Two/Shards of Rain",
       "midi": "repertoire/02 Grade Two/Shards of Rain/Shards of Rain.mid",
       "score": "repertoire/02 Grade Two/Shards of Rain/score.json",
-      "sha256": "1c571a64c7b737790210b9cf6bf6efe770ee12e02317fd5fc651afbb9e224055",
+      "sha256": "4a643880cff95e93ef9174fbf8f479d9f47d3ccb2e5172101b7697e51c17641c",
       "duration": 60,
       "sections": [
         {
@@ -866,7 +866,7 @@
       "dir": "repertoire/02 Grade Two/Circle of Dust",
       "midi": "repertoire/02 Grade Two/Circle of Dust/Circle of Dust.mid",
       "score": "repertoire/02 Grade Two/Circle of Dust/score.json",
-      "sha256": "6a261c7e2cdd2b590ed86be24e310d2fab5f456c4184e217a2cd0a51eed65bd1",
+      "sha256": "9e3eec4f43af75177ff353c8754f1723db92589d4c8e0b646a1fabe728c9644b",
       "duration": 68.5714560000001,
       "sections": [
         {
@@ -932,7 +932,7 @@
       "dir": "repertoire/02 Grade Two/Beyond the Gate",
       "midi": "repertoire/02 Grade Two/Beyond the Gate/Beyond the Gate.mid",
       "score": "repertoire/02 Grade Two/Beyond the Gate/score.json",
-      "sha256": "4ff557237686b5dd2f6e47b311c6ef845ec3cd6f7b7d1da9fcc4a7b46ee9ada5",
+      "sha256": "84e59458499b5eb7303fc078a9b9c0ed651f662d12932f85abb2958c317b9dfe",
       "duration": 83.47827200000006,
       "sections": [
         {
@@ -1000,7 +1000,7 @@
       "dir": "repertoire/03 Grade Three/Threshold of Fire",
       "midi": "repertoire/03 Grade Three/Threshold of Fire/Threshold of Fire.mid",
       "score": "repertoire/03 Grade Three/Threshold of Fire/score.json",
-      "sha256": "cc2efc3f9c52f60ee94ad804ce64dec42504b873309c845d151115cccab8c47e",
+      "sha256": "9e04d1472d47ee2f07fc109b503ca770e0379097e42488e524763e98f24b3ba7",
       "duration": 120,
       "sections": [
         {
@@ -1068,7 +1068,7 @@
       "dir": "repertoire/03 Grade Three/Dance of Lead",
       "midi": "repertoire/03 Grade Three/Dance of Lead/Dance of Lead.mid",
       "score": "repertoire/03 Grade Three/Dance of Lead/score.json",
-      "sha256": "ca2a978335065a8fd664b7f943ea5d8aa23263f9598db14a62dc29fe41650d03",
+      "sha256": "b0bde890cced5df65884f61bb6506e654a21b70ec8f34b4a37bc5648040ecec9",
       "duration": 91.4286080000006,
       "sections": [
         {
@@ -1136,7 +1136,7 @@
       "dir": "repertoire/03 Grade Three/Blackwater",
       "midi": "repertoire/03 Grade Three/Blackwater/Blackwater.mid",
       "score": "repertoire/03 Grade Three/Blackwater/score.json",
-      "sha256": "5b102e6f614621d9fdaebdd8815e8a1299649e30a0af97991ebcf1b189afeac6",
+      "sha256": "07462fca04e655d6a0825f2f31dcff5ae471feb64f842d22b7319ef71ff0dca0",
       "duration": 110.76926400000121,
       "sections": [
         {
@@ -1197,7 +1197,7 @@
       "dir": "repertoire/03 Grade Three/Pendulum of Thorns",
       "midi": "repertoire/03 Grade Three/Pendulum of Thorns/Pendulum of Thorns.mid",
       "score": "repertoire/03 Grade Three/Pendulum of Thorns/score.json",
-      "sha256": "81edcf19bf5a34a876c8c8185a24d0c9d9a4281acf05f403df116336101e0630",
+      "sha256": "1c1bbaa99a48edcbfc6635fd1f3e14404366afd6cefcf587ee83fc87502f5cf1",
       "duration": 91.42860800000015,
       "sections": [
         {
@@ -1265,7 +1265,7 @@
       "dir": "repertoire/03 Grade Three/Threads of Smoke",
       "midi": "repertoire/03 Grade Three/Threads of Smoke/Threads of Smoke.mid",
       "score": "repertoire/03 Grade Three/Threads of Smoke/score.json",
-      "sha256": "870cf5c5cde094b7b581097721eab1d75b08dedbd84d2f88143137d06accb8ae",
+      "sha256": "e23ba0eef856e0ecb5f848c38064ec3e223fdf5555e392b46bf53b49be3d94be",
       "duration": 80,
       "sections": [
         {
@@ -1333,7 +1333,7 @@
       "dir": "repertoire/04 Grade Four/Light Through Lead",
       "midi": "repertoire/04 Grade Four/Light Through Lead/Light Through Lead.mid",
       "score": "repertoire/04 Grade Four/Light Through Lead/score.json",
-      "sha256": "4c8b6469f630adb71b1d93cf937a96372bfd78e4168d5d1378c2023da32ec052",
+      "sha256": "c13f029f924a8abd244202bd30d5c52b465ccf9d1da7a932c3de02e5c41e0edd",
       "duration": 106.66662399999909,
       "sections": [
         {
@@ -1401,7 +1401,7 @@
       "dir": "repertoire/04 Grade Four/Cold Bells",
       "midi": "repertoire/04 Grade Four/Cold Bells/Cold Bells.mid",
       "score": "repertoire/04 Grade Four/Cold Bells/score.json",
-      "sha256": "918e81f61660b9b0203894af1d35b6830e5e09bd7448d61497d7c68aefb7138d",
+      "sha256": "7227d92f056fb8ddd83a2dad80297f90fde492796976eb2eff131a18b5792458",
       "duration": 68.5714560000001,
       "sections": [
         {
@@ -1469,7 +1469,7 @@
       "dir": "repertoire/04 Grade Four/Stone Against Water",
       "midi": "repertoire/04 Grade Four/Stone Against Water/Stone Against Water.mid",
       "score": "repertoire/04 Grade Four/Stone Against Water/score.json",
-      "sha256": "b3d72327ba754007e5d71db636dd7b992af5101471a87192d7040cf218017865",
+      "sha256": "818d09e666ab5a5281bd308256e751448eff496af2ecfef8b803cc0b7a50625d",
       "duration": 91.4286080000006,
       "sections": [
         {
@@ -1537,7 +1537,7 @@
       "dir": "repertoire/04 Grade Four/Seven Shadows",
       "midi": "repertoire/04 Grade Four/Seven Shadows/Seven Shadows.mid",
       "score": "repertoire/04 Grade Four/Seven Shadows/score.json",
-      "sha256": "31a679ca28af3f9e8f45ca364d002a3a13496ee53ff78a6a4fb93fc0223fbcde",
+      "sha256": "ad4bfe927841eee4dba3312d11734b3949e378beb0a929c2b2fb83baabb9c512",
       "duration": 80.00003200000035,
       "sections": [
         {
@@ -1605,7 +1605,7 @@
       "dir": "repertoire/04 Grade Four/The Broken Circle",
       "midi": "repertoire/04 Grade Four/The Broken Circle/The Broken Circle.mid",
       "score": "repertoire/04 Grade Four/The Broken Circle/score.json",
-      "sha256": "72d9c0c771e4c66a762c5662fb915e2840e455ff04e159913a78bcbeae53b912",
+      "sha256": "023e9b03761d388ae481a74acc7ebb3c67286425de30fa6bb46c3a73cea2e2de",
       "duration": 96.00000000000087,
       "sections": [
         {
@@ -1678,7 +1678,7 @@
       "dir": "repertoire/05 Grade Five/House of Rain",
       "midi": "repertoire/05 Grade Five/House of Rain/House of Rain.mid",
       "score": "repertoire/05 Grade Five/House of Rain/score.json",
-      "sha256": "28fcb9a061ed000cf449595d644313d20005bd9808e5a11360586cafb8f16ced",
+      "sha256": "8b806b7fefa57c83f6a16cbd47eca292e7b16ae72acf54af434677eb02acc4bf",
       "duration": 151.57900800000036,
       "sections": [
         {
@@ -1751,7 +1751,7 @@
       "dir": "repertoire/05 Grade Five/Ashen Garden",
       "midi": "repertoire/05 Grade Five/Ashen Garden/Ashen Garden.mid",
       "score": "repertoire/05 Grade Five/Ashen Garden/score.json",
-      "sha256": "20e9b6eaaf909ea309795c2aab4fa2d8133f0ebc15ddc6756a54fe8b54779f11",
+      "sha256": "0ddd9f450b15b762aa694700eb6d7024f788185df7f54239211b279fe2105907",
       "duration": 192.00009600000058,
       "sections": [
         {
@@ -1831,7 +1831,7 @@
       "dir": "repertoire/05 Grade Five/Clockwork Winter",
       "midi": "repertoire/05 Grade Five/Clockwork Winter/Clockwork Winter.mid",
       "score": "repertoire/05 Grade Five/Clockwork Winter/score.json",
-      "sha256": "ea95021d054a7eca52bfaa98b68038e58f022c76500e9e9e53a996076a3d97ae",
+      "sha256": "69bcc1bfb4b119a969c0d8e7ce5da8a652967179a28dec6e3790d9e18e7c053a",
       "duration": 96,
       "sections": [
         {
@@ -1911,7 +1911,7 @@
       "dir": "repertoire/05 Grade Five/Two Shores",
       "midi": "repertoire/05 Grade Five/Two Shores/Two Shores.mid",
       "score": "repertoire/05 Grade Five/Two Shores/score.json",
-      "sha256": "728ec3a32dae6003282267a5c9927e0c0acb0fb0714a648e8397c45ab2587506",
+      "sha256": "768427d6c924a011b406a0dbd65b155024d036455e01ff9d1927994b94b6a38b",
       "duration": 134.4000000000019,
       "sections": [
         {
@@ -1998,7 +1998,7 @@
       "dir": "repertoire/05 Grade Five/Where the Night Ends",
       "midi": "repertoire/05 Grade Five/Where the Night Ends/Where the Night Ends.mid",
       "score": "repertoire/05 Grade Five/Where the Night Ends/score.json",
-      "sha256": "6c12f47a9907d7fe43381f1f3e740a9c7511d89f1cf5be9da018e781bf1e1bda",
+      "sha256": "e26cf85d5610ac54b1f75f79e0c4b56a23008fecad2fd3e7694964bd76cc25eb",
       "duration": 171.42864000000233,
       "sections": [
         {

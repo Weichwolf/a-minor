@@ -31,10 +31,10 @@ test('actual shared MIDI files match scores, Gigajam channels, programs, markers
   assert.equal(seq.format,0);assert.equal(seq.ppq,480);assert.equal(seq.markers.length,p.sections.length);assert.equal(seq.duration,p.duration);assert.deepEqual([...new Set(seq.events.filter(e=>e.data[0]>>4===9).map(e=>e.data[0]&15))].sort((a,b)=>a-b),[3,5,6,9]);
   assert(Math.abs(independent.duration-seq.duration)<.003,p.title+' independent parser duration');
   const held=new Map(),actual=[];
-  for(const e of seq.events){const [status,n,v]=e.data,ch=status&15,key=ch+':'+n;if(status>>4===9&&v){assert(!held.has(key),p.title+' overlapping same pitch');held.set(key,e);}if(status>>4===8||status>>4===9&&!v){const on=held.get(key);assert(on,p.title+' unmatched note-off');actual.push([ch,n,on.tick,e.tick]);held.delete(key);}}
+  for(const e of seq.events){const [status,n,v]=e.data,ch=status&15,key=ch+':'+n;if(status>>4===9&&v){assert(!held.has(key),p.title+' overlapping same pitch');held.set(key,e);}if(status>>4===8||status>>4===9&&!v){const on=held.get(key);assert(on,p.title+' unmatched note-off');actual.push([ch,n,on.tick,e.tick,on.data[2]]);held.delete(key);}}
   assert.equal(held.size,0,p.title+' hanging notes');
   const sc=JSON.parse(fs.readFileSync(p.score)),expected=[];let beat=0;
-  for(const s of sc.sections){assert.equal(seq.markers.find(m=>m.tick===Math.round(beat*480)).label,s.name);for(const b of s.bars){for(const role of ['guitar','keys','bass']){const v=role==='bass'?{notes:b.bass}:b[role];for(const n of N.events({...v,time:b.time,swing:b.swing}))expected.push([MIDI.channels[role],n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480)]);}for(const n of b.drums)expected.push([9,n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480)]);beat+=M.meter(b.time).len;}}
+  for(const s of sc.sections){assert.equal(seq.markers.find(m=>m.tick===Math.round(beat*480)).label,s.name);for(const b of s.bars){for(const role of ['guitar','keys','bass']){const v=role==='bass'?{notes:b.bass}:b[role];for(const n of N.events({...v,time:b.time,swing:b.swing}))expected.push([MIDI.channels[role],n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480),role==='bass'?76:Math.min(110,(n.voice===1?Math.round(b.dynamics[role]*.7):b.dynamics[role])+(n.accent?12:0))]);}for(const n of b.drums)expected.push([9,n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480),n.velocity]);beat+=M.meter(b.time).len;}}
   const sort=a=>a.sort((x,y)=>x[0]-y[0]||x[1]-y[1]||x[2]-y[2]||x[3]-y[3]);assert.deepEqual(sort(actual),sort(plain(expected)),p.title+' score/MIDI');assert.equal(seq.endTick,beat*480);
   for(const [role,ch]of Object.entries(MIDI.channels))assert(seq.events.some(e=>e.data[0]===(192|ch)&&e.data[1]===p.programs[role]),p.title+' preset '+role);
  }
@@ -84,4 +84,41 @@ test('band guitar uses single lines or adjacent-string fifths; the bass carries 
  const broken=JSON.parse(fs.readFileSync(catalog.pieces.find(p=>p.id==='r4-5').score));
  assert(broken.sections[0].bars.every(b=>b.guitar.notes.some(n=>Array.isArray(n.p))));
  for(const b of broken.sections.find(s=>s.name==='Solo').bars)for(const n of b.guitar.notes)if(!n.r)assert(['A','C','D','E','G'].includes(n.p.replace(/-?\d+$/,'')));
+});
+
+test('calibrated MIDI volume follows each instrument role and survives section excerpts',async()=>{
+ const {groups}=await import('../scripts/repertoire-mix.mjs'),mix=JSON.parse(fs.readFileSync('scripts/repertoire-mix.json'));
+ for(const piece of catalog.pieces){
+  const scoreBytes=fs.readFileSync(piece.score),score=JSON.parse(scoreBytes),partGroups=groups(score),seq=MIDI.decode(fs.readFileSync(piece.midi)),balance=mix.pieces[piece.id];
+  assert.equal(balance.scoreSha256,createHash('sha256').update(scoreBytes).digest('hex'));
+  let beat=0;for(const section of score.sections)for(const b of section.bars){
+   for(const [role,ch]of Object.entries(MIDI.channels)){
+    const volume=balance.volumes[partGroups[b.number-1].groups[role]],events=seq.events.filter(e=>e.tick===beat*480&&e.data[0]===(176|ch)&&e.data[1]===7);
+    assert(Number.isInteger(volume)&&volume>0&&volume<=127);assert.equal(events.at(-1)?.data[2],volume,piece.title+' '+b.number+' '+role);
+   }beat+=M.meter(b.time).len;
+  }
+  for(const section of seq.markers){
+   const from=section.t+.2,to=Math.min(from+1,seq.duration);if(to<=from)continue;
+   const cut=MIDI.decode(MIDI.excerpt(seq,{from,to,countIn:4}));
+   for(const ch of Object.values(MIDI.channels)){
+    const state=seq.events.filter(e=>e.t<from&&e.data[0]===(176|ch)&&e.data[1]===7).at(-1);
+    assert(cut.events.some(e=>e.t===4&&e.data.join()===state.data.join()),piece.title+' chased volume');
+   }
+  }
+ }
+});
+
+test('complete rendered quartet audit matches released MIDI and retains mix headroom',()=>{
+ const report=JSON.parse(fs.readFileSync('docs/audio/repertoire-mix.json')),mix=JSON.parse(fs.readFileSync('scripts/repertoire-mix.json'));
+ assert.equal(report.bankSha256,createHash('sha256').update(fs.readFileSync('assets/soundfont/FluidR3-a-minor.sf2')).digest('hex'));
+ assert.deepEqual(report.profile,JSON.parse(fs.readFileSync('assets/soundfont/balance.json')));assert.equal(report.pieces.length,catalog.pieces.length);
+ for(const piece of catalog.pieces){
+  const audit=report.pieces.find(p=>p.id===piece.id);assert.equal(audit.midiSha256,piece.sha256);assert.equal(audit.duration,piece.duration);
+  assert(audit.renderedSeconds>=piece.duration+3&&audit.renderedSeconds<piece.duration+3.11);assert(audit.peakAfterDb<-6,piece.title+' pre-compressor headroom');
+  assert.equal(audit.sections.length,piece.sections.length);assert.deepEqual(Object.keys(audit.groups).sort(),Object.keys(mix.pieces[piece.id].volumes).sort());
+  for(const [key,g]of Object.entries(audit.groups)){assert(g.windows>0);assert(Number.isFinite(g.afterDb));assert.equal(g.volume,mix.pieces[piece.id].volumes[key]);assert(Math.abs(g.afterDb-g.targetDb)<1,piece.title+' role target '+key);}
+ }
+ const b=report.pieces.find(p=>p.id==='r3-2').sections.find(s=>s.name==='B');
+ assert(b.afterDb[2]-b.beforeDb[2]>4,'reported quiet power chords are raised');
+ assert(b.afterDb[0]-b.afterDb[2]<4,'keyboard no longer hides the power chords');
 });
