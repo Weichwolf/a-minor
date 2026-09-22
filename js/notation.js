@@ -232,7 +232,7 @@ AM.notation = (() => {
       });
       const referenceHeight = Math.max(1,...referenceLines.map(lines => lines.length)) * 14;
       for (let b = from; b < to; b++) {
-        const x = x0 + L.x.get((b - from) * barLen), end = x0 + L.x.get((b + 1 - from) * barLen) - 14, number = b + 1;
+        const x = x0 + L.x.get((b - from) * barLen), end = x0 + L.x.get((b + 1 - from) * barLen) - 14, number = b + (sc.measureStart || 1);
         out += `<text x="${x}" y="14" class="measure">${number}</text>`;
         referenceLines[b - from].forEach((line,i) => { out += `<text x="${x}" y="${contentBottom + 24 + i * 14}" class="harmonic-reference">${esc(line)}</text>`; });
         if (sc.chords?.[b]) out += `<text x="${x}" y="${y0 - 74}" class="chord">${esc(sc.chords[b])}</text>`;

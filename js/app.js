@@ -1,5 +1,5 @@
 (async () => {
-  try { await AM.i18n.ready; } catch (error) {
+  try { await Promise.all([AM.i18n.ready,AM.repertoire.ready]); } catch (error) {
     document.querySelector('main').textContent = 'Kurs nicht geladen / Course could not load. Use localhost or HTTPS. ' + error.message;
     return;
   }
@@ -12,7 +12,7 @@
   const fretView = {root:'E',scale:'aeolian',show:'name',frets:12};
   const progress = u => [u.exercises.filter(e => S.isDone(e.id)).length, u.exercises.length];
   function stop() {
-    resetPreview(); AM.audio.silence(); player?.stop();
+    resetPreview(); AM.repertoire.stop(); AM.audio.silence(); player?.stop();
     if (playerUI?.isConnected) playerUI.querySelector('.play').textContent = t('start');
     player = null; playerUI = null;
     document.querySelectorAll('.beats .on').forEach(e => e.classList.remove('on'));
@@ -77,7 +77,7 @@
   function scoreBlock(ex,instrument) {
     const id = 'sc' + ex.id, aids = ex.aids || [], shown = ex.show || [];
     const html = `<div class="scorewrap" id="${id}"><div class="row small">${aids.length ? `<label><input type="checkbox" data-aid> ${t('aids')}</label>` : ''}
-      ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')} · <a href="assets/piano/credits.html" target="_blank" rel="noopener">Salamander · CC BY 3.0</a></span></div><p class="preview-status small" role="status"></p><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
+      ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')}</span></div><p class="preview-status small" role="status"></p><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       const generate = () => AM.notation.generate({...ex.generate,time:ex.score.time});
@@ -92,9 +92,9 @@
         stop(); const run = previewRun, bpm = el.closest('.ex')?.querySelector('.player input[type=number]')?.valueAsNumber || ex.tempo || 60;
         const spb = 60 / Math.min(160,Math.max(30,bpm)) / AM.music.meter(ex.score.time).q;
         const events = AM.notation.events(sc()).map(e => ({...e,t:e.t * spb,dur:e.dur * spb,velocity:(e.voice === 1 ? 46 : e.voice === 2 ? 62 : 78) + (e.accent ? 18 : 0)}));
-        button.dataset.playing = 'loading'; button.textContent = t('stop'); status.textContent = t('pianoLoading');
+        button.dataset.playing = 'loading'; button.textContent = t('stop'); status.textContent = t('soundfontLoading');
         try {
-          const play = await AM.audio.prepare(events);
+          const play = await AM.audio.prepare(events,{instrument});
           if (run !== previewRun || !button.isConnected) return;
           button.dataset.playing = 'playing'; status.textContent = '';
           play(AM.notation.barOrder(sc()).length * AM.music.meter(ex.score.time).len * spb,error => {
@@ -103,7 +103,7 @@
           });
         } catch {
           if (run !== previewRun || !button.isConnected) return;
-          resetPreview(); status.textContent = t('pianoLoadError');
+          resetPreview(); status.textContent = t('soundfontLoadError');
         }
       };
       scoreDraws.add(draw); draw();
@@ -132,6 +132,9 @@
   const courseLink = () => `<a href="#/">${t('course')}</a>`;
   const chapterNumbers = b => { const n = new Map(); let i = 0, a = 0; for (const part of b.parts) for (const c of part.chapters) n.set(c.id, part.appendix ? String.fromCharCode(65 + a++) : String(++i)); return n; };
   const views = {
+    repertoire:spec => AM.repertoire.home(spec),
+    piece:spec => AM.repertoire.page(spec),
+    credits:() => `<h1>${t('credits')}</h1><div class="text">${md(t('creditsText'))}</div><ul><li>FluidR3 GM · Frank Wen · MIT · <a href="assets/soundfont/LICENSE.txt">${t('licenseText')}</a> · <a href="assets/soundfont/README.md">${t('sourceDetails')}</a></li><li>SpessaSynth · Spessasus · Apache-2.0 · <a href="assets/vendor/spessasynth-LICENSE">${t('licenseText')}</a> · <a href="assets/vendor/README.md">${t('sourceDetails')}</a></li><li>SpessaSynth Core · Spessasus · Apache-2.0 · <a href="assets/vendor/spessasynth-core-LICENSE">${t('licenseText')}</a></li><li>stb-vorbis · Apache-2.0 · <a href="assets/vendor/stb-vorbis-LICENSE">${t('licenseText')}</a></li><li>Bravura · Steinberg · SIL Open Font License 1.1 · <a href="assets/glyphs/OFL.txt">${t('licenseText')}</a></li></ul>`,
     home:() => `<h1>a-minor</h1><p class="lead">${t('lead')}</p><div class="text"><h2>${t('week')}</h2>${md(t('schedule'))}</div>
       <div class="tracks">${tracks.map(track => `<a class="track" href="#/track/${track.id}"><h2>${esc(track.title)}</h2><p>${esc(track.lead)}</p><div class="meta">${t('scope')}</div></a>`).join('')}</div>`,
     track(id) {
@@ -183,14 +186,14 @@
     },
     midi:() => `<h1>MIDI</h1><p>${t('midiLead')}</p><div class="row"><button id="connect">${t('findOutputs')}</button><label>${t('output')} <select id="output"><option value="">${t('chooseDevice')}</option></select></label></div>
       <p id="midi-status" role="status"></p><div class="text">${md(t('hardware'))}</div>
-      ${playerControls({type:'drums',drums:'half',time:'4/4',bars:2},60)}<p>${t('midiTest')}</p>`,
+      <h2>${t('repertoireRouting')}</h2><p>${t('repertoireRoutingLead')}</p><div class="row">${Object.entries(AM.midi.channels).map(([role,ch])=>`<label>${t(role==='keys'?'keyboardInstrument':role==='guitar'?'guitarInstrument':role==='bass'?'bassInstrument':'drums')} · ${ch+1} <select data-midi-route="${ch}"></select></label>`).join('')}</div>${playerControls({type:'drums',drums:'half',time:'4/4',bars:2},60)}<p>${t('midiTest')}</p>`,
     log() {
       return `<h1>${t('log')}</h1><p class="lead">${t('logLead')}</p><div class="row"><button id="exp">${t('export')}</button><label class="btn">${t('import')} <input type="file" id="imp" accept=".json" hidden></label></div>
-      <p id="import-status" role="status"></p><table class="logt"><tr><th>${t('date')}</th><th>${t('exercise')}</th><th>${t('note')}</th><th></th></tr>${S.get().log.map((e,i) => { const ex = allEx.find(x => x.id === e.ex); return `<tr><td>${esc(e.date)}</td><td>${ex ? `<a href="#/unit/${ex.unit.id}#${ex.id}">${esc(ex.title)}</a>` : esc(e.ex)}</td><td>${esc(e.note)}</td><td><button data-del="${esc(e.id)}" aria-label="${t('delete')}">×</button></td></tr>`; }).join('')}</table>`;
+      <p id="import-status" role="status"></p><table class="logt"><tr><th>${t('date')}</th><th>${t('exercise')}</th><th>${t('note')}</th><th></th></tr>${S.get().log.map((e,i) => { const ex = allEx.find(x => x.id === e.ex), rep = AM.repertoire.logEntry(e.ex); return `<tr><td>${esc(e.date)}</td><td>${ex ? `<a href="#/unit/${ex.unit.id}#${ex.id}">${esc(ex.title)}</a>` : rep ? `<a href="${rep.href}">${esc(rep.title)}</a>` : esc(e.ex)}</td><td>${esc(e.note)}</td><td><button data-del="${esc(e.id)}" aria-label="${t('delete')}">×</button></td></tr>`; }).join('')}</table>`;
     }
   };
   function route() {
-    stop(); resetPreview(); scoreDraws.clear();
+    stop(); resetPreview(); AM.repertoire.leave(); scoreDraws.clear(); document.title='a-minor';
     const [,v = 'home',id] = location.hash.replace(/^#\/?/,'').match(/^([^/]*)\/?([^#]*)/) || [];
     const main = $('main'); main.innerHTML = (Object.hasOwn(views,v) ? views[v] : views.home)(id); window.scrollTo(0,0);
     document.querySelectorAll('[data-text]').forEach(e => e.textContent = t(e.dataset.text));
@@ -207,10 +210,11 @@
         if (!output.isConnected) return;
         output.innerHTML = `<option value="">${t('chooseDevice')}</option>` + ps.map(p => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
         output.value = AM.audio.out.port?.id || '';
+        document.querySelectorAll('[data-midi-route]').forEach(select=>{select.innerHTML=`<option value="">${t('defaultOutput')}</option>`+ps.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');select.value=AM.audio.out.routes[select.dataset.midiRoute]||'';select.onchange=()=>{stop();AM.audio.routeSelect(Number(select.dataset.midiRoute),select.value);};});
         $('#midi-status').textContent = (t(AM.audio.out.status) || t('findHint')) + (AM.audio.out.port ? ': ' + AM.audio.out.port.name : '');
       };
       refresh(AM.audio.out.access ? [...AM.audio.out.access.outputs.values()].filter(p => p.state === 'connected') : []);
-      AM.audio.out.onchange = ps => { if (AM.audio.out.port?.state !== 'connected') stop(); refresh(ps); };
+      AM.audio.out.onchange = ps => { refresh(ps); };
       $('#connect').onclick = () => AM.audio.midiInit().then(refresh);
       output.onchange = () => { stop(); AM.audio.midiSelect(output.value); refresh(AM.audio.out.access ? [...AM.audio.out.access.outputs.values()].filter(p => p.state === 'connected') : []); };
     }
@@ -223,7 +227,7 @@
   $('#language').onchange = e => { stop(); resetPreview(); I.set(e.target.value); index(); route(); };
   document.addEventListener('visibilitychange',() => { if (document.hidden) { stop(); resetPreview(); } });
   let resizeFrame;
-  window.addEventListener('resize',() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => scoreDraws.forEach(draw => draw())); });
+  window.addEventListener('resize',() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => { scoreDraws.forEach(draw => draw()); AM.repertoire.resize(); }); });
   window.addEventListener('pagehide',stop); window.addEventListener('hashchange',route);
   S.subscribe(source => {
     if (source !== 'storage') return;
@@ -237,5 +241,6 @@
     if (/^#\/(log|phase|track)(?:\/|$)/.test(location.hash)) route();
     report(t('storageUpdate'));
   });
+  AM.repertoire.configure({stopAll:stop});
   I.set(I.language); index(); route();
 })();

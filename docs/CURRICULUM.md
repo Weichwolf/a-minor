@@ -110,7 +110,7 @@ Für Tonorte zuerst Griffbrett- oder Tastaturkarte ansehen, anschließend die zu
 
 ## Musiklehre
 
-Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 30 Kapitel, fünf Anhänge, 224 notierte Beispiele mit Klaviervorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen und ein Glossar.
+Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-minor.ch/#/theory)): acht Teile, 30 Kapitel, fünf Anhänge, 224 notierte Beispiele mit Klangvorschau. Jedes Kapitel: Orientierung, nummerierte Abschnitte, ein Beispiel mit Erklärung je Begriff, Zusammenfassung in Merksätzen. Keine Aufgaben, keine Gerätenamen; die Anhänge sind Nachschlagetabellen und ein Glossar.
 
 ### Teil I · Ton und Schrift
 

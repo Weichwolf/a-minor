@@ -1,0 +1,89 @@
+{
+  "name": "FluidR3 GM — a-minor selection",
+  "license": "MIT",
+  "source": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont-gm_3.1-5.3_all.deb",
+  "sourceSha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0",
+  "file": "FluidR3-a-minor.sf2",
+  "sha256": "7b503010185c492ca83526e98078c09bb10a500e78692e2935ccdbacfe1fdea1",
+  "bytes": 34336590,
+  "presets": [
+    {
+      "name": "Yamaha Grand Piano",
+      "program": 0,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Rhodes EP",
+      "program": 4,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Steel String Guitar",
+      "program": 25,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Jazz Guitar",
+      "program": 26,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Clean Guitar",
+      "program": 27,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Palm Muted Guitar",
+      "program": 28,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Overdrive Guitar",
+      "program": 29,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Distortion Guitar",
+      "program": 30,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Fingered Bass",
+      "program": 33,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": false
+    },
+    {
+      "name": "Standard",
+      "program": 0,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": true
+    },
+    {
+      "name": "Power",
+      "program": 16,
+      "bankMSB": 0,
+      "bankLSB": 0,
+      "drums": true
+    }
+  ],
+  "adaptation": "Selected complete presets; original samples, zones, generators, modulators and loop points retained without resampling or lossy compression."
+}

@@ -1,0 +1,1322 @@
+[
+  {
+    "id": "r0-1",
+    "grade": 0,
+    "title": "Ember",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 60,
+    "style": "quiet",
+    "form": "A2 B2 A2 C2",
+    "A": [
+      "E3:q G3:q A3:h",
+      "G3:h E3:q -:q",
+      "E3:h G3:q E3:q",
+      "A3:q G3:q E3:h"
+    ],
+    "B": [
+      "G3:q A3:q G3:h",
+      "A3:h E3:h",
+      "G3:h A3:h",
+      "G3:q E3:q -:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Em",
+      "Em",
+      "Em"
+    ],
+    "harmonyB": [
+      "Em",
+      "Am",
+      "Em",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Dreitonmotiv, Viertel und Halbe, saubere Tonwechsel",
+        "keys": "Dreitonantwort rechts, Pausen mitzählen"
+      },
+      "en": {
+        "guitar": "Three-note motif, quarters and halves; clear note changes",
+        "keys": "Three-note answers in the right hand; count rests"
+      }
+    }
+  },
+  {
+    "id": "r0-2",
+    "grade": 0,
+    "title": "Stone and Breath",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 56,
+    "style": "breath",
+    "form": "A4 V4 C4",
+    "A": [
+      "E3:h -:q G3:q",
+      "A3:h G3:h",
+      "E3:h -:h",
+      "G3:q A3:q E3:h"
+    ],
+    "B": [
+      "B3:h A3:q -:q",
+      "G3:h -:q E3:q",
+      "A3:h G3:h",
+      "E3:h -:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Am",
+      "Em",
+      "Em"
+    ],
+    "harmonyB": [
+      "Em",
+      "Em",
+      "Am",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Lange Töne, absichtliches Abdämpfen",
+        "keys": "Halten und Loslassen, erste einzelne linke Bezugstöne"
+      },
+      "en": {
+        "guitar": "Sustained notes and intentional damping",
+        "keys": "Hold and release notes; first left-hand reference tones"
+      }
+    }
+  },
+  {
+    "id": "r0-3",
+    "grade": 0,
+    "title": "Empty Halls",
+    "key": "Em",
+    "time": "3/4",
+    "tempo": 66,
+    "style": "waltz",
+    "form": "A4 B4 A4 C4",
+    "A": [
+      "E3:h G3:q",
+      "A3:q G3:h",
+      "E3:q -:q G3:q",
+      "G3:h E3:q"
+    ],
+    "B": [
+      "G3:q A3:q G3:q",
+      "A3:h -:q",
+      "B3:q A3:q G3:q",
+      "E3:h -:q"
+    ],
+    "harmonyA": [
+      "Em",
+      "Am",
+      "Em",
+      "Em"
+    ],
+    "harmonyB": [
+      "Em",
+      "Am",
+      "Em",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Einfache Saitenwechsel im Dreierpuls",
+        "keys": "Hände wechseln sich mit kleinen Antworten ab"
+      },
+      "en": {
+        "guitar": "Simple string changes in triple metre",
+        "keys": "Small answers alternating between the hands"
+      }
+    }
+  },
+  {
+    "id": "r0-4",
+    "grade": 0,
+    "title": "Beneath the Ash",
+    "key": "Am",
+    "time": "4/4",
+    "tempo": 64,
+    "style": "pedal",
+    "form": "A4 B4 A4 C4",
+    "A": [
+      "A3:h C4:q A3:q",
+      "D4:h C4:h",
+      "A3:q C4:q D4:h",
+      "C4:h A3:h"
+    ],
+    "B": [
+      "E4:h D4:q C4:q",
+      "D4:q C4:q A3:h",
+      "C4:h D4:h",
+      "C4:q B3:q A3:h"
+    ],
+    "harmonyA": [
+      "Am",
+      "Am",
+      "Am",
+      "Am"
+    ],
+    "harmonyB": [
+      "Am",
+      "Am",
+      "Am",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Offenes A als Pedal, kleine Oberstimme",
+        "keys": "Gehaltener Ton links, Viertelmotiv rechts"
+      },
+      "en": {
+        "guitar": "Open A pedal beneath a small upper voice",
+        "keys": "Held left-hand tone beneath a quarter-note motif"
+      }
+    }
+  },
+  {
+    "id": "r0-5",
+    "grade": 0,
+    "title": "Last Light",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 72,
+    "style": "pedal",
+    "form": "A4 B4 A4 C4",
+    "A": [
+      "G3:q B3:q A3:h",
+      "G3:h E3:q -:q",
+      "E3:q G3:q B3:h",
+      "A3:q G3:q E3:h"
+    ],
+    "B": [
+      "B3:h D4:q B3:q",
+      "C4:h A3:h",
+      "B3:q A3:q G3:h",
+      "F#3:q G3:q E3:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Em",
+      "Em",
+      "Em"
+    ],
+    "harmonyB": [
+      "Em",
+      "Am",
+      "Em",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Zwei Stimmen halten und getrennt beenden",
+        "keys": "Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen"
+      },
+      "en": {
+        "guitar": "Hold two voices and end them independently",
+        "keys": "Shared attacks, independent releases and a dynamic arc"
+      }
+    }
+  },
+  {
+    "id": "r1-1",
+    "grade": 1,
+    "title": "Mossbound",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 76,
+    "style": "pedal",
+    "form": "A4 B4 A4 C4",
+    "A": [
+      "E3:q G3:e A3:e B3:q A3:q",
+      "G3:h F#3:q E3:q",
+      "E3:e F#3:e G3:q A3:q G3:q",
+      "B3:q A3:q G3:h"
+    ],
+    "B": [
+      "G3:q B3:q D4:h",
+      "C4:q B3:e A3:e G3:h",
+      "A3:e B3:e C4:q B3:q A3:q",
+      "G3:q F#3:q E3:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Em",
+      "Am",
+      "Em"
+    ],
+    "harmonyB": [
+      "G",
+      "C",
+      "Am",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Achtelmotiv über offenem Bezugston",
+        "keys": "Motiv und Antwort über ruhiger linker Hand"
+      },
+      "en": {
+        "guitar": "Eighth-note motif above an open reference tone",
+        "keys": "Motif and answer above a steady left hand"
+      }
+    }
+  },
+  {
+    "id": "r1-2",
+    "grade": 1,
+    "title": "The Second Threshold",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 60,
+    "style": "phrygian",
+    "form": "A4 B4 A4 C4",
+    "A": [
+      "E3:h F3:q E3:q",
+      "G3:q F3:q E3:h",
+      "E3:q F3:e G3:e A3:q G3:q",
+      "F3:h E3:h"
+    ],
+    "B": [
+      "A3:h G3:q F3:q",
+      "G3:q A3:q G3:h",
+      "F3:q G3:q F3:q E3:q",
+      "G3:q F3:q E3:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Em",
+      "Am",
+      "Em"
+    ],
+    "harmonyB": [
+      "Am",
+      "Em",
+      "F",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "F–E als hörbare Reibung und Rückkehr",
+        "keys": "Melodische F-Farbe über E, getrennte Stimmführung"
+      },
+      "en": {
+        "guitar": "F–E as audible friction and return",
+        "keys": "Melodic F over E with independent voices"
+      }
+    }
+  },
+  {
+    "id": "r1-3",
+    "grade": 1,
+    "title": "Black Glass",
+    "key": "Am",
+    "time": "4/4",
+    "tempo": 80,
+    "style": "arpeggio",
+    "form": "A8 B8 V8",
+    "A": [
+      "A3:e C4:e E4:q C4:e B3:e A3:q",
+      "G3:e C4:e E4:q D4:q C4:q",
+      "A3:e D4:e F4:q E4:e D4:e C4:q",
+      "B3:q E4:q D4:e C4:e B3:q"
+    ],
+    "B": [
+      "C4:q E4:e G4:e E4:q C4:q",
+      "D4:q F4:e A4:e F4:q D4:q",
+      "E4:e D4:e C4:q B3:q G3:q",
+      "A3:h C4:q A3:q"
+    ],
+    "harmonyA": [
+      "Am",
+      "C",
+      "Dm",
+      "Em"
+    ],
+    "harmonyB": [
+      "C",
+      "Dm",
+      "G",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Gebrochene Dreiklänge mit hervorgehobener Oberstimme",
+        "keys": "Akkordbrechung und Melodie auf beide Hände verteilt"
+      },
+      "en": {
+        "guitar": "Broken triads with a singing upper line",
+        "keys": "Arpeggios and melody distributed between the hands"
+      }
+    }
+  },
+  {
+    "id": "r1-4",
+    "grade": 1,
+    "title": "Iron Rain",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 92,
+    "style": "power",
+    "form": "A8 B8 V8",
+    "A": [
+      "E2:e E2:e -:e E2:e G2:q E2:q",
+      "A2:q A2:e -:e G2:q E2:q",
+      "E2:e E2:e G2:e E2:e A2:q G2:q",
+      "B2:q -:q E2:h"
+    ],
+    "B": [
+      "C3:q C3:e -:e A2:q G2:q",
+      "A2:e A2:e -:q G2:q E2:q",
+      "G2:q A2:q B2:q A2:q",
+      "G2:q E2:q -:h"
+    ],
+    "harmonyA": [
+      "E5",
+      "A5",
+      "E5",
+      "E5"
+    ],
+    "harmonyB": [
+      "C5",
+      "A5",
+      "G5",
+      "E5"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Powerchords, Handkantendämpfung und offene Akzente",
+        "keys": "Kurze Akkorde und gezielte Offbeat-Antworten"
+      },
+      "en": {
+        "guitar": "Power chords, palm muting and open accents",
+        "keys": "Short chords and deliberate offbeat answers"
+      }
+    }
+  },
+  {
+    "id": "r1-5",
+    "grade": 1,
+    "title": "November Window",
+    "key": "Am",
+    "time": "3/4",
+    "tempo": 72,
+    "style": "inversions",
+    "form": "A8 B8 V8",
+    "A": [
+      "A3:q C4:q E4:q",
+      "G3:h E3:q",
+      "A3:q D4:q F4:q",
+      "E4:h C4:q"
+    ],
+    "B": [
+      "C4:q E4:q G4:q",
+      "A3:q D4:q F4:q",
+      "G3:q B3:q D4:q",
+      "C4:q B3:q A3:q"
+    ],
+    "harmonyA": [
+      "Am",
+      "C",
+      "Dm",
+      "Am"
+    ],
+    "harmonyB": [
+      "C",
+      "Dm",
+      "G",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Dreiklangsmelodie und ruhiger Bass im Dreierpuls",
+        "keys": "Akkordwechsel mit singender Oberstimme"
+      },
+      "en": {
+        "guitar": "Triadic melody and a steady bass in triple metre",
+        "keys": "Chord changes with a singing upper voice"
+      }
+    }
+  },
+  {
+    "id": "r2-1",
+    "grade": 2,
+    "title": "The Descent",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 64,
+    "style": "lamento",
+    "form": "A8 B8 V8",
+    "A": [
+      "E4:h G4:q F#4:q",
+      "F#4:q A4:q G4:h",
+      "G4:h E4:q G4:q",
+      "F#4:h B3:h"
+    ],
+    "B": [
+      "B4:q A4:q G4:h",
+      "A4:h F#4:q D4:q",
+      "G4:q E4:q D4:q E4:q",
+      "F#4:q D4:q B3:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "D",
+      "C",
+      "Bm"
+    ],
+    "harmonyB": [
+      "Em",
+      "D",
+      "C",
+      "Bm"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Lamento E–D–C–B und unabhängige Oberstimme",
+        "keys": "Absteigende linke Linie, ruhige rechte Antwort"
+      },
+      "en": {
+        "guitar": "E–D–C–B lament bass with an independent upper line",
+        "keys": "Descending left-hand line with a quiet right-hand answer"
+      }
+    }
+  },
+  {
+    "id": "r2-2",
+    "grade": 2,
+    "title": "Crooked Footsteps",
+    "key": "Am",
+    "time": "4/4",
+    "tempo": 88,
+    "style": "syncopation",
+    "form": "A8 B8 V8",
+    "A": [
+      "-:e A3:q C4:e E4:q C4:q",
+      "G3:q -:e B3:q D4:e B3:q",
+      "A3:e C4:q~ C4:e A3:q -:q",
+      "G3:q B3:e D4:e C4:h"
+    ],
+    "B": [
+      "E4:e -:e E4:q D4:q C4:q",
+      "F4:q E4:e D4:e C4:q A3:q",
+      "B3:e D4:q~ D4:e B3:q G3:q",
+      "C4:q B3:q A3:h"
+    ],
+    "harmonyA": [
+      "Am",
+      "G",
+      "Am",
+      "C"
+    ],
+    "harmonyB": [
+      "Am",
+      "Dm",
+      "G",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Gebundene Offbeats und präzise Pausen",
+        "keys": "Synkopierte rechte Hand gegen regelmäßige linke"
+      },
+      "en": {
+        "guitar": "Tied offbeats and precise rests",
+        "keys": "Syncopated right hand against a regular left hand"
+      }
+    }
+  },
+  {
+    "id": "r2-3",
+    "grade": 2,
+    "title": "Shards of Rain",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 96,
+    "style": "sixteenths",
+    "form": "A8 B8 C8",
+    "A": [
+      "E3:q G3:s A3:s B3:e A3:q G3:q",
+      "F#3:q -:e A3:s G3:s F#3:h",
+      "G3:s A3:s B3:e D4:q B3:q G3:q",
+      "A3:q G3:e F#3:e E3:h"
+    ],
+    "B": [
+      "B3:q D4:s E4:s D4:e B3:q G3:q",
+      "C4:q B3:s A3:s G3:e A3:h",
+      "F#3:e G3:s A3:s B3:q A3:q F#3:q",
+      "G3:q F#3:q E3:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "D",
+      "G",
+      "Em"
+    ],
+    "harmonyB": [
+      "G",
+      "Am",
+      "Bm",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Kurze Sechzehntelzellen zwischen längeren Noten",
+        "keys": "Kleine Sechzehntelantworten bei einfacher Begleitung"
+      },
+      "en": {
+        "guitar": "Short sixteenth-note cells between longer tones",
+        "keys": "Small sixteenth-note answers over simple accompaniment"
+      }
+    }
+  },
+  {
+    "id": "r2-4",
+    "grade": 2,
+    "title": "Circle of Dust",
+    "key": "Am",
+    "time": "3/4",
+    "tempo": 84,
+    "style": "circle",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "A3:q C4:e B3:e A3:q",
+      "A3:q D4:e C4:e D4:q",
+      "G3:q B3:e A3:e G3:q",
+      "G3:q C4:e B3:e C4:q"
+    ],
+    "B": [
+      "A3:q C4:e E4:e F4:q",
+      "B3:q D4:e F4:e D4:q",
+      "G3:q B3:e D4:e E4:q",
+      "C4:q B3:q A3:q"
+    ],
+    "harmonyA": [
+      "Am",
+      "Dm",
+      "G",
+      "C"
+    ],
+    "harmonyB": [
+      "F",
+      "Bdim",
+      "Em",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Diatonischer Quintfall mit kleinen Griffwechseln",
+        "keys": "Akkordwechsel über bewegtem Bass"
+      },
+      "en": {
+        "guitar": "Diatonic descending fifths with small position changes",
+        "keys": "Chord changes above a moving bass"
+      }
+    }
+  },
+  {
+    "id": "r2-5",
+    "grade": 2,
+    "title": "Beyond the Gate",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 92,
+    "style": "endings",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E3:q -:e G3:e B3:q D4:q",
+      "A3:h F#3:q D3:q",
+      "G3:q E3:e G3:e C4:h",
+      "B3:q A3:q G3:h"
+    ],
+    "B": [
+      "G3:h B3:q D4:q",
+      "C4:q -:q A3:q E3:q",
+      "F#3:q A3:e B3:e D4:q B3:q",
+      "G3:q F#3:q E3:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "D",
+      "C",
+      "Em"
+    ],
+    "harmonyB": [
+      "G",
+      "Am",
+      "Bm",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Wiederkehr mit verschiedenen Schlüssen",
+        "keys": "Zusammenhängende Form und bewusst gezählte Pausen"
+      },
+      "en": {
+        "guitar": "Returning motifs with different endings",
+        "keys": "Maintain the complete form and count silent beats"
+      }
+    }
+  },
+  {
+    "id": "r3-1",
+    "grade": 3,
+    "title": "Threshold of Fire",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 64,
+    "style": "cadence",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E4:h B3:q G3:q",
+      "A3:q C4:q E4:h",
+      "D#4:h F#4:q A4:q",
+      "G4:q F#4:q E4:h"
+    ],
+    "B": [
+      "G4:q B4:q A4:h",
+      "F#4:q A4:q G4:h",
+      "F#4:q D#4:q B3:q D#4:q",
+      "E4:h -:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Am",
+      "B7",
+      "Em"
+    ],
+    "harmonyB": [
+      "C",
+      "Am",
+      "B7",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "B7–Em, Leitton mit klarer Auflösung",
+        "keys": "Dominantseptakkord, gemeinsame Töne und Auflösung"
+      },
+      "en": {
+        "guitar": "B7–Em and a clearly resolved leading tone",
+        "keys": "Dominant tension, common tones and resolution"
+      }
+    }
+  },
+  {
+    "id": "r3-2",
+    "grade": 3,
+    "title": "Dance of Lead",
+    "key": "Am",
+    "time": "4/4",
+    "tempo": 84,
+    "style": "diminished",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "A3:q C4:e E4:e D4:q C4:q",
+      "B3:q D4:e F4:e E4:q D4:q",
+      "B3:q G#3:q F3:q D4:q",
+      "C4:h B3:q A3:q"
+    ],
+    "B": [
+      "C4:q E4:e G4:e F4:q E4:q",
+      "D4:q F4:e A4:e G4:q F4:q",
+      "E4:q D4:q B3:q G#3:q",
+      "A3:h C4:q E4:q"
+    ],
+    "harmonyA": [
+      "Am",
+      "Bdim",
+      "G#dim7",
+      "Am"
+    ],
+    "harmonyB": [
+      "C",
+      "Dm",
+      "E7",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Sequenz mit vermindertem Übergang",
+        "keys": "Kleine Stimmbewegungen durch verminderte und dominante Harmonien"
+      },
+      "en": {
+        "guitar": "Sequences through diminished harmony",
+        "keys": "Small voice movements through diminished and dominant harmony"
+      }
+    }
+  },
+  {
+    "id": "r3-3",
+    "grade": 3,
+    "title": "Blackwater",
+    "key": "Em",
+    "time": "12/8",
+    "tempo": 52,
+    "style": "compound",
+    "form": "A8 B8 V8",
+    "A": [
+      "E3:q. G3:e B3:e E4:e D4:q. B3:q.",
+      "C4:q. E4:e G4:e E4:e C4:q. B3:q.",
+      "A3:q. C4:e E4:e C4:e A3:q. G3:q.",
+      "F#3:q. D#3:e F#3:e A3:e B3:q. E3:q."
+    ],
+    "B": [
+      "G3:e B3:e D4:e E4:q. D4:e B3:e G3:e B3:q.",
+      "A3:e C4:e E4:e F4:q. E4:e C4:e A3:e C4:q.",
+      "B3:e D#4:e F#4:e A4:q. F#4:e D#4:e B3:e A3:q.",
+      "G3:q. F#3:q. E3:h."
+    ],
+    "harmonyA": [
+      "Em",
+      "C",
+      "Am",
+      "B7"
+    ],
+    "harmonyB": [
+      "Em",
+      "Am",
+      "B7",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Arpeggio und Melodie über vier großen Pulsen",
+        "keys": "Linke Figur und rechte Melodie im 12/8"
+      },
+      "en": {
+        "guitar": "Arpeggios and melody over four compound pulses",
+        "keys": "Left-hand figuration and right-hand melody in 12/8"
+      }
+    }
+  },
+  {
+    "id": "r3-4",
+    "grade": 3,
+    "title": "Pendulum of Thorns",
+    "key": "Am",
+    "time": "4/4",
+    "tempo": 84,
+    "style": "shuffle",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "A2:e E3:e A2:e F#3:e A2:q E3:q",
+      "D3:e A3:e D3:e B3:e D3:q A3:q",
+      "A2:e E3:e A2:e F#3:e G3:q E3:q",
+      "E3:q G#3:e B3:e A3:h"
+    ],
+    "B": [
+      "C4:q E4:e G4:e E4:q C4:q",
+      "D4:q F4:e A4:e F4:q D4:q",
+      "B3:e D4:e E4:q D4:q G#3:q",
+      "A3:q C4:q B3:e G#3:e A3:q"
+    ],
+    "harmonyA": [
+      "A5",
+      "D5",
+      "A5",
+      "E7"
+    ],
+    "harmonyB": [
+      "Am",
+      "Dm",
+      "E7",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Quint-/Sextwechsel und ternärer Anschlag",
+        "keys": "Melodische Antworten mit bewusst langen/kurzen Achteln"
+      },
+      "en": {
+        "guitar": "Fifth–sixth alternation and swung attacks",
+        "keys": "Melodic answers with deliberately long and short eighths"
+      }
+    }
+  },
+  {
+    "id": "r3-5",
+    "grade": 3,
+    "title": "Threads of Smoke",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 96,
+    "style": "legato",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E3:e F#3:e G3:q B3:e A3:e G3:q",
+      "F#3:e G3:e A3:q C4:e B3:e A3:q",
+      "G3:e A3:e B3:q D4:e C4:e B3:q",
+      "F#3:e G3:e A3:q D#4:q B3:q"
+    ],
+    "B": [
+      "B3:e C4:e D4:q G4:e F#4:e E4:q",
+      "A3:e B3:e C4:q F#4:e E4:e D4:q",
+      "F#3:e G3:e A3:q F#3:e D#3:e B2:q",
+      "E3:q G3:q F#3:q E3:q"
+    ],
+    "harmonyA": [
+      "Em",
+      "Am",
+      "G",
+      "B7"
+    ],
+    "harmonyB": [
+      "G",
+      "Am",
+      "B7",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Kurze Hammer-on-/Pull-off-Figuren in Sequenzen",
+        "keys": "Sequenz über wechselndem Bass, Melodie hervorheben"
+      },
+      "en": {
+        "guitar": "Short hammer-on and pull-off figures in sequences",
+        "keys": "Sequences over a changing bass; bring out the melody"
+      }
+    }
+  },
+  {
+    "id": "r4-1",
+    "grade": 4,
+    "title": "Light Through Lead",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 72,
+    "style": "lydian",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E4:h F#4:q G4:q",
+      "B4:q A4:q F#4:h",
+      "G4:q E4:q D4:q E4:q",
+      "F#4:q G4:q E4:h"
+    ],
+    "B": [
+      "G4:q F#4:q E4:h",
+      "D4:q E4:q F#4:h",
+      "B4:q A4:q G4:q F#4:q",
+      "E4:h C4:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "Em",
+      "Am",
+      "Em"
+    ],
+    "harmonyB": [
+      "C",
+      "D",
+      "C",
+      "C"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Quartklänge und Wechsel des tonalen Bezugs",
+        "keys": "F♯ über C, heller Abschnitt und dunkle Rückkehr"
+      },
+      "en": {
+        "guitar": "Quartal colours and a shift of tonal centre",
+        "keys": "F-sharp over C; bright contrast and dark return"
+      }
+    }
+  },
+  {
+    "id": "r4-2",
+    "grade": 4,
+    "title": "Cold Bells",
+    "key": "Em",
+    "time": "3/4",
+    "tempo": 84,
+    "style": "register",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E4:h B3:q",
+      "G4:h E4:q",
+      "F#4:q D4:q A3:q",
+      "B3:h E4:q"
+    ],
+    "B": [
+      "B4:h G4:q",
+      "A4:q F#4:q D4:q",
+      "G4:h E4:q",
+      "F#4:q D#4:q E4:q"
+    ],
+    "harmonyA": [
+      "Em",
+      "C",
+      "D",
+      "Em"
+    ],
+    "harmonyB": [
+      "G",
+      "D",
+      "C",
+      "B7"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Registerantworten und lange, kontrollierte Tonenden",
+        "keys": "Motiv in getrennten Registern, bewusste Ausdünnung"
+      },
+      "en": {
+        "guitar": "Answers across registers with controlled note endings",
+        "keys": "Motifs in separated registers with deliberate thinning"
+      }
+    }
+  },
+  {
+    "id": "r4-3",
+    "grade": 4,
+    "title": "Stone Against Water",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 84,
+    "style": "polyrhythm",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E3:q B3:q G3:q E3:q",
+      "A3:q E4:q C4:q A3:q",
+      "D3:q A3:q F#3:q D3:q",
+      "B3:q A3:q G3:q E3:q"
+    ],
+    "B": [
+      "E4:qt G4:qt B4:qt A4:qt G4:qt E4:qt",
+      "C4:qt E4:qt A4:qt G4:qt E4:qt C4:qt",
+      "D4:qt F#4:qt A4:qt G4:qt F#4:qt D4:qt",
+      "B3:qt D#4:qt F#4:qt G4:q E4:q"
+    ],
+    "harmonyA": [
+      "Em",
+      "Am",
+      "D",
+      "Em"
+    ],
+    "harmonyB": [
+      "Em",
+      "Am",
+      "D",
+      "B7"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Kurze 3:2-Passagen über stabiler Begleitung",
+        "keys": "3:2 zwischen den Händen in begrenzten Abschnitten"
+      },
+      "en": {
+        "guitar": "Short 3:2 passages over a stable accompaniment",
+        "keys": "Limited passages of 3:2 between the hands"
+      }
+    }
+  },
+  {
+    "id": "r4-4",
+    "grade": 4,
+    "title": "Seven Shadows",
+    "key": "Em",
+    "time": "7/8",
+    "tempo": 168,
+    "style": "odd",
+    "form": "A8 B8 A8 C8",
+    "A": [
+      "E3:q B3:q G3:q E3:e",
+      "A3:q C4:q B3:e A3:q",
+      "D3:q A3:q F#3:q E3:e",
+      "G3:q F#3:q E3:q."
+    ],
+    "B": [
+      "B3:e D4:e E4:q D4:q B3:e",
+      "C4:q E4:q D4:e C4:q",
+      "A3:q B3:e C4:e B3:q A3:e",
+      "F#3:q D#3:q E3:q."
+    ],
+    "harmonyA": [
+      "Em",
+      "Am",
+      "D",
+      "Em"
+    ],
+    "harmonyB": [
+      "Em",
+      "C",
+      "Am",
+      "B7"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Akzentgruppen und zusammenhängende Phrasen",
+        "keys": "Ostinato mit klarer Gruppierung und Gegenstimme"
+      },
+      "en": {
+        "guitar": "Accent groups and connected phrases",
+        "keys": "Clearly grouped ostinato with a countervoice"
+      }
+    }
+  },
+  {
+    "id": "r4-5",
+    "grade": 4,
+    "title": "The Broken Circle",
+    "key": "Am",
+    "time": "4/4",
+    "tempo": 100,
+    "style": "332",
+    "form": "A8 B8 S8 A8 C8",
+    "A": [
+      "A3:q. E4:q. C4:q",
+      "G3:q. D4:q. B3:q",
+      "F3:q. C4:q. A3:q",
+      "E3:q. B3:q. G#3:q"
+    ],
+    "B": [
+      "C4:e E4:e G4:q E4:e D4:e C4:q",
+      "D4:e F4:e A4:q F4:e E4:e D4:q",
+      "B3:e D4:e E4:q D4:q B3:q",
+      "C4:q B3:e G#3:e A3:h"
+    ],
+    "harmonyA": [
+      "Am",
+      "G",
+      "F",
+      "E7"
+    ],
+    "harmonyB": [
+      "Am",
+      "Dm",
+      "E7",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "3+3+2, kurzer ausgeschriebener pentatonischer Soloabschnitt",
+        "keys": "Wechsel von rhythmischer Begleitung und Melodie"
+      },
+      "en": {
+        "guitar": "3+3+2 and a short written pentatonic solo",
+        "keys": "Switch between rhythmic accompaniment and melody"
+      }
+    }
+  },
+  {
+    "id": "r5-1",
+    "grade": 5,
+    "title": "House of Rain",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 76,
+    "style": "suite",
+    "form": "I4 A12 B8 V12 C12",
+    "A": [
+      "E3:e B3:e G3:q E4:q D4:q",
+      "C4:q G3:e E3:e G3:h",
+      "A3:e E4:e C4:q B3:q A3:q",
+      "F#3:q D#3:q B3:h"
+    ],
+    "B": [
+      "G4:h B4:q A4:q",
+      "F#4:q A4:e G4:e F#4:h",
+      "E4:q G4:q B4:q G4:q",
+      "F#4:q D#4:q E4:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "C",
+      "Am",
+      "B7"
+    ],
+    "harmonyB": [
+      "G",
+      "D",
+      "C",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Wechsel von Riff, Arpeggio und tragender Melodie",
+        "keys": "Innenstimmen und eigenes Thema, Dichte über die Form"
+      },
+      "en": {
+        "guitar": "Riff, arpeggio and sustained melodic roles",
+        "keys": "Inner voices and a separate theme across the form"
+      }
+    }
+  },
+  {
+    "id": "r5-2",
+    "grade": 5,
+    "title": "Ashen Garden",
+    "key": "Am",
+    "time": "12/8",
+    "tempo": 60,
+    "style": "ballad",
+    "form": "I4 A12 B8 S8 V12 C4",
+    "A": [
+      "A3:q. C4:e D4:e E4:e G4:q. E4:q.",
+      "F4:q. E4:e D4:e C4:e D4:q. A3:q.",
+      "E4:q. D4:e C4:e B3:e G#3:q. B3:q.",
+      "C4:q. B3:q. A3:h."
+    ],
+    "B": [
+      "E4:e G4:e A4:e G4:q. E4:e D4:e C4:e A3:q.",
+      "F4:e E4:e D4:e C4:q. A3:e C4:e D4:e F4:q.",
+      "B3:q. D4:e E4:e G#4:e B4:q. E4:q.",
+      "C4:q. B3:q. A3:h."
+    ],
+    "harmonyA": [
+      "Am",
+      "Dm",
+      "E7",
+      "Am"
+    ],
+    "harmonyB": [
+      "Am",
+      "Dm",
+      "E7",
+      "Am"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Singende Linie, Zielton-Bendings und ausgeschriebener Soloabschnitt",
+        "keys": "Linke Melodie in einem Abschnitt, danach Rückkehr zur Begleitung"
+      },
+      "en": {
+        "guitar": "Singing lines, target-note bends and a written solo",
+        "keys": "A left-hand melodic section, then return to accompaniment"
+      }
+    }
+  },
+  {
+    "id": "r5-3",
+    "grade": 5,
+    "title": "Clockwork Winter",
+    "key": "Dm",
+    "time": "4/4",
+    "tempo": 120,
+    "style": "ritornello",
+    "form": "A8 B8 A8 S8 A8 C8",
+    "A": [
+      "D4:e F4:e A4:e G4:e F4:q E4:q",
+      "E4:e G4:e Bb4:e A4:e G4:q F4:q",
+      "F4:e A4:e C5:e Bb4:e A4:q G4:q",
+      "E4:e C#4:e A3:q D4:h"
+    ],
+    "B": [
+      "A3:e D4:e F4:e E4:e D4:e F4:e A4:q",
+      "G3:e C4:e E4:e D4:e C4:e E4:e G4:q",
+      "F3:e Bb3:e D4:e C4:e Bb3:e D4:e F4:q",
+      "E4:q C#4:q D4:h"
+    ],
+    "harmonyA": [
+      "Dm",
+      "C",
+      "F",
+      "A7"
+    ],
+    "harmonyB": [
+      "Dm",
+      "C",
+      "Bb",
+      "A7"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Barock beeinflusste Sequenzen, zügige Achtel und Saitenwechsel",
+        "keys": "Figuration und klare Ritornell-Einsätze"
+      },
+      "en": {
+        "guitar": "Baroque-influenced sequences, brisk eighths and string changes",
+        "keys": "Figuration and clear returning-theme entries"
+      }
+    }
+  },
+  {
+    "id": "r5-4",
+    "grade": 5,
+    "title": "Two Shores",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 100,
+    "style": "dialogue",
+    "form": "I4 A12 B8 G8 K8 V12 C4",
+    "A": [
+      "E3:q G3:e B3:e E4:q D4:q",
+      "C4:q B3:q G3:h",
+      "A3:e C4:e E4:q D4:q C4:q",
+      "B3:e A3:e F#3:q D#3:h"
+    ],
+    "B": [
+      "G4:q B4:e A4:e G4:q E4:q",
+      "F#4:q A4:e G4:e F#4:q D4:q",
+      "E4:e G4:e B4:q A4:q G4:q",
+      "F#4:q D#4:q E4:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "C",
+      "Am",
+      "B7"
+    ],
+    "harmonyB": [
+      "G",
+      "D",
+      "C",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Eigener solistischer Abschnitt, Bandbass setzt dort aus",
+        "keys": "Eigener solistischer Abschnitt, selbst geführter Bass"
+      },
+      "en": {
+        "guitar": "Solo section with the band bass resting",
+        "keys": "Solo section with an independent left-hand bass"
+      }
+    }
+  },
+  {
+    "id": "r5-5",
+    "grade": 5,
+    "title": "Where the Night Ends",
+    "key": "Em",
+    "time": "4/4",
+    "tempo": 84,
+    "style": "finale",
+    "form": "I4 A16 B12 S8 V16 C8",
+    "A": [
+      "E4:q B3:e G3:e E4:q F#4:q",
+      "G4:q E4:e C4:e G4:h",
+      "A4:q G4:q E4:e C4:e A3:q",
+      "F#4:q D#4:q B3:h"
+    ],
+    "B": [
+      "B3:e E4:e G4:q F#4:e E4:e D4:q",
+      "C4:q E4:q G4:e F#4:e E4:q",
+      "A3:e C4:e E4:q F#4:q A4:q",
+      "G4:q F#4:q E4:h"
+    ],
+    "harmonyA": [
+      "Em",
+      "C",
+      "Am",
+      "B7"
+    ],
+    "harmonyB": [
+      "G",
+      "C",
+      "Am",
+      "Em"
+    ],
+    "description": {
+      "de": {
+        "guitar": "Zusammenhängende Miniatursuite mit Klang- und Rollenwechseln",
+        "keys": "Kontrastierende Texturen, Taktwechsel und gemeinsamer Schluss"
+      },
+      "en": {
+        "guitar": "A connected miniature suite with changing roles and metre",
+        "keys": "Contrasting textures, metre changes and a shared ending"
+      }
+    }
+  }
+]

@@ -1,17 +1,19 @@
 AM.audio = (() => {
-  let ctx, piano;
+  let ctx;
   const players = new Set();
   const get = () => {
     ctx ||= new (window.AudioContext || window.webkitAudioContext)();
     return ctx;
   };
-  const prepare = async notes => {
-    const c = get(); await c.resume();
-    piano ||= new AM.SamplePiano(c);
-    return piano.prepare(notes);
+  const prepare = async (notes,options={}) => {
+    await AM.soundfont.ready();
+    return (duration,onEnd) => {
+      const bytes=AM.midi.notes(notes,duration,options);
+      AM.soundfont.play(bytes,{loop:true,onEnd}).catch(onEnd);
+    };
   };
-  const silence = () => piano?.stop();
-  const out = {access:null, port:null, status:''};
+  const silence = () => AM.soundfont.stop();
+  const out = {access:null, port:null, status:'',routes:{}};
   const NOTE = {kick:36, snare:38, hat:42, click:37};
   const allOff = () => {
     if (out.port?.state !== 'connected') return;
@@ -25,7 +27,7 @@ AM.audio = (() => {
     try {
       out.access ||= await navigator.requestMIDIAccess({sysex:false});
       out.access.onstatechange = () => {
-        if (out.port?.state === 'disconnected') { players.forEach(p => p.stop()); out.port = null; }
+        if (out.port?.state === 'disconnected') { players.forEach(p => {p.stop();p.onEnd?.(Error('disconnected'));p.onError?.(Error('disconnected'));}); out.port = null; }
         out.status = out.port ? 'connected' : 'chooseDevice';
         out.onchange?.(ports());
       };
@@ -36,6 +38,8 @@ AM.audio = (() => {
     players.forEach(p => p.stop()); allOff();
     out.port = ports().find(p => p.id === id) || null; out.status = out.port ? 'connected' : 'chooseDevice';
   }
+  const portFor = ch => out.routes[ch] ? ports().find(p=>p.id===out.routes[ch]) : out.port;
+  const routeSelect = (ch,id) => { players.forEach(p=>p.stop()); if(id)out.routes[ch]=id;else delete out.routes[ch]; };
   class Player {
     constructor() { this.playing = false; }
     load(seq, bpm) {
@@ -74,7 +78,7 @@ AM.audio = (() => {
       try { allOff(); } catch (e) { out.status = 'stopError'; }
     }
   }
-  return {Player, prepare, get, silence, out, midiInit, midiSelect};
+  return {Player, prepare, get, silence, out, midiInit, midiSelect,portFor,routeSelect,register:p=>players.add(p),unregister:p=>players.delete(p)};
 })();
 
 AM.backing = (() => {

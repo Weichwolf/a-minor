@@ -1,0 +1,2049 @@
+{
+  "channels": {
+    "keys": 3,
+    "bass": 5,
+    "guitar": 6,
+    "drums": 9
+  },
+  "grades": [
+    "00 Debut Grade",
+    "01 Grade One",
+    "02 Grade Two",
+    "03 Grade Three",
+    "04 Grade Four",
+    "05 Grade Five"
+  ],
+  "pieces": [
+    {
+      "id": "r0-1",
+      "title": "Ember",
+      "grade": 0,
+      "key": "Em",
+      "tempo": 60,
+      "time": "4/4",
+      "style": "quiet",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p0",
+        "k0"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Dreitonmotiv, Viertel und Halbe, saubere Tonwechsel",
+          "keys": "Dreitonantwort rechts, Pausen mitzählen"
+        },
+        "en": {
+          "guitar": "Three-note motif, quarters and halves; clear note changes",
+          "keys": "Three-note answers in the right hand; count rests"
+        }
+      },
+      "bars": 8,
+      "dir": "repertoire/00 Debut Grade/Ember",
+      "midi": "repertoire/00 Debut Grade/Ember/Ember.mid",
+      "score": "repertoire/00 Debut Grade/Ember/score.json",
+      "sha256": "c91afcccaed9dd248c23fbc69620eb722a47c932c1fc00604113a1c861ca0218",
+      "duration": 32,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 2,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 3,
+          "bars": 2,
+          "time": "4/4",
+          "startBeat": 8
+        },
+        {
+          "name": "A",
+          "startBar": 5,
+          "bars": 2,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "Coda",
+          "startBar": 7,
+          "bars": 2,
+          "time": "4/4",
+          "startBeat": 24
+        }
+      ]
+    },
+    {
+      "id": "r0-2",
+      "title": "Stone and Breath",
+      "grade": 0,
+      "key": "Em",
+      "tempo": 56,
+      "time": "4/4",
+      "style": "breath",
+      "maxFret": 5,
+      "programs": {
+        "keys": 4,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p0",
+        "k0"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Lange Töne, absichtliches Abdämpfen",
+          "keys": "Halten und Loslassen, erste einzelne linke Bezugstöne"
+        },
+        "en": {
+          "guitar": "Sustained notes and intentional damping",
+          "keys": "Hold and release notes; first left-hand reference tones"
+        }
+      },
+      "bars": 12,
+      "dir": "repertoire/00 Debut Grade/Stone and Breath",
+      "midi": "repertoire/00 Debut Grade/Stone and Breath/Stone and Breath.mid",
+      "score": "repertoire/00 Debut Grade/Stone and Breath/score.json",
+      "sha256": "75d08e0101ab4164cf9da98c15696a44bb1ee56f04241816f7a5c035ab0176bc",
+      "duration": 51.428592000000016,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "A′",
+          "startBar": 5,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "Coda",
+          "startBar": 9,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 32
+        }
+      ]
+    },
+    {
+      "id": "r0-3",
+      "title": "Empty Halls",
+      "grade": 0,
+      "key": "Em",
+      "tempo": 66,
+      "time": "3/4",
+      "style": "waltz",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p0",
+        "k0"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Einfache Saitenwechsel im Dreierpuls",
+          "keys": "Hände wechseln sich mit kleinen Antworten ab"
+        },
+        "en": {
+          "guitar": "Simple string changes in triple metre",
+          "keys": "Small answers alternating between the hands"
+        }
+      },
+      "bars": 16,
+      "dir": "repertoire/00 Debut Grade/Empty Halls",
+      "midi": "repertoire/00 Debut Grade/Empty Halls/Empty Halls.mid",
+      "score": "repertoire/00 Debut Grade/Empty Halls/score.json",
+      "sha256": "8c6da03e557b58a55b937fb33be1b5a261e5be2f3ea43d7d8e16610c9b9e83a6",
+      "duration": 43.63636799999997,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 4,
+          "time": "3/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 5,
+          "bars": 4,
+          "time": "3/4",
+          "startBeat": 12
+        },
+        {
+          "name": "A",
+          "startBar": 9,
+          "bars": 4,
+          "time": "3/4",
+          "startBeat": 24
+        },
+        {
+          "name": "Coda",
+          "startBar": 13,
+          "bars": 4,
+          "time": "3/4",
+          "startBeat": 36
+        }
+      ]
+    },
+    {
+      "id": "r0-4",
+      "title": "Beneath the Ash",
+      "grade": 0,
+      "key": "Am",
+      "tempo": 64,
+      "time": "4/4",
+      "style": "pedal",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p0",
+        "k0"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Offenes A als Pedal, kleine Oberstimme",
+          "keys": "Gehaltener Ton links, Viertelmotiv rechts"
+        },
+        "en": {
+          "guitar": "Open A pedal beneath a small upper voice",
+          "keys": "Held left-hand tone beneath a quarter-note motif"
+        }
+      },
+      "bars": 16,
+      "dir": "repertoire/00 Debut Grade/Beneath the Ash",
+      "midi": "repertoire/00 Debut Grade/Beneath the Ash/Beneath the Ash.mid",
+      "score": "repertoire/00 Debut Grade/Beneath the Ash/score.json",
+      "sha256": "a6660865dab71644a50689a002eb2e795a05af37835f907c0ddd6476e5f8878b",
+      "duration": 60,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 5,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "A",
+          "startBar": 9,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "Coda",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        }
+      ]
+    },
+    {
+      "id": "r0-5",
+      "title": "Last Light",
+      "grade": 0,
+      "key": "Em",
+      "tempo": 72,
+      "time": "4/4",
+      "style": "pedal",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p0",
+        "k0"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Zwei Stimmen halten und getrennt beenden",
+          "keys": "Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen"
+        },
+        "en": {
+          "guitar": "Hold two voices and end them independently",
+          "keys": "Shared attacks, independent releases and a dynamic arc"
+        }
+      },
+      "bars": 16,
+      "dir": "repertoire/00 Debut Grade/Last Light",
+      "midi": "repertoire/00 Debut Grade/Last Light/Last Light.mid",
+      "score": "repertoire/00 Debut Grade/Last Light/score.json",
+      "sha256": "2649e5c7d1d6cb3007886c5c7dc961e0c8e9949db7da40f8d3573ee66b7325b3",
+      "duration": 53.33331200000007,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 5,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "A",
+          "startBar": 9,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "Coda",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        }
+      ]
+    },
+    {
+      "id": "r1-1",
+      "title": "Mossbound",
+      "grade": 1,
+      "key": "Em",
+      "tempo": 76,
+      "time": "4/4",
+      "style": "pedal",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p1",
+        "p2",
+        "k1",
+        "k2"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Achtelmotiv über offenem Bezugston",
+          "keys": "Motiv und Antwort über ruhiger linker Hand"
+        },
+        "en": {
+          "guitar": "Eighth-note motif above an open reference tone",
+          "keys": "Motif and answer above a steady left hand"
+        }
+      },
+      "bars": 16,
+      "dir": "repertoire/01 Grade One/Mossbound",
+      "midi": "repertoire/01 Grade One/Mossbound/Mossbound.mid",
+      "score": "repertoire/01 Grade One/Mossbound/score.json",
+      "sha256": "808d909699e0c28bc5b649e3e817fbf502b6ea736488bbfbde70062766f9808c",
+      "duration": 50.526335999999965,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 5,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "A",
+          "startBar": 9,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "Coda",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        }
+      ]
+    },
+    {
+      "id": "r1-2",
+      "title": "The Second Threshold",
+      "grade": 1,
+      "key": "Em",
+      "tempo": 60,
+      "time": "4/4",
+      "style": "phrygian",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p1",
+        "p2",
+        "k1",
+        "k2"
+      ],
+      "description": {
+        "de": {
+          "guitar": "F–E als hörbare Reibung und Rückkehr",
+          "keys": "Melodische F-Farbe über E, getrennte Stimmführung"
+        },
+        "en": {
+          "guitar": "F–E as audible friction and return",
+          "keys": "Melodic F over E with independent voices"
+        }
+      },
+      "bars": 16,
+      "dir": "repertoire/01 Grade One/The Second Threshold",
+      "midi": "repertoire/01 Grade One/The Second Threshold/The Second Threshold.mid",
+      "score": "repertoire/01 Grade One/The Second Threshold/score.json",
+      "sha256": "4f1d7b4049c121d77ab264868c95dd441ac42cf7f25159272320e1db28cddfcc",
+      "duration": 64,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 5,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "A",
+          "startBar": 9,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "Coda",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        }
+      ]
+    },
+    {
+      "id": "r1-3",
+      "title": "Black Glass",
+      "grade": 1,
+      "key": "Am",
+      "tempo": 80,
+      "time": "4/4",
+      "style": "arpeggio",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p1",
+        "p2",
+        "k1",
+        "k2"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Gebrochene Dreiklänge mit hervorgehobener Oberstimme",
+          "keys": "Akkordbrechung und Melodie auf beide Hände verteilt"
+        },
+        "en": {
+          "guitar": "Broken triads with a singing upper line",
+          "keys": "Arpeggios and melody distributed between the hands"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/01 Grade One/Black Glass",
+      "midi": "repertoire/01 Grade One/Black Glass/Black Glass.mid",
+      "score": "repertoire/01 Grade One/Black Glass/score.json",
+      "sha256": "c15846938f4ab0f53a55f09cbf38d4897d9b7121a7aaed096bfea3c37a947657",
+      "duration": 72,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A′",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        }
+      ]
+    },
+    {
+      "id": "r1-4",
+      "title": "Iron Rain",
+      "grade": 1,
+      "key": "Em",
+      "tempo": 92,
+      "time": "4/4",
+      "style": "power",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 30,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p1",
+        "p2",
+        "k1",
+        "k2"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Powerchords, Handkantendämpfung und offene Akzente",
+          "keys": "Kurze Akkorde und gezielte Offbeat-Antworten"
+        },
+        "en": {
+          "guitar": "Power chords, palm muting and open accents",
+          "keys": "Short chords and deliberate offbeat answers"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/01 Grade One/Iron Rain",
+      "midi": "repertoire/01 Grade One/Iron Rain/Iron Rain.mid",
+      "score": "repertoire/01 Grade One/Iron Rain/score.json",
+      "sha256": "853a158f1057cc11507aa3ce24a09f5a51af1eb2390007e6916c4f58610c34d5",
+      "duration": 62.608704,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A′",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        }
+      ]
+    },
+    {
+      "id": "r1-5",
+      "title": "November Window",
+      "grade": 1,
+      "key": "Am",
+      "tempo": 72,
+      "time": "3/4",
+      "style": "inversions",
+      "maxFret": 5,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 0
+      },
+      "prerequisites": [
+        "p1",
+        "p2",
+        "k1",
+        "k2"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Dreiklangsmelodie und ruhiger Bass im Dreierpuls",
+          "keys": "Akkordwechsel mit singender Oberstimme"
+        },
+        "en": {
+          "guitar": "Triadic melody and a steady bass in triple metre",
+          "keys": "Chord changes with a singing upper voice"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/01 Grade One/November Window",
+      "midi": "repertoire/01 Grade One/November Window/November Window.mid",
+      "score": "repertoire/01 Grade One/November Window/score.json",
+      "sha256": "03b748742b02ebc65e86d6220fb061b33b8deaa5cfdb40224c69b9b0e03cd57c",
+      "duration": 59.99997599999994,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 24
+        },
+        {
+          "name": "A′",
+          "startBar": 17,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 48
+        }
+      ]
+    },
+    {
+      "id": "r2-1",
+      "title": "The Descent",
+      "grade": 2,
+      "key": "Em",
+      "tempo": 64,
+      "time": "4/4",
+      "style": "lamento",
+      "maxFret": 7,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p3",
+        "k3"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Lamento E–D–C–B und unabhängige Oberstimme",
+          "keys": "Absteigende linke Linie, ruhige rechte Antwort"
+        },
+        "en": {
+          "guitar": "E–D–C–B lament bass with an independent upper line",
+          "keys": "Descending left-hand line with a quiet right-hand answer"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/02 Grade Two/The Descent",
+      "midi": "repertoire/02 Grade Two/The Descent/The Descent.mid",
+      "score": "repertoire/02 Grade Two/The Descent/score.json",
+      "sha256": "0fbc3f1d200e0bf3515dea6d2f8803cd6b5421d0522c976a4e3d03e37b23dd92",
+      "duration": 90,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A′",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        }
+      ]
+    },
+    {
+      "id": "r2-2",
+      "title": "Crooked Footsteps",
+      "grade": 2,
+      "key": "Am",
+      "tempo": 88,
+      "time": "4/4",
+      "style": "syncopation",
+      "maxFret": 7,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p3",
+        "k3"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Gebundene Offbeats und präzise Pausen",
+          "keys": "Synkopierte rechte Hand gegen regelmäßige linke"
+        },
+        "en": {
+          "guitar": "Tied offbeats and precise rests",
+          "keys": "Syncopated right hand against a regular left hand"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/02 Grade Two/Crooked Footsteps",
+      "midi": "repertoire/02 Grade Two/Crooked Footsteps/Crooked Footsteps.mid",
+      "score": "repertoire/02 Grade Two/Crooked Footsteps/score.json",
+      "sha256": "05edf8d6b8dd991df085a14bc0921b8f712401cbeacc10fc26dd18a547f80227",
+      "duration": 65.45452800000034,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A′",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        }
+      ]
+    },
+    {
+      "id": "r2-3",
+      "title": "Shards of Rain",
+      "grade": 2,
+      "key": "Em",
+      "tempo": 96,
+      "time": "4/4",
+      "style": "sixteenths",
+      "maxFret": 7,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p3",
+        "k3"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Kurze Sechzehntelzellen zwischen längeren Noten",
+          "keys": "Kleine Sechzehntelantworten bei einfacher Begleitung"
+        },
+        "en": {
+          "guitar": "Short sixteenth-note cells between longer tones",
+          "keys": "Small sixteenth-note answers over simple accompaniment"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/02 Grade Two/Shards of Rain",
+      "midi": "repertoire/02 Grade Two/Shards of Rain/Shards of Rain.mid",
+      "score": "repertoire/02 Grade Two/Shards of Rain/score.json",
+      "sha256": "5a802a6318646f55962b6c26214b13b6984468f949b1dac41462d1ba25ef11a3",
+      "duration": 60,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "Coda",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        }
+      ]
+    },
+    {
+      "id": "r2-4",
+      "title": "Circle of Dust",
+      "grade": 2,
+      "key": "Am",
+      "tempo": 84,
+      "time": "3/4",
+      "style": "circle",
+      "maxFret": 7,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p3",
+        "k3"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Diatonischer Quintfall mit kleinen Griffwechseln",
+          "keys": "Akkordwechsel über bewegtem Bass"
+        },
+        "en": {
+          "guitar": "Diatonic descending fifths with small position changes",
+          "keys": "Chord changes above a moving bass"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/02 Grade Two/Circle of Dust",
+      "midi": "repertoire/02 Grade Two/Circle of Dust/Circle of Dust.mid",
+      "score": "repertoire/02 Grade Two/Circle of Dust/score.json",
+      "sha256": "21af03b160fe7eb1a8a7e7e782df433e445272f24ae73d56dce95d7ed6c5ba00",
+      "duration": 68.5714560000001,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 24
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 48
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 72
+        }
+      ]
+    },
+    {
+      "id": "r2-5",
+      "title": "Beyond the Gate",
+      "grade": 2,
+      "key": "Em",
+      "tempo": 92,
+      "time": "4/4",
+      "style": "endings",
+      "maxFret": 7,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p3",
+        "k3"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Wiederkehr mit verschiedenen Schlüssen",
+          "keys": "Zusammenhängende Form und bewusst gezählte Pausen"
+        },
+        "en": {
+          "guitar": "Returning motifs with different endings",
+          "keys": "Maintain the complete form and count silent beats"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/02 Grade Two/Beyond the Gate",
+      "midi": "repertoire/02 Grade Two/Beyond the Gate/Beyond the Gate.mid",
+      "score": "repertoire/02 Grade Two/Beyond the Gate/score.json",
+      "sha256": "b9c2f0acac654044ab68b28a9038d6665393bfd166a2e5aaef73d542c35dbb3f",
+      "duration": 83.47827200000006,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r3-1",
+      "title": "Threshold of Fire",
+      "grade": 3,
+      "key": "Em",
+      "tempo": 64,
+      "time": "4/4",
+      "style": "cadence",
+      "maxFret": 9,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 29,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p4",
+        "p5",
+        "k4",
+        "k5"
+      ],
+      "description": {
+        "de": {
+          "guitar": "B7–Em, Leitton mit klarer Auflösung",
+          "keys": "Dominantseptakkord, gemeinsame Töne und Auflösung"
+        },
+        "en": {
+          "guitar": "B7–Em and a clearly resolved leading tone",
+          "keys": "Dominant tension, common tones and resolution"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/03 Grade Three/Threshold of Fire",
+      "midi": "repertoire/03 Grade Three/Threshold of Fire/Threshold of Fire.mid",
+      "score": "repertoire/03 Grade Three/Threshold of Fire/score.json",
+      "sha256": "c0f3c241b45d7797e8f756b5ede242c9e00706f14c1fbade3f7a73ab96e78d65",
+      "duration": 120,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r3-2",
+      "title": "Dance of Lead",
+      "grade": 3,
+      "key": "Am",
+      "tempo": 84,
+      "time": "4/4",
+      "style": "diminished",
+      "maxFret": 9,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 29,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p4",
+        "p5",
+        "k4",
+        "k5"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Sequenz mit vermindertem Übergang",
+          "keys": "Kleine Stimmbewegungen durch verminderte und dominante Harmonien"
+        },
+        "en": {
+          "guitar": "Sequences through diminished harmony",
+          "keys": "Small voice movements through diminished and dominant harmony"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/03 Grade Three/Dance of Lead",
+      "midi": "repertoire/03 Grade Three/Dance of Lead/Dance of Lead.mid",
+      "score": "repertoire/03 Grade Three/Dance of Lead/score.json",
+      "sha256": "d4499d7815fa62291baa4703bbb75cca22bad5803fef2d850f12c6f5ac1f8546",
+      "duration": 91.4286080000006,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r3-3",
+      "title": "Blackwater",
+      "grade": 3,
+      "key": "Em",
+      "tempo": 52,
+      "time": "12/8",
+      "style": "compound",
+      "maxFret": 9,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p4",
+        "p5",
+        "k4",
+        "k5"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Arpeggio und Melodie über vier großen Pulsen",
+          "keys": "Linke Figur und rechte Melodie im 12/8"
+        },
+        "en": {
+          "guitar": "Arpeggios and melody over four compound pulses",
+          "keys": "Left-hand figuration and right-hand melody in 12/8"
+        }
+      },
+      "bars": 24,
+      "dir": "repertoire/03 Grade Three/Blackwater",
+      "midi": "repertoire/03 Grade Three/Blackwater/Blackwater.mid",
+      "score": "repertoire/03 Grade Three/Blackwater/score.json",
+      "sha256": "d5a663295031a61c7dc343439bcf63d5c8857e8783ae4c12120c898af135f836",
+      "duration": 110.76926400000121,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "12/8",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "12/8",
+          "startBeat": 48
+        },
+        {
+          "name": "A′",
+          "startBar": 17,
+          "bars": 8,
+          "time": "12/8",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r3-4",
+      "title": "Pendulum of Thorns",
+      "grade": 3,
+      "key": "Am",
+      "tempo": 84,
+      "time": "4/4",
+      "style": "shuffle",
+      "maxFret": 9,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p4",
+        "p5",
+        "k4",
+        "k5"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Quint-/Sextwechsel und ternärer Anschlag",
+          "keys": "Melodische Antworten mit bewusst langen/kurzen Achteln"
+        },
+        "en": {
+          "guitar": "Fifth–sixth alternation and swung attacks",
+          "keys": "Melodic answers with deliberately long and short eighths"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/03 Grade Three/Pendulum of Thorns",
+      "midi": "repertoire/03 Grade Three/Pendulum of Thorns/Pendulum of Thorns.mid",
+      "score": "repertoire/03 Grade Three/Pendulum of Thorns/score.json",
+      "sha256": "f5dfffb0123901a4990dd6141ffaf30166e9adbac38501173f781db1b035c268",
+      "duration": 91.42860800000015,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r3-5",
+      "title": "Threads of Smoke",
+      "grade": 3,
+      "key": "Em",
+      "tempo": 96,
+      "time": "4/4",
+      "style": "legato",
+      "maxFret": 9,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p4",
+        "p5",
+        "k4",
+        "k5"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Kurze Hammer-on-/Pull-off-Figuren in Sequenzen",
+          "keys": "Sequenz über wechselndem Bass, Melodie hervorheben"
+        },
+        "en": {
+          "guitar": "Short hammer-on and pull-off figures in sequences",
+          "keys": "Sequences over a changing bass; bring out the melody"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/03 Grade Three/Threads of Smoke",
+      "midi": "repertoire/03 Grade Three/Threads of Smoke/Threads of Smoke.mid",
+      "score": "repertoire/03 Grade Three/Threads of Smoke/score.json",
+      "sha256": "0d1fcedcd8cc9a88e303f1a95b2d953bac5b9201f40ced7b4f03d55871ad6265",
+      "duration": 80,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r4-1",
+      "title": "Light Through Lead",
+      "grade": 4,
+      "key": "Em",
+      "tempo": 72,
+      "time": "4/4",
+      "style": "lydian",
+      "maxFret": 12,
+      "programs": {
+        "keys": 4,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p6",
+        "p7",
+        "k6",
+        "k7"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Quartklänge und Wechsel des tonalen Bezugs",
+          "keys": "F♯ über C, heller Abschnitt und dunkle Rückkehr"
+        },
+        "en": {
+          "guitar": "Quartal colours and a shift of tonal centre",
+          "keys": "F-sharp over C; bright contrast and dark return"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/04 Grade Four/Light Through Lead",
+      "midi": "repertoire/04 Grade Four/Light Through Lead/Light Through Lead.mid",
+      "score": "repertoire/04 Grade Four/Light Through Lead/score.json",
+      "sha256": "60c289571a66d261cab11cfd199733fabab5723dfd7281df61612a670f19aec4",
+      "duration": 106.66662399999909,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r4-2",
+      "title": "Cold Bells",
+      "grade": 4,
+      "key": "Em",
+      "tempo": 84,
+      "time": "3/4",
+      "style": "register",
+      "maxFret": 12,
+      "programs": {
+        "keys": 4,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p6",
+        "p7",
+        "k6",
+        "k7"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Registerantworten und lange, kontrollierte Tonenden",
+          "keys": "Motiv in getrennten Registern, bewusste Ausdünnung"
+        },
+        "en": {
+          "guitar": "Answers across registers with controlled note endings",
+          "keys": "Motifs in separated registers with deliberate thinning"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/04 Grade Four/Cold Bells",
+      "midi": "repertoire/04 Grade Four/Cold Bells/Cold Bells.mid",
+      "score": "repertoire/04 Grade Four/Cold Bells/score.json",
+      "sha256": "eae6c4b98df4c5d8258b47a82514e1e85074782b3d4c2e981668ced93708b7a5",
+      "duration": 68.5714560000001,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 24
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 48
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "3/4",
+          "startBeat": 72
+        }
+      ]
+    },
+    {
+      "id": "r4-3",
+      "title": "Stone Against Water",
+      "grade": 4,
+      "key": "Em",
+      "tempo": 84,
+      "time": "4/4",
+      "style": "polyrhythm",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p6",
+        "p7",
+        "k6",
+        "k7"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Kurze 3:2-Passagen über stabiler Begleitung",
+          "keys": "3:2 zwischen den Händen in begrenzten Abschnitten"
+        },
+        "en": {
+          "guitar": "Short 3:2 passages over a stable accompaniment",
+          "keys": "Limited passages of 3:2 between the hands"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/04 Grade Four/Stone Against Water",
+      "midi": "repertoire/04 Grade Four/Stone Against Water/Stone Against Water.mid",
+      "score": "repertoire/04 Grade Four/Stone Against Water/score.json",
+      "sha256": "8c778b0c371fac1ee3c9c34118e71240ecd7a3620b2d13dbdee46cc8474ca8f7",
+      "duration": 91.4286080000006,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        }
+      ]
+    },
+    {
+      "id": "r4-4",
+      "title": "Seven Shadows",
+      "grade": 4,
+      "key": "Em",
+      "tempo": 168,
+      "time": "7/8",
+      "style": "odd",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p6",
+        "p7",
+        "k6",
+        "k7"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Akzentgruppen und zusammenhängende Phrasen",
+          "keys": "Ostinato mit klarer Gruppierung und Gegenstimme"
+        },
+        "en": {
+          "guitar": "Accent groups and connected phrases",
+          "keys": "Clearly grouped ostinato with a countervoice"
+        }
+      },
+      "bars": 32,
+      "dir": "repertoire/04 Grade Four/Seven Shadows",
+      "midi": "repertoire/04 Grade Four/Seven Shadows/Seven Shadows.mid",
+      "score": "repertoire/04 Grade Four/Seven Shadows/score.json",
+      "sha256": "d7f4daaa5d6889b41879cb37cc46a8d5da93b02306ac5d960cd701174095ca31",
+      "duration": 80.00003200000035,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "7/8",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "7/8",
+          "startBeat": 28
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "7/8",
+          "startBeat": 56
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 8,
+          "time": "7/8",
+          "startBeat": 84
+        }
+      ]
+    },
+    {
+      "id": "r4-5",
+      "title": "The Broken Circle",
+      "grade": 4,
+      "key": "Am",
+      "tempo": 100,
+      "time": "4/4",
+      "style": "332",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 30,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p6",
+        "p7",
+        "k6",
+        "k7"
+      ],
+      "description": {
+        "de": {
+          "guitar": "3+3+2, kurzer ausgeschriebener pentatonischer Soloabschnitt",
+          "keys": "Wechsel von rhythmischer Begleitung und Melodie"
+        },
+        "en": {
+          "guitar": "3+3+2 and a short written pentatonic solo",
+          "keys": "Switch between rhythmic accompaniment and melody"
+        }
+      },
+      "bars": 40,
+      "dir": "repertoire/04 Grade Four/The Broken Circle",
+      "midi": "repertoire/04 Grade Four/The Broken Circle/The Broken Circle.mid",
+      "score": "repertoire/04 Grade Four/The Broken Circle/score.json",
+      "sha256": "f9d56e2283ab3ba2f3b6cca9a03d6082f1ba78a895cf658820e9ad6c6b848bb5",
+      "duration": 96.00000000000087,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "Solo",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "A",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        },
+        {
+          "name": "Coda",
+          "startBar": 33,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 128
+        }
+      ]
+    },
+    {
+      "id": "r5-1",
+      "title": "House of Rain",
+      "grade": 5,
+      "key": "Em",
+      "tempo": 76,
+      "time": "4/4",
+      "style": "suite",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 29,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p8",
+        "k8"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Wechsel von Riff, Arpeggio und tragender Melodie",
+          "keys": "Innenstimmen und eigenes Thema, Dichte über die Form"
+        },
+        "en": {
+          "guitar": "Riff, arpeggio and sustained melodic roles",
+          "keys": "Inner voices and a separate theme across the form"
+        }
+      },
+      "bars": 48,
+      "dir": "repertoire/05 Grade Five/House of Rain",
+      "midi": "repertoire/05 Grade Five/House of Rain/House of Rain.mid",
+      "score": "repertoire/05 Grade Five/House of Rain/score.json",
+      "sha256": "5481ec563c4295c6f046edd8254937c83c9f48d5580e228fd797405297f4052f",
+      "duration": 151.57900800000036,
+      "sections": [
+        {
+          "name": "Intro",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "A",
+          "startBar": 5,
+          "bars": 12,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "B",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "A′",
+          "startBar": 25,
+          "bars": 12,
+          "time": "4/4",
+          "startBeat": 96
+        },
+        {
+          "name": "Coda",
+          "startBar": 37,
+          "bars": 12,
+          "time": "4/4",
+          "startBeat": 144
+        }
+      ]
+    },
+    {
+      "id": "r5-2",
+      "title": "Ashen Garden",
+      "grade": 5,
+      "key": "Am",
+      "tempo": 60,
+      "time": "12/8",
+      "style": "ballad",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p8",
+        "k8"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Singende Linie, Zielton-Bendings und ausgeschriebener Soloabschnitt",
+          "keys": "Linke Melodie in einem Abschnitt, danach Rückkehr zur Begleitung"
+        },
+        "en": {
+          "guitar": "Singing lines, target-note bends and a written solo",
+          "keys": "A left-hand melodic section, then return to accompaniment"
+        }
+      },
+      "bars": 48,
+      "dir": "repertoire/05 Grade Five/Ashen Garden",
+      "midi": "repertoire/05 Grade Five/Ashen Garden/Ashen Garden.mid",
+      "score": "repertoire/05 Grade Five/Ashen Garden/score.json",
+      "sha256": "3cd7c620696fb8feb5f95467c23da4dcab7f4d916157fe5280bb0ed492c04d87",
+      "duration": 192.00009600000058,
+      "sections": [
+        {
+          "name": "Intro",
+          "startBar": 1,
+          "bars": 4,
+          "time": "12/8",
+          "startBeat": 0
+        },
+        {
+          "name": "A",
+          "startBar": 5,
+          "bars": 12,
+          "time": "12/8",
+          "startBeat": 24
+        },
+        {
+          "name": "B",
+          "startBar": 17,
+          "bars": 8,
+          "time": "12/8",
+          "startBeat": 96
+        },
+        {
+          "name": "Solo",
+          "startBar": 25,
+          "bars": 8,
+          "time": "12/8",
+          "startBeat": 144
+        },
+        {
+          "name": "A′",
+          "startBar": 33,
+          "bars": 12,
+          "time": "12/8",
+          "startBeat": 192
+        },
+        {
+          "name": "Coda",
+          "startBar": 45,
+          "bars": 4,
+          "time": "12/8",
+          "startBeat": 264
+        }
+      ]
+    },
+    {
+      "id": "r5-3",
+      "title": "Clockwork Winter",
+      "grade": 5,
+      "key": "Dm",
+      "tempo": 120,
+      "time": "4/4",
+      "style": "ritornello",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p8",
+        "k8"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Barock beeinflusste Sequenzen, zügige Achtel und Saitenwechsel",
+          "keys": "Figuration und klare Ritornell-Einsätze"
+        },
+        "en": {
+          "guitar": "Baroque-influenced sequences, brisk eighths and string changes",
+          "keys": "Figuration and clear returning-theme entries"
+        }
+      },
+      "bars": 48,
+      "dir": "repertoire/05 Grade Five/Clockwork Winter",
+      "midi": "repertoire/05 Grade Five/Clockwork Winter/Clockwork Winter.mid",
+      "score": "repertoire/05 Grade Five/Clockwork Winter/score.json",
+      "sha256": "4f2872ebda031edd16e05c52d980f6e9099ae4a57476e697a53d551d2b2f2658",
+      "duration": 96,
+      "sections": [
+        {
+          "name": "A",
+          "startBar": 1,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "B",
+          "startBar": 9,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 32
+        },
+        {
+          "name": "A",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Solo",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        },
+        {
+          "name": "A",
+          "startBar": 33,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 128
+        },
+        {
+          "name": "Coda",
+          "startBar": 41,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 160
+        }
+      ]
+    },
+    {
+      "id": "r5-4",
+      "title": "Two Shores",
+      "grade": 5,
+      "key": "Em",
+      "tempo": 100,
+      "time": "4/4",
+      "style": "dialogue",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 27,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p8",
+        "k8"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Eigener solistischer Abschnitt, Bandbass setzt dort aus",
+          "keys": "Eigener solistischer Abschnitt, selbst geführter Bass"
+        },
+        "en": {
+          "guitar": "Solo section with the band bass resting",
+          "keys": "Solo section with an independent left-hand bass"
+        }
+      },
+      "bars": 56,
+      "dir": "repertoire/05 Grade Five/Two Shores",
+      "midi": "repertoire/05 Grade Five/Two Shores/Two Shores.mid",
+      "score": "repertoire/05 Grade Five/Two Shores/score.json",
+      "sha256": "774c2eab2c43d6e3748ea6b3e93601ce8962f36e4d8473566879cdfa33501eb3",
+      "duration": 134.4000000000019,
+      "sections": [
+        {
+          "name": "Intro",
+          "startBar": 1,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 0
+        },
+        {
+          "name": "A",
+          "startBar": 5,
+          "bars": 12,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "B",
+          "startBar": 17,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 64
+        },
+        {
+          "name": "Guitar solo",
+          "startBar": 25,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 96
+        },
+        {
+          "name": "Keyboard solo",
+          "startBar": 33,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 128
+        },
+        {
+          "name": "A′",
+          "startBar": 41,
+          "bars": 12,
+          "time": "4/4",
+          "startBeat": 160
+        },
+        {
+          "name": "Coda",
+          "startBar": 53,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 208
+        }
+      ]
+    },
+    {
+      "id": "r5-5",
+      "title": "Where the Night Ends",
+      "grade": 5,
+      "key": "Em",
+      "tempo": 84,
+      "time": "4/4",
+      "style": "finale",
+      "maxFret": 12,
+      "programs": {
+        "keys": 0,
+        "bass": 33,
+        "guitar": 29,
+        "drums": 16
+      },
+      "prerequisites": [
+        "p8",
+        "k8"
+      ],
+      "description": {
+        "de": {
+          "guitar": "Zusammenhängende Miniatursuite mit Klang- und Rollenwechseln",
+          "keys": "Kontrastierende Texturen, Taktwechsel und gemeinsamer Schluss"
+        },
+        "en": {
+          "guitar": "A connected miniature suite with changing roles and metre",
+          "keys": "Contrasting textures, metre changes and a shared ending"
+        }
+      },
+      "bars": 64,
+      "dir": "repertoire/05 Grade Five/Where the Night Ends",
+      "midi": "repertoire/05 Grade Five/Where the Night Ends/Where the Night Ends.mid",
+      "score": "repertoire/05 Grade Five/Where the Night Ends/score.json",
+      "sha256": "b308381c168e87da4302fa62a9892f502f93a753f816ba76cd214382fe50c549",
+      "duration": 171.42864000000233,
+      "sections": [
+        {
+          "name": "Intro",
+          "startBar": 1,
+          "bars": 4,
+          "time": "3/4",
+          "startBeat": 0
+        },
+        {
+          "name": "A",
+          "startBar": 5,
+          "bars": 16,
+          "time": "4/4",
+          "startBeat": 12
+        },
+        {
+          "name": "B",
+          "startBar": 21,
+          "bars": 12,
+          "time": "3/4",
+          "startBeat": 76
+        },
+        {
+          "name": "Solo",
+          "startBar": 33,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 112
+        },
+        {
+          "name": "A′",
+          "startBar": 41,
+          "bars": 16,
+          "time": "4/4",
+          "startBeat": 144
+        },
+        {
+          "name": "Coda",
+          "startBar": 57,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 208
+        }
+      ]
+    }
+  ]
+}
