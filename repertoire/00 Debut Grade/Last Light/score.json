@@ -19,11 +19,11 @@
   ],
   "description": {
     "de": {
-      "guitar": "Zwei Stimmen halten und getrennt beenden",
+      "guitar": "Singendes Motiv, bewusste Tonenden und Übergabe der Melodie",
       "keys": "Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen"
     },
     "en": {
-      "guitar": "Hold two voices and end them independently",
+      "guitar": "Singing motif, deliberate note endings and handing over the melody",
       "keys": "Shared attacks, independent releases and a dynamic arc"
     }
   },
@@ -62,9 +62,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -159,9 +158,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -257,9 +255,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -355,9 +352,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -444,20 +440,19 @@
           "guitar": {
             "notes": [
               {
-                "r": 1,
-                "d": "h"
+                "p": "E3",
+                "d": "h",
+                "s": 2
               },
               {
-                "p": "G3",
-                "d": "h",
-                "s": 3
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -540,20 +535,24 @@
           "guitar": {
             "notes": [
               {
-                "r": 1,
-                "d": "h"
+                "p": "A3",
+                "d": "q",
+                "s": 3
               },
               {
-                "p": "E4",
+                "r": 1,
+                "d": "q"
+              },
+              {
+                "p": "E3",
                 "d": "h",
-                "s": 4
+                "s": 2
               }
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -632,21 +631,23 @@
           "guitar": {
             "notes": [
               {
+                "r": 1,
+                "d": "h"
+              },
+              {
                 "p": "G3",
-                "d": "h",
+                "d": "q",
                 "s": 3
               },
               {
-                "p": "B3",
-                "d": "h",
-                "s": 3
+                "r": 1,
+                "d": "q"
               }
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -729,21 +730,24 @@
           "guitar": {
             "notes": [
               {
-                "p": "G3",
-                "d": "h",
-                "s": 3
+                "p": "F#3",
+                "d": "q",
+                "s": 2
               },
               {
-                "p": "B3",
-                "d": "h",
-                "s": 3
+                "p": "E3",
+                "d": "q",
+                "s": 2
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -851,9 +855,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -948,9 +951,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -1046,9 +1048,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -1144,9 +1145,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -1255,9 +1255,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -1352,9 +1351,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -1455,9 +1453,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },
@@ -1543,9 +1540,8 @@
             ],
             "bass": [
               {
-                "p": "E2",
-                "d": "w",
-                "s": 0
+                "r": 1,
+                "d": "w"
               }
             ]
           },

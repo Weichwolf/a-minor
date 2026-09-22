@@ -61,8 +61,27 @@ test('all 60 downloadable parts are real PDF files',()=>{
 
 test('learning features are present in both relevant parts, with varied phrase dynamics',()=>{
  const find=id=>JSON.parse(fs.readFileSync(catalog.pieces.find(p=>p.id===id).score));
- const poly=find('r4-3').sections.find(s=>s.name==='B');for(const role of ['guitar','keys']){assert(poly.bars[0][role].notes.some(n=>n.d==='qt'));assert.deepEqual(poly.bars[0][role].bass.map(n=>n.d),['q','q','q','q']);}
+ const poly=find('r4-3').sections.find(s=>s.name==='B');for(const role of ['guitar','keys']){assert(poly.bars[0][role].notes.some(n=>n.d==='qt'));assert.deepEqual((role==='guitar'?poly.bars[0].bass:poly.bars[0].keys.bass).map(n=>n.d),['q','q','q','q']);}
  const ballad=find('r5-2').sections.find(s=>s.name==='Solo');assert(ballad.bars[0].guitar.notes.some(n=>n.bend===2));assert(ballad.bars.every(b=>b.guitar.bass.every(n=>n.r)),'channel-wide bend has no held guitar bass to detune');
- const duet=find('r5-4');for(const name of ['Guitar solo','Keyboard solo']){const section=duet.sections.find(s=>s.name===name);assert(section.bars.every(b=>b.bass.every(n=>n.r)));}
+ const duet=find('r5-4');for(const name of ['Guitar solo','Keyboard solo']){const section=duet.sections.find(s=>s.name===name);assert(section.bars.every(b=>b.bass.some(n=>!n.r)&&b.guitar.notes.some(n=>!n.r)&&b.keys.notes.some(n=>!n.r)),'both solos retain the band');}
  const dynamic=find('r0-5').sections[0].bars.map(b=>b.dynamics.guitar);assert(new Set(dynamic).size>=3,'phrase has a dynamic arc');
+});
+
+test('band guitar uses single lines or adjacent-string fifths; the bass carries the lament',()=>{
+ for(const piece of catalog.pieces){
+  const score=JSON.parse(fs.readFileSync(piece.score));
+  for(const section of score.sections)for(const b of section.bars){
+   assert(b.guitar.bass.every(n=>n.r),piece.title+' no independent guitar pedal');
+   for(const n of b.guitar.notes)if(Array.isArray(n.p)){
+    assert.equal(n.p.length,2);assert.equal(M.midi(n.p[1])-M.midi(n.p[0]),7,piece.title+' power fifth');
+    assert.equal(Math.abs(n.s[0]-n.s[1]),1,piece.title+' adjacent strings');
+    assert(piece.grade>0,'beginner pieces use single notes');
+   }
+  }
+ }
+ const descent=JSON.parse(fs.readFileSync(catalog.pieces.find(p=>p.id==='r2-1').score));
+ assert.deepEqual(descent.sections[0].bars.slice(0,4).map(b=>b.bass[0].p),['E2','D2','C2','B1']);
+ const broken=JSON.parse(fs.readFileSync(catalog.pieces.find(p=>p.id==='r4-5').score));
+ assert(broken.sections[0].bars.every(b=>b.guitar.notes.some(n=>Array.isArray(n.p))));
+ for(const b of broken.sections.find(s=>s.name==='Solo').bars)for(const n of b.guitar.notes)if(!n.r)assert(['A','C','D','E','G'].includes(n.p.replace(/-?\d+$/,'')));
 });

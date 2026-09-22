@@ -18,8 +18,9 @@ Die Grade sind interne Repertoirestufen. Die Zuordnung folgt dem bestehenden Kur
 - Dunkler Rock, Doom, modale Balladen und barock beeinflusste Sequenzen. Helle Kontrastteile gehören dazu.
 - Gitarre: sechs Saiten E2 A2 D3 G3 C4 F4, rechte Hand mit Plektrum. Keine Standardstimmungsgriffe übernehmen.
 - Keyboard: alle gespielten Töne innerhalb C2–C6; pro Hand erreichbare Voicings. Der separate Bandbass darf tiefer liegen.
+- Die Repertoiregitarre spielt Einzeltonriffs, Powerchords, Themen und Soli ohne separate Pedalstimme. Das zweistimmige Solospiel bleibt im Kurs.
 - Gitarre und Keyboard teilen Themen und Form, bekommen aber ergänzende Stimmen. Melodische Führung wechselt; Begleitfiguren treten hinter die führende Stimme zurück.
-- Der Bandbass bekommt eine eigene Linie. Keyboard links spielt dazu passende Innenstimmen, Gegenbewegungen oder rhythmisch abgestimmte Bassverdopplungen. Bei solistischen Basspassagen kann der Bandbass aussetzen.
+- Der Bandbass bekommt eine eigene Linie. Keyboard links spielt dazu passende Innenstimmen, Gegenbewegungen oder rhythmisch abgestimmte Bassverdopplungen. Auch Gitarren- und Keyboardsoli behalten Bandbegleitung.
 - Jedes Stück funktioniert als vollständiger Durchlauf. Abschnittsloops sind ein Übewerkzeug. Der normale Durchlauf endet am komponierten Schluss.
 - Ein ausgeschriebener Soloabschnitt bleibt vollständig spielbar; Improvisation ist eine zusätzliche Variante.
 
@@ -36,58 +37,58 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Ember | E-Moll, 4/4, ♩ = 60 | A2–B2–A2–C2 / 8 | Dreitonmotiv, Viertel und Halbe, saubere Tonwechsel | Dreitonantwort rechts, Pausen mitzählen |
 | Stone and Breath | E-Moll, 4/4, ♩ = 56 | A4–A′4–C4 / 12 | Lange Töne, absichtliches Abdämpfen | Halten und Loslassen, erste einzelne linke Bezugstöne |
 | Empty Halls | E-Moll, 3/4, ♩ = 66 | A4–B4–A4–C4 / 16 | Einfache Saitenwechsel im Dreierpuls | Hände wechseln sich mit kleinen Antworten ab |
-| Beneath the Ash | A-Moll, 4/4, ♩ = 64 | A4–B4–A4–C4 / 16 | Offenes A als Pedal, kleine Oberstimme | Gehaltener Ton links, Viertelmotiv rechts |
-| Last Light | E-Moll, 4/4, ♩ = 72 | A4–B4–A4–C4 / 16 | Zwei Stimmen halten und getrennt beenden | Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen |
+| Beneath the Ash | A-Moll, 4/4, ♩ = 64 | A4–B4–A4–C4 / 16 | Einstimmiges A-Moll-Riff, klare Pausen und Antwort ans Keyboard | Gehaltener Ton links, Viertelmotiv rechts |
+| Last Light | E-Moll, 4/4, ♩ = 72 | A4–B4–A4–C4 / 16 | Singendes Motiv, bewusste Tonenden und Übergabe der Melodie | Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen |
 
 ### Grade 1 · Motive, modale Farben und Akkorde — Kursphasen 1–2
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
-| Mossbound | E-Äolisch, 4/4, ♩ = 76 | A4–B4–A4–C4 / 16 | Achtelmotiv über offenem Bezugston | Motiv und Antwort über ruhiger linker Hand |
-| The Second Threshold | E-Phrygisch, 4/4, ♩ = 60 | A4–B4–A4–C4 / 16 | F–E als hörbare Reibung und Rückkehr | Melodische F-Farbe über E, getrennte Stimmführung |
-| Black Glass | A-Moll, 4/4, ♩ = 80 | A8–B8–A′8 / 24 | Gebrochene Dreiklänge mit hervorgehobener Oberstimme | Akkordbrechung und Melodie auf beide Hände verteilt |
+| Mossbound | E-Äolisch, 4/4, ♩ = 76 | A4–B4–A4–C4 / 16 | Achtelriff und ruhige Powerchord-Antworten | Motiv und Antwort über ruhiger linker Hand |
+| The Second Threshold | E-Phrygisch, 4/4, ♩ = 60 | A4–B4–A4–C4 / 16 | Einstimmiges F–E-Riff; F5–E5 als phrygische Akkordantwort | Melodische F-Farbe über E, getrennte Stimmführung |
+| Black Glass | A-Moll, 4/4, ♩ = 80 | A8–B8–A′8 / 24 | Einstimmige Akkordbrechungen, danach offene Powerchord-Flächen | Akkordbrechung und Melodie auf beide Hände verteilt |
 | Iron Rain | E-Moll, 4/4, ♩ = 92 | A8–B8–A′8 / 24 | Powerchords, Handkantendämpfung und offene Akzente | Kurze Akkorde und gezielte Offbeat-Antworten |
-| November Window | A-Moll, 3/4, ♩ = 72 | A8–B8–A′8 / 24 | Dreiklangsmelodie und ruhiger Bass im Dreierpuls | Akkordwechsel mit singender Oberstimme |
+| November Window | A-Moll, 3/4, ♩ = 72 | A8–B8–A′8 / 24 | Dreiklangsmelodie und abgesetzte Powerchords im Dreierpuls | Akkordwechsel mit singender Oberstimme |
 
 ### Grade 2 · Bewegter Bass und rhythmische Kontur — Kursphase 3
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
-| The Descent | E-Moll, 4/4, ♩ = 64 | A8–B8–A′8 / 24 | Lamento E–D–C–B und unabhängige Oberstimme | Absteigende linke Linie, ruhige rechte Antwort |
-| Crooked Footsteps | A-Moll, 4/4, ♩ = 88 | A8–B8–A′8 / 24 | Gebundene Offbeats und präzise Pausen | Synkopierte rechte Hand gegen regelmäßige linke |
-| Shards of Rain | E-Moll, 4/4, ♩ = 96 | A8–B8–C8 / 24 | Kurze Sechzehntelzellen zwischen längeren Noten | Kleine Sechzehntelantworten bei einfacher Begleitung |
-| Circle of Dust | A-Moll, 3/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Diatonischer Quintfall mit kleinen Griffwechseln | Akkordwechsel über bewegtem Bass |
-| Beyond the Gate | E-Moll, 4/4, ♩ = 92 | A8–B8–A8–C8 / 32 | Wiederkehr mit verschiedenen Schlüssen | Zusammenhängende Form und bewusst gezählte Pausen |
+| The Descent | E-Moll, 4/4, ♩ = 64 | A8–B8–A′8 / 24 | Melodie über dem Lamento des Bandbasses; klare Akkorde im Antwortteil | Ruhige Akkordfarben über dem Lamento des Bandbasses, eigene Melodie im B-Teil |
+| Crooked Footsteps | A-Moll, 4/4, ♩ = 88 | A8–B8–A′8 / 24 | Synkopiertes Einzeltonriff und gebundene Powerchord-Offbeats | Synkopierte rechte Hand gegen regelmäßige linke |
+| Shards of Rain | E-Moll, 4/4, ♩ = 96 | A8–B8–C8 / 24 | Sechzehntelfiguren, danach kurze Akkordakzente unter dem Keyboard | Kleine Sechzehntelantworten bei einfacher Begleitung |
+| Circle of Dust | A-Moll, 3/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Melodische Sequenz und sparsame Akkordantworten im Quintfall | Akkordwechsel über bewegtem Bass |
+| Beyond the Gate | E-Moll, 4/4, ♩ = 92 | A8–B8–A8–C8 / 32 | Riff und Wiederkehr mit neuem Schluss; Pausen im Begleitteil | Zusammenhängende Form und bewusst gezählte Pausen |
 
 ### Grade 3 · Spannung, Sequenzen und ternärer Puls — Kursphasen 4–5
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
-| Threshold of Fire | E-Moll mit D♯, 4/4, ♩ = 64 | A8–B8–A8–C8 / 32 | B7–Em, Leitton mit klarer Auflösung | Dominantseptakkord, gemeinsame Töne und Auflösung |
-| Dance of Lead | A-Moll, 4/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Sequenz mit vermindertem Übergang | Kleine Stimmbewegungen durch verminderte und dominante Harmonien |
-| Blackwater | E-Moll, 12/8, ♩. = 52 | A8–B8–A′8 / 24 | Arpeggio und Melodie über vier großen Pulsen | Linke Figur und rechte Melodie im 12/8 |
-| Pendulum of Thorns | A-Moll, 4/4 Shuffle, ♩ = 84 | A8–B8–A8–C8 / 32 | Quint-/Sextwechsel und ternärer Anschlag | Melodische Antworten mit bewusst langen/kurzen Achteln |
-| Threads of Smoke | E-Moll, 4/4, ♩ = 96 | A8–B8–A8–C8 / 32 | Kurze Hammer-on-/Pull-off-Figuren in Sequenzen | Sequenz über wechselndem Bass, Melodie hervorheben |
+| Threshold of Fire | E-Moll mit D♯, 4/4, ♩ = 64 | A8–B8–A8–C8 / 32 | Leittonmelodie über B7–Em und breite Powerchord-Antworten | Dominantseptakkord, gemeinsame Töne und Auflösung |
+| Dance of Lead | A-Moll, 4/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Einstimmige Sequenz durch verminderte Harmonik, danach Akkordakzente | Kleine Stimmbewegungen durch verminderte und dominante Harmonien |
+| Blackwater | E-Moll, 12/8, ♩. = 52 | A8–B8–A′8 / 24 | Fließendes 12/8-Thema und Powerchords mit Atempausen | Linke Figur und rechte Melodie im 12/8 |
+| Pendulum of Thorns | A-Moll, 4/4 Shuffle, ♩ = 84 | A8–B8–A8–C8 / 32 | Einstimmiges Quint-/Sextriff und geshuffelte Akkordantworten | Melodische Antworten mit bewusst langen/kurzen Achteln |
+| Threads of Smoke | E-Moll, 4/4, ♩ = 96 | A8–B8–A8–C8 / 32 | Hammer-ons/Pull-offs in der Leadlinie; ruhige Begleitakkorde | Sequenz über wechselndem Bass, Melodie hervorheben |
 
 ### Grade 4 · Klangkontrast und asymmetrische Bewegung — Kursphasen 6–7
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
-| Light Through Lead | C-Lydisch / E-Äolisch, 4/4, ♩ = 72 | A8–B8–A8–C8 / 32 | Quartklänge und Wechsel des tonalen Bezugs | F♯ über C, heller Abschnitt und dunkle Rückkehr |
+| Light Through Lead | C-Lydisch / E-Äolisch, 4/4, ♩ = 72 | A8–B8–A8–C8 / 32 | Melodisches Mollthema; klare Quinten unter dem lydischen Keyboard | F♯ über C, heller Abschnitt und dunkle Rückkehr |
 | Cold Bells | E-Moll, 3/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Registerantworten und lange, kontrollierte Tonenden | Motiv in getrennten Registern, bewusste Ausdünnung |
-| Stone Against Water | E-Moll, 4/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Kurze 3:2-Passagen über stabiler Begleitung | 3:2 zwischen den Händen in begrenzten Abschnitten |
-| Seven Shadows | E-Moll, 7/8 (2+2+3), ♪ = 168 | A8–B8–A8–C8 / 32 | Akzentgruppen und zusammenhängende Phrasen | Ostinato mit klarer Gruppierung und Gegenstimme |
-| The Broken Circle | A-Moll, 4/4, ♩ = 100 | A8–B8–Solo8–A8–C8 / 40 | 3+3+2, kurzer ausgeschriebener pentatonischer Soloabschnitt | Wechsel von rhythmischer Begleitung und Melodie |
+| Stone Against Water | E-Moll, 4/4, ♩ = 84 | A8–B8–A8–C8 / 32 | Triolenmelodie gegen den Viertelpuls von Bandbass und Drums | 3:2 zwischen den Händen in begrenzten Abschnitten |
+| Seven Shadows | E-Moll, 7/8 (2+2+3), ♪ = 168 | A8–B8–A8–C8 / 32 | 7/8-Riff und Powerchord-Akzente in 2+2+3 | Ostinato mit klarer Gruppierung und Gegenstimme |
+| The Broken Circle | A-Moll, 4/4, ♩ = 100 | A8–B8–Solo8–A8–C8 / 40 | Powerchord-Riff in 3+3+2 und eigener pentatonischer Soloabschnitt | Wechsel von rhythmischer Begleitung und Melodie |
 
 ### Grade 5 · Vollständige Arrangements — Kursphase 8, Fähigkeiten aus 0–7
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
-| House of Rain | E-Moll, 4/4, ♩ = 76 | Intro4–A12–B8–A′12–Coda12 / 48 | Wechsel von Riff, Arpeggio und tragender Melodie | Innenstimmen und eigenes Thema, Dichte über die Form |
-| Ashen Garden | A-Moll, 12/8, ♩. = 60 | Intro4–A12–B8–Solo8–A′12–Coda4 / 48 | Singende Linie, Zielton-Bendings und ausgeschriebener Soloabschnitt | Linke Melodie in einem Abschnitt, danach Rückkehr zur Begleitung |
-| Clockwork Winter | D-Moll, 4/4, ♩ = 120 | Ritornell8–Episode8–R8–Episode8–R8–Coda8 / 48 | Barock beeinflusste Sequenzen, zügige Achtel und Saitenwechsel | Figuration und klare Ritornell-Einsätze |
-| Two Shores | E-Moll, 4/4, ♩ = 100 | Intro4–A12–B8–Gitarre8–Keyboard8–A′12–Coda4 / 56 | Eigener solistischer Abschnitt, Bandbass setzt dort aus | Eigener solistischer Abschnitt, selbst geführter Bass |
-| Where the Night Ends | E-Moll, 3/4 und 4/4, ♩ = 84 | Intro4–A16–B12–Solo8–A′16–Coda8 / 64 | Zusammenhängende Miniatursuite mit Klang- und Rollenwechseln | Kontrastierende Texturen, Taktwechsel und gemeinsamer Schluss |
+| House of Rain | E-Moll, 4/4, ♩ = 76 | Intro4–A12–B8–A′12–Coda12 / 48 | Offenes Intro, Powerchord-Riff, melodische Fortsetzung und Rückkehr | Innenstimmen und eigenes Thema, Dichte über die Form |
+| Ashen Garden | A-Moll, 12/8, ♩. = 60 | Intro4–A12–B8–Solo8–A′12–Coda4 / 48 | Singende Leadlinie, luftige Begleitakkorde und Zielton-Bending im Solo | Linke Melodie in einem Abschnitt, danach Rückkehr zur Begleitung |
+| Clockwork Winter | D-Moll, 4/4, ♩ = 120 | Ritornell8–Episode8–R8–Episode8–R8–Coda8 / 48 | Barockes Einzelton-Thema, ruhige Akkordbegleitung und eigene Soloepisode | Figuration und klare Ritornell-Einsätze |
+| Two Shores | E-Moll, 4/4, ♩ = 100 | Intro4–A12–B8–Gitarre8–Keyboard8–A′12–Coda4 / 56 | Riff und eigenes Solo mit Bandbegleitung; Akkordstützen im Keyboardsolo | Bandharmonie während des Gitarrensolos, danach eigenes Solo mit Bass und Drums |
+| Where the Night Ends | E-Moll, 3/4 und 4/4, ♩ = 84 | Intro4–A16–B12–Solo8–A′16–Coda8 / 64 | Miniatursuite: Intro, Powerchord-Riff, Leadthema und Solo mit Band | Kontrastierende Texturen, Taktwechsel und gemeinsamer Schluss |
 
 ## MIDI: Befund aus Gigajam
 

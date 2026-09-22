@@ -47,7 +47,7 @@
       "dir": "repertoire/00 Debut Grade/Ember",
       "midi": "repertoire/00 Debut Grade/Ember/Ember.mid",
       "score": "repertoire/00 Debut Grade/Ember/score.json",
-      "sha256": "c91afcccaed9dd248c23fbc69620eb722a47c932c1fc00604113a1c861ca0218",
+      "sha256": "63ffceb1c068bc546643469220a323c5bf04fc7a7ab63285919d52a2fe94bfb5",
       "duration": 32,
       "sections": [
         {
@@ -172,8 +172,8 @@
       "dir": "repertoire/00 Debut Grade/Empty Halls",
       "midi": "repertoire/00 Debut Grade/Empty Halls/Empty Halls.mid",
       "score": "repertoire/00 Debut Grade/Empty Halls/score.json",
-      "sha256": "8c6da03e557b58a55b937fb33be1b5a261e5be2f3ea43d7d8e16610c9b9e83a6",
-      "duration": 43.63636799999997,
+      "sha256": "846b15ecda4be6ebb5f388803d52dbdfd63a2055110e4b79ab18e5031bad86dd",
+      "duration": 43.636367999999976,
       "sections": [
         {
           "name": "A",
@@ -226,11 +226,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Offenes A als Pedal, kleine Oberstimme",
+          "guitar": "Einstimmiges A-Moll-Riff, klare Pausen und Antwort ans Keyboard",
           "keys": "Gehaltener Ton links, Viertelmotiv rechts"
         },
         "en": {
-          "guitar": "Open A pedal beneath a small upper voice",
+          "guitar": "Single-note A-minor riff, clear rests and a reply to the keyboard",
           "keys": "Held left-hand tone beneath a quarter-note motif"
         }
       },
@@ -238,7 +238,7 @@
       "dir": "repertoire/00 Debut Grade/Beneath the Ash",
       "midi": "repertoire/00 Debut Grade/Beneath the Ash/Beneath the Ash.mid",
       "score": "repertoire/00 Debut Grade/Beneath the Ash/score.json",
-      "sha256": "a6660865dab71644a50689a002eb2e795a05af37835f907c0ddd6476e5f8878b",
+      "sha256": "9864db277853d586259bd40c4b257660df7225814368e100d23345b3f159e6c3",
       "duration": 60,
       "sections": [
         {
@@ -292,11 +292,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Zwei Stimmen halten und getrennt beenden",
+          "guitar": "Singendes Motiv, bewusste Tonenden und Übergabe der Melodie",
           "keys": "Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen"
         },
         "en": {
-          "guitar": "Hold two voices and end them independently",
+          "guitar": "Singing motif, deliberate note endings and handing over the melody",
           "keys": "Shared attacks, independent releases and a dynamic arc"
         }
       },
@@ -304,7 +304,7 @@
       "dir": "repertoire/00 Debut Grade/Last Light",
       "midi": "repertoire/00 Debut Grade/Last Light/Last Light.mid",
       "score": "repertoire/00 Debut Grade/Last Light/score.json",
-      "sha256": "2649e5c7d1d6cb3007886c5c7dc961e0c8e9949db7da40f8d3573ee66b7325b3",
+      "sha256": "9b08ded461698568624088db1f5ca98ffce1acc64e1693fc0e29bd148ae2bfb8",
       "duration": 53.33331200000007,
       "sections": [
         {
@@ -360,11 +360,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Achtelmotiv über offenem Bezugston",
+          "guitar": "Achtelriff und ruhige Powerchord-Antworten",
           "keys": "Motiv und Antwort über ruhiger linker Hand"
         },
         "en": {
-          "guitar": "Eighth-note motif above an open reference tone",
+          "guitar": "Eighth-note riff and spacious power-chord answers",
           "keys": "Motif and answer above a steady left hand"
         }
       },
@@ -372,7 +372,7 @@
       "dir": "repertoire/01 Grade One/Mossbound",
       "midi": "repertoire/01 Grade One/Mossbound/Mossbound.mid",
       "score": "repertoire/01 Grade One/Mossbound/score.json",
-      "sha256": "808d909699e0c28bc5b649e3e817fbf502b6ea736488bbfbde70062766f9808c",
+      "sha256": "407e4ec5a455e013d247d8c35e3d1c9b3b0612e02163be1b3a37cdf51a1afe37",
       "duration": 50.526335999999965,
       "sections": [
         {
@@ -428,11 +428,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "F–E als hörbare Reibung und Rückkehr",
+          "guitar": "Einstimmiges F–E-Riff; F5–E5 als phrygische Akkordantwort",
           "keys": "Melodische F-Farbe über E, getrennte Stimmführung"
         },
         "en": {
-          "guitar": "F–E as audible friction and return",
+          "guitar": "Single-note F–E riff; F5–E5 as a Phrygian power-chord answer",
           "keys": "Melodic F over E with independent voices"
         }
       },
@@ -440,7 +440,7 @@
       "dir": "repertoire/01 Grade One/The Second Threshold",
       "midi": "repertoire/01 Grade One/The Second Threshold/The Second Threshold.mid",
       "score": "repertoire/01 Grade One/The Second Threshold/score.json",
-      "sha256": "4f1d7b4049c121d77ab264868c95dd441ac42cf7f25159272320e1db28cddfcc",
+      "sha256": "57c4c14ddd0e25fcfcfa967fe76873a314ba01255c24bafabcd9c1f20191f79e",
       "duration": 64,
       "sections": [
         {
@@ -496,11 +496,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Gebrochene Dreiklänge mit hervorgehobener Oberstimme",
+          "guitar": "Einstimmige Akkordbrechungen, danach offene Powerchord-Flächen",
           "keys": "Akkordbrechung und Melodie auf beide Hände verteilt"
         },
         "en": {
-          "guitar": "Broken triads with a singing upper line",
+          "guitar": "Single-note arpeggios followed by spacious power-chord backing",
           "keys": "Arpeggios and melody distributed between the hands"
         }
       },
@@ -508,7 +508,7 @@
       "dir": "repertoire/01 Grade One/Black Glass",
       "midi": "repertoire/01 Grade One/Black Glass/Black Glass.mid",
       "score": "repertoire/01 Grade One/Black Glass/score.json",
-      "sha256": "c15846938f4ab0f53a55f09cbf38d4897d9b7121a7aaed096bfea3c37a947657",
+      "sha256": "275c8f2c1b1de34fca4288334c44c3aad80c8af3192afb8753864d23c6d1b996",
       "duration": 72,
       "sections": [
         {
@@ -569,8 +569,8 @@
       "dir": "repertoire/01 Grade One/Iron Rain",
       "midi": "repertoire/01 Grade One/Iron Rain/Iron Rain.mid",
       "score": "repertoire/01 Grade One/Iron Rain/score.json",
-      "sha256": "853a158f1057cc11507aa3ce24a09f5a51af1eb2390007e6916c4f58610c34d5",
-      "duration": 62.608704,
+      "sha256": "c44e68f6b33388467d9760b2b54bc7f37d7d2b350cb8e2a1826d0047531ef42e",
+      "duration": 62.608703999999996,
       "sections": [
         {
           "name": "A",
@@ -618,11 +618,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Dreiklangsmelodie und ruhiger Bass im Dreierpuls",
+          "guitar": "Dreiklangsmelodie und abgesetzte Powerchords im Dreierpuls",
           "keys": "Akkordwechsel mit singender Oberstimme"
         },
         "en": {
-          "guitar": "Triadic melody and a steady bass in triple metre",
+          "guitar": "Triadic melody and separated power chords in triple metre",
           "keys": "Chord changes with a singing upper voice"
         }
       },
@@ -630,7 +630,7 @@
       "dir": "repertoire/01 Grade One/November Window",
       "midi": "repertoire/01 Grade One/November Window/November Window.mid",
       "score": "repertoire/01 Grade One/November Window/score.json",
-      "sha256": "03b748742b02ebc65e86d6220fb061b33b8deaa5cfdb40224c69b9b0e03cd57c",
+      "sha256": "7a876dc4ea06aae6751e896718a51c14fa22489b2a9d45b8a4baff329fb35d61",
       "duration": 59.99997599999994,
       "sections": [
         {
@@ -677,19 +677,19 @@
       ],
       "description": {
         "de": {
-          "guitar": "Lamento E–D–C–B und unabhängige Oberstimme",
-          "keys": "Absteigende linke Linie, ruhige rechte Antwort"
+          "guitar": "Melodie über dem Lamento des Bandbasses; klare Akkorde im Antwortteil",
+          "keys": "Ruhige Akkordfarben über dem Lamento des Bandbasses, eigene Melodie im B-Teil"
         },
         "en": {
-          "guitar": "E–D–C–B lament bass with an independent upper line",
-          "keys": "Descending left-hand line with a quiet right-hand answer"
+          "guitar": "Melody over the band bass lament; clear chords in the answering section",
+          "keys": "Quiet chord colours over the band bass lament, with a melodic B section"
         }
       },
       "bars": 24,
       "dir": "repertoire/02 Grade Two/The Descent",
       "midi": "repertoire/02 Grade Two/The Descent/The Descent.mid",
       "score": "repertoire/02 Grade Two/The Descent/score.json",
-      "sha256": "0fbc3f1d200e0bf3515dea6d2f8803cd6b5421d0522c976a4e3d03e37b23dd92",
+      "sha256": "d086f3b827cd8d5c5a7460496085edaa86f898378c63d99305057b4a4535a77e",
       "duration": 90,
       "sections": [
         {
@@ -736,11 +736,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Gebundene Offbeats und präzise Pausen",
+          "guitar": "Synkopiertes Einzeltonriff und gebundene Powerchord-Offbeats",
           "keys": "Synkopierte rechte Hand gegen regelmäßige linke"
         },
         "en": {
-          "guitar": "Tied offbeats and precise rests",
+          "guitar": "Syncopated single-note riff and tied power-chord offbeats",
           "keys": "Syncopated right hand against a regular left hand"
         }
       },
@@ -748,7 +748,7 @@
       "dir": "repertoire/02 Grade Two/Crooked Footsteps",
       "midi": "repertoire/02 Grade Two/Crooked Footsteps/Crooked Footsteps.mid",
       "score": "repertoire/02 Grade Two/Crooked Footsteps/score.json",
-      "sha256": "05edf8d6b8dd991df085a14bc0921b8f712401cbeacc10fc26dd18a547f80227",
+      "sha256": "6be5b577fdee2f66e93120eacdf86b46ba94692b14674db9957e0c4a7d15cb75",
       "duration": 65.45452800000034,
       "sections": [
         {
@@ -795,11 +795,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Kurze Sechzehntelzellen zwischen längeren Noten",
+          "guitar": "Sechzehntelfiguren, danach kurze Akkordakzente unter dem Keyboard",
           "keys": "Kleine Sechzehntelantworten bei einfacher Begleitung"
         },
         "en": {
-          "guitar": "Short sixteenth-note cells between longer tones",
+          "guitar": "Sixteenth-note figures followed by short chord accents beneath the keyboard",
           "keys": "Small sixteenth-note answers over simple accompaniment"
         }
       },
@@ -807,7 +807,7 @@
       "dir": "repertoire/02 Grade Two/Shards of Rain",
       "midi": "repertoire/02 Grade Two/Shards of Rain/Shards of Rain.mid",
       "score": "repertoire/02 Grade Two/Shards of Rain/score.json",
-      "sha256": "5a802a6318646f55962b6c26214b13b6984468f949b1dac41462d1ba25ef11a3",
+      "sha256": "1c571a64c7b737790210b9cf6bf6efe770ee12e02317fd5fc651afbb9e224055",
       "duration": 60,
       "sections": [
         {
@@ -854,11 +854,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Diatonischer Quintfall mit kleinen Griffwechseln",
+          "guitar": "Melodische Sequenz und sparsame Akkordantworten im Quintfall",
           "keys": "Akkordwechsel über bewegtem Bass"
         },
         "en": {
-          "guitar": "Diatonic descending fifths with small position changes",
+          "guitar": "Melodic sequence and sparse chord answers through descending fifths",
           "keys": "Chord changes above a moving bass"
         }
       },
@@ -866,7 +866,7 @@
       "dir": "repertoire/02 Grade Two/Circle of Dust",
       "midi": "repertoire/02 Grade Two/Circle of Dust/Circle of Dust.mid",
       "score": "repertoire/02 Grade Two/Circle of Dust/score.json",
-      "sha256": "21af03b160fe7eb1a8a7e7e782df433e445272f24ae73d56dce95d7ed6c5ba00",
+      "sha256": "6a261c7e2cdd2b590ed86be24e310d2fab5f456c4184e217a2cd0a51eed65bd1",
       "duration": 68.5714560000001,
       "sections": [
         {
@@ -920,11 +920,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Wiederkehr mit verschiedenen Schlüssen",
+          "guitar": "Riff und Wiederkehr mit neuem Schluss; Pausen im Begleitteil",
           "keys": "Zusammenhängende Form und bewusst gezählte Pausen"
         },
         "en": {
-          "guitar": "Returning motifs with different endings",
+          "guitar": "Riff and return with a new ending; rests in the accompaniment",
           "keys": "Maintain the complete form and count silent beats"
         }
       },
@@ -932,7 +932,7 @@
       "dir": "repertoire/02 Grade Two/Beyond the Gate",
       "midi": "repertoire/02 Grade Two/Beyond the Gate/Beyond the Gate.mid",
       "score": "repertoire/02 Grade Two/Beyond the Gate/score.json",
-      "sha256": "b9c2f0acac654044ab68b28a9038d6665393bfd166a2e5aaef73d542c35dbb3f",
+      "sha256": "4ff557237686b5dd2f6e47b311c6ef845ec3cd6f7b7d1da9fcc4a7b46ee9ada5",
       "duration": 83.47827200000006,
       "sections": [
         {
@@ -988,11 +988,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "B7–Em, Leitton mit klarer Auflösung",
+          "guitar": "Leittonmelodie über B7–Em und breite Powerchord-Antworten",
           "keys": "Dominantseptakkord, gemeinsame Töne und Auflösung"
         },
         "en": {
-          "guitar": "B7–Em and a clearly resolved leading tone",
+          "guitar": "Leading-tone melody over B7–Em and broad power-chord answers",
           "keys": "Dominant tension, common tones and resolution"
         }
       },
@@ -1000,7 +1000,7 @@
       "dir": "repertoire/03 Grade Three/Threshold of Fire",
       "midi": "repertoire/03 Grade Three/Threshold of Fire/Threshold of Fire.mid",
       "score": "repertoire/03 Grade Three/Threshold of Fire/score.json",
-      "sha256": "c0f3c241b45d7797e8f756b5ede242c9e00706f14c1fbade3f7a73ab96e78d65",
+      "sha256": "cc2efc3f9c52f60ee94ad804ce64dec42504b873309c845d151115cccab8c47e",
       "duration": 120,
       "sections": [
         {
@@ -1056,11 +1056,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Sequenz mit vermindertem Übergang",
+          "guitar": "Einstimmige Sequenz durch verminderte Harmonik, danach Akkordakzente",
           "keys": "Kleine Stimmbewegungen durch verminderte und dominante Harmonien"
         },
         "en": {
-          "guitar": "Sequences through diminished harmony",
+          "guitar": "Single-note sequence through diminished harmony, then chord accents",
           "keys": "Small voice movements through diminished and dominant harmony"
         }
       },
@@ -1068,7 +1068,7 @@
       "dir": "repertoire/03 Grade Three/Dance of Lead",
       "midi": "repertoire/03 Grade Three/Dance of Lead/Dance of Lead.mid",
       "score": "repertoire/03 Grade Three/Dance of Lead/score.json",
-      "sha256": "d4499d7815fa62291baa4703bbb75cca22bad5803fef2d850f12c6f5ac1f8546",
+      "sha256": "ca2a978335065a8fd664b7f943ea5d8aa23263f9598db14a62dc29fe41650d03",
       "duration": 91.4286080000006,
       "sections": [
         {
@@ -1124,11 +1124,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Arpeggio und Melodie über vier großen Pulsen",
+          "guitar": "Fließendes 12/8-Thema und Powerchords mit Atempausen",
           "keys": "Linke Figur und rechte Melodie im 12/8"
         },
         "en": {
-          "guitar": "Arpeggios and melody over four compound pulses",
+          "guitar": "Flowing 12/8 theme and power chords separated by breathing space",
           "keys": "Left-hand figuration and right-hand melody in 12/8"
         }
       },
@@ -1136,7 +1136,7 @@
       "dir": "repertoire/03 Grade Three/Blackwater",
       "midi": "repertoire/03 Grade Three/Blackwater/Blackwater.mid",
       "score": "repertoire/03 Grade Three/Blackwater/score.json",
-      "sha256": "d5a663295031a61c7dc343439bcf63d5c8857e8783ae4c12120c898af135f836",
+      "sha256": "5b102e6f614621d9fdaebdd8815e8a1299649e30a0af97991ebcf1b189afeac6",
       "duration": 110.76926400000121,
       "sections": [
         {
@@ -1185,11 +1185,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Quint-/Sextwechsel und ternärer Anschlag",
+          "guitar": "Einstimmiges Quint-/Sextriff und geshuffelte Akkordantworten",
           "keys": "Melodische Antworten mit bewusst langen/kurzen Achteln"
         },
         "en": {
-          "guitar": "Fifth–sixth alternation and swung attacks",
+          "guitar": "Single-note fifth–sixth riff and shuffled chord answers",
           "keys": "Melodic answers with deliberately long and short eighths"
         }
       },
@@ -1197,7 +1197,7 @@
       "dir": "repertoire/03 Grade Three/Pendulum of Thorns",
       "midi": "repertoire/03 Grade Three/Pendulum of Thorns/Pendulum of Thorns.mid",
       "score": "repertoire/03 Grade Three/Pendulum of Thorns/score.json",
-      "sha256": "f5dfffb0123901a4990dd6141ffaf30166e9adbac38501173f781db1b035c268",
+      "sha256": "81edcf19bf5a34a876c8c8185a24d0c9d9a4281acf05f403df116336101e0630",
       "duration": 91.42860800000015,
       "sections": [
         {
@@ -1253,11 +1253,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Kurze Hammer-on-/Pull-off-Figuren in Sequenzen",
+          "guitar": "Hammer-ons/Pull-offs in der Leadlinie; ruhige Begleitakkorde",
           "keys": "Sequenz über wechselndem Bass, Melodie hervorheben"
         },
         "en": {
-          "guitar": "Short hammer-on and pull-off figures in sequences",
+          "guitar": "Hammer-ons and pull-offs in the lead line; spacious backing chords",
           "keys": "Sequences over a changing bass; bring out the melody"
         }
       },
@@ -1265,7 +1265,7 @@
       "dir": "repertoire/03 Grade Three/Threads of Smoke",
       "midi": "repertoire/03 Grade Three/Threads of Smoke/Threads of Smoke.mid",
       "score": "repertoire/03 Grade Three/Threads of Smoke/score.json",
-      "sha256": "0d1fcedcd8cc9a88e303f1a95b2d953bac5b9201f40ced7b4f03d55871ad6265",
+      "sha256": "870cf5c5cde094b7b581097721eab1d75b08dedbd84d2f88143137d06accb8ae",
       "duration": 80,
       "sections": [
         {
@@ -1321,11 +1321,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Quartklänge und Wechsel des tonalen Bezugs",
+          "guitar": "Melodisches Mollthema; klare Quinten unter dem lydischen Keyboard",
           "keys": "F♯ über C, heller Abschnitt und dunkle Rückkehr"
         },
         "en": {
-          "guitar": "Quartal colours and a shift of tonal centre",
+          "guitar": "Melodic minor theme; clear fifths beneath the Lydian keyboard",
           "keys": "F-sharp over C; bright contrast and dark return"
         }
       },
@@ -1333,7 +1333,7 @@
       "dir": "repertoire/04 Grade Four/Light Through Lead",
       "midi": "repertoire/04 Grade Four/Light Through Lead/Light Through Lead.mid",
       "score": "repertoire/04 Grade Four/Light Through Lead/score.json",
-      "sha256": "60c289571a66d261cab11cfd199733fabab5723dfd7281df61612a670f19aec4",
+      "sha256": "4c8b6469f630adb71b1d93cf937a96372bfd78e4168d5d1378c2023da32ec052",
       "duration": 106.66662399999909,
       "sections": [
         {
@@ -1401,7 +1401,7 @@
       "dir": "repertoire/04 Grade Four/Cold Bells",
       "midi": "repertoire/04 Grade Four/Cold Bells/Cold Bells.mid",
       "score": "repertoire/04 Grade Four/Cold Bells/score.json",
-      "sha256": "eae6c4b98df4c5d8258b47a82514e1e85074782b3d4c2e981668ced93708b7a5",
+      "sha256": "918e81f61660b9b0203894af1d35b6830e5e09bd7448d61497d7c68aefb7138d",
       "duration": 68.5714560000001,
       "sections": [
         {
@@ -1457,11 +1457,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Kurze 3:2-Passagen über stabiler Begleitung",
+          "guitar": "Triolenmelodie gegen den Viertelpuls von Bandbass und Drums",
           "keys": "3:2 zwischen den Händen in begrenzten Abschnitten"
         },
         "en": {
-          "guitar": "Short 3:2 passages over a stable accompaniment",
+          "guitar": "Triplet melody against quarter-note pulses from bass and drums",
           "keys": "Limited passages of 3:2 between the hands"
         }
       },
@@ -1469,7 +1469,7 @@
       "dir": "repertoire/04 Grade Four/Stone Against Water",
       "midi": "repertoire/04 Grade Four/Stone Against Water/Stone Against Water.mid",
       "score": "repertoire/04 Grade Four/Stone Against Water/score.json",
-      "sha256": "8c778b0c371fac1ee3c9c34118e71240ecd7a3620b2d13dbdee46cc8474ca8f7",
+      "sha256": "b3d72327ba754007e5d71db636dd7b992af5101471a87192d7040cf218017865",
       "duration": 91.4286080000006,
       "sections": [
         {
@@ -1525,11 +1525,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Akzentgruppen und zusammenhängende Phrasen",
+          "guitar": "7/8-Riff und Powerchord-Akzente in 2+2+3",
           "keys": "Ostinato mit klarer Gruppierung und Gegenstimme"
         },
         "en": {
-          "guitar": "Accent groups and connected phrases",
+          "guitar": "7/8 riff and power-chord accents grouped 2+2+3",
           "keys": "Clearly grouped ostinato with a countervoice"
         }
       },
@@ -1537,7 +1537,7 @@
       "dir": "repertoire/04 Grade Four/Seven Shadows",
       "midi": "repertoire/04 Grade Four/Seven Shadows/Seven Shadows.mid",
       "score": "repertoire/04 Grade Four/Seven Shadows/score.json",
-      "sha256": "d7f4daaa5d6889b41879cb37cc46a8d5da93b02306ac5d960cd701174095ca31",
+      "sha256": "31a679ca28af3f9e8f45ca364d002a3a13496ee53ff78a6a4fb93fc0223fbcde",
       "duration": 80.00003200000035,
       "sections": [
         {
@@ -1593,11 +1593,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "3+3+2, kurzer ausgeschriebener pentatonischer Soloabschnitt",
+          "guitar": "Powerchord-Riff in 3+3+2 und eigener pentatonischer Soloabschnitt",
           "keys": "Wechsel von rhythmischer Begleitung und Melodie"
         },
         "en": {
-          "guitar": "3+3+2 and a short written pentatonic solo",
+          "guitar": "Power-chord riff in 3+3+2 and a separate pentatonic solo",
           "keys": "Switch between rhythmic accompaniment and melody"
         }
       },
@@ -1605,7 +1605,7 @@
       "dir": "repertoire/04 Grade Four/The Broken Circle",
       "midi": "repertoire/04 Grade Four/The Broken Circle/The Broken Circle.mid",
       "score": "repertoire/04 Grade Four/The Broken Circle/score.json",
-      "sha256": "f9d56e2283ab3ba2f3b6cca9a03d6082f1ba78a895cf658820e9ad6c6b848bb5",
+      "sha256": "72d9c0c771e4c66a762c5662fb915e2840e455ff04e159913a78bcbeae53b912",
       "duration": 96.00000000000087,
       "sections": [
         {
@@ -1666,11 +1666,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Wechsel von Riff, Arpeggio und tragender Melodie",
+          "guitar": "Offenes Intro, Powerchord-Riff, melodische Fortsetzung und Rückkehr",
           "keys": "Innenstimmen und eigenes Thema, Dichte über die Form"
         },
         "en": {
-          "guitar": "Riff, arpeggio and sustained melodic roles",
+          "guitar": "Spacious intro, power-chord riff, melodic continuation and return",
           "keys": "Inner voices and a separate theme across the form"
         }
       },
@@ -1678,7 +1678,7 @@
       "dir": "repertoire/05 Grade Five/House of Rain",
       "midi": "repertoire/05 Grade Five/House of Rain/House of Rain.mid",
       "score": "repertoire/05 Grade Five/House of Rain/score.json",
-      "sha256": "5481ec563c4295c6f046edd8254937c83c9f48d5580e228fd797405297f4052f",
+      "sha256": "28fcb9a061ed000cf449595d644313d20005bd9808e5a11360586cafb8f16ced",
       "duration": 151.57900800000036,
       "sections": [
         {
@@ -1739,11 +1739,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Singende Linie, Zielton-Bendings und ausgeschriebener Soloabschnitt",
+          "guitar": "Singende Leadlinie, luftige Begleitakkorde und Zielton-Bending im Solo",
           "keys": "Linke Melodie in einem Abschnitt, danach Rückkehr zur Begleitung"
         },
         "en": {
-          "guitar": "Singing lines, target-note bends and a written solo",
+          "guitar": "Singing lead line, spacious backing chords and a target-note bend in the solo",
           "keys": "A left-hand melodic section, then return to accompaniment"
         }
       },
@@ -1751,7 +1751,7 @@
       "dir": "repertoire/05 Grade Five/Ashen Garden",
       "midi": "repertoire/05 Grade Five/Ashen Garden/Ashen Garden.mid",
       "score": "repertoire/05 Grade Five/Ashen Garden/score.json",
-      "sha256": "3cd7c620696fb8feb5f95467c23da4dcab7f4d916157fe5280bb0ed492c04d87",
+      "sha256": "20e9b6eaaf909ea309795c2aab4fa2d8133f0ebc15ddc6756a54fe8b54779f11",
       "duration": 192.00009600000058,
       "sections": [
         {
@@ -1819,11 +1819,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Barock beeinflusste Sequenzen, zügige Achtel und Saitenwechsel",
+          "guitar": "Barockes Einzelton-Thema, ruhige Akkordbegleitung und eigene Soloepisode",
           "keys": "Figuration und klare Ritornell-Einsätze"
         },
         "en": {
-          "guitar": "Baroque-influenced sequences, brisk eighths and string changes",
+          "guitar": "Baroque single-note theme, spacious chord backing and a separate solo episode",
           "keys": "Figuration and clear returning-theme entries"
         }
       },
@@ -1831,7 +1831,7 @@
       "dir": "repertoire/05 Grade Five/Clockwork Winter",
       "midi": "repertoire/05 Grade Five/Clockwork Winter/Clockwork Winter.mid",
       "score": "repertoire/05 Grade Five/Clockwork Winter/score.json",
-      "sha256": "4f2872ebda031edd16e05c52d980f6e9099ae4a57476e697a53d551d2b2f2658",
+      "sha256": "ea95021d054a7eca52bfaa98b68038e58f022c76500e9e9e53a996076a3d97ae",
       "duration": 96,
       "sections": [
         {
@@ -1899,19 +1899,19 @@
       ],
       "description": {
         "de": {
-          "guitar": "Eigener solistischer Abschnitt, Bandbass setzt dort aus",
-          "keys": "Eigener solistischer Abschnitt, selbst geführter Bass"
+          "guitar": "Riff und eigenes Solo mit Bandbegleitung; Akkordstützen im Keyboardsolo",
+          "keys": "Bandharmonie während des Gitarrensolos, danach eigenes Solo mit Bass und Drums"
         },
         "en": {
-          "guitar": "Solo section with the band bass resting",
-          "keys": "Solo section with an independent left-hand bass"
+          "guitar": "Riff and solo with band backing; chord support during the keyboard solo",
+          "keys": "Band harmony during the guitar solo, then a solo supported by bass and drums"
         }
       },
       "bars": 56,
       "dir": "repertoire/05 Grade Five/Two Shores",
       "midi": "repertoire/05 Grade Five/Two Shores/Two Shores.mid",
       "score": "repertoire/05 Grade Five/Two Shores/score.json",
-      "sha256": "774c2eab2c43d6e3748ea6b3e93601ce8962f36e4d8473566879cdfa33501eb3",
+      "sha256": "728ec3a32dae6003282267a5c9927e0c0acb0fb0714a648e8397c45ab2587506",
       "duration": 134.4000000000019,
       "sections": [
         {
@@ -1986,11 +1986,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Zusammenhängende Miniatursuite mit Klang- und Rollenwechseln",
+          "guitar": "Miniatursuite: Intro, Powerchord-Riff, Leadthema und Solo mit Band",
           "keys": "Kontrastierende Texturen, Taktwechsel und gemeinsamer Schluss"
         },
         "en": {
-          "guitar": "A connected miniature suite with changing roles and metre",
+          "guitar": "Miniature suite: intro, power-chord riff, lead theme and solo with the band",
           "keys": "Contrasting textures, metre changes and a shared ending"
         }
       },
@@ -1998,7 +1998,7 @@
       "dir": "repertoire/05 Grade Five/Where the Night Ends",
       "midi": "repertoire/05 Grade Five/Where the Night Ends/Where the Night Ends.mid",
       "score": "repertoire/05 Grade Five/Where the Night Ends/score.json",
-      "sha256": "b308381c168e87da4302fa62a9892f502f93a753f816ba76cd214382fe50c549",
+      "sha256": "6c12f47a9907d7fe43381f1f3e740a9c7511d89f1cf5be9da018e781bf1e1bda",
       "duration": 171.42864000000233,
       "sections": [
         {

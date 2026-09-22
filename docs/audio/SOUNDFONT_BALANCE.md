@@ -4,6 +4,8 @@
 
 ![Spektren vor und nach der Kalibrierung](soundfont-spectrum.png)
 
+Die Diagramme dokumentieren die Arrangements vor der Überarbeitung der Gitarrenparts. Sie sind keine Messung der aktuellen Bandarrangements. Die Preset-Kalibrierung bleibt unverändert.
+
 ## Messung
 
 30 Stücke, jeweils die ersten acht Sekunden von A und B; bei „Stone and Breath“ ersetzt A′ das nicht vorhandene B. 30 × 2 × 8 = 480 Sekunden Arrangementmaterial pro Variante. Originale MIDI-Programme, Controller und Anschlagsstärken. SpessaSynth Core 4.3.22 rendert bei 48 kHz getrennte Stereoausgänge für Keyboard, Bass, Gitarre und Drums sowie den gemeinsamen Effektausgang.
