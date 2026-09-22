@@ -10,7 +10,9 @@ const file=fs.readFileSync('assets/soundfont/FluidR3-a-minor.sf2'),hash=b=>creat
 SpessaLog.setLogLevel(false,false,false);
 const bank=SoundBankLoader.fromArrayBuffer(file.buffer.slice(file.byteOffset,file.byteOffset+file.length)),pieces=[];
 const db=x=>10*Math.log10(Math.max(1e-16,x));
-for(const piece of catalog.pieces){
+const selected=process.argv[3]?catalog.pieces.filter(p=>p.id===process.argv[3]):catalog.pieces;
+if(!selected.length)throw Error('Unknown piece');
+for(const piece of selected){
  const bytes=fs.readFileSync(piece.midi),seq=MIDI.decode(bytes),score=JSON.parse(fs.readFileSync(piece.score));
  const synth=new SpessaSynthProcessor(rate,{eventsEnabled:false});synth.soundBankManager.addSoundBank(bank,'fluid');await synth.processorInitialized;
  synth.midiChannels[9].setSystemParameter('gain',10**(profile.drumBusDb/20));

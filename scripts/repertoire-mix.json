@@ -21,1345 +21,1345 @@
   },
   "pieces": {
     "r0-1": {
-      "scoreSha256": "77482018a0194243484820e2c22d9dcd75e3331e6ed7c95c11d9c2b2a3ba1246",
-      "offsetDb": -8.184298135314556,
+      "scoreSha256": "67858985519ac7cfd4439b939a5b26c7398c270de66cc6e611cb7b423e0de4f1",
+      "offsetDb": -11.66953978195355,
       "volumes": {
-        "bass/33/band": 114,
-        "guitar/27/lead": 102,
-        "drums/0/band": 113,
-        "keys/0/backing": 106,
-        "keys/0/lead": 97,
-        "guitar/27/backing": 127
+        "bass/33/band": 92,
+        "guitar/27/lead": 95,
+        "drums/0/band": 127,
+        "keys/0/backing": 108,
+        "keys/0/lead": 89,
+        "guitar/27/backing": 96
       },
       "measurement": {
         "bass/33/band": {
-          "levelDb": -41.680430629826375,
-          "windows": 280,
+          "levelDb": -41.35975318191797,
+          "windows": 270,
           "targetDb": -29
         },
         "guitar/27/lead": {
-          "levelDb": -36.507406444271496,
-          "windows": 180,
+          "levelDb": -38.724000243239075,
+          "windows": 155,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -42.82889708649081,
-          "windows": 280,
+          "levelDb": -48.27017552636961,
+          "windows": 290,
           "targetDb": -31
         },
         "keys/0/backing": {
-          "levelDb": -42.142606756988734,
-          "windows": 84,
+          "levelDb": -46.02614121426751,
+          "windows": 79,
           "targetDb": -33
         },
         "keys/0/lead": {
-          "levelDb": -36.67808562281071,
-          "windows": 67,
+          "levelDb": -38.73714417716039,
+          "windows": 69,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -43.33644697355283,
-          "windows": 30,
+          "levelDb": -41.939449367341346,
+          "windows": 32,
           "targetDb": -31
         }
       }
     },
     "r0-2": {
-      "scoreSha256": "1aa03e01e10fe48a5e4a0a6a8bc5aaece35dc4285f8d48bcebc989f0940fb60b",
-      "offsetDb": -6.5220257428994275,
+      "scoreSha256": "267f2075a92b8a3ffaa741294b548dfbbeda8cff9758bad1f406c10596489e9e",
+      "offsetDb": -10.530863595969443,
       "volumes": {
-        "keys/4/backing": 107,
-        "bass/33/band": 122,
-        "guitar/27/lead": 115,
-        "drums/0/band": 127
+        "bass/33/band": 91,
+        "guitar/29/lead": 127,
+        "drums/0/band": 120,
+        "keys/4/backing": 98
       },
       "measurement": {
-        "keys/4/backing": {
-          "levelDb": -40.7357397486654,
-          "windows": 405,
-          "targetDb": -33
-        },
         "bass/33/band": {
-          "levelDb": -41.21238468423873,
-          "windows": 471,
+          "levelDb": -40.187144771623124,
+          "windows": 255,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -37.01666305050037,
-          "windows": 356,
+        "guitar/29/lead": {
+          "levelDb": -42.68301243420772,
+          "windows": 278,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -43.12266148731549,
-          "windows": 471,
+          "levelDb": -46.162174892886085,
+          "windows": 508,
           "targetDb": -31
+        },
+        "keys/4/backing": {
+          "levelDb": -43.267111536655634,
+          "windows": 94,
+          "targetDb": -33
         }
       }
     },
     "r0-3": {
-      "scoreSha256": "a6ba837ba27c2e0a2905259dfafacd7eaa9dd59d399865010ec583b23aff644f",
-      "offsetDb": -8.1327785458407,
+      "scoreSha256": "6acdb5ec01c1b7e2510fbb2cd2f79d27cb756431ce598b2115ab588b1bd64de4",
+      "offsetDb": -13.55872153094042,
       "volumes": {
-        "bass/33/band": 99,
-        "guitar/27/lead": 105,
-        "drums/0/band": 101,
-        "keys/0/backing": 127,
-        "keys/0/lead": 122,
-        "guitar/27/backing": 107
+        "bass/33/band": 83,
+        "drums/0/band": 127,
+        "guitar/25/lead": 85,
+        "keys/0/backing": 100,
+        "keys/0/lead": 91,
+        "guitar/25/backing": 84
       },
       "measurement": {
         "bass/33/band": {
-          "levelDb": -39.12848945631159,
-          "windows": 409,
+          "levelDb": -41.54247393483484,
+          "windows": 276,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -36.94987777254061,
-          "windows": 273,
-          "targetDb": -28
-        },
         "drums/0/band": {
-          "levelDb": -40.66862424372275,
+          "levelDb": -50.159357275356484,
           "windows": 409,
           "targetDb": -31
         },
+        "guitar/25/lead": {
+          "levelDb": -38.69023514283918,
+          "windows": 210,
+          "targetDb": -28
+        },
         "keys/0/backing": {
-          "levelDb": -45.284927384078976,
-          "windows": 219,
+          "levelDb": -46.567967275283245,
+          "windows": 97,
           "targetDb": -33
         },
         "keys/0/lead": {
-          "levelDb": -40.561245988012715,
-          "windows": 81,
+          "levelDb": -41.0012582597351,
+          "windows": 70,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -40.375301022671444,
+        "guitar/25/backing": {
+          "levelDb": -41.57278609722142,
           "windows": 46,
           "targetDb": -31
         }
       }
     },
     "r0-4": {
-      "scoreSha256": "2acf8cb987a7669974ed2eceeecc6898686ce01dc92bd58bcd52e64d17d59821",
-      "offsetDb": -9.398242554705092,
+      "scoreSha256": "fe99cf736d97b50e90dfc71edc03990f82ef8a7f6e41b61441fd5314ad8507da",
+      "offsetDb": -10.351062598965882,
       "volumes": {
-        "keys/0/backing": 122,
-        "bass/33/band": 87,
-        "guitar/27/lead": 120,
-        "drums/0/band": 104,
-        "keys/0/lead": 86,
-        "guitar/27/backing": 127
+        "keys/0/backing": 90,
+        "bass/33/band": 76,
+        "guitar/28/lead": 124,
+        "drums/0/band": 101,
+        "keys/0/lead": 88,
+        "guitar/28/backing": 127
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -45.88716705378151,
-          "windows": 298,
+          "levelDb": -41.6149047251697,
+          "windows": 224,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -38.16557256418005,
-          "windows": 562,
+          "levelDb": -36.75779860109309,
+          "windows": 424,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -40.49974207367117,
-          "windows": 412,
+        "guitar/28/lead": {
+          "levelDb": -42.052174538793885,
+          "windows": 68,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -42.54175568287593,
-          "windows": 562,
+          "levelDb": -43.02889081895959,
+          "windows": 529,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -35.79846094378253,
-          "windows": 145,
+          "levelDb": -37.219319837668465,
+          "windows": 100,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -44.55039139294337,
-          "windows": 85,
+        "guitar/28/backing": {
+          "levelDb": -45.50321143720416,
+          "windows": 18,
           "targetDb": -31
         }
       }
     },
     "r0-5": {
-      "scoreSha256": "8ce022a4b04e09c5237aad0ccc1a2be083d2ef303ff24b8d621cbda1bbae062d",
-      "offsetDb": -5.92496942662743,
+      "scoreSha256": "e84ab623d7a8d2879fe7478764cb959b202ad596035b114c6b59b2caa44650a9",
+      "offsetDb": -12.832251462263617,
       "volumes": {
-        "keys/0/backing": 123,
-        "bass/33/band": 127,
-        "guitar/27/lead": 119,
-        "drums/0/band": 123,
-        "keys/0/lead": 110,
-        "guitar/27/backing": 126
+        "keys/0/backing": 96,
+        "bass/33/band": 76,
+        "guitar/27/lead": 97,
+        "drums/0/band": 127,
+        "keys/0/lead": 84,
+        "guitar/27/backing": 101
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -42.57886587849769,
-          "windows": 355,
+          "levelDb": -45.06059274433002,
+          "windows": 245,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -41.29781137885896,
-          "windows": 500,
+          "levelDb": -39.33688082489936,
+          "windows": 486,
           "targetDb": -29
         },
         "guitar/27/lead": {
-          "levelDb": -36.989634021436956,
-          "windows": 341,
+          "levelDb": -40.381143250061996,
+          "windows": 311,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -42.034787479602834,
-          "windows": 500,
+          "levelDb": -49.43288720667968,
+          "windows": 581,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -36.519604000820934,
-          "windows": 130,
+          "levelDb": -38.886524803848005,
+          "windows": 122,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -40.949918529254454,
-          "windows": 66,
+          "levelDb": -44.0301101880355,
+          "windows": 77,
           "targetDb": -31
         }
       }
     },
     "r1-1": {
-      "scoreSha256": "f76dd7d47c75c8ca9c8aaf1b364235d37ae308b63c15daff118a7fad1c0b8849",
-      "offsetDb": -3.8330588357132322,
+      "scoreSha256": "f7408588977e41925624b149b6551ae4e0ba08933089fd949db985777aa2e866",
+      "offsetDb": -7.949909771006625,
       "volumes": {
-        "keys/0/backing": 127,
-        "bass/33/band": 107,
-        "guitar/27/lead": 127,
-        "drums/0/band": 97,
-        "keys/0/lead": 109,
-        "guitar/27/backing": 111
+        "keys/0/backing": 98,
+        "bass/33/band": 78,
+        "drums/0/band": 100,
+        "guitar/29/lead": 127,
+        "keys/0/lead": 93,
+        "guitar/29/backing": 88
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.98281126415096,
-          "windows": 296,
+          "levelDb": -40.632490606932436,
+          "windows": 193,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -36.207207737143904,
-          "windows": 474,
+          "levelDb": -34.879129570077566,
+          "windows": 373,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -35.98520767395151,
-          "windows": 348,
-          "targetDb": -28
-        },
         "drums/0/band": {
-          "levelDb": -35.687036108487945,
+          "levelDb": -40.37071800001617,
           "windows": 474,
           "targetDb": -31
         },
+        "guitar/29/lead": {
+          "levelDb": -40.1020586092449,
+          "windows": 249,
+          "targetDb": -28
+        },
         "keys/0/lead": {
-          "levelDb": -34.3740697989609,
-          "windows": 117,
+          "levelDb": -35.73670223796171,
+          "windows": 114,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -36.579959375085984,
-          "windows": 87,
+        "guitar/29/backing": {
+          "levelDb": -36.660184904531306,
+          "windows": 55,
           "targetDb": -31
         }
       }
     },
     "r1-2": {
-      "scoreSha256": "a769a1e2be26154bce8fad461d01847620f8292e723d8cb1e7f7e3abdc4d8174",
-      "offsetDb": -5.237298977813773,
+      "scoreSha256": "46108b1b8f384e3218a6f6b4d6048543b45473e6553fe05bc844b0fd897a4752",
+      "offsetDb": -7.323093413876365,
       "volumes": {
-        "keys/0/backing": 127,
-        "bass/33/band": 105,
-        "guitar/27/lead": 115,
-        "drums/0/band": 122,
-        "keys/0/lead": 111,
-        "guitar/27/backing": 106
+        "keys/0/backing": 113,
+        "bass/33/band": 97,
+        "guitar/29/lead": 127,
+        "drums/0/band": 124,
+        "keys/0/lead": 103,
+        "guitar/29/backing": 80
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -42.38944781605205,
-          "windows": 357,
+          "levelDb": -42.39404880985455,
+          "windows": 230,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -37.35314362135372,
-          "windows": 600,
+          "levelDb": -38.01300980815001,
+          "windows": 464,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -35.69873336480717,
-          "windows": 440,
+        "guitar/29/lead": {
+          "levelDb": -39.47524225211464,
+          "windows": 285,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -41.1256934750091,
-          "windows": 600,
+          "levelDb": -43.57147757772221,
+          "windows": 643,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -36.03663515715843,
-          "windows": 148,
+          "levelDb": -36.899861042441174,
+          "windows": 135,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -37.22167528924106,
-          "windows": 90,
+        "guitar/29/backing": {
+          "levelDb": -34.43944076700446,
+          "windows": 98,
           "targetDb": -31
         }
       }
     },
     "r1-3": {
-      "scoreSha256": "ed1b7de5ef0eb446a846b0dbd2a6051471230d15822a64d99d07ad2470e5157b",
-      "offsetDb": -6.837726626688217,
+      "scoreSha256": "f4ef22f367ade090e9a0649849e9a0f90b522144266adfc5cff6be7d0fd5546b",
+      "offsetDb": -8.544990977714502,
       "volumes": {
-        "keys/0/backing": 105,
-        "bass/33/band": 80,
-        "guitar/27/lead": 127,
-        "drums/0/band": 81,
-        "keys/0/lead": 86,
-        "guitar/27/backing": 91
+        "keys/0/backing": 90,
+        "bass/33/band": 87,
+        "guitar/25/lead": 93,
+        "drums/0/band": 127,
+        "keys/0/lead": 94,
+        "guitar/25/backing": 78
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.62845569414186,
-          "windows": 450,
+          "levelDb": -39.776128331939574,
+          "windows": 371,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -34.10573827045613,
-          "windows": 690,
+          "levelDb": -37.30353804870267,
+          "windows": 550,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -38.98987546492649,
-          "windows": 450,
+        "guitar/25/lead": {
+          "levelDb": -35.326512492036144,
+          "windows": 418,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -35.60959458736987,
+          "levelDb": -45.145626722130565,
           "windows": 690,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.2393367397454,
-          "windows": 240,
+          "levelDb": -36.460736590566036,
+          "windows": 103,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -36.20543531703709,
-          "windows": 152,
+        "guitar/25/backing": {
+          "levelDb": -35.33546195684738,
+          "windows": 46,
           "targetDb": -31
         }
       }
     },
     "r1-4": {
-      "scoreSha256": "412423b930318c3eff9f8fd1f967411c773d137df9ac1adab350b4d985177bf5",
-      "offsetDb": -7.974195616404423,
+      "scoreSha256": "8f898b59a5747b42a0f3ddac05cec70cefdae47f3ea9550158c10558c418f090",
+      "offsetDb": -1.649878769740277,
       "volumes": {
-        "keys/0/backing": 79,
-        "bass/33/band": 80,
-        "guitar/28/riff": 95,
-        "drums/0/band": 73,
-        "guitar/30/riff": 73,
-        "keys/0/lead": 82,
+        "keys/0/backing": 108,
+        "bass/33/band": 94,
+        "guitar/28/riff": 118,
+        "drums/0/band": 101,
+        "guitar/30/riff": 98,
+        "keys/0/lead": 109,
         "guitar/28/backing": 127,
-        "guitar/30/backing": 93
+        "guitar/30/backing": 108
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -36.83962446354235,
-          "windows": 305,
+          "levelDb": -35.98750978108692,
+          "windows": 222,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -35.23635792043471,
-          "windows": 600,
+          "levelDb": -31.82023910452675,
+          "windows": 366,
           "targetDb": -29
         },
         "guitar/28/riff": {
-          "levelDb": -36.10488072079015,
-          "windows": 103,
+          "levelDb": -33.587948972323694,
+          "windows": 130,
           "targetDb": -29
         },
         "drums/0/band": {
-          "levelDb": -35.00107094609318,
-          "windows": 600,
+          "levelDb": -34.22087254134892,
+          "windows": 456,
           "targetDb": -31
         },
         "guitar/30/riff": {
-          "levelDb": -31.490872913380326,
-          "windows": 145,
+          "levelDb": -30.24977164520225,
+          "windows": 122,
           "targetDb": -29
         },
         "keys/0/lead": {
-          "levelDb": -33.461792688266556,
-          "windows": 184,
+          "levelDb": -32.09772386232518,
+          "windows": 77,
           "targetDb": -29
         },
         "guitar/28/backing": {
-          "levelDb": -43.1263444546427,
-          "windows": 43,
+          "levelDb": -36.80202760797855,
+          "windows": 29,
           "targetDb": -31
         },
         "guitar/30/backing": {
-          "levelDb": -37.7886762816452,
-          "windows": 53,
+          "levelDb": -34.02345747798908,
+          "windows": 25,
           "targetDb": -31
         }
       }
     },
     "r1-5": {
-      "scoreSha256": "a231b23cd5114d5ecc009bdd3b3b72a2656e1061449de2c3285b3f5cda91d592",
-      "offsetDb": -5.584224082141199,
+      "scoreSha256": "afb244f7c18ff903964f35d1e7ad6943af6dd291f03e4869da6407fcf861d5d6",
+      "offsetDb": -10.29538349783434,
       "volumes": {
-        "keys/0/backing": 108,
-        "bass/33/band": 84,
-        "guitar/27/lead": 127,
-        "drums/0/band": 105,
-        "keys/0/lead": 98,
-        "guitar/27/backing": 103
+        "keys/0/backing": 104,
+        "bass/33/band": 83,
+        "guitar/26/lead": 86,
+        "drums/0/band": 127,
+        "keys/0/lead": 90,
+        "guitar/26/backing": 65
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -39.928291270911274,
-          "windows": 375,
+          "levelDb": -44.00984354883388,
+          "windows": 262,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.801945957366435,
-          "windows": 575,
+          "levelDb": -38.21667739427379,
+          "windows": 535,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -37.73637292037947,
-          "windows": 352,
+        "guitar/26/lead": {
+          "levelDb": -35.73385188534533,
+          "windows": 347,
           "targetDb": -28
         },
         "drums/0/band": {
-          "levelDb": -38.95033290557991,
+          "levelDb": -46.896019242250404,
           "windows": 575,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -34.26276630774078,
-          "windows": 200,
+          "levelDb": -37.523247805479414,
+          "windows": 172,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -37.024191632190316,
-          "windows": 134,
+        "guitar/26/backing": {
+          "levelDb": -33.92772186078521,
+          "windows": 100,
           "targetDb": -31
         }
       }
     },
     "r2-1": {
-      "scoreSha256": "6561e1fe6636200f4e33aa44747e237cadaeaf2d7311e2d54b2d6af3ace9a7c2",
-      "offsetDb": -10.187810065981523,
+      "scoreSha256": "cd3516372f21cb968f8cbbc09e268a051ac5c350bfa27cf3e3533e6f354fbb82",
+      "offsetDb": -8.905743272071305,
       "volumes": {
-        "keys/0/backing": 92,
-        "bass/33/band": 74,
-        "guitar/27/lead": 127,
-        "drums/16/band": 72,
-        "keys/0/lead": 80,
-        "guitar/27/backing": 87
+        "keys/0/backing": 94,
+        "bass/33/band": 96,
+        "guitar/29/lead": 127,
+        "drums/16/band": 111,
+        "keys/0/lead": 108,
+        "guitar/29/backing": 95
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -41.645920658342064,
-          "windows": 531,
+          "levelDb": -40.789018319521595,
+          "windows": 308,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -36.13903610310805,
-          "windows": 862,
+          "levelDb": -39.38060201313518,
+          "windows": 952,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -42.3399589042198,
-          "windows": 535,
+        "guitar/29/lead": {
+          "levelDb": -41.05789211030958,
+          "windows": 654,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -37.02723055889556,
-          "windows": 862,
+          "levelDb": -43.127080708603344,
+          "windows": 952,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -35.30032962307657,
-          "windows": 289,
+          "levelDb": -39.214082646572066,
+          "windows": 140,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -38.72072946123825,
-          "windows": 152,
+        "guitar/29/backing": {
+          "levelDb": -39.06295002479266,
+          "windows": 84,
           "targetDb": -31
         }
       }
     },
     "r2-2": {
-      "scoreSha256": "e1072d06049d3c46b9820827068cd212a2e5dc14d4e8a76e872912c767dbd15e",
-      "offsetDb": -5.989369908464597,
+      "scoreSha256": "a407cbf54bb428bfd146d96928fe10240ed4a7773ad96564003583659cd790d7",
+      "offsetDb": -8.857928086112821,
       "volumes": {
-        "keys/0/backing": 89,
-        "bass/33/band": 84,
-        "drums/16/band": 85,
-        "guitar/27/lead": 127,
-        "keys/0/lead": 94,
-        "guitar/27/backing": 98
+        "keys/0/backing": 83,
+        "bass/33/band": 71,
+        "drums/16/band": 80,
+        "guitar/28/lead": 127,
+        "keys/0/lead": 77,
+        "guitar/28/backing": 104
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -37.010648601191356,
-          "windows": 360,
+          "levelDb": -38.59914123961384,
+          "windows": 177,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -34.21497188871828,
-          "windows": 627,
+          "levelDb": -34.01330437284916,
+          "windows": 397,
           "targetDb": -29
         },
         "drums/16/band": {
-          "levelDb": -35.60006740031426,
-          "windows": 627,
+          "levelDb": -37.498019618155794,
+          "windows": 485,
           "targetDb": -31
         },
-        "guitar/27/lead": {
-          "levelDb": -38.14151874670287,
-          "windows": 350,
+        "guitar/28/lead": {
+          "levelDb": -41.0100769243511,
+          "windows": 75,
           "targetDb": -28
         },
         "keys/0/lead": {
-          "levelDb": -33.980189348069814,
-          "windows": 218,
+          "levelDb": -33.282079809362195,
+          "windows": 182,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -36.687857119350774,
-          "windows": 114,
+        "guitar/28/backing": {
+          "levelDb": -40.577055159093796,
+          "windows": 75,
           "targetDb": -31
         }
       }
     },
     "r2-3": {
-      "scoreSha256": "510748edb33716d82d6145c88c3c58ce2a39d1218ac417a64149588afa9db9f4",
-      "offsetDb": -3.322740502064165,
+      "scoreSha256": "b57a8214e382c96a692fffa13cee95e2f4442c1708107be470c00b4b2cc951ef",
+      "offsetDb": -1.1414544140484546,
       "volumes": {
         "keys/0/backing": 127,
-        "bass/33/band": 94,
-        "guitar/27/lead": 127,
-        "drums/16/band": 97,
-        "keys/0/lead": 105,
-        "guitar/27/backing": 106
+        "bass/33/band": 96,
+        "guitar/30/lead": 122,
+        "drums/16/band": 115,
+        "keys/0/lead": 116,
+        "guitar/30/backing": 104
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.47488934030244,
-          "windows": 375,
+          "levelDb": -38.29360325228673,
+          "windows": 172,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.53876108751637,
-          "windows": 575,
+          "levelDb": -31.61026219859604,
+          "windows": 274,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -35.42358712329349,
-          "windows": 363,
+        "guitar/30/lead": {
+          "levelDb": -32.584419966728035,
+          "windows": 218,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -35.22310796325642,
-          "windows": 575,
+          "levelDb": -36.08726279000981,
+          "windows": 438,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.23792252989736,
-          "windows": 194,
+          "levelDb": -32.67917972778745,
+          "windows": 67,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -35.327909442083524,
-          "windows": 104,
+        "guitar/30/backing": {
+          "levelDb": -32.879579316564964,
+          "windows": 38,
           "targetDb": -31
         }
       }
     },
     "r2-4": {
-      "scoreSha256": "a15f313977d221a39e7aaa2481bc09bd4d6a247366ecb7519e15b97ec92f7898",
-      "offsetDb": -5.875448112152243,
+      "scoreSha256": "13bb1179dd6a39fbb0c53f6e1b46c75b5b15b0a2db753eb2fbbcdabdf7b671f8",
+      "offsetDb": -9.416662289848343,
       "volumes": {
-        "keys/0/backing": 105,
-        "bass/33/band": 81,
-        "guitar/27/lead": 127,
-        "drums/16/band": 97,
-        "keys/0/lead": 95,
-        "guitar/27/backing": 107
+        "keys/0/backing": 93,
+        "bass/33/band": 77,
+        "guitar/25/lead": 90,
+        "drums/16/band": 127,
+        "keys/0/lead": 86,
+        "guitar/25/backing": 72
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -39.798571290648255,
-          "windows": 493,
+          "levelDb": -41.16975641356792,
+          "windows": 521,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.338273295746774,
-          "windows": 664,
+          "levelDb": -36.00197943991948,
+          "windows": 715,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -38.02759695039052,
-          "windows": 493,
+        "guitar/25/lead": {
+          "levelDb": -35.51451689827046,
+          "windows": 504,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -37.754791230764376,
-          "windows": 664,
+          "levelDb": -46.01729803426441,
+          "windows": 715,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.94324831973393,
-          "windows": 171,
+          "levelDb": -35.85623296251326,
+          "windows": 175,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -38.022917330176135,
-          "windows": 116,
+        "guitar/25/backing": {
+          "levelDb": -34.78972852173842,
+          "windows": 93,
           "targetDb": -31
         }
       }
     },
     "r2-5": {
-      "scoreSha256": "fe014929293d8d9e3e23945fec1b314e4f54a75cbd1c78453d85c1d0013855bd",
-      "offsetDb": -3.6245222946279094,
+      "scoreSha256": "5cd6277010d1236c5a72a52ae74ba4c4d0d4ee804a9467e8b07dd470f9fc4eaa",
+      "offsetDb": -5.015832240054075,
       "volumes": {
-        "keys/0/backing": 120,
-        "bass/33/band": 93,
-        "guitar/27/lead": 127,
-        "drums/16/band": 96,
-        "keys/0/lead": 111,
-        "guitar/27/backing": 105
+        "keys/0/backing": 127,
+        "bass/33/band": 88,
+        "drums/16/band": 118,
+        "guitar/27/lead": 124,
+        "keys/0/lead": 97,
+        "guitar/27/backing": 82
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -39.71983681892431,
-          "windows": 600,
+          "levelDb": -42.16798107829235,
+          "windows": 286,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.62680728112793,
-          "windows": 809,
+          "levelDb": -34.09655236139214,
+          "windows": 434,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -35.776671132866184,
-          "windows": 582,
-          "targetDb": -28
-        },
         "drums/16/band": {
-          "levelDb": -35.41016730734718,
-          "windows": 809,
+          "levelDb": -40.32351466725132,
+          "windows": 530,
           "targetDb": -31
         },
+        "guitar/27/lead": {
+          "levelDb": -36.792170440260115,
+          "windows": 348,
+          "targetDb": -28
+        },
         "keys/0/lead": {
-          "levelDb": -34.43422784573119,
-          "windows": 204,
+          "levelDb": -33.43338443540296,
+          "windows": 101,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -35.44694739705242,
-          "windows": 119,
+          "levelDb": -32.488750039605094,
+          "windows": 73,
           "targetDb": -31
         }
       }
     },
     "r3-1": {
-      "scoreSha256": "e9c71854577d62448910e1e8f75809c89c9c78bf1b0ddfac35fae970a45be43b",
-      "offsetDb": -5.565326370177936,
+      "scoreSha256": "2eaa53788f28c174487d8ef774fe0a424a2fe5c18e3eb524429e181f24c53222",
+      "offsetDb": -5.3438760812902055,
       "volumes": {
-        "keys/0/backing": 126,
-        "bass/33/band": 86,
+        "keys/0/backing": 120,
+        "bass/33/band": 95,
         "guitar/29/lead": 127,
-        "drums/16/band": 118,
+        "drums/16/band": 117,
         "keys/0/lead": 104,
-        "guitar/29/backing": 126
+        "guitar/29/backing": 105
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -42.60889896958679,
-          "windows": 773,
+          "levelDb": -41.53627956954401,
+          "windows": 565,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -34.09589169261055,
-          "windows": 1162,
+          "levelDb": -35.72818971842593,
+          "windows": 880,
           "targetDb": -29
         },
         "guitar/29/lead": {
-          "levelDb": -37.71747520841621,
-          "windows": 862,
+          "levelDb": -37.49602491952848,
+          "windows": 640,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -40.913240523877235,
-          "windows": 1162,
+          "levelDb": -40.560907544067916,
+          "windows": 1080,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -35.252232456551226,
-          "windows": 254,
+          "levelDb": -34.98870324702593,
+          "windows": 192,
           "targetDb": -29
         },
         "guitar/29/backing": {
-          "levelDb": -40.613001291745846,
-          "windows": 186,
+          "levelDb": -37.25590035506193,
+          "windows": 180,
           "targetDb": -31
         }
       }
     },
     "r3-2": {
-      "scoreSha256": "baecf9bbe326749e38de45830d0070e53cc8722a3c1297bc82eb4f5fb625e080",
-      "offsetDb": -5.716303863711489,
+      "scoreSha256": "6de19eb53310b4524c9f9657f482548aff219b75441de43b79776e446cde74e5",
+      "offsetDb": -3.9089772950858697,
       "volumes": {
-        "keys/0/backing": 124,
+        "keys/0/backing": 103,
         "bass/33/band": 84,
         "guitar/29/lead": 127,
-        "drums/16/band": 87,
-        "keys/0/lead": 97,
-        "guitar/29/backing": 127
+        "drums/16/band": 99,
+        "keys/0/lead": 102,
+        "guitar/29/backing": 92
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -42.400877919607005,
-          "windows": 638,
+          "levelDb": -37.346734045444556,
+          "windows": 386,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.953933348718834,
-          "windows": 886,
+          "levelDb": -32.11177534221522,
+          "windows": 675,
           "targetDb": -29
         },
         "guitar/29/lead": {
-          "levelDb": -37.868452701949764,
-          "windows": 657,
+          "levelDb": -36.061126133324144,
+          "windows": 477,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -35.796511383138814,
-          "windows": 886,
+          "levelDb": -36.223681960886644,
+          "windows": 810,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -34.10322795053916,
-          "windows": 229,
+          "levelDb": -33.25218643180964,
+          "windows": 181,
           "targetDb": -29
         },
         "guitar/29/backing": {
-          "levelDb": -40.84451267119465,
-          "windows": 147,
+          "levelDb": -33.528417794732846,
+          "windows": 138,
           "targetDb": -31
         }
       }
     },
     "r3-3": {
-      "scoreSha256": "0d729a1e4f64a3203eae343341c6726efbe3a84094a7c6a36116653dc8982785",
-      "offsetDb": -5.517205424053622,
+      "scoreSha256": "cedc5cc0255fe70e0f074a7f7c9a5d5e93fe84048f9ee3440bb0001b21c2eefc",
+      "offsetDb": -9.203918701125502,
       "volumes": {
-        "keys/0/backing": 107,
-        "bass/33/band": 82,
+        "keys/0/backing": 93,
+        "bass/33/band": 76,
         "guitar/27/lead": 127,
-        "drums/16/band": 101,
-        "keys/0/lead": 96,
-        "guitar/27/backing": 110
+        "drums/16/band": 100,
+        "keys/0/lead": 88,
+        "guitar/27/backing": 79
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -39.71734941531882,
-          "windows": 693,
+          "levelDb": -40.938545354167445,
+          "windows": 623,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.25662859626324,
-          "windows": 1062,
+          "levelDb": -35.609045131476805,
+          "windows": 1300,
           "targetDb": -29
         },
         "guitar/27/lead": {
-          "levelDb": -37.6693542622919,
-          "windows": 693,
+          "levelDb": -41.35606753936378,
+          "windows": 785,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -38.096049245931134,
-          "windows": 1062,
+          "levelDb": -41.71839318074095,
+          "windows": 1350,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.82116540612147,
-          "windows": 369,
+          "levelDb": -36.04749676124165,
+          "windows": 298,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -38.1207363591064,
-          "windows": 209,
+          "levelDb": -36.06047940035987,
+          "windows": 228,
           "targetDb": -31
         }
       }
     },
     "r3-4": {
-      "scoreSha256": "e8cb551579c4853981384db280be78bca66ab675c5d98e5f214a8678128c76ae",
-      "offsetDb": -3.2785975377944547,
+      "scoreSha256": "c646b270e0085aee82db4bf86a854fdd8d927dc1e90622dae624597801211cbf",
+      "offsetDb": -8.538974645175216,
       "volumes": {
-        "keys/0/backing": 127,
-        "bass/33/band": 102,
-        "guitar/27/lead": 116,
-        "drums/16/band": 100,
-        "keys/0/lead": 105,
-        "guitar/27/backing": 117
+        "keys/0/backing": 85,
+        "bass/33/band": 71,
+        "guitar/28/lead": 127,
+        "drums/16/band": 83,
+        "keys/0/lead": 80,
+        "guitar/28/backing": 104
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.43074637603273,
-          "windows": 657,
+          "levelDb": -38.70551746857282,
+          "windows": 369,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -34.86202518553442,
-          "windows": 886,
+          "levelDb": -33.77760216329353,
+          "windows": 641,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -33.80566167199174,
-          "windows": 657,
+        "guitar/28/lead": {
+          "levelDb": -40.69112348341349,
+          "windows": 260,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -35.79694103633799,
-          "windows": 886,
+          "levelDb": -37.78068682795997,
+          "windows": 708,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.17308148569377,
-          "windows": 229,
+          "levelDb": -33.57471665386091,
+          "windows": 100,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -37.02346901633686,
-          "windows": 127,
+        "guitar/28/backing": {
+          "levelDb": -40.285714491185246,
+          "windows": 32,
           "targetDb": -31
         }
       }
     },
     "r3-5": {
-      "scoreSha256": "223893ff25163c062dd9d435c01447a1f73df5c27733dbd97849a03ad9e0f196",
-      "offsetDb": -4.535040492395724,
+      "scoreSha256": "12a5797fe8c9a6587b9900cd5873515ca6de28222a72bfe1633995ff0e0494e5",
+      "offsetDb": -7.3316742152758865,
       "volumes": {
-        "keys/0/backing": 124,
-        "bass/33/band": 87,
+        "keys/0/backing": 113,
+        "bass/33/band": 86,
+        "drums/16/band": 127,
         "guitar/27/lead": 127,
-        "drums/16/band": 90,
-        "keys/0/lead": 107,
-        "guitar/27/backing": 103
+        "keys/0/lead": 95,
+        "guitar/27/backing": 86
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -41.20370045014564,
-          "windows": 575,
+          "levelDb": -42.52918734021467,
+          "windows": 294,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.248598584300446,
-          "windows": 775,
+          "levelDb": -35.917966206821994,
+          "windows": 505,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -36.687189330634,
-          "windows": 575,
-          "targetDb": -28
-        },
         "drums/16/band": {
-          "levelDb": -35.208808717598345,
-          "windows": 775,
+          "levelDb": -43.93230995969195,
+          "windows": 657,
           "targetDb": -31
         },
+        "guitar/27/lead": {
+          "levelDb": -39.47824002286691,
+          "windows": 337,
+          "targetDb": -28
+        },
         "keys/0/lead": {
-          "levelDb": -34.657946922355784,
-          "windows": 200,
+          "levelDb": -35.40713020374311,
+          "windows": 160,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -36.01531071709141,
-          "windows": 128,
+          "levelDb": -35.67601403211383,
+          "windows": 117,
           "targetDb": -31
         }
       }
     },
     "r4-1": {
-      "scoreSha256": "16a9ba0e1a28e78a99a61ba677febfcbd697e64f3677e3f3a2d3f1d3b57eb6ae",
-      "offsetDb": -9.47654834165705,
+      "scoreSha256": "03fc9217c8eedeeacb1e3601f152b0db0602810e18b8e7b08dcccdcdf7a5dc89",
+      "offsetDb": -6.894906790726485,
       "volumes": {
-        "keys/4/backing": 80,
-        "bass/33/band": 68,
-        "guitar/27/lead": 127,
-        "drums/16/band": 73,
-        "keys/4/lead": 75,
-        "guitar/27/backing": 85
+        "keys/4/backing": 103,
+        "bass/33/band": 91,
+        "guitar/29/lead": 127,
+        "drums/16/band": 127,
+        "keys/4/lead": 91,
+        "guitar/29/backing": 114
       },
       "measurement": {
         "keys/4/backing": {
-          "levelDb": -38.55638760663697,
-          "windows": 766,
+          "levelDb": -40.43566717726356,
+          "windows": 532,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -34.03863725229664,
-          "windows": 1033,
+          "levelDb": -36.43420136762439,
+          "windows": 909,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -41.628697179895326,
-          "windows": 733,
+        "guitar/29/lead": {
+          "levelDb": -39.01960594432993,
+          "windows": 555,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -36.47541914560794,
-          "windows": 1033,
+          "levelDb": -43.49554253514255,
+          "windows": 981,
           "targetDb": -31
         },
         "keys/4/lead": {
-          "levelDb": -33.503621314065704,
-          "windows": 267,
+          "levelDb": -34.20686170010243,
+          "windows": 291,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -37.62097637638462,
-          "windows": 152,
+        "guitar/29/backing": {
+          "levelDb": -40.13061354060533,
+          "windows": 147,
           "targetDb": -31
         }
       }
     },
     "r4-2": {
-      "scoreSha256": "d7eaaa87b430d960030626efc64a1b253a68b1d3605f695ffd1770c62d96f976",
-      "offsetDb": -10.223042499354165,
+      "scoreSha256": "5e90f05e5d86752b2168fbad26eb1cf10cb35b41b1f765ca560de57792187198",
+      "offsetDb": -15.554952571550675,
       "volumes": {
-        "keys/4/backing": 74,
-        "bass/33/band": 63,
-        "guitar/27/lead": 116,
-        "drums/16/band": 75,
-        "keys/4/lead": 71,
-        "guitar/27/backing": 127
+        "bass/33/band": 65,
+        "guitar/26/lead": 82,
+        "drums/16/band": 127,
+        "keys/4/backing": 91,
+        "keys/4/lead": 73,
+        "guitar/26/backing": 74
       },
       "measurement": {
-        "keys/4/backing": {
-          "levelDb": -37.91242516064823,
-          "windows": 493,
-          "targetDb": -33
-        },
         "bass/33/band": {
-          "levelDb": -33.28010319038021,
-          "windows": 664,
+          "levelDb": -39.16775585497428,
+          "windows": 278,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -40.744772715194564,
-          "windows": 493,
+        "guitar/26/lead": {
+          "levelDb": -40.004365058519625,
+          "windows": 159,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -37.754791230485516,
-          "windows": 664,
+          "levelDb": -52.15558831596674,
+          "windows": 591,
           "targetDb": -31
         },
+        "keys/4/backing": {
+          "levelDb": -46.9077496256748,
+          "windows": 37,
+          "targetDb": -33
+        },
         "keys/4/lead": {
-          "levelDb": -33.31323222801589,
-          "windows": 171,
+          "levelDb": -39.02658480214762,
+          "windows": 74,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -45.37519133759244,
-          "windows": 89,
+        "guitar/26/backing": {
+          "levelDb": -41.433013917713104,
+          "windows": 31,
           "targetDb": -31
         }
       }
     },
     "r4-3": {
-      "scoreSha256": "514af7a870e5953552abe370a5f7253314fd5c98cec267a2d3beea2ae1d95790",
-      "offsetDb": -9.943707582536362,
+      "scoreSha256": "931d75723db7d9b0eb012a6eb9dea10f4ed30726eba0409b1e8a4ee51924ff76",
+      "offsetDb": -4.231746068323223,
       "volumes": {
-        "keys/0/backing": 87,
-        "bass/33/band": 66,
-        "guitar/27/lead": 87,
-        "drums/16/band": 68,
-        "keys/0/lead": 71,
-        "guitar/27/backing": 127
+        "keys/0/backing": 114,
+        "bass/33/band": 96,
+        "guitar/27/lead": 116,
+        "drums/16/band": 127,
+        "keys/0/lead": 107,
+        "guitar/27/backing": 120
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.455269854700504,
-          "windows": 630,
+          "levelDb": -39.45774084224756,
+          "windows": 275,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.941213279308194,
-          "windows": 886,
+          "levelDb": -34.70271575539232,
+          "windows": 592,
           "targetDb": -29
         },
         "guitar/27/lead": {
-          "levelDb": -35.46500314286811,
-          "windows": 657,
+          "levelDb": -34.85528016180761,
+          "windows": 268,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -35.79651138313555,
-          "windows": 886,
+          "levelDb": -40.832381812739285,
+          "windows": 600,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.09676458132989,
-          "windows": 229,
+          "levelDb": -34.360941826155425,
+          "windows": 252,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -45.09585642077464,
-          "windows": 229,
+          "levelDb": -38.43614979207659,
+          "windows": 156,
           "targetDb": -31
         }
       }
     },
     "r4-4": {
-      "scoreSha256": "8b0acd6de21558264614457415ed1945473fd971b398e7bd0596bd0a2d8fb085",
-      "offsetDb": -3.5198839991043167,
+      "scoreSha256": "f040e2cde11785dd084067248e9be7bb2170b9f73eb25746802d86dd6c8030b8",
+      "offsetDb": -1.1639056317060872,
       "volumes": {
-        "keys/0/backing": 113,
-        "bass/33/band": 92,
-        "guitar/27/lead": 127,
-        "drums/16/band": 104,
-        "keys/0/lead": 108,
-        "guitar/27/backing": 116
+        "keys/0/backing": 127,
+        "bass/33/band": 101,
+        "guitar/30/lead": 126,
+        "drums/16/band": 123,
+        "keys/0/lead": 116,
+        "guitar/30/backing": 99
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -38.65996837469545,
-          "windows": 558,
+          "levelDb": -38.31605446994436,
+          "windows": 518,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.35694548686683,
-          "windows": 775,
+          "levelDb": -32.54153355074463,
+          "windows": 554,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -35.67203283734259,
-          "windows": 575,
+        "guitar/30/lead": {
+          "levelDb": -33.1602639431738,
+          "windows": 443,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -36.568106997544675,
-          "windows": 775,
+          "levelDb": -37.24044671467645,
+          "windows": 627,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -33.814995182590714,
-          "windows": 200,
+          "levelDb": -32.7427070203393,
+          "windows": 102,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -37.0654682223764,
-          "windows": 150,
+        "guitar/30/backing": {
+          "levelDb": -32.059984999757376,
+          "windows": 75,
           "targetDb": -31
         }
       }
     },
     "r4-5": {
-      "scoreSha256": "7c95cce8228b1dc8c54861655c6ff8fe887ba93812c5f6f53aef82d7a34a9259",
-      "offsetDb": -2.8641991697462155,
+      "scoreSha256": "e0621ac3bd91787aca07d764265c997577308690c3841e4c93f061cf8c5e1419",
+      "offsetDb": -1.7193466699949278,
       "volumes": {
-        "keys/0/backing": 103,
-        "bass/33/band": 96,
-        "guitar/30/riff": 93,
-        "drums/16/band": 98,
-        "keys/0/lead": 104,
-        "guitar/30/backing": 127,
-        "guitar/30/lead": 122
+        "keys/0/backing": 114,
+        "bass/33/band": 92,
+        "guitar/30/riff": 86,
+        "drums/16/band": 109,
+        "keys/0/lead": 127,
+        "guitar/30/backing": 107,
+        "guitar/30/lead": 116
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -36.38066621901911,
-          "windows": 632,
+          "levelDb": -36.943053845558715,
+          "windows": 497,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.354803490324,
-          "windows": 936,
+          "levelDb": -31.5004734851005,
+          "windows": 673,
           "targetDb": -29
         },
         "guitar/30/riff": {
-          "levelDb": -30.541406946794538,
-          "windows": 553,
+          "levelDb": -28.129516693932104,
+          "windows": 280,
           "targetDb": -29
         },
         "drums/16/band": {
-          "levelDb": -35.043166144837635,
-          "windows": 936,
+          "levelDb": -35.74016397211536,
+          "windows": 775,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -32.517413766030316,
-          "windows": 191,
+          "levelDb": -34.8714955082332,
+          "windows": 173,
           "targetDb": -29
         },
         "guitar/30/backing": {
-          "levelDb": -38.01634800798449,
-          "windows": 119,
+          "levelDb": -33.927747186286204,
+          "windows": 116,
           "targetDb": -31
         },
         "guitar/30/lead": {
-          "levelDb": -34.29805219048619,
-          "windows": 192,
+          "levelDb": -32.23818163963411,
+          "windows": 189,
           "targetDb": -28
         }
       }
     },
     "r5-1": {
-      "scoreSha256": "f19993f6e9a92bb8ccd8243af389a7d83666e87d447c0a359555f5ef2c5df9c8",
-      "offsetDb": -5.638879392195954,
+      "scoreSha256": "c4348cf910fda0a5e1b3b5e8cc86c5dd81ed9c303c08c6dd8d47d92992b4e77f",
+      "offsetDb": -5.720125660958183,
       "volumes": {
-        "keys/0/backing": 114,
-        "bass/33/band": 84,
-        "guitar/29/riff": 105,
-        "drums/16/band": 90,
+        "keys/0/backing": 107,
+        "bass/33/band": 81,
+        "guitar/29/riff": 92,
+        "drums/16/band": 113,
         "guitar/29/lead": 127,
-        "keys/0/lead": 99,
-        "guitar/29/backing": 118
+        "keys/0/lead": 95,
+        "guitar/29/backing": 89
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.850770101326,
-          "windows": 952,
+          "levelDb": -39.85607815991457,
+          "windows": 854,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.79799166326832,
-          "windows": 1357,
+          "levelDb": -33.20198891954271,
+          "windows": 1269,
           "targetDb": -29
         },
         "guitar/29/riff": {
-          "levelDb": -35.56106377112619,
-          "windows": 573,
+          "levelDb": -33.32109958054843,
+          "windows": 222,
           "targetDb": -29
         },
         "drums/16/band": {
-          "levelDb": -36.230702620813034,
-          "windows": 1357,
+          "levelDb": -40.34026808032431,
+          "windows": 1336,
           "targetDb": -31
         },
         "guitar/29/lead": {
-          "levelDb": -37.79102823043423,
-          "windows": 379,
+          "levelDb": -37.87227449919646,
+          "windows": 639,
           "targetDb": -28
         },
         "keys/0/lead": {
-          "levelDb": -34.50699954444401,
-          "windows": 241,
+          "levelDb": -33.87234114495898,
+          "windows": 234,
           "targetDb": -29
         },
         "guitar/29/backing": {
-          "levelDb": -39.56373307910516,
-          "windows": 173,
+          "levelDb": -34.744600651953526,
+          "windows": 175,
           "targetDb": -31
         }
       }
     },
     "r5-2": {
-      "scoreSha256": "1e51d67d0c4933b9afaec02a2a6abb4c87e136acbf66ad06aa681a0965b790a6",
-      "offsetDb": -7.790372517048696,
+      "scoreSha256": "5a18747640139b9c2d816d78597cc863c9a5b33e34392b26186266443b798a61",
+      "offsetDb": -7.853472439406553,
       "volumes": {
-        "keys/0/backing": 90,
-        "bass/33/band": 79,
+        "keys/0/backing": 97,
+        "bass/33/band": 77,
         "guitar/27/lead": 127,
-        "drums/16/band": 85,
-        "keys/0/lead": 101,
-        "guitar/27/backing": 93
+        "drums/16/band": 108,
+        "keys/0/lead": 79,
+        "guitar/27/backing": 81
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -38.884636059231156,
-          "windows": 1399,
+          "levelDb": -40.29449068266503,
+          "windows": 719,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -34.8933702303848,
-          "windows": 1719,
+          "levelDb": -34.59458383904361,
+          "windows": 1423,
           "targetDb": -29
         },
         "guitar/27/lead": {
-          "levelDb": -39.94252135528697,
-          "windows": 1399,
+          "levelDb": -40.00562127764483,
+          "windows": 912,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -37.50722378963594,
-          "windows": 1719,
+          "levelDb": -41.62240460957779,
+          "windows": 1555,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -36.98640522763911,
-          "windows": 311,
+          "levelDb": -32.70181785307828,
+          "windows": 320,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -37.58678597318264,
-          "windows": 200,
+          "levelDb": -35.129901824688545,
+          "windows": 201,
           "targetDb": -31
         }
       }
     },
     "r5-3": {
-      "scoreSha256": "6c01eefbe94874ffb07a4cc292209d1783b90edf195d178f86aed5a0cb1c288d",
-      "offsetDb": -7.558581119231222,
+      "scoreSha256": "12dca63fdafba87d8a2223820d36d1a65fcfdfa4e72e2e34773cbde2243ffcd2",
+      "offsetDb": -9.727314694905136,
       "volumes": {
-        "keys/0/backing": 93,
-        "bass/33/band": 73,
-        "guitar/27/lead": 127,
-        "drums/16/band": 72,
-        "keys/0/lead": 80,
-        "guitar/27/backing": 93
+        "keys/0/backing": 73,
+        "bass/33/band": 71,
+        "guitar/25/lead": 72,
+        "drums/16/band": 127,
+        "keys/0/lead": 78,
+        "guitar/25/backing": 64
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -39.386266913834014,
-          "windows": 780,
+          "levelDb": -37.22654707743087,
+          "windows": 624,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.354803490324,
-          "windows": 940,
+          "levelDb": -35.08171508495507,
+          "windows": 811,
           "targetDb": -29
         },
-        "guitar/27/lead": {
-          "levelDb": -39.710729957469496,
-          "windows": 780,
+        "guitar/25/lead": {
+          "levelDb": -31.932383773988814,
+          "windows": 658,
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -34.25243314049869,
-          "windows": 940,
+          "levelDb": -46.3279504393212,
+          "windows": 836,
           "targetDb": -31
         },
         "keys/0/lead": {
-          "levelDb": -32.58873557983334,
-          "windows": 160,
+          "levelDb": -34.36470409372424,
+          "windows": 167,
           "targetDb": -29
         },
-        "guitar/27/backing": {
-          "levelDb": -37.2284001379588,
-          "windows": 90,
+        "guitar/25/backing": {
+          "levelDb": -32.85282363039539,
+          "windows": 82,
           "targetDb": -31
         }
       }
     },
     "r5-4": {
-      "scoreSha256": "4bc2b04bbf048a0e66dd8b000eea44c50dce900125fa06159f36de40cd591f94",
-      "offsetDb": -6.0732608451499255,
+      "scoreSha256": "f34f23e7d4d4198262aefe31ef552680b9e93efe1db1f43616550915dea22c5b",
+      "offsetDb": -7.097610754001324,
       "volumes": {
-        "keys/0/backing": 103,
-        "bass/33/band": 79,
-        "guitar/27/riff": 79,
-        "drums/16/band": 82,
+        "keys/0/backing": 99,
+        "bass/33/band": 80,
+        "guitar/27/riff": 77,
+        "drums/16/band": 97,
         "guitar/27/lead": 127,
-        "keys/0/lead": 87,
-        "guitar/27/backing": 90
+        "keys/0/lead": 91,
+        "guitar/27/backing": 86
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -39.605795780737154,
-          "windows": 738,
+          "levelDb": -39.92631984291312,
+          "windows": 540,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.23682995053921,
-          "windows": 1224,
+          "levelDb": -34.441213492188695,
+          "windows": 951,
           "targetDb": -29
         },
         "guitar/27/riff": {
-          "levelDb": -30.940977735542052,
-          "windows": 371,
+          "levelDb": -31.542958784363027,
+          "windows": 89,
           "targetDb": -29
         },
         "drums/16/band": {
-          "levelDb": -35.03642879641289,
-          "windows": 1224,
+          "levelDb": -38.94504210530354,
+          "windows": 1063,
           "targetDb": -31
         },
         "guitar/27/lead": {
-          "levelDb": -38.2254096833882,
-          "windows": 385,
+          "levelDb": -39.2497595922396,
+          "windows": 465,
           "targetDb": -28
         },
         "keys/0/lead": {
-          "levelDb": -32.636086496569625,
-          "windows": 376,
+          "levelDb": -34.52903220473968,
+          "windows": 390,
           "targetDb": -29
         },
         "guitar/27/backing": {
-          "levelDb": -35.238560285948566,
-          "windows": 216,
+          "levelDb": -35.37678202436682,
+          "windows": 342,
           "targetDb": -31
         }
       }
     },
     "r5-5": {
-      "scoreSha256": "deb0123fe151f6990ff69a9647349e56f9289f4b285724343cd63b28c569749f",
-      "offsetDb": -5.2393262124456195,
+      "scoreSha256": "fcb182b120366fe55249a79a2822bc1353b7f60cd64138887cc026b6c6946653",
+      "offsetDb": -5.943117461934652,
       "volumes": {
-        "keys/0/backing": 117,
-        "bass/33/band": 84,
-        "guitar/29/riff": 108,
-        "drums/16/band": 91,
-        "guitar/29/lead": 127,
-        "keys/0/lead": 99,
-        "guitar/29/backing": 120
+        "keys/0/backing": 109,
+        "bass/33/band": 89,
+        "guitar/29/riff": 93,
+        "drums/16/band": 127,
+        "guitar/29/lead": 126,
+        "keys/0/lead": 103,
+        "guitar/29/backing": 99
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -40.90841974190323,
-          "windows": 1336,
+          "levelDb": -40.45042455775888,
+          "windows": 844,
           "targetDb": -33
         },
         "bass/33/band": {
-          "levelDb": -33.46909311886429,
-          "windows": 1600,
+          "levelDb": -35.07779690650071,
+          "windows": 1219,
           "targetDb": -29
         },
         "guitar/29/riff": {
-          "levelDb": -35.62669737180053,
-          "windows": 472,
+          "levelDb": -33.70250842953116,
+          "windows": 185,
           "targetDb": -29
         },
         "drums/16/band": {
-          "levelDb": -36.06865919489845,
-          "windows": 1600,
+          "levelDb": -42.543753206350715,
+          "windows": 1384,
           "targetDb": -31
         },
         "guitar/29/lead": {
-          "levelDb": -37.391475050683894,
-          "windows": 771,
+          "levelDb": -37.98691454841582,
+          "windows": 908,
           "targetDb": -28
         },
         "keys/0/lead": {
-          "levelDb": -34.01147514037192,
-          "windows": 258,
+          "levelDb": -35.45264240026071,
+          "windows": 185,
           "targetDb": -29
         },
         "guitar/29/backing": {
-          "levelDb": -39.443633908517796,
-          "windows": 177,
+          "levelDb": -36.755757968519184,
+          "windows": 92,
           "targetDb": -31
         }
       }

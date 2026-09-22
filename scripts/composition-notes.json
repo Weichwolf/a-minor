@@ -1,0 +1,1480 @@
+[
+  {
+    "id": "r0-1",
+    "scene": "Protecting one small flame while the room goes dark. Intimacy, not triumph.",
+    "lyricDraft": [
+      "Stay.",
+      "Keep the spark.",
+      "I am here.",
+      "Stay with me."
+    ],
+    "musicalConsequence": "A single held call, a three-note reply, then room for the reply to matter.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A single held call, a three-note reply, then room for the reply to matter.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r0-1/parts",
+    "writtenForm": "A2 B2 A2 C2",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r0-2",
+    "scene": "A person stops under a weight, breathes, and takes one more step.",
+    "lyricDraft": [
+      "Wait.",
+      "Breathe.",
+      "Rise.",
+      "Not yet."
+    ],
+    "musicalConsequence": "Low separated impacts; the silence is part of the weight. The return gets shorter, not busier.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Low separated impacts; the silence is part of the weight. The return gets shorter, not busier.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r0-2/parts",
+    "writtenForm": "A4 V4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r0-3",
+    "scene": "Calling into a deserted house and hearing an answer from the wrong room.",
+    "lyricDraft": [
+      "Who's there?",
+      "Where?",
+      "Come back.",
+      "Home."
+    ],
+    "musicalConsequence": "A three-beat call with a rest before its echo; the keyboard replies at a different height.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A three-beat call with a rest before its echo; the keyboard replies at a different height.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r0-3/parts",
+    "writtenForm": "A4 B4 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r0-4",
+    "scene": "A buried ember becomes a pulse; restrained defiance.",
+    "lyricDraft": [
+      "Not gone.",
+      "Under ash.",
+      "Still I breathe.",
+      "Still here."
+    ],
+    "musicalConsequence": "Repeated A notes insist before the minor third opens the phrase. Bass and drums answer the insistence.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Repeated A notes insist before the minor third opens the phrase. Bass and drums answer the insistence.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r0-4/parts",
+    "writtenForm": "A4 B4 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r0-5",
+    "scene": "Watching a departing person until the last patch of light disappears.",
+    "lyricDraft": [
+      "Leave the light.",
+      "Please.",
+      "Let me watch.",
+      "Go."
+    ],
+    "musicalConsequence": "The melody reaches once and falls back; the final answer descends instead of trying to win.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "The melody reaches once and falls back; the final answer descends instead of trying to win.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r0-5/parts",
+    "writtenForm": "A4 B4 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r1-1",
+    "scene": "Roots catch a walker who is trying to leave. Uneasy persistence.",
+    "lyricDraft": [
+      "Let me pass.",
+      "Loose your hands.",
+      "Every root",
+      "knows my name."
+    ],
+    "musicalConsequence": "Two short pickups meet a stubborn long note; the answer changes direction and leaves space.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Two short pickups meet a stubborn long note; the answer changes direction and leaves space.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r1-1/parts",
+    "writtenForm": "A4 B4 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r1-2",
+    "scene": "A hand approaches a forbidden door, recoils, then opens it.",
+    "lyricDraft": [
+      "Lift the latch.",
+      "Not tonight.",
+      "Touch the edge.",
+      "Let me through."
+    ],
+    "musicalConsequence": "The phrygian semitone is a hesitation with a rest after it, not a scale demonstration.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "The phrygian semitone is a hesitation with a rest after it, not a scale demonstration.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r1-2/parts",
+    "writtenForm": "A4 B4 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r1-3",
+    "scene": "A reflection fractures; the fragments do not agree on the face.",
+    "lyricDraft": [
+      "One face.",
+      "Three cracks.",
+      "Look away.",
+      "It looks back."
+    ],
+    "musicalConsequence": "Broken arpeggios, interrupted answers, and a deliberately incomplete first cadence.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      },
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Broken arpeggios, interrupted answers, and a deliberately incomplete first cadence.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r1-3/parts",
+    "writtenForm": "A8 B4 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r1-4",
+    "scene": "People keep walking together through industrial noise. Anger with discipline.",
+    "lyricDraft": [
+      "IRON on the roof.",
+      "BOOTS against the road.",
+      "NO one walks alone.",
+      "WE will bear the load."
+    ],
+    "musicalConsequence": "A low repeated-note hook with a clipped gap; a broad response makes the chorus feel collective.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A low repeated-note hook with a clipped gap; a broad response makes the chorus feel collective.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic.",
+      "The penultimate bar is a single ensemble hit followed by silence; the final chord must feel earned."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r1-4/parts",
+    "writtenForm": "A8 B4 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r1-5",
+    "scene": "A familiar room is warm, but the person who belonged there is absent.",
+    "lyricDraft": [
+      "At the glass",
+      "your hand stayed.",
+      "Every year",
+      "rain comes back."
+    ],
+    "musicalConsequence": "A lilting three-beat song with delayed answers and one rising appeal before the descent.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      },
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A lilting three-beat song with delayed answers and one rising appeal before the descent.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r1-5/parts",
+    "writtenForm": "A8 B8 C8",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r2-1",
+    "scene": "A procession cannot stop the ground sinking beneath it.",
+    "lyricDraft": [
+      "Down one stair.",
+      "Down one more.",
+      "Keep your name.",
+      "Find the floor."
+    ],
+    "musicalConsequence": "The bass descends E–D–C–B while the melody resists on a repeated pitch, then finally yields.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      },
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "The bass descends E–D–C–B while the melody resists on a repeated pitch, then finally yields.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r2-1/parts",
+    "writtenForm": "A8 B4 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r2-2",
+    "scene": "Someone tries to look confident while being followed. A crooked grin.",
+    "lyricDraft": [
+      "Miss a step.",
+      "Turn and smile.",
+      "Who is there?",
+      "Walk a while."
+    ],
+    "musicalConsequence": "Anticipated attacks, clipped gaps and an answer that lands late; the band leaves the jokes audible.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Anticipated attacks, clipped gaps and an answer that lands late; the band leaves the jokes audible.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r2-2/parts",
+    "writtenForm": "A4 B8 V4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r2-3",
+    "scene": "Rain strikes broken metal; sudden memories arrive in flashes.",
+    "lyricDraft": [
+      "Flash. Then gone.",
+      "Glass in the rain.",
+      "Catch one shard.",
+      "Gone again."
+    ],
+    "musicalConsequence": "A few sharp sixteenth bursts interrupt sustained tones. Long rests separate the flashes.",
+    "references": [
+      {
+        "artist": "Antonio Vivaldi",
+        "work": "Le quattro stagioni",
+        "transfer": "A concrete image determines gesture and contrast; a recognisable ritornello is interrupted by contrasting episodes; sequence and register changes develop a cell.",
+        "source": "https://imslp.org/wiki/Il_cimento_dell%27armonia_e_dell%27inventione,_Op.8_(Vivaldi,_Antonio)",
+        "scope": "Formal and programmatic techniques, without quoting any Seasons melody."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A few sharp sixteenth bursts interrupt sustained tones. Long rests separate the flashes.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r2-3/parts",
+    "writtenForm": "A8 B4 V4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r2-4",
+    "scene": "Dust turns in a shaft of light; the same figures return slightly altered.",
+    "lyricDraft": [],
+    "musicalConsequence": "A small turning figure migrates through the circle of fifths; the bass keeps moving while the top voice occasionally stays still.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A small turning figure migrates through the circle of fifths; the bass keeps moving while the top voice occasionally stays still.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r2-4/parts",
+    "writtenForm": "A8 B8 V8 C8",
+    "prosody": "Instrumental programme: gesture, register, repetition and interruption stand in for verbal stress.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r2-5",
+    "scene": "The speaker stops asking permission and crosses an uncertain threshold.",
+    "lyricDraft": [
+      "Who will know",
+      "if I stay?",
+      "Open now.",
+      "I choose the way."
+    ],
+    "musicalConsequence": "A suspended question becomes a rhythmically broader answer; the last return resolves the original question.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A suspended question becomes a rhythmically broader answer; the last return resolves the original question.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r2-5/parts",
+    "writtenForm": "A4 B4 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r3-1",
+    "scene": "A difficult decision is held until avoiding it becomes impossible.",
+    "lyricDraft": [
+      "Hold the flame.",
+      "Name the cost.",
+      "Take the step.",
+      "Nothing lost?"
+    ],
+    "musicalConsequence": "Slow harmonic pressure, a exposed leading tone, and a rest before the decisive return.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Slow harmonic pressure, a exposed leading tone, and a rest before the decisive return.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r3-1/parts",
+    "writtenForm": "I4 A8 B8 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r3-2",
+    "scene": "A heavy, ungainly dance at a wake. Bitter humour rather than background elegance.",
+    "lyricDraft": [
+      "Lift that weight.",
+      "Turn too late.",
+      "Stamp the floor.",
+      "Dance once more."
+    ],
+    "musicalConsequence": "Angular dotted gestures and diminished pivots; short power-chord stomps answer the keyboard. The groove must limp deliberately.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      },
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Angular dotted gestures and diminished pivots; short power-chord stomps answer the keyboard. The groove must limp deliberately.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r3-2/parts",
+    "writtenForm": "A8 B8 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r3-3",
+    "scene": "A river pulls someone under; struggling gives way to finding its current.",
+    "lyricDraft": [
+      "Black water, carry me.",
+      "Do not take my name.",
+      "Far under, I can hear",
+      "one breath rise again."
+    ],
+    "musicalConsequence": "Long vocal arcs over a rolling compound pulse; the second half breathes where the first half pushed.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      },
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Long vocal arcs over a rolling compound pulse; the second half breathes where the first half pushed.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r3-3/parts",
+    "writtenForm": "A8 B8 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r3-4",
+    "scene": "A taunting voice circles someone who finally refuses to answer.",
+    "lyricDraft": [
+      "Back you come.",
+      "Same old thorn.",
+      "Swing your chain.",
+      "I am gone."
+    ],
+    "musicalConsequence": "A lopsided swung low riff, dry replies and an unexpectedly empty last response.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A lopsided swung low riff, dry replies and an unexpectedly empty last response.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r3-4/parts",
+    "writtenForm": "A8 B4 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r3-5",
+    "scene": "Trying to hold a memory that changes whenever it is named.",
+    "lyricDraft": [
+      "There you were.",
+      "There you fade.",
+      "Say it once.",
+      "Smoke remains."
+    ],
+    "musicalConsequence": "Legato fragments climb, break off, and return lower; the accompaniment must not fill their empty ends.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Legato fragments climb, break off, and return lower; the accompaniment must not fill their empty ends.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r3-5/parts",
+    "writtenForm": "A8 B8 V4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r4-1",
+    "scene": "A slit of daylight crosses a heavy metal door. Hope without certainty.",
+    "lyricDraft": [
+      "Through the seam",
+      "comes a thread.",
+      "Not the sun.",
+      "Not yet dead."
+    ],
+    "musicalConsequence": "The opening minor weight makes room for a suspended bright F-sharp over C; fewer attacks create the lift.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      },
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "The opening minor weight makes room for a suspended bright F-sharp over C; fewer attacks create the lift.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r4-1/parts",
+    "writtenForm": "I4 A8 B8 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r4-2",
+    "scene": "Bells from a frozen town arrive out of order across a lake.",
+    "lyricDraft": [],
+    "musicalConsequence": "Separate registers call across wide silences. A recognisable interval returns, but the answer changes its distance.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Separate registers call across wide silences. A recognisable interval returns, but the answer changes its distance.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r4-2/parts",
+    "writtenForm": "A6 B6 V6 C6",
+    "prosody": "Instrumental programme: gesture, register, repetition and interruption stand in for verbal stress.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r4-3",
+    "scene": "A stream repeatedly meets a stone; neither is the villain.",
+    "lyricDraft": [],
+    "musicalConsequence": "A square pulse and a three-against-two figure coexist. They separate, exchange material and briefly agree at the cadence.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      },
+      {
+        "artist": "Antonio Vivaldi",
+        "work": "Le quattro stagioni",
+        "transfer": "A concrete image determines gesture and contrast; a recognisable ritornello is interrupted by contrasting episodes; sequence and register changes develop a cell.",
+        "source": "https://imslp.org/wiki/Il_cimento_dell%27armonia_e_dell%27inventione,_Op.8_(Vivaldi,_Antonio)",
+        "scope": "Formal and programmatic techniques, without quoting any Seasons melody."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A square pulse and a three-against-two figure coexist. They separate, exchange material and briefly agree at the cadence.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r4-3/parts",
+    "writtenForm": "A4 B8 V4 C4",
+    "prosody": "Instrumental programme: gesture, register, repetition and interruption stand in for verbal stress.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r4-4",
+    "scene": "A pursued walker counts seven shadows but only six footsteps.",
+    "lyricDraft": [
+      "Two steps.",
+      "Two more.",
+      "Who walks behind?",
+      "Do not turn."
+    ],
+    "musicalConsequence": "The 2+2+3 grouping propels the pursuit; a missing attack makes the last group feel longer instead of merely odd.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "The 2+2+3 grouping propels the pursuit; a missing attack makes the last group feel longer instead of merely odd.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r4-4/parts",
+    "writtenForm": "A8 B4 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r4-5",
+    "scene": "A repetitive machine is interrupted by someone finding their own voice.",
+    "lyricDraft": [
+      "Three more turns.",
+      "Three more years.",
+      "Break the ring.",
+      "I am here."
+    ],
+    "musicalConsequence": "Rigid 3+3+2 power chords give way to an offbeat pentatonic solo; the returning riff retains one deliberate gap.",
+    "references": [
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Rigid 3+3+2 power chords give way to an offbeat pentatonic solo; the returning riff retains one deliberate gap.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic.",
+      "The coda removes the machine’s last accent, then replaces its 3+3+2 with two shared attacks."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r4-5/parts",
+    "writtenForm": "A8 B8 S8 A4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r5-1",
+    "scene": "Returning to an abandoned childhood home during a storm. Each room changes the same memory.",
+    "lyricDraft": [
+      "Rain in the hall.",
+      "Your coat by the stair.",
+      "I call through the wall.",
+      "No one is there."
+    ],
+    "musicalConsequence": "An exposed doorway motif becomes a low riff, a remembered song, and finally a quiet fragment. Density follows the rooms.",
+    "references": [
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      },
+      {
+        "artist": "Type O Negative",
+        "work": "October Rust",
+        "transfer": "A memorable, singable hook against a low pulse; keyboard as atmosphere and counterline; warmth and bitter humour within heaviness.",
+        "source": "https://chroniclesofchaos.com/articles.aspx?id=1-76",
+        "scope": "Own interpretation of the chosen record; original hooks and lyrics, no reconstruction of a song."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "An exposed doorway motif becomes a low riff, a remembered song, and finally a quiet fragment. Density follows the rooms.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic.",
+      "In the coda, guitar bars 2 and 6 are silent while the keyboard remembers its descending answer."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r5-1/parts",
+    "writtenForm": "I4 A12 B8 V12 C8",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r5-2",
+    "scene": "Tending a ruined garden without knowing whether anything will grow.",
+    "lyricDraft": [
+      "I put my hands in ash.",
+      "I leave a place for rain.",
+      "If nothing answers back,",
+      "I will return again."
+    ],
+    "musicalConsequence": "A breathing compound-time melody, a high appeal, then a bend that reaches rather than decorates. The last return is gentler.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      },
+      {
+        "artist": "My Dying Bride",
+        "work": "Turn Loose the Swans",
+        "transfer": "Slow harmonic pressure; weight in the low riff against an independent lamenting line; silence and changes of texture carry form.",
+        "source": "https://www.nocleansinging.com/2015/09/08/get-to-the-point-andrew-craighan-my-dying-bride/",
+        "scope": "The interview documents music-first writing and deliberate space for violin/keys; the arrangement principles here are my compositional interpretation, not quotations or transcriptions."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A breathing compound-time melody, a high appeal, then a bend that reaches rather than decorates. The last return is gentler.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic.",
+      "In section B the keyboard melody is in the left hand; its note velocity takes priority over the right-hand accompaniment."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r5-2/parts",
+    "writtenForm": "I4 A8 B8 S8 V8 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r5-3",
+    "scene": "A frozen mechanism begins turning, jams, and eventually moves freely.",
+    "lyricDraft": [],
+    "musicalConsequence": "A baroque ritornello uses a recognisable rhythmic cell, contrary-motion answers and episodes that interrupt the expected cadence.",
+    "references": [
+      {
+        "artist": "Antonio Vivaldi",
+        "work": "Le quattro stagioni",
+        "transfer": "A concrete image determines gesture and contrast; a recognisable ritornello is interrupted by contrasting episodes; sequence and register changes develop a cell.",
+        "source": "https://imslp.org/wiki/Il_cimento_dell%27armonia_e_dell%27inventione,_Op.8_(Vivaldi,_Antonio)",
+        "scope": "Formal and programmatic techniques, without quoting any Seasons melody."
+      },
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A baroque ritornello uses a recognisable rhythmic cell, contrary-motion answers and episodes that interrupt the expected cadence.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "Complete or release the central gesture; no automatic triumphant ending."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r5-3/parts",
+    "writtenForm": "A8 B8 A4 S8 V8 C4",
+    "prosody": "Instrumental programme: gesture, register, repetition and interruption stand in for verbal stress.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r5-4",
+    "scene": "Two people describe the same loss from opposite sides of a river.",
+    "lyricDraft": [
+      "I kept the shore.",
+      "You kept the sea.",
+      "What did you hear?",
+      "Come answer me."
+    ],
+    "musicalConsequence": "Guitar and keyboard begin with different versions of one question, borrow each other’s rhythms in their solos, and meet in the coda.",
+    "references": [
+      {
+        "artist": "Heinrich Ignaz Franz Biber",
+        "work": "Harmonia artificioso-ariosa",
+        "transfer": "Two lines answer independently; dance types have distinct weight and articulation; variation changes the treatment of a recognisable idea.",
+        "source": "https://imslp.org/wiki/Harmonia_artificioso-ariosa_(Biber,_Heinrich_Ignaz_Franz_von)",
+        "scope": "Variation, dance character and dialoguing parts are transferred to the quartet. Historical scordatura is not copied; guitar stays P4."
+      },
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "Guitar and keyboard begin with different versions of one question, borrow each other’s rhythms in their solos, and meet in the coda.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r5-4/parts",
+    "writtenForm": "I4 A8 B8 G8 K8 V4 C4",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  },
+  {
+    "id": "r5-5",
+    "scene": "Walking through the last hours of darkness; morning is possible but not promised.",
+    "lyricDraft": [
+      "Count every window.",
+      "Carry no stone.",
+      "Somewhere the night ends.",
+      "Walk the road home."
+    ],
+    "musicalConsequence": "A three-beat night motif expands into a four-beat walking song. The final opening is created by removing weight, not by adding a triumphant crash.",
+    "references": [
+      {
+        "artist": "Anathema",
+        "work": "Eternity",
+        "transfer": "Long vocal-shaped phrases; repeating a thought with a changed emotional context; density grows from fragile to open rather than merely adding notes.",
+        "source": "https://www.decibelmagazine.com/2014/06/27/danny-cavanagh-anathema-interviewed/",
+        "scope": "Later composer interview supports emotion-led writing; it is not evidence for the exact production process of Eternity. The musical transfer is an interpretation."
+      },
+      {
+        "artist": "Antonio Vivaldi",
+        "work": "Le quattro stagioni",
+        "transfer": "A concrete image determines gesture and contrast; a recognisable ritornello is interrupted by contrasting episodes; sequence and register changes develop a cell.",
+        "source": "https://imslp.org/wiki/Il_cimento_dell%27armonia_e_dell%27inventione,_Op.8_(Vivaldi,_Antonio)",
+        "scope": "Formal and programmatic techniques, without quoting any Seasons melody."
+      }
+    ],
+    "revision": "Narrative recomposition: distinct melodic rhythm, bass line, accompaniment and drum part. Not a MIDI humanization pass.",
+    "workingDecisions": [
+      "A three-beat night motif expands into a four-beat walking song. The final opening is created by removing weight, not by adding a triumphant crash.",
+      "Keep breaths in the melody audible: accompanying parts may answer them, but do not fill every silence.",
+      "Retain only the course techniques appropriate to this grade.",
+      "The coda is written out with its own harmonic arrival; it is not produced by replacing the last melody note with the tonic."
+    ],
+    "formIntent": {
+      "opening": "Establish the image and its recognisable gesture.",
+      "contrast": "Let the keyboard answer from another viewpoint.",
+      "return": "The same thought after the answer; use the written variation where the form calls for it.",
+      "ending": "The band withdraws: hats and snare disappear, then the keyboard leaves a breath before the final sonority."
+    },
+    "revisionQuestions": [
+      "Can the opening be recognised from its rhythm alone?",
+      "Does each return change the meaning or the direction of the phrase?",
+      "Do bass and drums support this particular scene?"
+    ],
+    "scoreLocation": "repertoire-themes.json#r5-5/parts",
+    "writtenForm": "I4 A12 B8 S8 V12 C8",
+    "prosody": "Short notes can lead into a stressed word; held notes carry its vowel. Rests mark a breath or an unanswered call. The text is an instrumental composing aid, not a claim that every ornament is a separate syllable.",
+    "arrangementDecisions": {
+      "guitar": "One band part: melody/riff or chord gesture; no separate held guitar bass.",
+      "keyboard": "Written answers and inner voices, with its own lead paragraphs.",
+      "bass": "A written line, with rests and pickups specific to the piece.",
+      "drums": "Explicit attacks and velocities; no automatic eighth-note grid or every-fourth-bar fill."
+    }
+  }
+]

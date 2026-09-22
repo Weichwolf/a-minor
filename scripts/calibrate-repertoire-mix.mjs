@@ -4,6 +4,7 @@ import {createHash} from 'node:crypto';
 import {roles,baseVolume,groups,measure} from './repertoire-mix.mjs';
 const source=process.argv[2],target=process.argv[3];if(!source||!target)throw Error('Pass analysis JSON and output mix JSON');
 const analysis=JSON.parse(fs.readFileSync(source)),catalog=JSON.parse(fs.readFileSync('data/repertoire.json'));
+if(analysis.pieces.length!==catalog.pieces.length||new Set(analysis.pieces.map(p=>p.id)).size!==catalog.pieces.length)throw Error('Calibration requires every piece exactly once');
 const scope=vm.createContext({AM:{},TextEncoder,TextDecoder,Uint8Array});vm.runInContext(fs.readFileSync('js/midi.js','utf8'),scope);const MIDI=scope.AM.midi;
 const targets={keys:{lead:-29,backing:-33},guitar:{lead:-28,riff:-29,backing:-31},bass:{band:-29},drums:{band:-31}};
 const hash=b=>createHash('sha256').update(b).digest('hex'),pieces={};

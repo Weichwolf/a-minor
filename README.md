@@ -181,6 +181,8 @@ Gitarrenanschlag: rechte Hand ausschließlich Plektrum, linke Hand Hammer-ons/Pu
 
 ## Repertoire
 
+Die Kompositionen haben eigene Szenen, Textentwürfe und musikalische Absichten in `scripts/composition-notes.json`. Die ausgeschriebenen Instrumentenparts stehen in `scripts/repertoire-themes.json`; der Builder liest sie, statt universelle Begleitfiguren zu erzeugen. Arbeitsnotizen und Texte werden nicht in die Website-Ansichten, Partituren oder MIDI-Dateien übernommen. [Kompositionsarbeit](docs/REPERTOIRE_COMPOSITION.md).
+
 [Instrumenten- und Rollenmix](docs/audio/REPERTOIRE_MIX.md): vollständige Audio-Prüfung aller Stücke; kalibrierte Pegel in den gemeinsamen MIDI-Dateien.
 
 Die Gitarre übernimmt Riffs, Powerchords, Themen und Soli; der Bandbass trägt das Fundament. Gitarren- und Keyboardsoli behalten Begleitung. Zweistimmiges Gitarrensolospiel bleibt Bestandteil des Kurses.
@@ -193,10 +195,10 @@ Menü **Kurs · Repertoire · Theorie**. Grade 0–5 mit je fünf eigenen englis
 |---|---:|---|
 | Keyboard | 4 | 0 / 4 |
 | Bass | 6 | 33 |
-| Gitarre | 7 | 27 / 28 / 29 / 30 |
+| Gitarre | 7 | 25 / 26 / 27 / 28 / 29 / 30 |
 | Drums | 10 | 0 / 16 |
 
-SMF Format 0, 480 PPQ, GM-Schlagzeugnoten. Die Kanalzuordnung folgt den 30 lokalen Gigajam-Dateien. MIDI-Einstellungen erlauben separate Ausgänge je Stimme. Externe Klangerzeuger müssen diese Programme/Noten unterstützen. MIDI Out verwendet CC11 für die Pegel, intern verwendet der Player einen unabhängigen Kanal-Gain. Beide können klanglich unterschiedlich reagieren. MIDI Clock und Geräte-Transport werden nicht gesendet.
+SMF Format 0, 480 PPQ, GM-Schlagzeugnoten. Die Kanalzuordnung folgt den 30 lokalen Gigajam-Dateien. MIDI-Einstellungen erlauben separate Ausgänge je Stimme. Externe Klangerzeuger müssen diese Programme/Noten unterstützen. Der komponierte Mix verwendet CC7 in der MIDI-Datei. MIDI Out verwendet zusätzlich CC11 für den persönlichen Übemix; intern verwendet der Player dafür einen unabhängigen Kanal-Gain. Beide können klanglich unterschiedlich reagieren. MIDI Clock und Geräte-Transport werden nicht gesendet.
 
 ```sh
 npm ci

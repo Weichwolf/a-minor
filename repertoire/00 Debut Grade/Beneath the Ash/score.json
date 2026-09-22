@@ -3,14 +3,14 @@
   "title": "Beneath the Ash",
   "grade": 0,
   "key": "Am",
-  "tempo": 64,
+  "tempo": 68,
   "time": "4/4",
   "style": "pedal",
   "maxFret": 5,
   "programs": {
+    "guitar": 28,
     "keys": 0,
     "bass": 33,
-    "guitar": 27,
     "drums": 0
   },
   "prerequisites": [
@@ -39,25 +39,26 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 74,
-            "keys": 59
+            "guitar": 80,
+            "keys": 68,
+            "bass": 73
           },
           "guitar": {
             "notes": [
               {
                 "p": "A3",
-                "d": "h",
-                "s": 3
-              },
-              {
-                "p": "C4",
                 "d": "q",
-                "s": 4
+                "accent": 1,
+                "s": 3
               },
               {
                 "p": "A3",
                 "d": "q",
                 "s": 3
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
@@ -74,58 +75,52 @@
                 "d": "h"
               },
               {
-                "p": "C5",
+                "p": "E4",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "q"
+            },
+            {
+              "p": "A1",
+              "d": "q"
+            },
+            {
+              "r": 1,
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
+              "midi": 36,
+              "velocity": 77,
               "dur": 0.12
             },
             {
               "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 64,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 54,
               "dur": 0.12
             }
           ]
@@ -136,100 +131,9 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 80,
-            "keys": 64
-          },
-          "guitar": {
-            "notes": [
-              {
-                "p": "D4",
-                "d": "h",
-                "s": 4
-              },
-              {
-                "p": "C4",
-                "d": "h",
-                "s": 4
-              }
-            ],
-            "bass": [
-              {
-                "r": 1,
-                "d": "w"
-              }
-            ]
-          },
-          "keys": {
-            "notes": [
-              {
-                "r": 1,
-                "d": "h"
-              },
-              {
-                "p": "E5",
-                "d": "h"
-              }
-            ],
-            "bass": [
-              {
-                "p": "A3",
-                "d": "w"
-              }
-            ]
-          },
-          "bass": [
-            {
-              "p": "A1",
-              "d": "w"
-            }
-          ],
-          "drums": [
-            {
-              "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
-              "midi": 36,
-              "velocity": 80,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 37,
-              "velocity": 67,
-              "dur": 0.12
-            }
-          ]
-        },
-        {
-          "number": 3,
-          "time": "4/4",
-          "key": "Am",
-          "chord": "Am",
-          "dynamics": {
-            "guitar": 77,
-            "keys": 61
+            "guitar": 74,
+            "keys": 62,
+            "bass": 67
           },
           "guitar": {
             "notes": [
@@ -244,6 +148,95 @@
                 "s": 4
               },
               {
+                "p": "A3",
+                "d": "h",
+                "s": 3
+              }
+            ],
+            "bass": [
+              {
+                "r": 1,
+                "d": "w"
+              }
+            ]
+          },
+          "keys": {
+            "notes": [
+              {
+                "r": 1,
+                "d": "h"
+              },
+              {
+                "p": "C5",
+                "d": "h"
+              }
+            ],
+            "bass": [
+              {
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
+              }
+            ]
+          },
+          "bass": [
+            {
+              "p": "A1",
+              "d": "h"
+            },
+            {
+              "p": "E2",
+              "d": "h"
+            }
+          ],
+          "drums": [
+            {
+              "t": 0,
+              "midi": 36,
+              "velocity": 75,
+              "dur": 0.12
+            },
+            {
+              "t": 2,
+              "midi": 37,
+              "velocity": 52,
+              "dur": 0.12
+            },
+            {
+              "t": 3,
+              "midi": 44,
+              "velocity": 32,
+              "dur": 0.12
+            }
+          ]
+        },
+        {
+          "number": 3,
+          "time": "4/4",
+          "key": "Am",
+          "chord": "Dm",
+          "dynamics": {
+            "guitar": 84,
+            "keys": 72,
+            "bass": 77
+          },
+          "guitar": {
+            "notes": [
+              {
+                "p": "A3",
+                "d": "q",
+                "accent": 1,
+                "s": 3
+              },
+              {
+                "p": "A3",
+                "d": "q",
+                "s": 3
+              },
+              {
                 "p": "D4",
                 "d": "h",
                 "s": 4
@@ -259,62 +252,56 @@
           "keys": {
             "notes": [
               {
-                "p": "C5",
+                "r": 1,
                 "d": "h"
               },
               {
-                "p": "E5",
+                "p": "F4",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
+              "p": "D2",
+              "d": "q"
+            },
+            {
+              "p": "D2",
+              "d": "q"
+            },
+            {
               "p": "A1",
-              "d": "w"
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
+              "midi": 36,
+              "velocity": 79,
               "dur": 0.12
             },
             {
               "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 66,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 56,
               "dur": 0.12
             }
           ]
@@ -325,20 +312,25 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 69,
-            "keys": 55
+            "guitar": 67,
+            "keys": 55,
+            "bass": 60
           },
           "guitar": {
             "notes": [
               {
                 "p": "C4",
-                "d": "h",
+                "d": "q",
                 "s": 4
               },
               {
                 "p": "A3",
-                "d": "h",
+                "d": "q",
                 "s": 3
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
@@ -351,62 +343,50 @@
           "keys": {
             "notes": [
               {
-                "p": "C5",
-                "d": "h"
+                "p": "E4",
+                "d": "q"
               },
               {
-                "p": "E5",
+                "r": 1,
+                "d": "q"
+              },
+              {
+                "p": "C5",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "h"
+            },
+            {
+              "r": 1,
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 72,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 48,
               "dur": 0.12
             }
           ]
@@ -425,11 +405,22 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 57,
-            "keys": 75
+            "guitar": 68,
+            "keys": 79,
+            "bass": 72
           },
           "guitar": {
             "notes": [
+              {
+                "p": "A3",
+                "d": "q",
+                "accent": 1,
+                "s": 3
+              },
+              {
+                "r": 1,
+                "d": "q"
+              },
               {
                 "p": "A3",
                 "d": "q",
@@ -438,11 +429,6 @@
               {
                 "r": 1,
                 "d": "q"
-              },
-              {
-                "p": "C4",
-                "d": "h",
-                "s": 4
               }
             ],
             "bass": [
@@ -455,66 +441,56 @@
           "keys": {
             "notes": [
               {
-                "p": "E4",
+                "p": "C5",
                 "d": "h"
               },
               {
-                "p": "D4",
+                "p": "E5",
                 "d": "q"
               },
               {
-                "p": "C4",
+                "p": "D5",
                 "d": "q"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "h"
+            },
+            {
+              "p": "E2",
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 78,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 57,
+              "dur": 0.12
+            },
+            {
+              "t": 3,
+              "midi": 44,
+              "velocity": 32,
               "dur": 0.12
             }
           ]
@@ -525,8 +501,9 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 62,
-            "keys": 82
+            "guitar": 61,
+            "keys": 72,
+            "bass": 65
           },
           "guitar": {
             "notes": [
@@ -538,6 +515,95 @@
                 "p": "A3",
                 "d": "h",
                 "s": 3
+              }
+            ],
+            "bass": [
+              {
+                "r": 1,
+                "d": "w"
+              }
+            ]
+          },
+          "keys": {
+            "notes": [
+              {
+                "p": "C5",
+                "d": "q"
+              },
+              {
+                "p": "A4",
+                "d": "q"
+              },
+              {
+                "r": 1,
+                "d": "h"
+              }
+            ],
+            "bass": [
+              {
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
+              }
+            ]
+          },
+          "bass": [
+            {
+              "p": "A1",
+              "d": "h"
+            },
+            {
+              "r": 1,
+              "d": "h"
+            }
+          ],
+          "drums": [
+            {
+              "t": 0,
+              "midi": 36,
+              "velocity": 73,
+              "dur": 0.12
+            },
+            {
+              "t": 2,
+              "midi": 37,
+              "velocity": 50,
+              "dur": 0.12
+            }
+          ]
+        },
+        {
+          "number": 7,
+          "time": "4/4",
+          "key": "Am",
+          "chord": "Dm",
+          "dynamics": {
+            "guitar": 70,
+            "keys": 81,
+            "bass": 74
+          },
+          "guitar": {
+            "notes": [
+              {
+                "p": "D3",
+                "d": "q",
+                "s": 2
+              },
+              {
+                "r": 1,
+                "d": "q"
+              },
+              {
+                "p": "A3",
+                "d": "q",
+                "s": 3
+              },
+              {
+                "r": 1,
+                "d": "q"
               }
             ],
             "bass": [
@@ -551,55 +617,39 @@
             "notes": [
               {
                 "p": "D5",
-                "d": "q"
+                "d": "h"
               },
               {
                 "p": "C5",
                 "d": "q"
               },
               {
-                "p": "A4",
-                "d": "h"
+                "p": "B4",
+                "d": "q"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
+              "p": "D2",
+              "d": "h"
+            },
+            {
               "p": "A1",
-              "d": "w"
+              "d": "h"
             }
           ],
           "drums": [
-            {
-              "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
             {
               "t": 0,
               "midi": 36,
@@ -609,103 +659,7 @@
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
-              "dur": 0.12
-            }
-          ]
-        },
-        {
-          "number": 7,
-          "time": "4/4",
-          "key": "Am",
-          "chord": "Am",
-          "dynamics": {
-            "guitar": 60,
-            "keys": 79
-          },
-          "guitar": {
-            "notes": [
-              {
-                "p": "A3",
-                "d": "q",
-                "s": 3
-              },
-              {
-                "p": "C4",
-                "d": "q",
-                "s": 4
-              },
-              {
-                "r": 1,
-                "d": "h"
-              }
-            ],
-            "bass": [
-              {
-                "r": 1,
-                "d": "w"
-              }
-            ]
-          },
-          "keys": {
-            "notes": [
-              {
-                "p": "C4",
-                "d": "h"
-              },
-              {
-                "p": "D4",
-                "d": "h"
-              }
-            ],
-            "bass": [
-              {
-                "p": "A3",
-                "d": "w"
-              }
-            ]
-          },
-          "bass": [
-            {
-              "p": "A1",
-              "d": "w"
-            }
-          ],
-          "drums": [
-            {
-              "t": 0,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
-              "midi": 36,
-              "velocity": 80,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 37,
-              "velocity": 67,
+              "velocity": 58,
               "dur": 0.12
             }
           ]
@@ -716,19 +670,15 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 53,
-            "keys": 71
+            "guitar": 52,
+            "keys": 63,
+            "bass": 56
           },
           "guitar": {
             "notes": [
               {
-                "p": "B3",
-                "d": "q",
-                "s": 3
-              },
-              {
                 "p": "A3",
-                "d": "q",
+                "d": "h",
                 "s": 3
               },
               {
@@ -746,22 +696,22 @@
           "keys": {
             "notes": [
               {
-                "p": "C5",
-                "d": "q"
-              },
-              {
-                "p": "B4",
-                "d": "q"
-              },
-              {
                 "p": "A4",
+                "d": "h"
+              },
+              {
+                "r": 1,
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
@@ -774,38 +724,8 @@
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 37,
-              "velocity": 67,
+              "velocity": 70,
               "dur": 0.12
             }
           ]
@@ -824,25 +744,26 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 74,
-            "keys": 59
+            "guitar": 80,
+            "keys": 68,
+            "bass": 73
           },
           "guitar": {
             "notes": [
               {
                 "p": "A3",
-                "d": "h",
-                "s": 3
-              },
-              {
-                "p": "C4",
                 "d": "q",
-                "s": 4
+                "accent": 1,
+                "s": 3
               },
               {
                 "p": "A3",
                 "d": "q",
                 "s": 3
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
@@ -859,58 +780,52 @@
                 "d": "h"
               },
               {
-                "p": "C5",
+                "p": "E4",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "q"
+            },
+            {
+              "p": "A1",
+              "d": "q"
+            },
+            {
+              "r": 1,
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
+              "midi": 36,
+              "velocity": 77,
               "dur": 0.12
             },
             {
               "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 64,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 54,
               "dur": 0.12
             }
           ]
@@ -921,100 +836,9 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 80,
-            "keys": 64
-          },
-          "guitar": {
-            "notes": [
-              {
-                "p": "D4",
-                "d": "h",
-                "s": 4
-              },
-              {
-                "p": "C4",
-                "d": "h",
-                "s": 4
-              }
-            ],
-            "bass": [
-              {
-                "r": 1,
-                "d": "w"
-              }
-            ]
-          },
-          "keys": {
-            "notes": [
-              {
-                "r": 1,
-                "d": "h"
-              },
-              {
-                "p": "E5",
-                "d": "h"
-              }
-            ],
-            "bass": [
-              {
-                "p": "A3",
-                "d": "w"
-              }
-            ]
-          },
-          "bass": [
-            {
-              "p": "A1",
-              "d": "w"
-            }
-          ],
-          "drums": [
-            {
-              "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
-              "midi": 36,
-              "velocity": 80,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 37,
-              "velocity": 67,
-              "dur": 0.12
-            }
-          ]
-        },
-        {
-          "number": 11,
-          "time": "4/4",
-          "key": "Am",
-          "chord": "Am",
-          "dynamics": {
-            "guitar": 77,
-            "keys": 61
+            "guitar": 74,
+            "keys": 62,
+            "bass": 67
           },
           "guitar": {
             "notes": [
@@ -1029,6 +853,95 @@
                 "s": 4
               },
               {
+                "p": "A3",
+                "d": "h",
+                "s": 3
+              }
+            ],
+            "bass": [
+              {
+                "r": 1,
+                "d": "w"
+              }
+            ]
+          },
+          "keys": {
+            "notes": [
+              {
+                "r": 1,
+                "d": "h"
+              },
+              {
+                "p": "C5",
+                "d": "h"
+              }
+            ],
+            "bass": [
+              {
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
+              }
+            ]
+          },
+          "bass": [
+            {
+              "p": "A1",
+              "d": "h"
+            },
+            {
+              "p": "E2",
+              "d": "h"
+            }
+          ],
+          "drums": [
+            {
+              "t": 0,
+              "midi": 36,
+              "velocity": 75,
+              "dur": 0.12
+            },
+            {
+              "t": 2,
+              "midi": 37,
+              "velocity": 52,
+              "dur": 0.12
+            },
+            {
+              "t": 3,
+              "midi": 44,
+              "velocity": 32,
+              "dur": 0.12
+            }
+          ]
+        },
+        {
+          "number": 11,
+          "time": "4/4",
+          "key": "Am",
+          "chord": "Dm",
+          "dynamics": {
+            "guitar": 84,
+            "keys": 72,
+            "bass": 77
+          },
+          "guitar": {
+            "notes": [
+              {
+                "p": "A3",
+                "d": "q",
+                "accent": 1,
+                "s": 3
+              },
+              {
+                "p": "A3",
+                "d": "q",
+                "s": 3
+              },
+              {
                 "p": "D4",
                 "d": "h",
                 "s": 4
@@ -1044,62 +957,56 @@
           "keys": {
             "notes": [
               {
-                "p": "C5",
+                "r": 1,
                 "d": "h"
               },
               {
-                "p": "E5",
+                "p": "F4",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
+              "p": "D2",
+              "d": "q"
+            },
+            {
+              "p": "D2",
+              "d": "q"
+            },
+            {
               "p": "A1",
-              "d": "w"
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
+              "midi": 36,
+              "velocity": 79,
               "dur": 0.12
             },
             {
               "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 66,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 56,
               "dur": 0.12
             }
           ]
@@ -1110,20 +1017,25 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 69,
-            "keys": 55
+            "guitar": 67,
+            "keys": 55,
+            "bass": 60
           },
           "guitar": {
             "notes": [
               {
                 "p": "C4",
-                "d": "h",
+                "d": "q",
                 "s": 4
               },
               {
                 "p": "A3",
-                "d": "h",
+                "d": "q",
                 "s": 3
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
@@ -1136,62 +1048,50 @@
           "keys": {
             "notes": [
               {
-                "p": "C5",
-                "d": "h"
+                "p": "E4",
+                "d": "q"
               },
               {
-                "p": "E5",
+                "r": 1,
+                "d": "q"
+              },
+              {
+                "p": "C5",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "h"
+            },
+            {
+              "r": 1,
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 72,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 48,
               "dur": 0.12
             }
           ]
@@ -1210,25 +1110,26 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 74,
-            "keys": 59
+            "guitar": 76,
+            "keys": 64,
+            "bass": 69
           },
           "guitar": {
             "notes": [
               {
                 "p": "A3",
-                "d": "h",
-                "s": 3
-              },
-              {
-                "p": "C4",
                 "d": "q",
-                "s": 4
+                "accent": 1,
+                "s": 3
               },
               {
                 "p": "A3",
                 "d": "q",
                 "s": 3
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
@@ -1245,58 +1146,52 @@
                 "d": "h"
               },
               {
-                "p": "C5",
+                "p": "E4",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "q"
+            },
+            {
+              "p": "A1",
+              "d": "q"
+            },
+            {
+              "r": 1,
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
+              "midi": 36,
+              "velocity": 77,
               "dur": 0.12
             },
             {
               "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 64,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 54,
               "dur": 0.12
             }
           ]
@@ -1307,15 +1202,16 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 80,
-            "keys": 64
+            "guitar": 70,
+            "keys": 58,
+            "bass": 63
           },
           "guitar": {
             "notes": [
               {
-                "p": "D4",
-                "d": "h",
-                "s": 4
+                "p": "A3",
+                "d": "q",
+                "s": 3
               },
               {
                 "p": "C4",
@@ -1323,9 +1219,9 @@
                 "s": 4
               },
               {
-                "p": "A3",
-                "d": "q",
-                "s": 3
+                "p": "D4",
+                "d": "h",
+                "s": 4
               }
             ],
             "bass": [
@@ -1342,58 +1238,48 @@
                 "d": "h"
               },
               {
-                "p": "E5",
+                "p": "C5",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
               "p": "A1",
-              "d": "w"
+              "d": "h"
+            },
+            {
+              "p": "E2",
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 1,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 56,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 75,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 52,
+              "dur": 0.12
+            },
+            {
+              "t": 3,
+              "midi": 44,
+              "velocity": 32,
               "dur": 0.12
             }
           ]
@@ -1402,32 +1288,27 @@
           "number": 15,
           "time": "4/4",
           "key": "Am",
-          "chord": "Am",
+          "chord": "Dm",
           "dynamics": {
-            "guitar": 77,
-            "keys": 61
+            "guitar": 80,
+            "keys": 68,
+            "bass": 73
           },
           "guitar": {
             "notes": [
-              {
-                "p": "A3",
-                "d": "q",
-                "s": 3
-              },
               {
                 "p": "C4",
                 "d": "q",
                 "s": 4
               },
               {
-                "p": "D4",
-                "d": "q",
-                "s": 4
-              },
-              {
                 "p": "A3",
                 "d": "q",
                 "s": 3
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ],
             "bass": [
@@ -1440,62 +1321,56 @@
           "keys": {
             "notes": [
               {
-                "p": "C5",
+                "r": 1,
                 "d": "h"
               },
               {
-                "p": "E5",
+                "p": "F4",
                 "d": "h"
               }
             ],
             "bass": [
               {
-                "p": "A3",
-                "d": "w"
+                "p": "A2",
+                "d": "h"
+              },
+              {
+                "r": 1,
+                "d": "h"
               }
             ]
           },
           "bass": [
             {
+              "p": "D2",
+              "d": "q"
+            },
+            {
+              "p": "D2",
+              "d": "q"
+            },
+            {
               "p": "A1",
-              "d": "w"
+              "d": "h"
             }
           ],
           "drums": [
             {
               "t": 0,
-              "midi": 42,
-              "velocity": 53,
+              "midi": 36,
+              "velocity": 79,
               "dur": 0.12
             },
             {
               "t": 1,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 2,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 3,
-              "midi": 42,
-              "velocity": 53,
-              "dur": 0.12
-            },
-            {
-              "t": 0,
               "midi": 36,
-              "velocity": 80,
+              "velocity": 66,
               "dur": 0.12
             },
             {
               "t": 2,
               "midi": 37,
-              "velocity": 67,
+              "velocity": 56,
               "dur": 0.12
             }
           ]
@@ -1506,8 +1381,9 @@
           "key": "Am",
           "chord": "Am",
           "dynamics": {
-            "guitar": 59,
-            "keys": 47
+            "guitar": 63,
+            "keys": 51,
+            "bass": 56
           },
           "guitar": {
             "notes": [
@@ -1533,7 +1409,7 @@
             ],
             "bass": [
               {
-                "p": "A3",
+                "r": 1,
                 "d": "w"
               }
             ]
@@ -1548,14 +1424,8 @@
             {
               "t": 0,
               "midi": 36,
-              "velocity": 91,
+              "velocity": 76,
               "dur": 0.12
-            },
-            {
-              "t": 0,
-              "midi": 49,
-              "velocity": 68,
-              "dur": 0.25
             }
           ]
         }

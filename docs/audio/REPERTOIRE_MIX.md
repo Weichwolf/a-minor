@@ -1,10 +1,10 @@
 # Repertoire: Mischung nach Instrument und Rolle
 
-2026-09-22. Ausgangspunkt: Bandarrangements aus `66f9a1c` mit der bereits kalibrierten FluidR3-Auswahl. Die reine Preset-Kalibrierung reichte nach der Neuinstrumentierung nicht aus.
+2026-09-22. Aktueller Stand: narrativ neu komponierte Repertoirestücke mit der bereits kalibrierten FluidR3-Auswahl. Der vorherige Mix-Fix ist in Commit `b3a5a34` dokumentiert; nach der Neukomposition wurde der vollständige Abgleich wiederholt.
 
 ## Befund und Korrektur
 
-„Dance of Lead“, B-Teil: Keyboard −36,16 dBFS, Powerchord-Gitarre −44,24 dBFS. Abstand: −36,16 − (−44,24) = 8,08 dB. Nach der Korrektur: −36,73 und −40,14 dBFS; Abstand 3,41 dB. Das sind über den gesamten Abschnitt gemittelte trockene Stereo-RMS-Pegel einschließlich Pausen, vor dem Master. Die Gitarre gewinnt 4,10 dB; das führende Keyboard bleibt vorne.
+„Dance of Lead“, neuer B-Teil: Keyboard -36,49 dBFS, Powerchord-Gitarre -38,50 dBFS vor dem Rollenmix. Nachher: -36,19 und -40,00 dBFS. Der Abstand über den ganzen Abschnitt beträgt 3,81 dB. Hier zählen Pausen mit; kurze Akkordstöße haben dadurch weniger Durchschnittsenergie als die geführte Melodie. In den aktiven Messfenstern liegt die Gitarrenbegleitung 2,08 dB unter dem Keyboard-Lead. Die neue Komposition und ihre Anschlagsstärken sind Bestandteil dieses Befunds; die Werte sind kein direkter A/B-Vergleich mit der früheren Melodie.
 
 Jedes Stück erhält eigene MIDI-CC7-Werte für Keyboard, Bass, Gitarre und Drums. Gitarren-Lead, Riff und Begleitung werden getrennt behandelt; beim Keyboard Lead und Begleitung. „Iron Rain“ berücksichtigt außerdem jeden Wechsel zwischen Muted Guitar und Distortion Guitar. Gleiche Rollen behalten innerhalb eines Stücks denselben Wert. Keine Normalisierung einzelner Noten oder Takte. Velocity, Akzente, Pausen und Notenlängen bleiben erhalten.
 
@@ -12,7 +12,7 @@ Die Mischung steht in den gemeinsamen MIDI-Dateien und gilt dadurch für Browser
 
 ## Messmethode
 
-Alle 30 vollständigen Stücke mit sämtlichen 123 Abschnitten, plus drei Sekunden Ausklang je Stück. Musikalische Dauer pro Durchlauf: 2598,74 s / 60 = 43,31 min. Vorher und nachher bei 48 kHz gerendert, getrennte trockene Stereo-Instrumentenspuren und gemeinsamer Effektausgang. Keine Beschränkung auf die ersten A/B-Takte.
+Alle 30 vollständigen Stücke mit sämtlichen 131 Abschnitten, plus drei Sekunden Ausklang je Stück. Musikalische Dauer pro Durchlauf: 2442,04 s / 60 = 40,70 min. Vorher und nachher bei 48 kHz gerendert, getrennte trockene Stereo-Instrumentenspuren und gemeinsamer Effektausgang. Keine Beschränkung auf die ersten A/B-Takte.
 
 Melodische Stimmen: 80. Perzentil der RMS-Energie in 100-ms-Fenstern, die mindestens 40 ms MIDI-Notenaktivität enthalten; Gate 24 dB unter dem Gruppenmaximum. Drums: RMS über die gesamte Zeit einschließlich Pausen. Nur die kurzen Drum-Anschläge zu vergleichen würde ihren Pegel überschätzen und den resultierenden Mix zu leise machen. Intro und Schlussakkord bleiben bei der Ableitung der Rollenpegel außen vor, werden bei der vollständigen Kontrolle mitgemessen.
 
@@ -25,7 +25,7 @@ Melodische Stimmen: 80. Perzentil der RMS-Energie in 100-ms-Fenstern, die mindes
 
 Diese Werte sind eine musikalische Mischentscheidung, kein Lautheitsstandard. Wegen der unterschiedlichen Messung der Drums sind sie keine Aussage über gleiche wahrgenommene Lautheit. Ein gemeinsamer Offset pro Stück hält alle CC7-Werte im Bereich 1–127. Umrechnung nach der Volume-Kennlinie: `CC7_neu = CC7_alt × 10^(ΔdB/40)`, anschließend runden. Unterschiedliche Anschlagsstärken bleiben hörbar.
 
-Kontrolle mit einem zweiten vollständigen Render: alle Rollen innerhalb 1 dB ihrer Ziele. Größte Gesamtmix-Spitze einschließlich Effekten und Browser-Master 0,6: −11,32 dBFS, also 11,32 dB unter digitalem Vollpegel, vor dem Kompressor. Das ist ein Sample-Peak-Befund, keine True-Peak- oder LUFS-Messung. Die Messung ersetzt keinen subjektiven Hörvergleich.
+Kontrolle mit einem zweiten vollständigen Render: alle Rollen innerhalb 1 dB ihrer Ziele. Größte Gesamtmix-Spitze einschließlich Effekten und Browser-Master 0,6: -10,79 dBFS, also 10,79 dB unter digitalem Vollpegel, vor dem Kompressor. Das ist ein Sample-Peak-Befund, keine True-Peak- oder LUFS-Messung. Die Messung ersetzt keinen subjektiven Hörvergleich.
 
 ![Vollständige Instrumentenspuren vor und nach dem Abgleich](repertoire-mix.png)
 

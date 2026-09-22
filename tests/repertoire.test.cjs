@@ -7,7 +7,7 @@ function notes(voice,start=0){const result=[];let t=start,held=new Map();for(con
 
 test('30 distinct compositions: five per grade, stable English titles and complete bilingual parts',()=>{
  assert.equal(catalog.pieces.length,6*5);assert.equal(new Set(catalog.pieces.map(p=>p.title)).size,30);
- const themes=JSON.parse(fs.readFileSync('scripts/repertoire-themes.json'));assert.equal(new Set(themes.map(p=>JSON.stringify(p.A))).size,30);
+ const themes=JSON.parse(fs.readFileSync('scripts/repertoire-themes.json'));assert.equal(new Set(themes.map(p=>JSON.stringify(p.parts.A.guitar))).size,30);
  for(let g=0;g<6;g++)assert.equal(catalog.pieces.filter(p=>p.grade===g).length,5);
  for(const p of catalog.pieces){assert.match(p.title,/^[A-Za-z ]+$/);for(const lang of ['de','en'])for(const role of ['guitar','keys'])assert(p.description[lang][role].length>20);assert(p.bars>=8);assert(fs.existsSync(p.score));assert.equal(createHash('sha256').update(fs.readFileSync(p.midi)).digest('hex'),p.sha256);}
 });
@@ -34,7 +34,7 @@ test('actual shared MIDI files match scores, Gigajam channels, programs, markers
   for(const e of seq.events){const [status,n,v]=e.data,ch=status&15,key=ch+':'+n;if(status>>4===9&&v){assert(!held.has(key),p.title+' overlapping same pitch');held.set(key,e);}if(status>>4===8||status>>4===9&&!v){const on=held.get(key);assert(on,p.title+' unmatched note-off');actual.push([ch,n,on.tick,e.tick,on.data[2]]);held.delete(key);}}
   assert.equal(held.size,0,p.title+' hanging notes');
   const sc=JSON.parse(fs.readFileSync(p.score)),expected=[];let beat=0;
-  for(const s of sc.sections){assert.equal(seq.markers.find(m=>m.tick===Math.round(beat*480)).label,s.name);for(const b of s.bars){for(const role of ['guitar','keys','bass']){const v=role==='bass'?{notes:b.bass}:b[role];for(const n of N.events({...v,time:b.time,swing:b.swing}))expected.push([MIDI.channels[role],n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480),role==='bass'?76:Math.min(110,(n.voice===1?Math.round(b.dynamics[role]*.7):b.dynamics[role])+(n.accent?12:0))]);}for(const n of b.drums)expected.push([9,n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480),n.velocity]);beat+=M.meter(b.time).len;}}
+  for(const s of sc.sections){assert.equal(seq.markers.find(m=>m.tick===Math.round(beat*480)).label,s.name);for(const b of s.bars){for(const role of ['guitar','keys','bass']){const v=role==='bass'?{notes:b.bass}:b[role];for(const n of N.events({...v,time:b.time,swing:b.swing}))expected.push([MIDI.channels[role],n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480),role==='bass'?Math.min(110,b.dynamics.bass+(n.accent?8:0)):Math.min(110,((role==='keys'&&b.keysLead==='left'?n.voice!==1:n.voice===1)?Math.round(b.dynamics[role]*.7):b.dynamics[role])+(n.accent?12:0))]);}for(const n of b.drums)expected.push([9,n.midi,Math.round((beat+n.t)*480),Math.round((beat+n.t+n.dur)*480),n.velocity]);beat+=M.meter(b.time).len;}}
   const sort=a=>a.sort((x,y)=>x[0]-y[0]||x[1]-y[1]||x[2]-y[2]||x[3]-y[3]);assert.deepEqual(sort(actual),sort(plain(expected)),p.title+' score/MIDI');assert.equal(seq.endTick,beat*480);
   for(const [role,ch]of Object.entries(MIDI.channels))assert(seq.events.some(e=>e.data[0]===(192|ch)&&e.data[1]===p.programs[role]),p.title+' preset '+role);
  }
@@ -63,6 +63,7 @@ test('learning features are present in both relevant parts, with varied phrase d
  const find=id=>JSON.parse(fs.readFileSync(catalog.pieces.find(p=>p.id===id).score));
  const poly=find('r4-3').sections.find(s=>s.name==='B');for(const role of ['guitar','keys']){assert(poly.bars[0][role].notes.some(n=>n.d==='qt'));assert.deepEqual((role==='guitar'?poly.bars[0].bass:poly.bars[0].keys.bass).map(n=>n.d),['q','q','q','q']);}
  const ballad=find('r5-2').sections.find(s=>s.name==='Solo');assert(ballad.bars[0].guitar.notes.some(n=>n.bend===2));assert(ballad.bars.every(b=>b.guitar.bass.every(n=>n.r)),'channel-wide bend has no held guitar bass to detune');
+ const leftTheme=find('r5-2').sections.find(s=>s.name==='B');assert(leftTheme.bars.every(b=>b.keysLead==='left'),'written left-hand theme keeps melodic priority');
  const duet=find('r5-4');for(const name of ['Guitar solo','Keyboard solo']){const section=duet.sections.find(s=>s.name===name);assert(section.bars.every(b=>b.bass.some(n=>!n.r)&&b.guitar.notes.some(n=>!n.r)&&b.keys.notes.some(n=>!n.r)),'both solos retain the band');}
  const dynamic=find('r0-5').sections[0].bars.map(b=>b.dynamics.guitar);assert(new Set(dynamic).size>=3,'phrase has a dynamic arc');
 });
@@ -118,7 +119,20 @@ test('complete rendered quartet audit matches released MIDI and retains mix head
   assert.equal(audit.sections.length,piece.sections.length);assert.deepEqual(Object.keys(audit.groups).sort(),Object.keys(mix.pieces[piece.id].volumes).sort());
   for(const [key,g]of Object.entries(audit.groups)){assert(g.windows>0);assert(Number.isFinite(g.afterDb));assert.equal(g.volume,mix.pieces[piece.id].volumes[key]);assert(Math.abs(g.afterDb-g.targetDb)<1,piece.title+' role target '+key);}
  }
- const b=report.pieces.find(p=>p.id==='r3-2').sections.find(s=>s.name==='B');
- assert(b.afterDb[2]-b.beforeDb[2]>4,'reported quiet power chords are raised');
- assert(b.afterDb[0]-b.afterDb[2]<4,'keyboard no longer hides the power chords');
+ const dance=report.pieces.find(p=>p.id==='r3-2').groups;
+ assert(dance['keys/0/lead'].afterDb-dance['guitar/29/backing'].afterDb<4,'keyboard lead leaves audible power-chord support');
+});
+
+test('each composition retains editable intent and fully written parts without publishing its lyric draft',()=>{
+ const themes=JSON.parse(fs.readFileSync('scripts/repertoire-themes.json')),notes=JSON.parse(fs.readFileSync('scripts/composition-notes.json'));
+ assert.equal(notes.length,themes.length);assert.equal(new Set(notes.map(n=>n.id)).size,themes.length);
+ for(const theme of themes){
+  const note=notes.find(n=>n.id===theme.id);assert(note.scene.length>40);assert(note.musicalConsequence.length>40);assert(Array.isArray(note.lyricDraft));assert(note.references.length>0);assert(note.workingDecisions.length>=3);assert.equal(note.writtenForm,theme.form);
+  for(const token of theme.form.split(' ')){
+   const part=theme.parts[token[0]],count=Number(token.slice(1));assert(part.guitar.length>=count);
+   for(const key of ['harmony','keys','left','bass','drums','guitarVelocity','keysVelocity','bassVelocity'])assert.equal(part[key].length,part.guitar.length,theme.id+' '+token+' '+key);
+  }
+  const score=JSON.parse(fs.readFileSync(catalog.pieces.find(p=>p.id===theme.id).score));
+  for(const field of ['lyricDraft','compositionNotes','workingDecisions','references']){assert(!(field in score));assert(!(field in catalog.pieces.find(p=>p.id===theme.id)));}
+ }
 });

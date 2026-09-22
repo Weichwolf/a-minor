@@ -19,14 +19,14 @@
       "title": "Ember",
       "grade": 0,
       "key": "Em",
-      "tempo": 60,
+      "tempo": 58,
       "time": "4/4",
       "style": "quiet",
       "maxFret": 5,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -47,8 +47,8 @@
       "dir": "repertoire/00 Debut Grade/Ember",
       "midi": "repertoire/00 Debut Grade/Ember/Ember.mid",
       "score": "repertoire/00 Debut Grade/Ember/score.json",
-      "sha256": "aba38dcc01c3dd49f09752b64fdbd41bc0630f1e55ce35209711a367414066e2",
-      "duration": 32,
+      "sha256": "4897030434b96f56c6aa5af1eeb282f4fb3228f687b250e64f4ba60fd47c982b",
+      "duration": 33.10345600000001,
       "sections": [
         {
           "name": "A",
@@ -85,14 +85,14 @@
       "title": "Stone and Breath",
       "grade": 0,
       "key": "Em",
-      "tempo": 56,
+      "tempo": 52,
       "time": "4/4",
       "style": "breath",
       "maxFret": 5,
       "programs": {
+        "guitar": 29,
         "keys": 4,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -113,8 +113,8 @@
       "dir": "repertoire/00 Debut Grade/Stone and Breath",
       "midi": "repertoire/00 Debut Grade/Stone and Breath/Stone and Breath.mid",
       "score": "repertoire/00 Debut Grade/Stone and Breath/score.json",
-      "sha256": "e4cc96c9c16aa220117a37f517da7c1339afa8eb1e5d5083c6d388b4fc853d8a",
-      "duration": 51.428592000000016,
+      "sha256": "980a9c07102073178b5dc3671071e9ff29e25798788c6225ee8c17e6b54af9b5",
+      "duration": 55.384608000000014,
       "sections": [
         {
           "name": "A",
@@ -149,9 +149,9 @@
       "style": "waltz",
       "maxFret": 5,
       "programs": {
+        "guitar": 25,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -172,8 +172,8 @@
       "dir": "repertoire/00 Debut Grade/Empty Halls",
       "midi": "repertoire/00 Debut Grade/Empty Halls/Empty Halls.mid",
       "score": "repertoire/00 Debut Grade/Empty Halls/score.json",
-      "sha256": "73343c81f4c40c82847fa2276a3b5deb7243377634aa9c7ce56394d1f75927c8",
-      "duration": 43.636367999999976,
+      "sha256": "de2e2e6a20d82d0f7bb272a8d4522d6e258faebf600b8b29ed39af172795c956",
+      "duration": 43.63636799999997,
       "sections": [
         {
           "name": "A",
@@ -210,14 +210,14 @@
       "title": "Beneath the Ash",
       "grade": 0,
       "key": "Am",
-      "tempo": 64,
+      "tempo": 68,
       "time": "4/4",
       "style": "pedal",
       "maxFret": 5,
       "programs": {
+        "guitar": 28,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -238,8 +238,8 @@
       "dir": "repertoire/00 Debut Grade/Beneath the Ash",
       "midi": "repertoire/00 Debut Grade/Beneath the Ash/Beneath the Ash.mid",
       "score": "repertoire/00 Debut Grade/Beneath the Ash/score.json",
-      "sha256": "62327a21a407fdf0b1d86bb73c9967eb48714729201fe80a9013f75ad3a66b24",
-      "duration": 60,
+      "sha256": "2fdec491ef697a4258355881f74a3d13aef09a4459bf8fc1be8f107ad8197c17",
+      "duration": 56.47059200000003,
       "sections": [
         {
           "name": "A",
@@ -276,14 +276,14 @@
       "title": "Last Light",
       "grade": 0,
       "key": "Em",
-      "tempo": 72,
+      "tempo": 62,
       "time": "4/4",
       "style": "pedal",
       "maxFret": 5,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -304,8 +304,8 @@
       "dir": "repertoire/00 Debut Grade/Last Light",
       "midi": "repertoire/00 Debut Grade/Last Light/Last Light.mid",
       "score": "repertoire/00 Debut Grade/Last Light/score.json",
-      "sha256": "8c0bb810d0f8af0b5496041258ec02f24b57f4a766b720735cc884f2d13a76e1",
-      "duration": 53.33331200000007,
+      "sha256": "315c44b3c5a2ff6bb2d3e6282ff2c6fc1d2ba687b0457b69baa467c1f3228d8d",
+      "duration": 61.93548800000003,
       "sections": [
         {
           "name": "A",
@@ -347,9 +347,9 @@
       "style": "pedal",
       "maxFret": 5,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -372,8 +372,8 @@
       "dir": "repertoire/01 Grade One/Mossbound",
       "midi": "repertoire/01 Grade One/Mossbound/Mossbound.mid",
       "score": "repertoire/01 Grade One/Mossbound/score.json",
-      "sha256": "79e0051dffbcf8b7571c9f17d1346c2d3557bfbaea81a9ffd567cab495db6c26",
-      "duration": 50.526335999999965,
+      "sha256": "82011b9b8f7a07c91a31fbf212a99bca6797c45f1aa28e95d862e018baa55849",
+      "duration": 50.52633599999999,
       "sections": [
         {
           "name": "A",
@@ -410,14 +410,14 @@
       "title": "The Second Threshold",
       "grade": 1,
       "key": "Em",
-      "tempo": 60,
+      "tempo": 56,
       "time": "4/4",
       "style": "phrygian",
       "maxFret": 5,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -440,8 +440,8 @@
       "dir": "repertoire/01 Grade One/The Second Threshold",
       "midi": "repertoire/01 Grade One/The Second Threshold/The Second Threshold.mid",
       "score": "repertoire/01 Grade One/The Second Threshold/score.json",
-      "sha256": "979498ae12a3a176f461e24bd7edee127e1a701ab68495288fb0898ad6725290",
-      "duration": 64,
+      "sha256": "3dd17dc70996cb2b67f588ffc3f9cb27fed1f57ab6212b49e20a15925cea4554",
+      "duration": 68.57145600000003,
       "sections": [
         {
           "name": "A",
@@ -483,9 +483,9 @@
       "style": "arpeggio",
       "maxFret": 5,
       "programs": {
+        "guitar": 25,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -497,18 +497,18 @@
       "description": {
         "de": {
           "guitar": "Einstimmige Akkordbrechungen, danach offene Powerchord-Flächen",
-          "keys": "Akkordbrechung und Melodie auf beide Hände verteilt"
+          "keys": "Gebrochene Antworten rechts und kurze Akkordstützen links"
         },
         "en": {
           "guitar": "Single-note arpeggios followed by spacious power-chord backing",
-          "keys": "Arpeggios and melody distributed between the hands"
+          "keys": "Broken right-hand answers and brief left-hand chord support"
         }
       },
       "bars": 24,
       "dir": "repertoire/01 Grade One/Black Glass",
       "midi": "repertoire/01 Grade One/Black Glass/Black Glass.mid",
       "score": "repertoire/01 Grade One/Black Glass/score.json",
-      "sha256": "4b7bdf1f62ea1137b3e10a69377c1dc306fc214b79ee6ea3931cc1ec0dc871d2",
+      "sha256": "1389514deafb7d17f39d17b210d07fd765f3b9c7e4e61922f6fc4496c4e22ca0",
       "duration": 72,
       "sections": [
         {
@@ -521,16 +521,23 @@
         {
           "name": "B",
           "startBar": 9,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 32
         },
         {
           "name": "A′",
-          "startBar": 17,
+          "startBar": 13,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
+        },
+        {
+          "name": "Coda",
+          "startBar": 21,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 80
         }
       ]
     },
@@ -539,14 +546,14 @@
       "title": "Iron Rain",
       "grade": 1,
       "key": "Em",
-      "tempo": 92,
+      "tempo": 100,
       "time": "4/4",
       "style": "power",
       "maxFret": 5,
       "programs": {
+        "guitar": 30,
         "keys": 0,
         "bass": 33,
-        "guitar": 30,
         "drums": 0
       },
       "prerequisites": [
@@ -565,12 +572,12 @@
           "keys": "Short chords and deliberate offbeat answers"
         }
       },
-      "bars": 24,
+      "bars": 20,
       "dir": "repertoire/01 Grade One/Iron Rain",
       "midi": "repertoire/01 Grade One/Iron Rain/Iron Rain.mid",
       "score": "repertoire/01 Grade One/Iron Rain/score.json",
-      "sha256": "777a615f5b3632df266fa784363066eee2906921b0ec39fef23044ee7918bda7",
-      "duration": 62.608703999999996,
+      "sha256": "a98d7496bced13909b7e668f353890ca2b3a1ff0ce4fb889c9167aa12a203771",
+      "duration": 48.00000000000001,
       "sections": [
         {
           "name": "A",
@@ -582,14 +589,21 @@
         {
           "name": "B",
           "startBar": 9,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 32
         },
         {
-          "name": "A′",
+          "name": "A",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        },
+        {
+          "name": "Coda",
           "startBar": 17,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 64
         }
@@ -605,9 +619,9 @@
       "style": "inversions",
       "maxFret": 5,
       "programs": {
+        "guitar": 26,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 0
       },
       "prerequisites": [
@@ -630,8 +644,8 @@
       "dir": "repertoire/01 Grade One/November Window",
       "midi": "repertoire/01 Grade One/November Window/November Window.mid",
       "score": "repertoire/01 Grade One/November Window/score.json",
-      "sha256": "067656bd0fb3115a6ef7261998be79638dd41d11f9a336b40c6d3c638523184d",
-      "duration": 59.99997599999994,
+      "sha256": "82d7447e4b9cf431d667cb893ff8ae11fda6a609ca2e1b344952da762e65be5e",
+      "duration": 59.99997600000012,
       "sections": [
         {
           "name": "A",
@@ -648,7 +662,7 @@
           "startBeat": 24
         },
         {
-          "name": "A′",
+          "name": "Coda",
           "startBar": 17,
           "bars": 8,
           "time": "3/4",
@@ -661,14 +675,14 @@
       "title": "The Descent",
       "grade": 2,
       "key": "Em",
-      "tempo": 64,
+      "tempo": 58,
       "time": "4/4",
       "style": "lamento",
       "maxFret": 7,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -689,8 +703,8 @@
       "dir": "repertoire/02 Grade Two/The Descent",
       "midi": "repertoire/02 Grade Two/The Descent/The Descent.mid",
       "score": "repertoire/02 Grade Two/The Descent/score.json",
-      "sha256": "15918e08ea859dc8b08df8b6665577efa8539acb0ba781e552ed2b2334426b32",
-      "duration": 90,
+      "sha256": "296180c63623464787934f0502e6bb1df1c63388c985874a458e4e6a344ca730",
+      "duration": 99.31036800000001,
       "sections": [
         {
           "name": "A",
@@ -702,16 +716,23 @@
         {
           "name": "B",
           "startBar": 9,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 32
         },
         {
           "name": "A′",
-          "startBar": 17,
+          "startBar": 13,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
+        },
+        {
+          "name": "Coda",
+          "startBar": 21,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 80
         }
       ]
     },
@@ -720,14 +741,14 @@
       "title": "Crooked Footsteps",
       "grade": 2,
       "key": "Am",
-      "tempo": 88,
+      "tempo": 94,
       "time": "4/4",
       "style": "syncopation",
       "maxFret": 7,
       "programs": {
+        "guitar": 28,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -744,31 +765,38 @@
           "keys": "Syncopated right hand against a regular left hand"
         }
       },
-      "bars": 24,
+      "bars": 20,
       "dir": "repertoire/02 Grade Two/Crooked Footsteps",
       "midi": "repertoire/02 Grade Two/Crooked Footsteps/Crooked Footsteps.mid",
       "score": "repertoire/02 Grade Two/Crooked Footsteps/score.json",
-      "sha256": "d693d64ed8f281b2e13747d6beca11dc3c31883a37b9cdde3c63bf8bee2638b9",
-      "duration": 65.45452800000034,
+      "sha256": "506aad2afb871744d0f03552374e4af9fc5a25cf601a8d17a52b1a123ce4d794",
+      "duration": 51.06384000000005,
       "sections": [
         {
           "name": "A",
           "startBar": 1,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 0
         },
         {
           "name": "B",
-          "startBar": 9,
+          "startBar": 5,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 32
+          "startBeat": 16
         },
         {
           "name": "A′",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        },
+        {
+          "name": "Coda",
           "startBar": 17,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 64
         }
@@ -779,14 +807,14 @@
       "title": "Shards of Rain",
       "grade": 2,
       "key": "Em",
-      "tempo": 96,
+      "tempo": 104,
       "time": "4/4",
       "style": "sixteenths",
       "maxFret": 7,
       "programs": {
+        "guitar": 30,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -803,12 +831,12 @@
           "keys": "Small sixteenth-note answers over simple accompaniment"
         }
       },
-      "bars": 24,
+      "bars": 20,
       "dir": "repertoire/02 Grade Two/Shards of Rain",
       "midi": "repertoire/02 Grade Two/Shards of Rain/Shards of Rain.mid",
       "score": "repertoire/02 Grade Two/Shards of Rain/score.json",
-      "sha256": "4a643880cff95e93ef9174fbf8f479d9f47d3ccb2e5172101b7697e51c17641c",
-      "duration": 60,
+      "sha256": "c672834c7438d583dc57c6bb54b5425939922ef917aa9253110296b20d1ce79d",
+      "duration": 46.153840000000024,
       "sections": [
         {
           "name": "A",
@@ -820,14 +848,21 @@
         {
           "name": "B",
           "startBar": 9,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 32
         },
         {
+          "name": "A′",
+          "startBar": 13,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 48
+        },
+        {
           "name": "Coda",
           "startBar": 17,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 64
         }
@@ -838,14 +873,14 @@
       "title": "Circle of Dust",
       "grade": 2,
       "key": "Am",
-      "tempo": 84,
+      "tempo": 78,
       "time": "3/4",
       "style": "circle",
       "maxFret": 7,
       "programs": {
+        "guitar": 25,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -855,19 +890,19 @@
       "description": {
         "de": {
           "guitar": "Melodische Sequenz und sparsame Akkordantworten im Quintfall",
-          "keys": "Akkordwechsel über bewegtem Bass"
+          "keys": "Kreisende Melodie, gehaltene Innenstimmen und bewegter Bandbass"
         },
         "en": {
           "guitar": "Melodic sequence and sparse chord answers through descending fifths",
-          "keys": "Chord changes above a moving bass"
+          "keys": "Circling melody, held inner voices and a moving band bass"
         }
       },
       "bars": 32,
       "dir": "repertoire/02 Grade Two/Circle of Dust",
       "midi": "repertoire/02 Grade Two/Circle of Dust/Circle of Dust.mid",
       "score": "repertoire/02 Grade Two/Circle of Dust/score.json",
-      "sha256": "9e3eec4f43af75177ff353c8754f1723db92589d4c8e0b646a1fabe728c9644b",
-      "duration": 68.5714560000001,
+      "sha256": "8a611a913ca454ec43f80c6ad54b98a43b7185857155743bab1d366f124dcb90",
+      "duration": 73.84617599999999,
       "sections": [
         {
           "name": "A",
@@ -884,7 +919,7 @@
           "startBeat": 24
         },
         {
-          "name": "A",
+          "name": "A′",
           "startBar": 17,
           "bars": 8,
           "time": "3/4",
@@ -904,14 +939,14 @@
       "title": "Beyond the Gate",
       "grade": 2,
       "key": "Em",
-      "tempo": 92,
+      "tempo": 86,
       "time": "4/4",
       "style": "endings",
       "maxFret": 7,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -928,40 +963,40 @@
           "keys": "Maintain the complete form and count silent beats"
         }
       },
-      "bars": 32,
+      "bars": 20,
       "dir": "repertoire/02 Grade Two/Beyond the Gate",
       "midi": "repertoire/02 Grade Two/Beyond the Gate/Beyond the Gate.mid",
       "score": "repertoire/02 Grade Two/Beyond the Gate/score.json",
-      "sha256": "84e59458499b5eb7303fc078a9b9c0ed651f662d12932f85abb2958c317b9dfe",
-      "duration": 83.47827200000006,
+      "sha256": "4c0a44237c2d498b8dc7765bf8da626f53ca4b95ef7d9394bb2af2762e125636",
+      "duration": 55.81391999999996,
       "sections": [
         {
           "name": "A",
           "startBar": 1,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 0
         },
         {
           "name": "B",
+          "startBar": 5,
+          "bars": 4,
+          "time": "4/4",
+          "startBeat": 16
+        },
+        {
+          "name": "A′",
           "startBar": 9,
           "bars": 8,
           "time": "4/4",
           "startBeat": 32
         },
         {
-          "name": "A",
+          "name": "Coda",
           "startBar": 17,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 64
-        },
-        {
-          "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
-          "time": "4/4",
-          "startBeat": 96
         }
       ]
     },
@@ -970,14 +1005,14 @@
       "title": "Threshold of Fire",
       "grade": 3,
       "key": "Em",
-      "tempo": 64,
+      "tempo": 60,
       "time": "4/4",
       "style": "cadence",
       "maxFret": 9,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 29,
         "drums": 16
       },
       "prerequisites": [
@@ -1000,36 +1035,43 @@
       "dir": "repertoire/03 Grade Three/Threshold of Fire",
       "midi": "repertoire/03 Grade Three/Threshold of Fire/Threshold of Fire.mid",
       "score": "repertoire/03 Grade Three/Threshold of Fire/score.json",
-      "sha256": "9e04d1472d47ee2f07fc109b503ca770e0379097e42488e524763e98f24b3ba7",
-      "duration": 120,
+      "sha256": "072cfd6a2f61be57629bfd60c49313993b5fcbd0f82326cb7d0f216147f8004b",
+      "duration": 128.00000000000009,
       "sections": [
         {
-          "name": "A",
+          "name": "Intro",
           "startBar": 1,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 0
         },
         {
-          "name": "B",
-          "startBar": 9,
+          "name": "A",
+          "startBar": 5,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 32
+          "startBeat": 16
         },
         {
-          "name": "A",
-          "startBar": 17,
+          "name": "B",
+          "startBar": 13,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
+        },
+        {
+          "name": "A′",
+          "startBar": 21,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 80
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 29,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 112
         }
       ]
     },
@@ -1038,14 +1080,14 @@
       "title": "Dance of Lead",
       "grade": 3,
       "key": "Am",
-      "tempo": 84,
+      "tempo": 80,
       "time": "4/4",
       "style": "diminished",
       "maxFret": 9,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 29,
         "drums": 16
       },
       "prerequisites": [
@@ -1064,12 +1106,12 @@
           "keys": "Small voice movements through diminished and dominant harmony"
         }
       },
-      "bars": 32,
+      "bars": 28,
       "dir": "repertoire/03 Grade Three/Dance of Lead",
       "midi": "repertoire/03 Grade Three/Dance of Lead/Dance of Lead.mid",
       "score": "repertoire/03 Grade Three/Dance of Lead/score.json",
-      "sha256": "b0bde890cced5df65884f61bb6506e654a21b70ec8f34b4a37bc5648040ecec9",
-      "duration": 91.4286080000006,
+      "sha256": "879a498b8b0439a50d17763b31cf79dca49bcb4a95ffe2b6a934f5e0734a7856",
+      "duration": 84,
       "sections": [
         {
           "name": "A",
@@ -1086,7 +1128,7 @@
           "startBeat": 32
         },
         {
-          "name": "A",
+          "name": "A′",
           "startBar": 17,
           "bars": 8,
           "time": "4/4",
@@ -1095,7 +1137,7 @@
         {
           "name": "Coda",
           "startBar": 25,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 96
         }
@@ -1106,14 +1148,14 @@
       "title": "Blackwater",
       "grade": 3,
       "key": "Em",
-      "tempo": 52,
+      "tempo": 48,
       "time": "12/8",
       "style": "compound",
       "maxFret": 9,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1125,19 +1167,19 @@
       "description": {
         "de": {
           "guitar": "Fließendes 12/8-Thema und Powerchords mit Atempausen",
-          "keys": "Linke Figur und rechte Melodie im 12/8"
+          "keys": "Lange Melodiebögen und sparsame linke Akkorde im 12/8"
         },
         "en": {
           "guitar": "Flowing 12/8 theme and power chords separated by breathing space",
-          "keys": "Left-hand figuration and right-hand melody in 12/8"
+          "keys": "Long melodic arcs and sparse left-hand chords in 12/8"
         }
       },
-      "bars": 24,
+      "bars": 28,
       "dir": "repertoire/03 Grade Three/Blackwater",
       "midi": "repertoire/03 Grade Three/Blackwater/Blackwater.mid",
       "score": "repertoire/03 Grade Three/Blackwater/score.json",
-      "sha256": "07462fca04e655d6a0825f2f31dcff5ae471feb64f842d22b7319ef71ff0dca0",
-      "duration": 110.76926400000121,
+      "sha256": "0f3eaaa1cd9c1594591e0d3a6c5292ffc39974225081e1648f0b1472c603d78e",
+      "duration": 139.99994399999977,
       "sections": [
         {
           "name": "A",
@@ -1159,6 +1201,13 @@
           "bars": 8,
           "time": "12/8",
           "startBeat": 96
+        },
+        {
+          "name": "Coda",
+          "startBar": 25,
+          "bars": 4,
+          "time": "12/8",
+          "startBeat": 144
         }
       ]
     },
@@ -1167,14 +1216,14 @@
       "title": "Pendulum of Thorns",
       "grade": 3,
       "key": "Am",
-      "tempo": 84,
+      "tempo": 78,
       "time": "4/4",
       "style": "shuffle",
       "maxFret": 9,
       "programs": {
+        "guitar": 28,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1193,12 +1242,12 @@
           "keys": "Melodic answers with deliberately long and short eighths"
         }
       },
-      "bars": 32,
+      "bars": 24,
       "dir": "repertoire/03 Grade Three/Pendulum of Thorns",
       "midi": "repertoire/03 Grade Three/Pendulum of Thorns/Pendulum of Thorns.mid",
       "score": "repertoire/03 Grade Three/Pendulum of Thorns/score.json",
-      "sha256": "1c1bbaa99a48edcbfc6635fd1f3e14404366afd6cefcf587ee83fc87502f5cf1",
-      "duration": 91.42860800000015,
+      "sha256": "2938599ca41e3353de25aacd06ec204c5077fe9d4d4f83b5063cf033c80078b7",
+      "duration": 73.84617599999996,
       "sections": [
         {
           "name": "A",
@@ -1210,23 +1259,23 @@
         {
           "name": "B",
           "startBar": 9,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 32
         },
         {
-          "name": "A",
-          "startBar": 17,
+          "name": "A′",
+          "startBar": 13,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 21,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 80
         }
       ]
     },
@@ -1235,14 +1284,14 @@
       "title": "Threads of Smoke",
       "grade": 3,
       "key": "Em",
-      "tempo": 96,
+      "tempo": 84,
       "time": "4/4",
       "style": "legato",
       "maxFret": 9,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1254,19 +1303,19 @@
       "description": {
         "de": {
           "guitar": "Hammer-ons/Pull-offs in der Leadlinie; ruhige Begleitakkorde",
-          "keys": "Sequenz über wechselndem Bass, Melodie hervorheben"
+          "keys": "Abbrechende Antworten, bewegliche Melodie und freie Phrasenenden"
         },
         "en": {
           "guitar": "Hammer-ons and pull-offs in the lead line; spacious backing chords",
-          "keys": "Sequences over a changing bass; bring out the melody"
+          "keys": "Interrupted answers, a flowing melody and open phrase endings"
         }
       },
-      "bars": 32,
+      "bars": 24,
       "dir": "repertoire/03 Grade Three/Threads of Smoke",
       "midi": "repertoire/03 Grade Three/Threads of Smoke/Threads of Smoke.mid",
       "score": "repertoire/03 Grade Three/Threads of Smoke/score.json",
-      "sha256": "e23ba0eef856e0ecb5f848c38064ec3e223fdf5555e392b46bf53b49be3d94be",
-      "duration": 80,
+      "sha256": "7c4e7afefdde1e9b749348de3f023654ce7cc90814553c381a69a795f15a92ca",
+      "duration": 68.57145600000008,
       "sections": [
         {
           "name": "A",
@@ -1283,18 +1332,18 @@
           "startBeat": 32
         },
         {
-          "name": "A",
+          "name": "A′",
           "startBar": 17,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 64
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 21,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 80
         }
       ]
     },
@@ -1303,14 +1352,14 @@
       "title": "Light Through Lead",
       "grade": 4,
       "key": "Em",
-      "tempo": 72,
+      "tempo": 66,
       "time": "4/4",
       "style": "lydian",
       "maxFret": 12,
       "programs": {
+        "guitar": 29,
         "keys": 4,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1333,36 +1382,43 @@
       "dir": "repertoire/04 Grade Four/Light Through Lead",
       "midi": "repertoire/04 Grade Four/Light Through Lead/Light Through Lead.mid",
       "score": "repertoire/04 Grade Four/Light Through Lead/score.json",
-      "sha256": "c13f029f924a8abd244202bd30d5c52b465ccf9d1da7a932c3de02e5c41e0edd",
-      "duration": 106.66662399999909,
+      "sha256": "e1d518280ff1719e1afb129440d12ae9be0493b323418fdd180e2181422ebc07",
+      "duration": 116.3636479999999,
       "sections": [
         {
-          "name": "A",
+          "name": "Intro",
           "startBar": 1,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 0
         },
         {
-          "name": "B",
-          "startBar": 9,
+          "name": "A",
+          "startBar": 5,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 32
+          "startBeat": 16
         },
         {
-          "name": "A",
-          "startBar": 17,
+          "name": "B",
+          "startBar": 13,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
+        },
+        {
+          "name": "A′",
+          "startBar": 21,
+          "bars": 8,
+          "time": "4/4",
+          "startBeat": 80
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 29,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 112
         }
       ]
     },
@@ -1371,14 +1427,14 @@
       "title": "Cold Bells",
       "grade": 4,
       "key": "Em",
-      "tempo": 84,
+      "tempo": 70,
       "time": "3/4",
       "style": "register",
       "maxFret": 12,
       "programs": {
+        "guitar": 26,
         "keys": 4,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1397,40 +1453,40 @@
           "keys": "Motifs in separated registers with deliberate thinning"
         }
       },
-      "bars": 32,
+      "bars": 24,
       "dir": "repertoire/04 Grade Four/Cold Bells",
       "midi": "repertoire/04 Grade Four/Cold Bells/Cold Bells.mid",
       "score": "repertoire/04 Grade Four/Cold Bells/score.json",
-      "sha256": "7227d92f056fb8ddd83a2dad80297f90fde492796976eb2eff131a18b5792458",
-      "duration": 68.5714560000001,
+      "sha256": "95f86aca943e10bea0069faec9dee8073a8a54da69ffa9f63bb190aa716f8abf",
+      "duration": 61.71429599999995,
       "sections": [
         {
           "name": "A",
           "startBar": 1,
-          "bars": 8,
+          "bars": 6,
           "time": "3/4",
           "startBeat": 0
         },
         {
           "name": "B",
-          "startBar": 9,
-          "bars": 8,
+          "startBar": 7,
+          "bars": 6,
           "time": "3/4",
-          "startBeat": 24
+          "startBeat": 18
         },
         {
-          "name": "A",
-          "startBar": 17,
-          "bars": 8,
+          "name": "A′",
+          "startBar": 13,
+          "bars": 6,
           "time": "3/4",
-          "startBeat": 48
+          "startBeat": 36
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 19,
+          "bars": 6,
           "time": "3/4",
-          "startBeat": 72
+          "startBeat": 54
         }
       ]
     },
@@ -1439,14 +1495,14 @@
       "title": "Stone Against Water",
       "grade": 4,
       "key": "Em",
-      "tempo": 84,
+      "tempo": 76,
       "time": "4/4",
       "style": "polyrhythm",
       "maxFret": 12,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1465,40 +1521,40 @@
           "keys": "Limited passages of 3:2 between the hands"
         }
       },
-      "bars": 32,
+      "bars": 20,
       "dir": "repertoire/04 Grade Four/Stone Against Water",
       "midi": "repertoire/04 Grade Four/Stone Against Water/Stone Against Water.mid",
       "score": "repertoire/04 Grade Four/Stone Against Water/score.json",
-      "sha256": "818d09e666ab5a5281bd308256e751448eff496af2ecfef8b803cc0b7a50625d",
-      "duration": 91.4286080000006,
+      "sha256": "db9f01e66ea4d86951d44c0d638ca6abdd8e238c740304697364b0f5f007e653",
+      "duration": 63.15792000000018,
       "sections": [
         {
           "name": "A",
           "startBar": 1,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 0
         },
         {
           "name": "B",
-          "startBar": 9,
+          "startBar": 5,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 32
+          "startBeat": 16
         },
         {
-          "name": "A",
-          "startBar": 17,
-          "bars": 8,
+          "name": "A′",
+          "startBar": 13,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 17,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 64
         }
       ]
     },
@@ -1507,14 +1563,14 @@
       "title": "Seven Shadows",
       "grade": 4,
       "key": "Em",
-      "tempo": 168,
+      "tempo": 154,
       "time": "7/8",
       "style": "odd",
       "maxFret": 12,
       "programs": {
+        "guitar": 30,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1526,19 +1582,19 @@
       "description": {
         "de": {
           "guitar": "7/8-Riff und Powerchord-Akzente in 2+2+3",
-          "keys": "Ostinato mit klarer Gruppierung und Gegenstimme"
+          "keys": "Akzente in 2+2+3, ausgesparte Schläge und melodische Antworten"
         },
         "en": {
           "guitar": "7/8 riff and power-chord accents grouped 2+2+3",
-          "keys": "Clearly grouped ostinato with a countervoice"
+          "keys": "Accents in 2+2+3, omitted attacks and melodic answers"
         }
       },
-      "bars": 32,
+      "bars": 24,
       "dir": "repertoire/04 Grade Four/Seven Shadows",
       "midi": "repertoire/04 Grade Four/Seven Shadows/Seven Shadows.mid",
       "score": "repertoire/04 Grade Four/Seven Shadows/score.json",
-      "sha256": "ad4bfe927841eee4dba3312d11734b3949e378beb0a929c2b2fb83baabb9c512",
-      "duration": 80.00003200000035,
+      "sha256": "8b10b952b711a24337cef9f1e642e221221a20d3eec93547b2d4735dbe2cae00",
+      "duration": 65.45456400000006,
       "sections": [
         {
           "name": "A",
@@ -1550,23 +1606,23 @@
         {
           "name": "B",
           "startBar": 9,
-          "bars": 8,
+          "bars": 4,
           "time": "7/8",
           "startBeat": 28
         },
         {
-          "name": "A",
-          "startBar": 17,
+          "name": "A′",
+          "startBar": 13,
           "bars": 8,
           "time": "7/8",
-          "startBeat": 56
+          "startBeat": 42
         },
         {
           "name": "Coda",
-          "startBar": 25,
-          "bars": 8,
+          "startBar": 21,
+          "bars": 4,
           "time": "7/8",
-          "startBeat": 84
+          "startBeat": 70
         }
       ]
     },
@@ -1575,14 +1631,14 @@
       "title": "The Broken Circle",
       "grade": 4,
       "key": "Am",
-      "tempo": 100,
+      "tempo": 96,
       "time": "4/4",
       "style": "332",
       "maxFret": 12,
       "programs": {
+        "guitar": 30,
         "keys": 0,
         "bass": 33,
-        "guitar": 30,
         "drums": 16
       },
       "prerequisites": [
@@ -1601,12 +1657,12 @@
           "keys": "Switch between rhythmic accompaniment and melody"
         }
       },
-      "bars": 40,
+      "bars": 32,
       "dir": "repertoire/04 Grade Four/The Broken Circle",
       "midi": "repertoire/04 Grade Four/The Broken Circle/The Broken Circle.mid",
       "score": "repertoire/04 Grade Four/The Broken Circle/score.json",
-      "sha256": "023e9b03761d388ae481a74acc7ebb3c67286425de30fa6bb46c3a73cea2e2de",
-      "duration": 96.00000000000087,
+      "sha256": "dd35b4fa2648277a945fa4ce256942fd80c5968b9278f22a52e3396952f2ab95",
+      "duration": 80.00000000000009,
       "sections": [
         {
           "name": "A",
@@ -1632,16 +1688,16 @@
         {
           "name": "A",
           "startBar": 25,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 96
         },
         {
           "name": "Coda",
-          "startBar": 33,
-          "bars": 8,
+          "startBar": 29,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 128
+          "startBeat": 112
         }
       ]
     },
@@ -1650,14 +1706,14 @@
       "title": "House of Rain",
       "grade": 5,
       "key": "Em",
-      "tempo": 76,
+      "tempo": 70,
       "time": "4/4",
       "style": "suite",
       "maxFret": 12,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 29,
         "drums": 16
       },
       "prerequisites": [
@@ -1667,19 +1723,19 @@
       "description": {
         "de": {
           "guitar": "Offenes Intro, Powerchord-Riff, melodische Fortsetzung und Rückkehr",
-          "keys": "Innenstimmen und eigenes Thema, Dichte über die Form"
+          "keys": "Gegenmelodie und eigenes Thema; die Rückkehr wird dünner"
         },
         "en": {
           "guitar": "Spacious intro, power-chord riff, melodic continuation and return",
-          "keys": "Inner voices and a separate theme across the form"
+          "keys": "Countermelody and an independent theme; the return becomes sparser"
         }
       },
-      "bars": 48,
+      "bars": 44,
       "dir": "repertoire/05 Grade Five/House of Rain",
       "midi": "repertoire/05 Grade Five/House of Rain/House of Rain.mid",
       "score": "repertoire/05 Grade Five/House of Rain/score.json",
-      "sha256": "8b806b7fefa57c83f6a16cbd47eca292e7b16ae72acf54af434677eb02acc4bf",
-      "duration": 151.57900800000036,
+      "sha256": "24b3886ebfbaa6a07633c12c393b18d81be29ea92d8080e9408a959e8709262e",
+      "duration": 150.85716800000014,
       "sections": [
         {
           "name": "Intro",
@@ -1712,7 +1768,7 @@
         {
           "name": "Coda",
           "startBar": 37,
-          "bars": 12,
+          "bars": 8,
           "time": "4/4",
           "startBeat": 144
         }
@@ -1723,14 +1779,14 @@
       "title": "Ashen Garden",
       "grade": 5,
       "key": "Am",
-      "tempo": 60,
+      "tempo": 54,
       "time": "12/8",
       "style": "ballad",
       "maxFret": 12,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1747,12 +1803,12 @@
           "keys": "A left-hand melodic section, then return to accompaniment"
         }
       },
-      "bars": 48,
+      "bars": 40,
       "dir": "repertoire/05 Grade Five/Ashen Garden",
       "midi": "repertoire/05 Grade Five/Ashen Garden/Ashen Garden.mid",
       "score": "repertoire/05 Grade Five/Ashen Garden/score.json",
-      "sha256": "0ddd9f450b15b762aa694700eb6d7024f788185df7f54239211b279fe2105907",
-      "duration": 192.00009600000058,
+      "sha256": "235bedc541c0746943de64f747dc91ae3433d5f23eaede7371b92becd24719f5",
+      "duration": 177.7778399999999,
       "sections": [
         {
           "name": "Intro",
@@ -1764,37 +1820,37 @@
         {
           "name": "A",
           "startBar": 5,
-          "bars": 12,
+          "bars": 8,
           "time": "12/8",
           "startBeat": 24
         },
         {
           "name": "B",
-          "startBar": 17,
+          "startBar": 13,
           "bars": 8,
           "time": "12/8",
-          "startBeat": 96
+          "startBeat": 72
         },
         {
           "name": "Solo",
-          "startBar": 25,
+          "startBar": 21,
           "bars": 8,
           "time": "12/8",
-          "startBeat": 144
+          "startBeat": 120
         },
         {
           "name": "A′",
-          "startBar": 33,
-          "bars": 12,
+          "startBar": 29,
+          "bars": 8,
           "time": "12/8",
-          "startBeat": 192
+          "startBeat": 168
         },
         {
           "name": "Coda",
-          "startBar": 45,
+          "startBar": 37,
           "bars": 4,
           "time": "12/8",
-          "startBeat": 264
+          "startBeat": 216
         }
       ]
     },
@@ -1803,14 +1859,14 @@
       "title": "Clockwork Winter",
       "grade": 5,
       "key": "Dm",
-      "tempo": 120,
+      "tempo": 112,
       "time": "4/4",
       "style": "ritornello",
       "maxFret": 12,
       "programs": {
+        "guitar": 25,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1820,19 +1876,19 @@
       "description": {
         "de": {
           "guitar": "Barockes Einzelton-Thema, ruhige Akkordbegleitung und eigene Soloepisode",
-          "keys": "Figuration und klare Ritornell-Einsätze"
+          "keys": "Dialogische Figuration und klar erkennbare Ritornell-Einsätze"
         },
         "en": {
           "guitar": "Baroque single-note theme, spacious chord backing and a separate solo episode",
-          "keys": "Figuration and clear returning-theme entries"
+          "keys": "Dialoguing figuration and clearly recognisable ritornello entries"
         }
       },
-      "bars": 48,
+      "bars": 40,
       "dir": "repertoire/05 Grade Five/Clockwork Winter",
       "midi": "repertoire/05 Grade Five/Clockwork Winter/Clockwork Winter.mid",
       "score": "repertoire/05 Grade Five/Clockwork Winter/score.json",
-      "sha256": "69bcc1bfb4b119a969c0d8e7ce5da8a652967179a28dec6e3790d9e18e7c053a",
-      "duration": 96,
+      "sha256": "c289443cc77dcb8273e2a70d0b54b8b4571719869de7b7d8e45e389308e368b5",
+      "duration": 85.71423999999989,
       "sections": [
         {
           "name": "A",
@@ -1851,30 +1907,30 @@
         {
           "name": "A",
           "startBar": 17,
-          "bars": 8,
+          "bars": 4,
           "time": "4/4",
           "startBeat": 64
         },
         {
           "name": "Solo",
-          "startBar": 25,
+          "startBar": 21,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 80
         },
         {
-          "name": "A",
-          "startBar": 33,
+          "name": "A′",
+          "startBar": 29,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 128
+          "startBeat": 112
         },
         {
           "name": "Coda",
-          "startBar": 41,
-          "bars": 8,
+          "startBar": 37,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 160
+          "startBeat": 144
         }
       ]
     },
@@ -1883,14 +1939,14 @@
       "title": "Two Shores",
       "grade": 5,
       "key": "Em",
-      "tempo": 100,
+      "tempo": 88,
       "time": "4/4",
       "style": "dialogue",
       "maxFret": 12,
       "programs": {
+        "guitar": 27,
         "keys": 0,
         "bass": 33,
-        "guitar": 27,
         "drums": 16
       },
       "prerequisites": [
@@ -1907,12 +1963,12 @@
           "keys": "Band harmony during the guitar solo, then a solo supported by bass and drums"
         }
       },
-      "bars": 56,
+      "bars": 44,
       "dir": "repertoire/05 Grade Five/Two Shores",
       "midi": "repertoire/05 Grade Five/Two Shores/Two Shores.mid",
       "score": "repertoire/05 Grade Five/Two Shores/score.json",
-      "sha256": "768427d6c924a011b406a0dbd65b155024d036455e01ff9d1927994b94b6a38b",
-      "duration": 134.4000000000019,
+      "sha256": "7ea2971ec3a83e50b4b1b44a0c0b4f28ea67b4c1c80e9d7ab5c17a74c12e090a",
+      "duration": 119.99996800000004,
       "sections": [
         {
           "name": "Intro",
@@ -1924,44 +1980,44 @@
         {
           "name": "A",
           "startBar": 5,
-          "bars": 12,
+          "bars": 8,
           "time": "4/4",
           "startBeat": 16
         },
         {
           "name": "B",
-          "startBar": 17,
+          "startBar": 13,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 64
+          "startBeat": 48
         },
         {
           "name": "Guitar solo",
-          "startBar": 25,
+          "startBar": 21,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 96
+          "startBeat": 80
         },
         {
           "name": "Keyboard solo",
-          "startBar": 33,
+          "startBar": 29,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 128
+          "startBeat": 112
         },
         {
           "name": "A′",
-          "startBar": 41,
-          "bars": 12,
+          "startBar": 37,
+          "bars": 4,
           "time": "4/4",
-          "startBeat": 160
+          "startBeat": 144
         },
         {
           "name": "Coda",
-          "startBar": 53,
+          "startBar": 41,
           "bars": 4,
           "time": "4/4",
-          "startBeat": 208
+          "startBeat": 160
         }
       ]
     },
@@ -1970,14 +2026,14 @@
       "title": "Where the Night Ends",
       "grade": 5,
       "key": "Em",
-      "tempo": 84,
+      "tempo": 78,
       "time": "4/4",
       "style": "finale",
       "maxFret": 12,
       "programs": {
+        "guitar": 29,
         "keys": 0,
         "bass": 33,
-        "guitar": 29,
         "drums": 16
       },
       "prerequisites": [
@@ -1994,12 +2050,12 @@
           "keys": "Contrasting textures, metre changes and a shared ending"
         }
       },
-      "bars": 64,
+      "bars": 52,
       "dir": "repertoire/05 Grade Five/Where the Night Ends",
       "midi": "repertoire/05 Grade Five/Where the Night Ends/Where the Night Ends.mid",
       "score": "repertoire/05 Grade Five/Where the Night Ends/score.json",
-      "sha256": "e26cf85d5610ac54b1f75f79e0c4b56a23008fecad2fd3e7694964bd76cc25eb",
-      "duration": 171.42864000000233,
+      "sha256": "2dc3ff44530458cffab83688b4f3a1fa88774b57a1b12173d031a091da249588",
+      "duration": 150.76927600000008,
       "sections": [
         {
           "name": "Intro",
@@ -2011,37 +2067,37 @@
         {
           "name": "A",
           "startBar": 5,
-          "bars": 16,
+          "bars": 12,
           "time": "4/4",
           "startBeat": 12
         },
         {
           "name": "B",
-          "startBar": 21,
-          "bars": 12,
+          "startBar": 17,
+          "bars": 8,
           "time": "3/4",
-          "startBeat": 76
+          "startBeat": 60
         },
         {
           "name": "Solo",
-          "startBar": 33,
+          "startBar": 25,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 112
+          "startBeat": 84
         },
         {
           "name": "A′",
-          "startBar": 41,
-          "bars": 16,
+          "startBar": 33,
+          "bars": 12,
           "time": "4/4",
-          "startBeat": 144
+          "startBeat": 116
         },
         {
           "name": "Coda",
-          "startBar": 57,
+          "startBar": 45,
           "bars": 8,
           "time": "4/4",
-          "startBeat": 208
+          "startBeat": 164
         }
       ]
     }
