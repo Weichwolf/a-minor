@@ -9,7 +9,7 @@ Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard mit eigenständig
 
 ## Stand
 
-Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Jam-/Backing-Editor und freie Konfigurationsseiten bleiben entfernt.
+Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 enthält je sieben Gitarren- und sechs Keyboardeinheiten: 7 × (7 + 6) = 91 neue Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 91 × 3 = 273 neue Aufgaben. Mit den bisherigen 53 Aufgaben sind es 326. Der Jam-/Backing-Editor bleibt entfernt. Das P4-Griffbrett ist als eigenständige Ansicht im Hauptmenü verfügbar.
 
 Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 30 durchnummerierten Kapiteln und fünf mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 224 Beispiele mit Klaviervorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 326 Aufgaben bleiben in den Instrumentalspuren. Zwei Orientierungskapitel legen die Töne auf die Instrumente: Griffbrett und Tastatur (Saiten, Bünde, Lagen, 49 Tasten von C2 bis C6) sowie Tonarten und Tonleitern in der Praxis (Skalenmuster der P4-Gitarre, dasselbe Griffbild für E, A und D, Fingersätze und schwarze Tasten).
 
@@ -40,6 +40,14 @@ Musiklehre:
 | VII Form | 26 Motiv, Phrase, Periode · 27 Wiederholung als Form · 28 Suite, Variation, Programm |
 | VIII Die Referenzen | 29 Die fünf Referenzen · 30 Hören, Analysieren, Schreiben |
 | Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik und Zeitwerte · D Akkordsymbol-Referenz · E Glossar |
+
+## Musikalische Formen und Anschaulichkeit
+
+86 Partituren sind neu oder überarbeitet. Alle 130 notierten Kursaufgaben, einschließlich vier Lesegeneratoren, umfassen mindestens vier Takte. 58 Aufgaben verwenden ausdrücklich A–B–A–C: Motiv, Antwort, wörtliche Wiederkehr, Schluss. Sequenzen, Kadenzen und größere Formen behalten ihren eigenen Aufbau. Begleitlängen und Texte beider Sprachen folgen den Noten. Die übrigen Aufgaben entwickeln daraus Varianten, Hörvergleiche und eigene Stücke.
+
+Das Hauptmenü enthält **Griffbrett** (`#/fretboard`): sechs P4-Saiten, Grundton, Skala, Tonname oder Intervall, bis Bund 24. Die Musiklehre ergänzt die Noten um 47 sichtbare Darstellungen: konkrete Grifforte, Tastaturkarten im Bereich C2–C6, Rhythmusraster, Formabläufe, Signalweg und ADSR. Griffkarten zeigen entweder die notierten Orte oder einen ausdrücklich bezeichneten Tonvorrat; sie sind nicht automatisch Akkordgriffe. Breite Karten scrollen innerhalb ihrer Ansicht.
+
+Der [Abgleich vom 22. September](docs/COURSE_AUDIT.md) dokumentiert fachliche Korrekturen, Prüfungen und Grenzen.
 
 ## Übezeit
 
@@ -75,7 +83,7 @@ Unter **MIDI** Ausgänge suchen und Gerät wählen. Klick/Drums ausschließlich 
 | Geschlossene Hi-Hat | 42 |
 | Klick/Rim | 37 |
 
-MX49: Drum-Kit auf Part 10. SR-18: MIDI-Interface mit DIN-Ausgang, MIDI CH 10, DRUM IN ON: V1, NOTE MAP NORMAL und passende Pad-Zuordnung unter NOTE. Die Handbücher sind in der MIDI-Ansicht verlinkt. Gerätetests stehen noch aus.
+Externer Synthesizer oder Schlagzeugklangerzeuger: Empfang auf MIDI-Kanal 10 und passende Notenzuordnung einrichten. USB-MIDI direkt oder DIN-MIDI über ein Interface verbinden. Die MIDI-Ansicht beschreibt die Einrichtung ohne gerätespezifische Menünamen. Gerätetests stehen noch aus.
 
 Alle Drum-Muster enthalten geschlossene Hi-Hat (Note 42) mit hörbar gewichteten MIDI-Velocities. Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Shuffle verwendet lange/kurze Achtel im Übeverhältnis 2:1. In 12/8 sind es vier große Pulse mit je drei Hi-Hat-Achteln; 5/8 und 7/8 betonen die vorgegebenen Gruppen. Auch 3/4 bietet Klick und Drums.
 
@@ -87,9 +95,9 @@ Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/
 
 ## Backup / Restore
 
-**Log → Backup herunterladen** sichert das gemeinsame Journal einschließlich Abschlussmarkierungen, Notizen und Löschvermerken als JSON. **Backup wiederherstellen** validiert die Datei und führt sie mit dem lokalen Journal zusammen. Doppelte Ereignisse werden nicht dupliziert; neuere Änderungen werden nicht durch alte Backups überschrieben. Auch frühere JSON-Backups mit `done` und `log` werden eingelesen. Ungültige Dateien ändern keine Daten.
+**Log → Backup herunterladen** sichert Abschlussmarkierungen und Notizen als JSON. **Backup wiederherstellen** validiert die Datei und ersetzt den lokalen Stand. Ungültige Dateien ändern keine Daten. Frühere Backups und bereits gespeicherter Fortschritt werden beim Einlesen ins lokale Format übernommen; gelöschte Notizen bleiben gelöscht.
 
-Speicherung gilt pro Browserprofil und Origin; localhost und a-minor.ch haben getrennte Daten. Beim Browserwechsel oder vor dem Löschen der Websitedaten exportieren. Kein Konto. Backups verschiedener Geräte lassen sich manuell zusammenführen. Automatische Netzsynchronisation ist zurückgestellt. Die Spracheinstellung ist eine separate Browserpräferenz und kein Lernfortschritt.
+Fortschritt liegt ausschließlich im `localStorage` des Browsers, getrennt nach Browserprofil und Origin. localhost und a-minor.ch haben getrennte Daten. Beim Browserwechsel oder vor dem Löschen der Websitedaten exportieren. Keine Konten, P2P-Verbindungen oder Netzsynchronisation. Die Spracheinstellung ist eine separate Browserpräferenz und kein Lernfortschritt.
 
 ## Dateien
 
@@ -104,7 +112,7 @@ Speicherung gilt pro Browserprofil und Origin; localhost und a-minor.ch haben ge
 | `js/music.js` | Tonhöhen, Intervalle, Skalen und P4-Positionen |
 | `js/notation.js` | Noten-SVG, Stimmen, Haltebögen und Lesegenerator |
 | `js/audio.js` | MIDI-Kursbegleitung und separate Notenvorschau |
-| `js/store.js` | Gemeinsames Ereignisjournal, Zusammenführung und Backup/Restore |
+| `js/store.js` | Lokaler Browserfortschritt, Altformatmigration und Backup/Restore |
 | `tests/` | Kurs-, Speicher-, MIDI- und Browsertests |
 
 ## Übungen ergänzen
@@ -131,6 +139,10 @@ Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einhei
 
 Die Musiklehre liegt in `data/book.json`: `parts` mit `chapters`, jedes Kapitel mit `examples` (`id`, `textId`, `tempo`, `score`, optional `instrument: "guitar"` für oktavierende Gitarrennotation und `show` für dauerhaft eingeblendete Hilfen `strings`, `frets`, `names`, `fingers`). Der letzte Teil trägt `"appendix": true` und enthält Kapitel ohne Beispiele. Die Texte stehen unter dem Namensraum `book` beider Sprachdateien: Kapitel mit `title` und `text`, Beispiele mit `title`, Takt- und Abschnittsbeschriftungen bei Bedarf als eigener `textId` (`chords`, `sections`). Der Kapiteltext gliedert sich in `## n.m`-Abschnitte und platziert jedes Beispiel genau einmal mit `[[beispiel-id]]`; Kapitel- und Abschnittsnummern sowie die Nummerierung „Beispiel n.m“ folgen der Reihenfolge im Buch beziehungsweise im Text, Querverweise nennen die Kapitelnummer im Text. Kein Beispiel trägt `backing` oder `checklist`.
 Dauern: `w h q e s`, optional punktiert (`h.`) oder als Triole (`et`, `qt`). Zeitberechnung mit 24 Ticks pro Viertel hält binäre und ternäre Unterteilungen exakt. `tie:1` bindet zur nächsten gleichen Tonhöhe. `p` darf für Akkorde ein Array enthalten; `s` und `fi` können dazu positionsgleiche Arrays sein. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. `score.inner` ergänzt eine unabhängig gehaltene beziehungsweise bewegte Mittelstimme im oberen System. Alle Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
+
+Lesegenerator: `generate.form: "ABAC"` mit `bars: 4` erzeugt Motiv, Antwort, identische Wiederkehr und einen Schluss auf dem Grundton. Taktfüllung erfolgt in ganzzahligen Ticks; der Tonbereich muss Grundton und mindestens einen Kontrastton enthalten.
+
+Theoriebeispiele können `visuals` enthalten. Jede Darstellung hat `type`, `textId` und sprachunabhängige Konfiguration. Typen: `fretboard` mit konkreten `positions: [{s, f}]` oder `root`/`scale`, `piano` mit exakten `notes` oder einem Tonvorrat, `rhythm`, `form`, `flow`, `envelope`. Titel, Erklärung, Rasterzeilen und Ablaufbeschriftungen liegen unter der jeweiligen `textId` in beiden Sprachdateien. Notation und Klaviervorschau bleiben daneben verfügbar.
 
 Zusätzliche Notenfelder: `accent`, `staccato`, `harmonic`, `bend` (Halbtöne), `slur`/`slurEnd`. `tuplet:3` startet eine Triolenklammer, `tupletEnd:true` beendet sie. `score.chords` und `score.sections` beschriften Takte; `score.swing:true` interpretiert gerade Achtel in der Vorschau als 2:1-Übemodell.
 

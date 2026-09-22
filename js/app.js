@@ -9,6 +9,7 @@
   const md = text => text.trim().split(/\n\s*\n/).map(b => /^- /m.test(b) ? '<ul>' + b.split('\n').map(l => '<li>' + inline(l.replace(/^- /, '')) + '</li>').join('') + '</ul>' : '<p>' + inline(b) + '</p>').join('');
   let tracks, phases, units, allEx, player, playerUI, serial = 0;
   const generated = new Map(), scoreDraws = new Set();
+  const fretView = {root:'E',scale:'aeolian',show:'name',frets:12};
   const progress = u => [u.exercises.filter(e => S.isDone(e.id)).length, u.exercises.length];
   function stop() {
     resetPreview(); AM.audio.silence(); player?.stop();
@@ -49,10 +50,29 @@
     });
     return html;
   }
-  function diagram(cfg,type) {
+  function diagram(cfg,type,expanded = false) {
     const id = 'diagram' + serial++;
-    setTimeout(() => { const el = document.getElementById(id); if (el) AM[type].render(el,{...cfg,flats:AM.music.usesFlats(cfg.root)}); });
+    setTimeout(() => {
+      const el = document.getElementById(id); if (!el) return;
+      AM[type].render(el,{...cfg,flats:AM.music.usesFlats(cfg.root)});
+      if (expanded && type === 'piano') {
+        const dots = [...el.querySelectorAll('.dot:not(.dim)')];
+        if (dots.length) {
+          const bounds = dots.map(dot => dot.getBoundingClientRect()), center = (Math.min(...bounds.map(b => b.left)) + Math.max(...bounds.map(b => b.right))) / 2;
+          el.scrollLeft = center - el.getBoundingClientRect().left - el.clientWidth / 2;
+        }
+      }
+    });
+    if (expanded) return `<section class="diagram illustration"><h3>${esc(cfg.title || t(type))}</h3><p class="map-hint small">${t('diagramScroll')}</p><div id="${id}" tabindex="0" role="region" aria-label="${esc(cfg.title || t(type))}"></div>${cfg.text ? md(cfg.text) : ''}</section>`;
     return `<details class="diagram"><summary>${t(type)}</summary><div id="${id}"></div></details>`;
+  }
+  function illustration(v) {
+    if (['fretboard','piano'].includes(v.type)) return diagram(v,v.type,true);
+    let content = '';
+    if (v.type === 'rhythm') content = `<div class="rhythm-grid">${v.rows.map(row => `<div class="rhythm-row"><b>${esc(row.label)}</b><div style="grid-template-columns:repeat(${row.cells.length},minmax(28px,1fr))">${row.cells.map(cell => `<span class="${cell ? 'hit' : ''}">${esc(cell || '·')}</span>`).join('')}</div></div>`).join('')}</div>`;
+    if (v.type === 'flow' || v.type === 'form') content = `<ol class="visual-flow">${v.steps.map(step => `<li>${esc(step)}</li>`).join('')}</ol>`;
+    if (v.type === 'envelope') content = `<svg viewBox="0 0 620 190" class="envelope" role="img" aria-label="${esc(v.title)}"><path d="M30 15 V150 H595" class="axis"/><path d="M40 150 L130 30 L235 80 H410 L565 150" class="curve"/><path d="M410 20 V150" class="release-line"/>${v.steps.map((label,i) => `<text x="${[85,180,320,490][i]}" y="178">${esc(label)}</text>`).join('')}<text x="410" y="14">${esc(v.releaseLabel)}</text></svg>`;
+    return `<section class="illustration"><h3>${esc(v.title)}</h3>${content}${v.text ? md(v.text) : ''}</section>`;
   }
   function scoreBlock(ex,instrument) {
     const id = 'sc' + ex.id, aids = ex.aids || [], shown = ex.show || [];
@@ -137,6 +157,16 @@
       return `<h1>${esc(b.title)}</h1><p class="lead">${esc(b.lead)}</p><div class="text">${md(b.intro || '')}</div>
         ${b.parts.map(part => `<section class="toc"><h2>${esc(part.title)}</h2><ol>${part.chapters.map(c => `<li><a href="#/chapter/${c.id}"><span class="num">${n.get(c.id)}</span> ${esc(c.title)}</a></li>`).join('')}</ol></section>`).join('')}`;
     },
+    fretboard() {
+      const options = (values,current) => values.map(([value,label]) => `<option value="${esc(value)}"${String(current) === String(value) ? ' selected' : ''}>${esc(label)}</option>`).join('');
+      setTimeout(() => {
+        const el = $('#fretboard-view'); if (!el) return;
+        const draw = () => AM.fretboard.render(el,{...fretView,flats:AM.music.usesFlats(fretView.root)});
+        $('#fretboard-controls').onchange = event => { const {name,value} = event.target; if (!Object.hasOwn(fretView,name)) return; fretView[name] = name === 'frets' ? Number(value) : value; draw(); };
+        draw();
+      });
+      return `<h1>${t('fretboard')}</h1><p class="lead">${t('fretboardLead')}</p><div class="row" id="fretboard-controls"><label>${t('rootNote')} <select name="root">${options(['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B'].map(n => [n,n]),fretView.root)}</select></label><label>${t('toneSet')} <select name="scale">${options(Object.keys(AM.music.SCALES).map(s => [s,t('scale_' + s)]),fretView.scale)}</select></label><label>${t('labels')} <select name="show">${options([['name',t('noteNames')],['degree',t('intervals')]],fretView.show)}</select></label><label>${t('frets')} <select name="frets">${options([[5,'0–5'],[12,'0–12'],[24,'0–24']],fretView.frets)}</select></label></div><div class="diagram"><div id="fretboard-view"></div></div><p class="small">${t('fretboardLegend')}</p>`;
+    },
     chapter(id) {
       const b = I.book(), n = chapterNumbers(b), all = b.parts.flatMap(p => p.chapters.map(c => ({...c,part:p}))), k = all.findIndex(c => c.id === id);
       if (k < 0) return views.theory();
@@ -145,14 +175,14 @@
       const blocks = c.text.trim().split(/\n\s*\n/).map(block => {
         const heading = /^(##+) (.*)$/.exec(block), place = /^\[\[(.+)\]\]$/.exec(block.trim());
         if (heading) return `<h${heading[1].length}>${inline(heading[2])}</h${heading[1].length}>`;
-        if (place) { const e = examples.get(place[1]); if (!e) return ''; count++; return `<figure class="figure" id="${e.id}"><figcaption>${t('example')} ${n.get(c.id)}.${count} · ${esc(e.title)}</figcaption>${scoreBlock(e,e.instrument || 'theory')}</figure>`; }
+        if (place) { const e = examples.get(place[1]); if (!e) return ''; count++; return `<figure class="figure" id="${e.id}"><figcaption>${t('example')} ${n.get(c.id)}.${count} · ${esc(e.title)}</figcaption>${(e.visuals || []).map(illustration).join('')}${scoreBlock(e,e.instrument || 'theory')}</figure>`; }
         return md(block);
       }).join('');
       return `<nav class="crumbs"><a href="#/theory">${esc(b.title)}</a> › ${esc(c.part.title)}</nav><h1><span class="chapter-number">${n.get(c.id)}</span> ${esc(c.title)}</h1><article class="chapter">${blocks}</article>
         <nav class="pn">${k > 0 ? `<a href="#/chapter/${all[k - 1].id}">‹ ${n.get(all[k - 1].id)} ${esc(all[k - 1].title)}</a>` : '<span></span>'}${k < all.length - 1 ? `<a href="#/chapter/${all[k + 1].id}">${n.get(all[k + 1].id)} ${esc(all[k + 1].title)} ›</a>` : ''}</nav>`;
     },
     midi:() => `<h1>MIDI</h1><p>${t('midiLead')}</p><div class="row"><button id="connect">${t('findOutputs')}</button><label>${t('output')} <select id="output"><option value="">${t('chooseDevice')}</option></select></label></div>
-      <p id="midi-status" role="status"></p><div class="text">${md(t('hardware'))}</div><p><a href="https://www.alesis.com/rscdn/919/documents/sr18_reference_manual_reve.pdf">SR-18 · System Setup</a> · <a href="https://mx.yamaha.com/files/download/other_assets/0/892960/mx49mx61mx88_en_rm_b0.pdf">MX49 · Reference Manual</a></p>
+      <p id="midi-status" role="status"></p><div class="text">${md(t('hardware'))}</div>
       ${playerControls({type:'drums',drums:'half',time:'4/4',bars:2},60)}<p>${t('midiTest')}</p>`,
     log() {
       return `<h1>${t('log')}</h1><p class="lead">${t('logLead')}</p><div class="row"><button id="exp">${t('export')}</button><label class="btn">${t('import')} <input type="file" id="imp" accept=".json" hidden></label></div>
@@ -196,7 +226,7 @@
   window.addEventListener('resize',() => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(() => scoreDraws.forEach(draw => draw())); });
   window.addEventListener('pagehide',stop); window.addEventListener('hashchange',route);
   S.subscribe(source => {
-    if (source !== 'remote') return;
+    if (source !== 'storage') return;
     document.querySelectorAll('[data-done]').forEach(e => { e.checked = S.isDone(e.dataset.done); e.closest('.ex').classList.toggle('done',e.checked); });
     const logs = S.get().log;
     document.querySelectorAll('form[data-log]').forEach(form => {
@@ -205,7 +235,7 @@
       details.querySelector('ul').innerHTML = entries.map(e => `<li><span class="date">${esc(e.date)}</span> ${esc(e.note)}</li>`).join('');
     });
     if (/^#\/(log|phase|track)(?:\/|$)/.test(location.hash)) route();
-    report(t('remoteUpdate'));
+    report(t('storageUpdate'));
   });
   I.set(I.language); index(); route();
 })();

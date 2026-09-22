@@ -9,6 +9,9 @@ AM.music = (() => {
     phrygian:      {name:'Phrygisch',               iv:[0,1,3,5,7,8,10]},
     harmonicMinor: {name:'Harmonisch Moll',         iv:[0,2,3,5,7,8,11]},
     dorian:        {name:'Dorisch',                 iv:[0,2,3,5,7,9,10]},
+    mixolydian:    {iv:[0,2,4,5,7,9,10]},
+    locrian:       {iv:[0,1,3,5,6,8,10]},
+    melodicMinor:  {iv:[0,2,3,5,7,9,11]},
     major:         {name:'Dur (Ionisch)',           iv:[0,2,4,5,7,9,11]},
     lydian:        {name:'Lydisch',                 iv:[0,2,4,6,7,9,11]},
     chromatic:     {name:'Chromatisch',             iv:[0,1,2,3,4,5,6,7,8,9,10,11]},
@@ -35,7 +38,18 @@ AM.music = (() => {
   const usesFlats = k => (KEYS[k] ?? 0) < 0 || /b/.test(k);
   const keyAcc = k => { const n = KEYS[k] ?? 0; return n > 0 ? [...'FCGDAEB'.slice(0, n)].map(l => [l, 1]) : [...'BEADGCF'.slice(0, -n)].map(l => [l, -1]); };
   const scalePcs = (root, scale) => SCALES[scale].iv.map(i => pc(rootPc(root) + i));
-  const degreeOf = (p, root) => DEG[pc(p - rootPc(root))];
+  const scaleName = (m, root, scale) => {
+    const iv = SCALES[scale]?.iv, i = iv?.indexOf(pc(m - rootPc(root)));
+    if (iv?.length !== 7 || i < 0) return name(m,usesFlats(root));
+    const letter = (LETTERS.indexOf(root[0]) + i) % 7, acc = ((pc(m) - LPC[letter] + 6) % 12 + 12) % 12 - 6;
+    return LETTERS[letter] + (acc < 0 ? 'b'.repeat(-acc) : '#'.repeat(acc)) + ((m - LPC[letter] - acc) / 12 - 1);
+  };
+  const degreeOf = (p, root, scale) => {
+    const interval = pc(p - rootPc(root)), iv = SCALES[scale]?.iv, i = iv?.indexOf(interval);
+    if (iv?.length !== 7 || i < 0) return DEG[interval];
+    const alteration = interval - SCALES.major.iv[i];
+    return (alteration < 0 ? 'b'.repeat(-alteration) : '#'.repeat(alteration)) + (i + 1);
+  };
   const fretMidi = (s, f) => midi(TUNING[s]) + f;
   function position(m, o = {}) {
     if (o.s != null) return {s:o.s, f:m - midi(TUNING[o.s])};
@@ -59,5 +73,5 @@ AM.music = (() => {
     if (!groups.every(g => Number.isInteger(g) && g > 0) || groups.reduce((a,b) => a + b,0) !== n) throw Error('Invalid grouping');
     return {n,d,groups,compound,q:compound ? 1.5 : 4 / d,len:n * 4 / d,symbol:compound ? '♩.' : d === 8 ? '♪' : '♩'};
   }
-  return {LETTERS, TUNING, SCALES, DEG, KEYS, parse, midi, pc, pcName, name, rootPc, usesFlats, keyAcc, scalePcs, degreeOf, fretMidi, position, chord, romanIndex, meter};
+  return {LETTERS, TUNING, SCALES, DEG, KEYS, parse, midi, pc, pcName, name, rootPc, usesFlats, keyAcc, scalePcs, scaleName, degreeOf, fretMidi, position, chord, romanIndex, meter};
 })();

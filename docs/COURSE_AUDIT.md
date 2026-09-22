@@ -40,7 +40,7 @@ Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beis
 ## Eigenständiges Zielprofil
 
 - Gitarre: E2 A2 D3 G3 C4 F4; Noten mit Lageangabe, keine Tabs. Offene Pedaltöne, unabhängige Melodie, danach Arpeggien und Akkorde mit Melodiestimme.
-- Keyboard: eigenständige Bass-/Melodieführung und lesbare Voicings, auf MX49, Nord Lead A1, Blofeld und Klavier anwendbar. Ein Klang genügt zunächst.
+- Keyboard: eigenständige Bass-/Melodieführung und lesbare Voicings, auf einem Synthesizer mit 49 Tasten und klavierartigen Klängen anwendbar. Ein Klang genügt zunächst.
 - Klangreferenzen: *Turn Loose the Swans*, *October Rust*, *Eternity*, *Le quattro stagioni*, *Harmonia artificioso-ariosa*. Keine Gleichsetzung dieser Musik mit einer einzelnen Skala. Hörziele: Phrasierung, Wiederholung, Register, Dichte, Reibung und Auflösung.
 - Solospiel zuerst; Drums oder externer Bass können unterstützen. Die Abschlussminiaturen von Phase 1 werden auch ohne Begleitung geprüft.
 - Notenlesen, Gehör und eigene Notation laufen durch alle Phasen. Akkordsymbole ergänzen später ausgeschriebene Stimmen; sie ersetzen das Lesen nicht.
@@ -61,12 +61,10 @@ Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beis
 - Alle Drum-Muster enthalten hörbar gewichtete geschlossene Hi-Hat; die Auswahl heißt ausschließlich Klick/Drums.
 - Half-time hat tatsächlich Snare auf 3; gerade Achtelbegleitung Snare auf 2 und 4. Keine zufälligen Fills in Lernaufgaben.
 - MIDI-Stopp leert die Warteschlange und beendet Kanal-10-Noten. Verbindungsabbruch oder inaktiver Tab stoppt die Begleitung; kein heimlicher interner Schlagzeugersatz.
-- Import validiert vor Zustandsänderung und vereinigt Journalereignisse. UI maskiert importierte Texte. Fortschritts-IDs sind sprachunabhängig.
+- Import validiert vor Zustandsänderung und ersetzt den lokalen Fortschritt. Alte Speicherformate werden eingelesen. UI maskiert importierte Texte. Fortschritts-IDs sind sprachunabhängig.
 
 ## Quellen für technische und notatorische Korrekturen
 
-- [Alesis SR-18 Reference Manual](https://www.alesis.com/rscdn/919/documents/sr18_reference_manual_reve.pdf), System Setup: MIDI-Kanal, DRUM IN, NOTE, NOTE MAP. SR-18-Zuordnung ist konfigurierbar; pauschale GM-Kompatibilität reicht nicht als Einrichtung.
-- [Yamaha MX49/MX61/MX88 Reference Manual](https://mx.yamaha.com/files/download/other_assets/0/892960/mx49mx61mx88_en_rm_b0.pdf): Parts und MIDI-Kanäle, Drum-Part 10.
 - [musictheory.net: Staff, Clefs and Ledger Lines](https://www.musictheory.net/lessons/10), [Dots and Ties](https://www.musictheory.net/lessons/14).
 
 ## Quellen der Musiklehre (2026-09-12)
@@ -83,4 +81,42 @@ Belegte Fakten über die Referenzen (Kapitel 27):
 
 Notenglyphen: [Bravura](https://github.com/steinbergmedia/bravura) 1.482 (Steinberg, SIL Open Font License 1.1), Umrisse extrahiert bei 1 em = 40 px; Lizenz unter `assets/glyphs/OFL.txt`. Schlüsselplatzierung (G-Schlüssel auf der zweiten, F-Schlüssel auf der vierten Linie), Vorzeichen, Pausen, Fähnchen, Triolenklammern, Akzente und Wiederholungszeichen sind mit Playwright-Screenshots und geometrischen Überlappungsprüfungen kontrolliert.
 
-Hardwareklang und tatsächliches Timing an SR-18/MX49 sind im Entwicklungscontainer nicht überprüfbar. Browser- und MIDI-Mocktests ersetzen diesen Hörtest nicht.
+Hardwareklang und tatsächliches Timing am angeschlossenen MIDI-Klangerzeuger sind im Entwicklungscontainer nicht überprüfbar. Browser- und MIDI-Mocktests ersetzen diesen Hörtest nicht.
+
+
+## Überarbeitung · 2026-09-22
+
+### Musikalische Form
+
+86 Kurs-Partituren sind neu oder überarbeitet; bestehende Aufgaben-IDs bleiben erhalten. Von 130 Aufgaben mit Noten verwenden 58 die Form A–B–A–C, darunter vier Lesegeneratoren. Alle notierten Kursaufgaben umfassen mindestens vier Takte. Lange Sequenzen, Kadenzen, Wiederholungen und Sprungformen bleiben eigenständige Formen. Offene Studien erhalten ausnotierte Schlüsse; Umkehrungen tragen korrekte Bassbezeichnungen. Der gemeinsame obere Ton in D7–G ist als eigenständige gebundene Stimme notiert.
+
+### Fachliche Korrekturen
+
+- P4-Geometrie: eine Saite plus sieben Bünde = 5 + 7 = 12 Halbtöne; vier Bünde auf sechs Saiten ergeben 24 Orte über 28 Halbtöne. F4 + 19 Bünde = C6, Bund 20 = C#6.
+- 49 Tasten: 4 × 12 + 1 = 49, hier C2–C6. C2 liegt vier Halbtöne unter E2. Handzuordnung und klingender Bereich sind keine unveränderlichen Geräteeigenschaften.
+- E2–A4 ist zwei Oktaven plus Quarte; das notierte Pentatonikmuster enthält auf einer Saite drei Töne. P4 bedeutet nicht automatisch drei Töne je Saite.
+- Modalität entsteht im Zusammenhang; Bass oder Leitton allein sind kein verlässliches Klassifikationskriterium. Pentatonik ohne Halbtonschritte ist nicht automatisch konsonant.
+- Hemiole: Verhältnis 3:2; 3+3+2 ist eine andere Akzentgruppierung. Zwei punktierte Halbe in 12/8 tragen zusammen vier große Pulse. Siehe [Open Music Theory: Metrical Dissonance](https://viva.pressbooks.pub/openmusictheory/chapter/metrical-dissonance/).
+- Akkordbeispiele: fehlende Septimen beziehungsweise Leittöne ergänzt, verminderte Septakkorde vollständig und passend zur Auflösung geschrieben.
+- Unbegründete Universalregeln zu Fingersätzen, Gain, Sustain, Registern, Form und Synthese durch konkrete Modelle und ihre Grenzen ersetzt. Eine Staccato-Note bezeichnet keinen bloßen Hallausklang.
+
+### Darstellung und Technik
+
+47 zusätzliche Theorieabbildungen zeigen Grifforte, Tasten, Rhythmus, Form und Synthese. Das eigenständige P4-Griffbrett ist wieder im Hauptmenü erreichbar. Modellbezogene Geräteanleitungen und Links wurden aus Kurs, Oberfläche und Dokumentation entfernt.
+
+Balken folgen den angegebenen Taktgruppen und überschreiten keine Taktgrenze. Vorzeichen gelten stimmenübergreifend innerhalb desselben Systems; gebundene Fortsetzungen erzeugen keinen neuen Anschlag. Die Trennung von Stimm- und Systemgeltung lässt sich auch in [LilyPond: Automatic accidentals](https://lilypond.org/doc/v2.26/Documentation/notation/displaying-pitches#automatic-accidentals) nachvollziehen.
+
+Der Generator berechnet auffüllbare Restdauern vor der Auswahl. Dadurch vermeidet er rhythmische Sackgassen; ungültige Längen und Tonbereiche werden abgewiesen. A–B–A–C und Grundtonschluss sind automatisiert überprüft.
+
+### Prüfung und Grenze
+
+Node-Tests prüfen musikalische Form, Taktlängen, Saitenbelegung, Griffweiten, Handspannweiten, Haltebögen, Vorzeichen, Balken, Generator, Karten und Gerätefreiheit der Sprachdaten. Browsertests prüfen beide Sprachen, alle Einheiten, neue Theorieabbildungen, das Griffbrett auf kleinen Bildschirmen, Wiedergabe und MIDI-Mocks. Die geänderte Erwartung für die Harmoniereferenzen folgt der ausdrücklich von vier auf acht Takte erweiterten Studie.
+
+Musikalische Qualität ist nicht aus Formbuchstaben beweisbar. Die Tests belegen Struktur und technische Konsistenz; Instrumentklang, konkrete Greifbewegungen und gestalterische Wirkung benötigen das Spiel am Instrument.
+
+## Lokaler Fortschritt
+
+- Fortschritt und Notizen werden ausschließlich im Browser gespeichert (`localStorage`, Format 3).
+- Die Merge-Schnittstelle und das aktive Ereignisjournal wurden entfernt. Das alte Journal wird nur zur Migration gelesen.
+- Manuelles Backup/Restore sichert und ersetzt den lokalen Stand. Bestehende Markierungen, Notizen und Löschungen bleiben bei der Migration erhalten.
+- Der bisherige Merge-Test wurde wegen der geänderten Anforderung durch Migrationstests ersetzt. Zusätzliche Tests prüfen Ersetzen beim Restore, Speicherfehler und Änderungen aus anderen lokalen Tabs.

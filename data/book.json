@@ -1029,7 +1029,43 @@
                   }
                 ],
                 "textId": "c02b-strings-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-strings-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 5,
+                      "f": 0
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c02b-c4",
@@ -1080,7 +1116,48 @@
                   }
                 ],
                 "textId": "c02b-c4-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-c4-visual-1",
+                  "positions": [
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 5
+                    },
+                    {
+                      "s": 2,
+                      "f": 10
+                    },
+                    {
+                      "s": 1,
+                      "f": 15
+                    },
+                    {
+                      "s": 0,
+                      "f": 20
+                    }
+                  ],
+                  "root": "C",
+                  "show": "name",
+                  "frets": 20,
+                  "firstFret": 0
+                },
+                {
+                  "type": "piano",
+                  "textId": "c02b-c4-visual-2",
+                  "notes": [
+                    "C4"
+                  ],
+                  "root": "C",
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c02b-unison",
@@ -1135,7 +1212,53 @@
                   }
                 ],
                 "textId": "c02b-unison-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-unison-visual-1",
+                  "positions": [
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 1,
+                      "f": 7
+                    },
+                    {
+                      "s": 0,
+                      "f": 12
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 12,
+                  "firstFret": 0
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-unison-visual-2",
+                  "positions": [
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 7
+                    },
+                    {
+                      "s": 1,
+                      "f": 12
+                    }
+                  ],
+                  "root": "A",
+                  "show": "name",
+                  "frets": 12,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c02b-octaves",
@@ -1179,7 +1302,35 @@
                     "s": 5
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-octaves-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 11
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 11,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c02b-positions",
@@ -1283,7 +1434,93 @@
                   }
                 ],
                 "textId": "c02b-positions-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-positions-visual-1",
+                  "positions": [
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 4
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-positions-visual-2",
+                  "positions": [
+                    {
+                      "s": 1,
+                      "f": 7
+                    },
+                    {
+                      "s": 1,
+                      "f": 9
+                    },
+                    {
+                      "s": 1,
+                      "f": 10
+                    },
+                    {
+                      "s": 2,
+                      "f": 7
+                    },
+                    {
+                      "s": 2,
+                      "f": 9
+                    },
+                    {
+                      "s": 2,
+                      "f": 10
+                    },
+                    {
+                      "s": 3,
+                      "f": 7
+                    },
+                    {
+                      "s": 3,
+                      "f": 9
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 10,
+                  "firstFret": 7
+                }
+              ]
             },
             {
               "id": "c02b-reading",
@@ -1363,7 +1600,51 @@
                     "s": 0
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c02b-reading-visual-1",
+                  "positions": [
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 3
+                    },
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 3
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c02b-keys49",
@@ -1424,7 +1705,22 @@
                   }
                 ],
                 "textId": "c02b-keys49-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c02b-keys49-visual-1",
+                  "notes": [
+                    "C2",
+                    "C3",
+                    "C4",
+                    "C5",
+                    "C6"
+                  ],
+                  "root": "C",
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c02b-chromatic",
@@ -1495,7 +1791,29 @@
                   }
                 ],
                 "textId": "c02b-chromatic-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c02b-chromatic-visual-1",
+                  "notes": [
+                    "C4",
+                    "C#4",
+                    "D4",
+                    "D#4",
+                    "E4",
+                    "F4",
+                    "F#4",
+                    "G4",
+                    "G#4",
+                    "A4",
+                    "A#4",
+                    "B4"
+                  ],
+                  "root": "C",
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c02b-hands",
@@ -3493,7 +3811,57 @@
                   }
                 ],
                 "textId": "c04-shapes-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c04-shapes-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    }
+                  ],
+                  "frets": 4,
+                  "show": "name"
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c04-shapes-visual-2",
+                  "positions": [
+                    {
+                      "s": 2,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    }
+                  ],
+                  "frets": 4,
+                  "show": "name"
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c04-shapes-visual-3",
+                  "positions": [
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 5,
+                      "f": 2
+                    }
+                  ],
+                  "frets": 4,
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c04-anchors",
@@ -3673,7 +4041,20 @@
                   }
                 ],
                 "textId": "c05-major-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c05-major-visual-1",
+                  "root": "E",
+                  "scale": "major",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                }
+              ]
             },
             {
               "id": "c05-degrees",
@@ -4232,7 +4613,20 @@
                   }
                 ],
                 "textId": "c05-relative-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c05-relative-visual-1",
+                  "root": "E",
+                  "scale": "aeolian",
+                  "show": "degree",
+                  "window": [
+                    "E4",
+                    "E5"
+                  ]
+                }
+              ]
             },
             {
               "id": "c05-parallel",
@@ -4759,7 +5153,33 @@
                     "d": "w"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c06-colours-visual-1",
+                  "root": "E",
+                  "scale": "aeolian",
+                  "frets": 5,
+                  "show": "degree"
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c06-colours-visual-2",
+                  "root": "E",
+                  "scale": "phrygian",
+                  "frets": 5,
+                  "show": "degree"
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c06-colours-visual-3",
+                  "root": "E",
+                  "scale": "dorian",
+                  "frets": 5,
+                  "show": "degree"
+                }
+              ]
             },
             {
               "id": "c06-bass",
@@ -5139,7 +5559,17 @@
                   }
                 ],
                 "textId": "c06-pentatonic-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c06-pentatonic-visual-1",
+                  "root": "E",
+                  "scale": "minorPentatonic",
+                  "frets": 5,
+                  "show": "degree"
+                }
+              ]
             },
             {
               "id": "c06-melody",
@@ -6097,7 +6527,33 @@
                   }
                 ],
                 "textId": "c07b-centres-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-centres-visual-1",
+                  "root": "E",
+                  "scale": "aeolian",
+                  "frets": 5,
+                  "show": "degree"
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-centres-visual-2",
+                  "root": "A",
+                  "scale": "aeolian",
+                  "frets": 5,
+                  "show": "degree"
+                },
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-centres-visual-3",
+                  "root": "D",
+                  "scale": "aeolian",
+                  "frets": 5,
+                  "show": "degree"
+                }
+              ]
             },
             {
               "id": "c07b-aeolian6",
@@ -6210,7 +6666,91 @@
                   }
                 ],
                 "textId": "c07b-aeolian6-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-aeolian6-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 0,
+                      "f": 2
+                    },
+                    {
+                      "s": 0,
+                      "f": 3
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    },
+                    {
+                      "s": 1,
+                      "f": 3
+                    },
+                    {
+                      "s": 2,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 4
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 1
+                    },
+                    {
+                      "s": 5,
+                      "f": 2
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c07b-aeolian5",
@@ -6311,7 +6851,79 @@
                   }
                 ],
                 "textId": "c07b-aeolian5-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-aeolian5-visual-1",
+                  "positions": [
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    },
+                    {
+                      "s": 1,
+                      "f": 3
+                    },
+                    {
+                      "s": 2,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 3
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 0
+                    },
+                    {
+                      "s": 5,
+                      "f": 2
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    }
+                  ],
+                  "root": "A",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c07b-aeolian4",
@@ -6397,7 +7009,67 @@
                   }
                 ],
                 "textId": "c07b-aeolian4-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-aeolian4-visual-1",
+                  "positions": [
+                    {
+                      "s": 2,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 3
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 3
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 0
+                    },
+                    {
+                      "s": 5,
+                      "f": 2
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    }
+                  ],
+                  "root": "D",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c07b-shift",
@@ -6489,7 +7161,51 @@
                   }
                 ],
                 "textId": "c07b-shift-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-shift-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 7
+                    },
+                    {
+                      "s": 0,
+                      "f": 9
+                    },
+                    {
+                      "s": 0,
+                      "f": 10
+                    },
+                    {
+                      "s": 1,
+                      "f": 7
+                    },
+                    {
+                      "s": 1,
+                      "f": 9
+                    },
+                    {
+                      "s": 1,
+                      "f": 10
+                    },
+                    {
+                      "s": 2,
+                      "f": 7
+                    },
+                    {
+                      "s": 2,
+                      "f": 9
+                    }
+                  ],
+                  "root": "B",
+                  "show": "name",
+                  "frets": 10,
+                  "firstFret": 7
+                }
+              ]
             },
             {
               "id": "c07b-pentatonic",
@@ -6581,7 +7297,71 @@
                   }
                 ],
                 "textId": "c07b-pentatonic-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-pentatonic-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 0,
+                      "f": 3
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 2
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c07b-harmonic",
@@ -6694,7 +7474,91 @@
                   }
                 ],
                 "textId": "c07b-harmonic-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-harmonic-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 0,
+                      "f": 2
+                    },
+                    {
+                      "s": 0,
+                      "f": 3
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    },
+                    {
+                      "s": 1,
+                      "f": 3
+                    },
+                    {
+                      "s": 2,
+                      "f": 1
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 4
+                    },
+                    {
+                      "s": 3,
+                      "f": 0
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 0
+                    },
+                    {
+                      "s": 4,
+                      "f": 3
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 1
+                    },
+                    {
+                      "s": 5,
+                      "f": 2
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c07b-major",
@@ -6807,7 +7671,91 @@
                   }
                 ],
                 "textId": "c07b-major-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c07b-major-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 0,
+                      "f": 2
+                    },
+                    {
+                      "s": 0,
+                      "f": 4
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    },
+                    {
+                      "s": 1,
+                      "f": 4
+                    },
+                    {
+                      "s": 2,
+                      "f": 1
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 4
+                    },
+                    {
+                      "s": 3,
+                      "f": 1
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 1
+                    },
+                    {
+                      "s": 4,
+                      "f": 3
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    },
+                    {
+                      "s": 5,
+                      "f": 1
+                    },
+                    {
+                      "s": 5,
+                      "f": 3
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c07b-fingering",
@@ -6916,7 +7864,25 @@
                   }
                 ],
                 "textId": "c07b-fingering-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c07b-fingering-visual-1",
+                  "notes": [
+                    "E4",
+                    "F#4",
+                    "G4",
+                    "A4",
+                    "B4",
+                    "C5",
+                    "D5",
+                    "E5"
+                  ],
+                  "root": "E",
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c07b-blackkeys",
@@ -7159,7 +8125,31 @@
                     "d": "w"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c08-third-visual-1",
+                  "notes": [
+                    "E4",
+                    "G4",
+                    "B4"
+                  ],
+                  "root": "E",
+                  "show": "name"
+                },
+                {
+                  "type": "piano",
+                  "textId": "c08-third-visual-2",
+                  "notes": [
+                    "E4",
+                    "G#4",
+                    "B4"
+                  ],
+                  "root": "E",
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c08-inversions",
@@ -8068,7 +9058,39 @@
                   "E5"
                 ],
                 "maxFret": 12
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c09-riff-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 2
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 4,
+                  "firstFret": 0
+                }
+              ]
             },
             {
               "id": "c09-sus",
@@ -8238,7 +9260,30 @@
                   }
                 ],
                 "textId": "c09-stacks-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c09-stacks-visual-1",
+                  "positions": [
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    },
+                    {
+                      "s": 2,
+                      "f": 0
+                    }
+                  ],
+                  "frets": 4,
+                  "show": "name",
+                  "root": "E"
+                }
+              ]
             },
             {
               "id": "c09-quartal",
@@ -8331,7 +9376,51 @@
                   }
                 ],
                 "maxFret": 12
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c09-quartal-visual-1",
+                  "positions": [
+                    {
+                      "s": 2,
+                      "f": 2
+                    },
+                    {
+                      "s": 3,
+                      "f": 2
+                    },
+                    {
+                      "s": 4,
+                      "f": 2
+                    },
+                    {
+                      "s": 2,
+                      "f": 5
+                    },
+                    {
+                      "s": 3,
+                      "f": 5
+                    },
+                    {
+                      "s": 4,
+                      "f": 5
+                    },
+                    {
+                      "s": 0,
+                      "f": 0
+                    },
+                    {
+                      "s": 1,
+                      "f": 0
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 5,
+                  "firstFret": 0
+                }
+              ]
             }
           ]
         },
@@ -8687,7 +9776,21 @@
                     "d": "w"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "piano",
+                  "textId": "c10-added-visual-1",
+                  "notes": [
+                    "E4",
+                    "G4",
+                    "B4",
+                    "C#5"
+                  ],
+                  "root": "E",
+                  "show": "name"
+                }
+              ]
             },
             {
               "id": "c10-symbols",
@@ -10178,56 +11281,27 @@
                 "time": "4/4",
                 "notes": [
                   {
-                    "p": [
-                      "F#4",
-                      "C5",
-                      "D5"
-                    ],
+                    "p": "D5",
                     "d": "w",
-                    "fi": [
-                      1,
-                      3,
-                      5
-                    ]
+                    "fi": 5,
+                    "tie": 1
                   },
                   {
-                    "p": [
-                      "G4",
-                      "B4",
-                      "D5"
-                    ],
+                    "p": "D5",
                     "d": "w",
-                    "fi": [
-                      1,
-                      3,
-                      5
-                    ]
+                    "fi": 5,
+                    "tie": 1
                   },
                   {
-                    "p": [
-                      "F#4",
-                      "C5",
-                      "D5"
-                    ],
+                    "p": "D5",
                     "d": "w",
-                    "fi": [
-                      1,
-                      3,
-                      5
-                    ]
+                    "fi": 5,
+                    "tie": 1
                   },
                   {
-                    "p": [
-                      "G4",
-                      "B4",
-                      "D5"
-                    ],
+                    "p": "D5",
                     "d": "w",
-                    "fi": [
-                      1,
-                      3,
-                      5
-                    ]
+                    "fi": 5
                   }
                 ],
                 "chords": [
@@ -10252,6 +11326,52 @@
                   {
                     "p": "G3",
                     "d": "w"
+                  }
+                ],
+                "inner": [
+                  {
+                    "p": [
+                      "F#4",
+                      "C5"
+                    ],
+                    "d": "w",
+                    "fi": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "p": [
+                      "G4",
+                      "B4"
+                    ],
+                    "d": "w",
+                    "fi": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "p": [
+                      "F#4",
+                      "C5"
+                    ],
+                    "d": "w",
+                    "fi": [
+                      1,
+                      3
+                    ]
+                  },
+                  {
+                    "p": [
+                      "G4",
+                      "B4"
+                    ],
+                    "d": "w",
+                    "fi": [
+                      1,
+                      3
+                    ]
                   }
                 ]
               }
@@ -10392,7 +11512,7 @@
                   "Em",
                   "Am",
                   "Em",
-                  "B7"
+                  "B"
                 ],
                 "notes": [
                   {
@@ -10957,11 +12077,11 @@
                 "chords": [
                   "D#dim7",
                   "Em",
-                  "D#dim7",
+                  "F#dim7",
                   "Gm",
-                  "D#dim7",
+                  "Adim7",
                   "Bbm",
-                  "D#dim7",
+                  "Cdim7",
                   "Dbm"
                 ],
                 "notes": [
@@ -10983,7 +12103,7 @@
                   },
                   {
                     "p": [
-                      "F#4",
+                      "Eb4",
                       "A4",
                       "C5"
                     ],
@@ -10999,9 +12119,9 @@
                   },
                   {
                     "p": [
-                      "F#4",
-                      "A4",
-                      "C5"
+                      "C4",
+                      "Eb4",
+                      "Gb4"
                     ],
                     "d": "w"
                   },
@@ -11015,15 +12135,15 @@
                   },
                   {
                     "p": [
-                      "F#4",
-                      "A4",
-                      "C5"
+                      "Eb4",
+                      "Gb4",
+                      "Bbb4"
                     ],
                     "d": "w"
                   },
                   {
                     "p": [
-                      "E4",
+                      "Fb4",
                       "Ab4",
                       "Db5"
                     ],
@@ -13053,7 +14173,13 @@
                     "d": "h"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "rhythm",
+                  "textId": "c15-compound-visual-1"
+                }
+              ]
             },
             {
               "id": "c15-sync",
@@ -13244,7 +14370,13 @@
                     "d": "q"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "rhythm",
+                  "textId": "c15-poly-visual-1"
+                }
+              ]
             },
             {
               "id": "c15-hemiola",
@@ -13560,7 +14692,13 @@
                   }
                 ],
                 "textId": "c15-332-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "rhythm",
+                  "textId": "c15-332-visual-1"
+                }
+              ]
             },
             {
               "id": "c15-odd",
@@ -13733,7 +14871,13 @@
                     "d": "q."
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "rhythm",
+                  "textId": "c15-odd-visual-1"
+                }
+              ]
             },
             {
               "id": "c15-five",
@@ -17995,7 +19139,7 @@
                     "d": "e"
                   },
                   {
-                    "p": "F#4",
+                    "p": "A4",
                     "d": "e"
                   },
                   {
@@ -18011,7 +19155,7 @@
                     "d": "e"
                   },
                   {
-                    "p": "F#4",
+                    "p": "A4",
                     "d": "e"
                   }
                 ],
@@ -19330,7 +20474,31 @@
                   }
                 ],
                 "maxFret": 12
-              }
+              },
+              "visuals": [
+                {
+                  "type": "fretboard",
+                  "textId": "c21-bending-visual-1",
+                  "positions": [
+                    {
+                      "s": 5,
+                      "f": 6
+                    },
+                    {
+                      "s": 5,
+                      "f": 4
+                    },
+                    {
+                      "s": 4,
+                      "f": 4
+                    }
+                  ],
+                  "root": "E",
+                  "show": "name",
+                  "frets": 6,
+                  "firstFret": 0
+                }
+              ]
             }
           ]
         },
@@ -19403,7 +20571,13 @@
                     "d": "w"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "flow",
+                  "textId": "c22-waveforms-visual-1"
+                }
+              ]
             },
             {
               "id": "c22-organ",
@@ -19850,7 +21024,13 @@
                   }
                 ],
                 "textId": "c22-hold-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "envelope",
+                  "textId": "c22-hold-visual-1"
+                }
+              ]
             }
           ]
         },
@@ -20002,7 +21182,13 @@
                     "d": "w"
                   }
                 ]
-              }
+              },
+              "visuals": [
+                {
+                  "type": "flow",
+                  "textId": "c23-time-visual-1"
+                }
+              ]
             },
             {
               "id": "c23-fill",
@@ -20518,7 +21704,13 @@
                   }
                 ],
                 "textId": "c24-motif-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "form",
+                  "textId": "c24-motif-visual-1"
+                }
+              ]
             },
             {
               "id": "c24-treatments",
@@ -20822,7 +22014,7 @@
                     "d": "q"
                   },
                   {
-                    "p": "F#4",
+                    "p": "D#4",
                     "d": "q"
                   },
                   {
@@ -20844,7 +22036,11 @@
                     "d": "w"
                   },
                   {
-                    "p": "B2",
+                    "p": [
+                      "B2",
+                      "D#3",
+                      "F#3"
+                    ],
                     "d": "w"
                   },
                   {
@@ -20865,7 +22061,13 @@
                   }
                 ],
                 "textId": "c24-period-score"
-              }
+              },
+              "visuals": [
+                {
+                  "type": "form",
+                  "textId": "c24-period-visual-1"
+                }
+              ]
             },
             {
               "id": "c24-sentence",
@@ -21010,7 +22212,11 @@
                     "d": "w"
                   },
                   {
-                    "p": "B2",
+                    "p": [
+                      "B2",
+                      "F#3",
+                      "A3"
+                    ],
                     "d": "w"
                   },
                   {
@@ -24819,7 +26025,8 @@
                   {
                     "p": [
                       "B2",
-                      "F#3"
+                      "F#3",
+                      "A3"
                     ],
                     "d": "w"
                   },

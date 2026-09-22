@@ -5,7 +5,7 @@ const vm = require('node:vm');
 const memory = new Map();
 const context = vm.createContext({console, structuredClone, crypto:require('node:crypto').webcrypto, Date, Math, performance, setTimeout, clearTimeout, navigator:{}, localStorage:{getItem:k => memory.get(k), setItem:(k,v) => memory.set(k,v)}});
 context.window = context;
-for (const f of ['js/music.js','js/glyphs.js','js/notation.js','js/audio.js','js/store.js']) vm.runInContext(fs.readFileSync(f,'utf8'), context);
+for (const f of ['js/music.js','js/glyphs.js','js/notation.js','js/fretboard.js','js/piano.js','js/audio.js','js/store.js']) vm.runInContext(fs.readFileSync(f,'utf8'), context);
 const {music:M, notation:N, backing:B, audio:A, store:S} = context.AM;
 const de = JSON.parse(fs.readFileSync('locales/de.json','utf8')), en = JSON.parse(fs.readFileSync('locales/en.json','utf8'));
 const raw = JSON.parse(fs.readFileSync('data/course.json','utf8')), rawBook = JSON.parse(fs.readFileSync('data/book.json','utf8'));
@@ -120,21 +120,58 @@ test('guitar polyphony shares one staff, preserves independent durations and use
   assert.deepEqual(plain(events.filter(e => e.voice === 1).map(e => e.t)),[0,4,8,12]);
 });
 
-test('shared journal merges independent devices, resolves repeated delivery and preserves deletion', () => {
-  const entries=[
-    {id:'device-a-note',clock:10,type:'note',ex:'e0-1-1',note:'A',date:'2026-09-11'},
-    {id:'device-b-note',clock:10,type:'note',ex:'ke0-1-1',note:'B',date:'2026-09-11'},
-    {id:'device-a-mark',clock:11,type:'mark',ex:'e0-2-1',done:true},
-    {id:'device-b-mark',clock:11,type:'mark',ex:'ke0-2-1',done:true},
-    {id:'device-b-remove',clock:12,type:'remove',target:'device-a-note'}
+const localStore = (disk = new Map()) => {
+  const handlers = {}, storage = {getItem:k => disk.get(k),setItem:(k,v) => disk.set(k,v)};
+  const ctx = vm.createContext({AM:{},structuredClone,crypto:require('node:crypto').webcrypto,Date,localStorage:storage,window:{addEventListener:(type,fn) => handlers[type] = fn}});
+  vm.runInContext(fs.readFileSync('js/store.js','utf8'),ctx);
+  return {store:ctx.AM.store,storage,event:handlers.storage,disk};
+};
+
+test('old journals migrate locally, preserve marks and deletions, and expose no merge API', () => {
+  const journal = [
+    {id:'old-note-a',clock:10,type:'note',ex:'e0-1-1',note:'A',date:'2026-09-11'},
+    {id:'old-note-b',clock:10,type:'note',ex:'ke0-1-1',note:'B',date:'2026-09-11'},
+    {id:'old-mark-a',clock:11,type:'mark',ex:'e0-2-1',done:true},
+    {id:'old-mark-b',clock:11,type:'mark',ex:'ke0-2-1',done:true},
+    {id:'old-remove',clock:12,type:'remove',target:'old-note-a'},
+    {id:'old-unmark',clock:13,type:'mark',ex:'e0-2-1',done:false}
   ];
-  S.merge(entries.slice().reverse());const before=S.export();S.merge(entries);assert.equal(S.export(),before);
-  assert(S.isDone('e0-2-1'));assert(S.isDone('ke0-2-1'));
-  assert(!S.get().log.some(e=>e.id==='device-a-note'));assert(S.get().log.some(e=>e.id==='device-b-note'));
-  S.merge([entries[0]]);assert(!S.get().log.some(e=>e.id==='device-a-note'));
-  assert.throws(()=>S.merge([{...entries[0],note:'forged duplicate ID'}]));assert.equal(S.export(),before);
-  S.merge([{id:'conflict-a',clock:13,type:'mark',ex:'e0-2-1',done:false},{id:'conflict-b',clock:13,type:'mark',ex:'e0-2-1',done:true}]);
-  assert(S.isDone('e0-2-1'));
+  const backup = JSON.stringify({version:2,journal:[...journal].reverse().concat(journal[0])});
+  const {store,disk} = localStore(new Map([['a-minor',backup]]));
+  assert.equal(store.merge,undefined);assert.equal(store.entries,undefined);
+  assert(!store.isDone('e0-2-1'));assert(store.isDone('ke0-2-1'));
+  assert.deepEqual(plain(store.get().log),[{id:'old-note-b',ex:'ke0-1-1',note:'B',date:'2026-09-11'}]);
+  store.toggleDone('e0-3-1');
+  const persisted = JSON.parse(disk.get('a-minor'));
+  assert.equal(persisted.version,3);assert.equal(persisted.journal,undefined);
+  assert.equal(persisted.log.length,1);assert(persisted.done['e0-3-1']);
+  store.import(backup);assert(!store.isDone('e0-3-1'));
+  const before = store.export(), saved = disk.get('a-minor');
+  assert.throws(() => store.import(JSON.stringify({version:2,journal:[...journal,{...journal[0],note:'conflicting ID'}]})));
+  assert.equal(store.export(),before);assert.equal(disk.get('a-minor'),saved);
+});
+
+test('restore replaces browser progress and storage failures preserve the previous state', () => {
+  const {store,storage,disk} = localStore();
+  store.toggleDone('old');store.addLog({ex:'old',note:'local note'});
+  store.import(JSON.stringify({version:3,done:{new:true},log:[]}));
+  assert(!store.isDone('old'));assert(store.isDone('new'));assert.equal(store.get().log.length,0);
+  const before = store.export(), saved = disk.get('a-minor');
+  storage.setItem = () => { throw Error('Quota exceeded'); };
+  for (const change of [() => store.toggleDone('new'),() => store.addLog({ex:'new',note:'unsaved'}),() => store.import('{"done":{},"log":[]}')]) {
+    assert.throws(change);assert.equal(store.export(),before);assert.equal(disk.get('a-minor'),saved);
+  }
+});
+
+test('local tabs read the latest browser state and react to storage changes and clearing', () => {
+  const disk = new Map(), a = localStore(disk), b = localStore(disk), notices = [];
+  b.store.subscribe(source => notices.push(source));
+  a.store.toggleDone('first');b.store.toggleDone('second');
+  assert(b.store.isDone('first'));assert(b.store.isDone('second'));
+  a.event({key:'a-minor'});assert(a.store.isDone('second'));
+  a.store.addLog({ex:'first',note:'saved'});b.event({key:'unrelated'});assert.equal(b.store.get().log.length,0);
+  b.event({key:'a-minor'});assert.equal(b.store.get().log.length,1);assert.deepEqual(notices,['storage']);
+  disk.clear();b.event({key:null});assert(!b.store.isDone('first'));assert.equal(b.store.get().log.length,0);
 });
 
 test('all written combinations fit separate guitar strings and reachable keyboard hands', () => {
@@ -279,8 +316,8 @@ test('harmonic references preserve authored chords and name actual bass motion w
   const pedal=N.references(score('e1-pedal-1'));
   assert(pedal.every(r=>r.kind==='pedal'&&r.tones.join()==='E2'&&!r.chord));
   const texture=N.references(score('e6-4-1'));
-  assert.deepEqual(plain(texture.map(r=>r.chord)),['Em','C','Am','B7']);
-  assert.deepEqual(plain(texture.map(r=>r.tones)),[['E2'],['C3'],['A2'],['B2']]);
+  assert.deepEqual(plain(texture.map(r=>r.chord)),['Em','C','Am','B7','Em','C','B7','Em']);
+  assert.deepEqual(plain(texture.map(r=>r.tones)),[['E2'],['C3'],['A2'],['B2'],['E2'],['C3'],['B2'],['E2']]);
   assert(N.references(score('ke0-1-1')).every(r=>r.kind==='single'&&!r.chord));
   const moving={time:'4/4',notes:[{p:'G4',d:'w'}],bass:[{p:['C3','E3'],d:'q'},{r:1,d:'q'},{p:'B2',d:'h'}]};
   assert.deepEqual(plain(N.references(moving)[0]),{chord:'',kind:'bass',tones:['C3',null,'B2']});
@@ -315,4 +352,80 @@ test('the theory book is complete, bilingual, verified and places every example 
   }
   assert(book.parts.filter(p => p.appendix).length === 1 && book.parts.at(-1).appendix,'appendices last');
   for (const e of examples) assert(!e.backing,e.id);
+});
+
+test('course miniatures have complete forms and literal returns where marked A–B–A–C', () => {
+  for (const e of exercises.filter(e => e.score && !e.generate)) {
+    const bars = N.measures(e.score)[0];
+    assert(bars.length >= 4,e.id + ': written miniature has at least four bars');
+    if (e.score.sections?.join() !== 'A,B,A,C') continue;
+    const musical = ns => plain(ns.map(({p,d,r,tie,slur,slurEnd,tuplet,tupletEnd,accent,staccato}) => ({p,d,r,tie,slur,slurEnd,tuplet,tupletEnd,accent,staccato})));
+    assert.deepEqual(musical(bars[0]),musical(bars[2]),e.id + ': A returns literally');
+    assert.notDeepEqual(musical(bars[0]),musical(bars[3]),e.id + ': C has its own ending');
+  }
+});
+
+test('reading generator builds ABAC, reaches a tonic and never chooses an unfillable remainder', () => {
+  for (const e of exercises.filter(e => e.generate)) for (let i=0;i<30;i++) {
+    const g = {...e.generate,time:e.score.time}, notes = N.generate(g), bars = N.measures({...e.score,notes})[0];
+    assert.equal(bars.length,4,e.id);
+    assert.deepEqual(plain(bars[0]),plain(bars[2]),e.id);
+    assert.notDeepEqual(plain(bars[0]),plain(bars[1]),e.id);
+    assert.notDeepEqual(plain(bars[0]),plain(bars[3]),e.id);
+    assert.equal(M.pc(M.midi(notes.at(-1).p)),M.rootPc(g.root),e.id);
+  }
+  for (let i=0;i<80;i++) {
+    const notes=N.generate({range:['C4','G4'],time:'3/4',durs:['h','q.'],bars:4});
+    assert.equal(notes.reduce((sum,n)=>sum+N.ticks(n.d),0),4*3*24);
+  }
+  for (const bars of [0,-1,1.5,Infinity,65]) assert.throws(()=>N.generate({range:['C4','G4'],bars}));
+  assert.throws(()=>N.generate({range:['C4','G4'],bars:4,form:'ABAC',durs:['w']}));
+  assert.throws(()=>N.generate({range:['D4','G4'],bars:4,form:'ABAC',root:'C'}));
+});
+
+test('odd-meter beams respect group boundaries and never bridge bars', () => {
+  for (const [time,groups] of [['5/8',[2,3]],['5/8',[3,2]],['7/8',[2,2,3]],['7/8',[3,2,2]]]) {
+    const n=Number(time.split('/')[0]), el={};
+    N.render(el,{time,groups,notes:Array.from({length:n*2},()=>({p:'E4',d:'e'}))});
+    const stems=[...el.innerHTML.matchAll(/<line x1="([\d.]+)"[^>]+class="stem"/g)].map(m=>Number(m[1]));
+    const beams=[...el.innerHTML.matchAll(/<line x1="([\d.]+)"[^>]+x2="([\d.]+)"[^>]+class="beam"/g)].map(m=>[Number(m[1]),Number(m[2])]);
+    let at=0; const expected=[];
+    for(let bar=0;bar<2;bar++) for(const size of groups) {for(let i=0;i<size-1;i++)expected.push([stems[at+i],stems[at+i+1]]);at+=size;}
+    assert.deepEqual(beams,expected,time+' '+groups);
+  }
+});
+
+test('accidentals belong to the shared staff and tied continuations do not rearticulate', () => {
+  const sc={key:'C',time:'4/4',notes:[{p:'F#4',d:'q'},{r:1,d:'h.'}],inner:[{r:1,d:'q'},{p:'F4',d:'h.'}]},el={};
+  N.render(el,sc);
+  assert.equal((el.innerHTML.match(/class="acc"/g)||[]).length,2,'natural cancels the other voice’s sharp');
+  N.render(el,{key:'C',time:'4/4',notes:[{p:'F#4',d:'w',tie:1},{p:'F#4',d:'h'},{p:'F4',d:'h'}]});
+  assert.equal((el.innerHTML.match(/class="acc"/g)||[]).length,1,'tie carries the pitch, not a new accidental for the whole bar');
+  for(const id of ['e4-4-1','ke4-4-1']) {
+    const events=N.events(exercises.find(e=>e.id===id).score).filter(e=>e.voice===0);
+    assert.equal(events.length,1,id);assert.equal(events[0].dur,16,id);
+  }
+});
+
+test('theory diagrams use real P4 positions, exact keyboard octaves and valid bilingual visual text', () => {
+  const visuals=examples.flatMap(e=>e.visuals||[]);
+  assert(visuals.length>=40);
+  for(const v of visuals) {
+    assert(v.title&&v.text,v.textId);
+    if(v.type==='fretboard') {
+      for(const p of v.positions||[]) assert(Number.isInteger(p.s)&&p.s>=0&&p.s<6&&Number.isInteger(p.f)&&p.f>=0&&p.f<=24,v.textId);
+      const el={};context.AM.fretboard.render(el,v);assert(!/NaN|undefined/.test(el.innerHTML),v.textId);
+    } else if(v.type==='piano') {
+      for(const p of v.notes||[])assert(M.midi(p)>=36&&M.midi(p)<=84,v.textId);
+      const el={};context.AM.piano.render(el,v);assert(!/NaN|undefined/.test(el.innerHTML),v.textId);
+    } else assert(['rhythm','form','flow','envelope'].includes(v.type),v.type);
+  }
+  const c4=examples.find(e=>e.id==='c02b-c4').visuals.find(v=>v.type==='fretboard');
+  assert.deepEqual(plain(c4.positions.map(p=>M.fretMidi(p.s,p.f))),[60,60,60,60,60]);
+  const el={};context.AM.piano.render(el,{notes:['C4'],show:'name'});
+  assert.equal((el.innerHTML.match(/data-midi=/g)||[]).length,1);assert.match(el.innerHTML,/data-midi="60"/);
+  assert.equal(M.degreeOf(66,'C','lydian'),'#4');
+  assert.equal(M.scaleName(65,'C#','major'),'E#4');
+  assert.equal(M.scaleName(59,'Gb','major'),'Cb4');
+  for(const bundle of [de,en]) assert(!/MX49|SR-?18|Nord Lead|Blofeld|Digitakt|SP-404|G-Major|Nova System|2290/i.test(JSON.stringify(bundle)));
 });

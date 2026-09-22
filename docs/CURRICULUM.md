@@ -8,6 +8,12 @@ Erst jede Stimme einzeln lesen und hören. Danach kombinieren. Eine Veränderung
 
 Die Einheiten sind keine Wochenvorgaben. Vier Stunden pro Woche bleiben die verfügbare Übezeit. Kurze überprüfbare Wiederholungen und Pausen sind Teil der Arbeit; die bloße Zahl der Durchläufe ist kein Fortschrittsmaß.
 
+## Kleine Stücke als Ausgangspunkt
+
+Kurze Notenbeispiele bilden mindestens vier Takte. A–B–A–C bezeichnet Motiv, Antwort, wörtliche Wiederkehr und Schluss; bei längeren Phrasen kann jeder Buchstabe mehrere Takte umfassen. Sequenzgänge und Kadenzen werden nach ihrem musikalischen Verlauf gebaut. Die Variation verändert eine konkrete Eigenschaft des Stücks; die eigene Anwendung übernimmt das Lernziel in eine neue Form.
+
+Für Tonorte zuerst Griffbrett- oder Tastaturkarte ansehen, anschließend die zugehörigen Noten lesen und hören. Rhythmusraster zeigen gemeinsame Unterteilungen; Formdiagramme zeigen Wiederkehr und Kontrast.
+
 ## Durchgehende Fähigkeiten
 
 - Notenlesen mit wachsendem Tonraum, Vorzeichen, Unterteilungen, Stimmen und Formzeichen.

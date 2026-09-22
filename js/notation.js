@@ -13,6 +13,38 @@ AM.notation = (() => {
   const esc = value => String(value).replace(/[&<>"']/g,c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const stepOf = (l, o) => M.LETTERS.indexOf(l) + o * 7;
   const pitches = n => Array.isArray(n.p) ? n.p : [n.p];
+  const beamGroup = (pos, meter) => {
+    const size = meter.len * PPQ, within = pos % size;
+    let end = 0;
+    const group = meter.groups.findIndex(g => { end += g * 4 / meter.d * PPQ; return within < end; });
+    return Math.floor(pos / size) * meter.groups.length + group;
+  };
+  function accidentals(staves, key, barLen) {
+    const signature = Object.fromEntries(M.keyAcc(key)), events = [];
+    staves.forEach(st => {
+      st.accidentals = []; let t = 0, held = st.incoming || [];
+      st.notes.forEach((n,i) => {
+        st.accidentals[i] = new Set();
+        if (!n.r) pitches(n).forEach((p,j) => events.push({t,st,i,j,p:M.parse(p),tied:held.includes(M.midi(p))}));
+        held = n.tie && !n.r ? pitches(n).map(M.midi) : []; t += ticks(n.d || 'q');
+      });
+    });
+    events.sort((a,b) => a.t - b.t);
+    let state = {}, previousBar = -1;
+    for (let i = 0; i < events.length;) {
+      const t = events[i].t, bar = Math.floor(t / barLen), batch = [];
+      if (bar !== previousBar) { state = {}; previousBar = bar; }
+      while (i < events.length && events[i].t === t) batch.push(events[i++]);
+      const changes = new Map();
+      for (const e of batch) {
+        const k = e.p.letter + e.p.octave, cur = state[k] ?? signature[e.p.letter] ?? 0;
+        const conflict = batch.some(other => other.p.letter === e.p.letter && other.p.octave === e.p.octave && other.p.acc !== e.p.acc);
+        if (!e.tied && (e.p.acc !== cur || conflict)) e.st.accidentals[e.i].add(e.j);
+        if (!e.tied) changes.set(k,conflict ? NaN : e.p.acc);
+      }
+      for (const [k,value] of changes) state[k] = value;
+    }
+  }
 
   function layout(staves, barLen) {
     const on = new Set([0]); let total = 0;
@@ -29,22 +61,21 @@ AM.notation = (() => {
   }
 
   function staff(sc, st, L, top, aids, tr, key, x0) {
-    const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key), keyMap = Object.fromEntries(ks);
+    const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key);
     const REF = stepOf(...C.ref) - tr, yOf = s => bottom - (s - REF) * gap / 2;
     let extent = bottom;
     let o = glyph(st.clef === 'treble' && sc.instrument === 'guitar' ? 'gClef8vb' : C.glyph, 12, top + C.line * gap, 'clef');
     let kx = 44; ks.forEach(([l, a]) => { o += glyph(ACC[a], kx, top + (a > 0 ? C.ks[l] : C.ksb[l]) * gap / 2, 'acc'); kx += AM.glyphs[ACC[a]].w + 2; });
-    const [beats, unit] = (sc.time || '4/4').split('/').map(Number);
+    const meter = M.meter(sc.time,sc.groups), {n:beats,d:unit} = meter;
     o += `<text x="${kx + 10}" y="${mid - 2}" class="tsig">${beats}</text><text x="${kx + 10}" y="${bottom - 2}" class="tsig">${unit}</text>`;
     L.bars.forEach(b => o += `<line x1="${x0 + b}" y1="${top}" x2="${x0 + b}" y2="${bottom}" class="bar"/>`);
     if (st.overlay) o = '';
-    let acc = {}, pos = 0, ties = [], lastBar = 0, tuplet, slur;
+    let pos = 0, ties = [], tuplet, slur;
     const stems = [];
     const side = st.direction === 'up' ? -1 : 1;
     const arc = (x1,y1,x2,y2,cls = 'tie') => `<path d="M${x1} ${y1} Q${(x1 + x2) / 2} ${Math.min(y1,y2) + side * 12} ${x2} ${y2}" class="${cls}"/>`;
-    st.notes.forEach(n => {
-      const d = DUR[(n.d || 'q')[0]], length = ticks(n.d || 'q'), x = x0 + L.x.get(pos), barNo = Math.floor(pos / (beats * PPQ * 4 / unit));
-      if (barNo !== lastBar) { acc = {}; lastBar = barNo; }
+    st.notes.forEach((n,noteIndex) => {
+      const d = DUR[(n.d || 'q')[0]], length = ticks(n.d || 'q'), x = x0 + L.x.get(pos);
       if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); extent = Math.max(extent,rm + 18); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
       const ps = pitches(n).map(p => { const q = M.parse(p); return {...q, index:pitches(n).indexOf(p), st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1], up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid;
@@ -53,8 +84,7 @@ AM.notation = (() => {
       for (let s = REF + 10; s <= hi.st; s += 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       let ax = x - 9;
       ps.forEach((p, i) => {
-        const k = p.letter + p.octave, cur = acc[k] ?? keyMap[p.letter] ?? 0;
-        if (p.acc !== cur && !ties.some(t => t.midi === p.midi)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); acc[k] = p.acc; ax -= w + 3; }
+        if (st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
         const shift = i > 0 && p.st - ps[i - 1].st === 1 ? (up ? 11 : -11) : 0;
         o += n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
         if (n.d?.endsWith('.')) o += `<circle cx="${x + 10 + shift}" cy="${p.y - (p.st % 2 === REF % 2 ? 3 : 0)}" r="1.8" class="dotd"/>`;
@@ -62,7 +92,7 @@ AM.notation = (() => {
       if (d < 4) {
         const sx = up ? x + 5 : x - 5, sy = up ? hi.y - STEM : lo.y + STEM, from = up ? lo.y : hi.y;
         const flags = d < 1 ? (d < .5 ? 2 : 1) : 0;
-        stems.push({sx,sy,from,up,flags,x,lo:lo.y,hi:hi.y,t:pos,end:pos + length,group:Math.floor(pos / (M.meter(sc.time).compound ? PPQ * 1.5 : PPQ))});
+        stems.push({sx,sy,from,up,flags,x,lo:lo.y,hi:hi.y,t:pos,end:pos + length,group:beamGroup(pos,meter)});
       }
       for (const tie of ties) {
         const target = ps.find(p => p.midi === tie.midi);
@@ -170,6 +200,8 @@ AM.notation = (() => {
       const staves = [voice(0,sc.clef || 'treble',poly || sc.inner ? 'up' : null)];
       if (sc.bass) staves.push({...voice(1,poly ? 'treble' : 'bass',poly ? 'down' : null,poly),restOffset:poly ? 40 : 0});
       if (sc.inner) staves.push({...voice(2,'treble','down',true),restOffset:40});
+      accidentals(staves.filter((st,i) => i === 0 || st.overlay),sc.key || 'C',barLen);
+      for (const st of staves.slice(1).filter(st => !st.overlay)) accidentals([st],sc.key || 'C',barLen);
       return staves;
     };
     let from = 0, html = '';
@@ -228,20 +260,37 @@ AM.notation = (() => {
   }
   function generate(g) {
     const pcs = M.scalePcs(g.root || 'C', g.scale || 'major'), lo = M.midi(g.range[0]), hi = M.midi(g.range[1]);
+    const count = g.bars ?? 2, leap = g.leap ?? 4, barLen = M.meter(g.time).len * PPQ;
+    if (!Number.isInteger(count) || count < 1 || count > 64 || !Number.isFinite(leap) || leap < 0 || lo < 0 || hi > 127 || lo > hi) throw Error('Invalid generator range');
+    if (g.form != null && (g.form !== 'ABAC' || count !== 4)) throw Error('Invalid generator form');
     const pool = []; for (let m = lo; m <= hi; m++) if (pcs.includes(M.pc(m))) pool.push(m);
     if (!pool.length) throw Error('Leerer Tonbereich');
-    const flats = M.usesFlats(g.key || 'C'), durs = g.durs || ['q'], notes = [];
-    const [b, u] = (g.time || '4/4').split('/').map(Number), barLen = b * 4 / u, total = (g.bars || 2) * barLen;
-    let m = pool[Math.floor(Math.random() * pool.length)], pos = 0;
-    while (pos < total) {
-      const step = Math.round((Math.random() - .5) * (g.leap || 4));
-      m = pool[Math.max(0, Math.min(pool.length - 1, pool.indexOf(m) + step))];
-      const fit = durs.filter(d => Number.isFinite(dur(d)) && dur(d) <= Math.min(barLen - pos % barLen, total - pos));
-      if (!fit.length) throw Error('Notenwerte füllen den Takt nicht');
-      const d = fit[Math.floor(Math.random() * fit.length)];
-      notes.push({p:M.name(m, flats), d}); pos += dur(d);
-    }
-    return notes;
+    const flats = M.usesFlats(g.key || 'C'), durs = (g.durs || ['q']).map(d => ({d,len:ticks(d)})), fill = Array(barLen + 1).fill(false);
+    if (durs.some(d => !Number.isInteger(d.len))) throw Error('Unsupported generator subdivision');
+    fill[0] = true;
+    for (let t = 1; t <= barLen; t++) fill[t] = durs.some(d => d.len <= t && fill[t - d.len]);
+    if (!fill[barLen]) throw Error('Notenwerte füllen den Takt nicht');
+    const choose = xs => xs[Math.floor(Math.random() * xs.length)];
+    const step = i => Math.max(0,Math.min(pool.length - 1,i + Math.round((Math.random() - .5) * leap)));
+    const note = (i,d) => ({p:M.name(pool[i],flats),d});
+    const bar = (start, split = false) => {
+      const notes = []; let left = barLen, i = start;
+      while (left) {
+        const fit = durs.filter(d => d.len <= left && fill[left - d.len] && !(split && left === barLen && d.len === barLen));
+        if (!fit.length) throw Error('Form needs at least two notes per motif');
+        const d = choose(fit); notes.push(note(i,d.d)); left -= d.len; i = step(i);
+      }
+      return notes;
+    };
+    if (!g.form) return Array.from({length:count},() => bar(Math.floor(Math.random() * pool.length))).flat();
+    const tonic = pool.findIndex(m => M.pc(m) === M.rootPc(g.root || 'C'));
+    if (tonic < 0 || pool.length < 2) throw Error('Form needs a tonic and a contrasting pitch');
+    const a = bar(tonic,true), other = pool.findIndex(m => M.pc(m) !== M.rootPc(g.root || 'C'));
+    a[a.length - 1].p = M.name(pool[other],flats);
+    const direction = a.some(n => M.midi(n.p) === pool.at(-1)) ? -1 : 1;
+    const b = a.map(n => note(Math.max(0,pool.indexOf(M.midi(n.p)) + direction),n.d));
+    const c = a.map(n => ({...n})); c[c.length - 1].p = M.name(pool[tonic],flats);
+    return [...a,...b,...a.map(n => ({...n})),...c];
   }
   const events = sc => {
     const ev = [], voices = sc.repeat || sc.jump ? measures(sc).map(bs => barOrder(sc).flatMap(b => bs[b - 1] || [])) : [sc.notes || [],sc.bass || [],sc.inner || []];
