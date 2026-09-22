@@ -4,8 +4,8 @@
   "source": "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont-gm_3.1-5.3_all.deb",
   "sourceSha256": "74594e8f4250680adf590507a306655a299935343583256f3b722c48a1bc1cb0",
   "file": "FluidR3-a-minor.sf2",
-  "sha256": "7b503010185c492ca83526e98078c09bb10a500e78692e2935ccdbacfe1fdea1",
-  "bytes": 34336590,
+  "sha256": "572c501cb0e24551d82824c7e5312a2fdde983e2319bbbb17794aeb4ce0e46eb",
+  "bytes": 34336802,
   "presets": [
     {
       "name": "Yamaha Grand Piano",
@@ -85,5 +85,23 @@
       "drums": true
     }
   ],
-  "adaptation": "Selected complete presets; original samples, zones, generators, modulators and loop points retained without resampling or lossy compression."
+  "balance": {
+    "melodicDb": {
+      "0": 0,
+      "4": -6,
+      "25": 0,
+      "26": 0,
+      "27": -5,
+      "28": -8,
+      "29": -8,
+      "30": -8,
+      "33": 0
+    },
+    "drumDb": {
+      "0": 6,
+      "16": 0
+    },
+    "drumBusDb": 6
+  },
+  "adaptation": "Selected complete presets; original samples, envelopes, modulators and loop points retained without resampling or lossy compression. Preset initial attenuation calibrated using balance.json; browser drum bus supplies the documented common boost."
 }

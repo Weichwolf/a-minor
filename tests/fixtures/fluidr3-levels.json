@@ -1,0 +1,83 @@
+{
+  "bankSha256": "7b503010185c492ca83526e98078c09bb10a500e78692e2935ccdbacfe1fdea1",
+  "method": "Uncalibrated FluidR3 selection from commit 75c833a; SpessaSynth Core 4.3.22, 24 kHz, effects disabled, note-on in first 128-sample block at or after 0.1 s; stereo RMS from 0.12 to 0.3 s.",
+  "cases": [
+    {
+      "ch": 3,
+      "program": 0,
+      "note": 60,
+      "velocity": 80,
+      "attackRms": 0.02409889724443787
+    },
+    {
+      "ch": 3,
+      "program": 4,
+      "note": 60,
+      "velocity": 80,
+      "attackRms": 0.032421038011377724
+    },
+    {
+      "ch": 6,
+      "program": 27,
+      "note": 52,
+      "velocity": 80,
+      "attackRms": 0.037078312971705406
+    },
+    {
+      "ch": 6,
+      "program": 28,
+      "note": 52,
+      "velocity": 80,
+      "attackRms": 0.024647197670851592
+    },
+    {
+      "ch": 6,
+      "program": 29,
+      "note": 52,
+      "velocity": 80,
+      "attackRms": 0.029299477092874643
+    },
+    {
+      "ch": 6,
+      "program": 30,
+      "note": 52,
+      "velocity": 80,
+      "attackRms": 0.03492139608378088
+    },
+    {
+      "ch": 5,
+      "program": 33,
+      "note": 36,
+      "velocity": 80,
+      "attackRms": 0.03854859450079922
+    },
+    {
+      "ch": 9,
+      "program": 0,
+      "note": 36,
+      "velocity": 80,
+      "attackRms": 0.014839853210747817
+    },
+    {
+      "ch": 9,
+      "program": 0,
+      "note": 38,
+      "velocity": 80,
+      "attackRms": 0.010339144846833478
+    },
+    {
+      "ch": 9,
+      "program": 16,
+      "note": 36,
+      "velocity": 80,
+      "attackRms": 0.034212365309369046
+    },
+    {
+      "ch": 9,
+      "program": 16,
+      "note": 38,
+      "velocity": 80,
+      "attackRms": 0.018523869511391008
+    }
+  ]
+}

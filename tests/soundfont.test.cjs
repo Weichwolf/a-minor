@@ -33,3 +33,9 @@ test('pitch wheel reaches the target interval and a loud chord leaves output hea
  const straight=await render({ch:6,program:27,note:57,off:2}),bent=await render({ch:6,program:27,note:57,off:2,changes:[{t:.35,data:[230,127,127]}]}),chord=await render({velocity:110,off:3,changes:[64,67,71,74,77,81,84].map(n=>({t:.1,data:[147,n,110]}))});
  assert(Math.abs(bent.frequency/straight.frequency-2**(2/12))<.02,'two-semitone bend');assert(chord.peak<1,'loud polyphony does not clip before the output compressor');assert(chord.attack>straight.attack);
 });
+
+test('preset calibration matches measured original PCM, including the runtime drum boost',async()=>{
+ const reference=JSON.parse(fs.readFileSync('tests/fixtures/fluidr3-levels.json')),balance=JSON.parse(fs.readFileSync('assets/soundfont/balance.json'));
+ assert.deepEqual(manifest.balance,balance);
+ for(const sample of reference.cases){const m=await render(sample),bus=sample.ch===9?balance.drumBusDb:0,expected=(sample.ch===9?balance.drumDb:balance.melodicDb)[sample.program];const actual=20*Math.log10(m.attack/sample.attackRms)+bus;assert(Math.abs(actual-expected)<.05,`preset ${sample.program}, channel ${sample.ch}: ${actual.toFixed(2)} dB != ${expected} dB`);}
+});

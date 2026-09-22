@@ -2,13 +2,14 @@ AM.soundfont = (() => {
   let loading, engine, generation=0;
   const fetchBuffer = async url => {
     const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),30000);
-    try {const r=await fetch(url,{signal:controller.signal});if(!r.ok)throw Error('soundfontLoadError');return await r.arrayBuffer();}
+    try {const r=await fetch(url,{signal:controller.signal,cache:'no-cache'});if(!r.ok)throw Error('soundfontLoadError');return await r.arrayBuffer();}
     finally {clearTimeout(timer);}
   };
   async function ready() {
     if(!loading)loading=(async()=>{
       const context=AM.audio.get();await context.resume();
-      const [lib,core,data]=await Promise.all([import('../assets/vendor/spessasynth.js'),import('../assets/vendor/spessasynth-core.js'),fetchBuffer('assets/soundfont/FluidR3-a-minor.sf2')]);
+      const [lib,core,data,balance]=await Promise.all([import('../assets/vendor/spessasynth.js'),import('../assets/vendor/spessasynth-core.js'),fetchBuffer('assets/soundfont/FluidR3-a-minor.sf2'),fetchBuffer('assets/soundfont/balance.json').then(b=>JSON.parse(new TextDecoder().decode(b)))]);
+      if(!Number.isFinite(balance.drumBusDb)||balance.drumBusDb<0||balance.drumBusDb>12)throw Error('soundfontLoadError');
       await context.audioWorklet.addModule('assets/vendor/spessasynth_processor.min.js');
       const synth=new lib.WorkletSynthesizer(context,{eventsEnabled:true});synth.setLogLevel(false,false,false);
       try {
@@ -18,7 +19,7 @@ AM.soundfont = (() => {
         synth.connect(gain);gain.connect(limiter).connect(context.destination);
         const sequencer=new lib.Sequencer(synth,{skipToFirstNoteOn:false});
         sequencer.eventHandler.timeDelay=0;
-        engine={context,synth,gain,sequencer,MIDI:core.BasicMIDI};return engine;
+        engine={context,synth,gain,sequencer,MIDI:core.BasicMIDI,drumGain:10**(balance.drumBusDb/20)};return engine;
       } catch(error){synth.destroy();throw error;}
     })().catch(error=>{loading=null;throw error;});
     return loading;
@@ -28,7 +29,7 @@ AM.soundfont = (() => {
     for(let ch=0;ch<16;ch++) {
       const level=levels[ch]??1;
       if(!Number.isFinite(level)||level<0||level>1)throw Error('Invalid mix');
-      engine.synth.midiChannels[ch].setSystemParameter('gain',level);
+      engine.synth.midiChannels[ch].setSystemParameter('gain',level*(ch===9?engine.drumGain:1));
       engine.synth.midiChannels[ch].setSystemParameter('isMuted',level===0);
     }
   }
