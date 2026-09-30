@@ -3237,11 +3237,11 @@
     "style": "power",
     "description": {
       "de": {
-        "guitar": "Powerchords, Handkantendämpfung und offene Akzente",
+        "guitar": "Durchgehende Powerchord-Achtel, E-Pedal und G5-Hook; Dämpfung und gemeinsame Stopps",
         "keys": "Kurze Akkorde und gezielte Offbeat-Antworten"
       },
       "en": {
-        "guitar": "Power chords, palm muting and open accents",
+        "guitar": "Continuous power-chord eighths, E pedal and G5 hook; muting and shared stops",
         "keys": "Short chords and deliberate offbeat answers"
       }
     },
@@ -3267,12 +3267,12 @@
           "E5"
         ],
         "guitar": [
-          "E2+B2:q! E2+B2:e E2+B2:e -:q G2+D3:q",
-          "E2+B2:q! -:q E2+B2:q! -:q",
+          "E2+B2:e! E2+B2:e E2+B2:e E2+B2:e E2+B2:e E2+B2:e G2+D3:e! G2+D3:e",
+          "E2+B2:e! E2+B2:e E2+B2:e E2+B2:e E2+B2:q -:q",
           "A2+E3:q A2+E3:e G2+D3:e E2+B2:q -:q",
           "B2+F#3:h -:q E2+B2:q!",
-          "E2+B2:q! E2+B2:e E2+B2:e -:q G2+D3:q",
-          "E2+B2:q! -:q G2+D3:q E2+B2:q",
+          "E2+B2:e! E2+B2:e E2+B2:e E2+B2:e E2+B2:e E2+B2:e G2+D3:e! G2+D3:e",
+          "E2+B2:e! E2+B2:e E2+B2:e E2+B2:e E2+B2:q -:q",
           "A2+E3:q G2+D3:q E2+B2:q -:q",
           "B2+F#3:q -:q E2+B2:h"
         ],
@@ -3889,11 +3889,11 @@
         "harmony": [
           "E5",
           "E5",
-          "A5",
+          "E5",
           "Em"
         ],
         "guitar": [
-          "E2+B2:q! E2+B2:e E2+B2:e -:q G2+D3:q",
+          "E2+B2:e! E2+B2:e E2+B2:e E2+B2:e E2+B2:e E2+B2:e G2+D3:e! G2+D3:e",
           "A2+E3:q G2+D3:q E2+B2:h",
           "E2+B2:q! -:q -:h",
           "E2+B2:w"
@@ -6358,11 +6358,11 @@
     "style": "sixteenths",
     "description": {
       "de": {
-        "guitar": "Sechzehntelfiguren, danach kurze Akkordakzente unter dem Keyboard",
+        "guitar": "Sechzehntelmotiv, Powerchord-Bursts und ein durchgehender Sechzehnteltakt; akzentuierte Rückkehr",
         "keys": "Kleine Sechzehntelantworten bei einfacher Begleitung"
       },
       "en": {
-        "guitar": "Sixteenth-note figures followed by short chord accents beneath the keyboard",
+        "guitar": "Sixteenth-note motif, power-chord bursts and a continuous sixteenth bar; accented return",
         "keys": "Small sixteenth-note answers over simple accompaniment"
       }
     },
@@ -6725,9 +6725,9 @@
           "Em"
         ],
         "guitar": [
-          "G2+D3:q* -:h G2+D3:q",
-          "A2+E3:q -:q -:h",
-          "B2+F#3:e B2+F#3:e -:h B2+F#3:q",
+          "G2+D3:s! G2+D3:s G2+D3:s G2+D3:s -:h G2+D3:q",
+          "A2+E3:s! A2+E3:s A2+E3:s A2+E3:s A2+E3:h -:q",
+          "B2+F#3:s! B2+F#3:s B2+F#3:s B2+F#3:s B2+F#3:s! B2+F#3:s B2+F#3:s B2+F#3:s B2+F#3:s! B2+F#3:s B2+F#3:s B2+F#3:s B2+F#3:s! B2+F#3:s B2+F#3:s B2+F#3:s",
           "E2+B2:h -:h"
         ],
         "keys": [
@@ -18227,13 +18227,13 @@
         ],
         "keys": [
           "-:h C5:q -:q",
-          "-:h B4:q -:q",
-          "-:h A4:q -:q",
+          "-:h F4:q -:q",
           "-:h G#4:q -:q",
-          "-:h C5:q -:q",
-          "-:h B4:q -:q",
           "-:h A4:q -:q",
-          "-:h G#4:q -:q"
+          "-:h C5:q -:q",
+          "-:h F4:q -:q",
+          "-:h G#4:q -:q",
+          "-:h A4:q -:q"
         ],
         "left": [
           "C3+E3:q. -:q. C3+E3:q",
@@ -22324,12 +22324,12 @@
         ],
         "keys": [
           "-:q A4:e G4:e F4:q E4:q",
-          "E4:q C#4:q -:h",
-          "-:q F4:e E4:e D4:q C#4:q",
+          "E4:q C4:q -:h",
+          "-:q F4:e E4:e D4:q C4:q",
           "E4:q C#4:q A4:h",
           "-:q A4:e G4:e F4:q E4:q",
-          "E4:q C#4:q -:h",
-          "-:q F4:e E4:e D4:q C#4:q",
+          "E4:q C4:q -:h",
+          "-:q F4:e E4:e D4:q C4:q",
           "E4:q C#4:q A4:h"
         ],
         "left": [

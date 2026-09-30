@@ -76,3 +76,7 @@ Die Drumfiguren haben ausgeschriebene Dynamik, Akzente und stellenweise bewusst 
 Spielbarkeit, vollständige Takte, Instrumentenbereiche, Noten/MIDI-Übereinstimmung, Velocity, Lernmerkmale und der Schutz der Arbeitsnotizen werden automatisch geprüft. PDF-Stichproben prüfen die Darstellung. Anschließend werden sämtliche Stücke für den [Rollenmix](audio/REPERTOIRE_MIX.md) vollständig gerendert.
 
 Diese Prüfungen belegen technische Eigenschaften. Ob eine Szene trägt, ein Motiv hängenbleibt und eine Wiederkehr sinnvoll wirkt, ist eine musikalische Beurteilung. Dafür bleiben Absichten und Revisionsfragen in den Quellen erhalten.
+
+## Revision 2026-09-30
+
+Die Referenzen bleiben Anregungen, keine Grenzen für Technik, Harmonik oder Dichte. Iron Rain erhält einen durchgehenden Powerchord-Achtelhook, Shards of Rain eine Steigerung von Sechzehntel-Bursts zu einem vollständigen Akkord-Sechzehnteltakt. Die Keyboardbegleitung in den Soloabschnitten von The Broken Circle und Clockwork Winter folgt den tatsächlich dort verwendeten Harmonien. [Beurteilung aller Stücke und Aufgaben](MUSICAL_REVIEW.md) · [Gigajam-Abgleich](GIGAJAM_COVERAGE.md).

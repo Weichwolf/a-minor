@@ -1,6 +1,6 @@
 # Repertoire: Mischung nach Instrument und Rolle
 
-2026-09-22. Aktueller Stand: narrativ neu komponierte Repertoirestücke mit der bereits kalibrierten FluidR3-Auswahl. Der vorherige Mix-Fix ist in Commit `b3a5a34` dokumentiert; nach der Neukomposition wurde der vollständige Abgleich wiederholt.
+2026-09-30. Aktueller Stand: musikalisch überarbeitete Repertoirestücke mit der bereits kalibrierten FluidR3-Auswahl. Der vorherige Mix-Fix ist in Commit `b3a5a34` dokumentiert; nach den Änderungen an Iron Rain, Shards of Rain, The Broken Circle und Clockwork Winter wurde der vollständige Abgleich wiederholt.
 
 ## Befund und Korrektur
 

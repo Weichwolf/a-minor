@@ -1,5 +1,7 @@
 # Fachlicher Abgleich · 2026-09-11
 
+Aktualisierung 2026-09-30: [vollständiger Gigajam-Abgleich aller Seiten](GIGAJAM_COVERAGE.md) und [musikalische/fachliche Revision](MUSICAL_REVIEW.md). Die frühere eingeschränkte Seitensichtung unten beschreibt den damaligen Prüfstand.
+
 ## Grundlage und Grenze
 
 Lokale Gigajam-Sammlung: `~/Git/Gigajam/`, Debut bis Grade Five.

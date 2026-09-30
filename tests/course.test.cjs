@@ -214,12 +214,12 @@ test('legacy restore preserves repeated practice notes and remains idempotent', 
   const before = S.export(); S.import(backup); assert.equal(S.export(),before);
 });
 
-test('phases 2–8 contain seven guitar and six keyboard units with complete bilingual tasks', () => {
+test('phases 2–8 contain the full curriculum with complete bilingual tasks', () => {
   const ids = new Set();
   assert.deepEqual(Object.keys(tracks),['gitarre','keys']);
   for (const track of Object.values(tracks)) for (const [i,phase] of track.phases.entries()) {
     assert(!phase.planned,phase.id);
-    if (i >= 2) assert.equal(phase.units.length,track.instrument === 'guitar' ? 7 : 6,phase.id);
+    if (i >= 2) assert.equal(phase.units.length,track.instrument === 'guitar' ? ([2,3,4].includes(i) ? 8 : 7) : (i === 5 ? 7 : 6),phase.id);
     for (const unit of phase.units) {
       assert(!ids.has(unit.id),unit.id);ids.add(unit.id);
       assert(!/Geplant\.|nicht ausgearbeitet/.test(unit.text),unit.id);
@@ -229,7 +229,7 @@ test('phases 2–8 contain seven guitar and six keyboard units with complete bil
       assert.equal(unit.exercises[2].kind,'compose',unit.id + ': independent application');
       for (const ex of unit.exercises) for (const bundle of [de,en]) {
         assert(bundle.course[ex.textId].instructions.length > 80,ex.id);
-        assert.equal(bundle.course[ex.textId].checklist.length,2,ex.id);
+        assert([2,3].includes(bundle.course[ex.textId].checklist.length),ex.id + ': technical and musical criteria');
       }
     }
   }
@@ -428,4 +428,50 @@ test('theory diagrams use real P4 positions, exact keyboard octaves and valid bi
   assert.equal(M.scaleName(65,'C#','major'),'E#4');
   assert.equal(M.scaleName(59,'Gb','major'),'Cb4');
   for(const bundle of [de,en]) assert(!/MX49|SR-?18|Nord Lead|Blofeld|Digitakt|SP-404|G-Major|Nova System|2290/i.test(JSON.stringify(bundle)));
+});
+
+test('tempo changes integrate held notes, compound pulses and repeated form in seconds', () => {
+  const sc = {time:'4/4',notes:[{p:'E4',d:'w',tie:1},{p:'E4',d:'w'},{r:1,d:'w'}],tempoChanges:[{bar:2,ratio:1.5}]};
+  const p=N.performance(sc,60);
+  assert(Math.abs(p.events[0].dur-(4+8/3))<1e-10);
+  assert(Math.abs(p.duration-(4+16/3))<1e-10);
+  const repeated=N.performance({...sc,repeat:{from:1,to:2,times:2}},60);
+  assert(Math.abs(repeated.duration-(8+24/3))<1e-10);
+  assert(Math.abs(repeated.events[1].t-(4+8/3))<1e-10);
+  const compound=N.performance({time:'12/8',notes:[{p:'C4',d:'h.'},{r:1,d:'h.'}]},60);
+  assert.equal(compound.events[0].dur,2);assert.equal(compound.duration,4);
+  for(const tempoChanges of [[{bar:0,ratio:2}],[{bar:2,ratio:0}],[{bar:2,ratio:2},{bar:2,ratio:3}]]) assert.throws(()=>N.performance({...sc,tempoChanges}));
+  assert.throws(()=>N.performance(sc,0));
+  assert.throws(()=>N.barOrder({...sc,repeat:{from:1,to:2,times:0}}));
+});
+
+test('rhythm charts preserve sounding voicings and exact percent repeats without invented pitch aids', () => {
+  const sc=exercises.find(e=>e.id==='e4-strum-2').score, normal={...sc,rhythmSlash:false,percentRepeats:[]};
+  assert.deepEqual(plain(N.events(sc)),plain(N.events(normal)));
+  const el={clientWidth:760};N.render(el,{...sc,instrument:'guitar'},{names:true,strings:true,frets:true,fingers:true});
+  assert.equal((el.innerHTML.match(/class="percent-repeat"/g)||[]).length,2);
+  assert(el.innerHTML.includes('rhythm-slash'));
+  assert(!el.innerHTML.includes('class="aid"'));assert(!el.innerHTML.includes('class="strn"'));
+  const broken=structuredClone(sc);broken.notes[6].p=['A3','C4','E4'];
+  assert.throws(()=>N.measures(broken));
+});
+
+test('close three-note chords alternate displaced heads and generators spell diatonic leading tones', () => {
+  const el={};N.render(el,{time:'4/4',key:'C',notes:[{p:['C4','D4','E4'],d:'w'}]},{});
+  const xs=[...el.innerHTML.matchAll(/<ellipse cx="([\d.]+)"/g)].map(m=>Number(m[1]));
+  assert.equal(xs.length,3);assert.equal(xs[0],xs[2]);assert.equal(Math.abs(xs[1]-xs[0]),11);
+  const notes=N.generate({root:'F#',scale:'major',range:['E#4','E#4'],bars:1,durs:['w']});
+  assert.equal(notes[0].p,'E#4');
+});
+
+test('dense accompaniment is played as chords with musical returns and written endings', () => {
+  const get=id=>exercises.find(e=>e.id===id).score;
+  const eighths=N.measures(get('e2-pulse-1'))[0][0];
+  assert.equal(eighths.length,8);assert(eighths.every(n=>n.d==='e'&&n.p.length===2));
+  const sixteenths=N.measures(get('e3-riff-1'))[0][0];
+  assert.equal(sixteenths.length,16);assert(sixteenths.every(n=>n.d==='s'&&n.p.length===2));
+  const gallop=N.measures(get('e3-riff-2'))[0][0];assert.deepEqual(plain(gallop.map(n=>n.d)),Array(4).fill(['e','s','s']).flat());
+  for(const id of ['e2-pulse-1','e3-riff-1','ke5-comping-1']){
+    const voices=N.measures(get(id));assert.deepEqual(plain(voices[0][0]),plain(voices[0][id==='ke5-comping-1'?4:2]),id);
+  }
 });

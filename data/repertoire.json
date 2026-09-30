@@ -564,11 +564,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Powerchords, Handkantendämpfung und offene Akzente",
+          "guitar": "Durchgehende Powerchord-Achtel, E-Pedal und G5-Hook; Dämpfung und gemeinsame Stopps",
           "keys": "Kurze Akkorde und gezielte Offbeat-Antworten"
         },
         "en": {
-          "guitar": "Power chords, palm muting and open accents",
+          "guitar": "Continuous power-chord eighths, E pedal and G5 hook; muting and shared stops",
           "keys": "Short chords and deliberate offbeat answers"
         }
       },
@@ -576,8 +576,8 @@
       "dir": "repertoire/01 Grade One/Iron Rain",
       "midi": "repertoire/01 Grade One/Iron Rain/Iron Rain.mid",
       "score": "repertoire/01 Grade One/Iron Rain/score.json",
-      "sha256": "a98d7496bced13909b7e668f353890ca2b3a1ff0ce4fb889c9167aa12a203771",
-      "duration": 48.00000000000001,
+      "sha256": "cc13091f234f1cb347d379e17e25a0cffb945fbb8fb287d8f3febe840b432301",
+      "duration": 47.999999999999986,
       "sections": [
         {
           "name": "A",
@@ -823,11 +823,11 @@
       ],
       "description": {
         "de": {
-          "guitar": "Sechzehntelfiguren, danach kurze Akkordakzente unter dem Keyboard",
+          "guitar": "Sechzehntelmotiv, Powerchord-Bursts und ein durchgehender Sechzehnteltakt; akzentuierte Rückkehr",
           "keys": "Kleine Sechzehntelantworten bei einfacher Begleitung"
         },
         "en": {
-          "guitar": "Sixteenth-note figures followed by short chord accents beneath the keyboard",
+          "guitar": "Sixteenth-note motif, power-chord bursts and a continuous sixteenth bar; accented return",
           "keys": "Small sixteenth-note answers over simple accompaniment"
         }
       },
@@ -835,8 +835,8 @@
       "dir": "repertoire/02 Grade Two/Shards of Rain",
       "midi": "repertoire/02 Grade Two/Shards of Rain/Shards of Rain.mid",
       "score": "repertoire/02 Grade Two/Shards of Rain/score.json",
-      "sha256": "c672834c7438d583dc57c6bb54b5425939922ef917aa9253110296b20d1ce79d",
-      "duration": 46.153840000000024,
+      "sha256": "ba59eb2e97269fa60c6739e0d69b06bebfa861433262e7c9e4603fd0d0809ee3",
+      "duration": 46.15384,
       "sections": [
         {
           "name": "A",
@@ -1661,7 +1661,7 @@
       "dir": "repertoire/04 Grade Four/The Broken Circle",
       "midi": "repertoire/04 Grade Four/The Broken Circle/The Broken Circle.mid",
       "score": "repertoire/04 Grade Four/The Broken Circle/score.json",
-      "sha256": "dd35b4fa2648277a945fa4ce256942fd80c5968b9278f22a52e3396952f2ab95",
+      "sha256": "b798f1149d3e107055076781ffc4d8e829c875095282ed887fc95d63c3f327dd",
       "duration": 80.00000000000009,
       "sections": [
         {
@@ -1887,7 +1887,7 @@
       "dir": "repertoire/05 Grade Five/Clockwork Winter",
       "midi": "repertoire/05 Grade Five/Clockwork Winter/Clockwork Winter.mid",
       "score": "repertoire/05 Grade Five/Clockwork Winter/score.json",
-      "sha256": "c289443cc77dcb8273e2a70d0b54b8b4571719869de7b7d8e45e389308e368b5",
+      "sha256": "829d8cf1ae8681a0e3ed3eb298d9e44e97f0727c3a54296d2fa9a3f0d9da50e8",
       "duration": 85.71423999999989,
       "sections": [
         {

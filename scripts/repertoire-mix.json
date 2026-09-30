@@ -361,14 +361,14 @@
       }
     },
     "r1-4": {
-      "scoreSha256": "8f898b59a5747b42a0f3ddac05cec70cefdae47f3ea9550158c10558c418f090",
+      "scoreSha256": "9121377da4620c4837cce8a257e06c05107594d7c99a1b04d8aeb2fef720885b",
       "offsetDb": -1.649878769740277,
       "volumes": {
         "keys/0/backing": 108,
         "bass/33/band": 94,
-        "guitar/28/riff": 118,
+        "guitar/28/riff": 116,
         "drums/0/band": 101,
-        "guitar/30/riff": 98,
+        "guitar/30/riff": 107,
         "keys/0/lead": 109,
         "guitar/28/backing": 127,
         "guitar/30/backing": 108
@@ -385,18 +385,18 @@
           "targetDb": -29
         },
         "guitar/28/riff": {
-          "levelDb": -33.587948972323694,
-          "windows": 130,
+          "levelDb": -33.188810391125436,
+          "windows": 154,
           "targetDb": -29
         },
         "drums/0/band": {
-          "levelDb": -34.22087254134892,
+          "levelDb": -34.22084668066206,
           "windows": 456,
           "targetDb": -31
         },
         "guitar/30/riff": {
-          "levelDb": -30.24977164520225,
-          "windows": 122,
+          "levelDb": -31.784089719789016,
+          "windows": 134,
           "targetDb": -29
         },
         "keys/0/lead": {
@@ -549,7 +549,7 @@
       }
     },
     "r2-3": {
-      "scoreSha256": "b57a8214e382c96a692fffa13cee95e2f4442c1708107be470c00b4b2cc951ef",
+      "scoreSha256": "5bb4f483d6c220631ec3d42c12141d36925bbaff9eae62c0a24ef92b49bffa64",
       "offsetDb": -1.1414544140484546,
       "volumes": {
         "keys/0/backing": 127,
@@ -576,7 +576,7 @@
           "targetDb": -28
         },
         "drums/16/band": {
-          "levelDb": -36.08726279000981,
+          "levelDb": -36.08726279015221,
           "windows": 438,
           "targetDb": -31
         },
@@ -586,8 +586,8 @@
           "targetDb": -29
         },
         "guitar/30/backing": {
-          "levelDb": -32.879579316564964,
-          "windows": 38,
+          "levelDb": -32.8369294424717,
+          "windows": 62,
           "targetDb": -31
         }
       }
@@ -1077,7 +1077,7 @@
       }
     },
     "r4-5": {
-      "scoreSha256": "e0621ac3bd91787aca07d764265c997577308690c3841e4c93f061cf8c5e1419",
+      "scoreSha256": "d6fe686e56d76e6b62e04e83ceace85a21a0498a2c1055483ac7d864a5db87cd",
       "offsetDb": -1.7193466699949278,
       "volumes": {
         "keys/0/backing": 114,
@@ -1090,7 +1090,7 @@
       },
       "measurement": {
         "keys/0/backing": {
-          "levelDb": -36.943053845558715,
+          "levelDb": -36.97017833738368,
           "windows": 497,
           "targetDb": -33
         },
@@ -1221,7 +1221,7 @@
       }
     },
     "r5-3": {
-      "scoreSha256": "12dca63fdafba87d8a2223820d36d1a65fcfdfa4e72e2e34773cbde2243ffcd2",
+      "scoreSha256": "a618acb0d52a0c1c21b7e3cc9d6458616e5879d19235e5f8f07a3cea23988c0a",
       "offsetDb": -9.727314694905136,
       "volumes": {
         "keys/0/backing": 73,

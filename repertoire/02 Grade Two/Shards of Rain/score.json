@@ -19,11 +19,11 @@
   ],
   "description": {
     "de": {
-      "guitar": "Sechzehntelfiguren, danach kurze Akkordakzente unter dem Keyboard",
+      "guitar": "Sechzehntelmotiv, Powerchord-Bursts und ein durchgehender Sechzehnteltakt; akzentuierte Rückkehr",
       "keys": "Kleine Sechzehntelantworten bei einfacher Begleitung"
     },
     "en": {
-      "guitar": "Sixteenth-note figures followed by short chord accents beneath the keyboard",
+      "guitar": "Sixteenth-note motif, power-chord bursts and a continuous sixteenth bar; accented return",
       "keys": "Small sixteenth-note answers over simple accompaniment"
     }
   },
@@ -1014,8 +1014,41 @@
                   "G2",
                   "D3"
                 ],
-                "d": "q",
-                "staccato": 1,
+                "d": "s",
+                "accent": 1,
+                "s": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "p": [
+                  "G2",
+                  "D3"
+                ],
+                "d": "s",
+                "s": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "p": [
+                  "G2",
+                  "D3"
+                ],
+                "d": "s",
+                "s": [
+                  0,
+                  1
+                ]
+              },
+              {
+                "p": [
+                  "G2",
+                  "D3"
+                ],
+                "d": "s",
                 "s": [
                   0,
                   1
@@ -1155,7 +1188,52 @@
                   "A2",
                   "E3"
                 ],
-                "d": "q",
+                "d": "s",
+                "accent": 1,
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "A2",
+                  "E3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "A2",
+                  "E3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "A2",
+                  "E3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "A2",
+                  "E3"
+                ],
+                "d": "h",
                 "s": [
                   1,
                   2
@@ -1164,10 +1242,6 @@
               {
                 "r": 1,
                 "d": "q"
-              },
-              {
-                "r": 1,
-                "d": "h"
               }
             ],
             "bass": [
@@ -1282,7 +1356,8 @@
                   "B2",
                   "F#3"
                 ],
-                "d": "e",
+                "d": "s",
+                "accent": 1,
                 "s": [
                   1,
                   2
@@ -1293,22 +1368,164 @@
                   "B2",
                   "F#3"
                 ],
-                "d": "e",
+                "d": "s",
                 "s": [
                   1,
                   2
                 ]
               },
               {
-                "r": 1,
-                "d": "h"
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
               },
               {
                 "p": [
                   "B2",
                   "F#3"
                 ],
-                "d": "q",
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "accent": 1,
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "accent": 1,
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "accent": 1,
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
+                "s": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "p": [
+                  "B2",
+                  "F#3"
+                ],
+                "d": "s",
                 "s": [
                   1,
                   2

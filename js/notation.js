@@ -61,7 +61,8 @@ AM.notation = (() => {
   }
 
   function staff(sc, st, L, top, aids, tr, key, x0) {
-    const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key);
+    if (sc.rhythmSlash) aids = {};
+    const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key), barLen = barLenFor(sc);
     const REF = stepOf(...C.ref) - tr, yOf = s => bottom - (s - REF) * gap / 2;
     let extent = bottom;
     let o = glyph(st.clef === 'treble' && sc.instrument === 'guitar' ? 'gClef8vb' : C.glyph, 12, top + C.line * gap, 'clef');
@@ -76,17 +77,27 @@ AM.notation = (() => {
     const arc = (x1,y1,x2,y2,cls = 'tie') => `<path d="M${x1} ${y1} Q${(x1 + x2) / 2} ${Math.min(y1,y2) + side * 12} ${x2} ${y2}" class="${cls}"/>`;
     st.notes.forEach((n,noteIndex) => {
       const d = DUR[(n.d || 'q')[0]], length = ticks(n.d || 'q'), x = x0 + L.x.get(pos);
+      const bar = Math.floor(pos / barLen) + st.from + 1;
+      if (sc.percentRepeats?.includes(bar)) {
+        if (pos % barLen === 0) {
+          const cx = x + (L.x.get(pos + barLen) - L.x.get(pos)) / 2;
+          o += `<g class="percent-repeat"><path d="M${cx - 8} ${mid + 10} l12 -20 h4 l-12 20 z" class="glyph"/><circle cx="${cx - 9}" cy="${mid - 7}" r="2.5"/><circle cx="${cx + 7}" cy="${mid + 7}" r="2.5"/></g>`;
+        }
+        pos += length; return;
+      }
       if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); extent = Math.max(extent,rm + 18); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
-      const ps = pitches(n).map(p => { const q = M.parse(p); return {...q, index:pitches(n).indexOf(p), st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
+      const ps = sc.rhythmSlash ? [{...M.parse('B4'),index:0,st:REF + 4,y:mid}] : pitches(n).map((p,index) => { const q = M.parse(p); return {...q, index, st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1], up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid;
       extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names || aids.frets ? bottom + 70 + (aids.names && aids.frets ? 14 : 0) : bottom);
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       for (let s = REF + 10; s <= hi.st; s += 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
       let ax = x - 9;
+      let displaced = false;
       ps.forEach((p, i) => {
-        if (st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
-        const shift = i > 0 && p.st - ps[i - 1].st === 1 ? (up ? 11 : -11) : 0;
-        o += n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
+        if (!sc.rhythmSlash && st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
+        displaced = i > 0 && p.st - ps[i - 1].st === 1 && !displaced;
+        const shift = displaced ? (up ? 11 : -11) : 0;
+        o += sc.rhythmSlash ? `<path d="M${x - 6} ${mid + 6} l8 -14 h4 l-8 14 z" class="head rhythm-slash${d >= 2 ? ' open' : ''}"/>` : n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
         if (n.d?.endsWith('.')) o += `<circle cx="${x + 10 + shift}" cy="${p.y - (p.st % 2 === REF % 2 ? 3 : 0)}" r="1.8" class="dotd"/>`;
       });
       if (d < 4) {
@@ -143,9 +154,10 @@ AM.notation = (() => {
     return {svg:o, bottom, extent};
   }
 
+  const barLenFor = sc => M.meter(sc.time).len * PPQ;
   function measures(sc) {
     const size = AM.music.meter(sc.time).len * PPQ;
-    return [sc.notes || [],sc.bass || [],sc.inner || []].map(ns => {
+    const voices = [sc.notes || [],sc.bass || [],sc.inner || []].map(ns => {
       const bars = []; let pos = 0;
       for (const n of ns) {
         const length = ticks(n.d || 'q');
@@ -155,6 +167,10 @@ AM.notation = (() => {
       if (pos % size) throw Error('Incomplete measure');
       return bars;
     });
+    for (const bar of sc.percentRepeats || []) {
+      if (!Number.isInteger(bar) || bar < 2 || bar > voices[0].length || voices.some(bs => bs.length && JSON.stringify(bs[bar - 1]) !== JSON.stringify(bs[bar - 2]))) throw Error('Percent repeat must repeat the preceding written bar');
+    }
+    return voices;
   }
   function references(sc) {
     const bars = measures(sc), lower = sc.bass ? bars[1] : sc.clef === 'bass' ? bars[0] : null;
@@ -175,9 +191,10 @@ AM.notation = (() => {
     const range = (a,b) => all.filter(n => n >= a && n <= b);
     if (r && j) throw Error('Combined repeat and jump not supported');
     if (r) {
-      if (!valid(r.from) || !valid(r.to) || r.from > r.to || !Number.isInteger(r.times || 2) || (r.times || 2) < 2 || (r.times || 2) > 4) throw Error('Invalid repeat');
-      if (r.endings && (r.endings.length !== (r.times || 2) || r.endings.some((n,i) => !valid(n) || n !== r.to + i + 1))) throw Error('Invalid endings');
-      return [...range(1,r.from - 1),...Array.from({length:r.times || 2},(_,i) => [...range(r.from,r.to),...(r.endings ? [r.endings[i]] : [])]).flat(),...range((r.endings?.at(-1) || r.to) + 1,count)];
+      const times = r.times ?? 2;
+      if (!valid(r.from) || !valid(r.to) || r.from > r.to || !Number.isInteger(times) || times < 2 || times > 4) throw Error('Invalid repeat');
+      if (r.endings && (r.endings.length !== times || r.endings.some((n,i) => !valid(n) || n !== r.to + i + 1))) throw Error('Invalid endings');
+      return [...range(1,r.from - 1),...Array.from({length:times},(_,i) => [...range(r.from,r.to),...(r.endings ? [r.endings[i]] : [])]).flat(),...range((r.endings?.at(-1) || r.to) + 1,count)];
     }
     if (j) {
       if (!valid(j.from) || !valid(j.to) || j.to >= j.from) throw Error('Invalid jump');
@@ -196,7 +213,7 @@ AM.notation = (() => {
     const tr = sc.instrument === 'guitar' ? 7 : 0, x0 = 88 + M.keyAcc(sc.key || 'C').length * 9;
     const width = el.clientWidth || Infinity, count = bars[0].length;
     const makeStaves = (from,to) => {
-      const voice = (i,clef,direction,overlay = false) => ({clef,direction,overlay,notes:bars[i].slice(from,to).flat(),incoming:bars[i][from - 1]?.at(-1)?.tie ? pitches(bars[i][from - 1].at(-1)).map(M.midi) : null,outgoing:to < count});
+      const voice = (i,clef,direction,overlay = false) => ({clef,direction,overlay,from,notes:bars[i].slice(from,to).flat(),incoming:bars[i][from - 1]?.at(-1)?.tie ? pitches(bars[i][from - 1].at(-1)).map(M.midi) : null,outgoing:to < count});
       const staves = [voice(0,sc.clef || 'treble',poly || sc.inner ? 'up' : null)];
       if (sc.bass) staves.push({...voice(1,poly ? 'treble' : 'bass',poly ? 'down' : null,poly),restOffset:poly ? 40 : 0});
       if (sc.inner) staves.push({...voice(2,'treble','down',true),restOffset:40});
@@ -265,14 +282,14 @@ AM.notation = (() => {
     if (g.form != null && (g.form !== 'ABAC' || count !== 4)) throw Error('Invalid generator form');
     const pool = []; for (let m = lo; m <= hi; m++) if (pcs.includes(M.pc(m))) pool.push(m);
     if (!pool.length) throw Error('Leerer Tonbereich');
-    const flats = M.usesFlats(g.key || 'C'), durs = (g.durs || ['q']).map(d => ({d,len:ticks(d)})), fill = Array(barLen + 1).fill(false);
+    const spell = m => M.scaleName(m,g.root || 'C',g.scale || 'major'), durs = (g.durs || ['q']).map(d => ({d,len:ticks(d)})), fill = Array(barLen + 1).fill(false);
     if (durs.some(d => !Number.isInteger(d.len))) throw Error('Unsupported generator subdivision');
     fill[0] = true;
     for (let t = 1; t <= barLen; t++) fill[t] = durs.some(d => d.len <= t && fill[t - d.len]);
     if (!fill[barLen]) throw Error('Notenwerte füllen den Takt nicht');
     const choose = xs => xs[Math.floor(Math.random() * xs.length)];
     const step = i => Math.max(0,Math.min(pool.length - 1,i + Math.round((Math.random() - .5) * leap)));
-    const note = (i,d) => ({p:M.name(pool[i],flats),d});
+    const note = (i,d) => ({p:spell(pool[i]),d});
     const bar = (start, split = false) => {
       const notes = []; let left = barLen, i = start;
       while (left) {
@@ -286,10 +303,10 @@ AM.notation = (() => {
     const tonic = pool.findIndex(m => M.pc(m) === M.rootPc(g.root || 'C'));
     if (tonic < 0 || pool.length < 2) throw Error('Form needs a tonic and a contrasting pitch');
     const a = bar(tonic,true), other = pool.findIndex(m => M.pc(m) !== M.rootPc(g.root || 'C'));
-    a[a.length - 1].p = M.name(pool[other],flats);
+    a[a.length - 1].p = spell(pool[other]);
     const direction = a.some(n => M.midi(n.p) === pool.at(-1)) ? -1 : 1;
     const b = a.map(n => note(Math.max(0,pool.indexOf(M.midi(n.p)) + direction),n.d));
-    const c = a.map(n => ({...n})); c[c.length - 1].p = M.name(pool[tonic],flats);
+    const c = a.map(n => ({...n})); c[c.length - 1].p = spell(pool[tonic]);
     return [...a,...b,...a.map(n => ({...n})),...c];
   }
   const events = sc => {
@@ -314,5 +331,19 @@ AM.notation = (() => {
     });
     return ev;
   };
-  return {render,generate,dur,ticks,events,barOrder,measures,references};
+  function performance(sc, bpm = 60) {
+    if (!Number.isFinite(bpm) || bpm <= 0) throw Error('Invalid tempo');
+    const count = measures(sc)[0].length, order = barOrder(sc), meter = M.meter(sc.time), changes = new Map();
+    for (const c of sc.tempoChanges || []) {
+      if (!Number.isInteger(c.bar) || c.bar < 1 || c.bar > count || !Number.isFinite(c.ratio) || c.ratio <= 0 || c.ratio > 8 || changes.has(c.bar)) throw Error('Invalid tempo change');
+      changes.set(c.bar,c.ratio);
+    }
+    const starts = [0], seconds = order.map(bar => {
+      const ratio = [...changes].filter(([at]) => at <= bar).sort((a,b) => b[0] - a[0])[0]?.[1] ?? 1;
+      const spb = 60 / bpm / meter.q / ratio; starts.push(starts.at(-1) + meter.len * spb); return spb;
+    });
+    const time = beat => { const bar = Math.min(Math.floor(beat / meter.len),order.length - 1); return starts[bar] + (beat - bar * meter.len) * seconds[bar]; };
+    return {events:events(sc).map(e => ({...e,t:time(e.t),dur:time(e.t + e.dur) - time(e.t)})),duration:starts.at(-1)};
+  }
+  return {render,generate,dur,ticks,events,performance,barOrder,measures,references};
 })();

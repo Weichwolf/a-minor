@@ -90,14 +90,14 @@
         const button = el.querySelector('.listen'), status = el.querySelector('.preview-status');
         if (button.dataset.playing) { stop(); return; }
         stop(); const run = previewRun, bpm = el.closest('.ex')?.querySelector('.player input[type=number]')?.valueAsNumber || ex.tempo || 60;
-        const spb = 60 / Math.min(160,Math.max(30,bpm)) / AM.music.meter(ex.score.time).q;
-        const events = AM.notation.events(sc()).map(e => ({...e,t:e.t * spb,dur:e.dur * spb,velocity:(e.voice === 1 ? 46 : e.voice === 2 ? 62 : 78) + (e.accent ? 18 : 0)}));
+        const preview = AM.notation.performance(sc(),Math.min(160,Math.max(30,bpm)));
+        const events = preview.events.map(e => ({...e,velocity:(e.voice === 1 ? 46 : e.voice === 2 ? 62 : 78) + (e.accent ? 18 : 0)}));
         button.dataset.playing = 'loading'; button.textContent = t('stop'); status.textContent = t('soundfontLoading');
         try {
           const play = await AM.audio.prepare(events,{instrument});
           if (run !== previewRun || !button.isConnected) return;
           button.dataset.playing = 'playing'; status.textContent = '';
-          play(AM.notation.barOrder(sc()).length * AM.music.meter(ex.score.time).len * spb,error => {
+          play(preview.duration,error => {
             if (run !== previewRun) return;
             resetPreview(); if (error) status.textContent = t('previewInterrupted');
           });
@@ -122,7 +122,7 @@
       ${ex.position ? `<p class="position">${esc(ex.position)}</p>` : ''}<p>${inline(ex.instructions || '')}</p>
       ${ex.score ? scoreBlock(ex,unit.track.instrument) : ''}${ex.fretboard ? diagram(ex.fretboard,'fretboard') : ''}${ex.piano ? diagram(ex.piano,'piano') : ''}
       ${ex.backing ? playerControls(ex.backing,ex.tempo) : ''}<ul class="check">${(ex.checklist || []).map(c => `<li>${esc(c)}</li>`).join('')}</ul>
-      <details class="log"><summary>${t('log')} (${logs.length})</summary><form data-log="${ex.id}"><input name="note" aria-label="${t('note')}" placeholder="${t('logPlaceholder')}" required><button>${t('save')}</button></form>
+      <details class="log"><summary>${t('log')} (${logs.length})</summary><form data-log="${ex.id}"><input name="note" aria-label="${t('note')}" placeholder="${t('logPlaceholder')}" required maxlength="12000"><button>${t('save')}</button></form>
       <ul>${logs.map(l => `<li><span class="date">${esc(l.date)}</span> ${esc(l.note)}</li>`).join('')}</ul></details></article>`;
   }
   const phaseCard = (p,i) => {

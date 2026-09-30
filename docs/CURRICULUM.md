@@ -1,6 +1,6 @@
 # Lernweg
 
-Instrumente: Phase 2–8 mit sieben Einheiten Gitarre und sechs Keyboard pro Phase. Musiklehre: acht Teile mit 30 Kapiteln und fünf Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
+Instrumente: Phase 2–8 mit insgesamt 7 × (7 + 6) + 4 = 95 Einheiten. Gitarre hat acht Einheiten in Phase 2–4 und sieben in Phase 5–8; Keyboard sieben in Phase 5 und sechs in den übrigen Phasen. Musiklehre: acht Teile mit 30 Kapiteln und fünf Anhängen als eigenständiges Lehrbuch, siehe unten. Jede neue Einheit hat ein ausgeschriebenes Beispiel, eine begrenzte Veränderung und eine eigene Anwendung mit Notation und Aufnahme.
 
 ## Arbeitsweise
 
@@ -33,6 +33,7 @@ Für Tonorte zuerst Griffbrett- oder Tastaturkarte ansehen, anschließend die zu
 | [Terzen mit eigener Melodielinie](https://a-minor.ch/#/unit/u2-3) | [Terzen mit eigener Melodielinie](https://a-minor.ch/#/unit/ku2-3) |
 | [Arpeggio über offenem Bass](https://a-minor.ch/#/unit/u2-4) | [Arpeggio über offenem Bass](https://a-minor.ch/#/unit/ku2-4) |
 | [Powerchords und Saitendämpfung](https://a-minor.ch/#/unit/u2-6) | [Kurze Akkorde und Offbeats](https://a-minor.ch/#/unit/ku2-rhythm) |
+| [Powerchords in Achteln: Puls und Hook](https://a-minor.ch/#/unit/u2-pulse) | — |
 | [Kurze Akkorde und Offbeats](https://a-minor.ch/#/unit/u2-rhythm) | [Dreiklang hören, Phrase bauen](https://a-minor.ch/#/unit/ku2-5) |
 | [Dreiklang hören, Phrase bauen](https://a-minor.ch/#/unit/u2-5) | — |
 
@@ -44,6 +45,7 @@ Für Tonorte zuerst Griffbrett- oder Tastaturkarte ansehen, anschließend die zu
 | [Quintfall als Weg durch Akkorde](https://a-minor.ch/#/unit/u3-2) | [Quintfall als Weg durch Akkorde](https://a-minor.ch/#/unit/ku3-2) |
 | [Synkopen und gebundene Einsätze](https://a-minor.ch/#/unit/u3-reading) | [Synkopen und gebundene Einsätze](https://a-minor.ch/#/unit/ku3-reading) |
 | [Sechzehntel und präzise Pausen](https://a-minor.ch/#/unit/u3-4) | [Sechzehntel und präzise Pausen](https://a-minor.ch/#/unit/ku3-4) |
+| [Powerchords in Sechzehnteln und Gallop](https://a-minor.ch/#/unit/u3-riff) | — |
 | [Bass und Melodie nach Gehör trennen](https://a-minor.ch/#/unit/u3-3) | [Bass und Melodie nach Gehör trennen](https://a-minor.ch/#/unit/ku3-3) |
 | [Chromatischer Bass, ruhige Melodie](https://a-minor.ch/#/unit/u3-6) | [Wiederholung und zwei Schlüsse](https://a-minor.ch/#/unit/ku3-5) |
 | [Wiederholung und zwei Schlüsse](https://a-minor.ch/#/unit/u3-5) | — |
@@ -55,6 +57,7 @@ Für Tonorte zuerst Griffbrett- oder Tastaturkarte ansehen, anschließend die zu
 | [Leitton und harmonisch Moll](https://a-minor.ch/#/unit/u4-1) | [Leitton und harmonisch Moll](https://a-minor.ch/#/unit/ku4-1) |
 | [Kadenz: Spannung und Ankunft](https://a-minor.ch/#/unit/u4-3) | [Kadenz: Spannung und Ankunft](https://a-minor.ch/#/unit/ku4-3) |
 | [Sexten, Septimen und Akkordsymbole](https://a-minor.ch/#/unit/u4-chords) | [Sexten, Septimen und Akkordsymbole](https://a-minor.ch/#/unit/ku4-chords) |
+| [Akkorde strummen und Rhythmusnotation lesen](https://a-minor.ch/#/unit/u4-strum) | — |
 | [Verminderter Septakkord in Bewegung](https://a-minor.ch/#/unit/u4-2) | [Verminderter Septakkord in Bewegung](https://a-minor.ch/#/unit/ku4-2) |
 | [Innere Stimmen bewusst führen](https://a-minor.ch/#/unit/u4-4) | [Innere Stimmen bewusst führen](https://a-minor.ch/#/unit/ku4-4) |
 | [Quint-/Sextwechsel im Bassriff](https://a-minor.ch/#/unit/u4-6) | [Kadenz als eigene Aussage](https://a-minor.ch/#/unit/ku4-5) |
@@ -70,6 +73,7 @@ Für Tonorte zuerst Griffbrett- oder Tastaturkarte ansehen, anschließend die zu
 | [12/8: vier große Pulse](https://a-minor.ch/#/unit/u5-4) | [12/8: vier große Pulse](https://a-minor.ch/#/unit/ku5-4) |
 | [Legato: Hammer-on und Pull-off](https://a-minor.ch/#/unit/u5-6) | [Sequenz über wechselndem Bass](https://a-minor.ch/#/unit/ku5-3) |
 | [Sequenz über wechselndem Bass](https://a-minor.ch/#/unit/u5-3) | [Shuffle und Swing bewusst vergleichen](https://a-minor.ch/#/unit/ku5-5) |
+| — | [Linke Akkordpulse unter Melodie](https://a-minor.ch/#/unit/ku5-comping) |
 | [Shuffle und Swing bewusst vergleichen](https://a-minor.ch/#/unit/u5-5) | — |
 
 ### Phase 6: Kontrastfarben
@@ -181,3 +185,7 @@ Das letzte Modell umfasst 32 Takte. Das eigene Abschlussstück umfasst mindesten
 Die technischen Prüfungen sichern Notendaten und Darstellung ab. Reale Handhaltung, Klangbalance, Intonation beim Bending und Ausdruck müssen am Instrument beziehungsweise an der Aufnahme beurteilt werden. Der Gigajam-Abgleich dokumentiert erkennbare Repertoirefähigkeiten, keine formale Prüfungszulassung.
 
 Die Musiklehre endet mit den fünf Referenzen und einem Kapitel über Hören, Analysieren und Schreiben: Hörmethode, Analyse in vier Ebenen, der siebenstufige Arbeitsweg, Rollen aus einer Hand, eigene Regeln, Dokumentation, Repertoire und Set; die Ausführung gehört in die Instrumentalspuren und ins eigene Log.
+
+## Aktuelle Revision
+
+Die Referenzen leiten Geschmack und Stil; sie begrenzen das musikalische Material nicht. [Gigajam-Fähigkeiten und Transfer](GIGAJAM_COVERAGE.md) · [Musikalische und fachliche Prüfung](MUSICAL_REVIEW.md).

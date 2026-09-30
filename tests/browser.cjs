@@ -75,7 +75,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     }
     await page.screenshot({path:'test-results/keyboard-mobile.png',fullPage:true});
     await page.selectOption('#language','de');
-    for (const id of ['u5-2','ku5-3','u7-1','u7-3','u7-solo','u6-7','u7-6','ku8-6']) {
+    for (const id of ['u2-pulse','u3-riff','u4-strum','ku5-comping','u5-2','ku5-3','u7-1','u7-3','u7-solo','u6-7','u7-6','ku8-6']) {
       await page.goto(base+'/#/unit/'+id);await page.waitForSelector('svg.score');
       assert.deepEqual(await page.locator('.player select').first().locator('option').allTextContents(),['Klick','Drums']);
       assert.match(await page.locator('.player label').nth(1).innerText(),/^Begleitung/);
@@ -137,6 +137,22 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'chapters fit mobile width');
     await page.setViewportSize({width:1280,height:900});
     console.log('PASS theory textbook: examples without tasks or player, reference appendices');
+    await page.goto(base+'/#/unit/u4-strum');await page.waitForSelector('.percent-repeat');
+    assert.equal(await page.locator('.percent-repeat').count(),2);
+    assert(await page.locator('.rhythm-slash').count()>0);
+    await page.locator('#sce4-strum-2 .svg').screenshot({path:'test-results/rhythm-chart-desktop.png'});
+    await page.goto(base+'/#/chapter/c16');await page.waitForSelector('#scc16-ratio .listen');
+    await page.evaluate(()=>{
+      window.originalPrepare=AM.audio.prepare;
+      AM.audio.prepare=async events=>{window.previewEvents=events;return duration=>{window.previewDuration=duration;};};
+    });
+    await page.locator('#scc16-ratio .listen').click();
+    await page.waitForFunction(()=>window.previewDuration>0);
+    const timing=await page.evaluate(()=>({duration:previewDuration,events:previewEvents}));
+    assert(Math.abs(timing.duration-(8+16/3))<1e-9,'metric modulation changes the actual preview duration');
+    assert(timing.events.some(e=>Math.abs(e.t-8)<1e-9));
+    await page.evaluate(()=>{AM.audio.prepare=window.originalPrepare;});
+    console.log('PASS rhythmic chord charts and metric modulation preview');
     await page.goto(base+'/#/fretboard');await page.waitForSelector('#fretboard-view svg.fb');
     assert.equal(await page.locator('nav.top a[href="#/fretboard"]').count(),1);
     await page.selectOption('#fretboard-controls [name=root]','C');
