@@ -12,6 +12,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:['--no-sandbox']});
     await require('./soundfont-browser.cjs')(browser,base);
     await require('./repertoire-browser.cjs')(browser,base);
+    await require('./practice-browser.cjs')(browser,base);
     const context = await browser.newContext(), page = await context.newPage(), errors=[];
     page.on('pageerror',e => errors.push(e.message)); page.on('dialog',() => { throw Error('Unexpected dialog'); });
     await page.addInitScript(() => {

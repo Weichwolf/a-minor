@@ -22,24 +22,32 @@ AM.repertoire = (() => {
     setTimeout(()=>load(piece,instrument,token),0);
     return `<nav class="crumbs"><a href="#/repertoire">${t('repertoire')}</a> › <a href="${link(instrument,piece.grade)}">${title(instrument)} · Grade ${piece.grade}</a></nav><div id="repertoire-piece"><h1>${esc(piece.title)}</h1><p role="status">${t('loadingPiece')}</p></div>`;
   }
-  async function load(piece,instrument,token) {
+  function generated(piece,instrument,score,bytes,options) {
+    const token=++mount;draws=[];current=null;
+    setTimeout(()=>load(piece,instrument,token,{score,bytes,...options}),0);
+    return `<div id="repertoire-piece"><h2>${esc(piece.title)}</h2><p role="status">${t('loadingPiece')}</p></div>`;
+  }
+  async function load(piece,instrument,token,source) {
     const target=document.querySelector('#repertoire-piece');
     try {
-      if(!cache.has(piece.id))cache.set(piece.id,Promise.all([json(piece.score),fetch(piece.midi,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('repertoireLoadError');return r.arrayBuffer();}).then(b=>new Uint8Array(b))]).catch(e=>{cache.delete(piece.id);throw e;}));
-      const [score,bytes]=await cache.get(piece.id);if(token!==mount||!target.isConnected)return;
-      const sequence=AM.midi.decode(bytes),ex='rep-'+instrument+'-'+piece.id;
+      if(!source&&!cache.has(piece.id))cache.set(piece.id,Promise.all([json(piece.score),fetch(piece.midi,{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('repertoireLoadError');return r.arrayBuffer();}).then(b=>new Uint8Array(b))]).catch(e=>{cache.delete(piece.id);throw e;}));
+      const [score,bytes]=source?[source.score,source.bytes]:await cache.get(piece.id);if(token!==mount||!target.isConnected)return;
+      const sequence=AM.midi.decode(bytes),ex=source?.exerciseId||'rep-'+instrument+'-'+piece.id;
       let levels=Object.fromEntries(Object.values(AM.midi.channels).map(ch=>[ch,1])),guide=0;
       try{const value=JSON.parse(localStorage.getItem('a-minor-repertoire-mix-'+instrument)||'null');if(value&&[0,.25,1].includes(value.guide))guide=value.guide;for(const ch of Object.values(AM.midi.channels)){const n=value?.levels?.[ch];if(Number.isFinite(n)&&n>=0&&n<=1)levels[ch]=n;}}catch{}
       current={piece,instrument,sequence,bytes};
+      const midiHref=source?URL.createObjectURL(new Blob([bytes],{type:'audio/midi'})):encodeURI(piece.midi);
+      if(source)current.downloadURL=midiHref;
       const phases=piece.prerequisites.filter(id=>instrument==='guitar'?id.startsWith('p'):id.startsWith('k')).map(id=>`<a href="#/phase/${id}">${t('phase')} ${id.slice(1)}</a>`).join(' · ');
-      target.innerHTML=`<h1>${esc(piece.title)}</h1><p class="lead">${title(instrument)} · Grade ${piece.grade} · ${esc(piece.key)} · ${piece.time} · ${piece.bars} ${t('bars')} · ${AM.music.meter(piece.time).symbol} = ${piece.tempo}</p><p>${esc(piece.description[I.language][instrument])}</p><p class="rep-prerequisites">${t('prerequisites')}: ${phases}</p><p class="small">${t(instrument==='guitar'?'repertoireGuitarAttack':'repertoireKeys')}</p>
+      target.innerHTML=`<${source?'h2':'h1'}>${esc(piece.title)}</${source?'h2':'h1'}><p class="lead">${title(instrument)} · Grade ${piece.grade} · ${esc(piece.key)} · ${piece.time} · ${piece.bars} ${t('bars')} · ${AM.music.meter(piece.time).symbol} = ${piece.tempo}</p><p>${esc(source?.description??piece.description[I.language][instrument])}</p>${source?`<p class="practice-form">${esc(source.formText)}</p>`:''}<p class="rep-prerequisites">${t('prerequisites')}: ${phases}</p><p class="small">${t(instrument==='guitar'?'repertoireGuitarAttack':'repertoireKeys')}</p>
       <div class="rep-player player"><div class="row"><button data-transport="listen">${t('listen')}</button><button data-transport="practice">${t('practice')}</button><label>${t('playbackDestination')} <select id="rep-output"><option value="browser">${t('browserAudio')}</option><option value="midi">MIDI Out</option></select></label><a href="#/midi">${t('midiSetup')}</a></div>
       <div class="row"><label>${t('tempo')} <input id="rep-tempo" type="number" min="30" max="240" value="${piece.tempo}"> ${AM.music.meter(piece.time).symbol}/min</label><label>${t('section')} <select id="rep-section"><option value="all">${t('wholePiece')}</option>${score.sections.map((s,i)=>`<option value="${i}">${esc(s.name)} · ${s.startBar}–${s.startBar+s.bars.length-1}</option>`).join('')}</select></label><label><input id="rep-loop" type="checkbox"> ${t('loop')}</label><label><input id="rep-count" type="checkbox" checked> ${t('countIn')}</label></div>
       <div class="row"><label>${t('guideVoice')} <select id="rep-guide"><option value="0"${guide===0?' selected':''}>${t('muted')}</option><option value="0.25"${guide===.25?' selected':''}>${t('quiet')}</option><option value="1"${guide===1?' selected':''}>${t('normal')}</option></select></label></div><div class="rep-mixer">${Object.entries(AM.midi.channels).map(([role,ch])=>`<label>${title(role)}<input type="range" data-mix="${ch}" min="0" max="100" step="1" value="${Math.round(levels[ch]*100)}"><output>${Math.round(levels[ch]*100)}%</output></label>`).join('')}</div><p class="rep-status small" role="status"></p><progress id="rep-progress" max="${sequence.duration}" value="0" aria-label="${t('playbackProgress')}"></progress><p class="small">${t('sharedMidi')}</p></div>
-      <div class="row rep-downloads"><a download href="${encodeURI(piece.midi)}">MIDI</a><a download href="${encodeURI(piece.dir+'/'+piece.title+' '+(instrument==='guitar'?'Guitar':'Keyboard')+'.pdf')}">PDF · ${title(instrument)}</a><a href="#/piece/${instrument==='guitar'?'keys':'guitar'}/${piece.id}">${t('otherPart')}</a><label><input id="rep-aids" type="checkbox"> ${t('aids')}</label></div>
+      <div class="row rep-downloads"><a download="${esc(piece.title)}.mid" href="${midiHref}">MIDI</a>${source?`<button id="rep-print">${t('printScore')}</button>`:`<a download href="${encodeURI(piece.dir+'/'+piece.title+' '+(instrument==='guitar'?'Guitar':'Keyboard')+'.pdf')}">PDF · ${title(instrument)}</a>`}<a href="${source?.otherPartHref??'#/piece/'+(instrument==='guitar'?'keys':'guitar')+'/'+piece.id}">${t('otherPart')}</a><label><input id="rep-aids" type="checkbox"> ${t('aids')}</label></div>
       <div id="rep-scores">${score.sections.map((s,i)=>`<section class="rep-section" data-section="${i}"><h2>${esc(s.name)} <span class="small">· ${t('bars')} ${s.startBar}–${s.startBar+s.bars.length-1} · ${s.time}</span></h2><div class="scorewrap"><div class="svg"></div></div></section>`).join('')}</div>
       <article class="ex rep-log${S.isDone(ex)?' done':''}" id="${ex}"><header><h3>${t('practiceLog')}</h3><label class="donebox"><input type="checkbox" data-done="${ex}"${S.isDone(ex)?' checked':''}> ${t('mastered')}</label></header><p>${t('pieceCriteria')}</p><details class="log"><summary>${t('log')}</summary><form data-log="${ex}"><input name="note" aria-label="${t('note')}" placeholder="${t('logPlaceholder')}" required maxlength="12000"><button>${t('save')}</button></form><ul></ul></details></article>`;
       controls=target.querySelector('.rep-player');
+      target.querySelector('#rep-print')?.addEventListener('click',()=>window.print());
       const save=()=>{try{localStorage.setItem('a-minor-repertoire-mix-'+instrument,JSON.stringify({guide,levels}));}catch{}};
       const updateMix=()=>{for(const input of controls.querySelectorAll('[data-mix]')){input.value=Math.round(levels[input.dataset.mix]*100);input.nextElementSibling.value=input.value+'%';}AM.soundfont.mix(levels);external?.setMix(levels);save();};
       controls.querySelectorAll('[data-mix]').forEach(input=>input.oninput=()=>{levels[input.dataset.mix]=Number(input.value)/100;updateMix();});
@@ -78,5 +86,5 @@ AM.repertoire = (() => {
     }catch(error){if(target.isConnected&&token===mount)target.innerHTML=`<p role="alert">${t('repertoireLoadError')}</p>`;}
   }
   function logEntry(id){const match=/^rep-(guitar|keys)-(r\d-\d)$/.exec(id);if(!match)return;const p=catalog.pieces.find(p=>p.id===match[2]);if(p)return {title:p.title+' · '+title(match[1]),href:'#/piece/'+match[1]+'/'+p.id};}
-  return {ready,home,page,stop,configure:o=>{stopAll=o.stopAll;},resize:()=>draws.forEach(fn=>fn()),leave:()=>{mount++;draws=[];current=null;},logEntry,get current(){return current;}};
+  return {ready,home,page,generated,stop,configure:o=>{stopAll=o.stopAll;},resize:()=>draws.forEach(fn=>fn()),leave:()=>{mount++;draws=[];if(current?.downloadURL)URL.revokeObjectURL(current.downloadURL);current=null;},logEntry,get current(){return current;}};
 })();

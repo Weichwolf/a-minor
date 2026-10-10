@@ -132,6 +132,7 @@
   const courseLink = () => `<a href="#/">${t('course')}</a>`;
   const chapterNumbers = b => { const n = new Map(); let i = 0, a = 0; for (const part of b.parts) for (const c of part.chapters) n.set(c.id, part.appendix ? String.fromCharCode(65 + a++) : String(++i)); return n; };
   const views = {
+    practice:spec => AM.practice.page(spec),
     repertoire:spec => AM.repertoire.home(spec),
     piece:spec => AM.repertoire.page(spec),
     credits:() => `<h1>${t('credits')}</h1><div class="text">${md(t('creditsText'))}</div><ul><li>FluidR3 GM · Frank Wen · MIT · <a href="assets/soundfont/LICENSE.txt">${t('licenseText')}</a> · <a href="assets/soundfont/README.md">${t('sourceDetails')}</a></li><li>SpessaSynth · Spessasus · Apache-2.0 · <a href="assets/vendor/spessasynth-LICENSE">${t('licenseText')}</a> · <a href="assets/vendor/README.md">${t('sourceDetails')}</a></li><li>SpessaSynth Core · Spessasus · Apache-2.0 · <a href="assets/vendor/spessasynth-core-LICENSE">${t('licenseText')}</a></li><li>stb-vorbis · Apache-2.0 · <a href="assets/vendor/stb-vorbis-LICENSE">${t('licenseText')}</a></li><li>Bravura · Steinberg · SIL Open Font License 1.1 · <a href="assets/glyphs/OFL.txt">${t('licenseText')}</a></li></ul>`,
@@ -189,7 +190,7 @@
       <h2>${t('repertoireRouting')}</h2><p>${t('repertoireRoutingLead')}</p><div class="row">${Object.entries(AM.midi.channels).map(([role,ch])=>`<label>${t(role==='keys'?'keyboardInstrument':role==='guitar'?'guitarInstrument':role==='bass'?'bassInstrument':'drums')} · ${ch+1} <select data-midi-route="${ch}"></select></label>`).join('')}</div>${playerControls({type:'drums',drums:'half',time:'4/4',bars:2},60)}<p>${t('midiTest')}</p>`,
     log() {
       return `<h1>${t('log')}</h1><p class="lead">${t('logLead')}</p><div class="row"><button id="exp">${t('export')}</button><label class="btn">${t('import')} <input type="file" id="imp" accept=".json" hidden></label></div>
-      <p id="import-status" role="status"></p><table class="logt"><tr><th>${t('date')}</th><th>${t('exercise')}</th><th>${t('note')}</th><th></th></tr>${S.get().log.map((e,i) => { const ex = allEx.find(x => x.id === e.ex), rep = AM.repertoire.logEntry(e.ex); return `<tr><td>${esc(e.date)}</td><td>${ex ? `<a href="#/unit/${ex.unit.id}#${ex.id}">${esc(ex.title)}</a>` : rep ? `<a href="${rep.href}">${esc(rep.title)}</a>` : esc(e.ex)}</td><td>${esc(e.note)}</td><td><button data-del="${esc(e.id)}" aria-label="${t('delete')}">×</button></td></tr>`; }).join('')}</table>`;
+      <p id="import-status" role="status"></p><table class="logt"><tr><th>${t('date')}</th><th>${t('exercise')}</th><th>${t('note')}</th><th></th></tr>${S.get().log.map((e,i) => { const ex = allEx.find(x => x.id === e.ex), rep = AM.repertoire.logEntry(e.ex)||AM.practice.logEntry(e.ex); return `<tr><td>${esc(e.date)}</td><td>${ex ? `<a href="#/unit/${ex.unit.id}#${ex.id}">${esc(ex.title)}</a>` : rep ? `<a href="${rep.href}">${esc(rep.title)}</a>` : esc(e.ex)}</td><td>${esc(e.note)}</td><td><button data-del="${esc(e.id)}" aria-label="${t('delete')}">×</button></td></tr>`; }).join('')}</table>`;
     }
   };
   function route() {
@@ -197,6 +198,8 @@
     const [,v = 'home',id] = location.hash.replace(/^#\/?/,'').match(/^([^/]*)\/?([^#]*)/) || [];
     const main = $('main'); main.innerHTML = (Object.hasOwn(views,v) ? views[v] : views.home)(id); window.scrollTo(0,0);
     document.querySelectorAll('[data-text]').forEach(e => e.textContent = t(e.dataset.text));
+    const navView=['track','phase','unit','home',''].includes(v)?'home':v==='piece'?'repertoire':v==='chapter'?'theory':v;
+    document.querySelectorAll('nav.top a:not(.brand)').forEach(a=>{const active=a.getAttribute('href')===(navView==='home'?'#/':'#/'+navView);a.classList.toggle('active',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
     main.querySelectorAll('[data-done]').forEach(i => i.onchange = () => { try { S.toggleDone(i.dataset.done); i.closest('.ex').classList.toggle('done',i.checked); } catch { i.checked = !i.checked; report(t('saveError')); } });
     main.querySelectorAll('form[data-log]').forEach(f => f.onsubmit = ev => {
       ev.preventDefault(); const note = f.elements.note.value.trim(); if (!note) return;
@@ -208,9 +211,10 @@
     if (output) {
       const refresh = ps => {
         if (!output.isConnected) return;
-        output.innerHTML = `<option value="">${t('chooseDevice')}</option>` + ps.map(p => `<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');
-        output.value = AM.audio.out.port?.id || '';
-        document.querySelectorAll('[data-midi-route]').forEach(select=>{select.innerHTML=`<option value="">${t('defaultOutput')}</option>`+ps.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('');select.value=AM.audio.out.routes[select.dataset.midiRoute]||'';select.onchange=()=>{stop();AM.audio.routeSelect(Number(select.dataset.midiRoute),select.value);};});
+        const options=(id,placeholder)=>`<option value="">${t(placeholder)}</option>`+ps.map(p=>`<option value="${esc(p.id)}">${esc(p.name)}</option>`).join('')+(id&&!ps.some(p=>p.id===id)?`<option value="${esc(id)}">${esc(AM.audio.deviceName(id))} · ${t('disconnected')}</option>`:'');
+        output.innerHTML = options(AM.audio.out.outputId,'chooseDevice');
+        output.value = AM.audio.out.outputId;
+        document.querySelectorAll('[data-midi-route]').forEach(select=>{const id=AM.audio.out.routes[select.dataset.midiRoute]||'';select.innerHTML=options(id,'defaultOutput');select.value=id;select.onchange=()=>{stop();AM.audio.routeSelect(Number(select.dataset.midiRoute),select.value);};});
         $('#midi-status').textContent = (t(AM.audio.out.status) || t('findHint')) + (AM.audio.out.port ? ': ' + AM.audio.out.port.name : '');
       };
       refresh(AM.audio.out.access ? [...AM.audio.out.access.outputs.values()].filter(p => p.state === 'connected') : []);
@@ -242,5 +246,6 @@
     report(t('storageUpdate'));
   });
   AM.repertoire.configure({stopAll:stop});
+  AM.audio.restoreMidi();
   I.set(I.language); index(); route();
 })();

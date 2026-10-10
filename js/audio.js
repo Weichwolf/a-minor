@@ -13,7 +13,19 @@ AM.audio = (() => {
     };
   };
   const silence = () => AM.soundfont.stop();
-  const out = {access:null, port:null, status:'',routes:{}};
+  const preferencesKey = 'a-minor-midi';
+  const device = p => ({id:p.id,name:p.name||'',manufacturer:p.manufacturer||''});
+  const validDevice = p => p && ['id','name','manufacturer'].every(k=>typeof p[k]==='string'&&p[k].length<=1024) && p.id.length>0;
+  let preferences = {version:1,output:null,routes:{}};
+  try {
+    const saved=JSON.parse(localStorage.getItem(preferencesKey));
+    if(saved?.version===1) {
+      if(validDevice(saved.output))preferences.output=device(saved.output);
+      for(const ch of Object.values(AM.midi.channels))if(validDevice(saved.routes?.[ch]))preferences.routes[ch]=device(saved.routes[ch]);
+    }
+  } catch {}
+  const out = {access:null, port:null, status:'',outputId:preferences.output?.id||'',routes:Object.fromEntries(Object.entries(preferences.routes).map(([ch,p])=>[ch,p.id]))};
+  const savePreferences = () => { try { localStorage.setItem(preferencesKey,JSON.stringify(preferences)); } catch {} };
   const NOTE = {kick:36, snare:38, hat:42, click:37};
   const allOff = () => {
     if (out.port?.state !== 'connected') return;
@@ -22,24 +34,52 @@ AM.audio = (() => {
     out.port.send([0xB9, 123, 0]);
   };
   const ports = () => [...(out.access?.outputs.values() || [])].filter(p => p.state === 'connected');
+  function restoreOutputs() {
+    const ps=ports(), find=saved=>{
+      if(!saved)return null;
+      const exact=ps.find(p=>p.id===saved.id);if(exact)return exact;
+      const matches=ps.filter(p=>saved.name&&p.name===saved.name&&(p.manufacturer||'')===saved.manufacturer);
+      return matches.length===1?matches[0]:null;
+    };
+    out.port=find(preferences.output);out.outputId=out.port?.id||preferences.output?.id||'';
+    if(out.port)preferences.output=device(out.port);
+    for(const [ch,saved] of Object.entries(preferences.routes)) {
+      const port=find(saved);out.routes[ch]=port?.id||saved.id;
+      if(port)preferences.routes[ch]=device(port);
+    }
+    out.status=out.port?'connected':preferences.output?'disconnected':ps.length?'chooseDevice':'noOutputs';
+    savePreferences();
+    return ps;
+  }
   async function midiInit() {
     if (!navigator.requestMIDIAccess) { out.status = 'midiUnavailable'; return []; }
     try {
       out.access ||= await navigator.requestMIDIAccess({sysex:false});
       out.access.onstatechange = () => {
-        if (out.port?.state === 'disconnected') { players.forEach(p => {p.stop();p.onEnd?.(Error('disconnected'));p.onError?.(Error('disconnected'));}); out.port = null; }
-        out.status = out.port ? 'connected' : 'chooseDevice';
-        out.onchange?.(ports());
+        players.forEach(p => {
+          const disconnected=p.ports?[...p.ports].some(port=>port.state==='disconnected'):out.port?.state==='disconnected';
+          if(disconnected){p.stop();p.onEnd?.(Error('disconnected'));p.onError?.(Error('disconnected'));}
+        });
+        const ps=restoreOutputs();out.onchange?.(ps);
       };
-      const ps = ports(); out.status = ps.length ? 'chooseDevice' : 'noOutputs'; return ps;
-    } catch (e) { out.status = 'midiDenied'; return []; }
+      const ps=restoreOutputs();out.onchange?.(ps);return ps;
+    } catch (e) { out.status = 'midiDenied';out.onchange?.(ports());return []; }
   }
   function midiSelect(id) {
     players.forEach(p => p.stop()); allOff();
     out.port = ports().find(p => p.id === id) || null; out.status = out.port ? 'connected' : 'chooseDevice';
+    out.outputId=out.port?.id||'';preferences.output=out.port?device(out.port):null;savePreferences();
   }
   const portFor = ch => out.routes[ch] ? ports().find(p=>p.id===out.routes[ch]) : out.port;
-  const routeSelect = (ch,id) => { players.forEach(p=>p.stop()); if(id)out.routes[ch]=id;else delete out.routes[ch]; };
+  const routeSelect = (ch,id) => {
+    if(!Object.values(AM.midi.channels).includes(ch))throw Error('Invalid MIDI route');
+    players.forEach(p=>p.stop());
+    const port=ports().find(p=>p.id===id);
+    if(port){out.routes[ch]=port.id;preferences.routes[ch]=device(port);}else{delete out.routes[ch];delete preferences.routes[ch];}
+    savePreferences();
+  };
+  const restoreMidi = () => preferences.output||Object.keys(preferences.routes).length ? midiInit() : Promise.resolve([]);
+  const deviceName = id => [preferences.output,...Object.values(preferences.routes)].find(p=>p?.id===id)?.name||id;
   class Player {
     constructor() { this.playing = false; }
     load(seq, bpm) {
@@ -78,7 +118,7 @@ AM.audio = (() => {
       try { allOff(); } catch (e) { out.status = 'stopError'; }
     }
   }
-  return {Player, prepare, get, silence, out, midiInit, midiSelect,portFor,routeSelect,register:p=>players.add(p),unregister:p=>players.delete(p)};
+  return {Player, prepare, get, silence, out, midiInit, midiSelect,portFor,routeSelect,restoreMidi,deviceName,register:p=>players.add(p),unregister:p=>players.delete(p)};
 })();
 
 AM.backing = (() => {

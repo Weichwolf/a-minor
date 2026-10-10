@@ -72,9 +72,15 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo und **Begleitung** mit genau den Optionen **Klick** und **Drums**. Das passende Muster gehört zur Aufgabe. Noten brechen an Taktgrenzen in neue Systeme um; dichte Einzeltakte bleiben bei Bedarf horizontal scrollbar. Notenhilfen sind standardmäßig aus; Diagramme eingeklappt.
 
+## Übungsmodus
+
+Im **Übungsmodus** (`#/practice`) wählt man Gitarre oder Keyboard und Grade 0–5. Der Zufallsgenerator komponiert A, B und C mit je vier Takten aus dem Tonmaterial, den Rhythmen und den Spieltechniken der entsprechenden Kursphasen. A kehrt wörtlich zurück: 12 neu erzeugte Takte ergeben 16 Spieltakte in A–B–A–C. Noten, Bandbegleitung, Anhören/Üben, Abschnittswahl, Einzählen, Schleife, Mix und MIDI-Ausgabe verwenden denselben Player wie das Repertoire. Ein Stück bleibt über seine URL und die letzte Auswahl im Browser wieder abrufbar; „Neues Stück“ erzeugt eine neue Miniatur. MIDI lässt sich herunterladen, die Noten lassen sich drucken oder als PDF speichern. Fortschritt und Notizen gehören zum konkreten Stück und Instrument.
+
 ## MIDI
 
 Unter **MIDI** Ausgänge suchen und Gerät wählen. Klick/Drums ausschließlich als Noten auf Kanal 10. Ohne verbundenes Gerät startet die Begleitung nicht. Keine MIDI-Clock, kein Fernstart eines Gerätepatterns, keine Program Changes.
+
+Der globale Standardausgang und die getrennten Ausgänge pro Stimme werden im Browser gespeichert und beim nächsten Besuch wiederhergestellt. Getrennte Geräte bleiben vorgemerkt und werden bei Wiederverbindung erneut zugeordnet; die Browserberechtigung für MIDI bleibt erforderlich. Kurs, Repertoire und Übungsmodus verwenden diese gemeinsamen Einstellungen.
 
 | Klang | MIDI-Note |
 |---|---|
