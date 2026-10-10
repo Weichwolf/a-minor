@@ -74,7 +74,7 @@ Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. No
 
 ## Übungsmodus
 
-Im **Übungsmodus** (`#/practice`) wählt man Gitarre oder Keyboard und Grade 0–5. Der Zufallsgenerator komponiert A, B und C mit je vier Takten aus dem Tonmaterial, den Rhythmen und den Spieltechniken der entsprechenden Kursphasen. A kehrt wörtlich zurück: 12 neu erzeugte Takte ergeben 16 Spieltakte in A–B–A–C. Jeder Abschnitt zeigt seine vier Takte in einer durchgehenden Notenzeile; auf schmalen Bildschirmen lässt sie sich seitlich verschieben. Noten, Bandbegleitung, Anhören/Üben, Abschnittswahl, Einzählen, Schleife, Mix und MIDI-Ausgabe verwenden denselben Player wie das Repertoire. Ein Stück bleibt über seine URL und die letzte Auswahl im Browser wieder abrufbar; URL, Stücktitel und PDF verwenden dieselbe Kennung (`0x` und acht Hexadezimalstellen). Bereits gespeicherte URLs mit dezimaler Kennung bleiben lesbar. „Neues Stück“ erzeugt eine neue Miniatur. MIDI lässt sich herunterladen, die Noten lassen sich drucken oder als PDF speichern. Der Druck verkleinert die vier Notenzeilen bei Bedarf auf eine gemeinsame A4-Seite. Fortschritt und Notizen gehören zum konkreten Stück und Instrument.
+Im **Übungsmodus** (`#/practice`) wählt man Gitarre oder Keyboard und Grade 0–5. Der Zufallsgenerator komponiert A, B und C mit je vier Takten aus dem Tonmaterial, den Rhythmen und den Spieltechniken der entsprechenden Kursphasen. A kehrt wörtlich zurück: 12 neu erzeugte Takte ergeben 16 Spieltakte in A–B–A–C. Jeder Abschnitt zeigt seine vier Takte in einer durchgehenden Notenzeile; auf schmalen Bildschirmen lässt sie sich seitlich verschieben. Noten, Bandbegleitung, Anhören/Üben, Abschnittswahl, Einzählen, Schleife, Mix und MIDI-Ausgabe verwenden denselben Player wie das Repertoire. Ein Stück bleibt über seine URL und die letzte Auswahl im Browser wieder abrufbar; URL, Stücktitel und PDF verwenden dieselbe Kennung (`0x` und acht Hexadezimalstellen). Bereits gespeicherte URLs mit dezimaler Kennung bleiben lesbar. „Neues Stück“ erzeugt eine neue Miniatur. MIDI lässt sich herunterladen; „PDF herunterladen“ lädt die Noten direkt als Datei ohne Druckdialog. Der PDF-Export passt die vier Notenzeilen als Vektorgrafiken auf eine gemeinsame A4-Seite ein. Die Kennung steht im PDF-Titel und Dateinamen; der Titel verlinkt das Stück. Fortschritt und Notizen gehören zum konkreten Stück und Instrument. [PDF-Engine, Schrift und Lizenzen](assets/vendor/pdfmake/README.md).
 
 ## MIDI
 
@@ -121,6 +121,7 @@ Fortschritt liegt ausschließlich im `localStorage` des Browsers, getrennt nach 
 | `js/repertoire.js`, `data/repertoire.json` | Stückauswahl, Partituren, Übemix und Downloadlinks |
 | `js/midi.js`, `js/midi-player.js` | SMF-Dateien und externe MIDI-Wiedergabe |
 | `js/soundfont.js`, `assets/soundfont/`, `assets/vendor/` | Lokaler SoundFont und AudioWorklet-Player |
+| `js/score-pdf.js`, `assets/vendor/pdfmake/` | Direkter PDF-Download der generierten ABAC-Stücke |
 | `js/store.js` | Lokaler Browserfortschritt, Altformatmigration und Backup/Restore |
 | `tests/` | Kurs-, Speicher-, MIDI- und Browsertests |
 

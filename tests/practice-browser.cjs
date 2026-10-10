@@ -1,6 +1,8 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 module.exports=async(browser,base)=>{
- const context=await browser.newContext(),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const context=await browser.newContext(),page=await context.newPage(),errors=[],pdfRequests=[];let popups=0;
+ page.on('pageerror',e=>errors.push(e.message));page.on('request',request=>{if(request.url().includes('/assets/vendor/pdfmake/'))pdfRequests.push(request.url());});
+ page.on('dialog',async dialog=>{errors.push('Unexpected '+dialog.type()+' dialog');await dialog.dismiss();});context.on('page',()=>popups++);
  const ready=()=>page.waitForSelector('#repertoire-piece[data-ready]');
  const go=async(instrument,grade,seed)=>{
   await page.goto(base+'/#/practice/'+instrument+'/'+grade+'/'+seed);
@@ -8,6 +10,7 @@ module.exports=async(browser,base)=>{
  };
  try{
   await page.addInitScript(()=>{
+   window.printCalls=0;window.popupCalls=0;window.print=()=>{printCalls++;};window.open=()=>{popupCalls++;return null;};
    window.sent=[];
    window.ports=new Map(['band','drums'].map(id=>[id,{id,name:id,manufacturer:'test',state:localStorage.getItem('test-midi-offline')===id?'disconnected':'connected',send:(data,t)=>sent.push({id,data:[...data],t}),clear:()=>sent.push({id,clear:true})}]));
    window.access={outputs:ports};Object.defineProperty(navigator,'requestMIDIAccess',{value:async()=>access});
@@ -68,20 +71,30 @@ module.exports=async(browser,base)=>{
    await go(instrument,grade,900+grade);assert.equal(await page.locator('svg.score').count(),4);assert.deepEqual(await page.locator('.rep-section').evaluateAll(items=>items.map(el=>el.querySelectorAll('.measure').length)),[4,4,4,4]);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),instrument+' Grade '+grade+' mobile overflow');
   }
   await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});
+  assert.equal(pdfRequests.length,0,'PDF assets load only when requested');
+  await page.route('**/assets/vendor/pdfmake/pdfmake.min.js',route=>route.abort());
+  await page.click('#rep-pdf');await page.waitForFunction(()=>!document.querySelector('#rep-pdf').disabled&&document.querySelector('.rep-status').textContent.includes('Bitte erneut versuchen'));
+  assert.equal(await page.locator('#rep-pdf').innerText(),'PDF herunterladen','failed downloads allow retry');
+  await page.unroute('**/assets/vendor/pdfmake/pdfmake.min.js');
+  await page.setViewportSize({width:1920,height:1200});
   for(const lang of ['de','en']){
-   await page.emulateMedia({media:'screen'});
    await page.selectOption('#language',lang);
-   await page.emulateMedia({media:'print'});
    for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
-    await go(instrument,grade,900+grade);await page.evaluate(()=>AM.repertoire.resize());
+    await go(instrument,grade,900+grade);
     assert.equal(await page.locator('.rep-section svg.score').count(),4);
     assert.equal(await page.locator('.rep-section .measure').count(),16);
-    const pdf=await page.pdf({path:'test-results/practice-'+instrument+'-grade'+grade+'-'+lang+'.pdf',format:'A4',preferCSSPageSize:true,printBackground:true});
+    const download=page.waitForEvent('download');await page.click('#rep-pdf');const file=await download;
+    await file.saveAs('test-results/practice-'+instrument+'-grade'+grade+'-'+lang+'.pdf');
+    const identifier=new URL(page.url()).hash.split('/').at(-1);
+    assert(file.suggestedFilename().includes(identifier),'PDF filename uses the URL identifier');
+    assert(file.suggestedFilename().endsWith((instrument==='keys'?'Keyboard':lang==='de'?'Gitarre':'Guitar')+'.pdf'));
+    const pdf=fs.readFileSync(await file.path());
     assert.equal(pdf.subarray(0,5).toString(),'%PDF-');assert(pdf.length>5000);
     assert.equal((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length,1,instrument+' Grade '+grade+' '+lang+': ABAC on one PDF page');
-    assert(await page.locator('.rep-section').evaluateAll(items=>items.every(el=>{const section=el.getBoundingClientRect(),svg=el.querySelector('svg').getBoundingClientRect();return svg.top>=section.top&&svg.bottom<=section.bottom+1;})),instrument+' Grade '+grade+': scores stay inside print rows');
+    assert.equal(await page.locator('#rep-pdf').innerText(),lang==='de'?'PDF herunterladen':'Download PDF');
+    assert.deepEqual(await page.evaluate(()=>({print:printCalls,popups:popupCalls})),{print:0,popups:0},'direct download opens no print dialog or popup');
    }
   }
-  assert.deepEqual(errors,[]);console.log('PASS practice: six grades × two parts × two languages, generation, matching URL/PDF identifiers, logs, MIDI settings reload/reconnect, band playback, four-bar mobile rows and single-page ABAC PDFs');
+  assert.equal(popups,0);assert.deepEqual(errors,[]);console.log('PASS practice: six grades × two parts × two languages, generation, matching URL/PDF identifiers, logs, MIDI settings reload/reconnect, band playback, four-bar mobile rows and direct single-page ABAC PDF downloads with retry');
  }finally{await context.close();}
 };

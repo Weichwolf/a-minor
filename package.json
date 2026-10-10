@@ -6,9 +6,12 @@
     "test:browser": "node tests/browser.cjs",
     "build:repertoire": "node scripts/build-repertoire.mjs",
     "build:scores": "node scripts/build-scores.mjs",
-    "vendor:audio": "node scripts/vendor-audio.mjs"
+    "vendor:audio": "node scripts/vendor-audio.mjs",
+    "vendor:pdf": "node scripts/vendor-pdf.mjs"
   },
   "devDependencies": {
+    "dejavu-fonts-ttf": "2.37.3",
+    "pdfmake": "0.3.11",
     "playwright": "1.58.2",
     "spessasynth_core": "4.3.22",
     "spessasynth_lib": "4.3.14"

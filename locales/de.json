@@ -3745,7 +3745,9 @@
     "practiceGrade3": "Phase 4–5: harmonisch Moll, Akkordbegleitung, Sequenzen, Triolen oder 12/8.",
     "practiceGrade4": "Phase 6–7: Quartenklänge, lydische Farbe, rhythmische Kontraste oder 5/8 und 7/8.",
     "practiceGrade5": "Phase 8: kurze vollständige Arrangements mit Riff, Melodie, bewegter Begleitung und bewusstem Schluss.",
-    "printScore": "Noten drucken / PDF"
+    "downloadScore": "PDF herunterladen",
+    "creatingScore": "PDF wird erstellt …",
+    "scoreDownloadError": "PDF konnte nicht erstellt werden. Bitte erneut versuchen."
   },
   "book": {
     "book": {
