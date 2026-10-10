@@ -20,7 +20,11 @@ module.exports=async(browser,base)=>{
    for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
     await go(instrument,grade,100+grade);assert.equal(await page.locator('.rep-section').count(),4);
     assert.equal(await page.locator('.rep-section h2').allTextContents().then(x=>x.map(s=>s[0]).join('')),'ABAC');
-    assert(await page.locator('svg.score').count()>0);assert(!/undefined|NaN/.test(await page.locator('main').innerText()));
+    assert.equal(await page.locator('svg.score').count(),4);assert(!/undefined|NaN/.test(await page.locator('main').innerText()));
+    assert.equal(await page.locator('#rep-aids').count(),0);
+    const identifier='0x'+(100+grade).toString(16).padStart(8,'0').toUpperCase();
+    assert.equal(new URL(page.url()).hash.split('/').at(-1),identifier);
+    assert((await page.locator('#repertoire-piece>h2').innerText()).endsWith(identifier));assert((await page.title()).includes(identifier));
     assert.match(await page.locator('.practice-form').innerText(),/12.*16/);assert.equal(await page.inputValue('#practice-grade'),String(grade));
     assert.equal((await page.evaluate(()=>AM.repertoire.current.sequence.markers.map(m=>m.label))).join(''),'ABAC');
    }
@@ -61,10 +65,23 @@ module.exports=async(browser,base)=>{
   const download=page.waitForEvent('download');await page.locator('.rep-downloads a[download]').click();const file=await download;assert.equal(fs.readFileSync(await file.path()).subarray(0,4).toString(),'MThd');
   await page.setViewportSize({width:390,height:844});
   for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
-   await go(instrument,grade,900+grade);await page.check('#rep-aids');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),instrument+' Grade '+grade+' mobile overflow');
+   await go(instrument,grade,900+grade);assert.equal(await page.locator('svg.score').count(),4);assert.deepEqual(await page.locator('.rep-section').evaluateAll(items=>items.map(el=>el.querySelectorAll('.measure').length)),[4,4,4,4]);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),instrument+' Grade '+grade+' mobile overflow');
   }
   await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});
-  await page.emulateMedia({media:'print'});await page.evaluate(()=>AM.repertoire.resize());const pdf=await page.pdf({path:'test-results/practice.pdf',format:'A4',printBackground:true});assert.equal(pdf.subarray(0,5).toString(),'%PDF-');assert(pdf.length>5000);
-  assert.deepEqual(errors,[]);console.log('PASS practice: six grades × two parts × two languages, generation, reproducible URLs, logs, MIDI settings reload/reconnect, band playback, mobile scores and exports');
+  for(const lang of ['de','en']){
+   await page.emulateMedia({media:'screen'});
+   await page.selectOption('#language',lang);
+   await page.emulateMedia({media:'print'});
+   for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
+    await go(instrument,grade,900+grade);await page.evaluate(()=>AM.repertoire.resize());
+    assert.equal(await page.locator('.rep-section svg.score').count(),4);
+    assert.equal(await page.locator('.rep-section .measure').count(),16);
+    const pdf=await page.pdf({path:'test-results/practice-'+instrument+'-grade'+grade+'-'+lang+'.pdf',format:'A4',preferCSSPageSize:true,printBackground:true});
+    assert.equal(pdf.subarray(0,5).toString(),'%PDF-');assert(pdf.length>5000);
+    assert.equal((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length,1,instrument+' Grade '+grade+' '+lang+': ABAC on one PDF page');
+    assert(await page.locator('.rep-section').evaluateAll(items=>items.every(el=>{const section=el.getBoundingClientRect(),svg=el.querySelector('svg').getBoundingClientRect();return svg.top>=section.top&&svg.bottom<=section.bottom+1;})),instrument+' Grade '+grade+': scores stay inside print rows');
+   }
+  }
+  assert.deepEqual(errors,[]);console.log('PASS practice: six grades × two parts × two languages, generation, matching URL/PDF identifiers, logs, MIDI settings reload/reconnect, band playback, four-bar mobile rows and single-page ABAC PDFs');
  }finally{await context.close();}
 };

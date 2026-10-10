@@ -9,8 +9,9 @@ AM.practice = (() => {
     const value=JSON.parse(localStorage.getItem(K));
     for(const instrument of instruments)if(validGrade(value?.[instrument]?.grade)&&validSeed(value[instrument].seed))saved[instrument]={grade:value[instrument].grade,seed:value[instrument].seed};
   } catch {}
-  const link=(instrument,grade,n)=>'#/practice/'+instrument+'/'+grade+'/'+n;
-  const pieceTitle=(grade,n)=>t('practicePiece')+' · Grade '+grade+' · '+n.toString(16).padStart(8,'0').toUpperCase();
+  const identifier=n=>'0x'+n.toString(16).padStart(8,'0').toUpperCase();
+  const link=(instrument,grade,n)=>'#/practice/'+instrument+'/'+grade+'/'+identifier(n);
+  const pieceTitle=(grade,n)=>t('practicePiece')+' · Grade '+grade+' · '+identifier(n);
   function page(spec='') {
     const [instrument,gradeText,seedText]=spec.split('/');
     if (!instruments.includes(instrument)) return `<h1>${t('practiceMode')}</h1><p class="lead">${t('practiceLead')}</p><div class="tracks">${instruments.map(k=>`<a class="track" href="#/practice/${k}"><h2>${title(k)}</h2><p>${t(k==='guitar'?'repertoireGuitar':'repertoireKeys')}</p><p class="meta">Grade 0–5 · A–B–A–C · 16 ${t('bars')}</p></a>`).join('')}</div>`;

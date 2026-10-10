@@ -70,11 +70,11 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 `http://localhost:8000` öffnen. Kein Build. Keine Laufzeitabhängigkeiten. JSON-Dateien werden geladen; direktes Öffnen per `file://` wird nicht unterstützt. Web MIDI benötigt eine passende Browserimplementierung und einen sicheren Kontext wie HTTPS oder localhost.
 
-Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo und **Begleitung** mit genau den Optionen **Klick** und **Drums**. Das passende Muster gehört zur Aufgabe. Noten brechen an Taktgrenzen in neue Systeme um; dichte Einzeltakte bleiben bei Bedarf horizontal scrollbar. Notenhilfen sind standardmäßig aus; Diagramme eingeklappt.
+Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo und **Begleitung** mit genau den Optionen **Klick** und **Drums**. Das passende Muster gehört zur Aufgabe. Noten brechen an Taktgrenzen in neue Systeme um; dichte Einzeltakte bleiben bei Bedarf horizontal scrollbar. Diagramme sind eingeklappt. Der Schalter für Tonnamen/Fingersätze entfällt; die fest beschrifteten Lehrbeispiele der Musiklehre behalten ihre didaktischen Angaben. Pedalton-Beschriftungen werden unter den Noten nicht angezeigt.
 
 ## Übungsmodus
 
-Im **Übungsmodus** (`#/practice`) wählt man Gitarre oder Keyboard und Grade 0–5. Der Zufallsgenerator komponiert A, B und C mit je vier Takten aus dem Tonmaterial, den Rhythmen und den Spieltechniken der entsprechenden Kursphasen. A kehrt wörtlich zurück: 12 neu erzeugte Takte ergeben 16 Spieltakte in A–B–A–C. Noten, Bandbegleitung, Anhören/Üben, Abschnittswahl, Einzählen, Schleife, Mix und MIDI-Ausgabe verwenden denselben Player wie das Repertoire. Ein Stück bleibt über seine URL und die letzte Auswahl im Browser wieder abrufbar; „Neues Stück“ erzeugt eine neue Miniatur. MIDI lässt sich herunterladen, die Noten lassen sich drucken oder als PDF speichern. Fortschritt und Notizen gehören zum konkreten Stück und Instrument.
+Im **Übungsmodus** (`#/practice`) wählt man Gitarre oder Keyboard und Grade 0–5. Der Zufallsgenerator komponiert A, B und C mit je vier Takten aus dem Tonmaterial, den Rhythmen und den Spieltechniken der entsprechenden Kursphasen. A kehrt wörtlich zurück: 12 neu erzeugte Takte ergeben 16 Spieltakte in A–B–A–C. Jeder Abschnitt zeigt seine vier Takte in einer durchgehenden Notenzeile; auf schmalen Bildschirmen lässt sie sich seitlich verschieben. Noten, Bandbegleitung, Anhören/Üben, Abschnittswahl, Einzählen, Schleife, Mix und MIDI-Ausgabe verwenden denselben Player wie das Repertoire. Ein Stück bleibt über seine URL und die letzte Auswahl im Browser wieder abrufbar; URL, Stücktitel und PDF verwenden dieselbe Kennung (`0x` und acht Hexadezimalstellen). Bereits gespeicherte URLs mit dezimaler Kennung bleiben lesbar. „Neues Stück“ erzeugt eine neue Miniatur. MIDI lässt sich herunterladen, die Noten lassen sich drucken oder als PDF speichern. Der Druck verkleinert die vier Notenzeilen bei Bedarf auf eine gemeinsame A4-Seite. Fortschritt und Notizen gehören zum konkreten Stück und Instrument.
 
 ## MIDI
 
@@ -139,7 +139,6 @@ Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beid
     "notes": [{"p": "E3", "d": "h", "s": 2, "fi": 1}, {"r": 1, "d": "h"}],
     "bass": [{"p": "E2", "d": "w", "s": 0}]
   },
-  "aids": ["strings", "fingers"],
   "backing": {"type": "click", "time": "4/4", "bars": 1, "drums": "half"}
 }
 ```

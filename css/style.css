@@ -86,4 +86,15 @@ footer{max-width:980px;margin:0 auto;padding:0 20px 28px;font-size:.85rem}
 @media print{.rep-section .scorewrap{zoom:.85}}
 
 #practice-controls .row label,#practice-controls select{max-width:100%}.practice-form{color:var(--acc);font-weight:600}
-@media print{#practice-controls,.practice-intro{display:none!important}.practice-heading{font-size:16pt}#repertoire-piece>h2{font-size:14pt}}
+@media print{
+  #practice-controls,.practice-intro,.practice-heading{display:none!important}
+  .practice-piece{height:260mm;display:flex;flex-direction:column;break-inside:avoid}
+  #repertoire-piece.practice-piece>h2{font-size:14pt;margin:0 0 2mm}
+  .practice-piece>.lead{font-size:10pt;margin:0 0 3mm}
+  .practice-piece #rep-scores{flex:1;min-height:0;display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:3mm}
+  .practice-piece .rep-section{margin:0;padding:0;min-height:0;display:flex;flex-direction:column;break-inside:avoid}
+  .practice-piece .rep-section h2{font-size:11pt;margin:0 0 1mm;flex:none}
+  .practice-piece .scorewrap{zoom:1;flex:1;min-height:0}
+  .practice-piece .svg{height:100%;width:100%}
+  .practice-piece svg.score{width:100%;height:100%;max-width:100%;max-height:100%}
+}

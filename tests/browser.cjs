@@ -26,7 +26,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     assert.equal(await page.locator('a[href="#/sync"]').count(),0);
     await page.goto(base+'/#/unit/u1-pedal');await page.waitForSelector('svg.score');
     assert.equal(await page.locator('svg.score .staff').count(),5);
-    assert.equal(await page.locator('[data-aid]:checked').count(),0);
+    assert.equal(await page.locator('[data-aid]').count(),0);
     await page.locator('.play').first().click();assert.match(await page.locator('.player .status').first().innerText(),/MIDI/);
     await page.selectOption('#language','en');assert.equal(await page.locator('h1').innerText(),'Pedal note and melody');
     await page.locator('[data-done]').first().check();
@@ -61,6 +61,8 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
       for(const id of unitIds) {
         await page.goto(base+'/#/unit/'+id);await page.waitForSelector('h1');await page.waitForTimeout(12);
         const text=await page.locator('main').innerText();assert(!/undefined|NaN/.test(text),id);
+        assert.equal(await page.locator('[data-aid]').count(),0,id + ': no note-name/fingering control');
+        assert(!/Pedalton:|Pedal tone:/.test(text),id + ': no pedal-tone captions');
         assert.equal(await page.locator('svg [cx="NaN"], svg [cy="NaN"]').count(),0,id);
       }
     }
@@ -92,17 +94,19 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     console.log('PASS advanced scores, accompaniment labels, mobile wrapping and preview cancellation');
     await page.goto(base+'/#/unit/u6-4');await page.waitForSelector('.harmonic-reference');
     assert.match(await page.locator('.harmonic-reference').first().textContent(),/Bass: E2/);
-    await page.goto(base+'/#/unit/u1-pedal');await page.waitForSelector('.harmonic-reference');
-    assert.match(await page.locator('.harmonic-reference').first().textContent(),/Pedalton: E2/);
+    await page.goto(base+'/#/unit/u1-pedal');await page.waitForSelector('svg.score');
+    assert.equal(await page.locator('#sce1-pedal-1 .harmonic-reference').count(),0);
     await page.selectOption('#language','en');
-    assert.match(await page.locator('.harmonic-reference').first().textContent(),/Pedal tone: E2/);
+    await page.waitForSelector('svg.score');
+    assert.equal(await page.locator('#sce1-pedal-1 .harmonic-reference').count(),0);
+    await page.goto(base+'/#/unit/u6-4');await page.waitForSelector('.harmonic-reference');
     await page.setViewportSize({width:390,height:844});
     await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
     assert(await page.locator('svg.score').first().evaluate(svg=>{
       const label=svg.querySelector('.harmonic-reference').getBBox();
       return [...svg.querySelectorAll('.head,.stem,.rest')].every(n=>{const b=n.getBBox();return b.y+b.height<label.y;});
     }),'bass references clear the lowest notes and stems');
-    await page.screenshot({path:'test-results/pedal-references-mobile.png',fullPage:true});
+    await page.screenshot({path:'test-results/bass-references-mobile.png',fullPage:true});
     await page.selectOption('#language','de');
     await page.goto(base+'/#/');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),2,'the course keeps two instrument tracks');
     assert.equal(await page.locator('nav a[href="#/theory"]').count(),1,'theory is a main menu item');

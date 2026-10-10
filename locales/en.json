@@ -3609,7 +3609,6 @@
     "playError": "Playback failed. Check the MIDI connection.",
     "fretboard": "Fretboard",
     "piano": "Keyboard aid",
-    "aids": "Show note names / fingering",
     "generate": "↻ New phrase",
     "listen": "▶ Listen",
     "preview": "Sound preview · loop",

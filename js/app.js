@@ -75,16 +75,15 @@
     return `<section class="illustration"><h3>${esc(v.title)}</h3>${content}${v.text ? md(v.text) : ''}</section>`;
   }
   function scoreBlock(ex,instrument) {
-    const id = 'sc' + ex.id, aids = ex.aids || [], shown = ex.show || [];
-    const html = `<div class="scorewrap" id="${id}"><div class="row small">${aids.length ? `<label><input type="checkbox" data-aid> ${t('aids')}</label>` : ''}
+    const id = 'sc' + ex.id, shown = ex.show || [];
+    const html = `<div class="scorewrap" id="${id}"><div class="row small">
       ${ex.generate ? `<button class="gen">${t('generate')}</button>` : ''}<button class="listen">${t('listen')}</button><span>${t('preview')}</span></div><p class="preview-status small" role="status"></p><div class="svg"></div>${ex.score.swing ? `<p class="small">${t('swingFeel')}</p>` : ''}${ex.score.repeat || ex.score.jump ? `<p class="small">${t('playOrder')}: ${AM.notation.barOrder(ex.score).join(' → ')}</p>` : ''}</div>`;
     setTimeout(() => {
       const el = document.getElementById(id); if (!el) return;
       const generate = () => AM.notation.generate({...ex.generate,time:ex.score.time});
       if (ex.generate && !generated.has(ex.id)) generated.set(ex.id,generate());
       const sc = () => ({...ex.score,notes:ex.generate ? generated.get(ex.id) : ex.score.notes,instrument});
-      const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries([...aids.map(k => [k,!!el.querySelector('[data-aid]')?.checked]),...shown.map(k => [k,true])]),Object.fromEntries(['bass','pedal','single','rest'].map(k => [k,t('reference' + k)])));
-      el.querySelector('[data-aid]')?.addEventListener('change',draw);
+      const draw = () => AM.notation.render(el.querySelector('.svg'),sc(),Object.fromEntries(shown.map(k => [k,true])),Object.fromEntries(['bass','pedal','single','rest'].map(k => [k,t('reference' + k)])));
       el.querySelector('.gen')?.addEventListener('click',() => { stop(); generated.set(ex.id,generate()); draw(); });
       el.querySelector('.listen').onclick = async () => {
         const button = el.querySelector('.listen'), status = el.querySelector('.preview-status');

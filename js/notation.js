@@ -211,7 +211,7 @@ AM.notation = (() => {
     const refs = references(sc);
     const barLen = AM.music.meter(sc.time).len * PPQ, bars = measures(sc), poly = sc.instrument === 'guitar' && !!sc.bass;
     const tr = sc.instrument === 'guitar' ? 7 : 0, x0 = 88 + M.keyAcc(sc.key || 'C').length * 9;
-    const width = el.clientWidth || Infinity, count = bars[0].length;
+    const width = sc.singleLine ? Infinity : el.clientWidth || Infinity, count = bars[0].length;
     const makeStaves = (from,to) => {
       const voice = (i,clef,direction,overlay = false) => ({clef,direction,overlay,from,notes:bars[i].slice(from,to).flat(),incoming:bars[i][from - 1]?.at(-1)?.tie ? pitches(bars[i][from - 1].at(-1)).map(M.midi) : null,outgoing:to < count});
       const staves = [voice(0,sc.clef || 'treble',poly || sc.inner ? 'up' : null)];
@@ -238,6 +238,7 @@ AM.notation = (() => {
       if (to === count) out += `<line x1="${xe + 4}" y1="${y0}" x2="${xe + 4}" y2="${lastBottom}" class="bar thick"/>`;
       if (staves.length > 1 && !poly) out += `<line x1="8" y1="${y0}" x2="8" y2="${lastBottom}" class="bar"/>`;
       const referenceLines = refs.slice(from,to).map((ref,i) => {
+        if (ref.kind === 'pedal') return [];
         const names = ref.tones.map(p => p || labels.rest || '—').join(' → ');
         const text = ref.kind === 'single' && (ref.chord || sc.chords?.some(Boolean)) ? '' : [labels[ref.kind],names].filter(Boolean).join(': ');
         const available = L.x.get((i + 1) * barLen) - L.x.get(i * barLen) - 16, lines = [];
