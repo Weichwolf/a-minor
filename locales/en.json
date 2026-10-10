@@ -3738,7 +3738,7 @@
     "difficulty": "Difficulty",
     "newPracticePiece": "↻ New piece",
     "practicePiece": "Practice piece",
-    "practiceForm": "A–B–A–C: 12 newly generated bars, 16 bars to play. Each section has four bars; A returns unchanged.",
+    "practiceForm": "Score: A–B–C · 12 bars. Play: A–B–A–C · 16 bars. Each section has four bars.",
     "practiceGrade0": "Phase 0: a small pitch range, quarters and halves, a steady bass and clear rests.",
     "practiceGrade1": "Phases 1–2: minor or Phrygian motifs, first eighths, power-chord answers and a steady left hand.",
     "practiceGrade2": "Phase 3: lament bass, syncopation, dotted values and first sixteenths.",

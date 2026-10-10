@@ -30,11 +30,11 @@ AM.scorePDF = (() => {
     copy.setAttribute('height',svg.viewBox.baseVal.height);
     return new XMLSerializer().serializeToString(copy);
   }
-  async function download(target,{title,description,filename}) {
+  async function download(target,{title,description,form,filename}) {
     const sections = [...target.querySelectorAll('.rep-section')].map(el => ({
       title:el.querySelector('h2').textContent.trim(),svg:notation(el.querySelector('svg.score'))
     }));
-    if (sections.length !== 4) throw Error('Expected four ABAC sections');
+    if (sections.length !== 3) throw Error('Expected three ABC sections');
     const url = location.href;
     const pdf = await engine();
     const blob = await pdf.createPdf({
@@ -43,10 +43,11 @@ AM.scorePDF = (() => {
       defaultStyle:{font:'DejaVuSans',fontSize:10},
       content:[
         {text:title,fontSize:16,bold:true,link:url,margin:[0,0,0,6]},
-        {text:description,color:'#555555',margin:[0,0,0,14]},
+        {text:description,color:'#555555',margin:[0,0,0,6]},
+        {text:form,fontSize:9,color:'#555555',margin:[0,0,0,14]},
         ...sections.map(section => ({unbreakable:true,stack:[
           {text:section.title,fontSize:11,bold:true,margin:[0,0,0,4]},
-          {svg:section.svg,fit:[527,140]}
+          {svg:section.svg,fit:[527,190]}
         ],margin:[0,0,0,12]}))
       ]
     }).getBlob();

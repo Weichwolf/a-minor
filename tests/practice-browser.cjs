@@ -21,9 +21,11 @@ module.exports=async(browser,base)=>{
   for(const lang of ['de','en']){
    await page.selectOption('#language',lang);
    for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
-    await go(instrument,grade,100+grade);assert.equal(await page.locator('.rep-section').count(),4);
-    assert.equal(await page.locator('.rep-section h2').allTextContents().then(x=>x.map(s=>s[0]).join('')),'ABAC');
-    assert.equal(await page.locator('svg.score').count(),4);assert(!/undefined|NaN/.test(await page.locator('main').innerText()));
+    await go(instrument,grade,100+grade);assert.equal(await page.locator('.rep-section').count(),3);
+    assert.equal(await page.locator('.rep-section h2').allTextContents().then(x=>x.map(s=>s[0]).join('')),'ABC');
+    assert.deepEqual(await page.locator('.rep-section .measure').allTextContents(),Array.from({length:12},(_,i)=>String(i+1)));
+    assert.deepEqual(await page.locator('#rep-section option').allTextContents(),[lang==='de'?'Ganzes Stück':'Whole piece','A · 1–4','B · 5–8','C · 9–12']);
+    assert.equal(await page.locator('svg.score').count(),3);assert(!/undefined|NaN/.test(await page.locator('main').innerText()));
     assert.equal(await page.locator('#rep-aids').count(),0);
     const identifier='0x'+(100+grade).toString(16).padStart(8,'0').toUpperCase();
     assert.equal(new URL(page.url()).hash.split('/').at(-1),identifier);
@@ -65,10 +67,29 @@ module.exports=async(browser,base)=>{
    await page.locator('[data-transport=listen]').click();
   }
   await go('keys',3,42);await page.uncheck('#rep-count');await page.locator('[data-transport=listen]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing');await page.locator('[data-transport=listen]').click();
+  await page.evaluate(()=>{
+   window.highlightOriginals={play:AM.soundfont.play,stop:AM.soundfont.stop,time:Object.getOwnPropertyDescriptor(AM.soundfont,'currentTime')};window.testPosition=0;
+   AM.soundfont.play=async bytes=>{window.playedSequence=AM.midi.decode(bytes);};AM.soundfont.stop=()=>{};
+   Object.defineProperty(AM.soundfont,'currentTime',{configurable:true,get:()=>testPosition});
+  });
+  await page.selectOption('#rep-section','all');await page.uncheck('#rep-loop');await page.locator('[data-transport=listen]').click();
+  await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing');
+  assert.equal(await page.evaluate(()=>playedSequence.markers.map(m=>m.label).join('')),'ABAC','whole-piece playback retains the repeated A');
+  for(const marker of await page.evaluate(()=>AM.repertoire.current.sequence.markers)){
+   const position=marker.t+.05;await page.evaluate(t=>testPosition=t,position);
+   await page.waitForFunction(({label,position})=>document.querySelectorAll('.rep-section.current').length===1&&document.querySelector('.rep-section.current h2').textContent.trim().startsWith(label+' ')&&Math.abs(document.querySelector('#rep-progress').value-position)<.001,{label:marker.label,position});
+  }
+  await page.selectOption('#rep-section','3');await page.evaluate(()=>testPosition=0);await page.locator('[data-transport=listen]').click();
+  await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing'&&document.querySelector('.rep-section.current h2')?.textContent.trim().startsWith('C '));
+  assert(await page.evaluate(()=>{
+   const seq=AM.repertoire.current.sequence,from=seq.markers[3].t,isNote=e=>e.data[0]===147&&e.data[2]>0;
+   return Math.abs(playedSequence.duration-(seq.duration-from))<.002&&playedSequence.events.find(isNote).data[1]===seq.events.find(e=>e.t>=from&&isNote(e)).data[1];
+  }),'selecting C plays its original MIDI excerpt');
+  await page.locator('[data-transport=listen]').click();await page.evaluate(()=>{AM.soundfont.play=highlightOriginals.play;AM.soundfont.stop=highlightOriginals.stop;Object.defineProperty(AM.soundfont,'currentTime',highlightOriginals.time);});
   const download=page.waitForEvent('download');await page.locator('.rep-downloads a[download]').click();const file=await download;assert.equal(fs.readFileSync(await file.path()).subarray(0,4).toString(),'MThd');
   await page.setViewportSize({width:390,height:844});
   for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
-   await go(instrument,grade,900+grade);assert.equal(await page.locator('svg.score').count(),4);assert.deepEqual(await page.locator('.rep-section').evaluateAll(items=>items.map(el=>el.querySelectorAll('.measure').length)),[4,4,4,4]);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),instrument+' Grade '+grade+' mobile overflow');
+   await go(instrument,grade,900+grade);assert.equal(await page.locator('svg.score').count(),3);assert.deepEqual(await page.locator('.rep-section').evaluateAll(items=>items.map(el=>el.querySelectorAll('.measure').length)),[4,4,4]);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),instrument+' Grade '+grade+' mobile overflow');
   }
   await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});
   assert.equal(pdfRequests.length,0,'PDF assets load only when requested');
@@ -81,8 +102,8 @@ module.exports=async(browser,base)=>{
    await page.selectOption('#language',lang);
    for(const instrument of ['guitar','keys'])for(let grade=0;grade<6;grade++){
     await go(instrument,grade,900+grade);
-    assert.equal(await page.locator('.rep-section svg.score').count(),4);
-    assert.equal(await page.locator('.rep-section .measure').count(),16);
+    assert.equal(await page.locator('.rep-section svg.score').count(),3);
+    assert.equal(await page.locator('.rep-section .measure').count(),12);
     const download=page.waitForEvent('download');await page.click('#rep-pdf');const file=await download;
     await file.saveAs('test-results/practice-'+instrument+'-grade'+grade+'-'+lang+'.pdf');
     const identifier=new URL(page.url()).hash.split('/').at(-1);
@@ -90,11 +111,11 @@ module.exports=async(browser,base)=>{
     assert(file.suggestedFilename().endsWith((instrument==='keys'?'Keyboard':lang==='de'?'Gitarre':'Guitar')+'.pdf'));
     const pdf=fs.readFileSync(await file.path());
     assert.equal(pdf.subarray(0,5).toString(),'%PDF-');assert(pdf.length>5000);
-    assert.equal((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length,1,instrument+' Grade '+grade+' '+lang+': ABAC on one PDF page');
+    assert.equal((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length,1,instrument+' Grade '+grade+' '+lang+': ABC on one PDF page');
     assert.equal(await page.locator('#rep-pdf').innerText(),lang==='de'?'PDF herunterladen':'Download PDF');
     assert.deepEqual(await page.evaluate(()=>({print:printCalls,popups:popupCalls})),{print:0,popups:0},'direct download opens no print dialog or popup');
    }
   }
-  assert.equal(popups,0);assert.deepEqual(errors,[]);console.log('PASS practice: six grades × two parts × two languages, generation, matching URL/PDF identifiers, logs, MIDI settings reload/reconnect, band playback, four-bar mobile rows and direct single-page ABAC PDF downloads with retry');
+  assert.equal(popups,0);assert.deepEqual(errors,[]);console.log('PASS practice: six grades × two parts × two languages, ABC notation with ABAC playback/highlights, matching URL/PDF identifiers, logs, MIDI settings reload/reconnect, band playback, four-bar mobile rows and direct single-page ABC PDF downloads with retry');
  }finally{await context.close();}
 };

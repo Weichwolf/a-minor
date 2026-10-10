@@ -91,7 +91,7 @@ footer{max-width:1600px;margin:0 auto;padding:0 20px 28px;font-size:.85rem}
   .practice-piece{height:260mm;display:flex;flex-direction:column;break-inside:avoid}
   #repertoire-piece.practice-piece>h2{font-size:14pt;margin:0 0 2mm}
   .practice-piece>.lead{font-size:10pt;margin:0 0 3mm}
-  .practice-piece #rep-scores{flex:1;min-height:0;display:grid;grid-template-rows:repeat(4,minmax(0,1fr));gap:3mm}
+  .practice-piece #rep-scores{flex:1;min-height:0;display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:3mm}
   .practice-piece .rep-section{margin:0;padding:0;min-height:0;display:flex;flex-direction:column;break-inside:avoid}
   .practice-piece .rep-section h2{font-size:11pt;margin:0 0 1mm;flex:none}
   .practice-piece .scorewrap{zoom:1;flex:1;min-height:0}
