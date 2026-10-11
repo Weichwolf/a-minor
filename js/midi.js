@@ -86,10 +86,12 @@ AM.midi = (() => {
     for(const ch of used)out.unshift({tick:0,data:[192|ch,program??(guitar?27:0)],order:-5});
     return encode(out,Math.round(duration*480));
   }
-  function excerpt(sequence,{from=0,to=sequence.duration,countIn=0,pulse=1}={}) {
+  function excerpt(sequence,{from=0,to=sequence.duration,countIn=0,pulse=1,channels:included}={}) {
     if(!Number.isFinite(from)||!Number.isFinite(to)||from<0||to<=from||to>sequence.duration+1e-6||!Number.isInteger(countIn)||countIn<0||countIn>12||!Number.isFinite(pulse)||pulse<=0)throw Error('Invalid MIDI excerpt');
+    if(included!==undefined&&(!Array.isArray(included)||!included.every(ch=>Number.isInteger(ch)&&ch>=0&&ch<16)))throw Error('Invalid MIDI channels');
+    const channelEvents=included===undefined?sequence.events:sequence.events.filter(e=>included.includes(e.data[0]&15));
     const delay=countIn*pulse, state=new Map(), held=new Map(), out=[{tick:0,data:tempo(60),order:-10}];
-    for(const e of sequence.events) {
+    for(const e of channelEvents) {
       if(e.t>=from)break;
       const [status,a,b]=e.data,kind=status>>4,ch=status&15,key=ch+':'+a;
       if(kind===9&&b>0){const ns=held.get(key)||[];ns.push(e.data);held.set(key,ns);}
@@ -98,10 +100,10 @@ AM.midi = (() => {
     }
     for(const data of state.values())out.push({tick:Math.round(delay*480),data,order:-5});
     for(const notes of held.values())for(const data of notes)out.push({tick:Math.round(delay*480),data,order:2});
-    for(const e of sequence.events)if(e.t>=from&&e.t<to)out.push({tick:Math.round((e.t-from+delay)*480),data:e.data});
+    for(const e of channelEvents)if(e.t>=from&&e.t<to)out.push({tick:Math.round((e.t-from+delay)*480),data:e.data});
     for(let i=0;i<countIn;i++){const tick=Math.round(i*pulse*480);out.push({tick,data:[153,37,i===0?95:65]},{tick:tick+24,data:[137,37,0]});}
     const end=Math.round((to-from+delay)*480);
-    for(const ch of new Set(sequence.events.map(e=>e.data[0]&15)))out.push({tick:end,data:[176|ch,64,0],order:3},{tick:end,data:[176|ch,123,0],order:4});
+    for(const ch of new Set([...channelEvents.map(e=>e.data[0]&15),...(countIn?[9]:[])]))out.push({tick:end,data:[176|ch,64,0],order:3},{tick:end,data:[176|ch,123,0],order:4});
     return encode(out,end);
   }
   return {channels,encode,decode,meta,text,tempo,notes,excerpt};

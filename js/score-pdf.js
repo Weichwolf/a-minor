@@ -30,11 +30,13 @@ AM.scorePDF = (() => {
     copy.setAttribute('height',svg.viewBox.baseVal.height);
     return new XMLSerializer().serializeToString(copy);
   }
-  async function download(target,{title,description,form,filename}) {
+  async function download(target,{title,description,form,theory='',filename}) {
     const sections = [...target.querySelectorAll('.rep-section')].map(el => ({
-      title:el.querySelector('h2').textContent.trim(),svg:notation(el.querySelector('svg.score'))
+      title:el.querySelector('h2').textContent.trim(),rows:[...el.querySelectorAll('svg.score')].map(notation)
     }));
-    if (sections.length !== 3) throw Error('Expected three ABC sections');
+    if (!sections.length || sections.some(s=>!s.rows.length)) throw Error('Empty score');
+    const rowCount=sections.reduce((n,s)=>n+s.rows.length,0),rowHeight=Math.min(190,Math.floor((594-sections.length*24)/rowCount)-8);
+    if(rowHeight<45)throw Error('Score too long for one page');
     const url = location.href;
     const pdf = await engine();
     const blob = await pdf.createPdf({
@@ -44,11 +46,12 @@ AM.scorePDF = (() => {
       content:[
         {text:title,fontSize:16,bold:true,link:url,margin:[0,0,0,6]},
         {text:description,color:'#555555',margin:[0,0,0,6]},
-        {text:form,fontSize:9,color:'#555555',margin:[0,0,0,14]},
+        {text:theory,fontSize:9,margin:[0,0,0,8]},
+        {text:form,fontSize:9,color:'#555555',margin:[0,0,0,12]},
         ...sections.map(section => ({unbreakable:true,stack:[
           {text:section.title,fontSize:11,bold:true,margin:[0,0,0,4]},
-          {svg:section.svg,fit:[527,190]}
-        ],margin:[0,0,0,12]}))
+          ...section.rows.map(svg=>({svg,fit:[527,rowHeight],margin:[0,0,0,6]}))
+        ],margin:[0,0,0,8]}))
       ]
     }).getBlob();
     const href = URL.createObjectURL(blob), a = document.createElement('a');

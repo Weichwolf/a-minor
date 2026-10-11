@@ -1,41 +1,31 @@
 AM.practice = (() => {
-  const I=AM.i18n,t=I.t,K='a-minor-practice';
-  const instruments=['guitar','keys'],title=instrument=>t(instrument==='guitar'?'guitarInstrument':'keyboardInstrument');
-  const seed=()=>crypto.getRandomValues(new Uint32Array(1))[0];
-  const validGrade=g=>Number.isInteger(g)&&g>=0&&g<=5;
-  const validSeed=s=>Number.isInteger(s)&&s>=0&&s<=0xffffffff;
-  let saved={};
-  try {
-    const value=JSON.parse(localStorage.getItem(K));
-    for(const instrument of instruments)if(validGrade(value?.[instrument]?.grade)&&validSeed(value[instrument].seed))saved[instrument]={grade:value[instrument].grade,seed:value[instrument].seed};
-  } catch {}
-  const identifier=n=>'0x'+n.toString(16).padStart(8,'0').toUpperCase();
-  const link=(instrument,grade,n)=>'#/practice/'+instrument+'/'+grade+'/'+identifier(n);
-  const pieceTitle=(grade,n)=>t('practicePiece')+' · Grade '+grade+' · '+identifier(n);
-  function page(spec='') {
-    const [instrument,gradeText,seedText]=spec.split('/');
-    if (!instruments.includes(instrument)) return `<h1>${t('practiceMode')}</h1><p class="lead">${t('practiceLead')}</p><div class="tracks">${instruments.map(k=>`<a class="track" href="#/practice/${k}"><h2>${title(k)}</h2><p>${t(k==='guitar'?'repertoireGuitar':'repertoireKeys')}</p><p class="meta">Grade 0–5 · A–B–A–C · 16 ${t('bars')}</p></a>`).join('')}</div>`;
-    const remembered=saved?.[instrument],requestedGrade=gradeText===undefined?remembered?.grade:Number(gradeText);
-    const grade=validGrade(requestedGrade)?requestedGrade:0,requestedSeed=seedText===undefined&&remembered?.grade===grade?remembered.seed:seedText===undefined?undefined:Number(seedText);
-    const n=validSeed(requestedSeed)?requestedSeed:seed(),url=link(instrument,grade,n);
-    history.replaceState(null,'',url);
-    saved={...saved,[instrument]:{grade,seed:n}};
-    try { localStorage.setItem(K,JSON.stringify(saved)); } catch {}
-    const {piece,score,bytes}=AM.practiceGenerator.generate(grade,n);
-    piece.title=pieceTitle(grade,n);
-    const other=instrument==='guitar'?'keys':'guitar';
-    setTimeout(()=>{
-      const controls=document.querySelector('#practice-controls');if (!controls || location.hash!==url) return;
-      controls.querySelector('select').onchange=e=>{location.hash=link(instrument,Number(e.target.value),seed());};
-      controls.querySelector('button').onclick=()=>{let next=seed();if(next===n)next=(next+1)>>>0;location.hash=link(instrument,grade,next);};
-    },0);
-    return `<nav class="crumbs"><a href="#/practice">${t('practiceMode')}</a> › ${title(instrument)}</nav><h1 class="practice-heading">${t('practiceMode')} · ${title(instrument)}</h1><p class="lead practice-intro">${t('practiceLead')}</p>
-      <div class="player" id="practice-controls"><div class="row"><label>${t('difficulty')} <select id="practice-grade">${Array.from({length:6},(_,i)=>`<option value="${i}"${i===grade?' selected':''}>Grade ${i} · ${t('repertoireGrade'+i)}</option>`).join('')}</select></label><button id="practice-new">${t('newPracticePiece')}</button></div></div>
-      ${AM.repertoire.generated(piece,instrument,score,bytes,{exerciseId:'practice-'+instrument+'-'+grade+'-'+n,otherPartHref:link(other,grade,n),description:t('practiceGrade'+grade),formText:t('practiceForm')+' · '+t('scale_'+piece.scale)})}`;
+  const t=k=>AM.i18n.t(k),K='a-minor-practice',C=AM.practiceComposer,instruments=['guitar','keys'];
+  const title=i=>t(i==='guitar'?'guitarInstrument':'keyboardInstrument'),seed=()=>crypto.getRandomValues(new Uint32Array(1))[0];
+  const validGrade=g=>Number.isInteger(g)&&g>=0&&g<=5,validSeed=s=>Number.isInteger(s)&&s>=0&&s<=0xffffffff;
+  const validStyle=s=>['mixed',...C.styles].includes(s),identifier=n=>'0x'+n.toString(16).padStart(8,'0').toUpperCase();
+  const link=(i,g,n,style)=>`#/practice/${i}/${g}/`+(style===undefined?'':style+'/')+identifier(n);
+  let saved={};try{const v=JSON.parse(localStorage.getItem(K));for(const i of instruments)if(validGrade(v?.[i]?.grade)&&validSeed(v[i].seed))saved[i]={grade:v[i].grade,seed:v[i].seed,style:validStyle(v[i].style)?v[i].style:'cinematic'};}catch{}
+  function page(spec=''){
+    const [instrument,gText,styleOrSeed,nText]=spec.split('/');
+    if(!instruments.includes(instrument))return `<h1>${t('practiceMode')}</h1><p class="lead">${t('practiceLead')}</p><div class="tracks">${instruments.map(i=>`<a class="track" href="#/practice/${i}"><h2>${title(i)}</h2><p>${t(i==='guitar'?'practiceGuitarLead':'practiceKeysLead')}</p><p class="meta">Grade 0–5 · ${t('styleChoice')}</p></a>`).join('')}</div>`;
+    const previous=saved[instrument],g=gText===undefined?previous?.grade:Number(gText),grade=validGrade(g)?g:0;
+    const legacy=styleOrSeed!==undefined&&!validStyle(styleOrSeed)&&nText===undefined;
+    const style=legacy?undefined:validStyle(styleOrSeed)?styleOrSeed:previous?.style??'cinematic';
+    const requested=nText!==undefined?Number(nText):legacy?Number(styleOrSeed):gText===undefined?previous?.seed:undefined,n=validSeed(requested)?requested:seed();
+    const url=link(instrument,grade,n,style);history.replaceState(null,'',url);saved[instrument]={grade,seed:n,style:style??'mixed'};
+    try{localStorage.setItem(K,JSON.stringify(saved));}catch{}
+    const bookmark=AM.bookmarks.fromURL(url),result=bookmark?{piece:bookmark.piece,score:bookmark.piece,bytes:AM.practiceGenerator.encode(bookmark.piece)}:legacy?AM.practiceGenerator.generate(grade,n):C.generate(grade,n,style);
+    const {piece,score,bytes}=result;piece.title=t('practicePiece')+' · '+t('style_'+(piece.style??'legacy'))+' · Grade '+grade+' · '+identifier(n);
+    const selectedStyle=style??'mixed';
+    const controlsHTML=`<span id="practice-controls"><label>${t('difficulty')} <select id="practice-grade">${Array.from({length:6},(_,i)=>`<option value="${i}"${i===grade?' selected':''}>Grade ${i}</option>`).join('')}</select></label><label>${t('style')} <select id="practice-style">${['mixed',...C.styles].map(s=>`<option value="${s}"${s===selectedStyle?' selected':''}>${t('style_'+s)}</option>`).join('')}</select></label><button id="practice-new">${t('newPracticePiece')}</button><button id="piece-bookmark" aria-pressed="false">☆ ${t('bookmark')}</button></span>`;
+    const formText=t('pieceForm').replace('{form}',piece.sections.map(s=>s.name).join('–')).replace('{written}',piece.uniqueBars).replace('{played}',piece.bars);
+    return AM.repertoire.generated(piece,instrument,score,bytes,{otherPartHref:link(instrument==='guitar'?'keys':'guitar',grade,n,style),formText,infoHTML:AM.practiceInfo.html(piece,instrument),controlsHTML,onReady:target=>{
+      if(location.hash!==url)return;
+      const change=()=>{location.hash=link(instrument,Number(target.querySelector('#practice-grade').value),seed(),target.querySelector('#practice-style').value);};
+      target.querySelector('#practice-grade').onchange=change;target.querySelector('#practice-style').onchange=change;
+      target.querySelector('#practice-new').onclick=()=>{let next=seed();if(next===n)next=(next+1)>>>0;location.hash=link(instrument,grade,next,selectedStyle);};
+      AM.bookmarks.bindPiece(target,piece,instrument,url);
+    }});
   }
-  function logEntry(id) {
-    const match=/^practice-(guitar|keys)-([0-5])-(\d+)$/.exec(id);if (!match || !validSeed(Number(match[3]))) return;
-    const grade=Number(match[2]),n=Number(match[3]);return {title:pieceTitle(grade,n)+' · '+title(match[1]),href:link(match[1],grade,n)};
-  }
-  return {page,logEntry};
+  return{page,link,identifier};
 })();

@@ -148,7 +148,7 @@ AM.practiceGenerator = (() => {
     return {piece,score:piece,bytes:encode(piece)};
   }
   function encode(piece) {
-    const events=[{tick:0,data:MIDI.text(3,'a-minor · ABAC · Grade '+piece.grade),order:-10}];
+    const events=[{tick:0,data:MIDI.text(3,'a-minor · '+piece.form+' · Grade '+piece.grade),order:-10}];
     for (const [role,ch] of Object.entries(MIDI.channels)) events.push(
       {tick:0,data:[176|ch,121,0],order:-9},{tick:0,data:[176|ch,0,0],order:-8},{tick:0,data:[176|ch,32,0],order:-8},
       {tick:0,data:[192|ch,piece.programs[role]],order:-7},{tick:0,data:[176|ch,7,{guitar:100,keys:82,bass:88,drums:80}[role]],order:-6}
@@ -165,7 +165,7 @@ AM.practiceGenerator = (() => {
         {tick:Math.round(beat*480),data:MIDI.meta(88,[m.n,Math.log2(m.d),m.compound?36:24,8]),order:-10},
         {tick:Math.round(beat*480),data:MIDI.meta(89,[(sf+256)%256,piece.key.endsWith('m')?1:0]),order:-10});
       for (const bar of section.bars) {
-        for (const role of ['guitar','keys']) for (const n of N.events({...bar[role],time:bar.time})) note(n,MIDI.channels[role],bar.dynamics[role]+(n.accent?10:0)-(n.voice===1?12:0));
+        for (const role of ['guitar','keys']) for (const n of N.events({...bar[role],time:bar.time,swing:bar.swing})) note(n,MIDI.channels[role],bar.dynamics[role]+(n.accent?10:0)-(n.voice===1?12:0));
         for (const n of N.events({notes:bar.bass,time:bar.time})) note(n,MIDI.channels.bass,bar.dynamics.bass);
         for (const n of bar.drums) note(n,MIDI.channels.drums,n.velocity);
         beat+=m.len;
@@ -173,5 +173,5 @@ AM.practiceGenerator = (() => {
     }
     return MIDI.encode(events,Math.round(beat*480));
   }
-  return {generate,profiles};
+  return {generate,profiles,encode};
 })();

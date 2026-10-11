@@ -1,177 +1,103 @@
 # a-minor
 
-Zweisprachiger Improvisationskurs für P4-Gitarre und Keyboard mit eigenständigem Lehrbuch der Musiktheorie. Notenlesen, Gehör, Harmonik, Klang und selbstständiges Solospiel wachsen gemeinsam.
+Musik verstehen und sicher ab Noten spielen: für P4-Gitarre (E2 A2 D3 G3 C4 F4) und Keyboard (49 Tasten, C2–C6). Zweisprachig Deutsch/Englisch, statisch und ohne Benutzerkonto.
 
-- **Gitarre:** E2 A2 D3 G3 C4 F4. Offene Pedaltöne und Melodie, später Arpeggien, Akkorde und bewegter Bass. Noten mit Lageangabe; keine Tabs.
-- **Keyboard:** 49 Tasten, Synthesizer und Klavier. Bass links, Melodie rechts; zunächst ein Klang ohne verpflichtenden Split.
-- **Theorie:** eigenständiges Lehrbuch „Musiklehre“ im Hauptmenü, acht Teile mit 30 Kapiteln und fünf Anhängen, 224 notierte Beispiele mit Klangvorschau, keine Aufgaben. Allgemeine Musiktheorie, zugeschnitten auf E–A–D, das tiefe Register, den verzerrten Klang und die fünf Referenzen: Ton und Schrift, Tonleitern und Modi, Akkorde und Harmonik, Rhythmus, Satz, Klang, Form, die Referenzen.
-- **Referenzen:** My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*). Stilistische und geschmackliche Leitlinie; keine Beschränkung von Tonarten, Tempi, Formen oder Techniken. Eigene musikalische Gedanken statt festgelegter Coverstücke.
-
-## Stand
-
-Phase 0–8 beider Instrumente ist ausgearbeitet. Phase 2–8 umfasst 7 × (7 + 6) + 4 = 95 Einheiten. Jede hat Notenbeispiel, gezielte Variation und eigene Anwendung: 95 × 3 = 285 Aufgaben. Mit den 53 Aufgaben aus Phase 0–1 sind es 338. Die Erweiterung vermittelt Powerchord-Achtel, Sechzehntel/Gallop, rhythmische Dreiklang-/Septakkordbegleitung und linke Keyboardakkorde unter einer Melodie. Das P4-Griffbrett ist als eigenständige Ansicht im Hauptmenü verfügbar.
-
-Die Musiklehre ist ein eigenes Buch neben dem Kurs (Menüpunkt **Theorie**, `#/theory`): acht Teile mit 30 durchnummerierten Kapiteln und fünf mit Buchstaben bezeichnete Anhänge. Jedes Kapitel beginnt mit einer Orientierung, führt seine Begriffe in nummerierten Abschnitten in kleinen Schritten ein, stellt jedem Begriff ein notiertes Beispiel mit Erklärung gegenüber („Beispiel 8.3“) und endet mit einer Zusammenfassung in Merksätzen. 224 Beispiele mit Klangvorschau, mindestens fünf pro Kapitel; die Anhänge sind Tabellen zum Nachschlagen. Keine Aufgaben, keine Checklisten, kein Begleit-Player, keine Fortschrittsmarkierung und keine Gerätehandbücher: Das Buch nennt keine spezifischen Geräte, Synthese, Effekte und Drums werden allgemein behandelt. Aussagen über die Referenzen beschränken sich auf belegte Fakten (Besetzung, Stimmung, Form, Veröffentlichung); die 338 Aufgaben bleiben in den Instrumentalspuren. Zwei Orientierungskapitel legen die Töne auf die Instrumente: Griffbrett und Tastatur (Saiten, Bünde, Lagen, 49 Tasten von C2 bis C6) sowie Tonarten und Tonleitern in der Praxis (Skalenmuster der P4-Gitarre, dasselbe Griffbild für E, A und D, Fingersätze und schwarze Tasten).
-
-Der [fachliche Abgleich](docs/COURSE_AUDIT.md) dokumentiert Fehlerkorrekturen, die lokale Gigajam-Sammlung Debut–Grade Five, erkannte Lücken und die Grenzen des Vergleichs. Die im Abgleich erkannten Fähigkeiten sind jetzt mit konkreten Übungen verknüpft. Das ist keine Zusicherung einer Prüfungsgleichwertigkeit; formale Abschlusskriterien liegen nicht vor. Der [vollständige Lernweg](docs/CURRICULUM.md) verlinkt jede neue Einheit.
-
-| Phase | Instrumente |
-|---|---|
-| 0 | Ton, P4-Orientierung, Noten, Puls, Dämpfung, unabhängige Stimmen |
-| 1 | Motiv, Variation, Pedalton/Melodie, Äolisch/Phrygisch, eigene Miniatur |
-| 2 | Zweiklänge, Dreiklänge, Arpeggien, Akzente und Rhythmusgitarre |
-| 3 | Bewegter Bass, Lamento, Synkopen, Sechzehntel, Formzeichen |
-| 4 | Harmonisch Moll, Sext-/Septakkorde, Akkordsymbole und Stimmführung |
-| 5 | Sequenzen, Figuration, Triolen, 12/8, Shuffle und Swing |
-| 6 | Quarten, Lydisch, Register und Klangkontraste |
-| 7 | Gruppierung, ungerade Takte, Solo und Rückkehr in die Form |
-| 8 | Eigenständiges Arrangement mit Bass, Melodie, Arpeggien und Akkorden |
-
-Musiklehre:
-
-| Teil | Kapitel |
-|---|---|
-| I Ton und Schrift | 1 Der Ton · 2 Die Notenschrift der Tonhöhe · 3 Griffbrett und Tastatur: wo die Töne liegen · 4 Die Notenschrift der Zeit · 5 Intervalle |
-| II Tonleitern, Modi, Tonarten | 6 Dur, Moll und die Tonarten · 7 Modi, Pentatonik, Chromatik · 8 Stimmung und Instrument · 9 Tonarten und Tonleitern in der Praxis |
-| III Akkorde und Harmonik | 10 Dreiklänge · 11 Terzlose Klänge: Powerchord, Quarten, Vorhaltsakkorde · 12 Vierklänge und Akkordsymbole · 13 Kadenz und Funktion · 14 Stimmführung · 15 Erweiterte Harmonik · 16 Bassmodelle und Sequenzen |
-| IV Rhythmus und Zeit | 17 Metrum und Unterteilung · 18 Tempo und Zeitgestaltung · 19 Das Schlagzeug |
-| V Satz | 20 Der zweistimmige Satz · 21 Melodie und Bass · 22 Der mehrschichtige Satz |
-| VI Klang | 23 Gitarre und Verstärker · 24 Synthesizer · 25 Delay und Hall |
-| VII Form | 26 Motiv, Phrase, Periode · 27 Wiederholung als Form · 28 Suite, Variation, Programm |
-| VIII Die Referenzen | 29 Die fünf Referenzen · 30 Hören, Analysieren, Schreiben |
-| Anhänge | A Akustik und Stimmung · B Verzerrung und Intermodulation · C Delay-Mathematik und Zeitwerte · D Akkordsymbol-Referenz · E Glossar |
-
-## Musikalische Formen und Anschaulichkeit
-
-Alle 139 notierten Kursaufgaben, einschließlich vier Lesegeneratoren, umfassen mindestens vier Takte. 63 Aufgaben verwenden ausdrücklich A–B–A–C: Motiv, Antwort, wörtliche Wiederkehr, Schluss. Sequenzen, Kadenzen und größere Formen behalten ihren eigenen Aufbau. Begleitlängen und Texte beider Sprachen folgen den Noten. Die übrigen Aufgaben entwickeln daraus Varianten, Hörvergleiche und eigene Stücke.
-
-Das Hauptmenü enthält **Griffbrett** (`#/fretboard`): sechs P4-Saiten, Grundton, Skala, Tonname oder Intervall, bis Bund 24. Die Musiklehre ergänzt die Noten um 47 sichtbare Darstellungen: konkrete Grifforte, Tastaturkarten im Bereich C2–C6, Rhythmusraster, Formabläufe, Signalweg und ADSR. Griffkarten zeigen entweder die notierten Orte oder einen ausdrücklich bezeichneten Tonvorrat; sie sind nicht automatisch Akkordgriffe. Breite Karten scrollen innerhalb ihrer Ansicht.
-
-Die [musikalische Revision](docs/MUSICAL_REVIEW.md) dokumentiert Aufgaben- und Partiturbeurteilung, konkrete Korrekturen und Prüfgrenzen. Der [vollständige Gigajam-Abgleich](docs/GIGAJAM_COVERAGE.md) erfasst alle 60 Gitarren-/Keyboardparts auf sämtlichen Seiten und verknüpft ihre Spielanforderungen mit dem Kurs.
-
-## Übezeit
-
-Vier Sitzungen zu je einer Stunde. Drei mit 45 Minuten Gitarre und 15 Minuten Keyboard, eine mit umgekehrter Gewichtung:
-Gitarre 3 × 45 + 15 = 150 Minuten; Keyboard 3 × 15 + 45 = 90 Minuten pro Woche.
-
-Theorie kommt dazu: ein Kapitel pro Woche lesen, jedes Beispiel in der Vorschau hören und nach Wunsch nachspielen, die Zusammenfassung am Ende wiederholen. Etwa 45 Minuten außerhalb der Instrumentalzeit; nichts davon wird markiert.
-
-Eine Einheit pro Instrument bearbeiten. Bereits sichere Aufgaben dienen als Einstiegskontrolle. Hören/singen → spielen → wiederholen → genau eine Eigenschaft verändern → aufnehmen und vergleichen. „Sicher abrufbar“ erst nach Wiederholung an zwei Übetagen ohne Hilfen. Bestehende Markierungen bleiben erhalten; überarbeitete Übungen erneut prüfen.
+Das Hauptmenü enthält **Theorie | Praxis | Griffbrett | MIDI | Bookmarks**. Praxis zeigt ausschließlich generierte Stücke, ihre musikalische Einordnung und die Bedienelemente. Technik und Koordination sind Teil der Stücke. Es gibt keine Aufgabenlisten, Abschlussmarkierungen oder Lernfortschrittsanzeigen.
 
 ## Start
 
 Online: [a-minor.ch](https://a-minor.ch).
 
-Lokal im Projektverzeichnis:
-
 ```sh
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-`http://localhost:8000` öffnen. Kein Build. Keine Laufzeitabhängigkeiten. JSON-Dateien werden geladen; direktes Öffnen per `file://` wird nicht unterstützt. Web MIDI benötigt eine passende Browserimplementierung und einen sicheren Kontext wie HTTPS oder localhost.
+`http://localhost:8000` öffnen. Kein Build erforderlich; `file://` wird nicht unterstützt. Web MIDI benötigt einen unterstützenden Browser und HTTPS oder localhost. Notenschrift, Audio-Engine, SoundFont, PDF-Engine und Schrift werden lokal ausgeliefert.
 
-Deutsch/Englisch oben umschalten. Auswahl und Fortschritt bleiben im Browser. Noten, Tonmaterial, Takt und Lage gehören zur Aufgabe. Sichtbare Begleitregler: Start/Stopp, Tempo und **Begleitung** mit genau den Optionen **Klick** und **Drums**. Das passende Muster gehört zur Aufgabe. Noten brechen an Taktgrenzen in neue Systeme um; dichte Einzeltakte bleiben bei Bedarf horizontal scrollbar. Diagramme sind eingeklappt. Der Schalter für Tonnamen/Fingersätze entfällt; die fest beschrifteten Lehrbeispiele der Musiklehre behalten ihre didaktischen Angaben. Pedalton-Beschriftungen werden unter den Noten nicht angezeigt.
+## Praxis
 
-## Übungsmodus
+Instrument, Grade 0–5 und Stil wählen. **Rock, Doom, Gothic, Progressive, Barock, Lounge, Filmmusik** stehen in jedem Grade zur Verfügung; **Gemischt** wählt einen Stil zufällig. Filmmusik ist die erste Auswahl. Keyboardstücke enthalten Melodie und eigene Begleitung und können solo gespielt werden. Solo und Band sind getrennte Wiedergabeoptionen.
 
-Im **Übungsmodus** (`#/practice`) wählt man Gitarre oder Keyboard und Grade 0–5. Der Zufallsgenerator komponiert A, B und C mit je vier Takten aus dem Tonmaterial, den Rhythmen und den Spieltechniken der entsprechenden Kursphasen. Seite und PDF notieren nur A–B–C, fortlaufend als Takte 1–12. Gespielt wird A–B–A–C: A kehrt wörtlich zurück, sodass die 12 neu erzeugten Takte 16 Spieltakte ergeben. Die Wiedergabemarkierung springt beim zweiten A zurück zur ersten Notenzeile. Jeder Abschnitt zeigt seine vier Takte in einer durchgehenden Notenzeile; auf schmalen Bildschirmen lässt sie sich seitlich verschieben. Noten, Bandbegleitung, Anhören/Üben, Abschnittswahl, Einzählen, Schleife, Mix und MIDI-Ausgabe verwenden denselben Player wie das Repertoire. Ein Stück bleibt über seine URL und die letzte Auswahl im Browser wieder abrufbar; URL, Stücktitel und PDF verwenden dieselbe Kennung (`0x` und acht Hexadezimalstellen). Bereits gespeicherte URLs mit dezimaler Kennung bleiben lesbar. „Neues Stück“ erzeugt eine neue Miniatur. MIDI lässt sich herunterladen; „PDF herunterladen“ lädt die Noten direkt als Datei ohne Druckdialog. Der PDF-Export passt die drei Notenzeilen als Vektorgrafiken mit einem Hinweis zur Spielfolge auf eine gemeinsame A4-Seite ein. Die Kennung steht im PDF-Titel und Dateinamen; der Titel verlinkt das Stück. Fortschritt und Notizen gehören zum konkreten Stück und Instrument. [PDF-Engine, Schrift und Lizenzen](assets/vendor/pdfmake/README.md).
+Der Generator verbindet eine wiedererkennbare rhythmische Zelle und Kontur mit Harmonie, Kontrast, Rückkehr und Schluss. Jede Miniatur erhält einen Schwerpunkt. Die Bedingungen der Spielbarkeit bleiben vom Stil unabhängig: vollständige Takte, P4-Positionen, erreichbare Griffe und Keyboardlagen. Ein Stil erfordert deshalb nicht automatisch einen hohen Grade.
 
-## MIDI
+| Grade | Musikalische Anforderungen | Formen und Längen |
+|---|---|---|
+| 0 | Drei bis fünf Melodietöne, Viertel/Halbe, ruhiger Bass, Wiedererkennung und Schluss | AA/AB, Abschnitte mit 2 oder 4 Takten; 4–8 gespielte Takte |
+| 1 | Achtel oder Akkordwechsel, einfache Gitarrenquinten, lange Keyboardbasstöne | AB/ABA; 8–12 Takte; 4/4, gelegentlich 3/4 |
+| 2 | Synkope, Punktierung oder kurze Sechzehntelgruppe; Grundton/Quinte im Keyboardbass | AA′B/ABAC; 12–16 Takte |
+| 3 | Arpeggio, Triole, 12/8 oder gerichteter Mollschluss; Begleitung trägt Akkordtöne | ABA/AABA/ABAC; 12–16 Takte |
+| 4 | Lydische Farbe, Sequenz, Phrasierung oder 5/8 bzw. 7/8; Lounge erhält Septakkorde | ABA′/ABAC/ABACA, gelegentlich verkürzte Rückkehr; 11–20 Takte |
+| 5 | Melodie-/Begleitwechsel der Keyboardhände, Comping, Motiventwicklung oder mehrteiliger Verlauf | AABA/AA′BA/ABACA, Intro/Coda oder 8-Takt-Abschnitte; 16–24 Takte |
 
-Unter **MIDI** Ausgänge suchen und Gerät wählen. Klick/Drums ausschließlich als Noten auf Kanal 10. Ohne verbundenes Gerät startet die Begleitung nicht. Keine MIDI-Clock, kein Fernstart eines Gerätepatterns, keine Program Changes.
+Stilbezogene Varianten verändern diese Auswahl innerhalb der Spielgrenzen. Die Grade orientieren sich an der bisherigen Inhaltsfolge und dem [lokalen Gigajam-Abgleich](docs/GIGAJAM_COVERAGE.md), nicht an formalen Prüfungszusagen. Der Generator bildet noch keine komplette Ausbildung für lange Bandformen, alle Gitarrentechniken oder jedes Originaltempo ab. Die [didaktischen Entscheidungen und Grenzen](docs/PRACTICE_DIDACTICS.md) beschreiben den tatsächlichen Umfang.
 
-Der globale Standardausgang und die getrennten Ausgänge pro Stimme werden im Browser gespeichert und beim nächsten Besuch wiederhergestellt. Getrennte Geräte bleiben vorgemerkt und werden bei Wiederverbindung erneut zugeordnet; die Browserberechtigung für MIDI bleibt erforderlich. Kurs, Repertoire und Übungsmodus verwenden diese gemeinsamen Einstellungen.
+Ein kurzer Absatz nennt Stil, Tonzentrum/Modus, Taktart, Form, tatsächliche Akkordfolgen, Intervalle und Notenwerte sowie den Grund für den Schwerpunkt. Ab Grade 2 stehen Stufen bei den Akkorden. Er enthält keine ausgeschriebene Lösung der Melodie und keine zusätzlichen Übungsaufträge.
 
-| Klang | MIDI-Note |
-|---|---|
-| Kick | 36 |
-| Snare | 38 |
-| Geschlossene Hi-Hat | 42 |
-| Klick/Rim | 37 |
+Wörtlich wiederkehrende Abschnitte werden einmal notiert. A′ erhält eigene Noten. Vier Takte bleiben in einer Zeile; acht Takte erscheinen in zwei Viererzeilen. Mobile Notenzeilen scrollen innerhalb ihrer Ansicht. Die Wiedergabemarkierung folgt der vollständigen Form und springt bei einer Wiederholung zum bereits notierten Abschnitt zurück.
 
-Externer Synthesizer oder Schlagzeugklangerzeuger: Empfang auf MIDI-Kanal 10 und passende Notenzuordnung einrichten. USB-MIDI direkt oder DIN-MIDI über ein Interface verbinden. Die MIDI-Ansicht beschreibt die Einrichtung ohne gerätespezifische Menünamen. Gerätetests stehen noch aus.
+**Anhören** spielt die eigene Stimme normal, **Üben** mit der gewählten Führungslautstärke. Tempo, Abschnitt, Einzähler, Schleife und kompakter Mixer gehören zum selben Player. Der Einzähler bleibt auch bei Solo hörbar. **MIDI** lädt die komplette gemeinsame MIDI-Datei; **PDF herunterladen** erzeugt direkt eine einseitige A4-Partitur als Vektorgrafik, ohne Druckdialog oder neues Fenster. URL, Titel und PDF-Dateiname verwenden dieselbe Kennung (`0x` plus acht Hexadezimalstellen).
 
-Alle Drum-Muster enthalten geschlossene Hi-Hat (Note 42) mit hörbar gewichteten MIDI-Velocities. Half-time: Kick auf 1, Snare auf 3, Viertel-Hi-Hat. Gerade Begleitung: Kick auf 1/3, Snare auf 2/4, Achtel-Hi-Hat. Shuffle verwendet lange/kurze Achtel im Übeverhältnis 2:1. In 12/8 sind es vier große Pulse mit je drei Hi-Hat-Achteln; 5/8 und 7/8 betonen die vorgegebenen Gruppen. Auch 3/4 bietet Klick und Drums.
+Neue URLs enthalten Instrument, Grade, gewählten Stil und Seed, beispielsweise `#/practice/keys/2/cinematic/0x00000011`. Die letzte Auswahl bleibt im Browser. Alte URLs ohne Stil behalten den bisherigen ABAC-Generator: zwölf notierte ABC-Takte, sechzehn gespielte ABAC-Takte. Alte dezimale Seeds werden weiterhin gelesen.
 
-Tempoeinheit direkt am Regler: ♩ bei einfachen Vierteltakten, ♩. bei 6/8, 9/8 und 12/8, ♪ bei 5/8 und 7/8. Vorschau und MIDI verwenden dieselbe Einheit. Die Kursbegleitung sendet Klick/Drums; im Repertoire spielt ein vollständiges Quartett. Die Notenvorschau verwendet lokal ausgeliefertes FluidR3 GM (Frank Wen, MIT) mit SpessaSynth (Apache-2.0); sie berücksichtigt Stimmen, Haltebögen, Akzente, Staccato, Bend-Zielton, Swing und Formabläufe. Sie simuliert keine Gitarren-Anschlagtechnik. Die Notenschrift setzt Schlüssel, Pausen, Fähnchen, Vorzeichen, Wiederholungs- und Sprungzeichen als Umrisse der SMuFL-Schrift Bravura (Steinberg, SIL Open Font License 1.1, `assets/glyphs/OFL.txt`); Notenköpfe, Hälse, Balken und Bögen zeichnet der Renderer selbst.
+## Bookmarks und Datensicherung
 
-„Anhören“ wiederholt die vollständige notierte Form einschließlich Pausen bis zum Stoppen. Ausklänge dürfen über die Loop-Grenze reichen, ohne den nächsten Einsatz zu verzögern. SpessaSynth spielt die lokale FluidR3-Auswahl mit Sample-Loops, Velocity, Hüllkurven und Release. Die SoundFont-Datei wird beim ersten Abspielen geladen: 34.336.802 Bytes / 1024² ≈ 32,7 MiB. Stoppen blendet aus und verwirft geplante Einsätze; abgebrochenes Laden startet später nicht selbstständig.
+Der Stern speichert das Stück für das ausgewählte Instrument. Bookmarks können einen eigenen Namen und eine kurze Geschmacksnotiz erhalten. Die Liste öffnet die Stücke und erlaubt das Entfernen. Gespeichert wird die vollständige Partitur mit Generatorversion und Einstellungen; das Wiederöffnen verwendet diesen Notenstand, auch wenn sich der Generator später verändert.
 
-[SoundFont-Herkunft, Bearbeitung und Lizenz](assets/soundfont/README.md) · [Audio-Engine](assets/vendor/README.md). Lizenzen stehen zentral unter **Quellen & Lizenzen**, erreichbar über den Footer.
+- **JSON ↓** exportiert vollständige Stücke, Kennungen, Auswahl, Zeitpunkt, Namen, Notizen und musikalische Analyse. **JSON ↑** validiert und ergänzt die Sammlung; vorhandene Einträge bleiben erhalten. Ungültige Dateien oder fehlgeschlagenes Speichern ändern den bisherigen Stand nicht.
+- **CSV ↓** exportiert eine Übersicht mit Instrument, Grade, Stil, Tonzentrum/Modus, Tempo, Takt, Form, Taktzahlen, Abschnittslängen, Akkordfolgen, tatsächlichen Intervallen, Rhythmusmerkmalen, Schwerpunkt, Namen, Notiz und URL. Text mit Tabellenformel-Präfix wird als Text geschützt.
 
-## Backup / Restore
+Die Exporte können zur manuellen Geschmacksanalyse und weiteren Anpassung von a-minor weitergegeben werden. Es gibt keine automatische Übermittlung oder automatische Lernstandsbewertung.
 
-**Log → Backup herunterladen** sichert Abschlussmarkierungen und Notizen als JSON. **Backup wiederherstellen** validiert die Datei und ersetzt den lokalen Stand. Ungültige Dateien ändern keine Daten. Frühere Backups und bereits gespeicherter Fortschritt werden beim Einlesen ins lokale Format übernommen; gelöschte Notizen bleiben gelöscht.
+Bookmarks, MIDI-Gerätezuordnung, Mix, Wiedergabeauswahl und Sprache liegen im `localStorage`, getrennt nach Browserprofil und Origin. localhost und a-minor.ch haben getrennte Daten. JSON exportieren, bevor Websitedaten gelöscht werden oder der Browser gewechselt wird. Frühere Kurs-/Logdaten werden nicht gelöscht; ihre Oberfläche entfällt.
 
-Fortschritt liegt ausschließlich im `localStorage` des Browsers, getrennt nach Browserprofil und Origin. localhost und a-minor.ch haben getrennte Daten. Beim Browserwechsel oder vor dem Löschen der Websitedaten exportieren. Keine Konten, P2P-Verbindungen oder Netzsynchronisation. Die Spracheinstellung ist eine separate Browserpräferenz und kein Lernfortschritt.
+## Theorie
 
-## Dateien
+Das Lesebuch **Musiklehre** umfasst neun Teile mit **34 Kapiteln, fünf Anhängen und 249 notierten Beispielen**, jeweils mit optionaler Klangvorschau. Es ist für Bildschirm und Handy gedacht: begrenzte Textbreite, nummerierte Abschnitte, erklärende Modelle, Zusammenfassungen und Vor-/Zurücknavigation. Keine Aufgaben, Checklisten oder Fortschrittsmarkierungen.
+
+Ton und Schrift, Tonleitern, Modi, Intervalle, Akkorde, Harmonik, Rhythmus, Satz, Klang und Form bilden die Grundlagen. Vier zusätzliche Kapitel verbinden dieses Wissen mit den sieben Stilen, einem vollständigen Klaviersatz für Filmmusik, Lounge/Stimmführung/Septakkorden/Swing und dem Verstehen von Motiven, Phrasen und Formen. Alle Beispiele sind eigene Modelle, keine Transkriptionen.
+
+Referenzen: My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*); Hans Zimmer ergänzt die ästhetische Orientierung für Filmmusik. Sie begrenzen weder Tonarten noch Formen oder Techniken.
+
+**Griffbrett** zeigt die sechs P4-Saiten mit Grundton, Skala, Tonname oder Intervall bis Bund 24. Das Buch enthält außerdem Tastaturkarten, Rhythmusraster, Formabläufe und Klangdarstellungen.
+
+## MIDI und Klang
+
+Der globale Standardausgang und getrennte Ausgänge für Keyboard, Bass, Gitarre und Drums werden gespeichert und beim nächsten Besuch wiederhergestellt. Getrennte Geräte bleiben vorgemerkt. Eine eindeutige Kombination aus Name und Hersteller kann eine geänderte Geräte-ID zuordnen; mehrdeutige Treffer werden nicht automatisch ausgewählt. Die Browserberechtigung bleibt erforderlich.
+
+| Stimme | MIDI-Kanal | Programm, nullbasiert |
+|---|---:|---|
+| Keyboard | 4 | 0 |
+| Bass | 6 | 33 |
+| Gitarre | 7 | 24 / 27 / 29, je nach Stil und Grade |
+| Drums | 10 | 0 |
+
+SMF Format 0, 480 PPQ, GM-Drums. Kick 36, Snare 38, geschlossene Hi-Hat 42, Einzähler/Rim 37. Keine MIDI-Clock oder Geräte-Transportsteuerung. Die MIDI-Stimme wählt ihr Programm; externe Klangerzeuger benötigen die passende Klangzuordnung. Persönlicher Mix nutzt extern CC11, intern Kanal-Gain.
+
+Tempoeinheit: ♩ bei Vierteltakten, ♩. in 12/8, ♪ in 5/8 und 7/8. Notation und MIDI berücksichtigen Haltebögen, Akzente, Staccato und gegebenenfalls Swing. Swing verwendet ein 2:1-Modell. Die Klangvorschau verwendet lokales FluidR3 GM mit SpessaSynth; sie simuliert keine reale Gitarren-Anschlagtechnik. Klang und Latenz am angeschlossenen Gerät benötigen einen Hörtest.
+
+[SoundFont](assets/soundfont/README.md) · [Audio-Engine](assets/vendor/README.md) · [PDF-Engine und Schrift](assets/vendor/pdfmake/README.md). Quellen und Lizenzen stehen im Footer.
+
+## Dateien und Pflege
 
 | Datei | Aufgabe |
 |---|---|
-| `data/course.json` | Sprachunabhängige IDs, Phasenstruktur (zwei Spuren), Noten, Hilfen und Begleitvorgaben |
-| `data/book.json` | Musiklehre: Teile, Kapitel und Beispielpartituren |
-| `js/glyphs.js`, `assets/glyphs/` | Bravura-Notenglyphen (Schlüssel, Pausen, Fähnchen, Vorzeichen, Wiederholungs- und Sprungzeichen) mit Lizenz |
-| `locales/de.json`, `locales/en.json` | Kurstexte, Buchtexte und Oberflächentexte |
-| `js/i18n.js` | Laden und Zusammenführen der Sprachdaten |
-| `js/app.js` | Ansichten (Kurs, Repertoire, Musiklehre, MIDI, Log), Sprachwechsel, Übungen und MIDI-Bedienung |
-| `js/music.js` | Tonhöhen, Intervalle, Skalen und P4-Positionen |
-| `js/notation.js` | Noten-SVG, Stimmen, Haltebögen und Lesegenerator |
-| `js/audio.js` | MIDI-Kursbegleitung und separate Notenvorschau |
-| `js/repertoire.js`, `data/repertoire.json` | Stückauswahl, Partituren, Übemix und Downloadlinks |
-| `js/midi.js`, `js/midi-player.js` | SMF-Dateien und externe MIDI-Wiedergabe |
-| `js/soundfont.js`, `assets/soundfont/`, `assets/vendor/` | Lokaler SoundFont und AudioWorklet-Player |
-| `js/score-pdf.js`, `assets/vendor/pdfmake/` | Direkter PDF-Download der generierten ABAC-Stücke |
-| `js/store.js` | Lokaler Browserfortschritt, Altformatmigration und Backup/Restore |
-| `tests/` | Kurs-, Speicher-, MIDI- und Browsertests |
+| `js/practice-composer.js` | Versionierter musikalischer Generator, Stile, Grade und Formen |
+| `js/practice-generator.js` | Unveränderter Notenablauf alter Links und gemeinsamer MIDI-Encoder |
+| `js/practice-info.js` | Tatsächliche musikalische Merkmale und kurze Einordnung |
+| `js/practice.js` | Auswahl, reproduzierbare URL, Wiederöffnen gespeicherter Stücke |
+| `js/bookmarks.js` | Partitursnapshots, Liste, sichere Speicherung, JSON/CSV |
+| `js/repertoire.js` | Gemeinsamer Partitur- und Audio-/MIDI-Player |
+| `js/score-pdf.js` | Direkter einseitiger PDF-Download |
+| `js/app.js`, `index.html`, `css/style.css` | Navigation, Ansichten und Darstellung |
+| `data/book.json`, `locales/de.json`, `locales/en.json` | Lehrbeispiele, deutsche/englische Texte |
+| `js/music.js`, `js/notation.js` | Tonhöhen, Skalen, P4-Lagen, Notenschrift und Zeitmodell |
+| `js/audio.js`, `js/midi.js`, `js/midi-player.js` | Persistente MIDI-Zuordnung, Dateien und externe Wiedergabe |
 
-## Übungen ergänzen
+Frühere Kursdaten, Repertoiredateien und Prüfungen bleiben als Inhaltsquelle und Archiv erhalten. Alte Stück- und Einheitenlinks sind weiterhin lesbar; Kurs, Repertoire und Log sind keine Menüpunkte mehr. Historische Abgleiche: [Curriculum](docs/CURRICULUM.md), [fachliche Prüfung](docs/COURSE_AUDIT.md), [musikalische Prüfung](docs/MUSICAL_REVIEW.md).
 
-Struktur und Noten in `data/course.json`; Texte unter derselben `textId` in beiden Sprachdateien. IDs dauerhaft beibehalten. Tonnamen international: B = deutsches H; Bb = deutsches B. C4 = MIDI 60. Alle gespeicherten Tonhöhen sind klingend, Gitarre wird oktavtransponiert angezeigt.
+Buchkapitel verwenden `textId` und platzieren Beispiele genau einmal als `[[beispiel-id]]`. Texte und sprachabhängige Beschriftungen gehören in beide Sprachdateien. Tonnamen international: B = deutsches H, Bb = deutsches B, C4 = MIDI 60. Gespeicherte Gitarrentöne sind klingend; die Notation oktaviert.
 
-```json
-{
-  "id": "e-example",
-  "textId": "e-example",
-  "kind": "read",
-  "tempo": 55,
-  "score": {
-    "key": "Em", "time": "4/4", "maxFret": 5,
-    "notes": [{"p": "E3", "d": "h", "s": 2, "fi": 1}, {"r": 1, "d": "h"}],
-    "bass": [{"p": "E2", "d": "w", "s": 0}]
-  },
-  "backing": {"type": "click", "time": "4/4", "bars": 1, "drums": "half"}
-}
-```
-
-Textfelder: `title`, `instructions`, `checklist`, bei Gitarre `position`; Einheiten zusätzlich `goal` und `text`.
-
-Die Musiklehre liegt in `data/book.json`: `parts` mit `chapters`, jedes Kapitel mit `examples` (`id`, `textId`, `tempo`, `score`, optional `instrument: "guitar"` für oktavierende Gitarrennotation und `show` für dauerhaft eingeblendete Hilfen `strings`, `frets`, `names`, `fingers`). Der letzte Teil trägt `"appendix": true` und enthält Kapitel ohne Beispiele. Die Texte stehen unter dem Namensraum `book` beider Sprachdateien: Kapitel mit `title` und `text`, Beispiele mit `title`, Takt- und Abschnittsbeschriftungen bei Bedarf als eigener `textId` (`chords`, `sections`). Der Kapiteltext gliedert sich in `## n.m`-Abschnitte und platziert jedes Beispiel genau einmal mit `[[beispiel-id]]`; Kapitel- und Abschnittsnummern sowie die Nummerierung „Beispiel n.m“ folgen der Reihenfolge im Buch beziehungsweise im Text, Querverweise nennen die Kapitelnummer im Text. Kein Beispiel trägt `backing` oder `checklist`.
-Dauern: `w h q e s`, optional punktiert (`h.`) oder als Triole (`et`, `qt`). Zeitberechnung mit 24 Ticks pro Viertel hält binäre und ternäre Unterteilungen exakt. `tie:1` bindet zur nächsten gleichen Tonhöhe. `p` darf für Akkorde ein Array enthalten; `s` und `fi` können dazu positionsgleiche Arrays sein. `s` zählt tief nach hoch 0–5; angezeigte Saitennummern hoch nach tief 1–6. `score.bass` ist die unabhängige zweite Stimme: Gitarre im selben Violinsystem, Keyboard im Basssystem. `score.inner` ergänzt eine unabhängig gehaltene beziehungsweise bewegte Mittelstimme im oberen System. Alle Stimmen müssen gleich lang sein. `score.stringWindow` begrenzt automatische Saitenvorschläge.
-
-Lesegenerator: `generate.form: "ABAC"` mit `bars: 4` erzeugt Motiv, Antwort, identische Wiederkehr und einen Schluss auf dem Grundton. Taktfüllung erfolgt in ganzzahligen Ticks; der Tonbereich muss Grundton und mindestens einen Kontrastton enthalten.
-
-Theoriebeispiele können `visuals` enthalten. Jede Darstellung hat `type`, `textId` und sprachunabhängige Konfiguration. Typen: `fretboard` mit konkreten `positions: [{s, f}]` oder `root`/`scale`, `piano` mit exakten `notes` oder einem Tonvorrat, `rhythm`, `form`, `flow`, `envelope`. Titel, Erklärung, Rasterzeilen und Ablaufbeschriftungen liegen unter der jeweiligen `textId` in beiden Sprachdateien. Notation und Klangvorschau bleiben daneben verfügbar.
-
-Zusätzliche Notenfelder: `accent`, `staccato`, `harmonic`, `bend` (Halbtöne), `slur`/`slurEnd`. `tuplet:3` startet eine Triolenklammer, `tupletEnd:true` beendet sie. `score.chords` und `score.sections` beschriften Takte; `score.swing:true` interpretiert gerade Achtel in der Vorschau als 2:1-Übemodell.
-
-`score.rhythmSlash:true` ersetzt Tonköpfe durch Rhythmusslashes; die vollständigen Tonhöhen bleiben für die Vorschau erhalten. `score.percentRepeats:[2,6]` zeigt in den angegebenen geschriebenen Takten ein Taktwiederholungszeichen. Jede Stimme muss dort den vorherigen Takt genau wiederholen.
-
-`score.tempoChanges:[{"bar":3,"ratio":1.5}]` multipliziert das Ausgangstempo ab dem dritten geschriebenen Takt mit 1,5. Die Vorschau integriert Notendauern und Pausen über die Tempoänderung; bei Rücksprüngen gilt das Tempo des besuchten geschriebenen Takts.
-
-Formnotation und Vorschau verwenden dieselben Daten:
-
-```json
-{"repeat":{"from":1,"to":2,"endings":[3,4]}}
-```
-
-Spielt 1–2–3–1–2–4. Alternativ `times:2` ohne Endings für eine einfache Wiederholung. Endings sind einzelne, unmittelbar anschließende Takte.
-
-```json
-{"jump":{"from":4,"to":2,"codaAt":3,"coda":5}}
-```
-
-D.S. al Coda; bei sechs geschriebenen Takten: 1–2–3–4–2–3–5–6. `to:1` bezeichnet D.C.; `fine` ersetzt `codaAt`/`coda` bei einem Schluss nach dem Rücksprung. Ein Score verwendet einen Wiederholungsbereich oder einen Rücksprung. Verschachtelte Kombinationen sind nicht implementiert und werden abgewiesen. Begleitungs-`bars` zählt gespielte Takte einschließlich Wiederholungen. Über Taktstriche laufende Noten werden mit Haltebögen ausgeschrieben.
+Notendauern: `w h q e s`, optional `.` oder `t`. `p` kann einen Einzelton oder ein Akkordarray enthalten. `s` zählt Gitarrensaiten tief nach hoch 0–5. `bass` ist die zweite Stimme; `tie` verbindet gleiche Töne. Jede Stimme füllt den Takt vollständig. Neue Generatorfassungen benötigen eine neue Version; vorhandene Notenstände und Legacy-Links bleiben nachvollziehbar.
 
 ## Prüfungen
 
@@ -181,40 +107,6 @@ npm test
 npm run test:browser
 ```
 
-Node.js und Python 3 erforderlich; Browsertest startet seinen lokalen Server selbst. Chromium liegt standardmäßig unter `/usr/bin/chromium`, alternativ `CHROMIUM_PATH` setzen. Playwright und SpessaSynth-Pakete sind Entwicklungsabhängigkeiten. Die Laufzeit verwendet lokal eingecheckte Engine-Dateien; kein CDN und kein Build im Browser.
+Node.js, Python 3 und Chromium (`/usr/bin/chromium`, alternativ `CHROMIUM_PATH`) erforderlich. Entwicklungsabhängigkeiten werden für Tests und das Aktualisieren der lokal ausgelieferten Bibliotheken verwendet.
 
-Die Tests prüfen die Einheitenzahl, die Vollständigkeit der Musiklehre (mindestens 30 Kapitel, mindestens fünf Beispiele pro Kapitel, jedes Beispiel genau einmal platziert, gleiche Reihenfolge in beiden Sprachen, keine Aufgaben, keine „prüfen“-Markierungen, keine Gerätenamen), verwaiste Texte, Taktlängen, drei unabhängige Stimmen, gleichzeitige Saitenbelegung, Griffweiten, Keyboard-Handspannweiten, Haltebögen, Triolen, Formabläufe, Tempoeinheiten, Hi-Hat-Ausgabe, Generatorgrenzen, MIDI-Stopp, validierten Import, Sprachvollständigkeit und alle Einheiten in beiden Sprachen im Browser. Zusätzlich: SoundFont-Integrität, MIDI/Noten-Abgleich, Kanal-/Port-Routing, Stimmenmix, Einzähler und Schleifen, Ladewiederholung, Abbruch während des Ladens und echtes PCM-Rendering (Dynamik, Sample-Loops, Release, Hi-Hat-Choke und Beckenausklang). Hardwareklang und reale Gerätelatenz benötigen einen Hörtest am angeschlossenen Instrument.
-
-Akkordsymbole bleiben oberhalb der Noten sichtbar. Unter jedem Takt stehen die tatsächlichen Bass- beziehungsweise Pedaltöne, einschließlich Basswechseln und Pausen; reine Einzelstimmen erhalten keine erfundenen Akkorde. Die Angaben folgen den klingenden Oktaven (auch bei oktavierender Gitarrennotation) und der internationalen Benennung B/H: B entspricht deutschem H, Bb deutschem B.
-
-Gitarrenanschlag: rechte Hand ausschließlich Plektrum, linke Hand Hammer-ons/Pull-offs und später Tapping aus der Stille. Kein Finger- oder Hybrid-Picking. Gemeinsame Einsätze werden zunächst kurz aufgefächert; die Partitur und Klangvorschau bilden das rhythmische Stimmengerüst ab. Exakte gemeinsame Einsätze mit Plektrum und linkem Anschlag werden nach der Legato-Einheit aufgebaut.
-
-## Repertoire
-
-Die Kompositionen haben eigene Szenen, Textentwürfe und musikalische Absichten in `scripts/composition-notes.json`. Die ausgeschriebenen Instrumentenparts stehen in `scripts/repertoire-themes.json`; der Builder liest sie, statt universelle Begleitfiguren zu erzeugen. Arbeitsnotizen und Texte werden nicht in die Website-Ansichten, Partituren oder MIDI-Dateien übernommen. [Kompositionsarbeit](docs/REPERTOIRE_COMPOSITION.md).
-
-[Instrumenten- und Rollenmix](docs/audio/REPERTOIRE_MIX.md): vollständige Audio-Prüfung aller Stücke; kalibrierte Pegel in den gemeinsamen MIDI-Dateien.
-
-Die Gitarre übernimmt Riffs, Powerchords, Themen und Soli; der Bandbass trägt das Fundament. Gitarren- und Keyboardsoli behalten Begleitung. Zweistimmiges Gitarrensolospiel bleibt Bestandteil des Kurses.
-
-Menü **Kurs · Repertoire · Theorie**. Grade 0–5 mit je fünf eigenen englisch benannten Stücken: 6 × 5 = 30 Kompositionen, jeweils Gitarre und Keyboard, also 30 × 2 = 60 Übeparts/PDFs. [Stücktabelle und Formen](docs/REPERTOIRE_PROPOSAL.md).
-
-`repertoire/<Grade>/<English Title>/` enthält eine gemeinsame MIDI-Datei, `score.json` und zwei PDFs. Die beiden Übeansichten verwenden dieselbe Datei. Üben schaltet die eigene Stimme stumm oder leise; Anhören stellt sie wieder auf normal. Die übrigen Mixregler bleiben erhalten. Mixpräferenzen werden getrennt je Übeinstrument gespeichert. Einzähler nur vor dem ersten Durchlauf; Abschnittsloops wiederholen anschließend nur den gewählten Abschnitt.
-
-| Stimme | MIDI-Kanal | Programm, nullbasiert |
-|---|---:|---|
-| Keyboard | 4 | 0 / 4 |
-| Bass | 6 | 33 |
-| Gitarre | 7 | 25 / 26 / 27 / 28 / 29 / 30 |
-| Drums | 10 | 0 / 16 |
-
-SMF Format 0, 480 PPQ, GM-Schlagzeugnoten. Die Kanalzuordnung folgt den 30 lokalen Gigajam-Dateien. MIDI-Einstellungen erlauben separate Ausgänge je Stimme. Externe Klangerzeuger müssen diese Programme/Noten unterstützen. Der komponierte Mix verwendet CC7 in der MIDI-Datei. MIDI Out verwendet zusätzlich CC11 für den persönlichen Übemix; intern verwendet der Player dafür einen unabhängigen Kanal-Gain. Beide können klanglich unterschiedlich reagieren. MIDI Clock und Geräte-Transport werden nicht gesendet.
-
-```sh
-npm ci
-npm run build:repertoire
-npm run build:scores
-npm run vendor:audio
-```
-
-Die Kompositionsquelle ist `scripts/repertoire-themes.json`; `scripts/build-repertoire.mjs` setzt Stimmen, Form, Begleitung, P4-Positionen und MIDI. `build:scores` benötigt Chromium und erzeugt die englischen PDF-Partituren aus derselben Notationsquelle wie die Webseite. Kursphasen sind Voraussetzungen, keine externen Prüfungsgrade. Fortschritt und Log unterscheiden beide Instrumentparts und bleiben in localStorage. Backups enthalten Fortschritt und Notizen; Mix und Geräteauswahl gehören nicht zum Fortschrittsbackup.
+Geprüft werden deterministische Generation, alle Grades/Stile, Taktfüllung, Skalen, Griff- und Handspielbarkeit, Literalwiederholungen, tatsächliche MIDI-Noten, Klang- und MIDI-Routing, Gerätewiederherstellung, unveränderliche Bookmarks, atomarer Import, JSON/CSV, beide Sprachen, mobiles Layout und einseitige direkte PDFs. Auch die vorhandenen Inhalts-, Notations- und SoundFontprüfungen bleiben aktiv.
