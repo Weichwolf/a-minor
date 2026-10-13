@@ -320,10 +320,15 @@ AM.practiceComposer = (() => {
     function bassPart(h,name,bar,nextHarmony){
       const focus=roleFocus.bass,support=sectionPlans[name].bass==='support'&&name!=='S',pattern=support?clone(meter.compound?pulsePattern('q.'):meter.d===8?singing[bar%2]:pulsePattern('q')):clone(motif.bass[bar%2]);
       return voiced(pattern,h,(current,i,n,at)=>{
-        const bm=lowest(current.rootPc,28),third=M.pc(current.pcs[1]-current.rootPc);
+        const bm=lowest(current.rootPc,28),third=M.pc(current.pcs[1]-current.rootPc),fifth=M.pc(current.pcs[2]-current.rootPc);
         const scaleSteps=Array.from({length:13},(_,d)=>d).filter(d=>M.scalePcs(root,scale).includes(M.pc(bm+d)));
-        let interval=support?0:focus==='octaveBass'&&i%2?12:focus==='fifthBass'?[0,7,0,7][i%4]:focus==='arpeggioBass'?[0,third,7,12][i%4]:focus==='walkingBass'?[0,third,7,0][i%4]:/scaleBass|movingBass/.test(focus)?scaleSteps[[0,1,2,3,4,3,2,1][i%8]%scaleSteps.length]:0;
-        if(!support&&/scaleBass|movingBass/.test(focus)&&(at===0||at===2))interval=at===0?0:7;
+        let interval=support?0:focus==='octaveBass'&&i%2?12:focus==='fifthBass'?[0,fifth,0,fifth][i%4]:focus==='arpeggioBass'?[0,third,fifth,12,fifth,third,fifth,0][i%8]:focus==='walkingBass'?[0,third,fifth,0][i%4]:/scaleBass|movingBass/.test(focus)?scaleSteps[[0,1,2,3,4,3,2,1][i%8]%scaleSteps.length]:0;
+        if(!support&&/scaleBass|movingBass/.test(focus)&&(at===0||at===2))interval=at===0?0:fifth;
+        if(!support&&i===pattern.length-1&&nextHarmony){
+          const nextRoot=lowest(nextHarmony.rootPc,28),below=bm+fifth-12;
+          if(focus==='fifthBass'&&interval===fifth&&below>=28&&Math.abs(below-nextRoot)<Math.abs(bm+interval-nextRoot)&&M.position(below,{tuning:M.BASS_TUNING,maxFret:profile.maxFret}))interval-=12;
+          if(focus==='octaveBass'&&Math.abs(bm+interval-nextRoot)>12)interval=0;
+        }
         // A passing/approach tone has a destination. Root-reading patterns do
         // not acquire unrelated pitches from per-note random choices.
         if(!support&&/passingBass|walkingBass|chromaticBass/.test(focus)&&i===pattern.length-1&&nextHarmony){

@@ -10,7 +10,7 @@ for(let grade=0;grade<=5;grade++)for(const [si,style] of C.styles.entries()){
   for(const [sectionIndex,s] of p.sections.entries()){
    let firstInSection=true;
    for(const b of s.bars){
-    const part=G.part(b,role),events=N.events(part),attacks=new Map();
+    const part=G.part(b,role),events=N.events({...part,time:p.time,swing:p.swing}),attacks=new Map();
     for(const [voice,notes] of [part.notes,part.bass||[],part.inner||[]].entries())for(const n of notes){
      if(n.r)continue;values.add(n.d);const ns=[].concat(n.p).map(M.midi);pitches.push(...ns);
     }

@@ -214,3 +214,16 @@ test('a held keyboard middle voice does not push the melody onto an accidental c
  }
  assert(checked>0);
 });
+
+test('bass arpeggios include the actual chord fifth and return from their peak before a new harmony',()=>{
+ let diminished=0;
+ for(const {piece:p} of pool)if(p.roleFocus.bass==='arpeggioBass')for(const s of p.sections)for(const b of s.bars){let at=0;
+  for(const n of b.bass){const h=b.harmony.changes?.findLast(c=>c.t<=at+1e-8)?.h??b.harmony;at+=N.dur(n.d);
+   if(n.r)continue;assert(h.pcs.includes(M.pc(M.midi(n.p))),p.id+': every arpeggio tone belongs to its chord');if(h.quality==='°')diminished++;
+  }
+ }
+ assert(diminished>0);
+ const p=C.generate(3,20261318,'gothic').piece;
+ const notes=p.sections.flatMap(s=>s.bars.flatMap(b=>b.bass)).filter(n=>!n.r);
+ assert(Math.max(...notes.slice(1).map((n,i)=>Math.abs(M.midi(n.p)-M.midi(notes[i].p))))<=12,'the former 22-semitone jump is avoided');
+});
