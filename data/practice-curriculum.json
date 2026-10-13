@@ -91,7 +91,7 @@
       ],
       "playedBars": [
         16,
-        32
+        24
       ],
       "skills": {
         "guitar": [
@@ -159,8 +159,8 @@
         4
       ],
       "playedBars": [
-        24,
-        48
+        16,
+        32
       ],
       "skills": {
         "guitar": [
@@ -229,8 +229,8 @@
         8
       ],
       "playedBars": [
-        40,
-        64
+        24,
+        48
       ],
       "skills": {
         "guitar": [
@@ -300,8 +300,8 @@
         8
       ],
       "playedBars": [
-        64,
-        128
+        24,
+        64
       ],
       "skills": {
         "guitar": [
@@ -374,8 +374,8 @@
         8
       ],
       "playedBars": [
-        64,
-        144
+        32,
+        64
       ],
       "skills": {
         "guitar": [

@@ -31,6 +31,17 @@ AM.practiceRhythm = (() => {
       const i=result.findIndex(n=>Math.abs(N.dur(n.d)-3*N.dur(required))<1e-9);
       if(i>=0)result.splice(i,1,...Array.from({length:3},()=>({d:required})));
     }
+    if(required&&allowed.includes(required)){
+      const cell=required.endsWith('t')?[required,required,required]:[required],remaining=Math.round(length*24)-ticks(cell);
+      if(!result.some(n=>n.d===required)&&canFill(remaining)){
+        const tail=generate(profile,{rng,length:remaining/24,dense,restChance});
+        result.splice(0,result.length,...cell.map(d=>({d})),...tail);
+      }
+      // A selected technical focus must occur as an attack, not exclusively
+      // as a rest bearing the same duration symbol.
+      const first=result.findIndex(n=>n.d===required);
+      if(first>=0)for(let i=first;i<first+cell.length;i++)delete result[i].r;
+    }
     for(let i=0;i<result.length;i++)if(result[i].d.endsWith('t')){result[i].tuplet=3;result[i+2].tupletEnd=true;i+=2;}
     return result;
   }

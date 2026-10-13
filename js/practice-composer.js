@@ -27,21 +27,21 @@ AM.practiceComposer = (() => {
     const quarterTempo=profile.quarterTempo[0]+Math.floor(rng()*(profile.quarterTempo[1]-profile.quarterTempo[0]+1)),tempo=Math.round(quarterTempo/meter.q*100)/100;
     const length=pick(profile.sectionLengths);
     const navigation=grade===5&&Object.values(roleFocus).includes('navigation')?pick(['DC','DS','Fine']):null;
-    const solo=grade===5&&!navigation&&Object.values(roleFocus).includes('soloReturn'),featured=pick(instruments);
+    const solo=grade===5&&Object.values(roleFocus).includes('soloReturn'),featured=pick(solo?instruments.filter(role=>roleFocus[role]==='soloReturn'):instruments);
     const splitForm=form=>form.match(/[ABCSO]′?/g);
     const forms=grade===0?(style==='baroque'?['ABA','AABB']:['ABA','ABA′','ABAB']):grade===1?(style==='baroque'?['AABB']:style==='doom'||style==='lounge'?['AABA','ABAB′']:['ABAB','ABAB′']):styleForms[style];
     let unit=solo?['A','B','S','A']:splitForm(pick(forms));
-    if(navigation)unit=navigation==='DS'?['A','B','C']:['A','B'];
+    if(navigation)unit=navigation==='DS'?(solo?['A','B','S','C']:['A','B','C']):(solo?['A','S','B']:['A','B']);
     const names=[...new Set([...unit,...(grade>=2&&navigation!=='Fine'?['O']:[])])];
     const sizes=Object.fromEntries(names.map(name=>[name,name==='O'?4:length]));
     const shorten=name=>{for(const related of names)if(related.replace('′','')===name.replace('′',''))sizes[related]=4;};
     for(const name of [...names].reverse()){if(Object.values(sizes).reduce((n,v)=>n+v,0)<=24)break;shorten(name);}
     let order=[...unit],repeatCount=1;
     if(grade>=2){
-      const target=pick(profile.playedBars),tail=navigation==='DC'?['A','O']:navigation==='DS'?['B','O']:navigation==='Fine'?['A','B']:['O'];
+      const target=pick(profile.playedBars),tail=navigation==='DC'?['A','O']:navigation==='DS'?['B','O']:navigation==='Fine'?[...unit]:['O'];
       for(const name of [...names].reverse()){const u=unit.reduce((n,x)=>n+sizes[x],0),v=tail.reduce((n,x)=>n+sizes[x],0);if(Math.ceil((profile.playedBars[0]-v)/u)<=Math.floor((profile.playedBars[1]-v)/u))break;shorten(name);}
       const unitBars=unit.reduce((n,name)=>n+sizes[name],0),tailBars=tail.reduce((n,name)=>n+sizes[name],0);
-      const minCopies=Math.max(1,Math.ceil((profile.playedBars[0]-tailBars)/unitBars)),maxCopies=Math.max(minCopies,Math.floor((profile.playedBars[1]-tailBars)/unitBars));
+      const minCopies=Math.max(1,Math.ceil((profile.playedBars[0]-tailBars)/unitBars)),maxCopies=Math.max(minCopies,Math.min(3,Math.floor((profile.playedBars[1]-tailBars)/unitBars)));
       const copies=Math.max(minCopies,Math.min(maxCopies,Math.round((target-tailBars)/unitBars)));
       repeatCount=copies;order=[...Array.from({length:copies},()=>unit).flat(),...tail];
     }
@@ -83,14 +83,30 @@ AM.practiceComposer = (() => {
       return{degree,alteration,quality:q,pcs:intervals.map(i=>M.pc(rpc+i)),rootPc:rpc,root:rootName,chord:rootName+suffix,
         roman:prefix+(q==='m'||q==='°'?romans[degree].toLowerCase():romans[degree])+(q==='°'?'°':'')+(seventh?(intervals[3]===11?'maj7':'7'):'')};
     }
+    // Original harmonic grammars: these are functional degree plans, not
+    // transcriptions of songs. Each piece keeps its selected plan on returns.
+    const harmonicPlans={
+      rock:[[0,0,3,0],[0,3,4,0],[0,0,6,0]],
+      doom:[[0,0,5,0],[0,5,6,0],[0,0,6,0]],
+      gothic:[[0,5,6,0],[0,3,4,0],[0,6,5,0]],
+      progressive:[[0,3,0,4],[0,6,3,0],[0,3,5,4]],
+      baroque:[[0,3,4,0],[0,1,4,0],[0,4,4,0]],
+      lounge:[[0,3,4,0],[0,1,4,0],[0,0,3,0]]
+    };
+    const themeHarmony=pick(harmonicPlans[style]);
+    const cadenceDegree=style==='doom'?(scale==='phrygian'?1:6):style==='rock'&&seed%2===0?3:4;
     function progression(name,count){
-      const base=grade===0?(style==='rock'?[0,0,6,0]:style==='baroque'?[0,3,4,0]:style==='lounge'?[0,3,1,4]:[0,6,5,0]):style==='doom'?[0,0,5,4]:style==='gothic'?[0,6,5,4]:style==='baroque'?[0,3,4,0]:style==='lounge'?[1,4,0,0]:[0,3,0,4];
-      const source=sourceName(name),answer=style==='baroque'?[3,1,4,0]:style==='lounge'?[3,1,4,0]:style==='gothic'?[5,3,6,4]:style==='doom'?[5,5,6,4]:[3,0,5,4];
+      const base=themeHarmony,source=sourceName(name),answer=style==='baroque'||style==='lounge'?[3,1,4,0]:style==='gothic'?[5,3,6,4]:style==='doom'?[5,5,6,4]:[3,0,5,4];
       return Array.from({length:count},(_,i)=>{
         // Early contrasts share the progression; later bridges prepare the return harmonically.
-        const d=name==='O'?[3,4,4,0][i%4]:source==='C'?[5,3,1,4][i%4]:grade>=2&&(source==='B'||source==='S')?answer[i%4]:base[i%4];
-        if(grade===0&&d===6)return harmony(6,major&&scale!=='mixolydian'?-1:0,'');
-        if((name==='O'||source==='C')&&d===4&&grade>=3&&['aeolian','harmonicMinor'].includes(scale))return harmony(d,0,'');
+        let d=name==='O'?[3,4,cadenceDegree,0][i%4]:source==='C'?[5,3,1,4][i%4]:grade>=2&&(source==='B'||source==='S')?answer[i%4]:base[i%4];
+        // An eight-bar phrase has an open midpoint and a prepared answer,
+        // rather than two identical four-bar harmonic loops.
+        if(count===8&&i===3)d=cadenceDegree;
+        if(count===8&&i===6||name===order.at(-1)&&i===count-2)d=cadenceDegree;
+        if(count===8&&i===7||name===order.at(-1)&&i===count-1)d=0;
+        if(d===6&&(grade===0||style==='rock'))return harmony(6,major&&scale!=='mixolydian'?-1:0,'');
+        if(d===4&&grade>=3&&['aeolian','harmonicMinor'].includes(scale)&&(name==='O'||source==='C'||i===count-2))return harmony(d,0,'');
         return harmony(d);
       });
     }
@@ -149,6 +165,11 @@ AM.practiceComposer = (() => {
       const texture=sectionPlans[name][role];
       let pattern=!contrasting||sourceName(name)===focusSections[role]?motif[role][bar%2]:texture==='melody'?singing[bar%2]:
         ['chords','power'].includes(texture)?(time==='4/4'?pulsePattern(style==='doom'?'h':'q'):singing[bar%2]):flowing;
+      // Give the line room to arrive. The other bars retain the selected
+      // technique, including fast values; a phrase ending need not stay busy.
+      if(texture==='melody'&&(bar===sizes[name]-1||sizes[name]===8&&bar===3)){
+        pattern=time==='4/4'?(bar===3&&sizes[name]===8?[{d:'h'},{d:'h'}]:singing[0]):meter.compound?singing[1]:R.held('C4',time).map(({d,tie})=>({d,...(tie?{tie}: {})}));
+      }
       // Even a held-chord theme gets an audible, grade-safe change in its returning phrase.
       if(name.endsWith('′')&&bar===sizes[name]-2){
         const choices=time==='4/4'?[[{d:'h'},{d:'h'}],...singing]:meter.compound?[[{d:'h.'},{d:'h.'}],pulsePattern('q.')]:[R.held('C4',time).map(({d})=>({d})),flowing];
@@ -182,11 +203,13 @@ AM.practiceComposer = (() => {
     }
     function line(h,name,bar,role,register){
       const pattern=partPattern(role,name,bar),notes=[],historyKey=role+':'+name+':'+(register<60?'low':'high');let previous=melodicHistory.get(historyKey)??register,at=0;
+      const tonicAnchor=role==='guitar'||grade===0?register:lowest(M.rootPc(root),register-5);
       const candidates=[];for(let m=register-(role==='guitar'||grade===0?0:7);m<=register+(grade===0?7:12);m++)if(m>=36&&m<=84&&(M.scalePcs(root,scale).includes(M.pc(m))||h.pcs.includes(M.pc(m))))candidates.push(m);
       for(let i=0;i<pattern.length;i++){
         const n=pattern[i];if(n.r){notes.push(n);at+=N.dur(n.d);continue;}
-        const current=atHarmony(h,at),chord=at===0||Math.abs(at-2)<1e-9,sequence=style==='baroque'&&sourceName(name)==='B'?bar%3:0;
-        const degree=contour[(i+bar%2*2+(name.endsWith('′')?1:0))%contour.length]+sequence,desired=register+iv[Math.min(6,degree)];
+        const current=atHarmony(h,at),arrival=i===pattern.length-1&&(bar===sizes[name]-1||sizes[name]===8&&bar===3),chord=at===0||Math.abs(at-2)<1e-9||arrival,sequence=style==='baroque'&&sourceName(name)==='B'?bar%3:0;
+        const development=sizes[name]===8&&bar===6?1:0;
+        const degree=contour[(i+bar%2*2+(name.endsWith('′')?1:0))%contour.length]+sequence+development,desired=arrival&&current.degree===0?tonicAnchor:tonicAnchor+iv[Math.min(6,degree)];
         const pool=chord?candidates.filter(m=>current.pcs.includes(M.pc(m))):candidates;
         const sorted=(pool.length?pool:candidates).sort((a,b)=>Math.abs(a-desired)+Math.abs(a-previous)*.45-Math.abs(b-desired)-Math.abs(b-previous)*.45);
         const midi=sorted[0];notes.push({...n,p:spellChord(midi,current),...(grade>=2&&i===0?{accent:1}:{})});previous=midi;at+=N.dur(n.d);
@@ -230,7 +253,7 @@ AM.practiceComposer = (() => {
       let bass;
       if(grade===0)bass=R.held('C3',time,true);
       else if(grade===1&&/leftTriads|melodyOver/.test(focus)||grade>=3&&melody){
-        const ps=keyVoicing(h,49),independent=grade>=4&&/independentHands|swingComping/.test(focus)&&sourceName(name)===focusSections.keys,pattern=grade===1?(h.changes?R.pulse('h',2,ps):R.held(ps,time)):independent?R.generate({...profile.rhythms.keys,shortest:swing?'e':profile.rhythms.keys.shortest,triplets:false},{rng,length:meter.len,restChance:.2,required:swing?'e':'s'}):partPattern('keys',name,bar);bass=voiced(pattern,h,current=>({p:keyVoicing(current,49)}));
+        const ps=keyVoicing(h,49),independent=grade>=4&&/independentHands|swingComping/.test(focus)&&sourceName(name)===focusSections.keys,pattern=grade===1||grade===3?(h.changes?R.pulse('h',2,ps):R.held(ps,time)):independent?R.generate({...profile.rhythms.keys,shortest:swing?'e':profile.rhythms.keys.shortest,triplets:false},{rng,length:meter.len,restChance:.2,required:swing?'e':'s'}):partPattern('keys',name,bar);bass=voiced(pattern,h,current=>({p:keyVoicing(current,49)}));
       }else{
         const bm=lowest(h.rootPc,36),pattern=grade===1?(h.changes?R.pulse('h',2,spell(bm)):R.held(spell(bm),time)):partPattern('keys',name,bar);
         bass=voiced(pattern,h,(current,i)=>({p:spellChord(lowest(current.rootPc,36)+(grade>=2&&i%2?7:0),current)}));
@@ -281,7 +304,7 @@ AM.practiceComposer = (() => {
       if(grooveCache.has(cacheKey))return clone(grooveCache.get(cacheKey));
       if(fill){
         const ds=R.generate({...profile.rhythms.drums,triplets:grade===5&&groove!=='compound'&&(groove==='swing'||focus==='tripletFill')},{rng,length:meter.len,dense:true,required:grade===0?'e':groove==='swing'||focus==='tripletFill'&&groove!=='compound'?'et':'s'});
-        const notes=ds.map((n,i)=>n.r?n:{...n,p:M.name(/tom|accentSixteenths/.test(focus)?[38,48,45,43][Math.floor(i/4)%4]:38),velocity:i%4===0?88:grade>=3?50:72,...(grade>=3&&i%4===0?{accent:1}:{})});
+        const notes=ds.map((n,i)=>n.r?n:{...n,p:M.name(/tom|accentSixteenths/.test(focus)?[38,48,45,43][Math.floor(i/4)%4]:38),velocity:i%4===0?88:grade>=3?50:72,...((grade>=3||focus==='accentFill')&&i%4===0?{accent:1}:{})});
         return finish({notes,bass:R.held('C2',time,true)});
       }
       const hatDur=meter.compound?'e':meter.d===8?'e':hat,count=Math.round(meter.len/N.dur(hatDur));
@@ -291,12 +314,21 @@ AM.practiceComposer = (() => {
       if(rng()<.8){const d=meter.compound?'q.':meter.d===8?'e':'q';lower=Array.from({length:Math.round(meter.len/N.dur(d))},(_,i)=>{const snare=i%2===1,split=!snare&&meter.d===4&&rng()<.4;return split?[{d:'e'},{d:'e',...(rng()<.5?{r:1}:{})}]:[{d}];}).flat();}
       if(light)lower=clone(meter.compound?pulsePattern('q.'):meter.d===8?singing[bar%2]:pulsePattern('q'));
       else if(contrasting&&bassLine.length>=4&&R.supports(bassLine,profile.rhythms.drums,meter.len))lower=bassLine.map(({d,r,tuplet,tupletEnd})=>({d,...(r?{r}:{}),...(tuplet?{tuplet}:{}),...(tupletEnd?{tupletEnd}:{})}));
+      if(!light&&bar===0&&time==='4/4'){
+        if(focus==='eighthKick')lower=[{d:'e'},{d:'e'},{d:'q'},{d:'q'},{d:'q'}];
+        if(focus==='syncopatedKick')lower=[{d:'q'},{d:'q'},{d:'e'},{d:'e'},{d:'q'}];
+        if(focus==='dottedGroove')lower=[{d:'q.'},{d:'e'},{d:'q.'},{d:'e'}];
+      }
+      if(!light&&bar===0&&meter.d===8&&!meter.compound){
+        if(focus==='dottedGroove')lower=R.generate(profile.rhythms.drums,{rng,length:meter.len,required:'e.'});
+        if(focus==='syncopatedKick')lower=[{d:'e'},{d:'e'},...R.generate(profile.rhythms.drums,{rng,length:meter.len-1})];
+      }
       let t=0;
       const bass=lower.map(n=>{const at=t;t+=N.dur(n.d);if(n.r)return n;const snare=meter.compound?Math.floor(at/1.5)%2===1:style==='doom'?Math.floor(at)===2:Math.floor(at)%2===1;return{...n,p:grade>=4&&!light&&snare&&at%1===0&&rng()<.25?['C2','D2']:M.name(snare?38:36),velocity:(snare?86:90)-(light?14:0)+(build?5:0)};});
       return finish({notes,bass});
     }
     const sectionsByName={},toneChanges=grade>=4&&['rock','doom','gothic','progressive'].includes(style)&&rng()<.4;
-    for(const name of names){const size=sizes[name],hs=progression(name,size);for(let i=0;i<size;i++)if(grade>=1&&time==='4/4'&&i%4===2&&rng()<.3){const h=hs[i],next=harmony(pick([0,3,4,5]));if(next.chord!==h.chord)h.changes=[{t:2,h:next}];}
+    for(const name of names){const size=sizes[name],hs=progression(name,size);for(let i=0;i<size;i++)if(grade>=1&&time==='4/4'&&i%4===2&&!(i===size-2&&(size===8||name===order.at(-1)))&&rng()<.3){const h=hs[i],next=harmony(pick([0,3,4,5]));if(next.chord!==h.chord)h.changes=[{t:2,h:next}];}
       sectionsByName[name]=hs.map((h,bar)=>{
       if(name.endsWith('′')&&bar<size-2)return remember(name,clone(sectionsByName[sourceName(name)][bar]));
       const guitar=guitarPart(h,name,bar);if(toneChanges)guitar.program=sectionPlans[name].guitar==='melody'||sectionPlans[name].guitar==='arpeggio'?27:29;const keys=keysPart(h,name,bar),bass=bassPart(h,name,bar,hs[bar+1]??hs[0]),drumPart=drumsPart(name,bar,bass);
@@ -308,8 +340,11 @@ AM.practiceComposer = (() => {
     });}
     if(grade>=4)for(const role of ['guitar','keys'])if(roleFocus[role]==='ties')for(const name of names){
       const bs=sectionsByName[name];for(let i=0;i<bs.length-1;i++){const last=bs[i][role].notes.at(-1),first=bs[i+1][role].notes[0];
+        // Do not overwrite the composed resolution with the preceding chord.
+        if(name===order.at(-1)&&i===bs.length-2)continue;
         if(role==='guitar'&&bs[i].guitar.texture!==bs[i+1].guitar.texture)continue;
         if(names.includes(sourceName(name)+'′')&&i===bs.length-3)continue;
+        if(last&&!last.r&&![].concat(last.p).every(p=>bs[i+1].harmony.pcs.includes(M.pc(M.midi(p)))))continue;
         if(last&&!last.r&&first&&!first.r&&rng()<.65){last.tie=1;delete last.palmMute;first.p=clone(last.p);delete first.accent;if(role==='guitar')first.s=clone(last.s);}
       }
     }

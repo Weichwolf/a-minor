@@ -23,11 +23,11 @@ Der Generator plant Harmonie, Rhythmuszellen, Kontur, Kontrast, Rückkehr und Sc
 | Grade | Anforderungen | Gespielte Takte / Vierteltempo |
 |---|---|---|
 | 0 | Powerchords, rechte Melodie/Dreiklänge, Grundtonbass, Viertelgroove und Achtelfills | 12–16 / 85–128 |
-| 1 | Achtel, Dämpfung, Handdialog, linke Dreiklänge, Bassdurchgänge und Sechzehntel-/Tomfills | 16–32 / 85–128 |
-| 2 | Chromatische Powerchords, Akkorde mit Bass, Oktave/Quinte und Achtelbecken | 24–48 / 85–128 |
-| 3 | Dur/Moll/Septakkorde, Melodie über Begleitung, Registerwechsel und Akzentfills | 40–64 / 85–128 |
-| 4 | Powerchord-Sechzehntel, Synkopen, Bindungen, unabhängige Hände, Becken-/Klangwechsel | 64–128 / 90–140 |
-| 5 | Rhythmuscharts, Quint/Sext, Swing, Triolen, 12/8, Innenstimmen, Kontrast und Navigation | 64–144 / 80–146 |
+| 1 | Achtel, Dämpfung, Handdialog, linke Dreiklänge, Bassdurchgänge und Sechzehntel-/Tomfills | 16–24 / 85–128 |
+| 2 | Chromatische Powerchords, Akkorde mit Bass, Oktave/Quinte und Achtelbecken | 16–32 / 85–128 |
+| 3 | Dur/Moll/Septakkorde, Melodie über Begleitung, Registerwechsel und Akzentfills | 24–48 / 85–128 |
+| 4 | Powerchord-Sechzehntel, Synkopen, Bindungen, unabhängige Hände, Becken-/Klangwechsel | 24–64 / 90–140 |
+| 5 | Rhythmuscharts, Quint/Sext, Swing, Triolen, 12/8, Innenstimmen, Kontrast und Navigation | 32–64 / 80–146 |
 
 Jeder Abschnitt hat mindestens vier Takte; ab Grade 3 auch acht. Es werden höchstens 24 verschiedene Takte notiert. Wiederkehrende Abschnitte ergeben längere vollständige Abläufe. Der [Gigajam-Abgleich](docs/GIGAJAM_COVERAGE.md) umfasst 120 PDFs / 218 Seiten für alle vier Instrumente und dokumentiert Inhalte, Tempoeinheiten und Transfergrenzen. Die [didaktischen Entscheidungen](docs/PRACTICE_DIDACTICS.md) beschreiben die musikalische Konstruktion. Originaltakte oder Begleitspuren werden nicht übernommen. Instrumentgrenzen erfordern andere Griffe oder Register; eine Prüfungsanerkennung wird nicht behauptet.
 

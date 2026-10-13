@@ -1,4 +1,4 @@
-// Requirements derived from the local collection, adapted for electric guitar. See docs/GIGAJAM_COVERAGE.md.
+// Requirements derived from the local collection, adapted for electric guitar and compact reading pieces. See docs/GIGAJAM_COVERAGE.md.
 AM.practiceCurriculum = [
   {
     "grade": 0,
@@ -89,7 +89,7 @@ AM.practiceCurriculum = [
     ],
     "playedBars": [
       16,
-      32
+      24
     ],
     "skills": {
       "guitar": [
@@ -157,8 +157,8 @@ AM.practiceCurriculum = [
       4
     ],
     "playedBars": [
-      24,
-      48
+      16,
+      32
     ],
     "skills": {
       "guitar": [
@@ -227,8 +227,8 @@ AM.practiceCurriculum = [
       8
     ],
     "playedBars": [
-      40,
-      64
+      24,
+      48
     ],
     "skills": {
       "guitar": [
@@ -298,8 +298,8 @@ AM.practiceCurriculum = [
       8
     ],
     "playedBars": [
-      64,
-      128
+      24,
+      64
     ],
     "skills": {
       "guitar": [
@@ -372,8 +372,8 @@ AM.practiceCurriculum = [
       8
     ],
     "playedBars": [
-      64,
-      144
+      32,
+      64
     ],
     "skills": {
       "guitar": [

@@ -64,13 +64,63 @@ test('bass root-reading stays on roots; quarter focus has a quarter pulse and ar
  }
  assert(roots>50);assert(arpeggios>5);
 });
+test('drum focus is visible in the actual attacks and notation, not only in its label',()=>{
+ let checked=0;
+ for(const {piece:p} of pool){const focus=p.roleFocus.drums,parts=p.sections.flatMap(s=>s.bars.map(b=>b.drumPart));
+  if(focus==='eighthKick'){
+   checked++;assert(parts.some(part=>part.bass.some(n=>!n.r&&n.d==='e'&&[].concat(n.p).some(p=>M.midi(p)===36))),`${p.id}: eighth bass drum attacks`);
+  }
+  if(focus==='accentFill'){
+   checked++;assert(parts.some(part=>part.notes.some(n=>!n.r&&n.accent)),`${p.id}: written fill accents`);
+  }
+  if(focus==='dottedGroove'){
+   checked++;assert(parts.some(part=>part.bass.some(n=>!n.r&&n.d.endsWith('.'))),`${p.id}: dotted groove, not only a dotted fill`);
+  }
+  if(focus==='syncopatedKick'){
+   checked++;assert(parts.some(part=>N.events({...part,time:p.time}).some(e=>e.midi===36&&e.t%1>.01)),`${p.id}: offbeat kick`);
+  }
+ }
+ assert(checked>30);
+});
 test('every section has four or eight bars; longer forms retain literal returns and close on the tonic',()=>{
- const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars>=C.profiles[p.grade].playedBars[0]&&p.bars<=C.profiles[p.grade].playedBars[1],`${p.grade}/${p.seed}: ${p.bars}`);
+ const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars<=64,'reading miniatures do not manufacture length through excessive repetition');if(p.repeat)assert(p.repeat.times<=3);assert(p.bars>=C.profiles[p.grade].playedBars[0]&&p.bars<=C.profiles[p.grade].playedBars[1],`${p.grade}/${p.seed}: ${p.bars}`);
   const names=new Map();let beat=0,count=0;for(const s of p.sections){assert([4,8].includes(s.bars.length));if(p.grade<3)assert.equal(s.bars.length,4);lengths.add(s.bars.length);if(s.bars.length===8)eightGrades.add(p.grade);assert.equal(s.startBar,count+1);assert.equal(s.startBeat,beat);
    const body=JSON.stringify(s.bars.map(({number,...bar})=>bar));if(names.has(s.name))assert.equal(body,names.get(s.name));names.set(s.name,body);count+=s.bars.length;beat+=s.bars.length*M.meter(p.time).len;
   }assert.equal(count,p.bars);assert.equal(p.sections.map(s=>s.name).join(''),p.form);assert.equal(p.sections.at(-1).bars.at(-1).harmony.rootPc,M.rootPc(p.root));
  }
  assert(lengths.has(8));for(const grade of [3,4,5])assert(eightGrades.has(grade),`Grade ${grade} has eight-bar sections`);assert(keys.size>=18);assert([...keys].some(k=>!k.endsWith('m')));assert([...keys].some(k=>k.endsWith('m')&&!['Am','Dm','Em'].includes(k)));
+});
+test('long phrases answer an open midpoint and every final tonic has a harmonic preparation',()=>{
+ let long=0;const progressions=new Map(C.styles.map(style=>[style,new Set()]));
+ for(const {piece:p} of pool){
+  const ending=p.sections.at(-1).bars,preparation=ending.at(-2).harmony,tonic=ending.at(-1).harmony;
+  assert.notEqual(preparation.rootPc,tonic.rootPc,`${p.id}: the ending is prepared before its tonic`);
+  assert(!preparation.changes,'no incidental chord change erases the prepared ending');
+  for(const role of ['guitar','keys'])for(const n of ending.at(-1)[role].notes)if(!n.r)for(const pitch of [].concat(n.p))assert(tonic.pcs.includes(M.pc(M.midi(pitch))),`${p.id}: the sounding resolution agrees with its harmony, including ties`);
+  progressions.get(p.style).add(p.sections[0].bars.map(b=>b.harmony.roman).join(' '));
+  for(const section of p.sections)if(section.bars.length===8){
+   long++;assert.notEqual(section.bars[3].harmony.degree,0,`${p.id}: open midpoint`);
+   assert.equal(section.bars[7].harmony.degree,0,`${p.id}: closing answer`);
+   assert.notDeepEqual(section.bars.slice(0,4).map(b=>b.chord),section.bars.slice(4).map(b=>b.chord));
+  }
+ }
+ assert(long>20);for(const [style,plans] of progressions)assert(plans.size>=3,`${style}: different harmonic plans`);
+});
+test('a selected solo-return focus survives navigation and features an instrument with that focus',()=>{
+ let both=0;
+ for(const {piece:p} of pool)if(Object.values(p.roleFocus).includes('soloReturn')){
+  assert(p.sections.some(s=>s.name==='S'),`${p.id}: written contrast section exists`);
+  assert.equal(p.roleFocus[p.featured],'soloReturn');
+  if(p.navigation)both++;
+ }
+ assert(both>5,'navigation and written contrast can coexist');
+});
+test('Grade 3 Rock melodies retain sustained chord support instead of doubling every fast attack',()=>{
+ let checked=0;
+ for(const {piece:p} of pool.filter(({piece})=>piece.grade===3&&piece.style==='rock'))for(const s of p.sections)if(s.character.keys!=='chords'){
+  for(const b of s.bars)for(const n of b.keys.bass)if(!n.r){assert(N.dur(n.d)>=2,`${p.id}: sustained left-hand support`);checked++;}
+ }
+ assert(checked>20);
 });
 test('all four written parts fill their measures and remain playable on the configured instruments',()=>{
  for(const {piece:p} of pool){const len=M.meter(p.time).len;for(const section of p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i))for(const b of section.bars){

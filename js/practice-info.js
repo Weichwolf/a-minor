@@ -32,13 +32,23 @@ AM.practiceInfo = (() => {
       sectionLengths:sections.map(s=>s.name+':'+s.length),progressions:sections.map(s=>s.name+': '+s.bars.map(b=>b.chord).filter((c,i,cs)=>i===0||c!==cs[i-1]).join('–'))};
   }
   function interval(n){return n<=12?t('interval'+n):format('intervalCompound',{octaves:Math.floor(n/12),interval:t('interval'+(n%12))});}
+  function grouped(items){
+    const groups=new Map();for(const [name,description] of items){if(!groups.has(description))groups.set(description,[]);groups.get(description).push(name);}
+    return [...groups].map(([description,names])=>names.join('/')+': '+description).join('; ');
+  }
   function text(piece,instrument){
-    const d=describe(piece,instrument),top=d.melodicIntervals.slice(0,piece.grade===0?2:3).map(x=>x.semitones);
-    const largest=Math.max(0,...d.melodicIntervals.map(x=>x.semitones));if(largest>Math.max(0,...top)&&largest>=5)top.push(largest);
-    if(d.harmonicIntervals.includes(7)&&!top.includes(7))top.push(7);
-    const progress=d.sections.map(s=>s.name+': '+s.bars.map(b=>display(b.chord)+(piece.grade>=2?' ('+display(b.roman)+')':'')).filter((c,i,cs)=>i===0||c!==cs[i-1]).join('–')).join('; ');
-    const rhythm=d.rhythms.map(k=>t('practiceRhythm'+k)).join(', ')+(d.swing?', '+t('swingFeel'):'');
-    const characters=d.sections.filter(s=>s.character&&s.name!=='O').map(s=>s.name+': '+s.characters.map(c=>t('sectionCharacter_'+c)).join(' / ')+(s.variationOf?' ('+format('sectionVariation',{section:s.variationOf})+')':'')).join('; ');
+    const d=describe(piece,instrument),limit=piece.grade<2?2:piece.grade<4?3:4,moving=d.melodicIntervals.filter(x=>x.semitones>0),top=(moving.length?moving:d.melodicIntervals).slice(0,limit).map(x=>x.semitones);
+    const include=n=>{if(!top.includes(n)){if(top.length===limit)top.pop();top.push(n);}};
+    const largest=Math.max(0,...d.melodicIntervals.map(x=>x.semitones));if(piece.grade>=2&&largest>=7)include(largest);
+    if(d.harmonicIntervals.includes(7))include(7);
+    if(instrument==='keys'&&!moving.length&&d.harmonicIntervals.length){
+      const third=['major','mixolydian','lydian'].includes(piece.scale)?4:3;
+      const harmonic=[...new Set([third,7,10,11,...d.harmonicIntervals])].filter(n=>d.harmonicIntervals.includes(n));
+      top.splice(0,top.length,...harmonic.slice(0,limit));
+    }
+    const progress=grouped(d.sections.map(s=>[s.name,s.bars.map(b=>display(b.chord)+(piece.grade>=2?' ('+display(b.roman)+')':'')).filter((c,i,cs)=>i===0||c!==cs[i-1]).join('–')]));
+    const rhythm=d.rhythms.map(k=>t('practiceRhythm'+k)).join(', ')+(d.swing?', '+t('swingFeel').replace(/[.!]$/,''):'');
+    const characters=grouped(d.sections.filter(s=>s.character&&s.name!=='O').map(s=>[s.name,s.characters.map(c=>t('sectionCharacter_'+c)).join(' / ')+(s.variationOf?' ('+format('sectionVariation',{section:s.variationOf})+')':'')]));
     const electric=instrument==='guitar'&&piece.sections.every(s=>s.bars.every(b=>b.guitar.texture));
     return format(instrument==='drums'?'pieceDrumsSentence':electric?'pieceGuitarSentence':'pieceSentence',{style:t('style_'+d.style),root:display(d.root),scale:t('scale_'+d.scale),form:form(piece),time:d.time,
       chords:progress,voicings:d.powerChords.length?format('guitarPowerVoicings',{chords:d.powerChords.map(display).join(', ')}):t('guitarSingleNotes'),intervals:top.length?top.map(interval).join(', '):d.harmonicIntervals.map(interval).join(', '),rhythm,focus:t('focus_'+d.focus)})+(characters?' '+format('pieceSectionsSentence',{sections:characters}):'');

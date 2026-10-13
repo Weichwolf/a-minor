@@ -1,5 +1,13 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),setup=require('./practice-fixture.cjs'),{plain}=setup;
 const A=setup(),{practiceComposer:C,practiceGenerator:G,practiceRhythm:R,music:M,notation:N,midi:MIDI}=A;
+test('a required playable rhythm value is present as an attack, including dotted cells and complete triplets',()=>{
+ const profile={shortest:'s',dotted:true,triplets:true};
+ for(const required of R.values(profile))for(let seed=0;seed<30;seed++){
+  let state=seed+1;const rng=()=>((state=Math.imul(state,1664525)+1013904223>>>0)/4294967296);
+  const pattern=R.generate(profile,{rng,required,restChance:1});
+  assert(R.supports(pattern,profile));assert(pattern.some(n=>n.d===required&&!n.r),required);
+ }
+});
 test('rhythm grammar expresses arbitrary complete combinations of the grade values and rests',()=>{
  const profiles=C.profiles;assert(R.supports(['w'],profiles[0].rhythms.guitar));assert(R.supports(['q','h','q'],profiles[0].rhythms.keys));assert(!R.supports(['e','e','h','q'],profiles[0].rhythms.guitar));
  assert(R.supports(Array(16).fill('s'),profiles[1].rhythms.drums));assert(!R.supports(Array(16).fill('s'),profiles[1].rhythms.keys));assert(!R.supports(Array(16).fill('s'),profiles[3].rhythms.guitar));assert(R.supports(Array(16).fill('s'),profiles[4].rhythms.guitar));

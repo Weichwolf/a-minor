@@ -5,7 +5,10 @@ const fs = require('node:fs');
 const path = require('node:path');
 let base;
 const server = spawn('python3',['-u','-m','http.server','0','--bind','127.0.0.1'],{stdio:['ignore','pipe','pipe']});
-const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.on('exit',code=>reject(Error('Test server exited: '+code)));server.stdout.on('data',chunk=>{const match=/port (\d+)/.exec(String(chunk));if(match){base='http://127.0.0.1:'+match[1];resolve();}});});
+// Drain request logs: a full unread stderr pipe can block Python before it
+// sends the next HTTP response during the larger browser matrix.
+let serverErrors='';server.stderr.on('data',chunk=>{serverErrors=(serverErrors+chunk).slice(-8192);});
+const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.on('exit',code=>reject(Error('Test server exited: '+code+'\n'+serverErrors)));server.stdout.on('data',chunk=>{const match=/port (\d+)/.exec(String(chunk));if(match){base='http://127.0.0.1:'+match[1];resolve();}});});
 (async () => {
   let browser;
   try {

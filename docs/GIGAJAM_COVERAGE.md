@@ -24,6 +24,8 @@ Am 13.10.2026 wurden für den ersten Überarbeitungsschritt zusätzlich die gere
 
 Der Debut-Part verbindet drei Vorzeichen und Vierteltempo 128 mit ruhenden linken Händen, vielen langen Werten, wiederkehrenden Akkordlagen und eng geführten Melodiefiguren. Daraus folgt für die Überarbeitung: Vorzeichenzahl oder Tempo allein sind keine ausreichenden Schwierigkeitsmaße. Entscheidend ist ihre Kombination mit Bewegungs- und Lesedichte. Grade 1 Drums verbindet einen wiederkehrenden Viertelpuls mit lokal begrenzten Sechzehntelfills; schnelle Unterteilung ist hier keine Anforderung an jeden Takt und jede Stimme. Grade 4 Guitar kombiniert Powerchordangaben, Sechzehntel, Pausen, wiederkehrende rhythmische Zellen und harmonische Wechsel. Grade 5 Keys zeigt sowohl gebundene/versetzte Stimmen als auch einfachere gemeinsame Rhythmen; hohe Grades benötigen also ebenfalls Entlastung innerhalb ihrer Form. Es werden ausschließlich diese abstrakten Anforderungen verwendet, keine Tonfolgen oder Taktkopien.
 
+Zusätzlich wurden die ersten Originalseiten aller vier Parts von Grade 2 *Lonely Streets* und Grade 3 *Tunnel Vision* geprüft. Grade 2 bestätigt den Wechsel zwischen gehaltenen und schnelleren Powerchordrhythmen, Keyboardakkorden mit Bass, Oktavbewegungen im Bass sowie Achtelbecken und sichtbar akzentuierten Sechzehntelfills. Der Generator kennzeichnet diese Fill-Akzente nun auch in der Notation. Grade 3 zeigt harmonisch geführte Akkordwechsel, Melodie über längeren linken Akkorden, Skalen-/Akkordfiguren im Bass und Wechsel zwischen Viertel-/Achtelbecken, Crash-Anfängen und differenzierten Fills. Die Keyboard-Abstufung erhält deshalb in Grade 3 Rock längere linke Begleitwerte unter den melodischen Abschnitten; bloß identische schnelle Anschläge beider Hände würden diesen Zusammenhang nicht vollständig abbilden. Die Gitarren-Dreiklänge der Vorlage werden weiterhin ausdrücklich als Powerchords plus einstimmige Akkordfiguren adaptiert.
+
 | Grade | Gitarre | Keyboard | Bass | Drums |
 |---|---|---|---|---|
 | 0 | Gehaltene und in Vierteln wiederholte Grundton/Quint-Klänge, Wechsel, Pausen | Rechte Einzelmelodie und Dreiklänge, Ganze/Halbe/Viertel; linke Hand pausiert | Grundtonwechsel, Viertel und Achtel | Viertelbecken, Bassdrum/Snare, Achtelbewegung und Achtelfills, Stopps |
@@ -42,13 +44,15 @@ Konkrete Belege: Debut **Fire It Up** zeigt rechte Piano-Dreiklänge und Achtelf
 | Grade | Referenztempi, Viertel/min | Generatorbereich, Viertel/min | Gespielte Takte | Abschnitt |
 |---|---|---|---|---|
 | 0 | 85, 90, 93, 115, 128 | 85–128 | 12–16 | 4 Takte |
-| 1 | 85, 90, 93, 115, 128 | 85–128 | 16–32 | 4 Takte |
-| 2 | 85, 90, 93, 115, 128 | 85–128 | 24–48 | 4 Takte |
-| 3 | 85, 90, 93, 115, 128 | 85–128 | 40–64 | 4 oder 8 Takte |
-| 4 | 90, 91, 102, 120, 140 | 90–140 | 64–128 | 4 oder 8 Takte |
-| 5 | 80, 85, 110, 125, 146 | 80–146 | 64–144 | 4 oder 8 Takte |
+| 1 | 85, 90, 93, 115, 128 | 85–128 | 16–24 | 4 Takte |
+| 2 | 85, 90, 93, 115, 128 | 85–128 | 16–32 | 4 Takte |
+| 3 | 85, 90, 93, 115, 128 | 85–128 | 24–48 | 4 oder 8 Takte |
+| 4 | 90, 91, 102, 120, 140 | 90–140 | 24–64 | 4 oder 8 Takte |
+| 5 | 80, 85, 110, 125, 146 | 80–146 | 32–64 | 4 oder 8 Takte |
 
 MIDI enthält teils gerundete Abweichungen: Island of Dreams 90,5 statt notierter 91, Brown Shoes 124,5 statt 125, Who Says it’s Raining 145,5 statt 146. Die Bereiche verwenden die notierten Werte. Der Nutzer kann langsamer beginnen, ohne dass der Generator die Zieltempi versteckt.
+
+Die Generatorlängen in dieser Tabelle sind kompakte Blattspielformen, keine Übernahme der vollständigen Originalabläufe. Ein Formblock wird höchstens dreimal vor dem Schlussteil gespielt. Grade 5 endet bei 64 gespielten Takten; die früheren bis zu 144 Takte entstanden teilweise aus elf Wiederholungen desselben kurzen Blocks. Diese automatische Verlängerung wurde zugunsten neuer musikalischer Leseinhalte entfernt. Längeres Spielen ist über die Player-Schleife möglich. Eine identische Ausdaueranforderung zu jedem Originalstück wird dadurch ausdrücklich nicht behauptet.
 
 Take a Walk With Me notiert **Viertel = 85 in 12/8**. Vier große Pulse pro Takt entsprechen punktierter Viertel = 85 / 1,5 ≈ 56,67. Diese kleinere Zahl ist eine andere Tempoeinheit, keine Verlangsamung. MIDI verwendet das Vierteltempo; der Player zeigt die zu seiner Taktart passende Einheit. Progressive erweitert ab Grade 4 um 5/8 oder 7/8; das ist eine Stilerweiterung, kein Befund der Rocksammlung.
 
