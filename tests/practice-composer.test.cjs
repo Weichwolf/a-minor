@@ -7,6 +7,21 @@ test('current generator is deterministic; curriculum matches all four source rol
  for(const {piece,bytes} of pool.filter((_,i)=>i%12===0)){const b=C.generate(piece.grade,piece.seed,piece.style);assert.deepEqual(plain(b.piece),plain(piece));assert.deepEqual(b.bytes,bytes);}
  for(const args of [[-1,1],[6,1],[1.5,1],[0,-1],[0,2**32],[0,NaN],[0,1,'mixed'],[0,1,'cinematic']])assert.throws(()=>C.generate(...args));
 });
+test('each grade and style offers melodic guitar pieces as well as chord playing',()=>{
+ for(let grade=0;grade<6;grade++)for(const style of C.styles){
+  const pieces=pool.map(x=>x.piece).filter(p=>p.grade===grade&&p.style===style);
+  const melodic=pieces.filter(p=>['melodyReading','melodicRiff','pickedArpeggio'].includes(p.roleFocus.guitar));
+  assert(melodic.length>=3&&melodic.length<=9,`${grade}/${style}: balanced guitar textures`);
+  assert(pieces.some(p=>p.sections.some(s=>s.bars.some(b=>b.guitar.notes.some(n=>!n.r&&Array.isArray(n.p))))));
+  for(const p of melodic){
+   const notes=p.sections.flatMap(s=>s.bars.flatMap(b=>b.guitar.notes)).filter(n=>!n.r);
+   assert(notes.every(n=>typeof n.p==='string'),`${p.id}: single-note focus including the ending`);
+   assert(new Set(notes.map(n=>M.midi(n.p))).size>=3,`${p.id}: moving melody`);
+   if(grade===0)for(const section of p.sections)for(const b of section.bars){const pitches=b.guitar.notes.filter(n=>!n.r).map(n=>M.midi(n.p));assert(Math.max(...pitches)-Math.min(...pitches)<=7);}
+   if(p.roleFocus.guitar==='pickedArpeggio')for(const section of p.sections)for(const b of section.bars){let at=0;for(const n of b.guitar.notes){const h=b.harmony.changes?.findLast(c=>c.t<=at+1e-9)?.h??b.harmony;if(!n.r)assert(h.pcs.includes(M.pc(M.midi(n.p))),`${p.id}: arpeggio follows harmony`);at+=N.dur(n.d);}}
+  }
+ }
+});
 test('every section has four or eight bars; longer forms retain literal returns and close on the tonic',()=>{
  const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars>=C.profiles[p.grade].playedBars[0]&&p.bars<=C.profiles[p.grade].playedBars[1],`${p.grade}/${p.seed}: ${p.bars}`);
   const names=new Map();let beat=0,count=0;for(const s of p.sections){assert([4,8].includes(s.bars.length));if(p.grade<3)assert.equal(s.bars.length,4);lengths.add(s.bars.length);if(s.bars.length===8)eightGrades.add(p.grade);assert.equal(s.startBar,count+1);assert.equal(s.startBeat,beat);

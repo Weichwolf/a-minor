@@ -25,7 +25,9 @@ AM.practiceCurriculum = [
       "guitar": [
         "heldPower",
         "quarterPower",
-        "rests"
+        "rests",
+        "melodyReading",
+        "melodicRiff"
       ],
       "keys": [
         "rightMelody",
@@ -93,7 +95,10 @@ AM.practiceCurriculum = [
       "guitar": [
         "eighthPower",
         "palmMute",
-        "powerChanges"
+        "powerChanges",
+        "melodyReading",
+        "melodicRiff",
+        "pickedArpeggio"
       ],
       "keys": [
         "leftTriads",
@@ -159,7 +164,10 @@ AM.practiceCurriculum = [
       "guitar": [
         "chromaticPower",
         "triadStrum",
-        "palmMute"
+        "palmMute",
+        "melodyReading",
+        "melodicRiff",
+        "pickedArpeggio"
       ],
       "keys": [
         "chordsWithBass",
@@ -226,7 +234,10 @@ AM.practiceCurriculum = [
       "guitar": [
         "majorMinorStrum",
         "seventhStrum",
-        "registerChanges"
+        "registerChanges",
+        "melodyReading",
+        "melodicRiff",
+        "pickedArpeggio"
       ],
       "keys": [
         "chordChanges",
@@ -294,7 +305,10 @@ AM.practiceCurriculum = [
         "sixteenthPower",
         "syncopatedStrum",
         "ties",
-        "triadStrum"
+        "triadStrum",
+        "melodyReading",
+        "melodicRiff",
+        "pickedArpeggio"
       ],
       "keys": [
         "syncopation",
@@ -367,7 +381,10 @@ AM.practiceCurriculum = [
         "shuffleRiff",
         "seventhStrum",
         "soloReturn",
-        "navigation"
+        "navigation",
+        "melodyReading",
+        "melodicRiff",
+        "pickedArpeggio"
       ],
       "keys": [
         "swingComping",

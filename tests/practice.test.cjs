@@ -8,11 +8,11 @@ test('rhythm grammar expresses arbitrary complete combinations of the grade valu
 });
 test('Rock generates the instrument-specific source skills, original tempo range, major/minor keys and full forms',()=>{
  const seen=Array.from({length:6},()=>({durs:Object.fromEntries(C.instruments.map(r=>[r,new Set()])),skills:Object.fromEntries(C.instruments.map(r=>[r,new Set()])),tempos:new Set(),keys:new Set(),times:new Set(),features:new Set()}));
- for(let grade=0;grade<6;grade++)for(let seed=0;seed<(grade===5?96:72);seed++){
+ for(let grade=0;grade<6;grade++)for(let seed=0;seed<(grade===5?192:72);seed++){
   const {piece:p}=C.generate(grade,seed,'rock'),a=seen[grade];a.tempos.add(p.quarterTempo);a.keys.add(p.key);a.times.add(p.time);if(p.navigation)a.features.add('navigation');if(p.sections.some(s=>s.name==='S'))a.features.add('soloReturn');
   for(const role of C.instruments)a.skills[role].add(p.roleFocus[role]);
   for(const s of p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i))for(const b of s.bars){for(const role of C.instruments){const part=G.part(b,role);for(const voice of ['notes','bass','inner'])for(const n of part[voice]||[]){a.durs[role].add(n.d);if(n.palmMute)a.features.add('palmMute');if(n.tie)a.features.add('ties');if(n.tuplet)a.features.add('triplets');}if(part.percentRepeat)a.features.add('rhythmChart');if(part.inner)a.features.add('inner');}
-   if(grade===0){assert(b.keys.bass.every(n=>n.r));assert(b.guitar.notes.filter(n=>!n.r).every(n=>[].concat(n.p).length===2));}
+   if(grade===0){assert(b.keys.bass.every(n=>n.r));assert(b.guitar.notes.filter(n=>!n.r).every(n=>[].concat(n.p).length<=2));}
   }
  }
  for(let grade=0;grade<6;grade++){const a=seen[grade],range=C.profiles[grade].quarterTempo;assert(Math.min(...a.tempos)<=range[0]+3);assert(Math.max(...a.tempos)>=range[1]-3);assert(a.keys.size>=10);for(const role of C.instruments)for(const skill of C.profiles[grade].skills[role])assert(a.skills[role].has(skill),`${grade}/${role}/${skill}`);}

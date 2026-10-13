@@ -27,7 +27,9 @@
         "guitar": [
           "heldPower",
           "quarterPower",
-          "rests"
+          "rests",
+          "melodyReading",
+          "melodicRiff"
         ],
         "keys": [
           "rightMelody",
@@ -95,7 +97,10 @@
         "guitar": [
           "eighthPower",
           "palmMute",
-          "powerChanges"
+          "powerChanges",
+          "melodyReading",
+          "melodicRiff",
+          "pickedArpeggio"
         ],
         "keys": [
           "leftTriads",
@@ -161,7 +166,10 @@
         "guitar": [
           "chromaticPower",
           "triadStrum",
-          "palmMute"
+          "palmMute",
+          "melodyReading",
+          "melodicRiff",
+          "pickedArpeggio"
         ],
         "keys": [
           "chordsWithBass",
@@ -228,7 +236,10 @@
         "guitar": [
           "majorMinorStrum",
           "seventhStrum",
-          "registerChanges"
+          "registerChanges",
+          "melodyReading",
+          "melodicRiff",
+          "pickedArpeggio"
         ],
         "keys": [
           "chordChanges",
@@ -296,7 +307,10 @@
           "sixteenthPower",
           "syncopatedStrum",
           "ties",
-          "triadStrum"
+          "triadStrum",
+          "melodyReading",
+          "melodicRiff",
+          "pickedArpeggio"
         ],
         "keys": [
           "syncopation",
@@ -369,7 +383,10 @@
           "shuffleRiff",
           "seventhStrum",
           "soloReturn",
-          "navigation"
+          "navigation",
+          "melodyReading",
+          "melodicRiff",
+          "pickedArpeggio"
         ],
         "keys": [
           "swingComping",

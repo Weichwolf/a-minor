@@ -12,6 +12,10 @@ Der vorige Praxisgenerator wählte nur A, D oder E als Tonzentrum und überwiege
 
 Jetzt werden Dur- und Molltonarten mit einer Grade-Grenze für die Zahl der Vorzeichen gewählt. Rock umfasst auch mixolydische und geliehene Durakkorde. Notenwerte, Techniken und Koordination besitzen **eigene Profile für jedes Instrument**. Bereits Grade 1 braucht beispielsweise Drum-Sechzehntelfills; daraus folgt keine Anforderung an Keyboard-Sechzehntel derselben Stufe.
 
+## Melodisches Gitarrenspiel als Ergänzung
+
+Die Referenzanforderungen sind kein ausschließliches Repertoire von Begleitakkorden. Der Generator wählt für Gitarre gleichgewichtet zwischen Einzelton- und Akkordschwerpunkten. Ab Grade 0 entstehen zusätzlich Melodien und wiederkehrende Einzeltonriffs in Ganzen, Halben und Vierteln; der Tonumfang pro Takt bleibt innerhalb einer Quinte. Ab Grade 1 kommen mit Plektrum gespielte gebrochene Akkorde und Achtelfiguren dazu. Höhere Grades verwenden die jeweiligen erweiterten Rhythmusprofile. Melodische Stücke schließen mit einem Einzelton. Powerchords, Dreiklänge, Septakkorde und die speziellen Referenztechniken bleiben als eigene Schwerpunkte erhalten; Rock erzwingt keine zusätzlichen Powerchordtakte innerhalb anderer Schwerpunkte.
+
 ## Anforderungen je Grade
 
 | Grade | Gitarre | Keyboard | Bass | Drums |
