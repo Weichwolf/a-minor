@@ -86,10 +86,11 @@ AM.midi = (() => {
     for(const ch of used)out.unshift({tick:0,data:[192|ch,program??(guitar?27:0)],order:-5});
     return encode(out,Math.round(duration*480));
   }
-  function excerpt(sequence,{from=0,to=sequence.duration,countIn=0,pulse=1,channels:included}={}) {
+  function excerpt(sequence,{from=0,to=sequence.duration,countIn=0,pulse=1,channels:included,muteChannels=[]}={}) {
     if(!Number.isFinite(from)||!Number.isFinite(to)||from<0||to<=from||to>sequence.duration+1e-6||!Number.isInteger(countIn)||countIn<0||countIn>12||!Number.isFinite(pulse)||pulse<=0)throw Error('Invalid MIDI excerpt');
     if(included!==undefined&&(!Array.isArray(included)||!included.every(ch=>Number.isInteger(ch)&&ch>=0&&ch<16)))throw Error('Invalid MIDI channels');
-    const channelEvents=included===undefined?sequence.events:sequence.events.filter(e=>included.includes(e.data[0]&15));
+    if(!Array.isArray(muteChannels)||!muteChannels.every(ch=>Number.isInteger(ch)&&ch>=0&&ch<16))throw Error('Invalid MIDI channels');
+    const channelEvents=sequence.events.filter(e=>(included===undefined||included.includes(e.data[0]&15))&&!(muteChannels.includes(e.data[0]&15)&&[8,9].includes(e.data[0]>>4)));
     const delay=countIn*pulse, state=new Map(), held=new Map(), out=[{tick:0,data:tempo(60),order:-10}];
     for(const e of channelEvents) {
       if(e.t>=from)break;

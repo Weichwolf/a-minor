@@ -4,6 +4,7 @@ AM.music = (() => {
   const SHARP = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'];
   const FLAT  = ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B'];
   const TUNING = ['E2','A2','D3','G3','C4','F4'];
+  const BASS_TUNING = ['E1','A1','D2','G2'];
   const SCALES = {
     aeolian:       {name:'Äolisch (natürlich Moll)', iv:[0,2,3,5,7,8,10]},
     phrygian:      {name:'Phrygisch',               iv:[0,1,3,5,7,8,10]},
@@ -52,10 +53,17 @@ AM.music = (() => {
   };
   const fretMidi = (s, f) => midi(TUNING[s]) + f;
   function position(m, o = {}) {
-    if (o.s != null) return {s:o.s, f:m - midi(TUNING[o.s])};
+    if (o.s != null) return {s:o.s, f:m - midi((o.tuning||TUNING)[o.s])};
     let best = null;
-    TUNING.forEach((t, s) => { const f = m - midi(t); if ((!o.window || s >= o.window[0] && s <= o.window[1]) && f >= 0 && f <= (o.maxFret ?? 24) && (!best || f < best.f)) best = {s, f}; });
+    (o.tuning||TUNING).forEach((t, s) => { const f = m - midi(t); if ((!o.window || s >= o.window[0] && s <= o.window[1]) && f >= 0 && f <= (o.maxFret ?? 24) && (!best || f < best.f)) best = {s, f}; });
     return best;
+  }
+  function fingerCount(frets) {
+    let count=0;
+    for(const f of new Set(frets.filter(f=>f>0))){let previous=-1;
+      frets.forEach((value,s)=>{if(value!==f)return;if(previous<0||frets.slice(previous+1,s).some(n=>n!==null&&n<f))count++;previous=s;});
+    }
+    return count;
   }
   function chord(root, scale, deg) {
     const iv = SCALES[scale].iv, r = rootPc(root) + 36;
@@ -73,5 +81,5 @@ AM.music = (() => {
     if (!groups.every(g => Number.isInteger(g) && g > 0) || groups.reduce((a,b) => a + b,0) !== n) throw Error('Invalid grouping');
     return {n,d,groups,compound,q:compound ? 1.5 : 4 / d,len:n * 4 / d,symbol:compound ? '♩.' : d === 8 ? '♪' : '♩'};
   }
-  return {LETTERS, TUNING, SCALES, DEG, KEYS, parse, midi, pc, pcName, name, rootPc, usesFlats, keyAcc, scalePcs, scaleName, degreeOf, fretMidi, position, chord, romanIndex, meter};
+  return {LETTERS, TUNING, BASS_TUNING, SCALES, DEG, KEYS, parse, midi, pc, pcName, name, rootPc, usesFlats, keyAcc, scalePcs, scaleName, degreeOf, fretMidi, position, fingerCount, chord, romanIndex, meter};
 })();

@@ -1,6 +1,6 @@
 # a-minor
 
-Musik verstehen und sicher ab Noten spielen: für P4-Gitarre (E2 A2 D3 G3 C4 F4) und Keyboard (49 Tasten, C2–C6). Zweisprachig Deutsch/Englisch, statisch und ohne Benutzerkonto.
+Musik verstehen und sicher ab Noten spielen: für P4-Gitarre (E2 A2 D3 G3 C4 F4), Keyboard (49 Tasten, C2–C6), Bass (E1 A1 D2 G2) und Drums. Zweisprachig Deutsch/Englisch, statisch und ohne Benutzerkonto.
 
 Das Hauptmenü enthält **Theorie | Praxis | Griffbrett | MIDI | Bookmarks**. Praxis zeigt ausschließlich generierte Stücke, ihre musikalische Einordnung und die Bedienelemente. Technik und Koordination sind Teil der Stücke. Es gibt keine Aufgabenlisten, Abschlussmarkierungen oder Lernfortschrittsanzeigen.
 
@@ -16,32 +16,32 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 ## Praxis
 
-Instrument, Grade 0–5 und Stil wählen. **Rock, Doom, Gothic, Progressive, Barock, Lounge, Filmmusik** stehen in jedem Grade zur Verfügung; **Gemischt** wählt einen Stil zufällig. Filmmusik ist die erste Auswahl. Keyboardstücke enthalten Melodie und eigene Begleitung und können solo gespielt werden. Solo und Band sind getrennte Wiedergabeoptionen.
+Instrument, Grade 0–5 und Stil wählen. **Rock, Doom, Gothic, Progressive, Barock und Lounge** stehen zur Verfügung; Rock ist die erste Auswahl und richtet sich nach den Anforderungen der lokalen Gigajam-Sammlung. Alle Stücke enthalten vier vollständig notierte Instrumentalparts. Die Instrumentauswahl wechselt die Ansicht derselben gemeinsamen Komposition. Solo und Band sind getrennte Wiedergabeoptionen.
 
-Der Generator verbindet eine wiedererkennbare rhythmische Zelle und Kontur mit Harmonie, Kontrast, Rückkehr und Schluss. Jede Miniatur erhält einen Schwerpunkt. Die Bedingungen der Spielbarkeit bleiben vom Stil unabhängig: vollständige Takte, P4-Positionen, erreichbare Griffe und Keyboardlagen. Ein Stil erfordert deshalb nicht automatisch einen hohen Grade.
+Der Generator plant Harmonie, Rhythmuszellen, Kontur, Kontrast, Rückkehr und Schluss gemeinsam. Jedes Instrument erhält einen eigenen Schwerpunkt und ein eigenes Rhythmusprofil. Grade 1 enthält beispielsweise Drum-Sechzehntelfills, während Gitarren- und Keyboard-Sechzehntel ab Grade 4 vorkommen. Tonarten umfassen Dur, Moll und stilbezogene Modi statt nur A/D/E-Moll. Erreichbare P4-/Bassgriffe und Keyboardlagen bleiben verbindlich.
 
-| Grade | Musikalische Anforderungen | Formen und Längen |
+| Grade | Anforderungen | Gespielte Takte / Vierteltempo |
 |---|---|---|
-| 0 | Drei bis fünf Melodietöne, Viertel/Halbe, ruhiger Bass, Wiedererkennung und Schluss | AA/AB, Abschnitte mit 2 oder 4 Takten; 4–8 gespielte Takte |
-| 1 | Achtel oder Akkordwechsel, einfache Gitarrenquinten, lange Keyboardbasstöne | AB/ABA; 8–12 Takte; 4/4, gelegentlich 3/4 |
-| 2 | Synkope, Punktierung oder kurze Sechzehntelgruppe; Grundton/Quinte im Keyboardbass | AA′B/ABAC; 12–16 Takte |
-| 3 | Arpeggio, Triole, 12/8 oder gerichteter Mollschluss; Begleitung trägt Akkordtöne | ABA/AABA/ABAC; 12–16 Takte |
-| 4 | Lydische Farbe, Sequenz, Phrasierung oder 5/8 bzw. 7/8; Lounge erhält Septakkorde | ABA′/ABAC/ABACA, gelegentlich verkürzte Rückkehr; 11–20 Takte |
-| 5 | Melodie-/Begleitwechsel der Keyboardhände, Comping, Motiventwicklung oder mehrteiliger Verlauf | AABA/AA′BA/ABACA, Intro/Coda oder 8-Takt-Abschnitte; 16–24 Takte |
+| 0 | Powerchords, rechte Melodie/Dreiklänge, Grundtonbass, Viertelgroove und Achtelfills | 12–16 / 85–128 |
+| 1 | Achtel, Dämpfung, Handdialog, linke Dreiklänge, Bassdurchgänge und Sechzehntel-/Tomfills | 16–32 / 85–128 |
+| 2 | Chromatische Powerchords, Akkorde mit Bass, Oktave/Quinte und Achtelbecken | 24–48 / 85–128 |
+| 3 | Dur/Moll/Septakkorde, Melodie über Begleitung, Registerwechsel und Akzentfills | 40–64 / 85–128 |
+| 4 | Powerchord-Sechzehntel, Synkopen, Bindungen, unabhängige Hände, Becken-/Klangwechsel | 64–128 / 90–140 |
+| 5 | Rhythmuscharts, Quint/Sext, Swing, Triolen, 12/8, Innenstimmen, Kontrast und Navigation | 64–144 / 80–146 |
 
-Stilbezogene Varianten verändern diese Auswahl innerhalb der Spielgrenzen. Die Grade orientieren sich an der bisherigen Inhaltsfolge und dem [lokalen Gigajam-Abgleich](docs/GIGAJAM_COVERAGE.md), nicht an formalen Prüfungszusagen. Der Generator bildet noch keine komplette Ausbildung für lange Bandformen, alle Gitarrentechniken oder jedes Originaltempo ab. Die [didaktischen Entscheidungen und Grenzen](docs/PRACTICE_DIDACTICS.md) beschreiben den tatsächlichen Umfang.
+Jeder Abschnitt hat mindestens vier Takte; ab Grade 3 auch acht. Es werden höchstens 24 verschiedene Takte notiert. Wiederkehrende Abschnitte ergeben längere vollständige Abläufe. Der [Gigajam-Abgleich](docs/GIGAJAM_COVERAGE.md) umfasst 120 PDFs / 218 Seiten für alle vier Instrumente und dokumentiert Inhalte, Tempoeinheiten und Transfergrenzen. Die [didaktischen Entscheidungen](docs/PRACTICE_DIDACTICS.md) beschreiben die musikalische Konstruktion. Originaltakte oder Begleitspuren werden nicht übernommen. Instrumentgrenzen erfordern andere Griffe oder Register; eine Prüfungsanerkennung wird nicht behauptet.
 
 Ein kurzer Absatz nennt Stil, Tonzentrum/Modus, Taktart, Form, tatsächliche Akkordfolgen, Intervalle und Notenwerte sowie den Grund für den Schwerpunkt. Ab Grade 2 stehen Stufen bei den Akkorden. Er enthält keine ausgeschriebene Lösung der Melodie und keine zusätzlichen Übungsaufträge.
 
-Wörtlich wiederkehrende Abschnitte werden einmal notiert. A′ erhält eigene Noten. Vier Takte bleiben in einer Zeile; acht Takte erscheinen in zwei Viererzeilen. Mobile Notenzeilen scrollen innerhalb ihrer Ansicht. Die Wiedergabemarkierung folgt der vollständigen Form und springt bei einer Wiederholung zum bereits notierten Abschnitt zurück.
+Wörtlich wiederkehrende Abschnitte werden einmal notiert. Vier Takte bleiben in einer Zeile; acht Takte erscheinen in zwei Viererzeilen. Mobile Notenzeilen scrollen innerhalb ihrer Ansicht. Die Wiedergabemarkierung folgt der vollständigen Form und springt bei einer Wiederholung zum bereits notierten Abschnitt zurück.
 
 **Anhören** spielt die eigene Stimme normal, **Üben** mit der gewählten Führungslautstärke. Tempo, Abschnitt, Einzähler, Schleife und kompakter Mixer gehören zum selben Player. Der Einzähler bleibt auch bei Solo hörbar. **MIDI** lädt die komplette gemeinsame MIDI-Datei; **PDF herunterladen** erzeugt direkt eine einseitige A4-Partitur als Vektorgrafik, ohne Druckdialog oder neues Fenster. URL, Titel und PDF-Dateiname verwenden dieselbe Kennung (`0x` plus acht Hexadezimalstellen).
 
-Neue URLs enthalten Instrument, Grade, gewählten Stil und Seed, beispielsweise `#/practice/keys/2/cinematic/0x00000011`. Die letzte Auswahl bleibt im Browser. Alte URLs ohne Stil behalten den bisherigen ABAC-Generator: zwölf notierte ABC-Takte, sechzehn gespielte ABAC-Takte. Alte dezimale Seeds werden weiterhin gelesen.
+URLs enthalten Instrument, Grade, Stil und Seed, beispielsweise `#/practice/bass/2/rock/0x00000011`. Die letzte Auswahl bleibt im Browser. Diese Revision benötigt keinen bisherigen Generator und keine Kompatibilität zu alten Bookmarks. Git verwaltet frühere Generatorstände.
 
 ## Bookmarks und Datensicherung
 
-Der Stern speichert das Stück für das ausgewählte Instrument. Bookmarks können einen eigenen Namen und eine kurze Geschmacksnotiz erhalten. Die Liste öffnet die Stücke und erlaubt das Entfernen. Gespeichert wird die vollständige Partitur mit Generatorversion und Einstellungen; das Wiederöffnen verwendet diesen Notenstand, auch wenn sich der Generator später verändert.
+Der Stern speichert das Stück für das ausgewählte Instrument. Bookmarks können einen eigenen Namen und eine kurze Geschmacksnotiz erhalten. Die neue Bookmark-Liste öffnet die Stücke und erlaubt das Entfernen. Gespeichert wird die vollständige Partitur mit Generatorversion und Einstellungen; das Wiederöffnen verwendet diesen Notenstand, auch wenn sich der Generator später verändert.
 
 - **JSON ↓** exportiert vollständige Stücke, Kennungen, Auswahl, Zeitpunkt, Namen, Notizen und musikalische Analyse. **JSON ↑** validiert und ergänzt die Sammlung; vorhandene Einträge bleiben erhalten. Ungültige Dateien oder fehlgeschlagenes Speichern ändern den bisherigen Stand nicht.
 - **CSV ↓** exportiert eine Übersicht mit Instrument, Grade, Stil, Tonzentrum/Modus, Tempo, Takt, Form, Taktzahlen, Abschnittslängen, Akkordfolgen, tatsächlichen Intervallen, Rhythmusmerkmalen, Schwerpunkt, Namen, Notiz und URL. Text mit Tabellenformel-Präfix wird als Text geschützt.

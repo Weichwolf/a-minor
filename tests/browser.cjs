@@ -3,11 +3,13 @@ const {chromium} = require('playwright');
 const {spawn} = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
-const base = 'http://127.0.0.1:8766';
-const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],{stdio:'ignore'});
+let base;
+const server = spawn('python3',['-u','-m','http.server','0','--bind','127.0.0.1'],{stdio:['ignore','pipe','pipe']});
+const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.on('exit',code=>reject(Error('Test server exited: '+code)));server.stdout.on('data',chunk=>{const match=/port (\d+)/.exec(String(chunk));if(match){base='http://127.0.0.1:'+match[1];resolve();}});});
 (async () => {
   let browser;
   try {
+    await serving;
     for (let i=0;i<100;i++) { try { if ((await fetch(base)).ok) break; } catch {} await new Promise(r => setTimeout(r,30)); }
     browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:['--no-sandbox']});
     await require('./soundfont-browser.cjs')(browser,base);
@@ -94,7 +96,7 @@ const server = spawn('python3',['-m','http.server','8766','--bind','127.0.0.1'],
     }),'bass references clear the lowest notes and stems');
     await page.screenshot({path:'test-results/bass-references-mobile.png',fullPage:true});
     await page.selectOption('#language','de');
-    await page.goto(base+'/#/');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),2,'practice offers two instruments');
+    await page.goto(base+'/#/');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),4,'practice offers four instruments');
     assert.equal(await page.locator('nav a[href="#/theory"]').count(),1,'theory is a main menu item');
     await page.goto(base+'/#/theory');await page.waitForSelector('.toc');
     const toc=await page.locator('.toc li a').allTextContents();assert(toc.length>=30,'table of contents lists every chapter');

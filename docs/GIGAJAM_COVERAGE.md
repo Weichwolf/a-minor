@@ -1,84 +1,90 @@
-# Gigajam-Abgleich · 2026-09-30
+# Gigajam-Abgleich · 2026-10-13
 
 ## Prüfgrundlage
 
-Lokale Sammlung `~/Git/Gigajam`, Debut bis Grade Five. Vollständige Gitarren- und Keyboardparts textuell extrahiert und auf allen Seiten visuell gelesen. Zugehörige MIDI-/GKM-Dateien mit dem MIDI-Decoder geprüft; GKM-Dateien dieser Sammlung enthalten Standard-MIDI. Rhythmus und Spielanweisungen werden aus den Partituren beurteilt: MIDI allein belegt weder Grifftechnik noch Anschlagrichtung.
+Lokale Sammlung `~/Git/Gigajam`: Debut bis Grade Five, fünf Stücke pro Stufe, jeweils Gitarre, Piano, Bass und Drums. Inventar und Textextraktion umfassen **120 PDFs mit 218 Seiten** sowie **30 MIDI-Dateien**. Die Notation ist die Grundlage für rhythmische Werte und Spielanweisungen. MIDI bestätigt Tonbereiche, Stimmen, Einsätze, Tempo und lange Abläufe; kurze MIDI-Abstände zwischen gestrummten Akkordtönen sind kein Beleg für Sechzehntel oder Zweiunddreißigstel.
 
-Umfang: 6 Stufen × 5 Stücke × 2 Instrumente = 60 PDFs. Seiten: 10 + 13 + 17 + 23 + 30 + 26 = 119. Dazu 30 Stücke × 2 Dateiformate = 60 MIDI-/GKM-Dateien. Keine Originalnoten oder MIDI-Dateien werden in a-minor übernommen.
+Die Produktionsdaten enthalten Anforderungsprofile, keine importierten Takte, Melodien oder Begleitspuren. Die Profile stehen in [practice-curriculum.json](../data/practice-curriculum.json); der Browser lädt ihre identische JS-Fassung. Rock ist die Grundlage. Die anderen fünf Stile verändern Harmonik, Kontur, Klang, Begleitfigur oder Puls, während die Spielgrenzen pro Instrument bestehen bleiben.
 
-Die Referenzen bestimmen Geschmack und Hörperspektive. Sie begrenzen weder Tempo noch Tonart, Akkordtyp, Rhythmus, Technik oder Form. Doom/Gothic/Progressive darf dichte Achtel, Sechzehntel, Gallops, Dur, Swing und funktionale Harmonik enthalten.
+## Korrigierte Ursachen
 
-## Fähigkeiten und überprüfbarer Transfer
+Der vorige Praxisgenerator wählte nur A, D oder E als Tonzentrum und überwiegend Mollmodi. Seine eigenen Tempogrenzen endeten bei Grade 5 bei 100. Sechzehntel kamen nur in einzelnen Vorlagen vor; Stilvorlagen konnten die Grade-Anforderungen wieder vereinfachen. Bass bestand vor allem aus gehaltenen Grundtönen, Drums aus einem einfachen Raster. Das entsprach dem Umfang der Sammlung nicht.
 
-| Anforderung | Lokaler Beleg | a-minor: Vorbereitung und Anwendung |
-|---|---|---|
-| Grundwerte, Tonwechsel, Pausen, Vorzeichen | Alle Debut-Parts | Phase 0–1 beider Spuren; notierte Miniaturen mit eigenem Schluss |
-| Wiederholte Powerchord-Achtel mit Wechseln | Ain’t No Party / Tunnel Vision, Grade One | `u2-pulse`: Black Lantern; Repertoire Iron Rain; Griffwechsel und gedämpfte Pausen |
-| Muted/offene Anschläge, Akzente, chromatische Powerchords | Fire It Up, Grade Two; Berlin Wall / Torture, Grade Four | `u2-6`, `u2-pulse`, `u3-riff`, `u6-5`; Anschlagrichtung, Saitendämpfung und Wiederkehr |
-| Sechzehntel auf ganzen Powerchords | Torture, Grade Four | `u3-riff`: Iron Current; Shards of Rain enthält Bursts und einen vollständigen Sechzehnteltakt |
-| Rhythmische Dur-/Moll-/Septakkorde | Tunnel Vision, Grade Three; Island of Dreams / The Way it Is, Grade Four | `u4-strum`: Violet Gate; Akkorde werden tatsächlich mehrfach angeschlagen, nicht nur gehalten |
-| Akkordsymbole, Rhythmusslashes und Taktwiederholung | Brown Shoes / Who Says it’s Raining, Grade Five | `u4-chords`, `u4-strum`; ausgeschriebene Lagen rekonstruieren, dann Rhythmuschart lesen; Prozentzeichen wiederholt den vollständigen vorherigen Takt |
-| Synkopen, Bindungen, punktierte Rhythmen, präzise Pausen | Berlin Wall / The Way it Is; Soul Town | `u3-reading`, `ku3-reading`, `u3-4`, `ku3-4`, `u7-2`, `ku7-2` |
-| Quint-/Sextwechsel und Shuffle | Brown Shoes / Soul Town | `u4-6`, `u5-5`; Quint-/Sextriff auch als hörbare Shuffle-Variante |
-| Gerade/swingende rhythmische Akkorde links unter Melodie rechts | Brown Shoes / Who Says it’s Raining, Grade Five | `ku5-comping`: Night Relay; Viertelakkorde, Swing, Offbeats und unabhängige Pausen; `ku4-chords` für Symbollesen |
-| Gebrochene Begleitung, wechselnde Hände und Stimmgewichtung | Island of Dreams; Grade Two/Three Piano-Parts | `ku2-4`, `ku5-3`, `ku7-4`; Ashen Garden mit linkem Keyboardthema |
-| 12/8 und wechselnde Tempoeinheiten | Take a Walk With Me | `u5-4`, `ku5-4`: vier punktierte Viertelpulse; Originalteil nach seiner ausdrücklich notierten Tempoeinheit lesen |
-| Triolischer Auftakt, Einzähler und lange vollständige Pausen | Coming Up Shortly, Piano; The Buzz; Berlin Wall | `ku5-groove`, `u7-solo`, `ku7-solo`, `u8-4`, `ku8-4`; Transferaufgabe `e7-5-3` / `ke7-5-3` mit eigener Taktkarte |
-| Clean/Distortion- und Melodie/Begleitwechsel | The Buzz; The Way it Is | `u6-4`, `u4-strum`, `u7-solo`, `u8-7`; Wechselstelle isoliert und im vollständigen Durchlauf aufnehmen |
-| Freier Mollpentatonik-Soloabschnitt und Rückkehr | Brown Shoes / Take a Walk With Me | `u7-4`, `ku7-4`, `u7-solo`, `ku7-solo`; vorbereitetes Motiv, eigene Antwort, richtige Rückkehr |
-| Wiederholungen, D.S./D.C., Fine, Coda und Formausdauer | The Buzz; lange Grade-Four/Five-Parts | `u3-5`, `ku3-5`, `u7-solo`, `ku7-solo`; `u7-5`, `ku7-5` verlangen lange Form und vollständiges lokales Stück |
-| Originaltempo statt ausschließlich langsamer Miniaturen | Berlin Wall: ♩ = 140; Who Says it’s Raining: ♩ = 146 | `e7-5-2` / `ke7-5-2`: Achtel bis 140–146; zusätzliche Sechzehntel-/Comping-Arbeit; abschließend Originaltempo im ganzen Stück |
-| Weitere Tonarten und Register | Coming Up Shortly; Berlin Wall, Piano | G-Moll in Violet Gate; `u8-3`, `ku8-3`; explizite Registerentscheidung bei Bassnoten unter C2 |
+Jetzt werden Dur- und Molltonarten mit einer Grade-Grenze für die Zahl der Vorzeichen gewählt. Rock umfasst auch mixolydische und geliehene Durakkorde. Notenwerte, Techniken und Koordination besitzen **eigene Profile für jedes Instrument**. Bereits Grade 1 braucht beispielsweise Drum-Sechzehntelfills; daraus folgt keine Anforderung an Keyboard-Sechzehntel derselben Stufe.
 
-## Lehrer- und Lernendenperspektive
+## Anforderungen je Grade
 
-**Lehrer:** Einzelnoten-Sechzehntel belegen keine Powerchord-Sechzehnteltechnik. Ein ganzer Dreiklang belegt keine rhythmische Akkordbegleitung. Ein kurzer Swing-Loop belegt keine linke Akkordbegleitung unter bewegter rechter Melodie. Diese Lücken werden durch vier neue Einheiten geschlossen: drei Gitarren- und eine Keyboardeinheit, jeweils drei Aufgaben. 4 × 3 = 12 zusätzliche Aufgaben.
+| Grade | Gitarre | Keyboard | Bass | Drums |
+|---|---|---|---|---|
+| 0 | Gehaltene und in Vierteln wiederholte Grundton/Quint-Klänge, Wechsel, Pausen | Rechte Einzelmelodie und Dreiklänge, Ganze/Halbe/Viertel; linke Hand pausiert | Grundtonwechsel, Viertel und Achtel | Viertelbecken, Bassdrum/Snare, Achtelbewegung und Achtelfills, Stopps |
+| 1 | Powerchord-Achtel, Wechsel, gedämpfte/offene Anschläge | Linke Dreiklänge, Handdialog, Melodie über gehaltenen Akkorden | Achtel und einfache Durchgänge | Sechzehntelfills, Snare/Tom-Verteilung, Viertelbecken |
+| 2 | Chromatische Powerchordbewegung, Dreiklanganschläge und Dämpfung | Akkorde mit Bass, gemeinsame Rhythmen und abwechselnde Hände | Oktave, Quinte, bewegte Figuren | Achtelbecken, variierte Bassdrum, akzentuierte Fills |
+| 3 | Dur-/Moll-/Septakkorde, wiederholte Anschläge und melodische Registerwechsel | Akkordwechsel, chromatische Farbe, eigene Begleitung unter Melodie | Skalen-/Akkordfiguren und Registerwechsel | Crash-Einsätze, akzentuierte Sechzehntel und Tomfills |
+| 4 | Ganze Powerchord-Sechzehntel, Synkopen, Bindungen, Akkordanschläge, Clean/Drive-Kontrast | Punktierungen, Synkopen, Bindungen, unabhängige Hände und Septakkorde | Synkopen, chromatische Annäherungen und präzise Pausen | Versetzte/punktierte Grooves, offene Hi-Hat, Ride/Crash, drei koordinierte Schläge und Sechzehntelfills |
+| 5 | Rhythmusslashes, Taktwiederholung, Quint-/Sextwechsel, Shuffle, Septakkorde, ausgeschriebener Kontrast und Rückkehr | Swing/Comping, Triolenauftakt, 12/8, unabhängige Hände und gehaltene Innenstimmen | Walking-/Shuffle-/12/8-Figuren, Kontrast und Rückkehr | Swing/Shuffle/12/8, Triolenfills, Kontrast und Rückkehr |
 
-**Lernende:** Erst lesbares eigenes Stück, dann eine eng begrenzte Variation, dann eigene Anwendung. Zeige den Hook, die Antwort und den Schluss in einer Aufnahme. Technik zunächst langsam kontrollieren; anschließend Form und Technik bei Zieltempo verbinden. Bestehen des Transfers verlangt zwei vollständige Aufnahmen an verschiedenen Tagen, ohne Neustart und ohne verkürzte Pausen.
+Die neuen Schwerpunkte ersetzen nicht die grundlegenden Bausteine: Akkordwechsel, Grundwerte, Pausen und frühere Anschlagsarten bleiben in den späteren Arrangements enthalten. Lange Abläufe, Wiederholungen sowie D.C./D.S., Fine und Coda kommen in Grade 5 hinzu. Soloabschnitte sind für das Lesen ausgeschrieben; freie Improvisationsaufträge gehören nicht in diesen Modus.
 
-Die langen Aufgaben beginnen mit 32 Takten und erweitern auf 96–144 gespielte 4/4-Takte. Das ist eine Vorbereitung, kein Ersatz für das konkrete Original: Form und tatsächliche Taktreihenfolge des ausgewählten Gigajam-Stücks gelten beim abschließenden Durchlauf. Die Einzähler der Gitarren- und Keyboard-PDFs können unterschiedlich sein; beispielsweise Coming Up Shortly enthält im Keyboardpart einen zusätzlichen Auftakt. Einsatz aus dem eigenen Part lesen.
+Konkrete Belege: Debut **Fire It Up** zeigt rechte Piano-Dreiklänge und Achtelfills; Grade 1 **Ain’t No Party**, Drums, enthält Sechzehntelfills. Grade 2 **Fire It Up**, Gitarre, nutzt gedämpfte Anschläge; **Ain’t No Party**, Bass, erweitert um Oktav-/Quintbewegung. Grade 3 **Tunnel Vision**, Piano, verbindet Melodie und linke Akkorde; **Wearing the Wire**, Drums, ergänzt Akzentfills. Grade 4 **Torture**, Gitarre, verlangt Sechzehntel auf vollständigen Powerchords; **Island of Dreams**, Drums, erweitert Punktierungen und Beckenfarben. Grade 5 **Brown Shoes** verbindet Shuffle, Quint/Sext und Rhythmusnotation; **Coming Up Shortly**, Piano, zeigt den Triolenauftakt; **Soul Town**, Piano, gehaltene Innenstimmen und unabhängige Rhythmen; **Take a Walk With Me** nutzt 12/8.
 
-## Transfergrenzen
+## Tempo und Form
 
-- P4 vermittelt Tonhöhen, Akkordstruktur, Rhythmus und Form mit anderen Griffen als Standardstimmung. Standardstimmungsgriffe müssen bei Instrumentenwechsel gesondert gelernt werden.
-- Die 49 Tasten reichen von C2 bis C6: 4 × 12 + 1 = 49. Berlin Wall enthält F1, Island of Dreams B1. Originale Bassregister sind damit nicht vollständig erreichbar. Eine ganze Bassphrase eine Oktave anheben und gegen rechte Hand, Harmonie und Stimmkreuzungen prüfen; es bleibt eine Registerbearbeitung.
-- Take a Walk With Me notiert **♩ = 85**, obwohl der Satz in 12/8 steht. Vier große Pulse pro Takt dauern jeweils 1,5 Viertel. Entsprechendes punktiertes Vierteltempo: 85 / 1,5 ≈ 56,67. Die a-minor-Begleitung in 12/8 zählt punktierte Viertel. 85 dort unverändert einzustellen wäre um den Faktor 1,5 zu schnell.
-- Die Vorschau unterstützt einen Wiederholungsbereich mit einzelnen Endings oder einen D.S./D.C.-Rücksprung. Zusammengesetzte Originalformen wie The Buzz werden als Taktkarte gelesen und manuell gespielt bzw. vollständig ausgeschrieben. Nicht unterstützte Kombinationen werden abgewiesen.
-- Die lokale Sammlung enthält keinen vollständigen Prüfungslehrplan mit formalen Gehör-, Blattspiel- und Bewertungskriterien. Abgedeckt sind die sichtbaren Spielanforderungen der Sammlung. Prüfungsgleichwertigkeit lässt sich daraus nicht bestätigen.
+| Grade | Referenztempi, Viertel/min | Generatorbereich, Viertel/min | Gespielte Takte | Abschnitt |
+|---|---|---|---|---|
+| 0 | 85, 90, 93, 115, 128 | 85–128 | 12–16 | 4 Takte |
+| 1 | 85, 90, 93, 115, 128 | 85–128 | 16–32 | 4 Takte |
+| 2 | 85, 90, 93, 115, 128 | 85–128 | 24–48 | 4 Takte |
+| 3 | 85, 90, 93, 115, 128 | 85–128 | 40–64 | 4 oder 8 Takte |
+| 4 | 90, 91, 102, 120, 140 | 90–140 | 64–128 | 4 oder 8 Takte |
+| 5 | 80, 85, 110, 125, 146 | 80–146 | 64–144 | 4 oder 8 Takte |
 
-## Vollständiges Partiturinventar
+MIDI enthält teils gerundete Abweichungen: Island of Dreams 90,5 statt notierter 91, Brown Shoes 124,5 statt 125, Who Says it’s Raining 145,5 statt 146. Die Bereiche verwenden die notierten Werte. Der Nutzer kann langsamer beginnen, ohne dass der Generator die Zieltempi versteckt.
 
-| Stufe | Stück / lokaler Ordner | Gitarrenseiten | Keyboardseiten |
-|---|---|---:|---:|
-| Debut | Ain't No Party | 1 | 1 |
-| Debut | Fire It Up | 1 | 1 |
-| Debut | Lonely Streets | 1 | 1 |
-| Debut | Tunnel Vision | 1 | 1 |
-| Debut | Wearing the Wire | 1 | 1 |
-| 1 | Ain't No Party | 1 | 1 |
-| 1 | Fire It Up | 1 | 2 |
-| 1 | Lonely Streets | 1 | 1 |
-| 1 | Tunnel Vision | 1 | 2 |
-| 1 | Wearing the Wire | 1 | 2 |
-| 2 | Ain't No Party | 1 | 2 |
-| 2 | Fire It Up | 2 | 3 |
-| 2 | Lonely Streets | 1 | 2 |
-| 2 | Tunnel Vision | 1 | 2 |
-| 2 | Wearing the Wire | 1 | 2 |
-| 3 | Ain't No Party | 2 | 2 |
-| 3 | Fire It Up | 2 | 3 |
-| 3 | Lonely Streets | 2 | 2 |
-| 3 | Tunnel Vision | 2 | 3 |
-| 3 | Wearing the Wire | 2 | 3 |
-| 4 | Berlin Wall | 3 | 5 |
-| 4 | Island of Dreams | 3 | 3 |
-| 4 | The Buzz | 1 | 3 |
-| 4 | The Way it Is | 2 | 3 |
-| 4 | Torture | 3 | 4 |
-| 5 | Brown Shoes | 3 | 4 |
-| 5 | Coming Up Shortly | 2 | 3 |
-| 5 | Soul Town | 2 | 4 |
-| 5 | Take a Walk With Me | 1 | 3 |
-| 5 | Who Says it's Raining | 2 | 2 |
+Take a Walk With Me notiert **Viertel = 85 in 12/8**. Vier große Pulse pro Takt entsprechen punktierter Viertel = 85 / 1,5 ≈ 56,67. Diese kleinere Zahl ist eine andere Tempoeinheit, keine Verlangsamung. MIDI verwendet das Vierteltempo; der Player zeigt die zu seiner Taktart passende Einheit. Progressive erweitert ab Grade 4 um 5/8 oder 7/8; das ist eine Stilerweiterung, kein Befund der Rocksammlung.
 
-Die Tabelle zählt sämtliche Folgeseiten, einschließlich Solo-, Coda- und Schlussabschnitten. Der ältere [Abgleich](COURSE_AUDIT.md) dokumentiert den damaligen Stand mit eingeschränkter Seitensichtung; dieser Abgleich erweitert die Prüfgrundlage.
+Wiederkehrende Abschnitte werden einmal geschrieben. Die tatsächliche Form wird angezeigt und vollständig abgespielt; höchstens 24 verschiedene Takte passen auf die einseitige Partitur. Vier Takte bilden immer eine Zeile, acht Takte zwei. Sprungformen verbinden einen wiederholten Abschnittsblock mit einer anschließenden Rückkehr zu Segno oder Anfang und dem notierten Schluss/Coda. Die Wiederholungszahl und vollständige Form bleiben sichtbar.
+
+## Generierbarkeit und Prüfung
+
+Die Rhythmusgrammatik setzt ganze Takte aus zulässigen Grundwerten, Pausen, Punktierungen und vollständigen Triolengruppen zusammen. Sie verwendet keine Liste übernommener Referenztakte. Häufige Rockmuster werden höher gewichtet; andere vollständige Kombinationen bleiben möglich. Melodien, Basslinien und erreichbare Akkordlagen werden aus Tonart, Harmonie, Kontur und Zufall komponiert. Akkordwechsel innerhalb eines Takts werden gemeinsam geplant. Übliche kurze Takte können dadurch unabhängig dieselbe Gestalt wie ein Referenztakt erhalten.
+
+Tests prüfen die Gradewerte pro Stimme, breite Tonart-/Tempoauswahl, alle benannten Schwerpunkte, vollständige Takte, Griff-/Handgrenzen, Drum-Koordination, wörtliche Wiederkehr und Formlänge. Die MIDI-Datei wird gegen alle vier geschriebenen Parts geprüft: Notenanfänge und -enden, Stimmen, Swing, gleichmäßige explizite Triolen, Bindungen über Taktgrenzen, Artikulation und Lautstärke. Die Bass- und Drum-Notation sind eigene Parts, keine nachträglich angenäherte Begleitung. Browserprüfungen decken sämtliche Stil/Grade/Instrument/Sprache-Kombinationen, mobile Zeilen, direkte einseitige PDFs und gespeicherte MIDI-/Bookmark-Einstellungen ab.
+
+**Grenzen:** Der Abgleich beschreibt die Spielanforderungen dieser lokalen Sammlung, keine formale Prüfungsanerkennung. „Jeden Taktinhalt erzeugen“ bedeutet hier die musikalischen Bausteine und Spielanforderungen, nicht eine Zusage, dass jeder Originaltakt in originaler Lage und Griffweise reproduziert wird. P4 erfordert andere Griffe als Standardstimmung. Die 49 Tasten C2–C6 können die tiefen F1-/B1-Register einiger Piano-Originale nicht abbilden; die Register werden angepasst. Diese Instrumentgrenzen bleiben ausdrücklich erhalten. Automatische Notenprüfung beweist keine korrekte Körperhaltung, Anschlagtechnik oder Ausdruck; auch freie Soli werden nicht automatisch gelehrt.
+
+## Vollständiges Inventar
+
+| Grade | Stück | Gitarre | Piano | Bass | Drums |
+|---|---|---:|---:|---:|---:|
+| 0 | Ain't No Party | 1 | 1 | 1 | 1 |
+| 0 | Fire It Up | 1 | 1 | 1 | 1 |
+| 0 | Lonely Streets | 1 | 1 | 1 | 1 |
+| 0 | Tunnel Vision | 1 | 1 | 1 | 1 |
+| 0 | Wearing the Wire | 1 | 1 | 1 | 1 |
+| 1 | Ain't No Party | 1 | 1 | 1 | 1 |
+| 1 | Fire It Up | 1 | 2 | 1 | 1 |
+| 1 | Lonely Streets | 1 | 1 | 1 | 1 |
+| 1 | Tunnel Vision | 1 | 2 | 1 | 1 |
+| 1 | Wearing the Wire | 1 | 2 | 1 | 1 |
+| 2 | Ain't No Party | 1 | 2 | 1 | 1 |
+| 2 | Fire It Up | 2 | 3 | 2 | 2 |
+| 2 | Lonely Streets | 1 | 2 | 1 | 1 |
+| 2 | Tunnel Vision | 1 | 2 | 2 | 2 |
+| 2 | Wearing the Wire | 1 | 2 | 1 | 1 |
+| 3 | Ain't No Party | 2 | 2 | 2 | 2 |
+| 3 | Fire It Up | 2 | 3 | 2 | 3 |
+| 3 | Lonely Streets | 2 | 2 | 2 | 2 |
+| 3 | Tunnel Vision | 2 | 3 | 2 | 2 |
+| 3 | Wearing the Wire | 2 | 3 | 2 | 2 |
+| 4 | Berlin Wall | 3 | 5 | 3 | 4 |
+| 4 | Island of Dreams | 3 | 3 | 1 | 2 |
+| 4 | The Buzz | 1 | 3 | 2 | 3 |
+| 4 | The Way it Is | 2 | 3 | 2 | 2 |
+| 4 | Torture | 3 | 4 | 2 | 3 |
+| 5 | Brown Shoes | 3 | 4 | 2 | 3 |
+| 5 | Coming Up Shortly | 2 | 3 | 2 | 1 |
+| 5 | Soul Town | 2 | 4 | 2 | 3 |
+| 5 | Take a Walk With Me | 1 | 3 | 1 | 2 |
+| 5 | Who Says it's Raining | 2 | 2 | 2 | 2 |
+
+Gesamt: Gitarre 48, Piano 71, Bass 46, Drums 53 Seiten = **218 Seiten**. Die lokalen Partituren und MIDI-Dateien bleiben außerhalb des Repositories.

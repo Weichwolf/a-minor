@@ -1,41 +1,31 @@
-# Praxis und Musiklehre · Revision 2026-10-11
+# Praxis und Musiklehre · Revision 2026-10-13
 
-Das Ziel ist sicheres Spielen nach Noten mit Verständnis für den musikalischen Zusammenhang. Praxis enthält vollständige generierte Stücke; Theorie ist ein Lesebuch. Eine Geschmacksnotiz oder ein Bookmark ist keine Leistungsmessung. Es gibt keine automatischen Aufstiegsbedingungen und keine Improvisationsaufträge.
+Das Ziel ist sicheres Spielen nach Noten mit Verständnis für den musikalischen Zusammenhang. Praxis enthält generierte Musik für Gitarre, Keyboard, Bass und Drums; Theorie bleibt ein Lesebuch. Bookmarks und Geschmacksnotizen messen keinen Lernfortschritt. Es gibt keine Aufgabenlisten, automatischen Aufstiegsbedingungen oder Improvisationsaufträge.
 
-## Komposition
+## Musikalische Konstruktion
 
-Der Generator komponiert zuerst eine kurze rhythmische Zelle und eine Kontur. Wiederkehrende Zellen halten die Phrasen zusammen; Akkordtöne verankern die Anfänge. Kontrastabschnitte verändern Kontur oder Spielrolle. Wörtliche A-Rückkehr kopiert die Musik, A′ wird ausgeschrieben. Der Schluss verbindet ein tonales Bassfundament mit einem melodischen Zielton.
+Jeder Part erhält einen Grade-Schwerpunkt. Wiederkehrende Rhythmuszellen und Konturen halten die Abschnitte zusammen. Die Harmonik ist vorgeplant, einschließlich möglicher Wechsel innerhalb eines Takts. Akkordtöne verankern die Melodie, Durchgänge verbinden die Stützpunkte. Kontrast, Wiederkehr und ein tonaler Schluss machen bereits Grade 0 zu Musik. Eine wörtliche Rückkehr verwendet dieselben Noten und dieselbe Begleitung.
 
-Harmonie ist vorgeplant, keine nachträglich erfundene Beschreibung. Die Stilvorlagen unterscheiden Riffpuls, lange Doom-Dauern, Gothic-Bassfiguren, Progressive-Kontrast/Gruppierung, barocke Figuration, Lounge-Begleitung und Filmmusik-Akkordkreise. Der Algorithmus wählt innerhalb dieser Vorlagen Tonzentrum, Rhythmuszelle, Kontur, Fokus, Form und Tempo. Ein Seed ist reproduzierbar.
+Rock richtet sich nach den Anforderungen der lokalen Gigajam-Sammlung. Doom, Gothic, Progressive, Barock und Lounge verändern Klang und musikalische Bauweise innerhalb derselben Instrumentgrenzen. Erweiterungen wie lydische Farbe und ungerade Takte werden als Stilmerkmale behandelt. Die Anforderungen sind pro Instrument verschieden: Drum-Sechzehntel in Grade 1 bedeuten keine Keyboard-Sechzehntel in Grade 1.
 
-Grade 0 verwendet drei bis fünf Melodietöne, Viertel und Halbe mit einem ruhigen Bass. Wiedererkennung und Schluss sind bereits vorhanden. Ein Keyboardstück enthält seine eigene Begleitung; zusätzliche Bandstimmen sind optional. Grade und Stil sind getrennte Parameter.
+Grade 0 verbindet rechte Piano-Melodie und Dreiklänge mit linker Pause, Gitarrenquinten, Grundtonbass und einfachen Grooves/Fills. Später kommen Koordination, Akkordanschläge, Synkopen, Sechzehntel, Triolen, Innenstimmen, Navigation und Ausdauer hinzu. Der [Gigajam-Abgleich](GIGAJAM_COVERAGE.md) dokumentiert die Profile, Referenztempi, Beispiele und Grenzen.
 
-## Begrenzte Variation
+## Variation und Rückmeldung
 
-Ein Stück erhält einen Schwerpunkt. Andere Merkmale stammen überwiegend aus früheren Stufen. Ein neuer ungerader Takt erhält regelmäßige Abschnittslängen. Eine verkürzte Phrase erscheint in 4/4. Swing wird nicht gleichzeitig auf Triolen- oder Sechzehntelfiguren angewendet. Register und Handrollen wechseln erst in der fortgeschrittenen Variante. Stilvarianten können einen bereits bekannten Schwerpunkt wiederverwenden, auch in einem höheren Grade.
+Erkennbare Figuren werden höher gewichtet als völlig freie Tonfolgen. Akkordwechsel geben bekannten Figuren neue Bedeutung; die Stilwahl darf die neuen Grade-Anforderungen nicht ersetzen. Explizite Triolen bleiben gleichmäßig, auch in einem swingenden Stück. Alle Takte sind vollständig; Abschnitte sind vier oder später acht Takte lang. Längere Formen entstehen durch hörbare und lesbare Rückkehr, während die Partitur kompakt bleibt.
 
-Die Grade sind Inhaltsbereiche, keine beobachteten Fähigkeiten. Auswahl und Klick auf „Neues Stück“ sagen nicht, ob ein Spieler das bisherige Stück beherrscht. Der Nutzer kann ein Stück behalten, erneut spielen oder bookmarken. Ein Generator ersetzt keine Rückmeldung zu Körperhaltung, Tonbildung oder tatsächlicher Ausführung.
+Ein Grade ist ein Inhaltsbereich, keine beobachtete Fähigkeit. Auswahl, Anhören oder ein Bookmark beweisen keine Beherrschung. Der Player ermöglicht langsames Einstudieren, Einzählen, einzelne Abschnitte, Schleifen und Vergleich mit dem vollständigen Bandarrangement. Eigene Stimme und Begleitung können getrennt eingestellt werden. Die MIDI-Datei enthält die tatsächlichen vier Parts; der Player erfindet keine vereinfachten Bass-/Drum-Loops.
 
-Die Entscheidung für begrenzte Variation ist eine didaktische Ableitung, kein Nachweis der Wirksamkeit dieser Anwendung. Eine Studie mit 48 musikalischen Anfängern untersuchte zeitliche Variabilität und Übungsreihenfolge, nicht diese Songformen: [PLOS ONE, 2018](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0193580). Ihre Ergebnisse begründen kein pauschales „mehr Zufall ist besser“. Das Projekt setzt deshalb auf klar erkennbare Figuren und kontrollierte Anforderungen statt beliebiger Notenfolgen.
+## Theoretische Einordnung
 
-## Was die Einordnung zeigt
+Ein kurzer Absatz nennt Tonzentrum/Modus, Form, tatsächliche Akkordfolgen, bei höheren Grades römische Stufen, häufige und größere Intervalle sowie wirklich vorkommende Notenwerte. Der Schwerpunkt erklärt den musikalischen Zusammenhang. Für Drums werden Rhythmus und Koordination beschrieben; die GM-Notennummern werden nicht als melodische Intervalle ausgegeben. Eine Liste der Melodietöne oder ein fertiger Fingersatz bleibt aus der Stückbeschreibung heraus.
 
-Die Beschreibung wird aus dem tatsächlichen Notenstand gewonnen: Akkordfolgen pro geschriebenem Abschnitt, bei höheren Grades Stufen, häufige Intervalle und gegebenenfalls größere tatsächliche Sprünge, harmonische Quinten, verwendete Dauern, Form und Fokus. Rhythmus- und Intervallnamen werden nicht nur aus den erlaubten Generatorparametern übernommen. Es gibt keine Liste der gesamten Melodie und keine Fingersatzlösung.
+Die Durreferenz der Stufen wird beibehalten: Moll kann ♭III, ♭VI und ♭VII enthalten. Natürlich Moll mit v–i, Moll mit Durdominante und mixolydische Rockharmonik sind unterschiedliche Klangmittel. Geliehene Akkorde und chromatische Durchgänge dürfen außerhalb der Grundskala liegen und werden in der Notation entsprechend geschrieben.
 
-Eine römische Stufe benennt die Beziehung zum Grundton. In Moll verwendet die Darstellung etwa ♭III, ♭VI und ♭VII gegenüber der Durreferenz. Natürlich Moll kann über v–i schließen; harmonisch Moll nutzt V–i mit Leitton. Das sind unterschiedliche Klangmittel. Die Benennung von Septakkorden folgt ihrer tatsächlichen Terz, Quinte und Septime.
+## Instrumentgrenzen und Nachvollziehbarkeit
 
-## Umfang und Grenzen
+P4-Gitarre verwendet E2 A2 D3 G3 C4 F4, der Bass E1 A1 D2 G2. Bundgrenzen wachsen mit dem Grade; Akkordlagen bleiben erreichbar; kleine Barrés zählen zur Grenze von vier Greiffingern und dürfen keine klingende offene oder tiefer gegriffene Saite überdecken. Keyboard bleibt auf C2–C6 und höchstens fünf Töne pro Hand innerhalb einer Oktave begrenzt. Gehaltene Innenstimmen zählen zur rechten Hand. Drums begrenzt gleichzeitige Handschläge auf zwei, mit zusätzlichem Fuß bis zu drei Schlägen.
 
-Die vorhandenen [Gigajam-Auswertungen](GIGAJAM_COVERAGE.md) liefern Anforderungsbereiche: Rhythmus, Akkordanschläge, Koordination, Stimmen, Pausen, Form, Register und Tempo. Die Miniaturen nehmen ausgewählte Bereiche auf. Sie decken keine vollständigen 96–144-Takt-Bandformen, alle Symbol-/Sprungzeichen, Standardstimmungsgriffe oder die höchsten Originaltempi ab. P4-Griffe unterscheiden sich von Standardstimmung. Eine Prüfungsgleichwertigkeit wird nicht behauptet.
+Diese Bedingungen ersetzen keine Kontrolle von Haltung, Klang, Greifen, Plektrumführung und Dämpfung. Eine MIDI-Artikulation simuliert den hörbaren Effekt, nicht die Körperbewegung. Originalregister unter C2 und Standardstimmungsgriffe brauchen eine Bearbeitung. Prüfungsgleichwertigkeit wird nicht behauptet.
 
-Spielbarkeit wird für P4 E2–F4 plus die Grade-Bundgrenze und Keyboard C2–C6 geprüft. Die Notation stellt ein rhythmisches und harmonisches Stimmengerüst dar; reale Plektrumtechnik, Legato, Dämpfung und Pedalgebrauch werden nicht vollständig durch MIDI abgebildet. Klangqualität und Ausdruck lassen sich nicht allein durch Tonbereichs- und Taktprüfungen belegen.
-
-## Musiklehre
-
-Vier neue Kapitel ergänzen das Buch um 25 originale Modelle: sieben Stilbauweisen, Filmmusik am Klavier, Lounge und musikalischer Zusammenhang. Die Kapitel bleiben erklärend. Kleine Modelle zeigen konkret, wie Bass, gemeinsamer Ton, Stimmführung, Rhythmus, Register und Form zusammenwirken. Sie sind weder Cover noch Aufgaben.
-
-Fachliche Vergleichsquellen: [Open Music Theory: ii–V–I](https://viva.pressbooks.pub/openmusictheory/chapter/ii-v-i/) für Terz-/Septimverbindungen; [Open Music Theory, Inhaltsverzeichnis](https://viva.pressbooks.pub/openmusictheory/table-of-contents/) für die Einordnung von Form, Phrasen und Swing; [Berklee: Music Composition for Film and TV 1](https://online.berklee.edu/courses/music-composition-for-film-and-tv-1) für die Verbindung von Stil, dramatischer Funktion und musikalischen Bausteinen. Die konkreten Notenmodelle und Stilvorlagen sind eigene Gestaltungsentscheidungen.
-
-## Nachvollziehbarkeit
-
-Bookmarks enthalten vollständige Partituren, Generatorversion, Auswahl und freiwillige Geschmacksnotiz. JSON ermöglicht Wiederherstellung, CSV eine musikalische Übersicht. Import ergänzt bestehende Einträge nach Validierung. Speichern wird zuerst im Browser abgeschlossen, bevor sich die interne Liste ändert. Die Exporte erlauben manuelle Weiterentwicklung des Generators anhand bevorzugter Stücke; sie behaupten keine automatische Analyse des Lernfortschritts.
+Bookmarks speichern vollständige Partituren, Einstellungen und freiwillige Geschmacksnotizen. JSON erlaubt Sicherung und Wiederherstellung; CSV die musikalische Übersicht für weitere manuelle Anpassungen. Alte Generatorstände werden über Git verwaltet; für die vorliegende Umstellung ist keine Kompatibilität zu alten Bookmarks vorgesehen. Das Lesebuch und seine allgemeine Gliederung werden unabhängig von dieser Generatorrevision behandelt.

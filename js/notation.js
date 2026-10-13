@@ -6,6 +6,7 @@ AM.notation = (() => {
     treble:{glyph:'gClef', line:3, ref:['E', 4], ks:{F:0, C:3, G:-1, D:2, A:5, E:1, B:4}, ksb:{B:4, E:1, A:5, D:2, G:6, C:3, F:7}},
     bass:{glyph:'fClef', line:1, ref:['G', 2], ks:{F:2, C:5, G:1, D:4, A:7, E:3, B:6}, ksb:{B:6, E:3, A:7, D:4, G:8, C:5, F:9}},
   };
+  const drumSteps={35:1,36:1,37:5,38:5,40:5,41:2,43:2,45:6,47:6,48:7,50:7,42:9,44:-1,46:9,49:11,51:9,53:10,55:11,57:11,59:9};
   const glyph = (name, x, y, cls, scale = 1) => `<path d="${AM.glyphs[name].d}" transform="translate(${x},${y})${scale === 1 ? '' : ` scale(${scale})`}" class="${cls || 'glyph'}"/>`;
   const STEM = 35;
   const ticks = d => { if (!/^[whqes](?:\.|t)?$/.test(d)) throw Error('Invalid duration'); return DUR[d[0]] * PPQ * (d.endsWith('.') ? 1.5 : d.endsWith('t') ? 2 / 3 : 1); };
@@ -62,10 +63,12 @@ AM.notation = (() => {
 
   function staff(sc, st, L, top, aids, tr, key, x0) {
     if (sc.rhythmSlash) aids = {};
-    const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = M.keyAcc(key), barLen = barLenFor(sc);
+    const percussion=sc.instrument==='drums';
+    const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = percussion?[]:M.keyAcc(key), barLen = barLenFor(sc);
     const REF = stepOf(...C.ref) - tr, yOf = s => bottom - (s - REF) * gap / 2;
     let extent = bottom;
-    let o = glyph(st.clef === 'treble' && sc.instrument === 'guitar' ? 'gClef8vb' : C.glyph, 12, top + C.line * gap, 'clef');
+    let o = percussion?`<g class="clef percussion-clef"><rect x="18" y="${top+10}" width="5" height="20"/><rect x="28" y="${top+10}" width="5" height="20"/></g>`:glyph(st.clef === 'treble' && sc.instrument === 'guitar' ? 'gClef8vb' : C.glyph, 12, top + C.line * gap, 'clef');
+    if(sc.instrument==='bass')o+=`<text x="24" y="${top+55}" class="clef-octave">8</text>`;
     let kx = 44; ks.forEach(([l, a]) => { o += glyph(ACC[a], kx, top + (a > 0 ? C.ks[l] : C.ksb[l]) * gap / 2, 'acc'); kx += AM.glyphs[ACC[a]].w + 2; });
     const meter = M.meter(sc.time,sc.groups), {n:beats,d:unit} = meter;
     o += `<text x="${kx + 10}" y="${mid - 2}" class="tsig">${beats}</text><text x="${kx + 10}" y="${bottom - 2}" class="tsig">${unit}</text>`;
@@ -86,7 +89,7 @@ AM.notation = (() => {
         pos += length; return;
       }
       if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); extent = Math.max(extent,rm + 18); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
-      const ps = sc.rhythmSlash ? [{...M.parse('B4'),index:0,st:REF + 4,y:mid}] : pitches(n).map((p,index) => { const q = M.parse(p); return {...q, index, st:stepOf(q.letter, q.octave), y:yOf(stepOf(q.letter, q.octave))}; }).sort((a, b) => a.st - b.st);
+      const ps = sc.rhythmSlash ? [{...M.parse('B4'),index:0,st:REF + 4,y:mid}] : pitches(n).map((p,index) => { const q = M.parse(p),step=percussion?REF+(drumSteps[q.midi]??5):stepOf(q.letter,q.octave);return {...q,index,st:step,y:yOf(step)}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1], up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid;
       extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names || aids.frets ? bottom + 70 + (aids.names && aids.frets ? 14 : 0) : bottom);
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
@@ -94,10 +97,13 @@ AM.notation = (() => {
       let ax = x - 9;
       let displaced = false;
       ps.forEach((p, i) => {
-        if (!sc.rhythmSlash && st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
+        if (!percussion&&!sc.rhythmSlash && st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
         displaced = i > 0 && p.st - ps[i - 1].st === 1 && !displaced;
         const shift = displaced ? (up ? 11 : -11) : 0;
-        o += sc.rhythmSlash ? `<path d="M${x - 6} ${mid + 6} l8 -14 h4 l-8 14 z" class="head rhythm-slash${d >= 2 ? ' open' : ''}"/>` : n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
+        const cross=n.mute||percussion&&[42,44,46,49,51,55,57,59].includes(p.midi);
+        o += sc.rhythmSlash ? `<path d="M${x - 6} ${mid + 6} l8 -14 h4 l-8 14 z" class="head rhythm-slash${d >= 2 ? ' open' : ''}"/>` : cross?`<path d="M${x+shift-4} ${p.y-4} l8 8 m-8 0 l8 -8" class="cross-head${n.mute?' muted-head':''}"/>`:n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
+        if(percussion&&(p.midi===46||cross&&d>=2))o+=`<circle cx="${x+shift}" cy="${p.y}" r="7" class="open-cymbal"/>`;
+        if(n.ghost)o+=`<text x="${x+shift-10}" y="${p.y+4}" class="ghost-mark">(</text><text x="${x+shift+6}" y="${p.y+4}" class="ghost-mark">)</text>`;
         if (n.d?.endsWith('.')) o += `<circle cx="${x + 10 + shift}" cy="${p.y - (p.st % 2 === REF % 2 ? 3 : 0)}" r="1.8" class="dotd"/>`;
       });
       if (d < 4) {
@@ -122,6 +128,7 @@ AM.notation = (() => {
       if (n.accent) o += `<text x="${x}" y="${st.direction === 'down' ? lo.y + (d < 4 ? STEM + 18 : 22) : st.direction === 'up' ? hi.y - (d < 4 ? STEM + 6 : 14) : up ? lo.y + (n.staccato ? 30 : 22) : hi.y - 14}" class="accent">&gt;</text>`;
       if (n.bend) { const target = M.pcName(hi.midi + n.bend,false); o += `<path d="M${x + 8} ${hi.y - 4} Q${x + 28} ${hi.y - 8} ${x + 28} ${hi.y - 36} l-4 6 m4 -6 l4 6" class="bend"/><text x="${x + 28}" y="${hi.y - 42}" class="aid">${target}</text>`; }
       if (n.staccato) o += `<circle cx="${x}" cy="${up ? lo.y + 12 : hi.y - 12}" r="1.8" class="dotd"/>`;
+      if(n.palmMute&&(!noteIndex||!st.notes[noteIndex-1].palmMute))o+=`<text x="${x}" y="${top-28}" class="palm-mute">P.M.</text>`;
       if (aids.names) o += `<text x="${x}" y="${bottom + 66}" class="aid">${ps.map(p => p.letter + (p.acc > 0 ? '#'.repeat(p.acc) : 'b'.repeat(-p.acc))).join(' ')}</text>`;
       if (aids.strings && sc.instrument === 'guitar') ps.forEach((p,i) => {
         const q = M.position(p.midi,{s:Array.isArray(n.s) ? n.s[p.index] : n.s,maxFret:sc.maxFret ?? 5,window:sc.stringWindow}), xx = x + (i - (ps.length - 1) / 2) * 15;
@@ -209,13 +216,13 @@ AM.notation = (() => {
   }
   function render(el, sc, aids = {}, labels = {}) {
     const refs = references(sc);
-    const barLen = AM.music.meter(sc.time).len * PPQ, bars = measures(sc), poly = sc.instrument === 'guitar' && !!sc.bass;
-    const tr = sc.instrument === 'guitar' ? 7 : 0, x0 = 88 + M.keyAcc(sc.key || 'C').length * 9;
+    const barLen = AM.music.meter(sc.time).len * PPQ, bars = measures(sc), poly = ['guitar','drums'].includes(sc.instrument) && !!sc.bass;
+    const tr = ['guitar','bass'].includes(sc.instrument) ? 7 : 0, x0 = 88 + (sc.instrument==='drums'?0:M.keyAcc(sc.key || 'C').length * 9);
     const width = sc.singleLine ? Infinity : el.clientWidth || Infinity, count = bars[0].length;
     const makeStaves = (from,to) => {
-      const voice = (i,clef,direction,overlay = false) => ({clef,direction,overlay,from,notes:bars[i].slice(from,to).flat(),incoming:bars[i][from - 1]?.at(-1)?.tie ? pitches(bars[i][from - 1].at(-1)).map(M.midi) : null,outgoing:to < count});
-      const staves = [voice(0,sc.clef || 'treble',poly || sc.inner ? 'up' : null)];
-      if (sc.bass) staves.push({...voice(1,poly ? 'treble' : 'bass',poly ? 'down' : null,poly),restOffset:poly ? 40 : 0});
+      const voice = (i,clef,direction,overlay = false) => ({clef,direction,overlay,from,notes:bars[i].slice(from,to).flat(),incoming:bars[i][from - 1]?.at(-1)?.tie ? pitches(bars[i][from - 1].at(-1)).map(M.midi) : from===0?sc.incoming?.[i]:null,outgoing:to < count||!!sc.outgoing});
+      const staves = [voice(0,sc.clef || (sc.instrument==='bass'?'bass':'treble'),poly || sc.inner ? 'up' : null)];
+      if (sc.bass) staves.push({...voice(1,poly ? 'treble' : 'bass',poly ? 'down' : null,poly),restOffset:poly ? sc.instrument==='drums'?16:40 : 0});
       if (sc.inner) staves.push({...voice(2,'treble','down',true),restOffset:40});
       accidentals(staves.filter((st,i) => i === 0 || st.overlay),sc.key || 'C',barLen);
       for (const st of staves.slice(1).filter(st => !st.overlay)) accidentals([st],sc.key || 'C',barLen);
@@ -238,6 +245,7 @@ AM.notation = (() => {
       if (to === count) out += `<line x1="${xe + 4}" y1="${y0}" x2="${xe + 4}" y2="${lastBottom}" class="bar thick"/>`;
       if (staves.length > 1 && !poly) out += `<line x1="8" y1="${y0}" x2="8" y2="${lastBottom}" class="bar"/>`;
       const referenceLines = refs.slice(from,to).map((ref,i) => {
+        if(sc.hideReferences||sc.instrument==='drums')return[];
         if (ref.kind === 'pedal') return [];
         const names = ref.tones.map(p => p || labels.rest || '—').join(' → ');
         const text = ref.kind === 'single' && (ref.chord || sc.chords?.some(Boolean)) ? '' : [labels[ref.kind],names].filter(Boolean).join(': ');
@@ -255,9 +263,12 @@ AM.notation = (() => {
         referenceLines[b - from].forEach((line,i) => { out += `<text x="${x}" y="${contentBottom + 24 + i * 14}" class="harmonic-reference">${esc(line)}</text>`; });
         if (sc.chords?.[b]) out += `<text x="${x}" y="${y0 - 74}" class="chord">${esc(sc.chords[b])}</text>`;
         if (sc.sections?.[b]) out += `<text x="${x + 24}" y="14" class="section">${esc(sc.sections[b])}</text>`;
+        if(sc.programLabels?.[b])out+=`<text x="${x+18}" y="14" class="program-label">${esc(sc.programLabels[b])}</text>`;
+        const sign=sc.signs?.[b];if(sign==='segno'||sign==='coda')out+=glyph(sign,x,y0-42,'navigation',.6);
+        if(sc.instructions?.[b])out+=`<text x="${x}" y="${contentBottom+24}" class="navigation">${esc(sc.instructions[b])}</text>`;
         const repeat = sc.repeat;
         if (repeat?.from === number) out += glyph('repeatLeft', x - 22, y0 + 40, 'repeat');
-        if (repeat && (repeat.endings?.[0] || repeat.to) === number) out += glyph('repeatRight', end - 2, y0 + 40, 'repeat');
+        if (repeat && (repeat.endings?.[0] || repeat.to) === number){out += glyph('repeatRight', end - 2, y0 + 40, 'repeat');if(repeat.times>2)out+=`<text x="${end-24}" y="${y0-44}" class="repeat-count">×${repeat.times}</text>`;}
         if (repeat?.endings?.includes(number)) out += `<path d="M${x} 31 v-8 H${end}" class="volta"/><text x="${x + 4}" y="36" class="measure">${repeat.endings.indexOf(number) + 1}.</text>`;
         const j = sc.jump;
         if (j?.to === number && j.to !== 1) out += glyph('segno', x, y0 - 40, 'navigation', .7);
@@ -315,16 +326,20 @@ AM.notation = (() => {
     const warp = t => { const q = t / PPQ, beat = Math.floor(q), f = q - beat; return sc.swing ? beat + (f <= .5 ? f * 4 / 3 : 2 / 3 + (f - .5) * 2 / 3) : q; };
     voices.forEach((notes,voice) => {
       if (!notes.length) return;
-      let t = 0, held = new Map();
+      let t = 0, held = new Map(),tripletOrigin=0,tripletCount=0;
       notes.forEach(n => {
-        const d = ticks(n.d || 'q'), next = new Map();
+        const explicitTriplet=n.d?.endsWith('t');if(explicitTriplet){if(!tripletCount||n.tuplet)tripletOrigin=t;tripletCount=(tripletCount+1)%3;}else tripletCount=0;
+        const d = ticks(n.d || 'q'), next = new Map(),timeAt=explicitTriplet?pos=>warp(tripletOrigin)+(pos-tripletOrigin)/PPQ:warp;
         if (!n.r) pitches(n).forEach(p => {
           const midi = M.midi(p), previous = held.get(midi);
-          const e = previous || {t:warp(t),midi,dur:0,voice};
-          e.dur += warp(t + d) - warp(t); if (!previous) ev.push(e);
+          const e = previous || {t:timeAt(t),midi,dur:0,voice};
+          e.dur += timeAt(t + d) - timeAt(t); if (!previous) ev.push(e);
           if (n.accent) e.accent = true;
           if (n.bend) e.bend = n.bend;
           if (n.staccato) e.dur *= .5;
+          if(n.mute||n.palmMute){e.dur*=.35;e.mute=true;}
+          if(n.ghost)e.ghost=true;
+          const velocity=Array.isArray(n.velocities)?n.velocities[pitches(n).indexOf(p)]:n.velocity;if(velocity!==undefined)e.velocity=velocity;
           if (n.tie) next.set(midi,e);
         });
         held = next; t += d;
