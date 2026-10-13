@@ -18,6 +18,12 @@ Die Referenzanforderungen sind kein ausschließliches Repertoire von Begleitakko
 
 ## Anforderungen je Grade (mit E-Gitarrenanpassung)
 
+### Erneute Sichtprüfung für die pädagogische Überarbeitung
+
+Am 13.10.2026 wurden für den ersten Überarbeitungsschritt zusätzlich die gerenderten Originalseiten von Debut *Fire It Up* (Piano), Grade 1 *Ain’t No Party* (Drums), Grade 4 *Torture* (Guitar) und Grade 5 *Soul Town* (Keys) visuell geprüft. Das ist eine gezielte Stichprobe, noch keine erneute Vollprüfung aller Grade und Parts.
+
+Der Debut-Part verbindet drei Vorzeichen und Vierteltempo 128 mit ruhenden linken Händen, vielen langen Werten, wiederkehrenden Akkordlagen und eng geführten Melodiefiguren. Daraus folgt für die Überarbeitung: Vorzeichenzahl oder Tempo allein sind keine ausreichenden Schwierigkeitsmaße. Entscheidend ist ihre Kombination mit Bewegungs- und Lesedichte. Grade 1 Drums verbindet einen wiederkehrenden Viertelpuls mit lokal begrenzten Sechzehntelfills; schnelle Unterteilung ist hier keine Anforderung an jeden Takt und jede Stimme. Grade 4 Guitar kombiniert Powerchordangaben, Sechzehntel, Pausen, wiederkehrende rhythmische Zellen und harmonische Wechsel. Grade 5 Keys zeigt sowohl gebundene/versetzte Stimmen als auch einfachere gemeinsame Rhythmen; hohe Grades benötigen also ebenfalls Entlastung innerhalb ihrer Form. Es werden ausschließlich diese abstrakten Anforderungen verwendet, keine Tonfolgen oder Taktkopien.
+
 | Grade | Gitarre | Keyboard | Bass | Drums |
 |---|---|---|---|---|
 | 0 | Gehaltene und in Vierteln wiederholte Grundton/Quint-Klänge, Wechsel, Pausen | Rechte Einzelmelodie und Dreiklänge, Ganze/Halbe/Viertel; linke Hand pausiert | Grundtonwechsel, Viertel und Achtel | Viertelbecken, Bassdrum/Snare, Achtelbewegung und Achtelfills, Stopps |

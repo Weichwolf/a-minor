@@ -282,11 +282,19 @@ AM.practiceComposer = (() => {
     }
     // Common notation devices are authored from our own music.
     if(roleFocus.guitar==='rhythmChart'){for(const name of names){const bs=sectionsByName[name];if(bs.length>=2&&name!=='O'&&bs[0].guitar.texture==='power'){bs[1]=clone(bs[0]);bs[1].guitar.percentRepeat=true;}}}
-    for(const name of names)if(name.endsWith('′'))for(let bar=0;bar<sizes[name]-2;bar++)sectionsByName[name][bar]=clone(sectionsByName[sourceName(name)][bar]);
+    for(const name of names){
+      const bars=sectionsByName[name],prefix=name.endsWith('′')?sizes[name]-2:0;
+      for(let bar=0;bar<prefix;bar++)bars[bar]=clone(sectionsByName[sourceName(name)][bar]);
+      for(const role of ['guitar','bass']){
+        const voice=b=>role==='guitar'?b.guitar.notes:b.bass;
+        AM.practicePhrasing.place(bars.flatMap(voice),{maxFret:profile.maxFret,tuning:role==='guitar'?M.TUNING:M.BASS_TUNING,locked:bars.slice(0,prefix).flatMap(voice).length});
+      }
+    }
     if(navigation){const ns=sectionsByName;if(navigation==='Fine'){ns.A[0].sign='segno';ns.B.at(-1).instruction='D.S. al Fine / Fine';}else if(navigation==='DC'){ns.A.at(-1).instruction='To Coda';ns.B.at(-1).instruction='D.C. al Coda';}else{ns.B[0].sign='segno';ns.B.at(-1).instruction='To Coda';ns.C.at(-1).instruction='D.S. al Coda';}if(ns.O)ns.O[0].sign='coda';}
     let number=0,startBeat=0;const sections=order.map(name=>{const bars=clone(sectionsByName[name]).map(b=>({...b,number:++number})),section={name,character:clone(sectionPlans[name]),...(name.endsWith('′')?{variationOf:sourceName(name)}:{}),startBar:number-bars.length+1,startBeat,time,groups:meter.groups,bars};startBeat+=bars.length*meter.len;return section;});
     const piece={id:`practice-${grade}-${style}-${seed}`,generatorVersion:3,grade,seed,style,requestedStyle:style,focus:roleFocus.guitar,roleFocus,contrasting,theme:contour,root,scale,key,time,tempo,quarterTempo,swing,maxFret:profile.maxFret,form:sections.map(s=>s.name).join(''),bars:number,uniqueBars:names.reduce((n,name)=>n+sizes[name],0),featured,navigation,repeat:navigation?{from:1,to:unit.reduce((n,name)=>n+sizes[name],0),times:repeatCount}:null,
       programs:{guitar:29,keys:0,bass:33,drums:0},sections};
+    AM.practicePhrasing.fitTempo(piece,profile.quarterTempo);
     return{piece,score:piece,bytes:AM.practiceGenerator.encode(piece)};
   }
   return{styles,instruments,profiles,generate};
