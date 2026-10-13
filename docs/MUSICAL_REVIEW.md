@@ -10,7 +10,26 @@ Die aktuelle Prüfung betrifft den Generator für vier Instrumente. Der ältere 
 - **Powerchords über eine ganze Phrase:** Eine zusätzliche Planung verschiebt ausschließlich vollständige Grundton/Quint-Paare um Oktaven und betrachtet die folgenden Anschläge mit. Rhythmus, Tonklassen, einstimmige Motive und der gemeinsame Anfang variierter Rückkehr bleiben erhalten. Ein unabhängiger Regressionstest mit C3/G3–D3/A3–E2/B2 belegt die ruhigere Fortsetzung nach E3/B3; Bindungen bleiben zusammenhängend. Danach plant der bestehende Durchgang die konkrete Saitenfolge.
 - **Abschnittsübergänge und Wiederkehr:** Die Messung schneller großer Sprünge begann bisher an jedem Abschnitt neu. Sie durchläuft nun die tatsächliche gespielte Form und berücksichtigt auch den Übergang zum nächsten Abschnitt. Die maximale Anschlagsdichte wird weiterhin abschnittsweise bestimmt. Ein eigener Test belegt, dass ein schneller Registersprung genau an einer Abschnittsgrenze in die kombinierte Anforderung eingeht.
 
-Nach diesen Änderungen bestehen alle **93 automatisierten Tests**. Die komplette musikalische Beurteilung der 36 Fälle, der Abgleich sämtlicher Schwerpunkte und die erneute Browserprüfung des endgültigen Generatorstands stehen noch aus. Die Prüfung ist eine Noten- und Bewegungsanalyse, kein instrumentaler Spieltest und kein Hörurteil.
+## Prüfung der angekündigten Lerninhalte
+
+Die Fokusprüfung kontrolliert klingende Ereignisse und Notation statt allein die ausgewählte Schwerpunktbezeichnung. Sie deckt alle sechs Stile ab. Die Regressionen stehen in `tests/practice-focus.test.cjs`; die zusätzlichen Harmonie- und Registerprüfungen in `tests/practice-composer.test.cjs`.
+
+| Reproduzierbarer Befund | Musikalische Korrektur |
+|---|---|
+| Grade 4 Rock, Seed 12: „synkopierter Bass“ konnte nur auf ganzen Zählzeiten einsetzen | Eine Achtelpause führt zu einer punktierten Viertel, die über den folgenden Hauptschlag hinweg klingt. Der restliche Takt bleibt variabel. Dieselbe Anforderung gilt für die entsprechenden Gitarren- und Keyboardschwerpunkte. |
+| Grade 5 Rock, Seed 23: Septakkord-Arpeggio ohne gespielte Septime | Die eröffnende Akkordfigur enthält Grundton, Quinte, Terz und Septime. Bei zu wenigen Anschlägen erhält ihr Beginn vier Achtel; danach bleiben Rhythmus und Kontur variabel. |
+| Grade 5 Rock, Seeds 65/86: Shuffle-Gitarre beziehungsweise Shuffle-Bass nur mit Vierteln | Die erste Motivzelle enthält Achtelpaare, die der Player ternär ausführt. Gewählter Shuffle bleibt auch im Progressive-Stil in 4/4; ungerade Metren überschreiben diesen Schwerpunkt nicht. |
+| Grade 0 Rock, Seed 8: angekündigte Drum-Unterbrechung fehlte | Vor dem Fill pausieren alle Schlagzeugstimmen gemeinsam auf der vierten Zählzeit. Die vorherigen drei Schläge behalten den Puls. |
+| Grade 2 Rock, Seed 0: Kick-Variation ohne versetzten Kick | Der erste Haupttakt enthält einen zusätzlichen Kick auf der ersten Achtelzwischenzählzeit. |
+| Grade 3 Barock, Seed 16: die Halbtonänderung blieb teilweise innerhalb der Tonleiter | Ein tatsächlich leiterfremder Nachbarton führt lokal einen Halbton zum Zielton zurück. Die chromatische Farbe hat damit eine konkrete Auflösung. |
+| Grade 4 Rock, Seed 28: Haltebogen-Schwerpunkt ohne Haltebogen | Die zweite Motivzelle stellt einen teilbaren Tonwert bereit; seine zwei gleich hohen Noten werden gebunden. |
+| Grade 5 Progressive, Seeds 3/29: Triolenauftakt wurde durch 5/8 oder 7/8 ersetzt | Auch im ungeraden Takt endet die Fokuszelle mit einer vollständigen Achteltriole. Im 12/8-Schwerpunkt bleibt die entsprechende Dreiergruppe regulärer Achtel. |
+| Grade 5 Gothic, Seed 5: erster Akkord war vermindert, deshalb fehlte jede Taktwiederholung | Ein späteres geeignetes Powerchordpaar trägt die Wiederholung. Offener Achttakt-Mittelpunkt und vorbereiteter Schluss bleiben geschützt. |
+| Grade 5 Lounge, Seed 20261523: die Begrenzung oberhalb einer gehaltenen Innenstimme erzeugte G statt eines Tons aus Fis-Dorisch beziehungsweise der Harmonie | Die rechte Linie wählt jetzt den nächstliegenden passenden Ton innerhalb des spielbaren Handrahmens; im konkreten Fall G♯. |
+
+Bei Durakkorden folgt die Septime dem Modus: beispielsweise IV7 in Dorisch und ♭VII7 in Äolisch. Das frühere pauschale maj7 konnte zusätzliche, unbeabsichtigte chromatische Farben erzeugen. Mollakkorde behalten bewusst die gebräuchliche kleine Septime; zusammen mit harmonisch-mollgeprägten Melodien ist dies eine Mischung mit natürlich Moll. Akkordtöne werden als Grundton, Terz, Quinte und Septime geschrieben; ihre enharmonische Schreibweise und ein gegebenenfalls erhöhtes Quintintervall stimmen mit den Akkordsymbolen überein.
+
+Nach der erweiterten Fokus- und Harmonieprüfung bestehen alle **100 automatisierten Tests** sowie die vollständige Browserprüfung mit 288 Stil/Grade/Instrument/Sprache-Kombinationen, 48 einseitigen PDF-Downloads und zwei zusätzlichen Varianten-PDFs. MIDI-Persistenz, Wiedergabe, Bookmarks mit JSON/CSV und die Theorieansichten bestehen ebenfalls. Die zusammenhängende musikalische Beurteilung der 36 Fälle und die abschließende Anforderungsbilanz stehen noch aus. Die Prüfung ist eine Noten- und Bewegungsanalyse, kein instrumentaler Spieltest und kein Hörurteil.
 
 ---
 

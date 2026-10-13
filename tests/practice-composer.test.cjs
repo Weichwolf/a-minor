@@ -186,3 +186,31 @@ test('beginner F-sharp minor power chords use a playable plagal preparation inst
   for(let i=1;i<roots.length;i++)assert(Math.abs(roots[i]-roots[i-1])<=12,'power-chord phrase stays within an octave per move');
  }
 });
+
+test('modal seventh colours and chord spelling agree with their actual intervals',()=>{
+ let modal=0;
+ for(const {piece:p} of pool)for(const s of p.sections)for(const b of s.bars){
+  for(const h of [b.harmony,...(b.harmony.changes||[]).map(c=>c.h)])if(h.pcs.length===4&&h.quality!=='m'){
+   const seventh=M.pc(h.pcs[3]-h.rootPc),source=M.scalePcs(p.root,p.scale)[(h.degree+6)%7];
+   assert.equal(seventh,M.pc(source-h.rootPc)===10?10:11,p.id+': mode-aware seventh');
+   assert(h.chord.includes(seventh===11?'maj7':'7'));modal++;
+   if(h.quality==='+'){assert(h.chord.includes('#5'));}
+  }
+  let at=0;for(const n of b.guitar.notes){const h=b.harmony.changes?.findLast(c=>c.t<=at+1e-8)?.h??b.harmony;at+=N.dur(n.d);
+   if(n.r||b.guitar.texture!=='arpeggio'||p.roleFocus.guitar==='ties')continue;
+   for(const pitch of [].concat(n.p)){const index=h.pcs.indexOf(M.pc(M.midi(pitch)));if(index<0)continue;
+    assert.equal(M.parse(pitch).letter,M.LETTERS[(M.LETTERS.indexOf(h.root[0])+2*index)%7],p.id+': chord tones spell root, third, fifth and seventh');
+   }
+  }
+ }
+ assert(modal>100);
+});
+
+test('a held keyboard middle voice does not push the melody onto an accidental chromatic pitch',()=>{
+ const p=C.generate(5,20261523,'lounge').piece;let checked=0;
+ for(const s of p.sections)for(const b of s.bars)if(b.keys.inner){
+  const allowed=new Set([...M.scalePcs(p.root,p.scale),...b.harmony.pcs,...(b.harmony.changes||[]).flatMap(c=>c.h.pcs)]);
+  for(const n of b.keys.notes)if(!n.r){assert(allowed.has(M.pc(M.midi(n.p))),p.id+': harmonic melody above the inner voice');checked++;}
+ }
+ assert(checked>0);
+});

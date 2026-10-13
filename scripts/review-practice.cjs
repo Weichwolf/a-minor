@@ -24,7 +24,9 @@ for(let grade=0;grade<=5;grade++)for(const [si,style] of C.styles.entries()){
      }
      previous[e.voice]={at:e.at,center,sectionIndex};
     }
-    if(firstInSection){samples.push({section:s.name,character:s.character[role],firstBar:part.notes.map(n=>n.r?'rest:'+n.d:[].concat(n.p).join('+')+':'+n.d).join(' ')});firstInSection=false;}
+    const written=ns=>ns.map(n=>(n.r?'rest':[].concat(n.p).join('+'))+':'+n.d+(n.tie?'~':'')+(n.accent?'>':'')).join(' ');
+    if(firstInSection){samples.push({section:s.name,character:s.character[role],firstBar:written(part.notes),bars:[]});firstInSection=false;}
+    samples.at(-1).bars.push(Object.fromEntries(['notes','bass','inner'].filter(v=>part[v]).map(v=>[v,written(part[v])])));
     offset+=M.meter(p.time).len;
    }
   }
