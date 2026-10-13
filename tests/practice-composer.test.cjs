@@ -7,20 +7,34 @@ test('current generator is deterministic; curriculum matches all four source rol
  for(const {piece,bytes} of pool.filter((_,i)=>i%12===0)){const b=C.generate(piece.grade,piece.seed,piece.style);assert.deepEqual(plain(b.piece),plain(piece));assert.deepEqual(b.bytes,bytes);}
  for(const args of [[-1,1],[6,1],[1.5,1],[0,-1],[0,2**32],[0,NaN],[0,1,'mixed'],[0,1,'cinematic']])assert.throws(()=>C.generate(...args));
 });
-test('each grade and style offers melodic guitar pieces as well as chord playing',()=>{
+test('most pieces contrast related guitar and keyboard sections within every grade and style',()=>{
  for(let grade=0;grade<6;grade++)for(const style of C.styles){
-  const pieces=pool.map(x=>x.piece).filter(p=>p.grade===grade&&p.style===style);
-  const melodic=pieces.filter(p=>['melodyReading','melodicRiff','pickedArpeggio'].includes(p.roleFocus.guitar));
-  assert(melodic.length>=3&&melodic.length<=9,`${grade}/${style}: balanced guitar textures`);
+  const pieces=pool.map(x=>x.piece).filter(p=>p.grade===grade&&p.style===style),mixed=pieces.filter(p=>p.contrasting);
+  assert(mixed.length>=7,`${grade}/${style}: contrasting sections are the norm`);
   assert(pieces.some(p=>p.sections.some(s=>s.bars.some(b=>b.guitar.notes.some(n=>!n.r&&Array.isArray(n.p))))));
-  for(const p of melodic){
-   const notes=p.sections.flatMap(s=>s.bars.flatMap(b=>b.guitar.notes)).filter(n=>!n.r);
-   assert(notes.every(n=>typeof n.p==='string'),`${p.id}: single-note focus including the ending`);
-   assert(new Set(notes.map(n=>M.midi(n.p))).size>=3,`${p.id}: moving melody`);
-   if(grade===0)for(const section of p.sections)for(const b of section.bars){const pitches=b.guitar.notes.filter(n=>!n.r).map(n=>M.midi(n.p));assert(Math.max(...pitches)-Math.min(...pitches)<=7);}
-   if(p.roleFocus.guitar==='pickedArpeggio')for(const section of p.sections)for(const b of section.bars){let at=0;for(const n of b.guitar.notes){const h=b.harmony.changes?.findLast(c=>c.t<=at+1e-9)?.h??b.harmony;if(!n.r)assert(h.pcs.includes(M.pc(M.midi(n.p))),`${p.id}: arpeggio follows harmony`);at+=N.dur(n.d);}}
+  for(const p of pieces)for(const section of p.sections){
+   for(const role of ['guitar','keys']){
+    const texture=section.character[role],notes=section.bars.flatMap(b=>b[role].notes).filter(n=>!n.r);
+    if(['riff','melody','arpeggio'].includes(texture))assert(notes.every(n=>typeof n.p==='string'),`${p.id}/${role}/${section.name}: single-note texture including ending`);
+    if(texture==='arpeggio'&&p.roleFocus[role]!=='ties'&&p.roleFocus[role]!=='chromaticColour')for(const b of section.bars){let at=0;for(const n of b[role].notes){const h=b.harmony.changes?.findLast(c=>c.t<=at+1e-9)?.h??b.harmony;if(!n.r)assert(h.pcs.includes(M.pc(M.midi(n.p))),`${p.id}: arpeggio follows harmony`);at+=N.dur(n.d);}}
+   }
+   if(grade===0)for(const b of section.bars){const ns=b.guitar.notes.filter(n=>!n.r);if(ns.every(n=>typeof n.p==='string')){const pitches=ns.map(n=>M.midi(n.p));assert(Math.max(...pitches)-Math.min(...pitches)<=7);}}
+  }
+  for(const p of mixed){const a=p.sections.find(s=>s.name==='A'),b=p.sections.find(s=>s.name==='B');
+   for(const role of ['guitar','keys']){assert.notEqual(a.character[role],b.character[role]);assert.notDeepEqual(plain(a.bars.map(b=>b[role].notes)),plain(b.bars.map(b=>b[role].notes)));}
+   assert(b.bars.every(b=>b.dynamics.bass<a.bars[0].dynamics.bass));
+   assert(b.bars.every(b=>b.dynamics.drums<a.bars[0].dynamics.drums));
   }
  }
+});
+test('varied returns preserve the opening phrase and develop the ending; style forms differ',()=>{
+ let variations=0;const forms=new Map(C.styles.map(s=>[s,new Set()]));
+ for(const {piece:p} of pool){forms.get(p.style).add(p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i).map(s=>s.name).join(''));
+  for(const section of p.sections)if(section.variationOf){variations++;const source=p.sections.find(s=>s.name===section.variationOf),body=s=>s.bars.map(({number,...b})=>b);
+   assert.equal(section.bars.length,source.bars.length);assert.deepEqual(plain(body(section).slice(0,-2)),plain(body(source).slice(0,-2)));assert.notDeepEqual(plain(body(section).slice(-2)),plain(body(source).slice(-2)));for(const role of ['guitar','keys'])assert.notDeepEqual(plain(section.bars.slice(-2).map(b=>b[role])),plain(source.bars.slice(-2).map(b=>b[role])),`${p.id}/${role}: audible varied return`);
+  }
+ }
+ assert(variations>20);assert.notDeepEqual([...forms.get('rock')].sort(),[...forms.get('baroque')].sort());
 });
 test('every section has four or eight bars; longer forms retain literal returns and close on the tonic',()=>{
  const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars>=C.profiles[p.grade].playedBars[0]&&p.bars<=C.profiles[p.grade].playedBars[1],`${p.grade}/${p.seed}: ${p.bars}`);
@@ -56,6 +70,15 @@ test('new bookmarks persist complete scores for all four instruments and round-t
  const before=b.bookmarks.exportJSON();for(const mutate of [d=>d.version=1,d=>d.bookmarks[0].piece.seed=-1,d=>d.bookmarks[0].piece.programs.keys=999,d=>d.bookmarks[0].url='#/evil',d=>d.bookmarks[0].piece.sections[0].bars[0].drumPart.notes[0].d='w.']){const invalid=JSON.parse(json);mutate(invalid);assert.throws(()=>b.bookmarks.importJSON(JSON.stringify(invalid)));assert.equal(b.bookmarks.exportJSON(),before);}
  const c=setup();c.storage.set('a-minor-bookmarks',JSON.stringify({schema:'a-minor-bookmarks',version:1,bookmarks:[{}]}));assert.equal(c.bookmarks.all().length,0);const p=C.generate(0,0).piece;p.title='New';c.bookmarks.toggle(p,'drums',c.practice.link('drums',0,0,'rock'));assert.equal(c.bookmarks.all().length,1);
  const d=setup();d.storage.set('a-minor-bookmarks','corrupt');assert.equal(d.bookmarks.all().length,0);assert.throws(()=>d.bookmarks.toggle(p,'drums',c.practice.link('drums',0,0,'rock')));assert.equal(d.storage.get('a-minor-bookmarks'),'corrupt');
+});
+
+test('bookmarks retain section characters and varied returns and reject invalid section metadata',()=>{
+ const a=setup(),b=setup(),p=plain(pool.find(({piece})=>piece.sections.some(s=>s.variationOf)).piece);p.title='Varied return';
+ a.bookmarks.toggle(p,'guitar',a.practice.link('guitar',p.grade,p.seed,p.style));const json=a.bookmarks.exportJSON();assert.equal(b.bookmarks.importJSON(json),1);
+ assert.deepEqual(plain(b.bookmarks.all()[0].piece),p);
+ for(const change of [p=>p.theme[0]=99,p=>p.sections[0].character.guitar='unknown',p=>p.sections.find(s=>s.variationOf).variationOf='C']){
+  const data=JSON.parse(json);change(data.bookmarks[0].piece);assert.throws(()=>b.bookmarks.importJSON(JSON.stringify(data)));
+ }
 });
 
 test('barres can cover higher frets but cannot cover sounding lower or open strings',()=>{assert.equal(M.fingerCount([1,3,2,3,3,1]),4);assert.equal(M.fingerCount([1,1,1,1,1,1]),1);assert.equal(M.fingerCount([1,0,1,null,null,null]),2);assert.equal(M.fingerCount([1,2,3,4,5,null]),5);});

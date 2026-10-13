@@ -11,6 +11,8 @@ AM.bookmarks = (() => {
     if(p.generatorVersion!==3||!AM.practiceComposer.styles.includes(p.style)||p.requestedStyle!==p.style||
       AM.practiceComposer.instruments.some(role=>!AM.practiceCurriculum[p.grade].skills[role].includes(p.roleFocus?.[role])))fail();
     if(p.id!==`practice-${p.grade}-${p.style}-${p.seed}`)fail();
+    if(p.contrasting!==undefined&&typeof p.contrasting!=='boolean')fail();
+    if(p.theme!==undefined&&(!Array.isArray(p.theme)||p.theme.length!==8||p.theme.some(n=>!Number.isInteger(n)||n<0||n>6)))fail();
     if(p.repeat&&(!Number.isInteger(p.repeat.from)||p.repeat.from!==1||!Number.isInteger(p.repeat.to)||p.repeat.to>24||!Number.isInteger(p.repeat.times)||p.repeat.times<1||p.repeat.times>36))fail();
     const meter=M.meter(p.time);let count=0,beat=0;const names=new Map();
     for(const role of ['guitar','keys','bass','drums'])if(!Number.isInteger(p.programs?.[role])||p.programs[role]<0||p.programs[role]>127)fail();
@@ -34,7 +36,9 @@ AM.bookmarks = (() => {
       if(Math.abs(duration-len)>1e-9)fail();
     };
     for(const s of p.sections){
-      if(!string(s.name,4)||!/^[ABCSO]$/.test(s.name)||s.time!==p.time||!Array.isArray(s.bars)||![4,8].includes(s.bars.length)||s.startBar!==count+1||s.startBeat!==beat)fail();
+      if(!string(s.name,4)||!/^(?:[ABC]′?|[SO])$/.test(s.name)||s.time!==p.time||!Array.isArray(s.bars)||![4,8].includes(s.bars.length)||s.startBar!==count+1||s.startBeat!==beat)fail();
+      if(s.variationOf!==undefined&&(s.name!==s.variationOf+'′'||!names.has(s.variationOf)))fail();
+      if(s.character!==undefined){const allowed={guitar:['riff','melody','arpeggio','chords','rest'],keys:['riff','melody','arpeggio','chords'],bass:['support','moving'],drums:['lightGroove','build','riffGroove']};for(const role of Object.keys(allowed))if(!allowed[role].includes(s.character?.[role]))fail();}
       M.meter(s.time,s.groups);
       for(const b of s.bars){
         if(b.number!==++count||b.time!==p.time||b.key!==p.key||!string(b.chord,80))fail();

@@ -9,7 +9,7 @@ AM.practiceInfo = (() => {
   function describe(piece,instrument){
     const unique=piece.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i);
     const melody=new Map(),harmonic=new Set(),durations=new Set(),used=new Set(),techniques=new Set(),kit=new Set();let rests=false,number=0;
-    const sections=unique.map(s=>({name:s.name,length:s.bars.length,bars:s.bars.map(b=>({number:++number,chord:b.chord,roman:b.harmony.roman,degree:b.harmony.degree}))}));
+    const sections=unique.map(s=>({name:s.name,length:s.bars.length,character:s.character?.[instrument],variationOf:s.variationOf,bars:s.bars.map(b=>({number:++number,chord:b.chord,roman:b.harmony.roman,degree:b.harmony.degree}))}));
     for(const s of unique)for(const voice of ['notes',...(instrument==='keys'?['bass','inner']:instrument==='drums'?['bass']:[])]){
       let previous,tied=false;
       for(const n of s.bars.flatMap(b=>AM.practiceGenerator.part(b,instrument)[voice]||[])){
@@ -37,8 +37,9 @@ AM.practiceInfo = (() => {
     if(d.harmonicIntervals.includes(7)&&!top.includes(7))top.push(7);
     const progress=d.sections.map(s=>s.name+': '+s.bars.map(b=>display(b.chord)+(piece.grade>=2?' ('+display(b.roman)+')':'')).filter((c,i,cs)=>i===0||c!==cs[i-1]).join('–')).join('; ');
     const rhythm=d.rhythms.map(k=>t('practiceRhythm'+k)).join(', ')+(d.swing?', '+t('swingFeel'):'');
+    const characters=d.sections.filter(s=>s.character&&s.name!=='O').map(s=>s.name+': '+t('sectionCharacter_'+s.character)+(s.variationOf?' ('+format('sectionVariation',{section:s.variationOf})+')':'')).join('; ');
     return format(instrument==='drums'?'pieceDrumsSentence':'pieceSentence',{style:t('style_'+d.style),root:display(d.root),scale:t('scale_'+d.scale),form:form(piece),time:d.time,
-      chords:progress,intervals:top.length?top.map(interval).join(', '):d.harmonicIntervals.map(interval).join(', '),rhythm,focus:t('focus_'+d.focus)});
+      chords:progress,intervals:top.length?top.map(interval).join(', '):d.harmonicIntervals.map(interval).join(', '),rhythm,focus:t('focus_'+d.focus)})+(characters?' '+format('pieceSectionsSentence',{sections:characters}):'');
   }
   const html=(piece,instrument)=>`<p class="practice-description">${esc(text(piece,instrument))}</p>`;
   return{describe,text,html,interval,form};

@@ -4,11 +4,26 @@ Das Ziel ist sicheres Spielen nach Noten mit Verständnis für den musikalischen
 
 ## Musikalische Konstruktion
 
-Jeder Part erhält einen Grade-Schwerpunkt. Wiederkehrende Rhythmuszellen und Konturen halten die Abschnitte zusammen. Die Harmonik ist vorgeplant, einschließlich möglicher Wechsel innerhalb eines Takts. Akkordtöne verankern die Melodie, Durchgänge verbinden die Stützpunkte. Kontrast, Wiederkehr und ein tonaler Schluss machen bereits Grade 0 zu Musik. Eine wörtliche Rückkehr verwendet dieselben Noten und dieselbe Begleitung.
+Jeder Part erhält einen Grade-Schwerpunkt, der in mindestens einem Abschnitt erhalten bleibt. Wiederkehrende Rhythmuszellen und Konturen halten die Abschnitte zusammen. Die Harmonik ist vorgeplant, einschließlich möglicher Wechsel innerhalb eines Takts. Akkordtöne verankern die Melodie, Durchgänge verbinden die Stützpunkte. Kontrast, Wiederkehr und ein tonaler Schluss machen bereits Grade 0 zu Musik. Eine wörtliche Rückkehr verwendet dieselben Noten und dieselbe Begleitung.
+
+Die meisten Stücke (85 % Auswahlwahrscheinlichkeit) wechseln die Spielweise innerhalb ihrer Form. Ein gemeinsam entwickelter Motivverlauf verbindet Riff, Melodie und Arpeggio; die Grade-Technik erhält einen passenden Abschnitt. Gelegentliche Stücke behalten eine Spielweise als durchgehenden Schwerpunkt. A und B unterscheiden sich bei Gitarre und Keyboard hörbar, nicht nur durch ihre Bezeichnung. Ein A′ oder B′ übernimmt alle bis auf die letzten zwei Takte seines Ausgangsteils; die Schlussphrase verändert Rhythmus und/oder Tonverlauf. Varianten behalten die Länge ihres Ausgangsteils.
+
+| Stil | Abschnittsideen | Formauswahl ab Grade 2 |
+|---|---|---|
+| Rock | Riff, singbare Melodie, akkordische Bridge | ABA, ABAB, ABACAB |
+| Doom | Tiefes Riff, getragene Melodie, erneute Riffspannung | ABA′, AABA, ABCA |
+| Gothic | Arpeggio, Melodie, Akkordhöhepunkt | ABA′, ABAB, ABACB |
+| Progressive | Rhythmisches Motiv, melodische Entwicklung, Akkordtonfigur | ABA′, ABCA′ |
+| Barock | Thema, weitergeführte Figur, Episode | AABB, ABA, ABACA |
+| Lounge | Melodie, gebrochene Akkorde, harmonische Bridge | ABA, AABA, ABAC |
+
+Die Grade-Schwerpunkte können eine Abschnittsidee durch die passende Akkord- oder Einzeltontechnik ersetzen. Grade 0 verwendet nur zwei Ideen und vier Takte pro Abschnitt, einschließlich einfacher Riff/Melodie-Kontraste. Grade 1 ergänzt Achtel und Arpeggien. Ab Grade 3 können Abschnitte acht Takte umfassen. Navigation und ausgeschriebene Soloabschnitte bleiben als zusätzliche Formen in Grade 5 erhalten. Lange Spielabläufe entstehen durch Wiederholung der Form; höchstens 24 verschiedene Takte halten die Partitur kompakt.
+
+Die Begleitung trägt die Gliederung mit: Unter B wird der Bass zu einem ruhigeren Grundtonpuls, die Drums werden leiser und einfacher. In den tragenden Abschnitten können Bass- und Drum-Einsätze denselben Rhythmus verwenden. Wiederkehrende Drumfiguren bleiben innerhalb eines Abschnitts stabil, Fills markieren sein Ende. C steigert die Spannung durch eine eigene Akkordfolge und kräftigere Drumanschläge. Keyboard verbindet die Abschnittsidee mit der jeweils zulässigen linken Hand; in Grade 0 pausiert sie.
 
 Rock richtet sich nach den Anforderungen der lokalen Gigajam-Sammlung. Doom, Gothic, Progressive, Barock und Lounge verändern Klang und musikalische Bauweise innerhalb derselben Instrumentgrenzen. Erweiterungen wie lydische Farbe und ungerade Takte werden als Stilmerkmale behandelt. Die Anforderungen sind pro Instrument verschieden: Drum-Sechzehntel in Grade 1 bedeuten keine Keyboard-Sechzehntel in Grade 1.
 
-Grade 0 verbindet rechte Piano-Melodie und Dreiklänge mit linker Pause, Gitarrenquinten, Grundtonbass und einfachen Grooves/Fills. Später kommen Koordination, Akkordanschläge, Synkopen, Sechzehntel, Triolen, Innenstimmen, Navigation und Ausdauer hinzu. Der [Gigajam-Abgleich](GIGAJAM_COVERAGE.md) dokumentiert die Profile, Referenztempi, Beispiele und Grenzen.
+Grade 0 verbindet rechte Piano-Melodie und Dreiklänge mit linker Pause, Gitarrenmelodien, Riffs oder Quinten, Grundtonbass und einfachen Grooves/Fills. Später kommen Koordination, Akkordanschläge, Synkopen, Sechzehntel, Triolen, Innenstimmen, Navigation und Ausdauer hinzu. Der [Gigajam-Abgleich](GIGAJAM_COVERAGE.md) dokumentiert die Profile, Referenztempi, Beispiele und Grenzen.
 
 ## Variation und Rückmeldung
 
@@ -18,7 +33,7 @@ Ein Grade ist ein Inhaltsbereich, keine beobachtete Fähigkeit. Auswahl, Anhöre
 
 ## Theoretische Einordnung
 
-Ein kurzer Absatz nennt Tonzentrum/Modus, Form, tatsächliche Akkordfolgen, bei höheren Grades römische Stufen, häufige und größere Intervalle sowie wirklich vorkommende Notenwerte. Der Schwerpunkt erklärt den musikalischen Zusammenhang. Für Drums werden Rhythmus und Koordination beschrieben; die GM-Notennummern werden nicht als melodische Intervalle ausgegeben. Eine Liste der Melodietöne oder ein fertiger Fingersatz bleibt aus der Stückbeschreibung heraus.
+Ein kurzer Absatz nennt Tonzentrum/Modus, Form, tatsächliche Akkordfolgen, bei höheren Grades römische Stufen, häufige und größere Intervalle sowie wirklich vorkommende Notenwerte. Der Schwerpunkt und die tatsächlichen Funktionen von A, B, C und Varianten erklären den musikalischen Zusammenhang. Diese Beschreibung erscheint auch im PDF. Für Drums werden Rhythmus und Koordination beschrieben; die GM-Notennummern werden nicht als melodische Intervalle ausgegeben. Eine Liste der Melodietöne oder ein fertiger Fingersatz bleibt aus der Stückbeschreibung heraus.
 
 Die Durreferenz der Stufen wird beibehalten: Moll kann ♭III, ♭VI und ♭VII enthalten. Natürlich Moll mit v–i, Moll mit Durdominante und mixolydische Rockharmonik sind unterschiedliche Klangmittel. Geliehene Akkorde und chromatische Durchgänge dürfen außerhalb der Grundskala liegen und werden in der Notation entsprechend geschrieben.
 
