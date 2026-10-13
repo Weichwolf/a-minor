@@ -71,7 +71,7 @@ AM.midi = (() => {
     return {events,duration:time+(endTick-tick)/ppq*us/1000000,markers,meters,ppq,endTick,format};
   }
   function notes(events,duration,{instrument='theory',program} = {}) {
-    const guitar=instrument==='guitar', channels=guitar?[6,0,1]:[3,3,3], used=new Set(), out=[{tick:0,data:tempo(60),order:-5}];
+    const guitar=instrument==='guitar', percussion=instrument==='drums', bass=instrument==='bass', channels=guitar?[6,0,1]:percussion?[9,9,9]:bass?[5,5,5]:[3,3,3], used=new Set(), out=[{tick:0,data:tempo(60),order:-5}];
     for(const n of events) {
       if(!Number.isInteger(n.midi)||n.midi<0||n.midi>127||!Number.isInteger(n.velocity)||n.velocity<1||n.velocity>127||!Number.isFinite(n.t)||n.t<0||!Number.isFinite(n.dur)||n.dur<=0||n.t+n.dur>duration+1e-6)throw Error('Invalid preview note');
       const ch=channels[n.voice??0]??channels[0], on=Math.round(n.t*480), off=Math.round((n.t+n.dur)*480);used.add(ch);
@@ -83,7 +83,7 @@ AM.midi = (() => {
         out.push({tick:off,data:[224|ch,0,64]});
       }
     }
-    for(const ch of used)out.unshift({tick:0,data:[192|ch,program??(guitar?27:0)],order:-5});
+    for(const ch of used)out.unshift({tick:0,data:[192|ch,program??(guitar?27:bass?33:0)],order:-5});
     return encode(out,Math.round(duration*480));
   }
   function excerpt(sequence,{from=0,to=sequence.duration,countIn=0,pulse=1,channels:included,muteChannels=[]}={}) {

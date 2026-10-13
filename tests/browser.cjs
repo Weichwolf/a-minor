@@ -105,7 +105,7 @@ const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.
     assert.equal(await page.locator('nav a[href="#/theory"]').count(),1,'theory is a main menu item');
     await page.goto(base+'/#/theory');await page.waitForSelector('.toc');
     const toc=await page.locator('.toc li a').allTextContents();assert(toc.length>=30,'table of contents lists every chapter');
-    assert.match(await page.locator('h1').innerText(),/Musiklehre/);assert.match(toc.at(-1),/^[A-E]\s/,'appendices are lettered');assert(await page.locator('main i').count()>=1,'italics are rendered');
+    assert.match(await page.locator('h1').innerText(),/Musiklehre/);assert.match(toc.at(-1),/^[A-E]\s/,'appendices are lettered');assert.match(await page.locator('main').innerText(),/E-Gitarre.*Keyboard.*Bass.*Drums/,'theory introduces all four instruments');
     const triads=toc.findIndex(t=>/Dreiklänge/.test(t))+1;assert(triads>0,'chapter on triads listed');
     await page.goto(base+'/#/chapter/c08');await page.waitForSelector('svg.score');
     assert(await page.locator('.figure').count()>=5,'chapters carry many notated examples');
@@ -120,7 +120,7 @@ const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.
     await page.goto(base+'/#/chapter/c03');await page.waitForSelector('#c03-triplet svg.score .tuplet');
     assert(await page.evaluate(()=>{const s=[...document.querySelectorAll('#c03-triplet svg.score')].find(x=>x.querySelector('.tuplet'));const c=s.querySelector('.chord').getBBox(),t=s.querySelector('.tuplet').getBBox();return c.y+c.height<=t.y;}),'chord labels sit above tuplet brackets');
     await page.selectOption('#language','en');await page.goto(base+'/#/chapter/c27');await page.waitForSelector('svg.score');
-    assert.match(await page.locator('h1').innerText(),/The five references/);assert.match(await page.locator('.figure figcaption').first().innerText(),/^Example \d+\.1 · /);
+    assert.match(await page.locator('h1').innerText(),/Roles and relationships in an ensemble/);assert.match(await page.locator('.figure figcaption').first().innerText(),/^Example \d+\.1 · /);
     for (const c of await page.evaluate(()=>AM.i18n.book().parts.flatMap(p=>p.chapters.map(c=>c.id)))) {
       await page.goto(base+'/#/chapter/'+c);await page.waitForSelector('.chapter');
       const text=await page.locator('main').innerText();assert(!/undefined|NaN|prüfen|\(verify\)/.test(text),c);
@@ -133,8 +133,14 @@ const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'appendix tables fit mobile width');
     await page.goto(base+'/#/chapter/c14');await page.waitForSelector('svg.score');
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'chapters fit mobile width');
+    await page.locator('#c14-bass-foundation').screenshot({path:'test-results/theory-bass-mobile.png'});
+    await page.goto(base+'/#/chapter/c17');await page.waitForSelector('#c17-patterns .percussion-clef');
+    assert(await page.locator('#c17-patterns svg.score').evaluateAll(scores=>scores.every(s=>s.querySelectorAll('.staff').length===5)),'drum voices share one five-line staff per row');
+    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'drum theory fits mobile width');
+    await page.locator('#c17-patterns').screenshot({path:'test-results/theory-drums-mobile.png'});
     await page.setViewportSize({width:1280,height:900});
-    console.log('PASS theory textbook: examples without tasks or player, reference appendices');
+    await page.locator('#c17-patterns').screenshot({path:'test-results/theory-drums-desktop.png'});
+    console.log('PASS theory textbook: independent reading, instrument notation, mobile examples and reference tables');
     await page.goto(base+'/#/unit/u4-strum');await page.waitForSelector('.percent-repeat');
     assert.equal(await page.locator('.percent-repeat').count(),2);
     assert(await page.locator('.rhythm-slash').count()>0);

@@ -40,7 +40,8 @@ test('course specifications: IDs, criteria, measure lengths, ties, ranges and fi
           const pos = M.position(m, {s:Array.isArray(n.s) ? n.s[pi] : n.s, maxFret:sc.maxFret ?? 5, window:sc.stringWindow});
           assert(pos && pos.f >= 0 && pos.f <= (sc.maxFret ?? 5), e.id + ': playable note ' + p);
           if (e.id === 'e1-2-1') assert(pos.s <= 2, e.id + ': three strings');
-        } else assert(m >= M.midi('C2') && m <= M.midi('C6'), e.id);
+        } else if (e.instrument === 'bass') assert(M.position(m,{tuning:['E1','A1','D2','G2'],maxFret:12}),e.id + ': playable bass note ' + p);
+        else assert(m >= M.midi('C2') && m <= M.midi('C6'), e.id);
       }
     });
     const el = {}; N.render(el, {...sc, notes, instrument:e.instrument}, {names:true, strings:true, fingers:true});
@@ -196,6 +197,7 @@ test('all written combinations fit separate guitar strings and reachable keyboar
         if (frets.length) assert(Math.max(...frets) - Math.min(...frets) <= 4,e.id + ': excessive fret span at ' + t / N.ticks('q'));
       } else {
         assert.equal(new Set(active.map(n => n.midi)).size,active.length,e.id + ': simultaneous voices on one key');
+        if (e.instrument === 'drums') { assert(active.length <= 3,e.id + ': at most two hands and one kick'); continue; }
         if (e.instrument === 'theory') continue;
         for (const hand of [active.filter(n => n.voice === 1),active.filter(n => n.voice !== 1)]) {
           assert(hand.length <= 5,e.id + ': more than five notes in one hand');

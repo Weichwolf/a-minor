@@ -52,11 +52,9 @@ Bookmarks, MIDI-Gerätezuordnung, Mix, Wiedergabeauswahl und Sprache liegen im `
 
 ## Theorie
 
-Das Lesebuch **Musiklehre** umfasst neun Teile mit **34 Kapiteln, fünf Anhängen und 249 notierten Beispielen**, jeweils mit optionaler Klangvorschau. Es ist für Bildschirm und Handy gedacht: begrenzte Textbreite, nummerierte Abschnitte, erklärende Modelle, Zusammenfassungen und Vor-/Zurücknavigation. Keine Aufgaben, Checklisten oder Fortschrittsmarkierungen.
+Das Lesebuch **Musiklehre** umfasst neun Teile mit **34 Kapiteln, fünf Anhängen und 250 notierten Beispielen**, jeweils mit optionaler Klangvorschau. Es ist für Bildschirm und Handy gedacht: begrenzte Textbreite, nummerierte Abschnitte, erklärende Modelle, Zusammenfassungen und Vor-/Zurücknavigation. Keine Aufgaben, Checklisten oder Fortschrittsmarkierungen.
 
-Ton und Schrift, Tonleitern, Modi, Intervalle, Akkorde, Harmonik, Rhythmus, Satz, Klang und Form bilden die Grundlagen. Vier zusätzliche Kapitel verbinden dieses Wissen mit den sieben Stilen, einem vollständigen Klaviersatz für Filmmusik, Lounge/Stimmführung/Septakkorden/Swing und dem Verstehen von Motiven, Phrasen und Formen. Alle Beispiele sind eigene Modelle, keine Transkriptionen.
-
-Referenzen: My Dying Bride (*Turn Loose the Swans*), Type O Negative (*October Rust*), Anathema (*Eternity*), Vivaldi (*Le quattro stagioni*), Biber (*Harmonia artificioso-ariosa*); Hans Zimmer ergänzt die ästhetische Orientierung für Filmmusik. Sie begrenzen weder Tonarten noch Formen oder Techniken.
+Ton und Schrift, Tonleitern, Modi, Intervalle, Akkorde, Harmonik, Rhythmus, Satz, Klang und Form bilden die Grundlagen. Weitere Kapitel verbinden dieses Wissen mit Ensemble-Rollen, dem Verstehen einer Partitur und den sechs Stilen Rock, Doom, Gothic, Progressive, Barock und Lounge. Keyboard-Motiv und Begleitung sowie Lounge-Stimmführung vertiefen die musikalischen Zusammenhänge. E-Bass-Beispiele erläutern Grundton, Quinte, Oktave und chromatische Annäherungen in oktavierender Bassnotation. Die Schlagzeugbeispiele verwenden Percussion-Notation und echte Drum-Klänge; das ausdrücklich bezeichnete Tremolo-Modell bleibt ein Beispiel mit Tonhöhen. Alle Beispiele sind eigene Modelle, keine Transkriptionen. Das Lesebuch setzt keinen Referenzkurs voraus.
 
 **Griffbrett** zeigt die sechs P4-Saiten mit Grundton, Skala, Tonname oder Intervall bis Bund 24. Das Buch enthält außerdem Tastaturkarten, Rhythmusraster, Formabläufe und Klangdarstellungen.
 
