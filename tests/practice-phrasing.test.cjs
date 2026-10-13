@@ -42,3 +42,19 @@ test('combined demands reduce tempo while uncomplicated phrases retain their tar
  assert(difficult.quarterTempo<128&&difficult.quarterTempo>=85);assert.equal(difficult.tempo,difficult.quarterTempo);
  const compound=score('C',[{p:'E3',d:'w'}]);compound.time='12/8';P.fitTempo(compound,[85,128]);assert.equal(compound.tempo,85.33);
 });
+
+test('power-chord registers look ahead without changing pitch classes, rhythms or single-note motifs',()=>{
+ const phrase=[{p:['C3','G3'],d:'q'},{p:['D3','A3'],d:'q'},{p:['E2','B2'],d:'q',tie:1},{p:['E2','B2'],d:'q'},{p:'F3',d:'h'}];
+ const classes=phrase.map(n=>[].concat(n.p).map(p=>M.pc(M.midi(p))));
+ P.powerRegisters(phrase,{maxFret:5});P.place(phrase,{maxFret:5});
+ assert.deepEqual(phrase.map(n=>[].concat(n.p).map(p=>M.pc(M.midi(p)))),classes);
+ assert.deepEqual(Array.from(phrase[2].p),['E3','B3']);assert.deepEqual(phrase[2].p,phrase[3].p);
+ assert.equal(phrase[4].p,'F3');assert.equal(phrase[2].tie,1);assert.deepEqual(phrase.map(n=>n.d),['q','q','q','q','h']);
+ const prefix=JSON.stringify(phrase.slice(0,2));P.powerRegisters(phrase,{maxFret:5,locked:2});assert.equal(JSON.stringify(phrase.slice(0,2)),prefix);
+});
+
+test('combined-demand measurement includes the transition into a returning or contrasting section',()=>{
+ const p=A.practiceComposer.generate(1,42,'rock').piece;p.sections=p.sections.slice(0,2);
+ for(const [i,section] of p.sections.entries())for(const bar of section.bars)bar.guitar.notes=Array.from({length:8},()=>({p:i?'C5':'C3',d:'e'}));
+ assert(P.demands(p).roles.guitar.rapidLeapRatio>0,'the fast section-boundary jump must contribute to difficulty');
+});

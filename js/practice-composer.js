@@ -105,6 +105,17 @@ AM.practiceComposer = (() => {
         if(count===8&&i===3)d=cadenceDegree;
         if(count===8&&i===6||name===order.at(-1)&&i===count-2)d=cadenceDegree;
         if(count===8&&i===7||name===order.at(-1)&&i===count-1)d=0;
+        // In the beginner position some dominant roots have no low adjacent-
+        // string power chord (notably C# in F# minor on P4). A plagal close
+        // keeps the key and musical function of a prepared return without
+        // introducing a two-octave register jump merely to satisfy a pattern.
+        if(grade===0&&d===4&&Object.values(sectionPlans).some(p=>p.guitar==='power')){
+          const dominant=pcAt(d),lowPower=M.TUNING.slice(0,-1).some((open,s)=>{
+            const m=lowest(dominant,M.midi(open)),f=m-M.midi(open),upper=m+7-M.midi(M.TUNING[s+1]);
+            return m<60&&f<=profile.maxFret&&upper>=0&&upper<=profile.maxFret;
+          });
+          if(!lowPower)d=3;
+        }
         if(d===6&&(grade===0||style==='rock'))return harmony(6,major&&scale!=='mixolydian'?-1:0,'');
         if(d===4&&grade>=3&&['aeolian','harmonicMinor'].includes(scale)&&(name==='O'||source==='C'||i===count-2))return harmony(d,0,'');
         return harmony(d);
@@ -355,6 +366,7 @@ AM.practiceComposer = (() => {
       for(let bar=0;bar<prefix;bar++)bars[bar]=clone(sectionsByName[sourceName(name)][bar]);
       for(const role of ['guitar','bass']){
         const voice=b=>role==='guitar'?b.guitar.notes:b.bass;
+        if(role==='guitar')AM.practicePhrasing.powerRegisters(bars.flatMap(voice),{maxFret:profile.maxFret,locked:bars.slice(0,prefix).flatMap(voice).length});
         AM.practicePhrasing.place(bars.flatMap(voice),{maxFret:profile.maxFret,tuning:role==='guitar'?M.TUNING:M.BASS_TUNING,locked:bars.slice(0,prefix).flatMap(voice).length});
       }
     }

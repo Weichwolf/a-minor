@@ -178,3 +178,11 @@ test('bookmarks retain section characters and varied returns and reject invalid 
 });
 
 test('barres can cover higher frets but cannot cover sounding lower or open strings',()=>{assert.equal(M.fingerCount([1,3,2,3,3,1]),4);assert.equal(M.fingerCount([1,1,1,1,1,1]),1);assert.equal(M.fingerCount([1,0,1,null,null,null]),2);assert.equal(M.fingerCount([1,2,3,4,5,null]),5);});
+
+test('beginner F-sharp minor power chords use a playable plagal preparation instead of a distant dominant register',()=>{
+ const p=C.generate(0,20261015,'gothic').piece;assert.equal(p.key,'F#m');
+ const end=p.sections.at(-1).bars;assert.equal(end.at(-2).harmony.degree,3);assert.equal(end.at(-1).harmony.degree,0);
+ for(const section of p.sections){const roots=section.bars.flatMap(b=>b.guitar.notes).filter(n=>Array.isArray(n.p)).map(n=>M.midi(n.p[0]));
+  for(let i=1;i<roots.length;i++)assert(Math.abs(roots[i]-roots[i-1])<=12,'power-chord phrase stays within an octave per move');
+ }
+});

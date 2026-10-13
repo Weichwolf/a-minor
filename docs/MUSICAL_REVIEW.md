@@ -1,3 +1,19 @@
+# Praxisgenerator: laufende Fallprüfung · 2026-10-13
+
+Die aktuelle Prüfung betrifft den Generator für vier Instrumente. Der ältere Bericht darunter dokumentiert den archivierten Kurs und das frühere Repertoire; er ist kein Nachweis für den neuen Generator.
+
+`node scripts/review-practice.cjs` erzeugt reproduzierbar 36 Stücke (sechs Grades × sechs Stile) mit allen vier Parts und schreibt die Befunde nach `test-results/practice-review.json`. Seeds, Tonart, Tempo, Harmonik, Form, tatsächliche Notenwerte, erste Takte der Abschnitte, Stückbeschreibungen und Bewegungskennzahlen stehen im Bericht. Die Kennzahlen sind Suchhilfen für die Partiturbeurteilung: Ein großer Tonhöhensprung kann auf benachbarten Saiten leicht sein, eine kleine Tonbewegung einen Lagenwechsel verlangen. Gemittelte Akkordhöhen sind keine realen Melodietöne. Bundmittelwerte ignorieren die Entlastung durch offene Saiten und Pausen. Der Bericht behauptet deshalb keine automatische Musikalitäts- oder Schwierigkeitsbewertung.
+
+## Bisher geprüfte Befunde und Korrekturen
+
+- **Grade 0 Gothic, Seed 20261015, Fis-Moll:** Der Powerchordabschnitt enthielt F♯2–E2–C♯4–F♯2 als Grundtöne. Der Sprung E2–C♯4 betrug 21 Halbtöne. Auf der P4-Gitarre bis Bund 5 ist der tiefe Cis-Powerchord auf benachbarten Saiten nicht verfügbar. Eine bloße Optimierung der Saiten konnte das nicht lösen. Die Anfänger-Harmonieplanung verwendet hier nun iv–i als vorbereiteten Schluss: F♯m–E–Bm–F♯m. Die Gitarrengrundtöne F♯2–E2–B2–F♯2 bleiben je Bewegung innerhalb einer Quinte. Die Tonart und der Wechsel von Riff zu Powerchords bleiben erhalten. Keyboard und Bass folgen derselben geänderten Harmonik.
+- **Powerchords über eine ganze Phrase:** Eine zusätzliche Planung verschiebt ausschließlich vollständige Grundton/Quint-Paare um Oktaven und betrachtet die folgenden Anschläge mit. Rhythmus, Tonklassen, einstimmige Motive und der gemeinsame Anfang variierter Rückkehr bleiben erhalten. Ein unabhängiger Regressionstest mit C3/G3–D3/A3–E2/B2 belegt die ruhigere Fortsetzung nach E3/B3; Bindungen bleiben zusammenhängend. Danach plant der bestehende Durchgang die konkrete Saitenfolge.
+- **Abschnittsübergänge und Wiederkehr:** Die Messung schneller großer Sprünge begann bisher an jedem Abschnitt neu. Sie durchläuft nun die tatsächliche gespielte Form und berücksichtigt auch den Übergang zum nächsten Abschnitt. Die maximale Anschlagsdichte wird weiterhin abschnittsweise bestimmt. Ein eigener Test belegt, dass ein schneller Registersprung genau an einer Abschnittsgrenze in die kombinierte Anforderung eingeht.
+
+Nach diesen Änderungen bestehen alle **93 automatisierten Tests**. Die komplette musikalische Beurteilung der 36 Fälle, der Abgleich sämtlicher Schwerpunkte und die erneute Browserprüfung des endgültigen Generatorstands stehen noch aus. Die Prüfung ist eine Noten- und Bewegungsanalyse, kein instrumentaler Spieltest und kein Hörurteil.
+
+---
+
 # Musikalische und fachliche Revision · 2026-09-30
 
 ## Maßstab und Umfang

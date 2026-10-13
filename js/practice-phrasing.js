@@ -24,6 +24,41 @@ AM.practicePhrasing = (() => {
     const shift=Math.abs(a.position-b.position),cross=Math.abs(a.strings[0]-b.strings[0]);
     return (shift*shift+cross*2+Math.max(0,cross-1)*3)/Math.max(.25,beats);
   }
+  function powerRegisters(notes,{tuning=M.TUNING,maxFret=5,locked=0}={}){
+    // Look ahead across the phrase: a low first chord can force an avoidable
+    // two-octave jump later on a restricted fingerboard. Single-note motifs
+    // remain fixed; only complete root/fifth pairs move by whole octaves.
+    const attacks=[];let at=0;
+    for(const [index,note] of notes.entries()){
+      if(!note.r){
+        const shifts=Array.isArray(note.p)&&index>=locked?[-24,-12,0,12,24]:[0];
+        const choices=shifts.map(shift=>{
+          const p=[].concat(note.p).map(p=>p.replace(/(-?\d+)$/,oct=>String(Number(oct)+shift/12)));
+          const voiced={...note,p:Array.isArray(note.p)?p:p[0]};
+          return{p:voiced.p,shift,root:M.midi(p[0]),routes:positions(voiced,tuning,maxFret)};
+        }).filter(c=>c.routes.length);
+        if(!choices.length)throw Error('No playable power-chord register');
+        attacks.push({note,choices,at,tied:!!notes[index-1]?.tie&&!notes[index-1]?.r});
+      }
+      at+=N.dur(note.d);
+    }
+    if(!attacks.length)return;
+    const layers=[];
+    for(const [i,a] of attacks.entries())layers.push(a.choices.map(c=>{
+      const local=Math.max(0,c.root-40)*.025;
+      if(!i)return{cost:local,from:-1};
+      const previous=attacks[i-1];let cost=Infinity,from=-1;
+      previous.choices.forEach((p,j)=>{
+        if(a.tied&&c.shift!==p.shift)return;
+        const leap=Math.abs(c.root-p.root),candidate=layers[i-1][j].cost+leap*leap/Math.max(.25,a.at-previous.at)+local;
+        if(candidate<cost){cost=candidate;from=j;}
+      });
+      return{cost,from};
+    }));
+    let index=layers.at(-1).reduce((best,c,i,row)=>c.cost<row[best].cost?i:best,0);
+    if(!Number.isFinite(layers.at(-1)[index].cost))throw Error('No continuous power-chord register');
+    for(let i=attacks.length-1;i>=0;i--){const a=attacks[i];a.note.p=Array.isArray(a.choices[index].p)?[...a.choices[index].p]:a.choices[index].p;index=layers[i][index].from;}
+  }
   function place(notes,{tuning=M.TUNING,maxFret=5,locked=0}={}){
     const attacks=[];let elapsed=0;
     for(let index=0;index<notes.length;index++){
@@ -64,12 +99,13 @@ AM.practicePhrasing = (() => {
     }
   }
   function demands(piece){
-    const sections=piece.sections.filter((s,i,all)=>all.findIndex(x=>x.name===s.name)===i),roles={};
+    const sections=piece.sections,roles={};
     const maxDensity={guitar:[1,2,2,2,4,4],keys:[1,2,2,2,4,4],bass:[2,2,2,2,4,4],drums:[2,4,4,4,4,4]};
     for(const role of ['guitar','keys','bass','drums']){
       let density=0,rapidLeaps=0,transitions=0,asynchronous=0,handAttacks=0;
+      const previous={};let offset=0;
       for(const section of sections){
-        const previous={},onsets=new Set();let offset=0;
+        const onsets=new Set(),sectionStart=offset;
         for(const bar of section.bars){
           const part=AM.practiceGenerator.part(bar,role),events=N.events({...part,time:piece.time,swing:piece.swing});
           const attacks=new Map();
@@ -91,7 +127,7 @@ AM.practicePhrasing = (() => {
           }
           offset+=M.meter(piece.time).len;
         }
-        density=Math.max(density,onsets.size/offset);
+        density=Math.max(density,onsets.size/(offset-sectionStart));
       }
       roles[role]={density,rapidLeapRatio:transitions?rapidLeaps/transitions:0,independence:handAttacks?asynchronous/handAttacks:0};
     }
@@ -113,5 +149,5 @@ AM.practicePhrasing = (() => {
     piece.tempo=Math.round(piece.quarterTempo/M.meter(piece.time).q*100)/100;
     return{...measured,requestedTempo:requested,tempoCeiling:ceiling};
   }
-  return{place,positions,movement,demands,fitTempo};
+  return{place,powerRegisters,positions,movement,demands,fitTempo};
 })();
