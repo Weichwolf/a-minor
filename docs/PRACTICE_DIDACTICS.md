@@ -39,7 +39,7 @@ Grade 0 verbindet rechte Piano-Melodie und Dreiklänge mit linker Pause, Gitarre
 
 ## E-Gitarre mit Verzerrung
 
-Die Gitarrenstimme verwendet bei gleichzeitigen Anschlägen ausschließlich Grundton und reine Quinte auf zwei benachbarten Saiten. Melodien, Riffs und Arpeggien sind einstimmig; Akkordtöne erklingen nacheinander, ohne einen vollständigen Griff halten zu müssen. Das gilt auch für Schlussfiguren, Solo-Begleitungen und Taktwiederholungen. Die erzeugte MIDI-Stimme entspricht genau dieser Notation. Ihr Grundklang ist elektrische Drive-Gitarre; höhere Grades können weiterhin elektrische Clean/Drive-Kontraste enthalten.
+Die Gitarrenstimme verwendet bei gleichzeitigen Anschlägen ausschließlich Grundton und reine Quinte auf zwei benachbarten Saiten. Melodien, Riffs und Arpeggien sind einstimmig; Akkordtöne erklingen nacheinander, ohne einen vollständigen Griff halten zu müssen. Das gilt auch für Schlussfiguren, Solo-Begleitungen und Taktwiederholungen. Die erzeugte MIDI-Stimme entspricht genau dieser Notation. Die Praxiswiedergabe und ihr MIDI-Export verwenden ausschließlich Clean-Gitarre (GM-Programm 27, nullbasiert), auch für gespeicherte Stücke mit früheren Clean/Drive-Wechseln. Die notierten Anschlags- und Dämpfungsmerkmale bleiben erhalten.
 
 Dreiklang-, Dur/Moll- und Septakkordanschläge werden durch entsprechende Arpeggio-Schwerpunkte ersetzt. Quint-/Sextbewegungen erklingen als Einzeltonfigur. Passt die reine Quinte nicht zur geplanten Harmonie, beispielsweise beim verminderten Dreiklang, wird der betreffende Takt zur gebrochenen Akkordfigur. Der Generator setzt dann keine fremde reine Quinte über die Bandharmonie. Haltebögen zwischen Takten übertragen keine Powerchords in eine einstimmige Arpeggiofigur.
 

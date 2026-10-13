@@ -138,7 +138,7 @@ test('all four written parts fill their measures and remain playable on the conf
 });
 test('electric guitar has only root–fifth chord attacks; arpeggios remain monophonic and keyboard keeps full chords',()=>{
  let broken=0,powers=0,fallbacks=0,keyboardChords=0;
- for(const {piece:p} of pool){assert.equal(p.programs.guitar,29);
+ for(const {piece:p} of pool){assert.equal(p.programs.guitar,27);
   for(const section of p.sections)for(const b of section.bars){
    assert(b.guitar.bass.every(n=>n.r));
    for(const n of b.guitar.notes.filter(n=>!n.r)){
