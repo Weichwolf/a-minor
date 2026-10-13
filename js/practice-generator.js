@@ -6,8 +6,10 @@ AM.practiceGenerator = (() => {
     const events=[{tick:0,data:MIDI.text(3,'a-minor · '+piece.form+' · Grade '+piece.grade),order:-10}],meter=M.meter(piece.time),bars=piece.sections.flatMap(s=>s.bars),endTick=Math.round(bars.length*meter.len*480);
     // Clean playback also applies to saved scores with older guitar programs.
     const programFor=(role,bar)=>role==='guitar'?27:bar?.program??piece.programs[role];
-    const volumes={guitar:100,keys:82,bass:88,drums:80};
+    const volumes={guitar:84,keys:82,bass:88,drums:80};
     for(const [role,ch]of Object.entries(MIDI.channels))events.push({tick:0,data:[176|ch,121,0],order:-9},{tick:0,data:[176|ch,0,0],order:-8},{tick:0,data:[176|ch,32,0],order:-8},{tick:0,data:[192|ch,programFor(role)],order:-7},{tick:0,data:[176|ch,7,volumes[role]],order:-6});
+    // A restrained guitar send into the existing room; drum ambience is unchanged.
+    events.push({tick:0,data:[176|MIDI.channels.guitar,91,24],order:-6});
     for(const section of piece.sections){const at=Math.round(section.startBeat*480),m=M.meter(section.time,section.groups),sf=M.KEYS[piece.key]??0;events.push({tick:at,data:MIDI.text(6,section.name),order:-10},{tick:at,data:MIDI.tempo(piece.quarterTempo??piece.tempo*m.q),order:-10},{tick:at,data:MIDI.meta(88,[m.n,Math.log2(m.d),m.compound?36:24,8]),order:-10},{tick:at,data:MIDI.meta(89,[(sf+256)%256,piece.key.endsWith('m')?1:0]),order:-10});}
     for(const [role,ch]of Object.entries(MIDI.channels)){
       let program=programFor(role);bars.forEach((bar,i)=>{const value=programFor(role,part(bar,role));if(value!==program){events.push({tick:Math.round(i*meter.len*480),data:[192|ch,value],order:-7});program=value;}});

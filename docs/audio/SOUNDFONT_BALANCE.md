@@ -1,5 +1,40 @@
 # SoundFont: Spektrum und Pegelbalance
 
+## Praxis-Clean-Gitarre · 2026-10-13
+
+Vergleich für `#/practice/guitar/5/baroque/0x5EEC6550`, Grade 5 Barock, Form ABSCABSCBO, Vierteltempo 114. Vollständiges Stück (151,58 s) plus drei Sekunden Ausklang, alle Mixerregler auf 100 %. Ausgangspunkt ist die Clean-Umstellung in Commit `212746d`. Die früheren Repertoiremessungen unten bleiben historische Messungen.
+
+![Spektrum des Praxisstücks vor und nach der Pegelkorrektur](practice-5EEC6550.png)
+
+Die Gitarrenenergie liegt vor der Anpassung im Bereich 200–800 Hz bei −39,14 dBFS gegenüber −41,56 dBFS beim Keyboard. Im Bereich 2–8 kHz liegt sie bei −46,53 dBFS gegenüber −48,12 dBFS bei den Drums. Über das gesamte Frequenzband sind Bass und Drums energiereicher; daraus folgt nicht, dass die Gitarre subjektiv leise ist. Der Klang konzentriert seine Energie auf für die Unterscheidbarkeit wichtige Mitten.
+
+Die Praxis-MIDI-Ausgabe senkt deshalb Gitarren-CC7 von 100 auf **84**. Im tatsächlich gerenderten PCM ergibt das **−3,10 dB** über das gesamte Gitarrenspektrum. Die Gitarrenenergie bei 2–8 kHz liegt danach bei −49,63 dBFS, etwa 1,51 dB unter den Drums. Das Spektrum liefert hier keinen hinreichenden Grund für einen zusätzlichen schmalbandigen EQ-Eingriff: zunächst wird der Gesamtpegel korrigiert und die Clean-Klangfarbe erhalten. Diese Entscheidung ist eine begründete Mischungseinstellung, kein menschliches Hörurteil.
+
+Die Gitarre erhält ausdrücklich **Reverb-Send CC91 = 24/127** in den vorhandenen Hall. Der SoundFont enthält bereits einen eigenen Hallanteil; der Send-Wert ist kein Prozentwert des hörbaren Wet/Dry-Verhältnisses. Drum-Pegel, Drum-Sends und der gemeinsame Hallalgorithmus werden nicht geändert. Vorhandene Mixerwerte bleiben persönliche Multiplikatoren. MIDI-Export und MIDI Out enthalten dieselben Controller; externe Klangerzeuger können darauf anders reagieren.
+
+| Gemessener RMS, dBFS | Vorher | Nachher |
+|---|---:|---:|
+| Keyboard, trocken | −39,14 | −39,14 |
+| Bass, trocken | −33,34 | −33,34 |
+| Gitarre, trocken | −37,78 | −40,88 |
+| Drums, trocken | −35,69 | −35,69 |
+| Gemeinsamer Effektausgang | −49,73 | −51,31 |
+
+Die Gesamtmix-Spitze einschließlich Effekten und Browser-Masterfaktor 0,6 beträgt vorher −14,79 dBFS, nachher −14,90 dBFS, jeweils vor dem Kompressor. Der gemeinsame Effektausgang ist kein isolierter Drum-Hall; seine Änderung stammt aus der Gitarrenanpassung. Die übrigen trockenen Spuren sind samplegenau identisch. RMS und Terzbänder sind keine LUFS-Messung und beweisen keine subjektiv optimale Balance. Ein Seed ist keine Vollprüfung aller Arrangements.
+
+[Messdaten](practice-5EEC6550.json) · [SVG](practice-5EEC6550.svg). Die unveränderte SoundFont-Kalibrierung ist bereits im Render enthalten. Zum Reproduzieren die vollständigen MIDI-Dateien dieses Seeds aus dem Ausgangsstand und dem aktuellen Stand exportieren:
+
+```sh
+node scripts/analyze-practice-audio.mjs before.mid test-results/practice-audio/before
+node scripts/analyze-practice-audio.mjs after.mid test-results/practice-audio/after
+# Python: numpy und matplotlib
+python3 scripts/plot-practice-audio.py test-results/practice-audio/before test-results/practice-audio/after docs/audio/practice-5EEC6550
+```
+
+Die Analyse verwendet 48-kHz-Stereo, 4096-Sample-Hannfenster mit 50 % Überlappung und Stereo-Leistungsmittel pro Terzband. MIDI-Ereignisse werden in 128-Sample-Blöcken zugestellt. Temporäre PCM-Dateien bleiben unter `test-results/`.
+
+## Archiv: Preset-Kalibrierung
+
 2026-09-22. Vergleich gegen die unveränderte FluidR3-Auswahl aus Commit `75c833a`.
 
 ![Spektren vor und nach der Kalibrierung](soundfont-spectrum.png)
