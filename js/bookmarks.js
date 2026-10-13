@@ -4,12 +4,14 @@ AM.bookmarks = (() => {
   const fail=()=>{throw Error('Invalid bookmark file');},string=(s,max)=>typeof s==='string'&&s.length<=max;
   let entries=[],storageInvalid=false;
   function validatePiece(p){
+    // Saved scores keep their original notes; former guitar focus names remain readable.
+    const guitarFocusAliases={triadStrum:'triadArpeggio',majorMinorStrum:'majorMinorArpeggio',seventhStrum:'seventhArpeggio',syncopatedStrum:'syncopatedPower',fifthSixth:'fifthSixthLine'};
     if(!p||!Number.isInteger(p.grade)||p.grade<0||p.grade>5||!Number.isInteger(p.seed)||p.seed<0||p.seed>0xffffffff||
       !string(p.id,100)||!string(p.title,200)||!Object.hasOwn(M.SCALES,p.scale)||!Object.hasOwn(M.KEYS,p.key)||p.root!==p.key.replace(/m$/,'')||
       !Number.isFinite(p.tempo)||p.tempo<30||p.tempo>300||!Number.isInteger(p.maxFret)||p.maxFret<0||p.maxFret>24||
       !Array.isArray(p.sections)||!p.sections.length||p.sections.length>64||!string(p.form,64))fail();
     if(p.generatorVersion!==3||!AM.practiceComposer.styles.includes(p.style)||p.requestedStyle!==p.style||
-      AM.practiceComposer.instruments.some(role=>!AM.practiceCurriculum[p.grade].skills[role].includes(p.roleFocus?.[role])))fail();
+      AM.practiceComposer.instruments.some(role=>!AM.practiceCurriculum[p.grade].skills[role].includes(role==='guitar'?(guitarFocusAliases[p.roleFocus?.[role]]??p.roleFocus?.[role]):p.roleFocus?.[role])))fail();
     if(p.id!==`practice-${p.grade}-${p.style}-${p.seed}`)fail();
     if(p.contrasting!==undefined&&typeof p.contrasting!=='boolean')fail();
     if(p.theme!==undefined&&(!Array.isArray(p.theme)||p.theme.length!==8||p.theme.some(n=>!Number.isInteger(n)||n<0||n>6)))fail();
@@ -38,7 +40,7 @@ AM.bookmarks = (() => {
     for(const s of p.sections){
       if(!string(s.name,4)||!/^(?:[ABC]′?|[SO])$/.test(s.name)||s.time!==p.time||!Array.isArray(s.bars)||![4,8].includes(s.bars.length)||s.startBar!==count+1||s.startBeat!==beat)fail();
       if(s.variationOf!==undefined&&(s.name!==s.variationOf+'′'||!names.has(s.variationOf)))fail();
-      if(s.character!==undefined){const allowed={guitar:['riff','melody','arpeggio','chords','rest'],keys:['riff','melody','arpeggio','chords'],bass:['support','moving'],drums:['lightGroove','build','riffGroove']};for(const role of Object.keys(allowed))if(!allowed[role].includes(s.character?.[role]))fail();}
+      if(s.character!==undefined){const allowed={guitar:['riff','melody','arpeggio','power','chords','rest'],keys:['riff','melody','arpeggio','chords'],bass:['support','moving'],drums:['lightGroove','build','riffGroove']};for(const role of Object.keys(allowed))if(!allowed[role].includes(s.character?.[role]))fail();}
       M.meter(s.time,s.groups);
       for(const b of s.bars){
         if(b.number!==++count||b.time!==p.time||b.key!==p.key||!string(b.chord,80))fail();

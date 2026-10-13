@@ -58,6 +58,24 @@ test('all four written parts fill their measures and remain playable on the conf
   const drums=N.events({...b.drumPart,time:b.time,swing:b.swing});for(const n of drums){const simultaneous=drums.filter(x=>Math.abs(x.t-n.t)<1e-9);assert(simultaneous.length<=(p.grade<4?2:3));assert(simultaneous.filter(x=>![35,36,44].includes(x.midi)).length<=2);}
  }}
 });
+test('electric guitar has only root–fifth chord attacks; arpeggios remain monophonic and keyboard keeps full chords',()=>{
+ let broken=0,powers=0,fallbacks=0,keyboardChords=0;
+ for(const {piece:p} of pool){assert.equal(p.programs.guitar,29);
+  for(const section of p.sections)for(const b of section.bars){
+   assert(b.guitar.bass.every(n=>n.r));
+   for(const n of b.guitar.notes.filter(n=>!n.r)){
+    if(Array.isArray(n.p)){powers++;assert.equal(n.p.length,2);assert.equal(M.midi(n.p[1])-M.midi(n.p[0]),7,`${p.id}: only power chords, including endings`);}
+    if(b.guitar.texture==='arpeggio'){broken++;assert.equal(typeof n.p,'string');}
+   }
+   if(section.character.guitar==='power'&&b.guitar.texture==='arpeggio')fallbacks++;
+   if(b.keys.notes.some(n=>Array.isArray(n.p)&&n.p.length>=3))keyboardChords++;
+   const events=N.events({...b.guitar,time:b.time,swing:b.swing});
+   for(const event of events){const sounding=events.filter(n=>n.t<=event.t+1e-9&&n.t+n.dur>event.t+1e-9).map(n=>n.midi).sort((a,b)=>a-b);assert(sounding.length<=2);if(sounding.length===2)assert.equal(sounding[1]-sounding[0],7);}
+  }
+ }
+ assert(broken>100);assert(powers>100);assert(fallbacks>0,'non-perfect fifth harmonies are played as arpeggios');assert(keyboardChords>100);
+ for(const profile of C.profiles)assert(!profile.skills.guitar.some(f=>/Strum$|^fifthSixth$/.test(f)));
+});
 test('notation renders four-bar rows for guitar, grand staff, octave bass and percussion',()=>{
  for(const {piece:p} of pool.filter((_,i)=>i%12===0))for(const s of p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i))for(const role of C.instruments)for(let row=0;row<s.bars.length;row+=4){const bs=s.bars.slice(row,row+4),parts=bs.map(b=>G.part(b,role)),el={clientWidth:340};
   N.render(el,{instrument:role,time:p.time,key:p.key,maxFret:p.maxFret,singleLine:true,hideReferences:true,notes:parts.flatMap(p=>p.notes),bass:role==='bass'?undefined:parts.flatMap(p=>p.bass||[]),inner:parts.some(p=>p.inner)?parts.flatMap(part=>part.inner||A.practiceRhythm.held('C4',p.time,true)):undefined});

@@ -1,4 +1,4 @@
-// Requirements derived from the local collection. See docs/GIGAJAM_COVERAGE.md.
+// Requirements derived from the local collection, adapted for electric guitar. See docs/GIGAJAM_COVERAGE.md.
 AM.practiceCurriculum = [
   {
     "grade": 0,
@@ -163,7 +163,7 @@ AM.practiceCurriculum = [
     "skills": {
       "guitar": [
         "chromaticPower",
-        "triadStrum",
+        "triadArpeggio",
         "palmMute",
         "melodyReading",
         "melodicRiff",
@@ -232,8 +232,9 @@ AM.practiceCurriculum = [
     ],
     "skills": {
       "guitar": [
-        "majorMinorStrum",
-        "seventhStrum",
+        "powerChanges",
+        "majorMinorArpeggio",
+        "seventhArpeggio",
         "registerChanges",
         "melodyReading",
         "melodicRiff",
@@ -303,9 +304,9 @@ AM.practiceCurriculum = [
     "skills": {
       "guitar": [
         "sixteenthPower",
-        "syncopatedStrum",
+        "syncopatedPower",
         "ties",
-        "triadStrum",
+        "triadArpeggio",
         "melodyReading",
         "melodicRiff",
         "pickedArpeggio"
@@ -377,9 +378,9 @@ AM.practiceCurriculum = [
     "skills": {
       "guitar": [
         "rhythmChart",
-        "fifthSixth",
+        "fifthSixthLine",
         "shuffleRiff",
-        "seventhStrum",
+        "seventhArpeggio",
         "soloReturn",
         "navigation",
         "melodyReading",

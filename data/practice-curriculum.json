@@ -165,7 +165,7 @@
       "skills": {
         "guitar": [
           "chromaticPower",
-          "triadStrum",
+          "triadArpeggio",
           "palmMute",
           "melodyReading",
           "melodicRiff",
@@ -234,8 +234,9 @@
       ],
       "skills": {
         "guitar": [
-          "majorMinorStrum",
-          "seventhStrum",
+          "powerChanges",
+          "majorMinorArpeggio",
+          "seventhArpeggio",
           "registerChanges",
           "melodyReading",
           "melodicRiff",
@@ -305,9 +306,9 @@
       "skills": {
         "guitar": [
           "sixteenthPower",
-          "syncopatedStrum",
+          "syncopatedPower",
           "ties",
-          "triadStrum",
+          "triadArpeggio",
           "melodyReading",
           "melodicRiff",
           "pickedArpeggio"
@@ -379,9 +380,9 @@
       "skills": {
         "guitar": [
           "rhythmChart",
-          "fifthSixth",
+          "fifthSixthLine",
           "shuffleRiff",
-          "seventhStrum",
+          "seventhArpeggio",
           "soloReturn",
           "navigation",
           "melodyReading",

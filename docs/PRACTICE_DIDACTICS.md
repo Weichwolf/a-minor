@@ -1,6 +1,6 @@
 # Praxis und Musiklehre · Revision 2026-10-13
 
-Das Ziel ist sicheres Spielen nach Noten mit Verständnis für den musikalischen Zusammenhang. Praxis enthält generierte Musik für Gitarre, Keyboard, Bass und Drums; Theorie bleibt ein Lesebuch. Bookmarks und Geschmacksnotizen messen keinen Lernfortschritt. Es gibt keine Aufgabenlisten, automatischen Aufstiegsbedingungen oder Improvisationsaufträge.
+Das Ziel ist sicheres Spielen nach Noten mit Verständnis für den musikalischen Zusammenhang. Praxis enthält generierte Musik für E-Gitarre, Keyboard, Bass und Drums; Theorie bleibt ein Lesebuch. Bookmarks und Geschmacksnotizen messen keinen Lernfortschritt. Es gibt keine Aufgabenlisten, automatischen Aufstiegsbedingungen oder Improvisationsaufträge.
 
 ## Musikalische Konstruktion
 
@@ -25,6 +25,14 @@ Rock richtet sich nach den Anforderungen der lokalen Gigajam-Sammlung. Doom, Got
 
 Grade 0 verbindet rechte Piano-Melodie und Dreiklänge mit linker Pause, Gitarrenmelodien, Riffs oder Quinten, Grundtonbass und einfachen Grooves/Fills. Später kommen Koordination, Akkordanschläge, Synkopen, Sechzehntel, Triolen, Innenstimmen, Navigation und Ausdauer hinzu. Der [Gigajam-Abgleich](GIGAJAM_COVERAGE.md) dokumentiert die Profile, Referenztempi, Beispiele und Grenzen.
 
+## E-Gitarre mit Verzerrung
+
+Die Gitarrenstimme verwendet bei gleichzeitigen Anschlägen ausschließlich Grundton und reine Quinte auf zwei benachbarten Saiten. Melodien, Riffs und Arpeggien sind einstimmig; Akkordtöne erklingen nacheinander, ohne einen vollständigen Griff halten zu müssen. Das gilt auch für Schlussfiguren, Solo-Begleitungen und Taktwiederholungen. Die erzeugte MIDI-Stimme entspricht genau dieser Notation. Ihr Grundklang ist elektrische Drive-Gitarre; höhere Grades können weiterhin elektrische Clean/Drive-Kontraste enthalten.
+
+Dreiklang-, Dur/Moll- und Septakkordanschläge werden durch entsprechende Arpeggio-Schwerpunkte ersetzt. Quint-/Sextbewegungen erklingen als Einzeltonfigur. Passt die reine Quinte nicht zur geplanten Harmonie, beispielsweise beim verminderten Dreiklang, wird der betreffende Takt zur gebrochenen Akkordfigur. Der Generator setzt dann keine fremde reine Quinte über die Bandharmonie. Haltebögen zwischen Takten übertragen keine Powerchords in eine einstimmige Arpeggiofigur.
+
+Die Schwierigkeit wächst über Rhythmus, Koordination, Saiten- und Lagenwechsel und längere Phrasen. Grade 0 behält wenige Töne und einfache Grundwerte; Arpeggio-Schwerpunkte kommen ab Grade 1 hinzu. Barock und Lounge sind Übertragungen auf E-Gitarre mit Linienführung und gebrochenen Akkorden. Keyboard behält seine vollständigen Akkorde und Handkoordinationsprofile. Gigajam gibt weiterhin Rhythmik und Schwierigkeit vor; die mehrstimmige Gitarrentechnik wird bewusst an diesen E-Gitarrenfokus angepasst.
+
 ## Variation und Rückmeldung
 
 Erkennbare Figuren werden höher gewichtet als völlig freie Tonfolgen. Akkordwechsel geben bekannten Figuren neue Bedeutung; die Stilwahl darf die neuen Grade-Anforderungen nicht ersetzen. Explizite Triolen bleiben gleichmäßig, auch in einem swingenden Stück. Alle Takte sind vollständig; Abschnitte sind vier oder später acht Takte lang. Längere Formen entstehen durch hörbare und lesbare Rückkehr, während die Partitur kompakt bleibt.
@@ -35,12 +43,14 @@ Ein Grade ist ein Inhaltsbereich, keine beobachtete Fähigkeit. Auswahl, Anhöre
 
 Ein kurzer Absatz nennt Tonzentrum/Modus, Form, tatsächliche Akkordfolgen, bei höheren Grades römische Stufen, häufige und größere Intervalle sowie wirklich vorkommende Notenwerte. Der Schwerpunkt und die tatsächlichen Funktionen von A, B, C und Varianten erklären den musikalischen Zusammenhang. Diese Beschreibung erscheint auch im PDF. Für Drums werden Rhythmus und Koordination beschrieben; die GM-Notennummern werden nicht als melodische Intervalle ausgegeben. Eine Liste der Melodietöne oder ein fertiger Fingersatz bleibt aus der Stückbeschreibung heraus.
 
+Die Gitarrenbeschreibung unterscheidet die Bandharmonik (etwa Am) von tatsächlich angeschlagenen Powerchords (etwa A5). Die Abschnittsangaben berücksichtigen auch Takte, die statt eines Powerchords als Arpeggio erklingen.
+
 Die Durreferenz der Stufen wird beibehalten: Moll kann ♭III, ♭VI und ♭VII enthalten. Natürlich Moll mit v–i, Moll mit Durdominante und mixolydische Rockharmonik sind unterschiedliche Klangmittel. Geliehene Akkorde und chromatische Durchgänge dürfen außerhalb der Grundskala liegen und werden in der Notation entsprechend geschrieben.
 
 ## Instrumentgrenzen und Nachvollziehbarkeit
 
-P4-Gitarre verwendet E2 A2 D3 G3 C4 F4, der Bass E1 A1 D2 G2. Bundgrenzen wachsen mit dem Grade; Akkordlagen bleiben erreichbar; kleine Barrés zählen zur Grenze von vier Greiffingern und dürfen keine klingende offene oder tiefer gegriffene Saite überdecken. Keyboard bleibt auf C2–C6 und höchstens fünf Töne pro Hand innerhalb einer Oktave begrenzt. Gehaltene Innenstimmen zählen zur rechten Hand. Drums begrenzt gleichzeitige Handschläge auf zwei, mit zusätzlichem Fuß bis zu drei Schlägen.
+P4-E-Gitarre verwendet E2 A2 D3 G3 C4 F4, der Bass E1 A1 D2 G2. Bundgrenzen wachsen mit dem Grade; die Gitarren-Powerchords liegen auf benachbarten Saiten innerhalb der jeweiligen Bundgrenze. Keyboard bleibt auf C2–C6 und höchstens fünf Töne pro Hand innerhalb einer Oktave begrenzt. Gehaltene Innenstimmen zählen zur rechten Hand. Drums begrenzt gleichzeitige Handschläge auf zwei, mit zusätzlichem Fuß bis zu drei Schlägen.
 
 Diese Bedingungen ersetzen keine Kontrolle von Haltung, Klang, Greifen, Plektrumführung und Dämpfung. Eine MIDI-Artikulation simuliert den hörbaren Effekt, nicht die Körperbewegung. Originalregister unter C2 und Standardstimmungsgriffe brauchen eine Bearbeitung. Prüfungsgleichwertigkeit wird nicht behauptet.
 
-Bookmarks speichern vollständige Partituren, Einstellungen und freiwillige Geschmacksnotizen. JSON erlaubt Sicherung und Wiederherstellung; CSV die musikalische Übersicht für weitere manuelle Anpassungen. Alte Generatorstände werden über Git verwaltet; für die vorliegende Umstellung ist keine Kompatibilität zu alten Bookmarks vorgesehen. Das Lesebuch und seine allgemeine Gliederung werden unabhängig von dieser Generatorrevision behandelt.
+Bookmarks speichern vollständige Partituren, Einstellungen und freiwillige Geschmacksnotizen. JSON erlaubt Sicherung und Wiederherstellung; CSV die musikalische Übersicht für weitere manuelle Anpassungen. Generatorstände werden über Git verwaltet. Vorhandene Bookmark-Partituren bleiben gespeicherte Momentaufnahmen; ehemalige Gitarrenschwerpunkt-Namen werden beim Laden weiterhin erkannt. Die neuen E-Gitarrenregeln gelten für neu generierte Stücke. Das Lesebuch und seine allgemeine Gliederung werden unabhängig von dieser Generatorrevision behandelt.
