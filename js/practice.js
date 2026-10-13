@@ -4,12 +4,33 @@ AM.practice = (() => {
   const validGrade=g=>Number.isInteger(g)&&g>=0&&g<=5,validSeed=s=>Number.isInteger(s)&&s>=0&&s<=0xffffffff;
   const validStyle=s=>C.styles.includes(s),identifier=n=>'0x'+n.toString(16).padStart(8,'0').toUpperCase();
   const link=(i,g,n,style='rock')=>`#/practice/${i}/${g}/${style}/${identifier(n)}`;
+  const selectionKey='a-minor-practice-selection';
+  let selection={};try{const v=JSON.parse(localStorage.getItem(selectionKey));if(v&&typeof v==='object'&&!Array.isArray(v))selection=v;}catch{}
+  function nextSeed(instrument,grade,style,current){
+    if(!instruments.includes(instrument)||!validGrade(grade)||!validStyle(style))throw Error('Invalid practice selection');
+    const key=instrument+':'+grade+':'+style,skills=C.profiles[grade].skills[instrument],stored=selection[key];
+    const counts=Object.fromEntries(skills.map(skill=>[skill,Number.isSafeInteger(stored?.[skill])&&stored[skill]>=0&&stored[skill]<10000?stored[skill]:0]));
+    const least=Math.min(...Object.values(counts)),start=seed();let best;
+    // Search only the lightweight deterministic settings, never hundreds of
+    // full scores. The selected URL alone still determines the entire piece.
+    for(let attempt=0;attempt<256;attempt++){
+      const candidate=(start+Math.imul(attempt,0x9e3779b9))>>>0;if(candidate===current)continue;
+      const focus=C.focusFor(grade,candidate,style)[instrument],count=counts[focus];
+      if(!best||count<best.count)best={seed:candidate,focus,count};
+      if(count===least)break;
+    }
+    counts[best.focus]++;
+    const floor=Math.min(...Object.values(counts));
+    selection[key]=Object.fromEntries(skills.map(skill=>[skill,counts[skill]-floor]));
+    try{localStorage.setItem(selectionKey,JSON.stringify(selection));}catch{}
+    return best.seed;
+  }
   let saved={};try{const v=JSON.parse(localStorage.getItem(K));for(const i of instruments)if(validGrade(v?.[i]?.grade)&&validSeed(v[i].seed))saved[i]={grade:v[i].grade,seed:v[i].seed,style:validStyle(v[i].style)?v[i].style:'rock'};}catch{}
   function page(spec=''){
     const [instrument,gText,styleText,nText]=spec.split('/');
     if(!instruments.includes(instrument))return `<h1>${t('practiceMode')}</h1><p class="lead">${t('practiceLead')}</p><div class="tracks">${instruments.map(i=>`<a class="track" href="#/practice/${i}"><h2>${title(i)}</h2><p>${t('practice'+i[0].toUpperCase()+i.slice(1)+'Lead')}</p><p class="meta">Grade 0–5 · ${t('styleChoice')}</p></a>`).join('')}</div>`;
     const previous=saved[instrument],g=gText===undefined?previous?.grade:Number(gText),grade=validGrade(g)?g:0;
-    const style=validStyle(styleText)?styleText:previous?.style??'rock',requested=nText===undefined?gText===undefined?previous?.seed:undefined:Number(nText),n=validSeed(requested)?requested:seed();
+    const style=validStyle(styleText)?styleText:previous?.style??'rock',requested=nText===undefined?gText===undefined?previous?.seed:undefined:Number(nText),n=validSeed(requested)?requested:nextSeed(instrument,grade,style,previous?.seed);
     const url=link(instrument,grade,n,style);history.replaceState(null,'',url);saved[instrument]={grade,seed:n,style};
     try{localStorage.setItem(K,JSON.stringify(saved));}catch{}
     const bookmark=AM.bookmarks.fromURL(url),result=bookmark?{piece:bookmark.piece,score:bookmark.piece,bytes:AM.practiceGenerator.encode(bookmark.piece)}:C.generate(grade,n,style);
@@ -19,11 +40,11 @@ AM.practice = (() => {
     const formText=t('pieceForm').replace('{form}',AM.practiceInfo.form(piece)).replace('{written}',piece.uniqueBars).replace('{played}',piece.bars);
     return AM.repertoire.generated(piece,instrument,score,bytes,{partOptions,formText,infoHTML:AM.practiceInfo.html(piece,instrument),controlsHTML,onReady:target=>{
       if(location.hash!==url)return;
-      const change=()=>{location.hash=link(instrument,Number(target.querySelector('#practice-grade').value),seed(),target.querySelector('#practice-style').value);};
+      const change=()=>{const nextGrade=Number(target.querySelector('#practice-grade').value),nextStyle=target.querySelector('#practice-style').value;location.hash=link(instrument,nextGrade,nextSeed(instrument,nextGrade,nextStyle,n),nextStyle);};
       target.querySelector('#practice-grade').onchange=change;target.querySelector('#practice-style').onchange=change;
-      target.querySelector('#practice-new').onclick=()=>{let next=seed();if(next===n)next=(next+1)>>>0;location.hash=link(instrument,grade,next,style);};
+      target.querySelector('#practice-new').onclick=()=>{location.hash=link(instrument,grade,nextSeed(instrument,grade,style,n),style);};
       AM.bookmarks.bindPiece(target,piece,instrument,url);
     }});
   }
-  return{page,link,identifier};
+  return{page,link,identifier,nextSeed};
 })();

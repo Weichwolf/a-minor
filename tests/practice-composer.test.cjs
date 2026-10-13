@@ -36,6 +36,34 @@ test('varied returns preserve the opening phrase and develop the ending; style f
  }
  assert(variations>20);assert.notDeepEqual([...forms.get('rock')].sort(),[...forms.get('baroque')].sort());
 });
+test('Grade 0 melodies keep one small register across the whole section, including harmonic changes',()=>{
+ let checked=0;
+ for(const {piece:p} of pool.filter(({piece})=>piece.grade===0))for(const section of p.sections)for(const role of ['guitar','keys']){
+  if(section.character[role]!=='melody')continue;
+  const pitches=section.bars.flatMap(b=>b[role].notes).filter(n=>!n.r).map(n=>M.midi(n.p));
+  assert(Math.max(...pitches)-Math.min(...pitches)<=7,`${p.id}/${role}/${section.name}: phrase fits a fifth`);checked++;
+ }
+ assert(checked>100);
+});
+test('bass root-reading stays on roots; quarter focus has a quarter pulse and arpeggios include thirds',()=>{
+ let roots=0,arpeggios=0;
+ for(const {piece:p} of pool){
+  if(['rootQuarters','rootEighths','rootChanges','eighthBass'].includes(p.roleFocus.bass)){
+   roots++;
+   for(const section of p.sections)for(const b of section.bars){let at=0;
+    for(const n of b.bass){const h=b.harmony.changes?.findLast(c=>c.t<=at+1e-9)?.h??b.harmony;
+     if(!n.r)assert.equal(M.pc(M.midi(n.p)),h.rootPc,`${p.id}: a root-reading part uses the harmonic root`);
+     if(p.roleFocus.bass==='rootQuarters')assert(['q','w'].includes(n.d),'quarter pulse, with a sustained ending');
+     at+=N.dur(n.d);
+    }
+   }
+  }
+  if(p.roleFocus.bass==='arpeggioBass'){
+   arpeggios++;assert(p.sections.some(s=>s.bars.some(b=>b.bass.some(n=>!n.r&&M.pc(M.midi(n.p))===b.harmony.pcs[1]))),`${p.id}: arpeggio includes the chord third`);
+  }
+ }
+ assert(roots>50);assert(arpeggios>5);
+});
 test('every section has four or eight bars; longer forms retain literal returns and close on the tonic',()=>{
  const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars>=C.profiles[p.grade].playedBars[0]&&p.bars<=C.profiles[p.grade].playedBars[1],`${p.grade}/${p.seed}: ${p.bars}`);
   const names=new Map();let beat=0,count=0;for(const s of p.sections){assert([4,8].includes(s.bars.length));if(p.grade<3)assert.equal(s.bars.length,4);lengths.add(s.bars.length);if(s.bars.length===8)eightGrades.add(p.grade);assert.equal(s.startBar,count+1);assert.equal(s.startBeat,beat);
