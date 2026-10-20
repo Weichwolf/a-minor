@@ -17,10 +17,6 @@ AM.practiceCurriculum = [
     "sectionLengths": [
       4
     ],
-    "playedBars": [
-      12,
-      16
-    ],
     "skills": {
       "guitar": [
         "heldPower",
@@ -77,7 +73,9 @@ AM.practiceCurriculum = [
     "scales": [
       "major",
       "aeolian"
-    ]
+    ],
+    "durationSeconds": 45,
+    "durationTolerance": 0.1
   },
   {
     "grade": 1,
@@ -95,10 +93,6 @@ AM.practiceCurriculum = [
     "maxFret": 7,
     "sectionLengths": [
       4
-    ],
-    "playedBars": [
-      16,
-      24
     ],
     "skills": {
       "guitar": [
@@ -157,7 +151,9 @@ AM.practiceCurriculum = [
       "major",
       "aeolian",
       "minorPentatonic"
-    ]
+    ],
+    "durationSeconds": 65,
+    "durationTolerance": 0.1
   },
   {
     "grade": 2,
@@ -175,10 +171,6 @@ AM.practiceCurriculum = [
     "maxFret": 9,
     "sectionLengths": [
       4
-    ],
-    "playedBars": [
-      16,
-      32
     ],
     "skills": {
       "guitar": [
@@ -241,7 +233,9 @@ AM.practiceCurriculum = [
       "minorPentatonic",
       "minorBlues",
       "mixolydian"
-    ]
+    ],
+    "durationSeconds": 90,
+    "durationTolerance": 0.1
   },
   {
     "grade": 3,
@@ -260,10 +254,6 @@ AM.practiceCurriculum = [
     "sectionLengths": [
       4,
       8
-    ],
-    "playedBars": [
-      24,
-      48
     ],
     "skills": {
       "guitar": [
@@ -331,7 +321,9 @@ AM.practiceCurriculum = [
       "dorian",
       "harmonicMinor",
       "majorPentatonic"
-    ]
+    ],
+    "durationSeconds": 120,
+    "durationTolerance": 0.1
   },
   {
     "grade": 4,
@@ -350,10 +342,6 @@ AM.practiceCurriculum = [
     "sectionLengths": [
       4,
       8
-    ],
-    "playedBars": [
-      24,
-      64
     ],
     "skills": {
       "guitar": [
@@ -427,7 +415,9 @@ AM.practiceCurriculum = [
       "majorPentatonic",
       "phrygian",
       "majorBlues"
-    ]
+    ],
+    "durationSeconds": 155,
+    "durationTolerance": 0.1
   },
   {
     "grade": 5,
@@ -446,10 +436,6 @@ AM.practiceCurriculum = [
     "sectionLengths": [
       4,
       8
-    ],
-    "playedBars": [
-      32,
-      64
     ],
     "skills": {
       "guitar": [
@@ -531,6 +517,8 @@ AM.practiceCurriculum = [
       "phrygian",
       "majorBlues",
       "lydian"
-    ]
+    ],
+    "durationSeconds": 195,
+    "durationTolerance": 0.1
   }
 ];

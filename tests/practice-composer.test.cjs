@@ -84,7 +84,7 @@ test('drum focus is visible in the actual attacks and notation, not only in its 
  assert(checked>30);
 });
 test('every section has four or eight bars; longer forms retain literal returns and close on the tonic',()=>{
- const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars<=64,'reading miniatures do not manufacture length through excessive repetition');if(p.repeat)assert(p.repeat.times<=3);assert(p.bars>=C.profiles[p.grade].playedBars[0]&&p.bars<=C.profiles[p.grade].playedBars[1],`${p.grade}/${p.seed}: ${p.bars}`);
+ const lengths=new Set(),keys=new Set(),eightGrades=new Set();for(const {piece:p} of pool){keys.add(p.key);assert(p.uniqueBars<=24);assert(p.bars<=256);assert(Math.abs(p.durationSeconds/C.profiles[p.grade].durationSeconds-1)<=C.profiles[p.grade].durationTolerance,`${p.id}: ${p.durationSeconds}s`);
   const names=new Map();let beat=0,count=0;for(const s of p.sections){assert([4,8].includes(s.bars.length));if(p.grade<3)assert.equal(s.bars.length,4);lengths.add(s.bars.length);if(s.bars.length===8)eightGrades.add(p.grade);assert.equal(s.startBar,count+1);assert.equal(s.startBeat,beat);
    const body=JSON.stringify(s.bars.map(({number,...bar})=>bar));if(names.has(s.name))assert.equal(body,names.get(s.name));names.set(s.name,body);count+=s.bars.length;beat+=s.bars.length*M.meter(p.time).len;
   }assert.equal(count,p.bars);assert.equal(p.sections.map(s=>s.name).join(''),p.form);assert.equal(p.sections.at(-1).bars.at(-1).harmony.rootPc,M.rootPc(p.root));

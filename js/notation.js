@@ -61,8 +61,7 @@ AM.notation = (() => {
     return {x, bars, total, end:cur};
   }
 
-  function staff(sc, st, L, top, aids, tr, key, x0) {
-    if (sc.rhythmSlash) aids = {};
+  function staff(sc, st, L, top, aidSettings, tr, key, x0) {
     const percussion=sc.instrument==='drums';
     const gap = 10, bottom = top + gap * 4, mid = top + gap * 2, C = CLEF[st.clef], ks = percussion?[]:M.keyAcc(key), barLen = barLenFor(sc);
     const REF = stepOf(...C.ref) - tr, yOf = s => bottom - (s - REF) * gap / 2;
@@ -81,6 +80,7 @@ AM.notation = (() => {
     st.notes.forEach((n,noteIndex) => {
       const d = DUR[(n.d || 'q')[0]], length = ticks(n.d || 'q'), x = x0 + L.x.get(pos);
       const bar = Math.floor(pos / barLen) + st.from + 1;
+      const rhythmSlash=sc.rhythmSlash||sc.rhythmSlashBars?.includes(bar),aids=rhythmSlash?{}:aidSettings;
       if (sc.percentRepeats?.includes(bar)) {
         if (pos % barLen === 0) {
           const cx = x + (L.x.get(pos + barLen) - L.x.get(pos)) / 2;
@@ -89,7 +89,7 @@ AM.notation = (() => {
         pos += length; return;
       }
       if (n.r) { ties = []; const rm = mid + (st.restOffset || 0), ry = rm - (d >= 4 ? gap : 0); extent = Math.max(extent,rm + 18); if (d >= 2 && (ry > bottom || ry < top)) o += `<line x1="${x - 8}" y1="${ry}" x2="${x + 8}" y2="${ry}" class="ledger"/>`; o += rest(x, d, rm, gap); if (n.d?.endsWith('.')) o += `<circle cx="${x + 12}" cy="${rm - 4}" r="1.8" class="dotd"/>`; pos += length; return; }
-      const ps = sc.rhythmSlash ? [{...M.parse('B4'),index:0,st:REF + 4,y:mid}] : pitches(n).map((p,index) => { const q = M.parse(p),step=percussion?REF+(drumSteps[q.midi]??5):stepOf(q.letter,q.octave);return {...q,index,st:step,y:yOf(step)}; }).sort((a, b) => a.st - b.st);
+      const ps = rhythmSlash ? [{...M.parse('B4'),index:0,st:REF + 4,y:mid}] : pitches(n).map((p,index) => { const q = M.parse(p),step=percussion?REF+(drumSteps[q.midi]??5):stepOf(q.letter,q.octave);return {...q,index,st:step,y:yOf(step)}; }).sort((a, b) => a.st - b.st);
       const lo = ps[0], hi = ps[ps.length - 1], up = st.direction ? st.direction === 'up' : (lo.y + hi.y) / 2 > mid;
       extent = Math.max(extent,lo.y + (!up && d < 4 ? 34 : 18),aids.names || aids.frets ? bottom + 70 + (aids.names && aids.frets ? 14 : 0) : bottom);
       for (let s = REF - 2; s >= lo.st; s -= 2) o += `<line x1="${x - 9}" y1="${yOf(s)}" x2="${x + 9}" y2="${yOf(s)}" class="ledger"/>`;
@@ -97,11 +97,11 @@ AM.notation = (() => {
       let ax = x - 9;
       let displaced = false;
       ps.forEach((p, i) => {
-        if (!percussion&&!sc.rhythmSlash && st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
+        if (!percussion&&!rhythmSlash && st.accidentals[noteIndex].has(p.index)) { const w = AM.glyphs[ACC[p.acc]].w; o += glyph(ACC[p.acc], ax - w, p.y, 'acc'); ax -= w + 3; }
         displaced = i > 0 && p.st - ps[i - 1].st === 1 && !displaced;
         const shift = displaced ? (up ? 11 : -11) : 0;
         const cross=n.mute||percussion&&[42,44,46,49,51,55,57,59].includes(p.midi);
-        o += sc.rhythmSlash ? `<path d="M${x - 6} ${mid + 6} l8 -14 h4 l-8 14 z" class="head rhythm-slash${d >= 2 ? ' open' : ''}"/>` : cross?`<path d="M${x+shift-4} ${p.y-4} l8 8 m-8 0 l8 -8" class="cross-head${n.mute?' muted-head':''}"/>`:n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
+        o += rhythmSlash ? `<path d="M${x - 6} ${mid + 6} l8 -14 h4 l-8 14 z" class="head rhythm-slash${d >= 2 ? ' open' : ''}"/>` : cross?`<path d="M${x+shift-4} ${p.y-4} l8 8 m-8 0 l8 -8" class="cross-head${n.mute?' muted-head':''}"/>`:n.harmonic ? `<path d="M${x + shift - 6} ${p.y} l6 -5 l6 5 l-6 5 z" class="harmonic"/>` : `<ellipse cx="${x + shift}" cy="${p.y}" rx="5.5" ry="4" transform="rotate(-20 ${x + shift} ${p.y})" class="head${d >= 2 ? ' open' : ''}"/>`;
         if(percussion&&(p.midi===46||cross&&d>=2))o+=`<circle cx="${x+shift}" cy="${p.y}" r="7" class="open-cymbal"/>`;
         if(n.ghost)o+=`<text x="${x+shift-10}" y="${p.y+4}" class="ghost-mark">(</text><text x="${x+shift+6}" y="${p.y+4}" class="ghost-mark">)</text>`;
         if (n.d?.endsWith('.')) o += `<circle cx="${x + 10 + shift}" cy="${p.y - (p.st % 2 === REF % 2 ? 3 : 0)}" r="1.8" class="dotd"/>`;

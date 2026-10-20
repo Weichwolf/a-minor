@@ -3766,6 +3766,7 @@
     "styleChoice": "Seven styles · varied forms",
     "style": "Style",
     "arrangement": "Ensemble",
+    "pieceDuration": "approx. {duration} min",
     "pieceForm": "Form {form} · {written} written / {played} played bars",
     "pieceSentence": "A {style} piece in {root} {scale}, {time}, form {form}. Chord progressions: {chords}; intervals: {intervals}; rhythm: {rhythm}. {focus}",
     "bookmarks": "Bookmarks",

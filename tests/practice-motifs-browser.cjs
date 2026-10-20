@@ -12,7 +12,7 @@ module.exports=async(browser,base)=>{
   for(const {style,grade,seed} of cases){
    await page.goto(base+`/#/practice/keys/${grade}/${style}/${seed}`);await page.waitForSelector('#repertoire-piece[data-ready]');
    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-   const p=await page.evaluate(()=>AM.repertoire.current.piece);assert(p.musicalAccent);assert.equal(p.generatorVersion,5);assert.equal(p.style,style);
+   const p=await page.evaluate(()=>AM.repertoire.current.piece);assert(p.musicalAccent);assert.equal(p.generatorVersion,6);assert.equal(p.style,style);
    if(style==='blues'){
     assert(p.sections.some(s=>s.name==='B′'));assert.equal(p.uniqueBars,20);
     const index=p.sections.findIndex(s=>s.name==='B′');await page.selectOption('#rep-section',String(index));assert((await page.locator('#rep-section option:checked').innerText()).startsWith('B′'));

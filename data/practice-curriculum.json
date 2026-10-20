@@ -19,10 +19,6 @@
       "sectionLengths": [
         4
       ],
-      "playedBars": [
-        12,
-        16
-      ],
       "skills": {
         "guitar": [
           "heldPower",
@@ -79,7 +75,9 @@
       "scales": [
         "major",
         "aeolian"
-      ]
+      ],
+      "durationSeconds": 45,
+      "durationTolerance": 0.1
     },
     {
       "grade": 1,
@@ -97,10 +95,6 @@
       "maxFret": 7,
       "sectionLengths": [
         4
-      ],
-      "playedBars": [
-        16,
-        24
       ],
       "skills": {
         "guitar": [
@@ -159,7 +153,9 @@
         "major",
         "aeolian",
         "minorPentatonic"
-      ]
+      ],
+      "durationSeconds": 65,
+      "durationTolerance": 0.1
     },
     {
       "grade": 2,
@@ -177,10 +173,6 @@
       "maxFret": 9,
       "sectionLengths": [
         4
-      ],
-      "playedBars": [
-        16,
-        32
       ],
       "skills": {
         "guitar": [
@@ -243,7 +235,9 @@
         "minorPentatonic",
         "minorBlues",
         "mixolydian"
-      ]
+      ],
+      "durationSeconds": 90,
+      "durationTolerance": 0.1
     },
     {
       "grade": 3,
@@ -262,10 +256,6 @@
       "sectionLengths": [
         4,
         8
-      ],
-      "playedBars": [
-        24,
-        48
       ],
       "skills": {
         "guitar": [
@@ -333,7 +323,9 @@
         "dorian",
         "harmonicMinor",
         "majorPentatonic"
-      ]
+      ],
+      "durationSeconds": 120,
+      "durationTolerance": 0.1
     },
     {
       "grade": 4,
@@ -352,10 +344,6 @@
       "sectionLengths": [
         4,
         8
-      ],
-      "playedBars": [
-        24,
-        64
       ],
       "skills": {
         "guitar": [
@@ -429,7 +417,9 @@
         "majorPentatonic",
         "phrygian",
         "majorBlues"
-      ]
+      ],
+      "durationSeconds": 155,
+      "durationTolerance": 0.1
     },
     {
       "grade": 5,
@@ -448,10 +438,6 @@
       "sectionLengths": [
         4,
         8
-      ],
-      "playedBars": [
-        32,
-        64
       ],
       "skills": {
         "guitar": [
@@ -533,8 +519,10 @@
         "phrygian",
         "majorBlues",
         "lydian"
-      ]
+      ],
+      "durationSeconds": 195,
+      "durationTolerance": 0.1
     }
   ],
-  "progression": "App curriculum: cumulative keys, melodic scales and styles; new key-signature groups receive half the selections. Instrument skills retain the local reference limits."
+  "progression": "App curriculum: cumulative keys, melodic scales and styles; new key-signature groups receive half the selections. Instrument skills retain the local reference limits. Target durations are app design choices in seconds; style tempos are defined separately."
 }

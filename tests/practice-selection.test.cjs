@@ -25,3 +25,15 @@ test('invalid selection storage is ignored and request validation remains strict
  }
  const A=setup();assert.throws(()=>A.practice.nextSeed('violin',0,'rock'));assert.throws(()=>A.practice.nextSeed('keys',6,'rock'));assert.throws(()=>A.practice.nextSeed('keys',0,'mixed'));
 });
+
+
+test('musical diversity balances keys, motif families and rhythmic figures without composing candidates',()=>{
+ const A=setup(),C=A.practiceComposer,selected=[];C.generate=()=>{throw Error('No trial composition');};let previous;
+ for(let n=0;n<30;n++){const seed=A.practice.nextSeed('keys',3,'rock',previous),meta=C.selectionFor(3,seed,'rock');selected.push(meta);previous=seed;}
+ for(const field of ['key','family','rhythm']){
+  assert(new Set(selected.map(s=>s[field])).size>=(field==='key'?6:field==='family'?5:3),field);
+  assert(selected.filter((s,i)=>i&&s[field]===selected[i-1][field]).length<=3,field+': few immediate repetitions');
+ }
+ const before=A.storage.get('a-minor-practice-diversity'),B=setup(A.storage);assert.equal(B.storage.get('a-minor-practice-diversity'),before);
+ assert.deepEqual(JSON.parse(JSON.stringify(C.selectionFor(3,previous,'rock'))),JSON.parse(JSON.stringify(B.practiceComposer.selectionFor(3,previous,'rock'))));
+});

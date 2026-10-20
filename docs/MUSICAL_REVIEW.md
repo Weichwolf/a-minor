@@ -6,6 +6,26 @@ Die aktuelle Prüfung betrifft den Generator für vier Instrumente. Der ältere 
 
 Die folgenden konkreten Seeds und Befunde dokumentieren den Prüfstand vom 13.10.2026 vor der kumulativen Staffelung. Die [aktuelle Staffelung](PRACTICE_PROGRESSION.md) hat eine neue Generatorversion; dieselben Seeds können deshalb andere Stücke ergeben.
 
+## Revision 6 · Tempo, Spieldauer und hörbare Inhalte · 2026-10-20
+
+Die ältere Fallmatrix weiter unten bleibt ein historischer Befund. Version 6 verwendet Stiltempi, konkrete Versetzungszeichen und kurze Anschlagsabstände für die Tempoobergrenze. Die Dauer richtet sich nach Sekunden einschließlich aller gespielten Rückkehrstellen; Grade 0–5 zielen auf 45 / 65 / 90 / 120 / 155 / 195 Sekunden. Ein Fall mit langen Doom-Abschnitten zeigte, dass die Form schon vor dem Schreiben auf das langsame Stiltempo passen muss. Zusammengehörige Varianten werden bei nötiger Verkürzung gemeinsam geplant. Ein synkopierter Drum-Schwerpunkt erhält auch beim Doom-Halftime-Backbeat eine echte Offbeat-Bassdrum.
+
+Gemischte Gitarrenzeilen rendern ihre Rhythmus-Slashes jetzt pro Takt. Fills bleiben kürzer und auf ausgewählte Übergänge begrenzt; führende Stimmen, ruhigere Begleitung und ein geplanter Phrasenhöhepunkt verändern die tatsächlich geschriebenen und gespielten Parts. Die Auswahl berücksichtigt neben dem Technikschwerpunkt auch Tonart, Motivfamilie und Grundrhythmus. Das Review-JSON enthält zusätzlich Dauer und rhythmische Grundfigur. Die neuen Inhalts- und Browserregressionen stehen in `practice-design.test.cjs` und `practice-design-browser.cjs`.
+
+Eine Dauerstichprobe mit 480 Kompositionen (16 deterministische Seeds je freigegebener Stil-/Grade-Kombination) vergleicht die vollständige MIDI-Zeit mit dem Ziel und kontrolliert die Tempoobergrenze der endgültigen Stimmen. Alle Fälle liegen innerhalb von ±10 %. Die gemessenen Minima/Maxima sind:
+
+| Grade | Ziel (Sekunden) | MIDI-Spieldauer (Sekunden, gerundet) |
+|---|---|---|
+| 0 | 45 | 45,0–45,0 |
+| 1 | 65 | 63,2–70,2 |
+| 2 | 90 | 88,9–90,0 |
+| 3 | 120 | 120,0–123,1 |
+| 4 | 155 | 155,0–160,0 |
+| 5 | 195 | 192,0–211,8 |
+
+Die Seeds sind 0–4 sowie für n = 5–15 `(n × 0x9e3779b9) >>> 0`. Die feste Testmatrix in `practice-design.test.cjs` prüft zusätzlich die Übereinstimmung von gespeicherter Dauer und MIDI-Zeit, die steigenden Grade-Zeitfenster und alle verfügbaren Stile einschließlich verschiedener Taktarten.
+
+
 ## Befunde und Korrekturen
 
 - **Grade 0 Gothic, Seed 20261015, Fis-Moll:** Der Powerchordabschnitt enthielt F♯2–E2–C♯4–F♯2 als Grundtöne. Der Sprung E2–C♯4 betrug 21 Halbtöne. Auf der P4-Gitarre bis Bund 5 ist der tiefe Cis-Powerchord auf benachbarten Saiten nicht verfügbar. Eine bloße Optimierung der Saiten konnte das nicht lösen. Die Anfänger-Harmonieplanung verwendet hier nun iv–i als vorbereiteten Schluss: F♯m–E–Bm–F♯m. Die Gitarrengrundtöne F♯2–E2–B2–F♯2 bleiben je Bewegung innerhalb einer Quinte. Die Tonart und der Wechsel von Riff zu Powerchords bleiben erhalten. Keyboard und Bass folgen derselben geänderten Harmonik.

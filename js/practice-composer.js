@@ -1,5 +1,5 @@
 AM.practiceComposer = (() => {
-  const M=AM.music,N=AM.notation,R=AM.practiceRhythm,T=AM.practiceMotifs,clone=x=>JSON.parse(JSON.stringify(x));
+  const M=AM.music,N=AM.notation,R=AM.practiceRhythm,T=AM.practiceMotifs,D=AM.practiceDesign,clone=x=>JSON.parse(JSON.stringify(x));
   const profiles=AM.practiceCurriculum,styles=[...profiles[5].styles],instruments=['guitar','keys','bass','drums'];
   const availableStyles=grade=>profiles[grade]?.styles??[];
   const styleForGrade=(grade,style)=>availableStyles(grade).includes(style)?style:'rock';
@@ -19,7 +19,7 @@ AM.practiceComposer = (() => {
     const keys=Object.keys(M.KEYS).filter(k=>k.endsWith('m')!==major&&Math.abs(M.KEYS[k])<=maxSignature);
     const previousMax=profiles[Math.max(0,grade-1)].maxSignature,newKeys=keys.filter(k=>Math.abs(M.KEYS[k])>previousMax),knownKeys=keys.filter(k=>Math.abs(M.KEYS[k])<=previousMax);
     const key=pick(newKeys.length&&rng()<.5?newKeys:knownKeys),root=key.replace(/m$/,''),iv=M.SCALES[harmonyScale].iv;
-    const groove=grade===5?pick(['straight','straight','straight','swing','compound']):'straight';
+    const groove=D.groove(grade,style,grade===5?rng():0);
     const melodicSkills=['melodyReading','melodicRiff','pickedArpeggio','triadArpeggio','majorMinorArpeggio','seventhArpeggio','fifthSixthLine'];
     const roleFocus=Object.fromEntries(instruments.map(role=>{
       let choices=profile.skills[role].filter(f=>groove==='compound'?!/shuffle|swing/i.test(f):groove==='swing'?!/compound/i.test(f):!/compound|shuffle|swing/i.test(f));
@@ -27,39 +27,37 @@ AM.practiceComposer = (() => {
       if(role==='guitar'){const melodic=rng()<.5;choices=choices.filter(f=>melodicSkills.includes(f)===melodic);}
       return[role,pick(choices)];
     }));
+    const rhythmicFigure=['pulse','paired','space'][Math.floor(random((seed^0x51ed270b)>>>0)()*3)];
     const time=groove==='compound'?'12/8':groove!=='swing'&&style==='progressive'&&grade>=4&&rng()<.3?pick(['5/8','7/8']):'4/4',meter=M.meter(time),swing=groove==='swing'&&time==='4/4';
-    return{rng,pick,profile,scale,harmonyScale,major,key,root,iv,groove,melodicSkills,roleFocus,time,meter,swing};
+    return{rng,pick,profile,scale,harmonyScale,major,key,root,iv,groove,melodicSkills,roleFocus,time,meter,swing,rhythmicFigure};
   }
   function generate(grade,seed,style='rock'){
-    const {rng,pick,profile,scale,harmonyScale,major,key,root,iv,groove,melodicSkills,roleFocus,time,meter,swing}=settings(grade,seed,style);
+    const {rng,pick,profile,scale,harmonyScale,major,key,root,iv,groove,melodicSkills,roleFocus,time,meter,swing,rhythmicFigure}=settings(grade,seed,style);
     const blues=style==='blues',melodyIv=M.SCALES[scale].iv,motifPlan=T.plan(grade,seed,style),accent=motifPlan.accent;
-    const quarterTempo=profile.quarterTempo[0]+Math.floor(rng()*(profile.quarterTempo[1]-profile.quarterTempo[0]+1)),tempo=Math.round(quarterTempo/meter.q*100)/100;
+    const tempoRange=D.tempoRange(grade,style,time,swing),quarterTempo=tempoRange[0]+Math.floor(rng()*(tempoRange[1]-tempoRange[0]+1)),tempo=Math.round(quarterTempo/meter.q*100)/100;
     const length=pick(profile.sectionLengths);
     const navigation=grade===5&&Object.values(roleFocus).includes('navigation')?(blues?'DC':pick(['DC','DS','Fine'])):null;
     const solo=grade===5&&Object.values(roleFocus).includes('soloReturn'),featured=pick(solo?instruments.filter(role=>roleFocus[role]==='soloReturn'):instruments);
     const splitForm=form=>form.match(/[ABCSO]′?/g);
-    const forms=blues?['ABC']:grade===0?['ABA','ABA′','ABAB']:grade===1?(style==='doom'?['AABA','ABAB′']:['ABAB','ABAB′']):styleForms[style];
+    const forms=blues?['ABC']:grade===0?(style==='doom'?['AB']:['ABA','ABA′']):grade===1?['ABA','ABA′']:styleForms[style];
     let unit=solo?['A','B','S','A']:splitForm(pick(forms));
     if(navigation)unit=navigation==='DS'?(solo?['A','B','S','C']:['A','B','C']):(solo?['A','S','B']:['A','B']);
     if(blues)unit=['A','B',solo?'S':'C'];
-    const names=[...new Set([...unit,...(blues||grade>=2&&navigation!=='Fine'?['O']:[])])];
+    const names=[...new Set([...unit,...(navigation!=='Fine'?['O']:[])])];
     const bluesAnswer=blues&&accent&&grade>=2&&!navigation;
     if(bluesAnswer)names.splice(names.indexOf('O'),0,'B′');
     const sizes=Object.fromEntries(names.map(name=>[name,blues||name==='O'?4:length]));
     const shorten=name=>{for(const related of names)if(related.replace('′','')===name.replace('′',''))sizes[related]=4;};
     for(const name of [...names].reverse()){if(Object.values(sizes).reduce((n,v)=>n+v,0)<=24)break;shorten(name);}
-    let order=[...unit],repeatCount=1;
-    if(blues){
-      const min=Math.max(2,Math.ceil(profile.playedBars[0]/12)),max=Math.min(4,Math.floor(profile.playedBars[1]/12)),choruses=min+Math.floor(rng()*(max-min+1));
-      repeatCount=choruses-1;order=[...Array.from({length:repeatCount},()=>unit).flat(),'A',bluesAnswer?'B′':'B','O'];
-    }else if(grade>=2){
-      const target=pick(profile.playedBars),tail=navigation==='DC'?['A','O']:navigation==='DS'?['B','O']:navigation==='Fine'?[...unit]:['O'];
-      for(const name of [...names].reverse()){const u=unit.reduce((n,x)=>n+sizes[x],0),v=tail.reduce((n,x)=>n+sizes[x],0);if(Math.ceil((profile.playedBars[0]-v)/u)<=Math.floor((profile.playedBars[1]-v)/u))break;shorten(name);}
-      const unitBars=unit.reduce((n,name)=>n+sizes[name],0),tailBars=tail.reduce((n,name)=>n+sizes[name],0);
-      const minCopies=Math.max(1,Math.ceil((profile.playedBars[0]-tailBars)/unitBars)),maxCopies=Math.max(minCopies,Math.min(3,Math.floor((profile.playedBars[1]-tailBars)/unitBars)));
-      const copies=Math.max(minCopies,Math.min(maxCopies,Math.round((target-tailBars)/unitBars)));
-      repeatCount=copies;order=[...Array.from({length:copies},()=>unit).flat(),...tail];
+    const formOptions={grade,unit,sizes,navigation,blues,bluesAnswer,range:tempoRange,requested:quarterTempo,time};
+    // A long written phrase must also fit the grade at the slow end of the
+    // style range. Keep source/variation lengths together when shortening.
+    for(const name of [...names].reverse()){
+      const slow=D.form({...formOptions,range:[tempoRange[0],tempoRange[0]]});
+      if(Math.abs(slow.duration/profile.durationSeconds-1)<=profile.durationTolerance)break;
+      if(sizes[name]===8)shorten(name);
     }
+    let planned=D.form(formOptions),order=planned.order,repeatCount=planned.copies;
     // Most pieces develop contrasting sections; occasional focused pieces retain one texture.
     const contrasting=rng()<.85||blues||!!accent,sourceName=name=>name.replace('′',''),sectionPlans={},focusSections={};
     const focusTexture=role=>role==='guitar'?(/melodicRiff|fifthSixthLine/.test(roleFocus.guitar)?'riff':/Arpeggio/.test(roleFocus.guitar)?'arpeggio':/melodyReading|registerChanges|soloReturn/.test(roleFocus.guitar)?'melody':'chords'):
@@ -85,7 +83,11 @@ AM.practiceComposer = (() => {
     for(const name of names){const source=sourceName(name),light=contrasting&&source==='B',build=contrasting&&source==='C';
       Object.assign(sectionPlans[name],{bass:light?'support':'moving',drums:light?'lightGroove':build?'build':'riffGroove'});
     }
-    for(const plan of Object.values(sectionPlans))if(plan.guitar==='chords')plan.guitar='power';
+    for(const [name,plan] of Object.entries(sectionPlans)){
+      if(plan.guitar==='chords')plan.guitar='power';
+      const source=sourceName(name);
+      plan.lead=name==='S'?featured:source===focusSections.guitar?'guitar':source===focusSections.keys?'keys':source==='B'?'keys':'guitar';
+    }
     const pitch=(degree,octave)=>M.scaleName(M.midi(root+octave)+iv[((degree%7)+7)%7]+Math.floor(degree/7)*12,root,harmonyScale);
     const spell=m=>M.scaleName(m,root,scale),pcAt=d=>M.pc(M.midi(pitch(d,2)));
     const lowest=(pc,min)=>{let m=min;while(M.pc(m)!==M.pc(pc))m++;return m;};
@@ -140,6 +142,7 @@ AM.practiceComposer = (() => {
           });
           if(!lowPower)d=3;
         }
+        if(grade===0&&major&&d===6)d=3;
         if(d===6&&(grade===0||style==='rock'))return harmony(6,major&&scale!=='mixolydian'?-1:0,'');
         if(d===4&&grade>=3&&['aeolian','harmonicMinor'].includes(scale)&&(name==='O'||source==='C'||i===count-2))return harmony(d,0,'');
         return harmony(d);
@@ -197,7 +200,7 @@ AM.practiceComposer = (() => {
     const motif=Object.fromEntries(instruments.map(role=>[role,[rhythm(role,0),rhythm(role,1)]]));
     const pulsePattern=d=>R.pulse(d,Math.round(meter.len/N.dur(d)),'C4').map(({d})=>({d}));
     const flowing=pulsePattern(meter.compound?'e':grade===0?'q':'e');
-    const singing=time==='4/4'?[[{d:'q'},{d:'q'},{d:'h'}],[{d:'h'},{d:'q'},{d:'q'}]]:
+    const singing=time==='4/4'?[rhythmicFigure==='space'?[{d:'h'},{d:'h'}]:rhythmicFigure==='paired'?pulsePattern('q'):[{d:'q'},{d:'q'},{d:'h'}],[{d:'h'},{d:'q'},{d:'q'}]]:
       meter.compound?[pulsePattern('q.'),[{d:'h.'},{d:'q.'},{d:'q.'}]]:
       [R.generate({shortest:'e',dotted:true},{rng,length:meter.len}),R.generate({shortest:'e',dotted:true},{rng,length:meter.len})];
     const themeFor=(name,bar)=>T.contour(contour,{style,accent,section:sourceName(name),bar,variation:name.endsWith('′')});
@@ -223,6 +226,9 @@ AM.practiceComposer = (() => {
         const choices=time==='4/4'?[[{d:'h'},{d:'h'}],...singing]:meter.compound?[[{d:'h.'},{d:'h.'}],pulsePattern('q.')]:[R.held('C4',time).map(({d})=>({d})),flowing];
         pattern=choices.find(p=>JSON.stringify(p)!==JSON.stringify(pattern))??pattern;
       }
+      // Supporting melody lines breathe while the other part carries the
+      // section. The selected instrumental focus keeps its original cell.
+      if(sectionPlans[name].lead!==role&&sourceName(name)!==focusSections[role]&&texture==='melody'&&style!=='baroque')pattern=clone(singing[bar%2]);
       return clone(pattern);
     }
     function rhythm(role,variant=0){
@@ -245,7 +251,7 @@ AM.practiceComposer = (() => {
       }
       if(time==='12/8')return R.generate({...rp,dotted:true,triplets:false},{rng,length:meter.len,restChance:.07,required:variant?'e':'q.'});
       if(meter.d===8)return R.generate({...rp,dotted:true},{rng,length:meter.len,restChance:.05});
-      const pulse=grade===0&&['guitar','keys'].includes(role)?pick(['q','h','w']):pick(['q','e']);
+      const pulse=grade===0&&['guitar','keys'].includes(role)?(rhythmicFigure==='space'?'h':rhythmicFigure==='paired'?'q':pick(['q','h','w'])):rhythmicFigure==='space'?'q':rhythmicFigure==='paired'?'e':pick(['q','e']);
       if(role==='guitar'&&/sixteenth/.test(focus))ds=R.generate(rp,{rng,length:4,dense:true,required:'s',restChance:.06});
       else if(/eighthPower|palmMute|rootEighths|eighthBass|octaveBass|fifthBass|movingBass|passingBass|scaleBass|arpeggioBass|registerChanges/.test(focus))ds=R.pulse('e',8,'C4').map(({d})=>({d}));
       else if(role==='bass'&&/walking/.test(focus))ds=R.pulse('q',4,'C2').map(({d})=>({d}));
@@ -256,17 +262,18 @@ AM.practiceComposer = (() => {
       return ds;
     }
     function line(h,name,bar,role,register){
-      const pattern=partPattern(role,name,bar),notes=[],theme=themeFor(name,bar),historyKey=role+':'+name+':'+(register<60?'low':'high');let previous=melodicHistory.get(historyKey)??register,at=0;
+      const pattern=partPattern(role,name,bar),notes=[],theme=themeFor(name,bar),historyKey=role+':'+name+':'+(register<60?'low':'high'),phraseShape=T.phrase(grade,bar,sizes[name]);let lastLeap=0,previous=melodicHistory.get(historyKey)??register,at=0;
       const tonicAnchor=role==='guitar'||grade===0?register:lowest(M.rootPc(root),register-5);
       const candidates=[];for(let m=register-(role==='guitar'||grade===0?0:7);m<=register+(grade===0?7:12);m++)if(m>=36&&m<=84&&(M.scalePcs(root,scale).includes(M.pc(m))||h.pcs.includes(M.pc(m))))candidates.push(m);
       for(let i=0;i<pattern.length;i++){
         const n=pattern[i];if(n.r){notes.push(n);at+=N.dur(n.d);continue;}
         const current=atHarmony(h,at),arrival=i===pattern.length-1&&(bar===sizes[name]-1||sizes[name]===8&&bar===3),chord=at===0||Math.abs(at-2)<1e-9||arrival,sequence=style==='baroque'&&sourceName(name)==='B'?(accent?Math.floor(bar/2)%2:bar%3):0;
-        const development=sizes[name]===8&&bar===6?1:0;
+        const development=phraseShape.lift;
         const degree=theme[(i+bar%2*2+(name.endsWith('′')?1:0))%theme.length]+sequence+development,desired=arrival&&current.degree===0?tonicAnchor:tonicAnchor+melodyIv[Math.min(melodyIv.length-1,degree)];
         const pool=chord?candidates.filter(m=>current.pcs.includes(M.pc(m))):candidates;
         const sorted=(pool.length?pool:candidates).sort((a,b)=>Math.abs(a-desired)+Math.abs(a-previous)*.45-Math.abs(b-desired)-Math.abs(b-previous)*.45);
-        const midi=sorted[0];notes.push({...n,p:spellChord(midi,current),...(grade>=2&&i===0?{accent:1}:{})});previous=midi;at+=N.dur(n.d);
+        const recovery=sorted.filter(m=>Math.abs(m-previous)<=4&&(m-previous)*lastLeap<0);
+        const midi=Math.abs(lastLeap)>5&&!arrival&&recovery.length?recovery[0]:sorted[0];lastLeap=midi-previous;notes.push({...n,p:spellChord(midi,current),...(grade>=2&&i===0?{accent:1}:{})});previous=midi;at+=N.dur(n.d);
       }
       const phrase=bluesPhrase(notes,bar,role),last=phrase.findLast(n=>!n.r);
       if(last)melodicHistory.set(historyKey,M.midi(last.p));return phrase;
@@ -362,6 +369,7 @@ AM.practiceComposer = (() => {
         });
       }
       if(name==='S'&&featured==='bass'||name==='S'&&featured==='drums'){notes=R.held(keyVoicing(h,70),time);bass=R.held('C3',time,true);}
+      if(grade>=2&&sectionPlans[name].lead==='guitar'&&sourceName(name)!==focusSections.keys&&style!=='baroque')bass=R.held(spell(lowest(h.rootPc,36)),time);
       let inner;
       if(grade===5&&focus==='independentHands'&&texture==='melody'&&sourceName(name)===focusSections.keys&&name!=='O'&&notes.every(n=>n.r||!Array.isArray(n.p))){
         const middle=keyVoicing(h,67,3).slice(0,2);
@@ -414,8 +422,7 @@ AM.practiceComposer = (() => {
       return notes;
     }
     function phraseExpression(part,role,name,bar){
-      if(!accent)return;
-      const shape=[0,3,5,2,0,-2,-4,-6],light=sourceName(name)==='B',base=(role==='guitar'?78:74)-(light?(style==='doom'?14:7):0);
+      const shape=[0,3,5,2,0,-2,-4,-6],light=sourceName(name)==='B',base=(sectionPlans[name].lead===role?82:66)-(light?(style==='doom'?10:4):0);
       let at=0,groupAt=0;const strong=meter.groups.map(g=>{const t=groupAt;groupAt+=g*4/meter.d;return t;});
       for(const [i,n] of part.notes.entries()){
         if(!n.r){
@@ -427,7 +434,8 @@ AM.practiceComposer = (() => {
     }
     const grooveCache=new Map();
     function drumsPart(name,bar,bassLine){
-      const focus=roleFocus.drums,fill=bar===sizes[name]-1||name==='S'&&featured==='drums',light=sectionPlans[name].drums==='lightGroove',build=sectionPlans[name].drums==='build',hat=grade<2||light?'q':'e';
+      const focus=roleFocus.drums,fillFocus=/Fill|Sixteenths/.test(focus),boundary=bar===sizes[name]-1,
+        fill=boundary&&(sourceName(name)===(fillFocus?'A':'B')||grade>=2&&sourceName(name)==='C')||name==='S'&&featured==='drums'&&bar%2===1,light=sectionPlans[name].drums==='lightGroove',build=sectionPlans[name].drums==='build',hat=grade<2||light?'q':'e';
       const cacheKey=name+':'+(fill?'fill':bar===0?'entry':bar%2),finish=part=>{grooveCache.set(cacheKey,clone(part));return part;};
       if(grooveCache.has(cacheKey))return clone(grooveCache.get(cacheKey));
       if(focus==='stops'&&bar%4===2){
@@ -438,9 +446,14 @@ AM.practiceComposer = (() => {
         return finish({notes,bass});
       }
       if(fill){
-        const ds=R.generate({...profile.rhythms.drums,triplets:grade===5&&groove!=='compound'&&(groove==='swing'||focus==='tripletFill')},{rng,length:meter.len,dense:true,required:grade===0?'e':groove==='swing'||focus==='tripletFill'&&groove!=='compound'?'et':'s'});
-        const notes=ds.map((n,i)=>n.r?n:{...n,p:M.name(/tom|accentSixteenths/.test(focus)?[38,48,45,43][Math.floor(i/4)%4]:38),velocity:i%4===0?88:grade>=3?50:72,...((grade>=3||focus==='accentFill')&&i%4===0?{accent:1}:{})});
-        return finish({notes,bass:R.held('C2',time,true)});
+        const triplets=grade===5&&groove!=='compound'&&(groove==='swing'||focus==='tripletFill');
+        const fillBeats=meter.compound?1.5:Math.min(meter.len,grade<3||['doom','lounge','baroque'].includes(style)?1:2),lead=meter.len-fillBeats;
+        const grammar={...profile.rhythms.drums,shortest:grade===0?'e':fillFocus||grade>=3&&!['doom','lounge'].includes(style)?'s':'e',triplets};
+        const ds=R.generate(grammar,{rng,length:fillBeats,dense:true,required:triplets?'et':grammar.shortest});
+        const opening=R.generate({shortest:meter.d===8?'e':'q',dotted:grade>=4},{rng,length:lead});
+        const notes=[...opening.map(n=>({...n,p:'F#2',velocity:50})),...ds.map((n,i)=>n.r?n:{...n,p:M.name(/tom|accentSixteenths/.test(focus)?[38,48,45,43][Math.floor(i/2)%4]:38),velocity:i%4===0?86:grade>=3?50:68,...((grade>=3||focus==='accentFill')&&i%4===0?{accent:1}:{})})];
+        let at=0;const bass=[...opening.map(n=>{const t=at;at+=N.dur(n.d);return{...n,p:style==='doom'?(Math.floor(t)===2?'D2':'C2'):Math.floor(t)%2?'D2':'C2',velocity:78};}),...R.generate({shortest:'e',dotted:grade>=4},{rng,length:fillBeats}).map(n=>({r:1,d:n.d}))];
+        return finish({notes,bass,fillBeats});
       }
       const hatDur=meter.compound?'e':meter.d===8?'e':hat,count=Math.round(meter.len/N.dur(hatDur));
       const cymbal=grade>=4&&/cymbalChanges/.test(focus)?(name==='B'?51:42):42;
@@ -451,7 +464,7 @@ AM.practiceComposer = (() => {
       else if(contrasting&&bassLine.length>=4&&R.supports(bassLine,profile.rhythms.drums,meter.len))lower=bassLine.map(({d,r,tuplet,tupletEnd})=>({d,...(r?{r}:{}),...(tuplet?{tuplet}:{}),...(tupletEnd?{tupletEnd}:{})}));
       if(!light&&bar===0&&time==='4/4'){
         if(focus==='eighthKick'||focus==='kickVariation')lower=[{d:'e'},{d:'e'},{d:'q'},{d:'q'},{d:'q'}];
-        if(focus==='syncopatedKick')lower=[{d:'q'},{d:'q'},{d:'e'},{d:'e'},{d:'q'}];
+        if(focus==='syncopatedKick')lower=[{d:'e'},{d:'e'},{d:'q'},{d:'q'},{d:'q'}];
         if(focus==='dottedGroove')lower=[{d:'q.'},{d:'e'},{d:'q.'},{d:'e'}];
       }
       if(!light&&bar===0&&meter.d===8&&!meter.compound){
@@ -468,10 +481,10 @@ AM.practiceComposer = (() => {
       if(name.endsWith('′')&&bar<size-2)return remember(name,clone(sectionsByName[sourceName(name)][bar]));
       const guitar=guitarPart(h,name,bar);if(toneChanges)guitar.program=27;const keys=keysPart(h,name,bar),bass=riffBass(guitar,name,bar)??bassPart(h,name,bar,hs[bar+1]??hs[0]),drumPart=drumsPart(name,bar,bass);
       const closing=name===order.at(-1)&&bar===size-1;
-      if(closing){const final=harmony(0);const single=guitar.texture!=='power',tonic=lowest(final.rootPc,48),v=single?{p:spell(tonic),s:M.position(tonic,{maxFret:profile.maxFret}).s}:guitarPower(final);guitar.notes=R.held(v.p,time).map(n=>({...n,s:clone(v.s)}));keys.notes=R.held(sectionPlans[name].keys==='chords'?keyVoicing(final,70):spell(lowest(final.rootPc,60)),time);keys.bass=grade===0?R.held('C3',time,true):R.held(spell(lowest(final.rootPc,36)),time);delete keys.inner;bass.splice(0,bass.length,...R.held(spell(lowest(final.rootPc,28)),time).map(n=>({...n,s:M.position(M.midi(n.p),{tuning:M.BASS_TUNING,maxFret:profile.maxFret}).s})));h=final;drumPart.notes=R.held('C2',time,true);drumPart.bass=R.held('C2',time,true);drumPart.notes[0]={p:['C2','C#3'],d:meter.compound?'q.':meter.d===8?'e':'q',velocities:[90,65]};const used=N.dur(drumPart.notes[0].d);const tail=R.generate({shortest:'e',dotted:profile.rhythms.drums.dotted,triplets:false},{rng,length:meter.len-used});drumPart.notes.splice(1,drumPart.notes.length-1,...tail.map(n=>({r:1,d:n.d})));}
+      if(closing){delete drumPart.fillBeats;const final=harmony(0);const single=guitar.texture!=='power',tonic=lowest(final.rootPc,48),v=single?{p:spell(tonic),s:M.position(tonic,{maxFret:profile.maxFret}).s}:guitarPower(final);guitar.notes=R.held(v.p,time).map(n=>({...n,s:clone(v.s)}));keys.notes=R.held(sectionPlans[name].keys==='chords'?keyVoicing(final,70):spell(lowest(final.rootPc,60)),time);keys.bass=grade===0?R.held('C3',time,true):R.held(spell(lowest(final.rootPc,36)),time);delete keys.inner;bass.splice(0,bass.length,...R.held(spell(lowest(final.rootPc,28)),time).map(n=>({...n,s:M.position(M.midi(n.p),{tuning:M.BASS_TUNING,maxFret:profile.maxFret}).s})));h=final;drumPart.notes=R.held('C2',time,true);drumPart.bass=R.held('C2',time,true);drumPart.notes[0]={p:['C2','C#3'],d:meter.compound?'q.':meter.d===8?'e':'q',velocities:[90,65]};const used=N.dur(drumPart.notes[0].d);const tail=R.generate({shortest:'e',dotted:profile.rhythms.drums.dotted,triplets:false},{rng,length:meter.len-used});drumPart.notes.splice(1,drumPart.notes.length-1,...tail.map(n=>({r:1,d:n.d})));}
       if(/ties/.test(roleFocus.guitar+' '+roleFocus.keys)&&bar%4===1){for(const p of [guitar,keys]){const n=p.notes.find(n=>!n.r);if(n&&N.dur(n.d)>=1&&!n.d.endsWith('t')){const i=p.notes.indexOf(n),d=n.d==='w'?'h':n.d==='h'?'q':n.d==='q'?'e':null;if(d)p.notes.splice(i,1,{...n,d,tie:1},{...clone(n),d});}}}
       phraseExpression(guitar,'guitar',name,bar);phraseExpression(keys,'keys',name,bar);
-      return remember(name,{time,key,chord:[h,...(h.changes||[]).map(c=>c.h)].map(h=>h.chord).join('→'),harmony:{...h,roman:[h,...(h.changes||[]).map(c=>c.h)].map(h=>h.roman).join('→')},guitar,keys,bass,drumPart,swing,dynamics:{guitar:sectionPlans[name].guitar==='melody'?82:76,keys:sectionPlans[name].keys==='melody'?76:68,bass:sectionPlans[name].bass==='support'?70:78,drums:sectionPlans[name].drums==='lightGroove'?71:85},
+      return remember(name,{time,key,chord:[h,...(h.changes||[]).map(c=>c.h)].map(h=>h.chord).join('→'),harmony:{...h,roman:[h,...(h.changes||[]).map(c=>c.h)].map(h=>h.roman).join('→')},guitar,keys,bass,drumPart,swing,dynamics:{guitar:sectionPlans[name].lead==='guitar'?86:68,keys:sectionPlans[name].lead==='keys'?84:64,bass:sectionPlans[name].bass==='support'?70:78,drums:sectionPlans[name].drums==='lightGroove'?71:85},
         drums:N.events({...drumPart,time,swing}).map(n=>({t:n.t,midi:n.midi,dur:n.dur,velocity:n.velocity??85}))});
     });}
     if(grade>=4)for(const role of ['guitar','keys'])if(roleFocus[role]==='ties')for(const name of names){
@@ -506,11 +519,21 @@ AM.practiceComposer = (() => {
     }
     if(navigation){const ns=sectionsByName;if(blues){ns.B.at(-1).instruction='To Coda';ns[unit[2]].at(-1).instruction='D.C. al Coda';}else if(navigation==='Fine'){ns.A[0].sign='segno';ns.B.at(-1).instruction='D.S. al Fine / Fine';}else if(navigation==='DC'){ns.A.at(-1).instruction='To Coda';ns.B.at(-1).instruction='D.C. al Coda';}else{ns.B[0].sign='segno';ns.B.at(-1).instruction='To Coda';ns.C.at(-1).instruction='D.S. al Coda';}if(ns.O)ns.O[0].sign='coda';}
     let number=0,startBeat=0;const sections=order.map(name=>{const bars=clone(sectionsByName[name]).map(b=>({...b,number:++number})),section={name,character:clone(sectionPlans[name]),...(name.endsWith('′')?{variationOf:sourceName(name)}:{}),startBar:number-bars.length+1,startBeat,time,groups:meter.groups,bars};startBeat+=bars.length*meter.len;return section;});
-    const piece={id:`practice-${grade}-${style}-${seed}`,generatorVersion:5,grade,seed,style,requestedStyle:style,focus:roleFocus.guitar,roleFocus,contrasting,theme:contour,motifFamily:motifPlan.family,musicalAccent:accent,root,scale,harmonyScale,key,time,tempo,quarterTempo,swing,maxFret:profile.maxFret,form:sections.map(s=>s.name).join(''),bars:number,uniqueBars:names.reduce((n,name)=>n+sizes[name],0),featured,navigation,repeat:navigation?{from:1,to:unit.reduce((n,name)=>n+sizes[name],0),times:repeatCount}:null,
+    const piece={id:`practice-${grade}-${style}-${seed}`,generatorVersion:6,grade,seed,style,requestedStyle:style,focus:roleFocus.guitar,roleFocus,contrasting,theme:contour,motifFamily:motifPlan.family,musicalAccent:accent,rhythmicFigure,root,scale,harmonyScale,key,time,tempo,quarterTempo,swing,maxFret:profile.maxFret,form:sections.map(s=>s.name).join(''),bars:number,uniqueBars:names.reduce((n,name)=>n+sizes[name],0),featured,navigation,repeat:navigation?{from:1,to:unit.reduce((n,name)=>n+sizes[name],0),times:repeatCount}:null,
       ...(blues?{chorusBars:12,choruses:number/12}:{}),
       programs:{guitar:27,keys:0,bass:33,drums:0},sections};
-    AM.practicePhrasing.fitTempo(piece,profile.quarterTempo);
+    const fitted=AM.practicePhrasing.fitTempo(piece,tempoRange);
+    // Tempo is measured against the actual written parts before the final
+    // duration plan; a demanding part must not be sped up to meet a length.
+    planned=D.form({...formOptions,range:[Math.min(tempoRange[0],fitted.tempoCeiling),fitted.tempoCeiling],requested:piece.quarterTempo});
+    let finalNumber=0,finalBeat=0;
+    piece.sections=planned.order.map(name=>{const original=sections.find(s=>s.name===name),bars=clone(original.bars).map(b=>({...b,number:++finalNumber}));const section={...original,bars,startBar:finalNumber-bars.length+1,startBeat:finalBeat};finalBeat+=bars.length*meter.len;return section;});
+    piece.form=planned.order.join('');piece.bars=finalNumber;piece.quarterTempo=planned.tempo;piece.tempo=Math.round(planned.tempo/meter.q*100)/100;
+    if(piece.repeat)piece.repeat.times=planned.copies;
+    if(blues)piece.choruses=finalNumber/12;
+    piece.durationSeconds=D.seconds(piece);piece.targetDurationSeconds=profile.durationSeconds;
+
     return{piece,score:piece,bytes:AM.practiceGenerator.encode(piece)};
   }
-  return{styles,availableStyles,styleForGrade,styleGrade,instruments,profiles,generate,focusFor:(grade,seed,style)=>settings(grade,seed,style).roleFocus};
+  return{styles,availableStyles,styleForGrade,styleGrade,instruments,profiles,generate,selectionFor:(grade,seed,style)=>{const s=settings(grade,seed,style),motif=T.plan(grade,seed,style);return{focus:s.roleFocus,key:s.key,family:motif.family,rhythm:s.rhythmicFigure};},focusFor:(grade,seed,style)=>settings(grade,seed,style).roleFocus};
 })();

@@ -72,5 +72,10 @@ AM.practiceMotifs = (() => {
     }
     return degrees;
   }
-  return{families,accents,plan,contour};
+  function phrase(grade,bar,length){
+    const climax=length===8?5:2,arrival=bar===length-1,open=length===8&&bar===3;
+    return{stage:arrival?'arrival':open?'question':bar===climax?'climax':bar>climax?'resolution':bar===0?'statement':'continuation',
+      lift:bar===climax?(grade<2?1:2):bar>climax?0:bar%2,arrival};
+  }
+  return{families,accents,plan,contour,phrase};
 })();

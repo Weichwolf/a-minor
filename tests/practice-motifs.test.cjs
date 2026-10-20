@@ -90,7 +90,13 @@ test('advanced progressive accents keep a repeated, grouped figure in odd metres
 test('new motif metadata round-trips with the complete score and prior generator versions remain readable',()=>{
  const saved=setup(),restored=setup();
  for(const {piece:p} of accents){p.title='Motif';saved.bookmarks.toggle(p,'keys',saved.practice.link('keys',p.grade,p.seed,p.style));}
- const json=saved.bookmarks.exportJSON();assert.equal(restored.bookmarks.importJSON(json),7);assert.deepEqual(plain(saved.bookmarks.all()),plain(restored.bookmarks.all()));
+ const json=saved.bookmarks.exportJSON();assert(!saved.storage.get('a-minor-bookmarks').includes('\n'),'local snapshots omit formatting to conserve browser quota');assert(saved.storage.get('a-minor-bookmarks').length<1500000,'seven complete scores remain well below browser quota');assert.equal(restored.bookmarks.importJSON(json),7);assert.deepEqual(plain(saved.bookmarks.all()),plain(restored.bookmarks.all()));
  for(const field of ['motifFamily','musicalAccent']){const invalid=JSON.parse(json);invalid.bookmarks[0].piece[field]='unknown';assert.throws(()=>restored.bookmarks.importJSON(JSON.stringify(invalid)));}
- for(const version of [3,4]){const legacy=plain(accents[0].piece);legacy.generatorVersion=version;delete legacy.motifFamily;delete legacy.musicalAccent;assert.doesNotThrow(()=>restored.bookmarks.validatePiece(legacy));}
+ for(const version of [3,4,5]){const legacy=plain(accents[0].piece);legacy.generatorVersion=version;
+  if(version<5){delete legacy.motifFamily;delete legacy.musicalAccent;}
+  delete legacy.rhythmicFigure;delete legacy.durationSeconds;delete legacy.targetDurationSeconds;for(const s of legacy.sections)delete s.character.lead;
+  assert.doesNotThrow(()=>restored.bookmarks.validatePiece(legacy));
+ }
+ const profile=restored.practiceCurriculum[accents[0].piece.grade],target=profile.durationSeconds;
+ try{profile.durationSeconds+=10;assert.doesNotThrow(()=>restored.bookmarks.validatePiece(plain(accents[0].piece)),'saved target times survive future curriculum changes');}finally{profile.durationSeconds=target;}
 });

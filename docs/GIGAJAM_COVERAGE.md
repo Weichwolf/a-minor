@@ -45,18 +45,18 @@ Konkrete Belege: Debut **Fire It Up** zeigt rechte Piano-Dreiklänge und Achtelf
 
 ## Tempo und Form
 
-| Grade | Referenztempi, Viertel/min | Generatorbereich, Viertel/min | Gespielte Takte | Abschnitt |
-|---|---|---|---|---|
-| 0 | 85, 90, 93, 115, 128 | 85–128 | 12–16 | 4 Takte |
-| 1 | 85, 90, 93, 115, 128 | 85–128 | 16–24 | 4 Takte |
-| 2 | 85, 90, 93, 115, 128 | 85–128 | 16–32 | 4 Takte |
-| 3 | 85, 90, 93, 115, 128 | 85–128 | 24–48 | 4 oder 8 Takte |
-| 4 | 90, 91, 102, 120, 140 | 90–140 | 24–64 | 4 oder 8 Takte |
-| 5 | 80, 85, 110, 125, 146 | 80–146 | 32–64 | 4 oder 8 Takte |
+| Grade | Referenztempi, Viertel/min | Zielspieldauer seit Version 6 | Abschnitt |
+|---|---|---|---|
+| 0 | 85, 90, 93, 115, 128 | 0:45 | 4 Takte |
+| 1 | 85, 90, 93, 115, 128 | 1:05 | 4 Takte |
+| 2 | 85, 90, 93, 115, 128 | 1:30 | 4 Takte |
+| 3 | 85, 90, 93, 115, 128 | 2:00 | 4 oder 8 Takte |
+| 4 | 90, 91, 102, 120, 140 | 2:35 | 4 oder 8 Takte |
+| 5 | 80, 85, 110, 125, 146 | 3:15 | 4 oder 8 Takte |
 
-MIDI enthält teils gerundete Abweichungen: Island of Dreams 90,5 statt notierter 91, Brown Shoes 124,5 statt 125, Who Says it’s Raining 145,5 statt 146. Die Bereiche verwenden die notierten Werte. Der Nutzer kann langsamer beginnen, ohne dass der Generator die Zieltempi versteckt.
+MIDI enthält teils gerundete Abweichungen: Island of Dreams 90,5 statt notierter 91, Brown Shoes 124,5 statt 125, Who Says it’s Raining 145,5 statt 146. Die Felder `quarterTempo` und `referenceTempos` der Profile dokumentieren weiterhin die Referenz. Seit Version 6 verwendet die App eigene Stilbereiche und berücksichtigt die Belastung der tatsächlich komponierten Stimmen; sie überträgt den Rockbereich nicht pauschal auf Doom, Lounge oder Blues. Die [Tempo- und Dauerstaffelung](PRACTICE_PROGRESSION.md) dokumentiert diese Entscheidungen.
 
-Die Generatorlängen in dieser Tabelle sind kompakte Blattspielformen, keine Übernahme der vollständigen Originalabläufe. Ein Formblock wird höchstens dreimal vor dem Schlussteil gespielt. Grade 5 endet bei 64 gespielten Takten; die früheren bis zu 144 Takte entstanden teilweise aus elf Wiederholungen desselben kurzen Blocks. Diese automatische Verlängerung wurde zugunsten neuer musikalischer Leseinhalte entfernt. Längeres Spielen ist über die Player-Schleife möglich. Eine identische Ausdaueranforderung zu jedem Originalstück wird dadurch ausdrücklich nicht behauptet.
+Die Zielzeiten erlauben ungefähr zehn Prozent Abweichung und gelten ohne Einzählen oder zusätzliche Player-Schleifen. Die Taktzahl folgt aus Tempo, Taktart und vollständiger Form. Die frühere Grenze von drei Formdurchläufen beziehungsweise 64 gespielten Takten entfällt. Wiederkehrende Abschnitte und vollständige Blueschorusse schaffen die erforderliche Spieldauer; die notierte Partitur bleibt kompakt. Diese App-Staffelung übernimmt keine Originalabläufe und behauptet keine identische Ausdaueranforderung zu jedem Referenzstück.
 
 Take a Walk With Me notiert **Viertel = 85 in 12/8**. Vier große Pulse pro Takt entsprechen punktierter Viertel = 85 / 1,5 ≈ 56,67. Diese kleinere Zahl ist eine andere Tempoeinheit, keine Verlangsamung. MIDI verwendet das Vierteltempo; der Player zeigt die zu seiner Taktart passende Einheit. Progressive erweitert ab Grade 4 um 5/8 oder 7/8; das ist eine Stilerweiterung, kein Befund der Rocksammlung.
 

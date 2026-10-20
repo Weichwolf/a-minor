@@ -9,11 +9,12 @@ AM.bookmarks = (() => {
     if(!p||!Number.isInteger(p.grade)||p.grade<0||p.grade>5||!Number.isInteger(p.seed)||p.seed<0||p.seed>0xffffffff||
       !string(p.id,100)||!string(p.title,200)||!Object.hasOwn(M.SCALES,p.scale)||!Object.hasOwn(M.KEYS,p.key)||p.root!==p.key.replace(/m$/,'')||
       !Number.isFinite(p.tempo)||p.tempo<30||p.tempo>300||!Number.isInteger(p.maxFret)||p.maxFret<0||p.maxFret>24||
-      !Array.isArray(p.sections)||!p.sections.length||p.sections.length>64||!string(p.form,64))fail();
-    if(![3,4,5].includes(p.generatorVersion)||!AM.practiceComposer.styles.includes(p.style)||p.requestedStyle!==p.style||
+      !Array.isArray(p.sections)||!p.sections.length||p.sections.length>64||!string(p.form,128))fail();
+    if(![3,4,5,6].includes(p.generatorVersion)||!AM.practiceComposer.styles.includes(p.style)||p.requestedStyle!==p.style||
       AM.practiceComposer.instruments.some(role=>!AM.practiceCurriculum[p.grade].skills[role].includes(role==='guitar'?(guitarFocusAliases[p.roleFocus?.[role]]??p.roleFocus?.[role]):p.roleFocus?.[role])))fail();
+    if(p.generatorVersion>=6&&!['pulse','paired','space'].includes(p.rhythmicFigure))fail();
     if(p.generatorVersion>=4&&M.SCALES[p.harmonyScale]?.iv.length!==7)fail();
-    if(p.generatorVersion===5&&(!AM.practiceMotifs.families[p.style]?.some(f=>f.id===p.motifFamily)||p.musicalAccent!==null&&p.musicalAccent!==AM.practiceMotifs.accents[p.style]))fail();
+    if(p.generatorVersion>=5&&(!AM.practiceMotifs.families[p.style]?.some(f=>f.id===p.motifFamily)||p.musicalAccent!==null&&p.musicalAccent!==AM.practiceMotifs.accents[p.style]))fail();
     if(p.style==='blues'&&(p.harmonyScale!=='major'||p.chorusBars!==12||!Number.isInteger(p.choruses)||p.choruses<2||p.bars!==12*p.choruses))fail();
     if(p.id!==`practice-${p.grade}-${p.style}-${p.seed}`)fail();
     if(p.contrasting!==undefined&&typeof p.contrasting!=='boolean')fail();
@@ -44,6 +45,7 @@ AM.bookmarks = (() => {
       if(!string(s.name,4)||!/^(?:[ABC]′?|[SO])$/.test(s.name)||s.time!==p.time||!Array.isArray(s.bars)||![4,8].includes(s.bars.length)||s.startBar!==count+1||s.startBeat!==beat)fail();
       if(s.variationOf!==undefined&&(s.name!==s.variationOf+'′'||!names.has(s.variationOf)))fail();
       if(s.character!==undefined){const allowed={guitar:['riff','melody','arpeggio','power','chords','rest'],keys:['riff','melody','arpeggio','chords'],bass:['support','moving'],drums:['lightGroove','build','riffGroove']};for(const role of Object.keys(allowed))if(!allowed[role].includes(s.character?.[role]))fail();}
+      if(p.generatorVersion>=6&&!AM.practiceComposer.instruments.includes(s.character?.lead))fail();
       M.meter(s.time,s.groups);
       for(const b of s.bars){
         if(b.number!==++count||b.time!==p.time||b.key!==p.key||!string(b.chord,80))fail();
@@ -61,6 +63,7 @@ AM.bookmarks = (() => {
     }
     const unique=p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i).reduce((n,s)=>n+s.bars.length,0);
     if(count>256||count!==p.bars||unique!==p.uniqueBars||p.sections.map(s=>s.name).join('')!==p.form)fail();
+    if(p.generatorVersion>=6&&(!Number.isFinite(p.durationSeconds)||Math.abs(p.durationSeconds-AM.practiceDesign.seconds(p))>1e-7||!Number.isFinite(p.targetDurationSeconds)||p.targetDurationSeconds<=0||p.targetDurationSeconds>3600))fail();
     AM.practiceGenerator.encode(p);return p;
   }
   function validate(text){
@@ -79,7 +82,7 @@ AM.bookmarks = (() => {
   let loaded=false;
   function load(){if(loaded)return;loaded=true;storageInvalid=false;try{const text=localStorage.getItem(K);if(text){const data=JSON.parse(text);if(!(data?.schema===schema&&data.version===1))entries=validate(text);}}catch{entries=[];storageInvalid=true;}}
   function serialize(list=entries){return JSON.stringify({schema,version,bookmarks:list},null,2);}
-  function commit(list){if(storageInvalid)throw Error('Invalid stored bookmarks');localStorage.setItem(K,serialize(list));entries=list;}
+  function commit(list){if(storageInvalid)throw Error('Invalid stored bookmarks');localStorage.setItem(K,JSON.stringify({schema,version,bookmarks:list}));entries=list;}
   const all=()=>{load();return clone(entries);};
   const find=(piece,instrument)=>{load();return entries.find(e=>e.key===piece.id+':'+instrument);};
   const fromURL=url=>{load();const composition=href=>href.replace(/^#\/practice\/(guitar|keys|bass|drums)\//,'#/practice/');return clone(entries.find(e=>e.url===url)||entries.find(e=>composition(e.url)===composition(url))||null);};
@@ -92,11 +95,11 @@ AM.bookmarks = (() => {
   function importJSON(text){load();const incoming=validate(text),keys=new Set(entries.map(e=>e.key)),added=incoming.filter(e=>!keys.has(e.key));if(entries.length+added.length>500)fail();const invalid=storageInvalid;storageInvalid=false;try{commit([...entries,...added]);}catch(error){storageInvalid=invalid;throw error;}return added.length;}
   function exportJSON(){load();return serialize(entries.map(e=>({...e,analysis:AM.practiceInfo.describe(e.piece,e.instrument)})));}
   function exportCSV(base=location.href.split('#')[0]){
-    load();const fields=['id','seed','generatorVersion','instrument','grade','requestedStyle','style','root','scale','key','tempo','time','form','playedBars','writtenBars','sectionLengths','chords','melodicIntervalsSemitones','harmonicIntervalsSemitones','rhythms','focus','name','note','createdAt','url'];
+    load();const fields=['id','seed','generatorVersion','instrument','grade','requestedStyle','style','root','scale','key','tempo','time','durationSeconds','targetDurationSeconds','form','playedBars','writtenBars','sectionLengths','chords','melodicIntervalsSemitones','harmonicIntervalsSemitones','rhythms','focus','name','note','createdAt','url'];
     const cell=value=>{let s=String(value??'');if(/^[\s]*[=+\-@]/.test(s))s="'"+s;return '"'+s.replace(/"/g,'""')+'"';};
     return '\uFEFF'+[fields,...entries.map(e=>{
       const p=e.piece,d=AM.practiceInfo.describe(p,e.instrument);
-      return[p.id,p.seed,p.generatorVersion??1,e.instrument,p.grade,p.requestedStyle??'legacy',p.style??'legacy',p.root,p.scale,p.key,p.tempo,p.time,p.form,p.bars,p.uniqueBars,d.sectionLengths.join(' | '),d.progressions.join(' | '),d.melodicIntervals.map(x=>x.semitones).join(' | '),d.harmonicIntervals.join(' | '),d.rhythms.join(' | '),d.focus,e.name,e.note,e.createdAt,base+e.url];
+      return[p.id,p.seed,p.generatorVersion??1,e.instrument,p.grade,p.requestedStyle??'legacy',p.style??'legacy',p.root,p.scale,p.key,p.tempo,p.time,p.durationSeconds??AM.practiceDesign.seconds(p),p.targetDurationSeconds??'',p.form,p.bars,p.uniqueBars,d.sectionLengths.join(' | '),d.progressions.join(' | '),d.melodicIntervals.map(x=>x.semitones).join(' | '),d.harmonicIntervals.join(' | '),d.rhythms.join(' | '),d.focus,e.name,e.note,e.createdAt,base+e.url];
     })].map(row=>row.map(cell).join(',')).join('\r\n');
   }
   function download(contents,filename,type){const href=URL.createObjectURL(new Blob([contents],{type})),a=document.createElement('a');a.href=href;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(href),30000);}

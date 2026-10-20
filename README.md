@@ -14,7 +14,7 @@ Learn to read music and understand what you play. A bilingual (English/German), 
 
 Guitar uses P4 tuning (E2 A2 D3 G3 C4 F4), with power chords, riffs, melodies and single-note arpeggios. Keyboard parts fit 49 keys (C2–C6); bass uses standard E1 A1 D2 G2 tuning. Drum parts use General MIDI percussion.
 
-Each style has five original motif families, with occasional melodic and arrangement variations that follow the grade limits.
+Each style has five original motif families, with occasional melodic and arrangement variations that follow the grade limits. Target playing durations for Grades 0–5 are about **0:45, 1:05, 1:30, 2:00, 2:35 and 3:15**, within roughly 10%. Tempo, metre and all written returns count toward duration; changing playback tempo updates the displayed time. Tempos, grooves and fills follow both style and grade.
 
 Download complete MIDI files or a **single-page PDF directly**, without a print dialog. Bookmarks and preferences stay in browser storage; export JSON before clearing site data or changing browsers.
 

@@ -103,12 +103,26 @@ AM.practicePhrasing = (() => {
     const maxDensity={guitar:[1,2,2,2,4,4],keys:[1,2,2,2,4,4],bass:[2,2,2,2,4,4],drums:[2,4,4,4,4,4]};
     for(const role of ['guitar','keys','bass','drums']){
       let density=0,rapidLeaps=0,transitions=0,asynchronous=0,handAttacks=0;
-      const previous={};let offset=0;
+      const previous={},signature=Object.fromEntries(M.keyAcc(piece.key));let offset=0,peakDensity=0,accidentalCount=0,pitchedAttacks=0;
       for(const section of sections){
         const onsets=new Set(),sectionStart=offset;
         for(const bar of section.bars){
           const part=AM.practiceGenerator.part(bar,role),events=N.events({...part,time:piece.time,swing:piece.swing});
           const attacks=new Map();
+          if(role!=='drums'&&!part.rhythmSlash&&!part.percentRepeat)for(const voice of ['notes','bass','inner']){
+            const state=new Map();let held=[];
+            for(const n of part[voice]||[]){
+              if(!n.r)for(const pitch of [].concat(n.p)){
+                const parsed=M.parse(pitch),tag=parsed.letter+parsed.octave;
+                if(!held.includes(parsed.midi)){
+                  pitchedAttacks++;
+                  if(parsed.acc!==(state.get(tag)??signature[parsed.letter]??0))accidentalCount++;
+                  state.set(tag,parsed.acc);
+                }
+              }
+              held=n.tie&&!n.r?[].concat(n.p).map(M.midi):[];
+            }
+          }
           for(const e of events){
             onsets.add(offset+e.t);const tag=e.voice+':'+e.t;
             if(!attacks.has(tag))attacks.set(tag,{voice:e.voice,at:offset+e.t,pitches:[]});
@@ -116,7 +130,7 @@ AM.practicePhrasing = (() => {
           }
           for(const a of [...attacks.values()].sort((a,b)=>a.at-b.at)){
             const center=a.pitches.reduce((s,p)=>s+p,0)/a.pitches.length,last=previous[a.voice];
-            if(last){transitions++;if(role!=='drums'&&a.at-last.at<=.5+1e-9&&Math.abs(center-last.center)>7)rapidLeaps++;}
+            if(last&&a.at>last.at+1e-8){peakDensity=Math.max(peakDensity,1/(a.at-last.at));transitions++;if(role!=='drums'&&a.at-last.at<=.5+1e-9&&Math.abs(center-last.center)>7)rapidLeaps++;}
             previous[a.voice]={at:a.at,center};
           }
           if(role==='keys'){
@@ -129,22 +143,25 @@ AM.practicePhrasing = (() => {
         }
         density=Math.max(density,onsets.size/(offset-sectionStart));
       }
-      roles[role]={density,rapidLeapRatio:transitions?rapidLeaps/transitions:0,independence:handAttacks?asynchronous/handAttacks:0};
+      roles[role]={density,peakDensity,accidentalCount,accidentalRatio:pitchedAttacks?accidentalCount/pitchedAttacks:0,rapidLeapRatio:transitions?rapidLeaps/transitions:0,independence:handAttacks?asynchronous/handAttacks:0};
     }
     const tonality=Math.min(1,Math.abs(M.KEYS[piece.key])/Math.max(1,AM.practiceCurriculum[piece.grade].maxSignature));
     let combination=0;
     for(const [role,d] of Object.entries(roles)){
-      const axes=[role==='drums'?0:tonality,Math.min(1,d.density/maxDensity[role][piece.grade]),Math.min(1,d.rapidLeapRatio*[3,2.5,2,1.5,1.25,1][piece.grade]),d.independence].sort((a,b)=>b-a);
+      const reading=role==='drums'?0:Math.max(tonality,Math.min(1,d.accidentalRatio*[8,6,4,3,2,1.5][piece.grade]));
+      const axes=[reading,Math.min(1,d.density/maxDensity[role][piece.grade]),Math.min(1,d.rapidLeapRatio*[3,2.5,2,1.5,1.25,1][piece.grade]),d.independence].sort((a,b)=>b-a);
       combination=Math.max(combination,axes[0]+axes[1]);
     }
     return{roles,tonality,combination};
   }
   function fitTempo(piece,range){
     const measured=demands(piece),requested=piece.quarterTempo;
-    // Preserve the full reference range for uncomplicated material. When two
-    // demands coincide, reserve tempo headroom instead of multiplying demands.
+    // Keep uncomplicated material within its style range. Reserve tempo
+    // headroom when reading, movement and coordination demands coincide.
     const headroom=Math.max(0,measured.combination-1.4)/.6;
-    const ceiling=Math.round(range[1]-(range[1]-range[0])*.55*headroom);
+    const burstLimits={guitar:[2,3.8,4.2,4.8,6,6.8],keys:[2,3.8,4.2,4.8,6,6.8],bass:[3,3.8,4.2,4.8,5.4,6],drums:[3.5,6,6.5,7,8,9]};
+    const speedCeiling=Math.min(...Object.entries(measured.roles).map(([role,d])=>d.peakDensity?60*burstLimits[role][piece.grade]/d.peakDensity:Infinity));
+    const ceiling=Math.floor(Math.min(range[1]-(range[1]-range[0])*.55*headroom,speedCeiling));
     piece.quarterTempo=Math.min(requested,ceiling);
     piece.tempo=Math.round(piece.quarterTempo/M.meter(piece.time).q*100)/100;
     return{...measured,requestedTempo:requested,tempoCeiling:ceiling};

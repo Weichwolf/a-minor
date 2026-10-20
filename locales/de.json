@@ -3766,6 +3766,7 @@
     "styleChoice": "Sieben Stile · wechselnde Formen",
     "style": "Stil",
     "arrangement": "Besetzung",
+    "pieceDuration": "ca. {duration} min",
     "pieceForm": "Form {form} · {written} notierte / {played} gespielte Takte",
     "pieceSentence": "Ein {style}-Stück in {root} {scale}, {time}, Form {form}. Akkordfolgen: {chords}; Intervalle: {intervals}; Rhythmus: {rhythm}. {focus}",
     "bookmarks": "Bookmarks",

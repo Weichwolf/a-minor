@@ -24,6 +24,7 @@ const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.
     await require('./practice-sections-browser.cjs')(browser,base);
     await require('./practice-selection-browser.cjs')(browser,base);
     await require('./practice-motifs-browser.cjs')(browser,base);
+    await require('./practice-design-browser.cjs')(browser,base);
     if(practiceOnly)return;
     const context = await browser.newContext(), page = await context.newPage(), errors=[];
     page.on('pageerror',e => errors.push(e.message)); page.on('dialog',() => { throw Error('Unexpected dialog'); });
