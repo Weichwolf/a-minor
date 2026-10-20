@@ -70,7 +70,16 @@
           "dotted": false,
           "triplets": false
         }
-      }
+      },
+      "maxSignature": 0,
+      "styles": [
+        "rock",
+        "doom"
+      ],
+      "scales": [
+        "major",
+        "aeolian"
+      ]
     },
     {
       "grade": 1,
@@ -139,7 +148,18 @@
           "dotted": false,
           "triplets": false
         }
-      }
+      },
+      "maxSignature": 1,
+      "styles": [
+        "rock",
+        "doom",
+        "blues"
+      ],
+      "scales": [
+        "major",
+        "aeolian",
+        "minorPentatonic"
+      ]
     },
     {
       "grade": 2,
@@ -208,7 +228,22 @@
           "dotted": false,
           "triplets": false
         }
-      }
+      },
+      "maxSignature": 2,
+      "styles": [
+        "rock",
+        "doom",
+        "blues",
+        "gothic",
+        "baroque"
+      ],
+      "scales": [
+        "major",
+        "aeolian",
+        "minorPentatonic",
+        "minorBlues",
+        "mixolydian"
+      ]
     },
     {
       "grade": 3,
@@ -279,7 +314,26 @@
           "dotted": false,
           "triplets": false
         }
-      }
+      },
+      "maxSignature": 3,
+      "styles": [
+        "rock",
+        "doom",
+        "blues",
+        "gothic",
+        "baroque",
+        "lounge"
+      ],
+      "scales": [
+        "major",
+        "aeolian",
+        "minorPentatonic",
+        "minorBlues",
+        "mixolydian",
+        "dorian",
+        "harmonicMinor",
+        "majorPentatonic"
+      ]
     },
     {
       "grade": 4,
@@ -353,7 +407,29 @@
           "dotted": true,
           "triplets": false
         }
-      }
+      },
+      "maxSignature": 4,
+      "styles": [
+        "rock",
+        "doom",
+        "blues",
+        "gothic",
+        "baroque",
+        "lounge",
+        "progressive"
+      ],
+      "scales": [
+        "major",
+        "aeolian",
+        "minorPentatonic",
+        "minorBlues",
+        "mixolydian",
+        "dorian",
+        "harmonicMinor",
+        "majorPentatonic",
+        "phrygian",
+        "majorBlues"
+      ]
     },
     {
       "grade": 5,
@@ -434,7 +510,31 @@
           "dotted": true,
           "triplets": true
         }
-      }
+      },
+      "maxSignature": 6,
+      "styles": [
+        "rock",
+        "doom",
+        "blues",
+        "gothic",
+        "baroque",
+        "lounge",
+        "progressive"
+      ],
+      "scales": [
+        "major",
+        "aeolian",
+        "minorPentatonic",
+        "minorBlues",
+        "mixolydian",
+        "dorian",
+        "harmonicMinor",
+        "majorPentatonic",
+        "phrygian",
+        "majorBlues",
+        "lydian"
+      ]
     }
-  ]
+  ],
+  "progression": "App curriculum: cumulative keys, melodic scales and styles; new key-signature groups receive half the selections. Instrument skills retain the local reference limits."
 }

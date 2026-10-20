@@ -10,8 +10,11 @@ AM.bookmarks = (() => {
       !string(p.id,100)||!string(p.title,200)||!Object.hasOwn(M.SCALES,p.scale)||!Object.hasOwn(M.KEYS,p.key)||p.root!==p.key.replace(/m$/,'')||
       !Number.isFinite(p.tempo)||p.tempo<30||p.tempo>300||!Number.isInteger(p.maxFret)||p.maxFret<0||p.maxFret>24||
       !Array.isArray(p.sections)||!p.sections.length||p.sections.length>64||!string(p.form,64))fail();
-    if(p.generatorVersion!==3||!AM.practiceComposer.styles.includes(p.style)||p.requestedStyle!==p.style||
+    if(![3,4,5].includes(p.generatorVersion)||!AM.practiceComposer.styles.includes(p.style)||p.requestedStyle!==p.style||
       AM.practiceComposer.instruments.some(role=>!AM.practiceCurriculum[p.grade].skills[role].includes(role==='guitar'?(guitarFocusAliases[p.roleFocus?.[role]]??p.roleFocus?.[role]):p.roleFocus?.[role])))fail();
+    if(p.generatorVersion>=4&&M.SCALES[p.harmonyScale]?.iv.length!==7)fail();
+    if(p.generatorVersion===5&&(!AM.practiceMotifs.families[p.style]?.some(f=>f.id===p.motifFamily)||p.musicalAccent!==null&&p.musicalAccent!==AM.practiceMotifs.accents[p.style]))fail();
+    if(p.style==='blues'&&(p.harmonyScale!=='major'||p.chorusBars!==12||!Number.isInteger(p.choruses)||p.choruses<2||p.bars!==12*p.choruses))fail();
     if(p.id!==`practice-${p.grade}-${p.style}-${p.seed}`)fail();
     if(p.contrasting!==undefined&&typeof p.contrasting!=='boolean')fail();
     if(p.theme!==undefined&&(!Array.isArray(p.theme)||p.theme.length!==8||p.theme.some(n=>!Number.isInteger(n)||n<0||n>6)))fail();

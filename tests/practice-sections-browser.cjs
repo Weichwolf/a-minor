@@ -4,7 +4,7 @@ module.exports=async(browser,base)=>{
  page.on('pageerror',e=>errors.push(e.message));
  try{
   for(const instrument of ['guitar','keys']){
-   await page.goto(base+`/#/practice/${instrument}/4/progressive/1`);await page.waitForSelector('#repertoire-piece[data-ready]');
+   await page.goto(base+`/#/practice/${instrument}/4/progressive/0`);await page.waitForSelector('#repertoire-piece[data-ready]');
    const original=await page.evaluate(()=>({piece:AM.repertoire.current.piece,bytes:[...AM.repertoire.current.bytes]}));
    assert(original.piece.sections.some(s=>s.variationOf==='A'));assert(original.piece.uniqueBars>=20);
    assert((await page.locator('.practice-description').innerText()).includes('variierte Rückkehr von A'));

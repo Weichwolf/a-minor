@@ -13,7 +13,7 @@ test('every selected syncopation focus has a written attack sustained across a s
   const has=p.sections.some(s=>s.bars.some(b=>N.events(G.part(b,role)).some(e=>!isStrong(e.t)&&strong.some(t=>t>e.t+1e-8&&t<e.t+e.dur-1e-8))));
   assert(has,`${p.id}/${role}: syncope is present in the music`);covered.add(role+'/'+p.style);
  }
- assert.equal(covered.size,18,'all three pitched instruments in all six styles');
+ assert.equal(covered.size,3*C.styles.length,'all three pitched instruments in every style');
 });
 test('a seventh-arpeggio focus actually plays a seventh as a single note within the chord figure',()=>{
  const covered=new Set();
@@ -28,12 +28,12 @@ test('a seventh-arpeggio focus actually plays a seventh as a single note within 
   }));
   assert(has,`${p.id}: root, third and seventh are heard in a broken chord`);covered.add(p.style);
  }
- assert.equal(covered.size,6);
+ assert.equal(covered.size,C.styles.length);
 });
 
 test('shuffle focuses sound unequal eighth pairs and drum stops contain a shared pause before the ending',()=>{
  const coverage=new Set();
- for(const style of C.styles)for(const grade of [0,5])for(let seed=0;seed<100;seed++){
+ for(const style of C.styles)for(const grade of [0,5].filter(g=>C.availableStyles(g).includes(style)))for(let seed=0;seed<100;seed++){
   const focuses=C.focusFor(grade,seed,style),roles=C.instruments.filter(role=>/shuffleRiff|shuffleBass|swingComping|stops/.test(focuses[role]));if(!roles.length)continue;
   const p=C.generate(grade,seed,style).piece,bars=p.sections.flatMap(s=>s.bars);
   for(const role of roles){
@@ -52,12 +52,12 @@ test('shuffle focuses sound unequal eighth pairs and drum stops contain a shared
    }
   }
  }
- for(const style of C.styles)for(const focus of ['stops','shuffleRiff','shuffleBass','swingComping'])assert(coverage.has(style+'/'+focus),style+'/'+focus);
+ for(const style of C.styles)for(const focus of [...(C.availableStyles(0).includes(style)?['stops']:[]),'shuffleRiff','shuffleBass','swingComping'])assert(coverage.has(style+'/'+focus),style+'/'+focus);
 });
 
 test('chromatic colour resolves a real non-scale neighbour, and kick variation includes an offbeat bass drum',()=>{
  let colours=0,kicks=0;
- for(const style of C.styles)for(const grade of [2,3])for(let seed=0;seed<60;seed++){
+ for(const style of C.styles)for(const grade of [2,3].filter(g=>C.availableStyles(g).includes(style)))for(let seed=0;seed<60;seed++){
   const focus=C.focusFor(grade,seed,style);if(focus.keys!=='chromaticColour'&&focus.drums!=='kickVariation')continue;
   const p=C.generate(grade,seed,style).piece,bars=p.sections.flatMap(s=>s.bars);
   if(focus.keys==='chromaticColour'){

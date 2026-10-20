@@ -1,14 +1,15 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),setup=require('./practice-fixture.cjs'),{plain}=setup;
 const A=setup(),{practiceComposer:C,practiceGenerator:G,music:M,notation:N}=A;
-const pool=[];for(let grade=0;grade<6;grade++)for(const style of C.styles)for(let seed=0;seed<12;seed++)pool.push(C.generate(grade,seed,style));
-test('current generator is deterministic; curriculum matches all four source roles and six styles',()=>{
- assert.deepEqual(plain(C.styles),['rock','doom','gothic','progressive','baroque','lounge']);assert.deepEqual(plain(C.instruments),['guitar','keys','bass','drums']);
+const pool=[];for(let grade=0;grade<6;grade++)for(const style of C.availableStyles(grade))for(let seed=0;seed<12;seed++)pool.push(C.generate(grade,seed,style));
+test('current generator is deterministic; curriculum matches all four source roles and seven graded styles',()=>{
+ assert.deepEqual(plain(C.styles),['rock','doom','blues','gothic','baroque','lounge','progressive']);assert.deepEqual(plain(C.instruments),['guitar','keys','bass','drums']);
  assert.deepEqual(plain(C.profiles),JSON.parse(fs.readFileSync('data/practice-curriculum.json')).profiles);
+ for(const {piece} of pool){assert(C.profiles[piece.grade].scales.includes(piece.scale));assert(Math.abs(M.KEYS[piece.key])<=C.profiles[piece.grade].maxSignature);}
  for(const {piece,bytes} of pool.filter((_,i)=>i%12===0)){const b=C.generate(piece.grade,piece.seed,piece.style);assert.deepEqual(plain(b.piece),plain(piece));assert.deepEqual(b.bytes,bytes);}
  for(const args of [[-1,1],[6,1],[1.5,1],[0,-1],[0,2**32],[0,NaN],[0,1,'mixed'],[0,1,'cinematic']])assert.throws(()=>C.generate(...args));
 });
 test('most pieces contrast related guitar and keyboard sections within every grade and style',()=>{
- for(let grade=0;grade<6;grade++)for(const style of C.styles){
+ for(let grade=0;grade<6;grade++)for(const style of C.availableStyles(grade)){
   const pieces=pool.map(x=>x.piece).filter(p=>p.grade===grade&&p.style===style),mixed=pieces.filter(p=>p.contrasting);
   assert(mixed.length>=7,`${grade}/${style}: contrasting sections are the norm`);
   assert(pieces.some(p=>p.sections.some(s=>s.bars.some(b=>b.guitar.notes.some(n=>!n.r&&Array.isArray(n.p))))));
@@ -43,7 +44,7 @@ test('Grade 0 melodies keep one small register across the whole section, includi
   const pitches=section.bars.flatMap(b=>b[role].notes).filter(n=>!n.r).map(n=>M.midi(n.p));
   assert(Math.max(...pitches)-Math.min(...pitches)<=7,`${p.id}/${role}/${section.name}: phrase fits a fifth`);checked++;
  }
- assert(checked>100);
+ assert(checked>30);
 });
 test('bass root-reading stays on roots; quarter focus has a quarter pulse and arpeggios include thirds',()=>{
  let roots=0,arpeggios=0;
@@ -62,7 +63,7 @@ test('bass root-reading stays on roots; quarter focus has a quarter pulse and ar
    arpeggios++;assert(p.sections.some(s=>s.bars.some(b=>b.bass.some(n=>!n.r&&M.pc(M.midi(n.p))===b.harmony.pcs[1]))),`${p.id}: arpeggio includes the chord third`);
   }
  }
- assert(roots>50);assert(arpeggios>5);
+ assert(roots>20);assert(arpeggios>5);
 });
 test('drum focus is visible in the actual attacks and notation, not only in its label',()=>{
  let checked=0;
@@ -179,11 +180,12 @@ test('bookmarks retain section characters and varied returns and reject invalid 
 
 test('barres can cover higher frets but cannot cover sounding lower or open strings',()=>{assert.equal(M.fingerCount([1,3,2,3,3,1]),4);assert.equal(M.fingerCount([1,1,1,1,1,1]),1);assert.equal(M.fingerCount([1,0,1,null,null,null]),2);assert.equal(M.fingerCount([1,2,3,4,5,null]),5);});
 
-test('beginner F-sharp minor power chords use a playable plagal preparation instead of a distant dominant register',()=>{
- const p=C.generate(0,20261015,'gothic').piece;assert.equal(p.key,'F#m');
- const end=p.sections.at(-1).bars;assert.equal(end.at(-2).harmony.degree,3);assert.equal(end.at(-1).harmony.degree,0);
- for(const section of p.sections){const roots=section.bars.flatMap(b=>b.guitar.notes).filter(n=>Array.isArray(n.p)).map(n=>M.midi(n.p[0]));
-  for(let i=1;i<roots.length;i++)assert(Math.abs(roots[i]-roots[i-1])<=12,'power-chord phrase stays within an octave per move');
+test('beginner power-chord phrases use only the initial keys and remain close in register',()=>{
+ for(const {piece:p} of pool.filter(({piece})=>piece.grade===0)){
+  assert(['C','Am'].includes(p.key));
+  for(const section of p.sections){const roots=section.bars.flatMap(b=>b.guitar.notes).filter(n=>Array.isArray(n.p)).map(n=>M.midi(n.p[0]));
+   for(let i=1;i<roots.length;i++)assert(Math.abs(roots[i]-roots[i-1])<=12,'power-chord phrase stays within an octave per move');
+  }
  }
 });
 
@@ -191,8 +193,8 @@ test('modal seventh colours and chord spelling agree with their actual intervals
  let modal=0;
  for(const {piece:p} of pool)for(const s of p.sections)for(const b of s.bars){
   for(const h of [b.harmony,...(b.harmony.changes||[]).map(c=>c.h)])if(h.pcs.length===4&&h.quality!=='m'){
-   const seventh=M.pc(h.pcs[3]-h.rootPc),source=M.scalePcs(p.root,p.scale)[(h.degree+6)%7];
-   assert.equal(seventh,M.pc(source-h.rootPc)===10?10:11,p.id+': mode-aware seventh');
+   const seventh=M.pc(h.pcs[3]-h.rootPc),source=M.scalePcs(p.root,p.harmonyScale)[(h.degree+6)%7];
+   assert.equal(seventh,p.style==='blues'||M.pc(source-h.rootPc)===10?10:11,p.id+': mode-aware seventh');
    assert(h.chord.includes(seventh===11?'maj7':'7'));modal++;
    if(h.quality==='+'){assert(h.chord.includes('#5'));}
   }
@@ -207,7 +209,7 @@ test('modal seventh colours and chord spelling agree with their actual intervals
 });
 
 test('a held keyboard middle voice does not push the melody onto an accidental chromatic pitch',()=>{
- const p=C.generate(5,20261523,'lounge').piece;let checked=0;
+ const p=pool.find(({piece:p})=>p.style==='lounge'&&p.sections.some(s=>s.bars.some(b=>b.keys.inner))).piece;let checked=0;
  for(const s of p.sections)for(const b of s.bars)if(b.keys.inner){
   const allowed=new Set([...M.scalePcs(p.root,p.scale),...b.harmony.pcs,...(b.harmony.changes||[]).flatMap(c=>c.h.pcs)]);
   for(const n of b.keys.notes)if(!n.r){assert(allowed.has(M.pc(M.midi(n.p))),p.id+': harmonic melody above the inner voice');checked++;}
@@ -223,7 +225,7 @@ test('bass arpeggios include the actual chord fifth and return from their peak b
   }
  }
  assert(diminished>0);
- const p=C.generate(3,20261318,'gothic').piece;
+ const p=pool.find(({piece:p})=>p.grade===3&&p.style==='gothic'&&p.roleFocus.bass==='arpeggioBass').piece;
  const notes=p.sections.flatMap(s=>s.bars.flatMap(b=>b.bass)).filter(n=>!n.r);
  assert(Math.max(...notes.slice(1).map((n,i)=>Math.abs(M.midi(n.p)-M.midi(notes[i].p))))<=12,'the former 22-semitone jump is avoided');
 });

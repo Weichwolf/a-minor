@@ -3908,7 +3908,13 @@
     "instrument": "Instrument",
     "pieceDrumsSentence": "A {style} groove in {time}, form {form}, in the harmonic context of {root} {scale}. Rhythm: {rhythm}. {focus}",
     "guitarClean": "Clean",
-    "guitarDrive": "Drive"
+    "guitarDrive": "Drive",
+    "style_blues": "Blues",
+    "styleFromGrade": "from Grade {grade}",
+    "scale_minorBlues": "Minor blues scale",
+    "scale_majorBlues": "Major blues scale",
+    "scale_majorPentatonic": "Major pentatonic",
+    "pieceBluesSentence": "{choruses} choruses of 12-bar blues; the melody scale and band harmony are handled separately."
   },
   "book": {
     "book": {

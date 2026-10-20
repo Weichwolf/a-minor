@@ -14,23 +14,35 @@ module.exports=async(browser,base)=>{
   await page.goto(base+'/#/practice');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),4);
   assert.deepEqual(await page.locator('nav.top a:not(.brand)').allTextContents(),['Theorie','Praxis','Griffbrett','MIDI','Bookmarks']);
   await page.locator('.track[href="#/practice/keys"]').click();await ready();assert.equal(await page.inputValue('#rep-arrangement'),'solo');
-  const styles=await page.evaluate(()=>AM.practiceComposer.styles);
+  const stylesByGrade=await page.evaluate(()=>AM.practiceComposer.profiles.map(p=>p.styles));
   for(const language of ['de','en']){
    await page.selectOption('#language',language);
-   for(const instrument of ['guitar','keys','bass','drums'])for(let grade=0;grade<6;grade++)for(const style of styles){
+   for(const instrument of ['guitar','keys','bass','drums'])for(let grade=0;grade<6;grade++)for(const style of stylesByGrade[grade]){
     await go(instrument,grade,100+grade,style);
     const p=await page.evaluate(()=>AM.repertoire.current.piece),unique=p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i);
     assert.equal(await page.locator('.rep-section').count(),unique.length);assert.equal(await page.locator('.rep-section .measure').count(),p.uniqueBars);
     assert.deepEqual(await page.locator('.rep-section .measure').allTextContents(),Array.from({length:p.uniqueBars},(_,i)=>String(i+1)));
     assert.deepEqual(await page.locator('#rep-section option').evaluateAll(es=>es.slice(1).map(e=>e.value)),unique.map(s=>String(p.sections.findIndex(x=>x.name===s.name))));
     assert(!/undefined|NaN/.test(await page.locator('main').innerText()));assert.equal(await page.locator('[data-done],form[data-log],.check,.rep-log,[data-aid],.practice-info').count(),0);
-    assert.equal(await page.locator('.practice-description').count(),1);assert.equal(await page.locator('#practice-grade option').count(),6);assert.equal(await page.locator('#practice-style option').count(),6);
+    assert.equal(await page.locator('.practice-description').count(),1);assert.equal(await page.locator('#practice-grade option').count(),6);assert.equal(await page.locator('#practice-style option').count(),7);assert.equal(await page.locator('#practice-style option:enabled').count(),stylesByGrade[grade].length);assert.equal(await page.inputValue('#practice-style'),style);assert.equal(p.style,style);
     const id='0x'+(100+grade).toString(16).padStart(8,'0').toUpperCase();assert.equal(new URL(page.url()).hash.split('/').at(-1),id);assert((await page.title()).includes(id));
     assert(await page.locator('#practice-controls').evaluate(e=>!!e.closest('.rep-player')&&e.previousElementSibling?.getAttribute('href')==='#/midi'));
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    }
   }
-  await page.selectOption('#language','de');await go('keys',3,17);
+  await page.selectOption('#language','de');
+  await go('keys',4,31,'progressive');await page.selectOption('#practice-grade','3');await page.waitForFunction(()=>AM.repertoire.current?.piece.grade===3);await ready();
+  assert.equal(await page.inputValue('#practice-style'),'rock');assert.match(await page.locator('#practice-style option[value=progressive]').innerText(),/ab Grade 4/);assert(await page.locator('#practice-style option[value=progressive]').evaluate(e=>e.disabled));
+  await go('keys',0,31,'blues');assert.equal(await page.inputValue('#practice-style'),'rock');assert(new URL(page.url()).hash.includes('/0/rock/'));
+  await page.evaluate(()=>{const p=AM.practiceComposer.generate(0,91,'rock').piece;p.generatorVersion=3;p.style=p.requestedStyle='gothic';p.id='practice-0-gothic-91';p.title='Archived Gothic';delete p.harmonyScale;AM.bookmarks.toggle(p,'keys',AM.practice.link('keys',0,91,'gothic'));window.legacyNotes=JSON.stringify(p.sections);});
+  await page.goto(base+'/#/practice/keys/0/gothic/91');await ready();assert.equal(await page.inputValue('#practice-style'),'gothic');assert.equal(await page.evaluate(()=>JSON.stringify(AM.repertoire.current.piece.sections)===legacyNotes),true);
+  await page.click('#practice-new');await page.waitForFunction(()=>AM.repertoire.current?.piece.style==='rock');await ready();await page.evaluate(()=>AM.bookmarks.remove('practice-0-gothic-91:keys'));
+  assert.equal(pdfRequests.length,0,'PDF assets stay unloaded until a PDF is requested');
+  for(const [grade,seed] of [[1,11],[3,11],[5,6],[5,11]]){
+   await go('keys',grade,seed,'blues');assert((await page.locator('.practice-description').innerText()).includes('12-Takt-Blues'));
+   const pending=page.waitForEvent('download');await page.click('#rep-pdf');const file=await pending,pdf=fs.readFileSync(await file.path());assert.equal((pdf.toString('latin1').match(/\/Type\s*\/Page\b/g)||[]).length,1);await file.saveAs(`test-results/practice-blues-grade${grade}-seed${seed}.pdf`);
+  }
+  await go('keys',3,17);
   const original=await page.evaluate(()=>({url:location.hash,bytes:[...AM.repertoire.current.bytes],id:AM.repertoire.current.piece.id}));
   await page.click('#piece-bookmark');assert.equal(await page.getAttribute('#piece-bookmark','aria-pressed'),'true');
   await page.reload();await ready();assert.deepEqual(await page.evaluate(()=>[...AM.repertoire.current.bytes]),original.bytes);assert.equal(await page.getAttribute('#piece-bookmark','aria-pressed'),'true');
@@ -75,8 +87,8 @@ module.exports=async(browser,base)=>{
    await go(instrument,grade,900+grade,'progressive');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
    assert((await page.locator('.rep-section .svg').evaluateAll(es=>es.map(e=>e.querySelectorAll('.measure').length))).every(n=>n>0&&n<=4));
   }
-  await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});assert.equal(pdfRequests.length,0,'PDF assets are lazy');
-  await page.route('**/assets/vendor/pdfmake/pdfmake.min.js',r=>r.abort());await page.click('#rep-pdf');await page.waitForFunction(()=>!document.querySelector('#rep-pdf').disabled&&document.querySelector('.rep-status').textContent.includes('Bitte erneut versuchen'));await page.unroute('**/assets/vendor/pdfmake/pdfmake.min.js');
+  await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});assert(pdfRequests.length>0,'blues PDF checks loaded the PDF assets');
+  await page.reload();await ready();await page.route('**/assets/vendor/pdfmake/pdfmake.min.js',r=>r.abort());await page.click('#rep-pdf');await page.waitForFunction(()=>!document.querySelector('#rep-pdf').disabled&&document.querySelector('.rep-status').textContent.includes('Bitte erneut versuchen'));await page.unroute('**/assets/vendor/pdfmake/pdfmake.min.js');
   await page.setViewportSize({width:1920,height:1200});
   for(const language of ['de','en']){
    await page.selectOption('#language',language);
@@ -87,6 +99,6 @@ module.exports=async(browser,base)=>{
    }
   }
   await go('keys',5,11);await page.screenshot({path:'test-results/practice-desktop.png',fullPage:true});assert.equal(popups,0);assert.deepEqual(errors,[]);
-  console.log('PASS 288 style/grade/instrument/language combinations, immutable bookmarks with JSON/CSV backup and import, MIDI persistence/reconnect, solo/band playback, variable forms, four-bar rows and 48 single-page direct PDF downloads');
+  console.log('PASS 240 available style/grade/instrument/language combinations, grade-dependent styles and legacy scores, four blues PDFs, immutable bookmarks with JSON/CSV backup and import, MIDI persistence/reconnect, solo/band playback, variable forms, four-bar rows and 48 single-page direct PDF downloads');
  }finally{await context.close();}
 };

@@ -131,7 +131,7 @@ AM.practicePhrasing = (() => {
       }
       roles[role]={density,rapidLeapRatio:transitions?rapidLeaps/transitions:0,independence:handAttacks?asynchronous/handAttacks:0};
     }
-    const tonality=Math.min(1,Math.abs(M.KEYS[piece.key])/[3,4,4,5,6,6][piece.grade]);
+    const tonality=Math.min(1,Math.abs(M.KEYS[piece.key])/Math.max(1,AM.practiceCurriculum[piece.grade].maxSignature));
     let combination=0;
     for(const [role,d] of Object.entries(roles)){
       const axes=[role==='drums'?0:tonality,Math.min(1,d.density/maxDensity[role][piece.grade]),Math.min(1,d.rapidLeapRatio*[3,2.5,2,1.5,1.25,1][piece.grade]),d.independence].sort((a,b)=>b-a);

@@ -2,7 +2,9 @@
 
 Die aktuelle Prüfung betrifft den Generator für vier Instrumente. Der ältere Bericht darunter dokumentiert den archivierten Kurs und das frühere Repertoire; er ist kein Nachweis für den neuen Generator.
 
-`node scripts/review-practice.cjs` erzeugt reproduzierbar 36 Stücke (sechs Grades × sechs Stile) mit allen vier Parts und schreibt die Befunde nach `test-results/practice-review.json`. Seeds, Tonart, Tempo, Harmonik, Form, tatsächliche Notenwerte, vollständige Stimmen der unterschiedlichen Abschnitte, Stückbeschreibungen und Bewegungskennzahlen stehen im Bericht. Die Kennzahlen sind Suchhilfen für die Partiturbeurteilung: Ein großer Tonhöhensprung kann auf benachbarten Saiten leicht sein, eine kleine Tonbewegung einen Lagenwechsel verlangen. Gemittelte Akkordhöhen sind keine realen Melodietöne. Bundmittelwerte ignorieren die Entlastung durch offene Saiten und Pausen. Der Bericht behauptet deshalb keine automatische Musikalitäts- oder Schwierigkeitsbewertung.
+`node scripts/review-practice.cjs` erzeugt seit Generatorversion 4 reproduzierbar 30 Stücke (alle freigegebenen Stil-/Grade-Kombinationen) mit allen vier Parts und schreibt die Befunde nach `test-results/practice-review.json`. Seeds, Tonart, Tempo, Harmonik, Form, tatsächliche Notenwerte, vollständige Stimmen der unterschiedlichen Abschnitte, Stückbeschreibungen und Bewegungskennzahlen stehen im Bericht. Die Kennzahlen sind Suchhilfen für die Partiturbeurteilung: Ein großer Tonhöhensprung kann auf benachbarten Saiten leicht sein, eine kleine Tonbewegung einen Lagenwechsel verlangen. Gemittelte Akkordhöhen sind keine realen Melodietöne. Bundmittelwerte ignorieren die Entlastung durch offene Saiten und Pausen. Der Bericht behauptet deshalb keine automatische Musikalitäts- oder Schwierigkeitsbewertung.
+
+Die folgenden konkreten Seeds und Befunde dokumentieren den Prüfstand vom 13.10.2026 vor der kumulativen Staffelung. Die [aktuelle Staffelung](PRACTICE_PROGRESSION.md) hat eine neue Generatorversion; dieselben Seeds können deshalb andere Stücke ergeben.
 
 ## Befunde und Korrekturen
 

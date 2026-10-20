@@ -7,7 +7,7 @@ AM.practice = (() => {
   const selectionKey='a-minor-practice-selection';
   let selection={};try{const v=JSON.parse(localStorage.getItem(selectionKey));if(v&&typeof v==='object'&&!Array.isArray(v))selection=v;}catch{}
   function nextSeed(instrument,grade,style,current){
-    if(!instruments.includes(instrument)||!validGrade(grade)||!validStyle(style))throw Error('Invalid practice selection');
+    if(!instruments.includes(instrument)||!validGrade(grade)||!C.availableStyles(grade).includes(style))throw Error('Invalid practice selection');
     const key=instrument+':'+grade+':'+style,skills=C.profiles[grade].skills[instrument],stored=selection[key];
     const counts=Object.fromEntries(skills.map(skill=>[skill,Number.isSafeInteger(stored?.[skill])&&stored[skill]>=0&&stored[skill]<10000?stored[skill]:0]));
     const least=Math.min(...Object.values(counts)),start=seed();let best;
@@ -30,19 +30,23 @@ AM.practice = (() => {
     const [instrument,gText,styleText,nText]=spec.split('/');
     if(!instruments.includes(instrument))return `<h1>${t('practiceMode')}</h1><p class="lead">${t('practiceLead')}</p><div class="tracks">${instruments.map(i=>`<a class="track" href="#/practice/${i}"><h2>${title(i)}</h2><p>${t('practice'+i[0].toUpperCase()+i.slice(1)+'Lead')}</p><p class="meta">Grade 0–5 · ${t('styleChoice')}</p></a>`).join('')}</div>`;
     const previous=saved[instrument],g=gText===undefined?previous?.grade:Number(gText),grade=validGrade(g)?g:0;
-    const style=validStyle(styleText)?styleText:previous?.style??'rock',requested=nText===undefined?gText===undefined?previous?.seed:undefined:Number(nText),n=validSeed(requested)?requested:nextSeed(instrument,grade,style,previous?.seed);
+    const candidate=validStyle(styleText)?styleText:previous?.style??'rock',requested=nText===undefined?gText===undefined?previous?.seed:undefined:Number(nText);
+    // An archived score is immutable, including styles formerly available in
+    // lower grades. New pieces and ordinary deep links use today's curriculum.
+    const archived=validSeed(requested)?AM.bookmarks.fromURL(link(instrument,grade,requested,candidate)):null;
+    const style=archived?candidate:C.styleForGrade(grade,candidate),n=validSeed(requested)?requested:nextSeed(instrument,grade,style,previous?.seed);
     const url=link(instrument,grade,n,style);history.replaceState(null,'',url);saved[instrument]={grade,seed:n,style};
     try{localStorage.setItem(K,JSON.stringify(saved));}catch{}
     const bookmark=AM.bookmarks.fromURL(url),result=bookmark?{piece:bookmark.piece,score:bookmark.piece,bytes:AM.practiceGenerator.encode(bookmark.piece)}:C.generate(grade,n,style);
     const {piece,score,bytes}=result;piece.title=t('practicePiece')+' · '+t('style_'+style)+' · Grade '+grade+' · '+identifier(n);
-    const controlsHTML=`<span id="practice-controls"><label>${t('difficulty')} <select id="practice-grade">${Array.from({length:6},(_,i)=>`<option value="${i}"${i===grade?' selected':''}>Grade ${i}</option>`).join('')}</select></label><label>${t('style')} <select id="practice-style">${C.styles.map(s=>`<option value="${s}"${s===style?' selected':''}>${t('style_'+s)}</option>`).join('')}</select></label><button id="practice-new">${t('newPracticePiece')}</button><button id="piece-bookmark" aria-pressed="false">☆ ${t('bookmark')}</button></span>`;
+    const controlsHTML=`<span id="practice-controls"><label>${t('difficulty')} <select id="practice-grade">${Array.from({length:6},(_,i)=>`<option value="${i}"${i===grade?' selected':''}>Grade ${i}</option>`).join('')}</select></label><label>${t('style')} <select id="practice-style">${C.styles.map(s=>{const locked=!C.availableStyles(grade).includes(s);return `<option value="${s}"${s===style?' selected':''}${locked?' disabled':''}>${t('style_'+s)}${locked?' · '+t('styleFromGrade').replace('{grade}',C.styleGrade(s)):''}</option>`;}).join('')}</select></label><button id="practice-new">${t('newPracticePiece')}</button><button id="piece-bookmark" aria-pressed="false">☆ ${t('bookmark')}</button></span>`;
     const partOptions=instruments.map(i=>({id:i,title:title(i),href:link(i,grade,n,style)}));
     const formText=t('pieceForm').replace('{form}',AM.practiceInfo.form(piece)).replace('{written}',piece.uniqueBars).replace('{played}',piece.bars);
     return AM.repertoire.generated(piece,instrument,score,bytes,{partOptions,formText,infoHTML:AM.practiceInfo.html(piece,instrument),controlsHTML,onReady:target=>{
       if(location.hash!==url)return;
-      const change=()=>{const nextGrade=Number(target.querySelector('#practice-grade').value),nextStyle=target.querySelector('#practice-style').value;location.hash=link(instrument,nextGrade,nextSeed(instrument,nextGrade,nextStyle,n),nextStyle);};
+      const change=()=>{const nextGrade=Number(target.querySelector('#practice-grade').value),nextStyle=C.styleForGrade(nextGrade,target.querySelector('#practice-style').value);location.hash=link(instrument,nextGrade,nextSeed(instrument,nextGrade,nextStyle,n),nextStyle);};
       target.querySelector('#practice-grade').onchange=change;target.querySelector('#practice-style').onchange=change;
-      target.querySelector('#practice-new').onclick=()=>{location.hash=link(instrument,grade,nextSeed(instrument,grade,style,n),style);};
+      target.querySelector('#practice-new').onclick=()=>{const nextStyle=C.styleForGrade(grade,style);location.hash=link(instrument,grade,nextSeed(instrument,grade,nextStyle,n),nextStyle);};
       AM.bookmarks.bindPiece(target,piece,instrument,url);
     }});
   }

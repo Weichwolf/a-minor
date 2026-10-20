@@ -17,6 +17,9 @@ AM.music = (() => {
     lydian:        {name:'Lydisch',                 iv:[0,2,4,6,7,9,11]},
     chromatic:     {name:'Chromatisch',             iv:[0,1,2,3,4,5,6,7,8,9,10,11]},
     minorPentatonic:{iv:[0,3,5,7,10]},
+    majorPentatonic:{iv:[0,2,4,7,9]},
+    minorBlues:     {iv:[0,3,5,6,7,10]},
+    majorBlues:     {iv:[0,2,3,4,7,9]},
   };
   const DEG = ['1','b2','2','b3','3','4','b5','5','b6','6','b7','7'];
   const KEYS = {
@@ -41,6 +44,13 @@ AM.music = (() => {
   const scalePcs = (root, scale) => SCALES[scale].iv.map(i => pc(rootPc(root) + i));
   const scaleName = (m, root, scale) => {
     const iv = SCALES[scale]?.iv, i = iv?.indexOf(pc(m - rootPc(root)));
+    // Pentatonic and blues degrees skip letters; spell the blue note as
+    // b5 / b3 even in sharp keys (A minor blues contains Eb, not D#).
+    const degrees={minorPentatonic:[0,2,3,4,6],majorPentatonic:[0,1,2,4,5],minorBlues:[0,2,3,4,4,6],majorBlues:[0,1,2,2,4,5]};
+    if(degrees[scale]&&i>=0){
+      const letter=(LETTERS.indexOf(root[0])+degrees[scale][i])%7,acc=((pc(m)-LPC[letter]+6)%12+12)%12-6;
+      return LETTERS[letter]+(acc<0?'b'.repeat(-acc):'#'.repeat(acc))+((m-LPC[letter]-acc)/12-1);
+    }
     if (iv?.length !== 7 || i < 0) return name(m,usesFlats(root));
     const letter = (LETTERS.indexOf(root[0]) + i) % 7, acc = ((pc(m) - LPC[letter] + 6) % 12 + 12) % 12 - 6;
     return LETTERS[letter] + (acc < 0 ? 'b'.repeat(-acc) : '#'.repeat(acc)) + ((m - LPC[letter] - acc) / 12 - 1);

@@ -15,11 +15,16 @@ const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.
     await serving;
     for (let i=0;i<100;i++) { try { if ((await fetch(base)).ok) break; } catch {} await new Promise(r => setTimeout(r,30)); }
     browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH || '/usr/bin/chromium',headless:true,args:['--no-sandbox']});
-    await require('./soundfont-browser.cjs')(browser,base);
-    await require('./repertoire-browser.cjs')(browser,base);
+    const practiceOnly=process.argv.includes('--practice');
+    if(!practiceOnly){
+      await require('./soundfont-browser.cjs')(browser,base);
+      await require('./repertoire-browser.cjs')(browser,base);
+    }
     await require('./practice-browser.cjs')(browser,base);
     await require('./practice-sections-browser.cjs')(browser,base);
     await require('./practice-selection-browser.cjs')(browser,base);
+    await require('./practice-motifs-browser.cjs')(browser,base);
+    if(practiceOnly)return;
     const context = await browser.newContext(), page = await context.newPage(), errors=[];
     page.on('pageerror',e => errors.push(e.message)); page.on('dialog',() => { throw Error('Unexpected dialog'); });
     await page.addInitScript(() => {
@@ -163,6 +168,9 @@ const serving = new Promise((resolve,reject)=>{server.on('error',reject);server.
     await page.selectOption('#fretboard-controls [name=scale]','lydian');
     await page.selectOption('#fretboard-controls [name=show]','degree');
     assert((await page.locator('#fretboard-view .dot text').allTextContents()).includes('#4'));
+    await page.selectOption('#fretboard-controls [name=scale]','minorBlues');assert((await page.locator('#fretboard-view .dot text').allTextContents()).includes('b5'));
+    await page.selectOption('#fretboard-controls [name=scale]','majorBlues');assert((await page.locator('#fretboard-view .dot text').allTextContents()).includes('b3'));
+    await page.selectOption('#fretboard-controls [name=scale]','lydian');
     await page.selectOption('#language','en');
     assert.equal(await page.locator('#fretboard-controls [name=scale]').inputValue(),'lydian');
     assert(!/undefined|NaN/.test(await page.locator('main').innerText()));

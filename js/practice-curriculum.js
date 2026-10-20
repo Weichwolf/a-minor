@@ -1,4 +1,4 @@
-// Requirements derived from the local collection, adapted for electric guitar and compact reading pieces. See docs/GIGAJAM_COVERAGE.md.
+// Instrument requirements adapted from the local collection; key, scale and style progression is the app curriculum. See docs/GIGAJAM_COVERAGE.md.
 AM.practiceCurriculum = [
   {
     "grade": 0,
@@ -68,7 +68,16 @@ AM.practiceCurriculum = [
         "dotted": false,
         "triplets": false
       }
-    }
+    },
+    "maxSignature": 0,
+    "styles": [
+      "rock",
+      "doom"
+    ],
+    "scales": [
+      "major",
+      "aeolian"
+    ]
   },
   {
     "grade": 1,
@@ -137,7 +146,18 @@ AM.practiceCurriculum = [
         "dotted": false,
         "triplets": false
       }
-    }
+    },
+    "maxSignature": 1,
+    "styles": [
+      "rock",
+      "doom",
+      "blues"
+    ],
+    "scales": [
+      "major",
+      "aeolian",
+      "minorPentatonic"
+    ]
   },
   {
     "grade": 2,
@@ -206,7 +226,22 @@ AM.practiceCurriculum = [
         "dotted": false,
         "triplets": false
       }
-    }
+    },
+    "maxSignature": 2,
+    "styles": [
+      "rock",
+      "doom",
+      "blues",
+      "gothic",
+      "baroque"
+    ],
+    "scales": [
+      "major",
+      "aeolian",
+      "minorPentatonic",
+      "minorBlues",
+      "mixolydian"
+    ]
   },
   {
     "grade": 3,
@@ -277,7 +312,26 @@ AM.practiceCurriculum = [
         "dotted": false,
         "triplets": false
       }
-    }
+    },
+    "maxSignature": 3,
+    "styles": [
+      "rock",
+      "doom",
+      "blues",
+      "gothic",
+      "baroque",
+      "lounge"
+    ],
+    "scales": [
+      "major",
+      "aeolian",
+      "minorPentatonic",
+      "minorBlues",
+      "mixolydian",
+      "dorian",
+      "harmonicMinor",
+      "majorPentatonic"
+    ]
   },
   {
     "grade": 4,
@@ -351,7 +405,29 @@ AM.practiceCurriculum = [
         "dotted": true,
         "triplets": false
       }
-    }
+    },
+    "maxSignature": 4,
+    "styles": [
+      "rock",
+      "doom",
+      "blues",
+      "gothic",
+      "baroque",
+      "lounge",
+      "progressive"
+    ],
+    "scales": [
+      "major",
+      "aeolian",
+      "minorPentatonic",
+      "minorBlues",
+      "mixolydian",
+      "dorian",
+      "harmonicMinor",
+      "majorPentatonic",
+      "phrygian",
+      "majorBlues"
+    ]
   },
   {
     "grade": 5,
@@ -432,6 +508,29 @@ AM.practiceCurriculum = [
         "dotted": true,
         "triplets": true
       }
-    }
+    },
+    "maxSignature": 6,
+    "styles": [
+      "rock",
+      "doom",
+      "blues",
+      "gothic",
+      "baroque",
+      "lounge",
+      "progressive"
+    ],
+    "scales": [
+      "major",
+      "aeolian",
+      "minorPentatonic",
+      "minorBlues",
+      "mixolydian",
+      "dorian",
+      "harmonicMinor",
+      "majorPentatonic",
+      "phrygian",
+      "majorBlues",
+      "lydian"
+    ]
   }
 ];

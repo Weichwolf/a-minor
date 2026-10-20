@@ -2,7 +2,7 @@ const {test}=require('node:test'),assert=require('node:assert/strict'),setup=req
 test('new-piece selection covers every focus evenly within each grade, style and instrument',()=>{
  const A=setup(),C=A.practiceComposer;
  C.generate=()=>{throw Error('Selection must not compose trial pieces');};
- for(const style of C.styles)for(let grade=0;grade<6;grade++)for(const role of C.instruments){
+ for(let grade=0;grade<6;grade++)for(const style of C.availableStyles(grade))for(const role of C.instruments){
   const skills=C.profiles[grade].skills[role],counts=Object.fromEntries(skills.map(s=>[s,0]));let previous;
   for(let i=0;i<skills.length*3;i++){
    const seed=A.practice.nextSeed(role,grade,style,previous);assert.notEqual(seed,previous);previous=seed;

@@ -4,7 +4,11 @@
 
 Lokale Sammlung `~/Git/Gigajam`: Debut bis Grade Five, fünf Stücke pro Stufe, jeweils Gitarre, Piano, Bass und Drums. Inventar und Textextraktion umfassen **120 PDFs mit 218 Seiten** sowie **30 MIDI-Dateien**. Die Notation ist die Grundlage für rhythmische Werte und Spielanweisungen. MIDI bestätigt Tonbereiche, Stimmen, Einsätze, Tempo und lange Abläufe; kurze MIDI-Abstände zwischen gestrummten Akkordtönen sind kein Beleg für Sechzehntel oder Zweiunddreißigstel.
 
-Die Produktionsdaten enthalten Anforderungsprofile, keine importierten Takte, Melodien oder Begleitspuren. Die Profile stehen in [practice-curriculum.json](../data/practice-curriculum.json); der Browser lädt ihre identische JS-Fassung. Rock ist die Grundlage. Die anderen fünf Stile verändern Harmonik, Kontur, Klang, Begleitfigur oder Puls, während die Spielgrenzen pro Instrument bestehen bleiben.
+Die Produktionsdaten enthalten Anforderungsprofile, keine importierten Takte, Melodien oder Begleitspuren. Die Profile stehen in [practice-curriculum.json](../data/practice-curriculum.json); der Browser lädt ihre identische JS-Fassung. Rock ist die Grundlage. Die anderen sechs Stile verändern Harmonik, Kontur, Klang, Begleitfigur oder Puls, während die Spielgrenzen pro Instrument bestehen bleiben.
+
+## App-Staffelung ab 2026-10-20
+
+Die instrumentbezogenen Anforderungen dieses Abgleichs bleiben erhalten. Generatorversion 4 verwendet jedoch eine eigene kumulative Tonarten-/Skalen-/Stilstaffelung mit Vorzeichengrenzen 0/1/2/3/4/6 und einem neuen Bluesstil. Der [Staffelungsplan](PRACTICE_PROGRESSION.md) dokumentiert diese App-Entscheidung; sie ist keine zusätzliche Aussage über die Referenzsammlung.
 
 ## Korrigierte Ursachen
 

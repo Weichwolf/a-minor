@@ -42,7 +42,7 @@ AM.practiceInfo = (() => {
     const largest=Math.max(0,...d.melodicIntervals.map(x=>x.semitones));if(piece.grade>=2&&largest>=7)include(largest);
     if(d.harmonicIntervals.includes(7))include(7);
     if(instrument==='keys'&&!moving.length&&d.harmonicIntervals.length){
-      const third=['major','mixolydian','lydian'].includes(piece.scale)?4:3;
+      const third=['major','mixolydian','lydian'].includes(piece.harmonyScale??piece.scale)?4:3;
       const harmonic=[...new Set([third,7,10,11,...d.harmonicIntervals])].filter(n=>d.harmonicIntervals.includes(n));
       top.splice(0,top.length,...harmonic.slice(0,limit));
     }
@@ -51,7 +51,7 @@ AM.practiceInfo = (() => {
     const characters=grouped(d.sections.filter(s=>s.character&&s.name!=='O').map(s=>[s.name,s.characters.map(c=>t('sectionCharacter_'+c)).join(' / ')+(s.variationOf?' ('+format('sectionVariation',{section:s.variationOf})+')':'')]));
     const electric=instrument==='guitar'&&piece.sections.every(s=>s.bars.every(b=>b.guitar.texture));
     return format(instrument==='drums'?'pieceDrumsSentence':electric?'pieceGuitarSentence':'pieceSentence',{style:t('style_'+d.style),root:display(d.root),scale:t('scale_'+d.scale),form:form(piece),time:d.time,
-      chords:progress,voicings:d.powerChords.length?format('guitarPowerVoicings',{chords:d.powerChords.map(display).join(', ')}):t('guitarSingleNotes'),intervals:top.length?top.map(interval).join(', '):d.harmonicIntervals.map(interval).join(', '),rhythm,focus:t('focus_'+d.focus)})+(characters?' '+format('pieceSectionsSentence',{sections:characters}):'');
+      chords:progress,voicings:d.powerChords.length?format('guitarPowerVoicings',{chords:d.powerChords.map(display).join(', ')}):t('guitarSingleNotes'),intervals:top.length?top.map(interval).join(', '):d.harmonicIntervals.map(interval).join(', '),rhythm,focus:t('focus_'+d.focus)})+(characters?' '+format('pieceSectionsSentence',{sections:characters}):'')+(piece.chorusBars===12?' '+format('pieceBluesSentence',{choruses:piece.choruses}):'');
   }
   const html=(piece,instrument)=>`<p class="practice-description">${esc(text(piece,instrument))}</p>`;
   return{describe,text,html,interval,form};

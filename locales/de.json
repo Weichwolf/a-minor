@@ -3908,7 +3908,13 @@
     "instrument": "Instrument",
     "pieceDrumsSentence": "Ein {style}-Groove in {time}, Form {form}, im harmonischen Zusammenhang von {root} {scale}. Rhythmus: {rhythm}. {focus}",
     "guitarClean": "Clean",
-    "guitarDrive": "Drive"
+    "guitarDrive": "Drive",
+    "style_blues": "Blues",
+    "styleFromGrade": "ab Grade {grade}",
+    "scale_minorBlues": "Moll-Blues-Skala",
+    "scale_majorBlues": "Dur-Blues-Skala",
+    "scale_majorPentatonic": "Durpentatonik",
+    "pieceBluesSentence": "{choruses} Chorusse im 12-Takt-Blues; Melodieskala und Bandharmonik werden getrennt geführt."
   },
   "book": {
     "book": {
