@@ -19,7 +19,8 @@ module.exports=async(browser,base)=>{
    await page.selectOption('#language',language);
    for(const instrument of ['guitar','keys','bass','drums'])for(let grade=0;grade<6;grade++)for(const style of stylesByGrade[grade]){
     await go(instrument,grade,100+grade,style);
-    assert.equal(await page.locator('nav.top [data-transport]').count(),2);assert.equal(await page.locator('.rep-player [data-transport]').count(),0);
+    assert.equal(await page.locator('[data-transport=listen]').count(),0);
+    assert.equal(await page.locator('nav.top [data-transport]').count(),1);assert.equal(await page.locator('.rep-player [data-transport]').count(),0);
     const p=await page.evaluate(()=>AM.repertoire.current.piece),unique=p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i);
     assert.equal(await page.locator('.rep-section').count(),unique.length);assert.equal(await page.locator('.rep-section .measure').count(),p.uniqueBars);
     assert.deepEqual(await page.locator('.rep-section .measure').allTextContents(),Array.from({length:p.uniqueBars},(_,i)=>String(i+1)));
@@ -80,26 +81,26 @@ module.exports=async(browser,base)=>{
    assert(!sent.some(e=>e.data?.[0]===(144|own)));assert(sent.some(e=>e.data?.[0]===(144|otherCh)));if(instrument!=='drums')assert(sent.some(e=>e.id==='drums'&&e.data?.[0]===153));
    await page.locator('[data-transport=practice]').click();assert((await page.evaluate(()=>window.sent)).some(e=>e.data?.[1]===120));
   }
-  await go('keys',2,42);assert.equal(await page.inputValue('#rep-output'),'midi');await page.selectOption('#rep-arrangement','solo');await page.check('#rep-count');await page.evaluate(()=>sent=[]);await page.locator('[data-transport=listen]').click();await page.waitForTimeout(150);
-  assert((await page.evaluate(()=>sent)).some(e=>e.data?.[0]===153&&e.data[1]===37),'solo retains audible count-in');await page.locator('[data-transport=listen]').click();await page.uncheck('#rep-count');await page.evaluate(()=>sent=[]);await page.locator('[data-transport=listen]').click();await page.waitForTimeout(150);
-  assert((await page.evaluate(()=>sent)).filter(e=>e.data?.[0]>>4===9&&e.data[2]>0).every(e=>e.data[0]===147),'solo plays only the selected instrument');await page.locator('[data-transport=listen]').click();
-  await page.selectOption('#rep-output','browser');await page.selectOption('#rep-arrangement','band');await page.locator('[data-transport=listen]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing');await page.locator('[data-transport=listen]').click();
+  await go('keys',2,42);await page.selectOption('#rep-guide','1');assert.equal(await page.inputValue('#rep-output'),'midi');await page.selectOption('#rep-arrangement','solo');await page.check('#rep-count');await page.evaluate(()=>sent=[]);await page.locator('[data-transport=practice]').click();await page.waitForTimeout(150);
+  assert((await page.evaluate(()=>sent)).some(e=>e.data?.[0]===153&&e.data[1]===37),'solo retains audible count-in');await page.locator('[data-transport=practice]').click();await page.uncheck('#rep-count');await page.evaluate(()=>sent=[]);await page.locator('[data-transport=practice]').click();await page.waitForTimeout(150);
+  assert((await page.evaluate(()=>sent)).filter(e=>e.data?.[0]>>4===9&&e.data[2]>0).every(e=>e.data[0]===147),'solo plays only the selected instrument');await page.locator('[data-transport=practice]').click();
+  await page.selectOption('#rep-output','browser');await page.selectOption('#rep-arrangement','band');await page.locator('[data-transport=practice]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=practice]').dataset.playing==='playing');await page.locator('[data-transport=practice]').click();
   await page.evaluate(()=>{window.originals={play:AM.soundfont.play,stop:AM.soundfont.stop,time:Object.getOwnPropertyDescriptor(AM.soundfont,'currentTime')};window.testPosition=0;AM.soundfont.play=async bytes=>{window.playedSequence=AM.midi.decode(bytes);};AM.soundfont.stop=()=>{};Object.defineProperty(AM.soundfont,'currentTime',{configurable:true,get:()=>testPosition});});
-  await page.locator('[data-transport=listen]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing');
-  await page.evaluate(()=>window.listenButton=document.querySelector('[data-transport=listen]'));
-  await page.setViewportSize({width:390,height:844});await page.waitForSelector('.rep-player [data-transport=listen]');
-  assert(await page.evaluate(()=>listenButton===document.querySelector('[data-transport=listen]')&&listenButton.dataset.playing==='playing'));
-  await page.setViewportSize({width:1920,height:1200});await page.waitForSelector('nav.top [data-transport=listen]');
-  assert(await page.evaluate(()=>listenButton===document.querySelector('[data-transport=listen]')&&listenButton.dataset.playing==='playing'));
+  await page.locator('[data-transport=practice]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=practice]').dataset.playing==='playing');
+  await page.evaluate(()=>window.practiceButton=document.querySelector('[data-transport=practice]'));
+  await page.setViewportSize({width:390,height:844});await page.waitForSelector('.rep-player [data-transport=practice]');
+  assert(await page.evaluate(()=>practiceButton===document.querySelector('[data-transport=practice]')&&practiceButton.dataset.playing==='playing'));
+  await page.setViewportSize({width:1920,height:1200});await page.waitForSelector('nav.top [data-transport=practice]');
+  assert(await page.evaluate(()=>practiceButton===document.querySelector('[data-transport=practice]')&&practiceButton.dataset.playing==='playing'));
   for(const marker of await page.evaluate(()=>AM.repertoire.current.sequence.markers)){
    await page.evaluate(t=>testPosition=t,marker.t+.05);await page.waitForFunction(label=>document.querySelectorAll('.rep-section.current').length===1&&document.querySelector('.rep-section.current h2').textContent.trim().startsWith(label+' '),marker.label);
   }
-  await page.locator('[data-transport=listen]').click();await page.evaluate(()=>{AM.soundfont.play=originals.play;AM.soundfont.stop=originals.stop;Object.defineProperty(AM.soundfont,'currentTime',originals.time);});
+  await page.locator('[data-transport=practice]').click();await page.evaluate(()=>{AM.soundfont.play=originals.play;AM.soundfont.stop=originals.stop;Object.defineProperty(AM.soundfont,'currentTime',originals.time);});
   const midiDownload=page.waitForEvent('download');await page.locator('.rep-downloads a[download]').click();const midiFile=await midiDownload;assert.equal(fs.readFileSync(await midiFile.path()).subarray(0,4).toString(),'MThd');
   await page.setViewportSize({width:390,height:844});
   for(const instrument of ['guitar','keys','bass','drums'])for(let grade=0;grade<6;grade++){
    await go(instrument,grade,900+grade,'progressive');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
-   assert.equal(await page.locator('.rep-player [data-transport]').count(),2);assert.equal(await page.locator('nav.top [data-transport]').count(),0);
+   assert.equal(await page.locator('.rep-player [data-transport]').count(),1);assert.equal(await page.locator('nav.top [data-transport]').count(),0);
    assert((await page.locator('.rep-section .svg').evaluateAll(es=>es.map(e=>e.querySelectorAll('.measure').length))).every(n=>n>0&&n<=4));
   }
   await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});assert(pdfRequests.length>0,'blues PDF checks loaded the PDF assets');
@@ -115,7 +116,7 @@ module.exports=async(browser,base)=>{
   }
   await go('keys',5,11);await page.screenshot({path:'test-results/practice-desktop.png',fullPage:true});assert.equal(popups,0);assert.deepEqual(errors,[]);
   for(const width of [1920,900,601]){
-   await page.setViewportSize({width,height:900});await page.waitForSelector('nav.top [data-transport=listen]');
+   await page.setViewportSize({width,height:900});await page.waitForSelector('nav.top [data-transport=practice]');
    assert(await page.evaluate(()=>{const buttons=document.querySelector('#practice-transport').getBoundingClientRect(),language=document.querySelector('.language').getBoundingClientRect();return buttons.right<=language.left&&Math.abs(buttons.top+buttons.height/2-language.top-language.height/2)<2&&document.documentElement.scrollWidth<=innerWidth;}),'buttons remain left of the language control');
   }
   await page.goto(base+'/#/theory');await page.waitForSelector('.toc');
