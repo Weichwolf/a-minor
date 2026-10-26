@@ -2,19 +2,19 @@
 
 Die aktuelle Prüfung betrifft den Generator für vier Instrumente. Der ältere Bericht darunter dokumentiert den archivierten Kurs und das frühere Repertoire; er ist kein Nachweis für den neuen Generator.
 
-`node scripts/review-practice.cjs` erzeugt seit Generatorversion 4 reproduzierbar 30 Stücke (alle freigegebenen Stil-/Grade-Kombinationen) mit allen vier Parts und schreibt die Befunde nach `test-results/practice-review.json`. Seeds, Tonart, Tempo, Harmonik, Form, tatsächliche Notenwerte, vollständige Stimmen der unterschiedlichen Abschnitte, Stückbeschreibungen und Bewegungskennzahlen stehen im Bericht. Die Kennzahlen sind Suchhilfen für die Partiturbeurteilung: Ein großer Tonhöhensprung kann auf benachbarten Saiten leicht sein, eine kleine Tonbewegung einen Lagenwechsel verlangen. Gemittelte Akkordhöhen sind keine realen Melodietöne. Bundmittelwerte ignorieren die Entlastung durch offene Saiten und Pausen. Der Bericht behauptet deshalb keine automatische Musikalitäts- oder Schwierigkeitsbewertung.
+`node scripts/review-practice.cjs` erzeugt seit Generatorversion 4 reproduzierbar 30 Stücke (alle freigegebenen Stil-/Stufe-Kombinationen) mit allen vier Parts und schreibt die Befunde nach `test-results/practice-review.json`. Seeds, Tonart, Tempo, Harmonik, Form, tatsächliche Notenwerte, vollständige Stimmen der unterschiedlichen Abschnitte, Stückbeschreibungen und Bewegungskennzahlen stehen im Bericht. Die Kennzahlen sind Suchhilfen für die Partiturbeurteilung: Ein großer Tonhöhensprung kann auf benachbarten Saiten leicht sein, eine kleine Tonbewegung einen Lagenwechsel verlangen. Gemittelte Akkordhöhen sind keine realen Melodietöne. Bundmittelwerte ignorieren die Entlastung durch offene Saiten und Pausen. Der Bericht behauptet deshalb keine automatische Musikalitäts- oder Schwierigkeitsbewertung.
 
 Die folgenden konkreten Seeds und Befunde dokumentieren den Prüfstand vom 13.10.2026 vor der kumulativen Staffelung. Die [aktuelle Staffelung](PRACTICE_PROGRESSION.md) hat eine neue Generatorversion; dieselben Seeds können deshalb andere Stücke ergeben.
 
 ## Revision 6 · Tempo, Spieldauer und hörbare Inhalte · 2026-10-20
 
-Die ältere Fallmatrix weiter unten bleibt ein historischer Befund. Version 6 verwendet Stiltempi, konkrete Versetzungszeichen und kurze Anschlagsabstände für die Tempoobergrenze. Die Dauer richtet sich nach Sekunden einschließlich aller gespielten Rückkehrstellen; Grade 0–5 zielen auf 45 / 65 / 90 / 120 / 155 / 195 Sekunden. Ein Fall mit langen Doom-Abschnitten zeigte, dass die Form schon vor dem Schreiben auf das langsame Stiltempo passen muss. Zusammengehörige Varianten werden bei nötiger Verkürzung gemeinsam geplant. Ein synkopierter Drum-Schwerpunkt erhält auch beim Doom-Halftime-Backbeat eine echte Offbeat-Bassdrum.
+Die ältere Fallmatrix weiter unten bleibt ein historischer Befund. Version 6 verwendet Stiltempi, konkrete Versetzungszeichen und kurze Anschlagsabstände für die Tempoobergrenze. Die Dauer richtet sich nach Sekunden einschließlich aller gespielten Rückkehrstellen; Die Stufen 0–5 zielen auf 45 / 65 / 90 / 120 / 155 / 195 Sekunden. Ein Fall mit langen Doom-Abschnitten zeigte, dass die Form schon vor dem Schreiben auf das langsame Stiltempo passen muss. Zusammengehörige Varianten werden bei nötiger Verkürzung gemeinsam geplant. Ein synkopierter Drum-Schwerpunkt erhält auch beim Doom-Halftime-Backbeat eine echte Offbeat-Bassdrum.
 
 Gemischte Gitarrenzeilen rendern ihre Rhythmus-Slashes jetzt pro Takt. Fills bleiben kürzer und auf ausgewählte Übergänge begrenzt; führende Stimmen, ruhigere Begleitung und ein geplanter Phrasenhöhepunkt verändern die tatsächlich geschriebenen und gespielten Parts. Die Auswahl berücksichtigt neben dem Technikschwerpunkt auch Tonart, Motivfamilie und Grundrhythmus. Das Review-JSON enthält zusätzlich Dauer und rhythmische Grundfigur. Die neuen Inhalts- und Browserregressionen stehen in `practice-design.test.cjs` und `practice-design-browser.cjs`.
 
-Eine Dauerstichprobe mit 480 Kompositionen (16 deterministische Seeds je freigegebener Stil-/Grade-Kombination) vergleicht die vollständige MIDI-Zeit mit dem Ziel und kontrolliert die Tempoobergrenze der endgültigen Stimmen. Alle Fälle liegen innerhalb von ±10 %. Die gemessenen Minima/Maxima sind:
+Eine Dauerstichprobe mit 480 Kompositionen (16 deterministische Seeds je freigegebener Stil-/Stufe-Kombination) vergleicht die vollständige MIDI-Zeit mit dem Ziel und kontrolliert die Tempoobergrenze der endgültigen Stimmen. Alle Fälle liegen innerhalb von ±10 %. Die gemessenen Minima/Maxima sind:
 
-| Grade | Ziel (Sekunden) | MIDI-Spieldauer (Sekunden, gerundet) |
+| Stufe | Ziel (Sekunden) | MIDI-Spieldauer (Sekunden, gerundet) |
 |---|---|---|
 | 0 | 45 | 45,0–45,0 |
 | 1 | 65 | 63,2–70,2 |
@@ -23,12 +23,12 @@ Eine Dauerstichprobe mit 480 Kompositionen (16 deterministische Seeds je freigeg
 | 4 | 155 | 155,0–160,0 |
 | 5 | 195 | 192,0–211,8 |
 
-Die Seeds sind 0–4 sowie für n = 5–15 `(n × 0x9e3779b9) >>> 0`. Die feste Testmatrix in `practice-design.test.cjs` prüft zusätzlich die Übereinstimmung von gespeicherter Dauer und MIDI-Zeit, die steigenden Grade-Zeitfenster und alle verfügbaren Stile einschließlich verschiedener Taktarten.
+Die Seeds sind 0–4 sowie für n = 5–15 `(n × 0x9e3779b9) >>> 0`. Die feste Testmatrix in `practice-design.test.cjs` prüft zusätzlich die Übereinstimmung von gespeicherter Dauer und MIDI-Zeit, die steigenden Stufenzeitfenster und alle verfügbaren Stile einschließlich verschiedener Taktarten.
 
 
 ## Befunde und Korrekturen
 
-- **Grade 0 Gothic, Seed 20261015, Fis-Moll:** Der Powerchordabschnitt enthielt F♯2–E2–C♯4–F♯2 als Grundtöne. Der Sprung E2–C♯4 betrug 21 Halbtöne. Auf der P4-Gitarre bis Bund 5 ist der tiefe Cis-Powerchord auf benachbarten Saiten nicht verfügbar. Eine bloße Optimierung der Saiten konnte das nicht lösen. Die Anfänger-Harmonieplanung verwendet hier nun iv–i als vorbereiteten Schluss: F♯m–E–Bm–F♯m. Die Gitarrengrundtöne F♯2–E2–B2–F♯2 bleiben je Bewegung innerhalb einer Quinte. Die Tonart und der Wechsel von Riff zu Powerchords bleiben erhalten. Keyboard und Bass folgen derselben geänderten Harmonik.
+- **Stufe 0 Gothic, Seed 20261015, Fis-Moll:** Der Powerchordabschnitt enthielt F♯2–E2–C♯4–F♯2 als Grundtöne. Der Sprung E2–C♯4 betrug 21 Halbtöne. Auf der P4-Gitarre bis Bund 5 ist der tiefe Cis-Powerchord auf benachbarten Saiten nicht verfügbar. Eine bloße Optimierung der Saiten konnte das nicht lösen. Die Anfänger-Harmonieplanung verwendet hier nun iv–i als vorbereiteten Schluss: F♯m–E–Bm–F♯m. Die Gitarrengrundtöne F♯2–E2–B2–F♯2 bleiben je Bewegung innerhalb einer Quinte. Die Tonart und der Wechsel von Riff zu Powerchords bleiben erhalten. Keyboard und Bass folgen derselben geänderten Harmonik.
 - **Powerchords über eine ganze Phrase:** Eine zusätzliche Planung verschiebt ausschließlich vollständige Grundton/Quint-Paare um Oktaven und betrachtet die folgenden Anschläge mit. Rhythmus, Tonklassen, einstimmige Motive und der gemeinsame Anfang variierter Rückkehr bleiben erhalten. Ein unabhängiger Regressionstest mit C3/G3–D3/A3–E2/B2 belegt die ruhigere Fortsetzung nach E3/B3; Bindungen bleiben zusammenhängend. Danach plant der bestehende Durchgang die konkrete Saitenfolge.
 - **Abschnittsübergänge und Wiederkehr:** Die Messung schneller großer Sprünge begann bisher an jedem Abschnitt neu. Sie durchläuft nun die tatsächliche gespielte Form und berücksichtigt auch den Übergang zum nächsten Abschnitt. Die maximale Anschlagsdichte wird weiterhin abschnittsweise bestimmt. Ein eigener Test belegt, dass ein schneller Registersprung genau an einer Abschnittsgrenze in die kombinierte Anforderung eingeht.
 
@@ -38,16 +38,16 @@ Die Fokusprüfung kontrolliert klingende Ereignisse und Notation statt allein di
 
 | Reproduzierbarer Befund | Musikalische Korrektur |
 |---|---|
-| Grade 4 Rock, Seed 12: „synkopierter Bass“ konnte nur auf ganzen Zählzeiten einsetzen | Eine Achtelpause führt zu einer punktierten Viertel, die über den folgenden Hauptschlag hinweg klingt. Der restliche Takt bleibt variabel. Dieselbe Anforderung gilt für die entsprechenden Gitarren- und Keyboardschwerpunkte. |
-| Grade 5 Rock, Seed 23: Septakkord-Arpeggio ohne gespielte Septime | Die eröffnende Akkordfigur enthält Grundton, Quinte, Terz und Septime. Bei zu wenigen Anschlägen erhält ihr Beginn vier Achtel; danach bleiben Rhythmus und Kontur variabel. |
-| Grade 5 Rock, Seeds 65/86: Shuffle-Gitarre beziehungsweise Shuffle-Bass nur mit Vierteln | Die erste Motivzelle enthält Achtelpaare, die der Player ternär ausführt. Gewählter Shuffle bleibt auch im Progressive-Stil in 4/4; ungerade Metren überschreiben diesen Schwerpunkt nicht. |
-| Grade 0 Rock, Seed 8: angekündigte Drum-Unterbrechung fehlte | Vor dem Fill pausieren alle Schlagzeugstimmen gemeinsam auf der vierten Zählzeit. Die vorherigen drei Schläge behalten den Puls. |
-| Grade 2 Rock, Seed 0: Kick-Variation ohne versetzten Kick | Der erste Haupttakt enthält einen zusätzlichen Kick auf der ersten Achtelzwischenzählzeit. |
-| Grade 3 Barock, Seed 16: die Halbtonänderung blieb teilweise innerhalb der Tonleiter | Ein tatsächlich leiterfremder Nachbarton führt lokal einen Halbton zum Zielton zurück. Die chromatische Farbe hat damit eine konkrete Auflösung. |
-| Grade 4 Rock, Seed 28: Haltebogen-Schwerpunkt ohne Haltebogen | Die zweite Motivzelle stellt einen teilbaren Tonwert bereit; seine zwei gleich hohen Noten werden gebunden. |
-| Grade 5 Progressive, Seeds 3/29: Triolenauftakt wurde durch 5/8 oder 7/8 ersetzt | Auch im ungeraden Takt endet die Fokuszelle mit einer vollständigen Achteltriole. Im 12/8-Schwerpunkt bleibt die entsprechende Dreiergruppe regulärer Achtel. |
-| Grade 5 Gothic, Seed 5: erster Akkord war vermindert, deshalb fehlte jede Taktwiederholung | Ein späteres geeignetes Powerchordpaar trägt die Wiederholung. Offener Achttakt-Mittelpunkt und vorbereiteter Schluss bleiben geschützt. |
-| Grade 5 Lounge, Seed 20261523: die Begrenzung oberhalb einer gehaltenen Innenstimme erzeugte G statt eines Tons aus Fis-Dorisch beziehungsweise der Harmonie | Die rechte Linie wählt jetzt den nächstliegenden passenden Ton innerhalb des spielbaren Handrahmens; im konkreten Fall G♯. |
+| Stufe 4 Rock, Seed 12: „synkopierter Bass“ konnte nur auf ganzen Zählzeiten einsetzen | Eine Achtelpause führt zu einer punktierten Viertel, die über den folgenden Hauptschlag hinweg klingt. Der restliche Takt bleibt variabel. Dieselbe Anforderung gilt für die entsprechenden Gitarren- und Keyboardschwerpunkte. |
+| Stufe 5 Rock, Seed 23: Septakkord-Arpeggio ohne gespielte Septime | Die eröffnende Akkordfigur enthält Grundton, Quinte, Terz und Septime. Bei zu wenigen Anschlägen erhält ihr Beginn vier Achtel; danach bleiben Rhythmus und Kontur variabel. |
+| Stufe 5 Rock, Seeds 65/86: Shuffle-Gitarre beziehungsweise Shuffle-Bass nur mit Vierteln | Die erste Motivzelle enthält Achtelpaare, die der Player ternär ausführt. Gewählter Shuffle bleibt auch im Progressive-Stil in 4/4; ungerade Metren überschreiben diesen Schwerpunkt nicht. |
+| Stufe 0 Rock, Seed 8: angekündigte Drum-Unterbrechung fehlte | Vor dem Fill pausieren alle Schlagzeugstimmen gemeinsam auf der vierten Zählzeit. Die vorherigen drei Schläge behalten den Puls. |
+| Stufe 2 Rock, Seed 0: Kick-Variation ohne versetzten Kick | Der erste Haupttakt enthält einen zusätzlichen Kick auf der ersten Achtelzwischenzählzeit. |
+| Stufe 3 Barock, Seed 16: die Halbtonänderung blieb teilweise innerhalb der Tonleiter | Ein tatsächlich leiterfremder Nachbarton führt lokal einen Halbton zum Zielton zurück. Die chromatische Farbe hat damit eine konkrete Auflösung. |
+| Stufe 4 Rock, Seed 28: Haltebogen-Schwerpunkt ohne Haltebogen | Die zweite Motivzelle stellt einen teilbaren Tonwert bereit; seine zwei gleich hohen Noten werden gebunden. |
+| Stufe 5 Progressive, Seeds 3/29: Triolenauftakt wurde durch 5/8 oder 7/8 ersetzt | Auch im ungeraden Takt endet die Fokuszelle mit einer vollständigen Achteltriole. Im 12/8-Schwerpunkt bleibt die entsprechende Dreiergruppe regulärer Achtel. |
+| Stufe 5 Gothic, Seed 5: erster Akkord war vermindert, deshalb fehlte jede Taktwiederholung | Ein späteres geeignetes Powerchordpaar trägt die Wiederholung. Offener Achttakt-Mittelpunkt und vorbereiteter Schluss bleiben geschützt. |
+| Stufe 5 Lounge, Seed 20261523: die Begrenzung oberhalb einer gehaltenen Innenstimme erzeugte G statt eines Tons aus Fis-Dorisch beziehungsweise der Harmonie | Die rechte Linie wählt jetzt den nächstliegenden passenden Ton innerhalb des spielbaren Handrahmens; im konkreten Fall G♯. |
 
 Bei Durakkorden folgt die Septime dem Modus: beispielsweise IV7 in Dorisch und ♭VII7 in Äolisch. Das frühere pauschale maj7 konnte zusätzliche, unbeabsichtigte chromatische Farben erzeugen. Mollakkorde behalten bewusst die gebräuchliche kleine Septime; zusammen mit harmonisch-mollgeprägten Melodien ist dies eine Mischung mit natürlich Moll. Akkordtöne werden als Grundton, Terz, Quinte und Septime geschrieben; ihre enharmonische Schreibweise und ein gegebenenfalls erhöhtes Quintintervall stimmen mit den Akkordsymbolen überein.
 
@@ -57,7 +57,7 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 
 **Maßstab:** Wiederholung soll Orientierung geben, Kontrast einen musikalischen Grund haben und die Rückkehr vorbereitet sein. Neue Techniken müssen tatsächlich in den Noten stehen. Die Instrumentbeurteilung berücksichtigt Rhythmus, Lage, verfügbare Zeit und die Funktion des Parts; ein einzelner Sprungwert entscheidet nicht über Spielbarkeit. A′/B′ behalten den gemeinsamen Anfang und verändern die letzten zwei Takte. O bezeichnet den notierten Schlussteil, S den ausgeschriebenen Soloabschnitt. Der letzte einzigartige Abschnitt im Datenbericht ist bei ABA nicht der zuletzt gespielte Abschnitt: Maßgeblich ist immer die vollständige Form.
 
-### Grade 0
+### Stufe 0
 
 | Stil · Seed · Tempo/Form | Musikalische und spieltechnische Beurteilung |
 |---|---|
@@ -68,7 +68,7 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 | Barock · 20261017 · 103 / ABA | D–Em–A–D gibt eine eindeutige Kadenz. **Gitarre:** Melodie mit längerem Antwortton, dann gleichmäßigeres Riff. **Keyboard:** Einzelnoten wechseln zu rechten Dreiklängen. **Bass:** Achtelgrundtöne versus Viertelbegleitung. **Drums:** einfacher Viertelpuls. Als moderne Bandübertragung plausibel; kein historischer Barocksatz und keine unabhängige kontrapunktische Schulung. |
 | Lounge · 20261018 · 88 / ABAB | G-Dorisch mit Am und Dm: der helle Mollbereich bleibt bei einfacher Rhythmik erkennbar. **Gitarre:** G–A–B-Motiv, dann rhythmisch dichtere Wiederaufnahme. **Keyboard:** Linie versus gehaltene/repetierte Dreiklänge. **Bass:** ruhige Grundtonwechsel. **Drums:** paarige Bassdrum-Achtel unter Viertelbecken. Noch kein Swing als zusätzliche Anfängerhürde. |
 
-### Grade 1
+### Stufe 1
 
 | Stil · Seed · Tempo/Form | Musikalische und spieltechnische Beurteilung |
 |---|---|
@@ -79,7 +79,7 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 | Barock · 20261118 · 100 / AABB | D–Em–A–D bleibt unter Thema und gebrochener Figur erhalten. **Gitarre:** Viertel/Halbe wechseln zu Achtelarpeggien. **Keyboard:** Handdialog; vor dem gemessenen 19-Halbton-Registerwechsel hat die rechte Hand einen ganzen linken Antworttakt frei. **Bass:** lange Grundtonwerte. **Drums:** Viertelbecken und begrenzte schnelle Schlussfigur. Die Zeit zum Umsetzen ist wichtiger als die reine Sprungzahl. |
 | Lounge · 20261119 · 114 / ABAB′ | Fis-Dorisch: Fism–Gism–Cism. **Gitarre:** melodischer Anfang, danach klarer Dreiklang als Einzeltonfigur. **Keyboard:** rechte Figuren über linken Dreiklängen. **Bass:** Durchgänge zielen zum nächsten Grundton; ein bereits passender Ganztonabstand braucht keinen zusätzlichen Fremdton. **Drums:** Viertelpuls. B′ entwickelt das Ende ohne neue Anfangsfigur. |
 
-### Grade 2
+### Stufe 2
 
 | Stil · Seed · Tempo/Form | Musikalische und spieltechnische Beurteilung |
 |---|---|
@@ -88,9 +88,9 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 | Gothic · 20261217 · 104 / ABABO | Em–C–D/Bm führt über Bm zurück. **Gitarre:** Arpeggio gegen Powerchordfläche. **Keyboard:** vollständige Akkorde mit Bass erhalten die Terzen. **Bass:** Oktavpendel; vor einem sonst zu weiten folgenden Grundton kehrt die Figur tiefer zurück. **Drums:** Achtelbecken, ruhigeres B. Registerbewegung ist der Bassinhalt, kein Zufallsprodukt der Gitarrenstimme. |
 | Progressive · 20261218 · 127 / ABA′O | Dm–Gm–B–Am bleibt offen, O schließt nach Dm. **Gitarre:** Achtelarpeggien, Melodie und verändertes Ende von A′. **Keyboard:** rhythmisch gemeinsame Akkord-/Bassanschläge. **Bass:** Quintpendel mit tieferer Anschlussquinte. **Drums:** Achtelpuls. Das obere Tempo und die Registerwechsel machen dies zum anspruchsvolleren Fall der Stufe; Wiederholung und längere Melodiewerte schaffen Entlastung. |
 | Barock · 20261219 · 109 / ABAO | Em/Bm, dann Am–Fis°–Bm und Rückkehr. **Gitarre:** Thema versus einzeln gespielte Akkordtöne. **Keyboard:** Handdialog mit Zeit für den Registerwechsel. **Bass:** Grundton/Quinte in A, ruhigerer B-Puls. **Drums:** regelmäßige Achtelbecken. Der verminderte Akkord wird nicht als unpassender reiner Gitarren-Powerchord angeschlagen. |
-| Lounge · 20261220 · 97 / ABAO | Es-Dur mit Fm/B und klarem Dominantschluss. **Gitarre:** schrittweise Melodie und Riff, größte Bewegung fünf Halbtöne. **Keyboard:** Melodie versus Akkorde mit Bass. **Bass:** Grundton/Quinte, maximal sieben Halbtöne Bewegung. **Drums:** akzentuiertes Fill. Dieser ruhigere Fall bietet dieselbe Grade-Struktur mit geringerer Bewegungsbelastung. |
+| Lounge · 20261220 · 97 / ABAO | Es-Dur mit Fm/B und klarem Dominantschluss. **Gitarre:** schrittweise Melodie und Riff, größte Bewegung fünf Halbtöne. **Keyboard:** Melodie versus Akkorde mit Bass. **Bass:** Grundton/Quinte, maximal sieben Halbtöne Bewegung. **Drums:** akzentuiertes Fill. Dieser ruhigere Fall bietet dieselbe Stufenstruktur mit geringerer Bewegungsbelastung. |
 
-### Grade 3
+### Stufe 3
 
 | Stil · Seed · Tempo/Form | Musikalische und spieltechnische Beurteilung |
 |---|---|
@@ -99,9 +99,9 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 | Gothic · 20261318 · 98 / ABACBABACBO | Gis-Dorisch mit Cis-Dur und Eis°. **Gitarre:** Akkordfiguren und melodischer B-Teil; über Eis° einstimmig. **Keyboard:** Arpeggio, Melodie und volle Akkorde als Kontrast. **Bass:** auf- und absteigende Arpeggien, nun einschließlich korrekter verminderter Quinte; größter Sprung zehn statt zuvor 22 Halbtöne. **Drums:** Tomfills markieren die Rückkehr. |
 | Progressive · 20261319 · 90 / ABA′ABA′ABA′O | E-Dur mit Dis° als Spannung und H–E-Schluss. **Gitarre:** gebrochene Akkorde versus höherer melodischer B-Teil. **Keyboard:** Melodie über eigener Begleitung, Registerwechsel im Formkontrast. **Bass:** Skalen mit Akkordstützen. **Drums:** Akzent-Sechzehntel. Das niedrige Tempo entlastet die Kombination aus vier Vorzeichen und den Registerwechseln. |
 | Barock · 20261320 · 88 / AABBAABBO | Gis harmonisch Moll, Cis-Moll und Dis-Dur geben Leittonspannung. **Gitarre:** Thema und anschließende Arpeggioepisode. **Keyboard:** Melodie über gebrochener linker Begleitung. **Bass:** die abwärts geführte zweite Arpeggiohälfte reduziert den größten Sprung von 19 auf sieben Halbtöne. **Drums:** Tomfill. Harmonische Lesearbeit bleibt, unnötige Bassakrobatik entfällt. |
-| Lounge · 20261321 · 95 / AABAO | Achtaktige A/B-Abschnitte: offenes Em7 in der Mitte, E7–Am7 am Ende. **Gitarre:** enger Fünftonraum mit überwiegend Schritten. **Keyboard:** Melodie über Septakkordbegleitung. **Bass:** ausdrücklich höheres B-Register, bis 17 Halbtöne am Übergang; bei sonst einfachen Wiederholungen ein isolierter Grade-Schwerpunkt. **Drums:** Akzentfills. Die Form bekommt Richtung durch verschiedene Schlussstärken. |
+| Lounge · 20261321 · 95 / AABAO | Achtaktige A/B-Abschnitte: offenes Em7 in der Mitte, E7–Am7 am Ende. **Gitarre:** enger Fünftonraum mit überwiegend Schritten. **Keyboard:** Melodie über Septakkordbegleitung. **Bass:** ausdrücklich höheres B-Register, bis 17 Halbtöne am Übergang; bei sonst einfachen Wiederholungen ein isolierter Stufenschwerpunkt. **Drums:** Akzentfills. Die Form bekommt Richtung durch verschiedene Schlussstärken. |
 
-### Grade 4
+### Stufe 4
 
 | Stil · Seed · Tempo/Form | Musikalische und spieltechnische Beurteilung |
 |---|---|
@@ -112,7 +112,7 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 | Barock · 20261421 · 105 / AABBAABBAABBO | H harmonisch Moll mit Cis° und Fis-Dur. **Gitarre:** Melodie versus gebundene Quinten; verminderte Klänge werden aufgebrochen. **Keyboard:** eigenständige Rhythmen und gebrochene linke Akkorde. **Bass:** klingende Offbeat-Synkope. **Drums:** offene Hi-Hat als zusätzliche Artikulation. Der Dominantschluss hält die verschiedenen rhythmischen Ebenen zusammen. |
 | Lounge · 20261422 · 122 / AABAO | Achtaktige H-Moll-Septakkordfolge, Fis7 schließt nach Hm7. **Gitarre:** ruhige Melodie mit lokalem Powerchord-Sechzehntelkontrast. **Keyboard:** gebundene Figuren und Arpeggioantwort. **Bass:** Pausen, die nicht vom Player zugespielt werden. **Drums:** synkopierter Kick. Hier bleibt Lounge eine elektrische Bandbearbeitung; die Gitarrenklangregel hat Vorrang vor dichten Jazzgriffen. |
 
-### Grade 5
+### Stufe 5
 
 | Stil · Seed · Tempo/Form | Musikalische und spieltechnische Beurteilung |
 |---|---|
@@ -125,11 +125,11 @@ Die Tabelle beurteilt die ausgeschriebenen Phrasen, ihre Harmonik und die Überg
 
 ## Ergebnis und Grenzen
 
-Die geprüften Stücke haben erkennbare Wiederholung, funktionale oder modale Schlussvorbereitung und gradebezogene Kontraste. Aus der Fallprüfung entstanden konkrete Korrekturen statt bloßer Freigaben: ruhigere Gitarrenregister, erreichbare Anfängerharmonik, tatsächlich klingende Lerninhalte, modale Septimen, passende Keyboardtöne sowie zurückgeführte Bassarpeggien. Die Basskorrektur verwendet auch bei Quint-/Walkingfiguren die tatsächliche Akkordquinte; eine verminderte Quinte wird nicht durch eine reine ersetzt. Ihre Regression vergleicht klingende Töne mit der jeweiligen, gegebenenfalls innerhalb des Takts wechselnden Harmonie.
+Die geprüften Stücke haben erkennbare Wiederholung, funktionale oder modale Schlussvorbereitung und stufenbezogene Kontraste. Aus der Fallprüfung entstanden konkrete Korrekturen statt bloßer Freigaben: ruhigere Gitarrenregister, erreichbare Anfängerharmonik, tatsächlich klingende Lerninhalte, modale Septimen, passende Keyboardtöne sowie zurückgeführte Bassarpeggien. Die Basskorrektur verwendet auch bei Quint-/Walkingfiguren die tatsächliche Akkordquinte; eine verminderte Quinte wird nicht durch eine reine ersetzt. Ihre Regression vergleicht klingende Töne mit der jeweiligen, gegebenenfalls innerhalb des Takts wechselnden Harmonie.
 
-Die Beschreibungen der 144 Parts benennen die tatsächliche Harmonie und instrumentbezogene Anforderungen, gruppieren Wiederholungen und begrenzen die Intervallauswahl je Grade. Große Formen ergeben trotzdem längere Absätze; die Einordnung ist keine vollständige Spielanleitung. Sie unterscheidet Bandakkorde von Gitarrenquinten und behandelt Drum-Tonnummern nicht als melodische Intervalle. Die Browserprüfung kontrolliert die Darstellung in beiden Sprachen und im PDF.
+Die Beschreibungen der 144 Parts benennen die tatsächliche Harmonie und instrumentbezogene Anforderungen, gruppieren Wiederholungen und begrenzen die Intervallauswahl je Stufe. Große Formen ergeben trotzdem längere Absätze; die Einordnung ist keine vollständige Spielanleitung. Sie unterscheidet Bandakkorde von Gitarrenquinten und behandelt Drum-Tonnummern nicht als melodische Intervalle. Die Browserprüfung kontrolliert die Darstellung in beiden Sprachen und im PDF.
 
-Die Stichprobe deckt jede Kombination von Grade und Stil mit allen vier Parts ab, nicht jeden möglichen Seed oder jedes Schwerpunkt-Kreuzprodukt. Weitere Rhythmusarten wie 12/8 werden durch die gezielten Inhalts- und MIDI-Tests abgedeckt. Bewegungsplanung und kombinierte Tempoanpassung sind nachvollziehbare Regeln, keine empirisch normierte Schwierigkeitsmessung. Unterschiedliche Stücke desselben Grades bleiben unterschiedlich anspruchsvoll. Grade 0 bezeichnet den Inhaltsstand der Referenzsammlung und setzt grundlegende Instrumentorientierung voraus; es ist kein Ersatz für die erste Erklärung von Haltung, Anschlag oder Notenlesen.
+Die Stichprobe deckt jede Kombination von Stufe und Stil mit allen vier Parts ab, nicht jeden möglichen Seed oder jedes Schwerpunkt-Kreuzprodukt. Weitere Rhythmusarten wie 12/8 werden durch die gezielten Inhalts- und MIDI-Tests abgedeckt. Bewegungsplanung und kombinierte Tempoanpassung sind nachvollziehbare Regeln, keine empirisch normierte Schwierigkeitsmessung. Unterschiedliche Stücke derselben Stufe bleiben unterschiedlich anspruchsvoll. Stufe 0 beginnt mit Grundwerten und einfachen Figuren und setzt grundlegende Instrumentorientierung voraus; es ist kein Ersatz für die erste Erklärung von Haltung, Anschlag oder Notenlesen.
 
 Die Stile sind bewusst vereinfachte, originale Bandmodelle. Barock bedeutet hier insbesondere Kadenz, Sequenz und gebrochene Figuren; Lounge erhält harmonische Farben innerhalb der vorgegebenen E-Gitarrenregeln. Nicht jedes Stück repräsentiert alle Konventionen seines Genres. Die kompakte Form schult keine identische Ausdauer wie ein vollständiges Referenzstück. Das Verfahren belegt Noteninhalt, Zeitmodell und modellierte Spielgrenzen; ein instrumentaler Spieltest und ein menschliches Hörurteil wurden nicht durchgeführt. Klanggestaltung, Dämpfung, körperliche Ausführung und individueller Lernfortschritt können aus MIDI oder Softwaretests nicht abgeleitet werden.
 
@@ -164,7 +164,7 @@ Die Prüfung ist eine Partitur- und Aufgabenbeurteilung mit technischer Wiederga
 | Moll-/Durvergleich und einige freie Rhythmusaufgaben zu wenig in Form eingebunden | `e2-1-2`, `ke2-1-2`, `e2-6-3`, `e3-4-3`, `ke3-4-3`, `e5-groove-3`, `ke5-groove-3` | Vergleich bzw. Rhythmuswechsel behält Motiv, Antwort und bewussten Schluss |
 | „Erste Viertel ersetzen“ unklar, wenn die erste Zählzeit mehrere Noten/Pausen enthält | `e3-4-2`, `ke3-4-2` | Gesamte erste Zählzeit ersetzen, ihre erste klingende Tonhöhe verwenden; restliche Phrase und Schluss behalten |
 | Chromatische Achtel zur Viertel verlängern und folgende Achtel entsprechend kürzen ergibt Null | `e6-5-2`, `ke6-5-2` | Punktierte Achtel + Sechzehntel: 3/4 + 1/4 = 1 Viertel; gesamte Phrase bleibt spielbar |
-| Kurze Miniaturen belegen keine langen Gigajam-Parts | `e7-5-2/3`, `ke7-5-2/3` | Dichte Rhythmik, höhere Tempi, lange Form und vollständiges lokales Stück mit zwei Aufnahmen an verschiedenen Tagen |
+| Kurze Miniaturen allein prüfen keine langen Formen | `e7-5-2/3`, `ke7-5-2/3` | Dichte Rhythmik, höhere Tempi, lange Form und vollständiges lokales Stück mit zwei Aufnahmen an verschiedenen Tagen |
 
 Bestehende Variationen behalten grundsätzlich das Ausgangsstück. Teilstimmen werden zum Hören isoliert und anschließend wieder in die vollständige Form eingesetzt. Kompositionsaufgaben liefern Tonmaterial, Satz- oder Rhythmusbedingung; die Aufnahme prüft den tatsächlichen Verlauf. Neue Aufgaben prüfen neben Technik ausdrücklich Hook, Stimmengewichtung und Schluss.
 

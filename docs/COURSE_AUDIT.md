@@ -1,43 +1,22 @@
-# Fachlicher Abgleich · 2026-09-11
+# Fachliche Prüfung · 2026-10-26
 
-Aktualisierung 2026-09-30: [vollständiger Gigajam-Abgleich aller Seiten](GIGAJAM_COVERAGE.md) und [musikalische/fachliche Revision](MUSICAL_REVIEW.md). Die frühere eingeschränkte Seitensichtung unten beschreibt den damaligen Prüfstand.
+Die [Stufenprofile](PRACTICE_LEVELS.md) beschreiben die Anforderungen des aktuellen Praxisgenerators. Die [musikalische Revision](MUSICAL_REVIEW.md) dokumentiert konkrete Notenbefunde und Korrekturen. Die folgenden Kursangaben betreffen das archivierte Lernmaterial.
 
-## Grundlage und Grenze
+## Grundlage und Umfang
 
-Lokale Gigajam-Sammlung: `~/Git/Gigajam/`, Debut bis Grade Five.
-Pro Stufe fünf Stücke mit je einer Gitarren- und Klavierpartitur:
-6 Stufen × 5 Stücke × 2 Instrumente = 60 relevante PDFs.
-Bass- und Drum-Partituren sind nicht Ziel dieses Abgleichs.
+Das fachliche Ziel umfasst Notenlesen, Rhythmus, Melodie, Begleitung, Harmonie und Form. Eigenständige Notenbeispiele und vollständige Stücke verbinden diese Fähigkeiten. Die musikalischen Anforderungen werden aus den tatsächlichen Stimmen beurteilt: Tonumfang, Anschlagsdichte, Bewegungen, Koordination und Wiederkehr gehören zusammen.
 
-Alle relevanten Dateien inventarisiert und textuell extrahiert. Erste Seiten aller 60 Partituren visuell gesichtet; ausgewählte Folgeseiten auf Form und Soloanweisungen geprüft. Notenglyphen sind in der Textextraktion teilweise unlesbar. Deshalb ist bloße Textsuche kein Nachweis musikalischer Vollständigkeit. Keine vollständige Takt-für-Takt-Analyse aller Folgeseiten durchgeführt.
+| Fähigkeit | Kurszuordnung | Beispiele |
+|---|---|---|
+| Grundwerte, Pausen, Tonwechsel und Puls | Phase 0: Lesen und Rhythmus | Einführende Gitarren- und Keyboardübungen |
+| Achtel und Akkordbegleitung | Phasen 0–2 | `u2-1`, `ku2-rhythm` |
+| Dämpfung, Powerchords und Akzente | Phasen 0–2 | `u0-4-4`, `u2-6`, `u2-rhythm` |
+| Melodie über Bass/Akkorden und Handrollen | Phasen 0–3 | `ku5-3`, `ku7-4` |
+| Synkopen, Chromatik und Bindungen | Phasen 3–4 | `u3-reading`, `ku3-reading`, `u8-4`, `ku8-4` |
+| Sechzehntel und gebrochene Akkorde | Phasen 3–5 | `u3-4`, `ku3-4`, `u5-2`, `ku5-2` |
+| Shuffle, 12/8 und Formnavigation | Phasen 5–8 | `u5-4`, `ku5-4`, `u7-4`, `ku7-4` |
 
-Die Sammlung enthält Repertoirepartituren, MIDI- und GKM-Dateien. Ein vollständiger Prüfungslehrplan mit Bewertungskriterien, technischen Pflichtaufgaben, Blattspiel- und Gehörprüfungen ist nicht enthalten. Die folgende Zuordnung deckt erkennbare Spielanforderungen ab; sie ist keine Bestätigung einer Prüfungsgleichwertigkeit. Konfidenz: hoch für die genannten sichtbaren Anforderungen, begrenzt für nicht dokumentierte Abschlusskriterien.
-
-Keine Originalpartituren, MIDI-Dateien oder extrahierten Notenfolgen werden in a-minor veröffentlicht. Die Übungen sind eigenständig. P4 ersetzt Standardstimmungsgriffe; Tonhöhen-, Rhythmus- und Formkompetenz bleiben übertragbar. Ein Standardstimmungs-Fingersatz wird dadurch nicht automatisch gelernt.
-
-## Anforderungsmatrix
-
-| Lokaler Beleg | Erkennbare Fähigkeit | a-minor-Zuordnung | Stand |
-|---|---|---|---|
-| Debut: `Fire It Up`, `Tunnel Vision`, beide Instrumente, S. 1 | Ganze/Halbe/Viertel, Tonwechsel, Grundpuls, Vorzeichen | Phase 0: Lesen, Rhythmus | Übungen vorhanden |
-| Grade One: `Wearing the Wire`, `Ain’t No Party`, S. 1 | Gerade Achtel, wechselnde Tonhöhen, Bass/Melodie bzw. Akkordbegleitung | Phase 0–1; vollständige Akkordbegleitung Phase 2 | Übungen `u2-1`, `ku2-rhythm` |
-| Grade Two: `Fire It Up`, `Tunnel Vision`, Gitarre S. 1 | „Muted Guitar“, Akzente, Achtelfolgen; Akkordsymbole über Rhythmusnotation | Erste Handkantendämpfung Phase 0; Powerchords und Akzente Phase 2 | Übungen `u0-4-4`, `u2-6`, `u2-rhythm` |
-| Grade Two/Three: `Lonely Streets`, `Fire It Up`, Piano S. 1 | Bewegte Melodie über Bass/Akkorden; Rollenwechsel der Hände | Zweistimmigkeit Phase 0–1; Umkehrungen und Stimmführung Phase 2–3 | Übungen `ku5-3`, `ku7-4` (linke Melodie) |
-| Grade Three: `Tunnel Vision`, Gitarre S. 1 | Dur/Moll-Akkordwechsel und Rhythmen mit Achteln | Phase 2: Triaden und Rhythmus; Phase 3: wechselnder Bass | Übungen `u2-1`, `u3-1`, `ku2-1`, `ku3-1` |
-| Grade Four: `Berlin Wall`, Gitarre/Piano S. 1 | Lange Pausen, synkopierte Einsätze, chromatische Bewegung, gebundene Noten | Phase 3: Rhythmuslesen/Formzeichen; Phase 4: Harmonik | Übungen `u3-reading`, `ku3-reading`, `u8-4`, `ku8-4` |
-| Grade Four: `Torture`, beide Instrumente, S. 1 | Sechzehntelfiguren, Achtelpausen, Melodie über gehaltenem Bass | Phase 3: Unterteilungen; Phase 5: Figuration | Übungen `u3-4`, `ku3-4`, `u5-2`, `ku5-2` |
-| Grade Four: `Islands of Dreams`, Gitarre/Piano S. 1 | Mollseptakkorde, bewegte Sechzehntel, gebrochene Klavierfiguren | Phase 4: Septakkorde; Phase 5: Arpeggien | Übungen `u4-chords`, `ku4-chords`, `u5-2`, `ku5-3` |
-| Grade Four: `The Way It Is`, Gitarre S. 1 | Mollsept-/Dominantseptakkorde, punktierte Rhythmen und Pausen | Phase 3–4 | Übungen `u3-reading`, `u4-chords`, `ku4-chords` |
-| Grade Four: `The Buzz`, Gitarre S. 1 | Auftakt/Einzähler, Segno/Coda-Zeichen, Clean-/Distortion-Wechsel | Phase 3: Formzeichen; Phase 7–8: Übergänge/Klangwechsel | Übungen `u7-solo`, `ku7-solo`, `u6-4`, `ku6-4` |
-| Grade Five: `Brown Shoes`, Gitarre S. 1–2 | Shuffle, Quint-/Sextwechsel, Wiederholungskürzel, pentatonischer Soloabschnitt, lange Form | Phase 4: Akkorde; Phase 5: ternär; Phase 7–8: Solo/Form | Übungen `u4-6`, `u5-5`, `ku5-5`, `u7-4`, `u7-5` |
-| Grade Five: `Take a Walk With Me`, Gitarre/Piano S. 1 | 12/8, punktierter Viertelpuls, gebrochene Begleitung, Mollpentatonik im Solo | Phase 5: 12/8; Phase 7: Solo; Phase 8: Arrangement | Übungen `u5-4`, `ku5-4`, `u7-4`, `ku7-4` |
-| Grade Five: `Who Says It’s Raining?`, beide Instrumente, S. 1 | Swing, Septakkorde, Offbeat-Begleitung, Melodie über Akkorden | Phase 4–5 und 7 | Übungen `u4-chords`, `ku4-chords`, `u5-5`, `ku5-5` |
-| Grade Five: `Coming Up Shortly`, Piano S. 1 | Triolischer Auftakt, Melodie und Akkorde | Phase 5: Triolen; Phase 7: Formeintritt | Übungen `ku5-groove`, `ku7-1`, `ku7-solo` |
-| Grade Five: `Soul Town`, beide Instrumente, S. 1 | Synkopierte Riffs, Quint-/Sextwechsel, chromatische Stimmen | Phase 3–5 | Übungen `u3-reading`, `u4-6`, `ku4-chords`, `u6-5`, `ku6-5` |
-
-Alle genannten Einheiten sind ausgearbeitet. Die verknüpften Aufgaben vermitteln die erkannten Teilfähigkeiten mit eigenem Material. Das Bestehen dieser Aufgaben belegt weder das Beherrschen sämtlicher Gigajam-Stücke noch eine formale Prüfungsgleichwertigkeit. Phase 0–1 allein deckt Debut bis Grade Five nicht vollständig ab.
-
-Tempi dürfen nicht ausschließlich im langsamen Bereich bleiben. Sichtbare Beispiele: `Lonely Streets` Viertel = 85, `Fire It Up` = 128, `Berlin Wall` = 140, `Who Says It’s Raining?` = 146. Die Tempoeinheiten `u7-5` und `ku7-5` prüfen denselben Satz bei 60, 90 und 120 Vierteln pro Minute; anschließend kürzere Achtelfiguren bis 140–146. Ein langer Durchlauf prüft Form und Klang bei Tempo. Die Einstiegsübungen bleiben langsamer.
+Die Tempostudien `u7-5` und `ku7-5` verwenden denselben Satz bei 60, 90 und 120 Vierteln pro Minute. Vollständige Durchläufe verbinden Tempo, Klang und Form. Die Einstiegsübungen bleiben langsamer.
 
 ## Eigenständiges Zielprofil
 

@@ -11,7 +11,7 @@ module.exports=async(browser,base)=>{
    window.ports=new Map(['band','drums'].map(id=>[id,{id,name:id,manufacturer:'test',state:localStorage.getItem('test-midi-offline')===id?'disconnected':'connected',send:(data,t)=>sent.push({id,data:[...data],t}),clear:()=>sent.push({id,clear:true})}]));
    window.access={outputs:ports};Object.defineProperty(navigator,'requestMIDIAccess',{value:async()=>access});
   });
-  await page.goto(base+'/#/practice');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),4);
+  await page.goto(base+'/#/practice');await page.waitForSelector('.tracks');assert.equal(await page.locator('.track').count(),4);assert(await page.locator('#practice-transport').isHidden());
   assert.deepEqual(await page.locator('nav.top a:not(.brand)').allTextContents(),['Theorie','Praxis','Griffbrett','MIDI','Bookmarks']);
   await page.locator('.track[href="#/practice/keys"]').click();await ready();assert.equal(await page.inputValue('#rep-arrangement'),'solo');
   const stylesByGrade=await page.evaluate(()=>AM.practiceComposer.profiles.map(p=>p.styles));
@@ -19,11 +19,17 @@ module.exports=async(browser,base)=>{
    await page.selectOption('#language',language);
    for(const instrument of ['guitar','keys','bass','drums'])for(let grade=0;grade<6;grade++)for(const style of stylesByGrade[grade]){
     await go(instrument,grade,100+grade,style);
+    assert.equal(await page.locator('nav.top [data-transport]').count(),2);assert.equal(await page.locator('.rep-player [data-transport]').count(),0);
     const p=await page.evaluate(()=>AM.repertoire.current.piece),unique=p.sections.filter((s,i,ss)=>ss.findIndex(x=>x.name===s.name)===i);
     assert.equal(await page.locator('.rep-section').count(),unique.length);assert.equal(await page.locator('.rep-section .measure').count(),p.uniqueBars);
     assert.deepEqual(await page.locator('.rep-section .measure').allTextContents(),Array.from({length:p.uniqueBars},(_,i)=>String(i+1)));
     assert.deepEqual(await page.locator('#rep-section option').evaluateAll(es=>es.slice(1).map(e=>e.value)),unique.map(s=>String(p.sections.findIndex(x=>x.name===s.name))));
     assert(!/undefined|NaN/.test(await page.locator('main').innerText()));assert.equal(await page.locator('[data-done],form[data-log],.check,.rep-log,[data-aid],.practice-info').count(),0);
+    const level=language==='de'?'Stufe':'Level';
+    assert.deepEqual(await page.locator('#practice-grade option').allTextContents(),Array.from({length:6},(_,i)=>level+' '+i));
+    assert.equal(await page.locator('#practice-grade').evaluate(e=>e.parentElement.firstChild.textContent.trim()),level);
+    assert((await page.locator('h1').innerText()).includes(level+' '+grade));assert((await page.locator('main > .lead,#repertoire-piece > .lead').last().innerText()).includes(level+' '+grade));
+    assert(!/\bGrade\b/.test(await page.locator('main').innerText()));
     assert.equal(await page.locator('.practice-description').count(),1);assert.equal(await page.locator('#practice-grade option').count(),6);assert.equal(await page.locator('#practice-style option').count(),7);assert.equal(await page.locator('#practice-style option:enabled').count(),stylesByGrade[grade].length);assert.equal(await page.inputValue('#practice-style'),style);assert.equal(p.style,style);
     const id='0x'+(100+grade).toString(16).padStart(8,'0').toUpperCase();assert.equal(new URL(page.url()).hash.split('/').at(-1),id);assert((await page.title()).includes(id));
     assert(await page.locator('#practice-controls').evaluate(e=>!!e.closest('.rep-player')&&e.previousElementSibling?.getAttribute('href')==='#/midi'));
@@ -32,9 +38,12 @@ module.exports=async(browser,base)=>{
   }
   await page.selectOption('#language','de');
   await go('keys',4,31,'progressive');await page.selectOption('#practice-grade','3');await page.waitForFunction(()=>AM.repertoire.current?.piece.grade===3);await ready();
-  assert.equal(await page.inputValue('#practice-style'),'rock');assert.match(await page.locator('#practice-style option[value=progressive]').innerText(),/ab Grade 4/);assert(await page.locator('#practice-style option[value=progressive]').evaluate(e=>e.disabled));
+  assert.equal(await page.inputValue('#practice-style'),'rock');assert.match(await page.locator('#practice-style option[value=progressive]').innerText(),/ab Stufe 4/);assert(await page.locator('#practice-style option[value=progressive]').evaluate(e=>e.disabled));
   await go('keys',0,31,'blues');assert.equal(await page.inputValue('#practice-style'),'rock');assert(new URL(page.url()).hash.includes('/0/rock/'));
-  await page.evaluate(()=>{const p=AM.practiceComposer.generate(0,91,'rock').piece;p.generatorVersion=3;p.style=p.requestedStyle='gothic';p.id='practice-0-gothic-91';p.title='Archived Gothic';delete p.harmonyScale;AM.bookmarks.toggle(p,'keys',AM.practice.link('keys',0,91,'gothic'));window.legacyNotes=JSON.stringify(p.sections);});
+  await page.evaluate(()=>{const p=AM.practiceComposer.generate(0,91,'rock').piece;p.generatorVersion=3;p.style=p.requestedStyle='gothic';p.id='practice-0-gothic-91';p.title='Stück · Gothic · Grade 0 · 0x0000005B';delete p.harmonyScale;AM.bookmarks.toggle(p,'keys',AM.practice.link('keys',0,91,'gothic'));window.legacyNotes=JSON.stringify(p.sections);});
+  await page.goto(base+'/#/bookmarks');await page.waitForSelector('.bookmark-card');
+  assert((await page.locator('.bookmark-card').innerText()).includes('Stufe 0'));assert(!/\bGrade\b/.test(await page.locator('.bookmark-card').innerText()));
+  assert((await page.evaluate(()=>AM.bookmarks.all()[0].piece.title)).includes('Grade 0'),'stored snapshot retains its original title');
   await page.goto(base+'/#/practice/keys/0/gothic/91');await ready();assert.equal(await page.inputValue('#practice-style'),'gothic');assert.equal(await page.evaluate(()=>JSON.stringify(AM.repertoire.current.piece.sections)===legacyNotes),true);
   await page.click('#practice-new');await page.waitForFunction(()=>AM.repertoire.current?.piece.style==='rock');await ready();await page.evaluate(()=>AM.bookmarks.remove('practice-0-gothic-91:keys'));
   assert.equal(pdfRequests.length,0,'PDF assets stay unloaded until a PDF is requested');
@@ -77,6 +86,11 @@ module.exports=async(browser,base)=>{
   await page.selectOption('#rep-output','browser');await page.selectOption('#rep-arrangement','band');await page.locator('[data-transport=listen]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing');await page.locator('[data-transport=listen]').click();
   await page.evaluate(()=>{window.originals={play:AM.soundfont.play,stop:AM.soundfont.stop,time:Object.getOwnPropertyDescriptor(AM.soundfont,'currentTime')};window.testPosition=0;AM.soundfont.play=async bytes=>{window.playedSequence=AM.midi.decode(bytes);};AM.soundfont.stop=()=>{};Object.defineProperty(AM.soundfont,'currentTime',{configurable:true,get:()=>testPosition});});
   await page.locator('[data-transport=listen]').click();await page.waitForFunction(()=>document.querySelector('[data-transport=listen]').dataset.playing==='playing');
+  await page.evaluate(()=>window.listenButton=document.querySelector('[data-transport=listen]'));
+  await page.setViewportSize({width:390,height:844});await page.waitForSelector('.rep-player [data-transport=listen]');
+  assert(await page.evaluate(()=>listenButton===document.querySelector('[data-transport=listen]')&&listenButton.dataset.playing==='playing'));
+  await page.setViewportSize({width:1920,height:1200});await page.waitForSelector('nav.top [data-transport=listen]');
+  assert(await page.evaluate(()=>listenButton===document.querySelector('[data-transport=listen]')&&listenButton.dataset.playing==='playing'));
   for(const marker of await page.evaluate(()=>AM.repertoire.current.sequence.markers)){
    await page.evaluate(t=>testPosition=t,marker.t+.05);await page.waitForFunction(label=>document.querySelectorAll('.rep-section.current').length===1&&document.querySelector('.rep-section.current h2').textContent.trim().startsWith(label+' '),marker.label);
   }
@@ -85,6 +99,7 @@ module.exports=async(browser,base)=>{
   await page.setViewportSize({width:390,height:844});
   for(const instrument of ['guitar','keys','bass','drums'])for(let grade=0;grade<6;grade++){
    await go(instrument,grade,900+grade,'progressive');assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+   assert.equal(await page.locator('.rep-player [data-transport]').count(),2);assert.equal(await page.locator('nav.top [data-transport]').count(),0);
    assert((await page.locator('.rep-section .svg').evaluateAll(es=>es.map(e=>e.querySelectorAll('.measure').length))).every(n=>n>0&&n<=4));
   }
   await page.screenshot({path:'test-results/practice-mobile.png',fullPage:true});assert(pdfRequests.length>0,'blues PDF checks loaded the PDF assets');
@@ -99,6 +114,12 @@ module.exports=async(browser,base)=>{
    }
   }
   await go('keys',5,11);await page.screenshot({path:'test-results/practice-desktop.png',fullPage:true});assert.equal(popups,0);assert.deepEqual(errors,[]);
+  for(const width of [1920,900,601]){
+   await page.setViewportSize({width,height:900});await page.waitForSelector('nav.top [data-transport=listen]');
+   assert(await page.evaluate(()=>{const buttons=document.querySelector('#practice-transport').getBoundingClientRect(),language=document.querySelector('.language').getBoundingClientRect();return buttons.right<=language.left&&Math.abs(buttons.top+buttons.height/2-language.top-language.height/2)<2&&document.documentElement.scrollWidth<=innerWidth;}),'buttons remain left of the language control');
+  }
+  await page.goto(base+'/#/theory');await page.waitForSelector('.toc');
+  for(const width of [390,1920]){await page.setViewportSize({width,height:900});assert(await page.locator('#practice-transport').isHidden());assert.equal(await page.locator('nav.top [data-transport]').count(),0);}
   console.log('PASS 240 available style/grade/instrument/language combinations, grade-dependent styles and legacy scores, four blues PDFs, immutable bookmarks with JSON/CSV backup and import, MIDI persistence/reconnect, solo/band playback, variable forms, four-bar rows and 48 single-page direct PDF downloads');
  }finally{await context.close();}
 };

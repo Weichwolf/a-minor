@@ -29,7 +29,7 @@ for ax,row,title in zip(axes,rows,['Vorher','Gitarre −3 dB, dezenter Hall']):
     for role,label in enumerate(['Keyboard','Bass','Gitarre','Drums']):ax.semilogx(centres,np.array(row['bandsDb'])[:,role],label=label)
     ax.set(title=title,xlabel='Frequenz [Hz]',xlim=(30,18000),ylim=(-95,-30));ax.grid(alpha=.2);ax.legend(fontsize=8)
 axes[0].set_ylabel('RMS je Terzband [dBFS]')
-fig.suptitle('Praxis · Grade 5 Barock · 0x5EEC6550')
+fig.suptitle('Praxis · Stufe 5 Barock · 0x5EEC6550')
 fig.text(.5,.01,'Vollständiges Stück + 3 s Ausklang · trockene Stimmen · Stereo-Leistungsmittel · kein LUFS-/Hörurteil',ha='center',fontsize=8)
 fig.tight_layout(rect=(0,.04,1,.95));fig.savefig(str(target)+'.png',dpi=150);fig.savefig(str(target)+'.svg');plt.close(fig)
 pathlib.Path(str(target)+'.json').write_text(json.dumps({'piece':'#/practice/guitar/5/baroque/0x5EEC6550','method':info['method'],'spectralMethod':'4096-sample Hann, 50% overlap, stereo mean power per third-octave band; mix includes effects and 0.6 master, before compressor.','centresHz':centres.tolist(),'roles':info['roles'],'before':rows[0],'after':rows[1]},indent=2)+'\n')

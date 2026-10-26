@@ -59,6 +59,9 @@ svg.fb{width:100%;height:auto;display:block}.fb .wood{fill:var(--wood)}.fb .fret
 .vars{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .var{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:2px;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:8px 12px}.var span{font-size:.85rem;color:var(--mute)}.var:hover{border-color:var(--acc)}.var.on{border-color:var(--root);background:#fff4f0}
 .language{margin-left:auto;display:flex;align-items:center;gap:8px;font-size:.85rem}
+.rep-transport,.top-tools{display:contents}
+#practice-transport[hidden]{display:none}
+@media(min-width:601px){.top-tools{display:flex;align-items:center;gap:12px;margin-left:auto}#practice-transport:not([hidden]){display:flex;align-items:center;gap:8px}#practice-transport button{white-space:nowrap}#practice-transport [data-playing]{background:var(--root);border-color:var(--root)}}
 .position{font-weight:600;color:var(--ink);border-left:3px solid var(--acc);padding-left:10px}
 .diagram{margin:12px 0}.diagram summary{cursor:pointer;color:var(--acc)}
 .diagram>div{overflow-x:auto}

@@ -182,10 +182,10 @@ Eigenständiges Lehrbuch unter **Theorie** ([a-minor.ch/#/theory](https://a-mino
 
 Das letzte Modell umfasst 32 Takte. Das eigene Abschlussstück umfasst mindestens ebenso viele Takte, einen wiederkehrenden Gedanken, Kontrast, selbst gespielten Bass, eine dreischichtige Stelle und eine Coda. Drei getrennte Aufnahmen prüfen Wiederholbarkeit: mit Drums, allein, mit einer improvisierten Vier-Takt-Variante.
 
-Die technischen Prüfungen sichern Notendaten und Darstellung ab. Reale Handhaltung, Klangbalance, Intonation beim Bending und Ausdruck müssen am Instrument beziehungsweise an der Aufnahme beurteilt werden. Der Gigajam-Abgleich dokumentiert erkennbare Repertoirefähigkeiten, keine formale Prüfungszulassung.
+Die technischen Prüfungen sichern Notendaten und Darstellung ab. Reale Handhaltung, Klangbalance, Intonation beim Bending und Ausdruck müssen am Instrument beziehungsweise an der Aufnahme beurteilt werden. Die Stufenprofile beschreiben den Schwierigkeitsaufbau des Generators.
 
 Die Musiklehre endet mit den fünf Referenzen und einem Kapitel über Hören, Analysieren und Schreiben: Hörmethode, Analyse in vier Ebenen, der siebenstufige Arbeitsweg, Rollen aus einer Hand, eigene Regeln, Dokumentation, Repertoire und Set; die Ausführung gehört in die Instrumentalspuren und ins eigene Log.
 
 ## Aktuelle Revision
 
-Die Referenzen leiten Geschmack und Stil; sie begrenzen das musikalische Material nicht. [Gigajam-Fähigkeiten und Transfer](GIGAJAM_COVERAGE.md) · [Musikalische und fachliche Prüfung](MUSICAL_REVIEW.md).
+Die Referenzen leiten Geschmack und Stil; sie begrenzen das musikalische Material nicht. [Stufenprofile](PRACTICE_LEVELS.md) · [Musikalische und fachliche Prüfung](MUSICAL_REVIEW.md).

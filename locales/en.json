@@ -2644,7 +2644,7 @@
     },
     "e7-5-3": {
       "title": "Original application · Tempo and longer performances",
-      "instructions": "Build a 32-bar form first, then a long version with introduction, hook, answer, solo, return and coda. Write the actual bar order including repeats and long rests. Transfer target: 96–144 played 4/4 bars, for example 4 × 24 = 96 or 4 × 36 = 144. Play the complete form at a fixed tempo without restarting. Then perform a complete local Gigajam piece at its written tempo; prepare difficult passages separately. Guitar: choose P4 voicings for chord symbols and switch between single notes and accompaniment. Keyboard: read both clefs and combine melody with rhythmic chords. If bass notes fall below C2, raise the entire affected bass phrase one octave and check against the right hand and harmony. Pass criteria: stable form, rests, changes, balance and tempo in two recordings on different days.Read the tempo unit explicitly: Take a Walk With Me is in 12/8 at quarter = 85. A dotted-quarter click therefore needs 85 / 1.5 ≈ 56.67, not 85. Follow the count-in and pickup in your own instrumental part.",
+      "instructions": "Build a 32-bar form first, then a long version with introduction, hook, answer, solo, return and coda. Write the actual bar order including repeats and long rests. Transfer target: 96–144 played 4/4 bars, for example 4 × 24 = 96 or 4 × 36 = 144. Play the complete form at a fixed tempo without restarting. Then perform a complete piece at the same level at its written tempo; prepare difficult passages separately. Guitar: choose P4 voicings for chord symbols and switch between single notes and accompaniment. Keyboard: read both clefs and combine melody with rhythmic chords. If bass notes fall below C2, raise the entire affected bass phrase one octave and check against the right hand and harmony. Pass criteria: stable form, rests, changes, balance and tempo in two recordings on different days.Read the tempo unit explicitly: Take a Walk With Me is in 12/8 at quarter = 85. A dotted-quarter click therefore needs 85 / 1.5 ≈ 56.67, not 85. Follow the count-in and pickup in your own instrumental part.",
       "checklist": [
         "Long pass without losing form or releases?",
         "Notated, recorded and read again on another practice day?"
@@ -2669,7 +2669,7 @@
     },
     "ke7-5-3": {
       "title": "Original application · Tempo and longer performances",
-      "instructions": "Build a 32-bar form first, then a long version with introduction, hook, answer, solo, return and coda. Write the actual bar order including repeats and long rests. Transfer target: 96–144 played 4/4 bars, for example 4 × 24 = 96 or 4 × 36 = 144. Play the complete form at a fixed tempo without restarting. Then perform a complete local Gigajam piece at its written tempo; prepare difficult passages separately. Guitar: choose P4 voicings for chord symbols and switch between single notes and accompaniment. Keyboard: read both clefs and combine melody with rhythmic chords. If bass notes fall below C2, raise the entire affected bass phrase one octave and check against the right hand and harmony. Pass criteria: stable form, rests, changes, balance and tempo in two recordings on different days.Read the tempo unit explicitly: Take a Walk With Me is in 12/8 at quarter = 85. A dotted-quarter click therefore needs 85 / 1.5 ≈ 56.67, not 85. Follow the count-in and pickup in your own instrumental part.",
+      "instructions": "Build a 32-bar form first, then a long version with introduction, hook, answer, solo, return and coda. Write the actual bar order including repeats and long rests. Transfer target: 96–144 played 4/4 bars, for example 4 × 24 = 96 or 4 × 36 = 144. Play the complete form at a fixed tempo without restarting. Then perform a complete piece at the same level at its written tempo; prepare difficult passages separately. Guitar: choose P4 voicings for chord symbols and switch between single notes and accompaniment. Keyboard: read both clefs and combine melody with rhythmic chords. If bass notes fall below C2, raise the entire affected bass phrase one octave and check against the right hand and harmony. Pass criteria: stable form, rests, changes, balance and tempo in two recordings on different days.Read the tempo unit explicitly: Take a Walk With Me is in 12/8 at quarter = 85. A dotted-quarter click therefore needs 85 / 1.5 ≈ 56.67, not 85. Follow the count-in and pickup in your own instrumental part.",
       "checklist": [
         "Long pass without losing form or releases?",
         "Notated, recorded and read again on another practice day?"
@@ -3695,7 +3695,7 @@
     "repertoireGuitar": "Six strings in P4: E2 A2 D3 G3 C4 F4. Riffs, power chords, melodies and solos with a band.",
     "repertoireGuitarAttack": "Pick the riffs and strike power chords together. Mute unused strings and leave rests clear. The band bass carries the foundation.",
     "repertoireKeys": "49 keys, C2–C6. Melody and accompaniment with both hands.",
-    "fivePieces": "5 pieces per grade",
+    "fivePieces": "5 pieces per level",
     "pieces": "pieces",
     "repertoireGrade0": "Tone, pulse and first voices",
     "repertoireGrade1": "Motifs, modal colours and chords",
@@ -3734,8 +3734,8 @@
     "repertoireRoutingLead": "Practice uses four MIDI channels. Choose separate outputs for each part when needed. The default output also serves the MIDI test. Disconnected devices remain remembered.",
     "defaultOutput": "Default output",
     "practiceMode": "Practice",
-    "practiceLead": "Musical pieces for confident reading and playing. Choose an instrument, grade and style; each piece has a focused musical feature.",
-    "difficulty": "Difficulty",
+    "practiceLead": "Musical pieces for confident reading and playing. Choose an instrument, level and style; each piece has a focused musical feature. Levels describe the difficulty progression within this generator.",
+    "difficulty": "Level",
     "newPracticePiece": "↻ New piece",
     "practicePiece": "Piece",
     "practiceGrade0": "Basic values and rests; power chords, right-hand melody/triads, root bass and a simple groove.",
@@ -3911,7 +3911,7 @@
     "guitarClean": "Clean",
     "guitarDrive": "Drive",
     "style_blues": "Blues",
-    "styleFromGrade": "from Grade {grade}",
+    "styleFromGrade": "from Level {grade}",
     "scale_minorBlues": "Minor blues scale",
     "scale_majorBlues": "Major blues scale",
     "scale_majorPentatonic": "Major pentatonic",

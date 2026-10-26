@@ -2216,9 +2216,7 @@ L 729.99125 110.083438
    </g>
   </g>
   <g id="text_27">
-   <!-- Praxis · Grade 5 Barock · 0x5EEC6550 -->
-   <g transform="translate(281.833125 14.878125) scale(0.12 -0.12)">
-    <defs>
+<defs>
      <path id="DejaVuSans-33" d="M 1259 4147 
 L 1259 2394 
 L 2053 2394 
@@ -2334,43 +2332,7 @@ Q 3797 4528 4122 4306
 z
 " transform="scale(0.015625)"/>
     </defs>
-    <use xlink:href="#DejaVuSans-33"/>
-    <use xlink:href="#DejaVuSans-55" transform="translate(58.546875 0)"/>
-    <use xlink:href="#DejaVuSans-44" transform="translate(99.65625 0)"/>
-    <use xlink:href="#DejaVuSans-5b" transform="translate(160.9375 0)"/>
-    <use xlink:href="#DejaVuSans-4c" transform="translate(220.125 0)"/>
-    <use xlink:href="#DejaVuSans-56" transform="translate(247.90625 0)"/>
-    <use xlink:href="#DejaVuSans-3" transform="translate(300 0)"/>
-    <use xlink:href="#DejaVuSans-79" transform="translate(331.78125 0)"/>
-    <use xlink:href="#DejaVuSans-3" transform="translate(363.5625 0)"/>
-    <use xlink:href="#DejaVuSans-2a" transform="translate(395.34375 0)"/>
-    <use xlink:href="#DejaVuSans-55" transform="translate(472.828125 0)"/>
-    <use xlink:href="#DejaVuSans-44" transform="translate(513.9375 0)"/>
-    <use xlink:href="#DejaVuSans-47" transform="translate(575.21875 0)"/>
-    <use xlink:href="#DejaVuSans-48" transform="translate(638.703125 0)"/>
-    <use xlink:href="#DejaVuSans-3" transform="translate(700.234375 0)"/>
-    <use xlink:href="#DejaVuSans-18" transform="translate(732.015625 0)"/>
-    <use xlink:href="#DejaVuSans-3" transform="translate(795.640625 0)"/>
-    <use xlink:href="#DejaVuSans-25" transform="translate(827.421875 0)"/>
-    <use xlink:href="#DejaVuSans-44" transform="translate(896.03125 0)"/>
-    <use xlink:href="#DejaVuSans-55" transform="translate(957.3125 0)"/>
-    <use xlink:href="#DejaVuSans-52" transform="translate(996.21875 0)"/>
-    <use xlink:href="#DejaVuSans-46" transform="translate(1057.40625 0)"/>
-    <use xlink:href="#DejaVuSans-4e" transform="translate(1112.390625 0)"/>
-    <use xlink:href="#DejaVuSans-3" transform="translate(1170.296875 0)"/>
-    <use xlink:href="#DejaVuSans-79" transform="translate(1202.078125 0)"/>
-    <use xlink:href="#DejaVuSans-3" transform="translate(1233.859375 0)"/>
-    <use xlink:href="#DejaVuSans-13" transform="translate(1265.640625 0)"/>
-    <use xlink:href="#DejaVuSans-5b" transform="translate(1329.265625 0)"/>
-    <use xlink:href="#DejaVuSans-18" transform="translate(1388.453125 0)"/>
-    <use xlink:href="#DejaVuSans-28" transform="translate(1452.078125 0)"/>
-    <use xlink:href="#DejaVuSans-28" transform="translate(1515.265625 0)"/>
-    <use xlink:href="#DejaVuSans-26" transform="translate(1578.453125 0)"/>
-    <use xlink:href="#DejaVuSans-19" transform="translate(1648.28125 0)"/>
-    <use xlink:href="#DejaVuSans-18" transform="translate(1711.90625 0)"/>
-    <use xlink:href="#DejaVuSans-18" transform="translate(1775.53125 0)"/>
-    <use xlink:href="#DejaVuSans-13" transform="translate(1839.15625 0)"/>
-   </g>
+   <text x="396" y="14.878125" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="12">Praxis · Stufe 5 Barock · 0x5EEC6550</text>
   </g>
   <g id="text_28">
    <!-- Vollständiges Stück + 3 s Ausklang · trockene Stimmen · Stereo-Leistungsmittel · kein LUFS-/Hörurteil -->

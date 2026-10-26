@@ -3,7 +3,7 @@ AM.practiceGenerator = (() => {
   const N=AM.notation,M=AM.music,MIDI=AM.midi;
   const part=(bar,role)=>role==='bass'?{notes:bar.bass}:role==='drums'?bar.drumPart:bar[role];
   function encode(piece){
-    const events=[{tick:0,data:MIDI.text(3,'a-minor · '+piece.form+' · Grade '+piece.grade),order:-10}],meter=M.meter(piece.time),bars=piece.sections.flatMap(s=>s.bars),endTick=Math.round(bars.length*meter.len*480);
+    const events=[{tick:0,data:MIDI.text(3,'a-minor · '+piece.form+' · Level '+piece.grade),order:-10}],meter=M.meter(piece.time),bars=piece.sections.flatMap(s=>s.bars),endTick=Math.round(bars.length*meter.len*480);
     // Clean playback also applies to saved scores with older guitar programs.
     const programFor=(role,bar)=>role==='guitar'?27:bar?.program??piece.programs[role];
     const volumes={guitar:84,keys:82,bass:88,drums:80};

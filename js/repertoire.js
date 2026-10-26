@@ -1,20 +1,27 @@
 AM.repertoire = (() => {
   const I=AM.i18n,t=I.t,esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const labels={guitar:'guitarInstrument',keys:'keyboardInstrument',bass:'bassInstrument',drums:'drums'};
-  let catalog,run=0,mount=0,controls,external,timer,stopAll=()=>{},draws=[],current;
+  let catalog,run=0,mount=0,controls,transport,external,timer,stopAll=()=>{},draws=[],current,clearTransport=()=>{};
   const cache=new Map();
   const json=async url=>{const r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw Error('repertoireLoadError');return r.json();};
   const ready=json('data/repertoire.json').then(data=>catalog=data);
   const link=(instrument,grade)=>'#/repertoire/'+instrument+(grade===undefined?'':'/'+grade);
   const title=instrument=>t(labels[instrument]);
-  function stop(){run++;clearInterval(timer);external?.stop();external=null;AM.soundfont.stop();if(controls?.isConnected){controls.querySelectorAll('[data-transport]').forEach(b=>{b.textContent=t(b.dataset.transport);delete b.dataset.playing;});controls.querySelector('.rep-status').textContent='';}}
+  function stop(){run++;clearInterval(timer);external?.stop();external=null;AM.soundfont.stop();if(transport?.isConnected)transport.querySelectorAll('[data-transport]').forEach(b=>{b.textContent=t(b.dataset.transport);delete b.dataset.playing;});if(controls?.isConnected)controls.querySelector('.rep-status').textContent='';}
+  function placeTransport(source){
+    const slot=document.querySelector('#practice-transport');if(!source||!slot)return;
+    const media=window.matchMedia('(min-width:601px)'),row=transport.parentElement,buttons=transport;
+    const move=()=>{if(media.matches){slot.replaceChildren(buttons);slot.hidden=false;}else{row.prepend(buttons);slot.hidden=true;}};
+    move();media.addEventListener('change',move);
+    clearTransport=()=>{media.removeEventListener('change',move);slot.replaceChildren();slot.hidden=true;};
+  }
   const home=(spec='')=>AM.practice.page(spec.split('/')[0]);
   function page(spec) {
     const [instrument,id]=spec.split('/'),piece=catalog.pieces.find(p=>p.id===id);
     if(!['guitar','keys'].includes(instrument)||!piece)return home();
     const token=++mount;draws=[];current=null;
     setTimeout(()=>load(piece,instrument,token),0);
-    return `<nav class="crumbs"><a href="#/practice">${t('practiceMode')}</a> › <a href="${link(instrument,piece.grade)}">${title(instrument)} · Grade ${piece.grade}</a></nav><div id="repertoire-piece"><h1>${esc(piece.title)}</h1><p role="status">${t('loadingPiece')}</p></div>`;
+    return `<nav class="crumbs"><a href="#/practice">${t('practiceMode')}</a> › <a href="${link(instrument,piece.grade)}">${title(instrument)} · ${t('difficulty')} ${piece.grade}</a></nav><div id="repertoire-piece"><h1>${esc(piece.title)}</h1><p role="status">${t('loadingPiece')}</p></div>`;
   }
   function generated(piece,instrument,score,bytes,options) {
     const token=++mount;draws=[];current=null;
@@ -45,13 +52,15 @@ AM.repertoire = (() => {
       current={piece,instrument,sequence,bytes,score};
       const midiHref=source?URL.createObjectURL(new Blob([bytes],{type:'audio/midi'})):encodeURI(piece.midi);
       if(source)current.downloadURL=midiHref;
-      target.innerHTML=`<h1>${esc(piece.title)}</h1><p class="lead">${title(instrument)} · Grade ${piece.grade} · ${esc(piece.key)} · ${piece.time} · ${source?writtenBars:piece.bars} ${t('bars')} · ${AM.music.meter(piece.time).symbol} = ${source?'<span id="rep-current-tempo">'+piece.tempo+'</span>':piece.tempo}${source?' · <span id="rep-duration"></span>':''}</p>${source?source.infoHTML:`<p>${esc(piece.description[I.language][instrument])}</p>`}${source?`<p class="practice-form small">${esc(source.formText)}</p>`:''}
-      <div class="rep-player player"><div class="row"><button data-transport="listen">${t('listen')}</button><button data-transport="practice">${t('practice')}</button><label>${t('playbackDestination')} <select id="rep-output"><option value="browser"${preferences.output==='midi'?'':' selected'}>${t('browserAudio')}</option><option value="midi"${preferences.output==='midi'?' selected':''}>MIDI Out</option></select></label><a href="#/midi">${t('midiSetup')}</a>${source?.controlsHTML??''}</div>
+      target.innerHTML=`<h1>${esc(piece.title)}</h1><p class="lead">${title(instrument)} · ${t('difficulty')} ${piece.grade} · ${esc(piece.key)} · ${piece.time} · ${source?writtenBars:piece.bars} ${t('bars')} · ${AM.music.meter(piece.time).symbol} = ${source?'<span id="rep-current-tempo">'+piece.tempo+'</span>':piece.tempo}${source?' · <span id="rep-duration"></span>':''}</p>${source?source.infoHTML:`<p>${esc(piece.description[I.language][instrument])}</p>`}${source?`<p class="practice-form small">${esc(source.formText)}</p>`:''}
+      <div class="rep-player player"><div class="row"><span class="rep-transport"><button data-transport="listen">${t('listen')}</button><button data-transport="practice">${t('practice')}</button></span><label>${t('playbackDestination')} <select id="rep-output"><option value="browser"${preferences.output==='midi'?'':' selected'}>${t('browserAudio')}</option><option value="midi"${preferences.output==='midi'?' selected':''}>MIDI Out</option></select></label><a href="#/midi">${t('midiSetup')}</a>${source?.controlsHTML??''}</div>
       <div class="row"><label>${t('tempo')} <input id="rep-tempo" type="number" min="30" step="any" max="${240/AM.music.meter(piece.time).q}" value="${piece.tempo}"> ${AM.music.meter(piece.time).symbol}/min</label><label>${t('section')} <select id="rep-section"><option value="all">${t('wholePiece')}</option>${sections.map(s=>`<option value="${s.playbackIndices[0]}">${esc(s.name)} · ${s.startBar}–${s.startBar+s.bars.length-1}</option>`).join('')}</select></label><label><input id="rep-loop" type="checkbox"> ${t('loop')}</label><label><input id="rep-count" type="checkbox" checked> ${t('countIn')}</label></div>
       <div class="row">${source?`<label>${t('arrangement')} <select id="rep-arrangement"><option value="solo"${arrangement==='solo'?' selected':''}>Solo</option><option value="band"${arrangement==='band'?' selected':''}>Band</option></select></label>`:''}<label>${t('guideVoice')} <select id="rep-guide"><option value="0"${guide===0?' selected':''}>${t('muted')}</option><option value="0.25"${guide===.25?' selected':''}>${t('quiet')}</option><option value="1"${guide===1?' selected':''}>${t('normal')}</option></select></label><div class="rep-mixer">${Object.entries(AM.midi.channels).map(([role,ch])=>`<label>${title(role)}<input type="range" data-mix="${ch}" min="0" max="100" step="1" value="${Math.round(levels[ch]*100)}"><output>${Math.round(levels[ch]*100)}%</output></label>`).join('')}</div></div><p class="rep-status small" role="status"></p><progress id="rep-progress" max="${sequence.duration}" value="0" aria-label="${t('playbackProgress')}"></progress></div>
       <div class="row rep-downloads"><a download="${esc(piece.title)}.mid" href="${midiHref}">MIDI</a>${source?`<button id="rep-pdf">${t('downloadScore')}</button>`:`<a download href="${encodeURI(piece.dir+'/'+piece.title+' '+(instrument==='guitar'?'Guitar':'Keyboard')+'.pdf')}">PDF · ${title(instrument)}</a>`}${source?.partOptions?`<label>${t('instrument')} <select id="rep-part">${source.partOptions.map(p=>`<option value="${p.href}"${p.id===instrument?' selected':''}>${p.title}</option>`).join('')}</select></label>`:`<a href="${'#/piece/'+(instrument==='guitar'?'keys':'guitar')+'/'+piece.id}">${t('otherPart')}</a>`}</div>
       <div id="rep-scores">${sections.map(s=>`<section class="rep-section" data-section="${s.playbackIndices[0]}"><h2>${esc(s.name)} <span class="small">· ${t('bars')} ${s.startBar}–${s.startBar+s.bars.length-1} · ${s.time}</span></h2>${Array.from({length:source?Math.ceil(s.bars.length/4):1},()=>'<div class="scorewrap"><div class="svg"></div></div>').join('')}</section>`).join('')}</div>`;
       controls=target.querySelector('.rep-player');
+      transport=controls.querySelector('.rep-transport');placeTransport(source);
+      const transportButtons=[...transport.querySelectorAll('[data-transport]')];
       target.querySelector('#rep-part')?.addEventListener('change',e=>{location.hash=e.target.value;});
       target.querySelector('#rep-pdf')?.addEventListener('click',async event=>{
         const button=event.currentTarget,status=target.querySelector('.rep-status');
@@ -75,7 +84,7 @@ AM.repertoire = (() => {
         for(const svg of target.querySelectorAll('svg.score')){const group=document.createElementNS('http://www.w3.org/2000/svg','g');for(const child of [...svg.children])if(!child.matches('.measure,.chord,.section,.program-label'))group.append(child);svg.append(group);const bounds=group.getBBox(),shift=Math.max(0,bounds.y-52);group.setAttribute('transform',`translate(0,-${shift})`);const box=svg.getBBox(),width=svg.viewBox.baseVal.width;svg.setAttribute('viewBox',`0 0 ${width} ${Math.max(60,box.y+box.height+16)}`);}
       };draws=[draw];draw();
       const start=async mode=>{
-        const button=controls.querySelector(`[data-transport="${mode}"]`);if(button.dataset.playing){stopAll();return;}
+        const button=transportButtons.find(b=>b.dataset.transport===mode);if(button.dataset.playing){stopAll();return;}
         stopAll();activeMode=mode;const ticket=run,status=controls.querySelector('.rep-status'),input=controls.querySelector('#rep-tempo');if(!input.reportValidity())return;
         levels[AM.midi.channels[instrument]]=mode==='practice'?guide:1;updateMix();
         const index=controls.querySelector('#rep-section').value,section=index==='all'?score.sections[0]:score.sections[Number(index)],from=index==='all'?0:sequence.markers[Number(index)].t,to=index==='all'?sequence.duration:sequence.markers[Number(index)+1]?.t??sequence.duration;
@@ -95,7 +104,7 @@ AM.repertoire = (() => {
           timer=setInterval(()=>{if(!target.isConnected){stopAll();return;}const position=Math.max(from,Math.min(to,from+(external?.currentTime??AM.soundfont.currentTime)-delay));target.querySelector('#rep-progress').value=position;target.querySelectorAll('.rep-section').forEach((el,i)=>el.classList.toggle('current',sections[i].playbackIndices.some(n=>position>=sequence.markers[n].t&&position<(sequence.markers[n+1]?.t??sequence.duration))));},100);
         }catch(error){if(ticket===run){stop();status.textContent=t(error.message)||t('soundfontLoadError');}}
       };
-      controls.querySelectorAll('[data-transport]').forEach(button=>button.onclick=()=>start(button.dataset.transport));
+      transportButtons.forEach(button=>button.onclick=()=>start(button.dataset.transport));
       const updateDuration=()=>{const el=target.querySelector('#rep-duration');if(el){const value=controls.querySelector('#rep-tempo').valueAsNumber,seconds=Math.round(sequence.duration*piece.tempo/value);if(!Number.isFinite(seconds)||seconds<0){el.textContent='—';return;}target.querySelector('#rep-current-tempo').textContent=String(value);el.textContent=t('pieceDuration').replace('{duration}',Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0'));}};
       updateDuration();
       controls.querySelector('#rep-tempo').oninput=updateDuration;
@@ -103,7 +112,7 @@ AM.repertoire = (() => {
       document.title=piece.title+' · '+title(instrument)+' · a-minor';
       target.dataset.ready='true';
       source?.onReady?.(target);
-    }catch(error){if(target.isConnected&&token===mount)target.innerHTML=`<p role="alert">${t('repertoireLoadError')}</p>`;}
+    }catch(error){if(target.isConnected&&token===mount){clearTransport();clearTransport=()=>{};transport=null;target.innerHTML=`<p role="alert">${t('repertoireLoadError')}</p>`;}}
   }
-  return {ready,home,page,generated,stop,configure:o=>{stopAll=o.stopAll;},resize:()=>draws.forEach(fn=>fn()),leave:()=>{mount++;draws=[];if(current?.downloadURL)URL.revokeObjectURL(current.downloadURL);current=null;},get current(){return current;}};
+  return {ready,home,page,generated,stop,configure:o=>{stopAll=o.stopAll;},resize:()=>draws.forEach(fn=>fn()),leave:()=>{mount++;draws=[];clearTransport();clearTransport=()=>{};transport=null;if(current?.downloadURL)URL.revokeObjectURL(current.downloadURL);current=null;},get current(){return current;}};
 })();

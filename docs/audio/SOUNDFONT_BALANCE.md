@@ -2,7 +2,7 @@
 
 ## Praxis-Clean-Gitarre · 2026-10-13
 
-Vergleich für `#/practice/guitar/5/baroque/0x5EEC6550`, Grade 5 Barock, Form ABSCABSCBO, Vierteltempo 114. Vollständiges Stück (151,58 s) plus drei Sekunden Ausklang, alle Mixerregler auf 100 %. Ausgangspunkt ist die Clean-Umstellung in Commit `212746d`. Die früheren Repertoiremessungen unten bleiben historische Messungen.
+Vergleich für `#/practice/guitar/5/baroque/0x5EEC6550`, Stufe 5 Barock, Form ABSCABSCBO, Vierteltempo 114. Vollständiges Stück (151,58 s) plus drei Sekunden Ausklang, alle Mixerregler auf 100 %. Ausgangspunkt ist die Clean-Umstellung in Commit `212746d`. Die früheren Repertoiremessungen unten bleiben historische Messungen.
 
 ![Spektrum des Praxisstücks vor und nach der Pegelkorrektur](practice-5EEC6550.png)
 

@@ -6,11 +6,11 @@ Stand: 2026-09-22. Aus dem Vorschlag umgesetzt: 30 Kompositionen, 30 gemeinsame 
 
 Menü: **Kurs · Repertoire · Theorie · Griffbrett · MIDI · Log**.
 
-Repertoire → Gitarre oder Keyboard → Grade 0–5 → jeweils fünf Stücke.
+Repertoire → Gitarre oder Keyboard → Stufe 0–5 → jeweils fünf Stücke.
 
-6 Grade × 5 Kompositionen = 30 Stücke. Jedes besitzt einen Gitarren- und einen Keyboardpart: 30 × 2 = 60 Übeparts. Ein gemeinsames Quartettarrangement und genau eine MIDI-Datei pro Stück. In beiden Instrumentansichten läuft dieselbe Datei; allein die gewählte Übestimme wird stumm oder leiser gestellt.
+6 Stufe × 5 Kompositionen = 30 Stücke. Jedes besitzt einen Gitarren- und einen Keyboardpart: 30 × 2 = 60 Übeparts. Ein gemeinsames Quartettarrangement und genau eine MIDI-Datei pro Stück. In beiden Instrumentansichten läuft dieselbe Datei; allein die gewählte Übestimme wird stumm oder leiser gestellt.
 
-Die Grade sind interne Repertoirestufen. Die Zuordnung folgt dem bestehenden Kurs; sie beansprucht keine Gleichwertigkeit mit einer Gigajam-Prüfung. Grundlage des Vergleichs: lokale Sammlung und `COURSE_AUDIT.md`.
+Die Stufen beschreiben den Schwierigkeitsaufbau dieses Repertoires. Die Zuordnung folgt den musikalischen und technischen Anforderungen der Stücke.
 
 ## Komposition
 
@@ -32,7 +32,7 @@ Alle Stücktitel sind Englisch und bleiben in beiden Oberflächensprachen gleich
 
 Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ Achtel. Taktzahlen zählen den gespielten Ablauf einschließlich Wiederholungen, ohne Einzähler. Zahlen an Formbuchstaben geben die Taktzahl des Abschnitts an; A′ verändert A. C bezeichnet hier einen Schlussabschnitt.
 
-### Grade 0 · Ton, Puls und erste Stimmen — Kursphase 0
+### Stufe 0 · Ton, Puls und erste Stimmen — Kursphase 0
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
@@ -42,7 +42,7 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Beneath the Ash | A-Moll, 4/4, ♩ = 68 | A4–B4–A4–Coda4 / 16 | Einstimmiges A-Moll-Riff, klare Pausen und Antwort ans Keyboard | Gehaltener Ton links, Viertelmotiv rechts |
 | Last Light | E-Moll, 4/4, ♩ = 62 | A4–B4–A4–Coda4 / 16 | Singendes Motiv, bewusste Tonenden und Übergabe der Melodie | Gemeinsame Einsätze, unabhängige Tonenden, Dynamikbogen |
 
-### Grade 1 · Motive, modale Farben und Akkorde — Kursphasen 1–2
+### Stufe 1 · Motive, modale Farben und Akkorde — Kursphasen 1–2
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
@@ -52,7 +52,7 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Iron Rain | E-Moll, 4/4, ♩ = 100 | A8–B4–A4–Coda4 / 20 | Powerchords, Handkantendämpfung und offene Akzente | Kurze Akkorde und gezielte Offbeat-Antworten |
 | November Window | A-Moll, 3/4, ♩ = 72 | A8–B8–Coda8 / 24 | Dreiklangsmelodie und abgesetzte Powerchords im Dreierpuls | Akkordwechsel mit singender Oberstimme |
 
-### Grade 2 · Bewegter Bass und rhythmische Kontur — Kursphase 3
+### Stufe 2 · Bewegter Bass und rhythmische Kontur — Kursphase 3
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
@@ -62,7 +62,7 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Circle of Dust | A-Moll, 3/4, ♩ = 78 | A8–B8–A′8–Coda8 / 32 | Melodische Sequenz und sparsame Akkordantworten im Quintfall | Kreisende Melodie, gehaltene Innenstimmen und bewegter Bandbass |
 | Beyond the Gate | E-Moll, 4/4, ♩ = 86 | A4–B4–A′8–Coda4 / 20 | Riff und Wiederkehr mit neuem Schluss; Pausen im Begleitteil | Zusammenhängende Form und bewusst gezählte Pausen |
 
-### Grade 3 · Spannung, Sequenzen und ternärer Puls — Kursphasen 4–5
+### Stufe 3 · Spannung, Sequenzen und ternärer Puls — Kursphasen 4–5
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
@@ -72,7 +72,7 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Pendulum of Thorns | A-Moll, 4/4 Shuffle, ♩ = 78 | A8–B4–A′8–Coda4 / 24 | Einstimmiges Quint-/Sextriff und geshuffelte Akkordantworten | Melodische Antworten mit bewusst langen/kurzen Achteln |
 | Threads of Smoke | E-Moll, 4/4, ♩ = 84 | A8–B8–A′4–Coda4 / 24 | Hammer-ons/Pull-offs in der Leadlinie; ruhige Begleitakkorde | Abbrechende Antworten, bewegliche Melodie und freie Phrasenenden |
 
-### Grade 4 · Klangkontrast und asymmetrische Bewegung — Kursphasen 6–7
+### Stufe 4 · Klangkontrast und asymmetrische Bewegung — Kursphasen 6–7
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
@@ -82,7 +82,7 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Seven Shadows | E-Moll, 7/8 (2+2+3), ♪ = 154 | A8–B4–A′8–Coda4 / 24 | 7/8-Riff und Powerchord-Akzente in 2+2+3 | Akzente in 2+2+3, ausgesparte Schläge und melodische Antworten |
 | The Broken Circle | A-Moll, 4/4, ♩ = 96 | A8–B8–Solo8–A4–Coda4 / 32 | Powerchord-Riff in 3+3+2 und eigener pentatonischer Soloabschnitt | Wechsel von rhythmischer Begleitung und Melodie |
 
-### Grade 5 · Vollständige Arrangements — Kursphase 8, Fähigkeiten aus 0–7
+### Stufe 5 · Vollständige Arrangements — Kursphase 8, Fähigkeiten aus 0–7
 
 | Stück | Tonraum, Takt, Tempo | Form / Takte | Gitarrenpart | Keyboardpart |
 |---|---|---|---|---|
@@ -92,20 +92,20 @@ Die Tempi sind Zieltempi. ♩ bezeichnet Viertel, ♩. punktierte Viertel, ♪ A
 | Two Shores | E-Moll, 4/4, ♩ = 88 | Intro4–A8–B8–Gitarre8–Keyboard8–A′4–Coda4 / 44 | Riff und eigenes Solo mit Bandbegleitung; Akkordstützen im Keyboardsolo | Bandharmonie während des Gitarrensolos, danach eigenes Solo mit Bass und Drums |
 | Where the Night Ends | E-Moll, 3/4 und 4/4, ♩ = 78 | Intro4–A12–B8–Solo8–A′12–Coda8 / 52 | Miniatursuite: Intro, Powerchord-Riff, Leadthema und Solo mit Band | Kontrastierende Texturen, Taktwechsel und gemeinsamer Schluss |
 
-## MIDI: Befund aus Gigajam
+## MIDI-Konventionen
 
-Alle 30 lokalen `.mid`-Dateien wurden binär gelesen. Alle verwenden SMF Format 0 und 480 Ticks pro Viertel. Die folgenden vier Kanäle enthalten in jeder Datei Noten. Program Changes variieren; zusätzliche Begleitkanäle kommen vor.
+Die App verwendet SMF Format 0 und 480 Ticks pro Viertel. Die vier Instrumente behalten feste Kanäle; die Programme des aktuellen Praxisgenerators sind nullbasiert angegeben:
 
-| Stimme | MIDI-Kanal, angezeigt 1–16 | API-Index, 0–15 | In Gigajam beobachtete Programme, 0–127 |
-|---|---:|---:|---|
-| Keyboard | 4 | 3 | 0, 4 |
+| Stimme | MIDI-Kanal, angezeigt 1–16 | API-Index, 0–15 | Programm, 0–127 |
+|---|---:|---:|---:|
+| Keyboard | 4 | 3 | 0 |
 | Bass | 6 | 5 | 33 |
-| Gitarre | 7 | 6 | 25, 26, 27, 28, 29, 30 |
-| Drums | 10 | 9 | 0, 2, 16; teilweise kein Program Change |
+| Gitarre | 7 | 6 | 27 |
+| Drums | 10 | 9 | 0 |
 
-Für neue Stücke dieselben Kanäle, 480 PPQ und Format 0. Vier logische Instrumentalspuren liegen gemeinsam in einem SMF-Track. Programme werden pro Stück bewusst gewählt: Keyboard 0/4, Bass 33, Gitarre aus den vorhandenen Gitarrenprogrammen; Drumkit nur nach Prüfung des tatsächlichen SoundFont-Presets. Ein fehlendes Preset darf nicht unbemerkt auf einen anderen Klang fallen.
+Vier logische Instrumentalspuren liegen gemeinsam in einem SMF-Track. Archivierte Kompositionen können eigene Instrumentprogramme verwenden. Der Player prüft die Verfügbarkeit des gewählten SoundFont-Presets.
 
-Beobachtete Drum-Noten: 36, 38, 40, 41, 42, 43, 44, 45, 47, 48, 49, 50, 51, 52, 53, 57, 59. Kernzuordnung: Kick 36, Snare 38, geschlossene Hi-Hat 42, Pedal-Hi-Hat 44; Fills und Becken verwenden dieselben vorhandenen GM-Noten. Zusätzliche Noten nur bei musikalischem Bedarf und nach expliziter Zuordnung.
+Die Drum-Zuordnung verwendet unter anderem Kick 36, Snare 38, geschlossene Hi-Hat 42, Pedal-Hi-Hat 44, Toms und Becken. Die klingenden Ereignisse entsprechen der geschriebenen Drum-Stimme.
 
 Alle neuen Stücke brauchen Tempo, Taktart, Tonart, Abschnittsmarker, Instrumentprogramme, Controller-Initialisierung und einen definierten Schluss. Bei Taktwechseln gelten die Metadaten am jeweiligen Taktbeginn. Viertel bleiben die interne Tempoeinheit der MIDI-Datei: bei ♩. = 52 sind das 52 × 1,5 = 78 Viertel pro Minute; bei ♪ = 168 sind es 168 / 2 = 84 Viertel pro Minute.
 
@@ -113,7 +113,7 @@ Alle neuen Stücke brauchen Tempo, Taktart, Tonart, Abschnittsmarker, Instrument
 
 ```text
 repertoire/
-  00 Debut Grade/
+  <Stufenordner>/
     Ember/
       Ember.mid
       score.json
@@ -123,16 +123,11 @@ repertoire/
     Empty Halls/
     Beneath the Ash/
     Last Light/
-  01 Grade One/
-  02 Grade Two/
-  03 Grade Three/
-  04 Grade Four/
-  05 Grade Five/
 data/
   repertoire.json
 ```
 
-Jeder weitere Stückordner folgt demselben Muster. Die fünf Titel pro Grade entsprechen der Tabelle. Keine instrumentabhängigen MIDI-Kopien. PDF-Partituren und MIDI werden aus der ausnotierten Quelle reproduzierbar erzeugt. `score.json` erhält die in MIDI nicht eindeutig enthaltenen Schreibweisen, Stimmen, Haltebögen, Saiten, Lagen und Fingersätze. Das Verzeichnismanifest referenziert Stückdatei, beide Übeparts, Voraussetzungen und Texte beider Sprachen.
+Jeder weitere Stückordner folgt demselben Muster. Die fünf Titel pro Stufe entsprechen der Tabelle. Keine instrumentabhängigen MIDI-Kopien. PDF-Partituren und MIDI werden aus der ausnotierten Quelle reproduzierbar erzeugt. `score.json` erhält die in MIDI nicht eindeutig enthaltenen Schreibweisen, Stimmen, Haltebögen, Saiten, Lagen und Fingersätze. Das Verzeichnismanifest referenziert Stückdatei, beide Übeparts, Voraussetzungen und Texte beider Sprachen.
 
 ## Wiedergabe
 

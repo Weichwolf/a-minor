@@ -1,4 +1,4 @@
-// Instrument requirements adapted from the local collection; key, scale and style progression is the app curriculum. See docs/GIGAJAM_COVERAGE.md.
+// Instrument-specific difficulty profiles for levels 0–5. See docs/PRACTICE_LEVELS.md.
 AM.practiceCurriculum = [
   {
     "grade": 0,

@@ -25,7 +25,7 @@ test('every part fills its bars; P4 strings, held-note collisions, fret spans an
  }
 });
 
-test('actual shared MIDI files match scores, Gigajam channels, programs, markers, tempo and note lifetimes',async()=>{
+test('actual shared MIDI files match scores, instrument channels, programs, markers, tempo and note lifetimes',async()=>{
  const {BasicMIDI,SpessaLog}=await import('spessasynth_core');SpessaLog.setLogLevel(false,false,false);
  for(const p of catalog.pieces){const bytes=fs.readFileSync(p.midi),seq=MIDI.decode(bytes),independent=BasicMIDI.fromArrayBuffer(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.length));
   assert.equal(seq.format,0);assert.equal(seq.ppq,480);assert.equal(seq.markers.length,p.sections.length);assert.equal(seq.duration,p.duration);assert.deepEqual([...new Set(seq.events.filter(e=>e.data[0]>>4===9).map(e=>e.data[0]&15))].sort((a,b)=>a-b),[3,5,6,9]);
